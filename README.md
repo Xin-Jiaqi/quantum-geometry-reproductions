@@ -32,4 +32,4 @@ See the individual paper directory for physics, normalization, and Stage-1 Wanni
 
 ## Status and license
 
-This is an independently developed research reproduction, **not** an official implementation by the authors. License and public-visibility policy should be agreed by the repository maintainer before first public release.
+This is an independently developed research reproduction, **not** an official implementation by the authors. The repository is publicly readable. No open-source license has yet been selected; public visibility does not itself grant reuse rights. The maintainer should add an explicit license when ready.
