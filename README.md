@@ -32,4 +32,8 @@ See the individual paper directory for physics, normalization, and Stage-1 Wanni
 
 ## Status and license
 
-This is an independently developed research reproduction, **not** an official implementation by the authors. The repository is publicly readable. No open-source license has yet been selected; public visibility does not itself grant reuse rights. The maintainer should add an explicit license when ready.
+This is an independently developed research reproduction, **not** an official implementation by the authors. This repository is public, but no explicit reuse license has been selected. Public access does not by itself authorize reuse. Each paper folder states its validation scope; software tests do not imply full scientific agreement.
+
+## Offline reproducibility gate
+
+From the Jia et al. paper directory run `python scripts/verify_release.py`. This checks SHA256 integrity, five frozen model outputs, and the full regression suite. See [`RELEASE_GATES.md`](papers/jia-2026-nonlin-magnetoelectric-edelstein/docs/RELEASE_GATES.md).

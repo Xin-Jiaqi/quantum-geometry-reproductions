@@ -17,6 +17,10 @@ Create one expandable quantum-geometry **paper reproduction** repository, one fo
 1. CuMnAs Fig.1(c) *paper-defined finite-temperature driven-dc intrinsic* coefficient in exact PT doublets is not established from independent final formula; static and BGK paths are labelled diagnostics, not promoted.
 2. PRL printed intrinsic formula and SM full-static density-matrix term have a documented physics protocol discrepancy. Both implementations are provided, neither falsely overwritten.
 3. No real projected Wannier spin or position matrices were provided, so no real material NMEE can be calculated by this reproduction alone.
-4. The public GitHub repository `Xin-Jiaqi/quantum-geometry-reproductions` is now published; this release is a tested research reproduction, not full validation of every published figure.
+4. Repository `Xin-Jiaqi/quantum-geometry-reproductions` is publicly available on GitHub; the curated code and source-link documentation have been published. No open-source license has yet been chosen.
 
 The source release excludes the 33 internal research ZIPs, original publisher PDF/figures and any private input data. Those retain their separate offline archive.
+
+## Release polish
+
+The frozen offline verifier (`scripts/verify_release.py`) checks paper-model outputs, the source inventory and existing regression tests. Its passing result does not resolve Fig. 1(c) finite-T PT-degenerate intrinsic DC physics; see `docs/AUTHOR_DISCUSSION_BRIEF.md`.

@@ -6,7 +6,7 @@ The user's acceptance goal is **reproduction of the physics/methods and a reusab
 
 | Gate | Evidence | Result |
 |---|---|---|
-| Software regression suite | `python -m unittest discover -s tests -v` | PASS (30 tests before documentation update) |
+| Software regression suite | `python -m unittest discover -s tests -v` | PASS (30 regression tests; independently rerun) |
 | Kane–Mele Eq. (6), clean response | explicit printed vs full-static protocols; 451² reference in `results/` | PASS within declared protocol, not identical to published curves |
 | CuMnAs Eq. (5) bands, PT degeneracy | analytic two-doublet dispersion, Dirac positions | PASS |
 | CuMnAs Fig. 1(d) Eq. (2) | PT projector / spin-space metric, Fermi-surface derivative, tau, Neel reversal | PASS for formula structure and symmetry; absolute figure magnitude remains conditional |
@@ -20,6 +20,8 @@ The user's acceptance goal is **reproduction of the physics/methods and a reusab
 The PRL/Supplemental Material identifies a split into intrinsic and extrinsic terms. The independently tested **full static** formula contains an additional diagonal density-matrix contribution relative to the final printed two- and three-band intrinsic formula. We have not proven that the authors' nonequilibrium zero-frequency convention is equivalent to the equilibrium/static protocol, especially for **finite-T exactly PT-degenerate CuMnAs**. Therefore, the static Fig. 1(c) output may not be relabeled `paper_defined_intrinsic`.
 
 The paper-defined Fig. 1(c) coefficient and its convergence/normalization form the final scientific acceptance gate. The other outstanding issue is a quantitative, real-operator Wannier integration test; in accordance with the user's scope limitation, no new material study is required to address the source-model PRL reproduction itself.
+
+The independent release gate `python scripts/verify_release.py` additionally checks five frozen model outputs and SHA256 fingerprints. This is a **software/model gate**, not evidence of resolution of the intrinsic DC-limit question.
 
 ## What 'complete' would mean
 

@@ -11,6 +11,8 @@ This folder is the independently tested **paper reproduction module**, not an im
 - [PDF provenance, SHA256 and redistribution policy](references/README.md)
 - [Researcher's PRL-specific Chinese Markdown notes, preserved verbatim](docs/RESEARCH_NOTES.md)
 - [Final verification matrix and the open scientific acceptance gate](docs/FINAL_VERIFICATION.md)
+- [Frozen offline reproducibility gates](docs/RELEASE_GATES.md)
+- [One technical question for future author discussion (not sent)](docs/AUTHOR_DISCUSSION_BRIEF.md)
 
 Publisher-formatted article/SM PDFs were supplied for **offline research**, but are **not mirrored publicly** without evidence of a license or publisher's permission. The uploaded full research notebook also includes unpublished cross-paper research plans; only its PRL-specific Section 3.3 is released here.
 
@@ -19,6 +21,7 @@ Publisher-formatted article/SM PDFs were supplied for **offline research**, but 
 ```bash
 python -m pip install -e .
 python -m unittest discover -s tests -v
+python scripts/verify_release.py
 python scripts/reproduce.py --case fig2-printed-vs-static --mesh 451 --output results/fig2_km_451.json
 python scripts/reproduce.py --case fig1b --mesh 101 --temperature 100
 python scripts/reproduce.py --case fig1c-static-diagnostic --mesh 81 --temperature 100 --mu 0.03 --theta 0
