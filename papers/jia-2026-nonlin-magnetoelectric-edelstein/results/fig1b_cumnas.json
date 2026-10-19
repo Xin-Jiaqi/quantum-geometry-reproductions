@@ -1,0 +1,22 @@
+{
+  "citation": "Jia, Xiang, Qiao, Wang, Physical Review Letters 136, 226302 (2026)",
+  "result": {
+    "case": "fig1b",
+    "model": "CuMnAs Eq.(5)",
+    "mesh": [
+      101,
+      101
+    ],
+    "protocol": "analytic_two_PTx2_doublets",
+    "parameters": {
+      "theta_rad": 1.5707963267948966,
+      "t_eV": 1.0
+    },
+    "e_minus_min_eV": -2.327232369044883,
+    "e_plus_max_eV": 2.0495337501025355,
+    "min_direct_gap_eV": 0.05653127876698674,
+    "warnings": [
+      "this is a mesh scan, not the full original high-symmetry-path band plot"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "citation": "Jia, Xiang, Qiao, Wang, Physical Review Letters 136, 226302 (2026)",
+  "result": {
+    "case": "fig2-printed-vs-static",
+    "model": "Kane–Mele Eq.(6)",
+    "mesh": [
+      451,
+      451
+    ],
+    "parameters": {
+      "mu_eV": 0.025,
+      "temperature_K": 10.0,
+      "branch": "both"
+    },
+    "protocols": {
+      "prl_printed_eq1": -0.010739723280418214,
+      "static_eq9_full": -0.009548371489696384,
+      "static_eq9_minus_printed": 0.0011913517907195352
+    },
+    "normalization": "(nm T V)^-1 under legacy 2D Pauli/Bloch convention",
+    "warnings": [
+      "full_static includes disputed Eq(9) diagonal term; printed omits it",
+      "finite-temperature driven dc/metallic response not established by this clean band-sum",
+      "Wannier zero-connection mapping is exploratory unless covariant operators verified"
+    ]
+  }
+}

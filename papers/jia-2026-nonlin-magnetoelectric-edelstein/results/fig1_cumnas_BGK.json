@@ -1,0 +1,42 @@
+{
+  "citation": "Jia, Xiang, Qiao, Wang, Physical Review Letters 136, 226302 (2026)",
+  "result": {
+    "case": "fig1-bgk",
+    "model": {
+      "t": 1.0,
+      "tp_ratio": 0.08,
+      "lam_ratio": 0.8,
+      "j_ratio": 0.6,
+      "g": 10.0,
+      "a_nm": 1.0,
+      "tau_fs": 50.0,
+      "temperature_K": 100.0
+    },
+    "mesh": [
+      81,
+      81
+    ],
+    "protocol": "cumnas_PT_BGK_static_B_equilibrated_then_DC_E",
+    "result": 0.000561118340862389,
+    "rta_result": 0.0005611183408995415,
+    "correction": -3.963064316687529e-14,
+    "settings": {
+      "theta_rad": 0.15,
+      "mu_eV": 0.03,
+      "eta_pop_eV": 0.013164239138,
+      "eta_coh_eV": 0.013164239138,
+      "tau_anisotropy": 0.0,
+      "observable": "A_z",
+      "magnetic_component": "x",
+      "electric_beta": 0,
+      "B_step_bar_eV": 1e-06
+    },
+    "mesh_n": 81,
+    "normalization": "CuMnAs original program normalization; not calibrated SI",
+    "warnings": [
+      "phenomenological globally charge-conserving BGK model, not microscopic impurity theory",
+      "Dirac closings require convergence and eta-dependent analysis",
+      "do not compare this number directly to the clean or printed branch"
+    ]
+  }
+}

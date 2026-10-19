@@ -1,0 +1,17 @@
+{
+  "min_gap_eV": 0.8161312899357971,
+  "max_gauge_abs_err": 1.0408340855860843e-16,
+  "synthetic_only": true,
+  "meshes": [
+    11,
+    21,
+    41,
+    81
+  ],
+  "field_steps_T": [
+    0.1,
+    0.05,
+    0.025
+  ],
+  "response_definition": "T=0 insulator; occupied-unoccupied static interband chi derivative d/dB, with D_k=partial_k-i[A_k, .]"
+}
