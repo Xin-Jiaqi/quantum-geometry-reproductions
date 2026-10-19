@@ -1,0 +1,30 @@
+name: BSF NMEE connection proof-of-concept
+on:
+  push:
+    paths:
+      - "studies/bsf-nmee-connection/**"
+      - ".github/workflows/bsf-nmee-connection.yml"
+  pull_request:
+    paths:
+      - "studies/bsf-nmee-connection/**"
+      - ".github/workflows/bsf-nmee-connection.yml"
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing NMEE and pinned symmetry toolkit
+        run: |
+          python -m pip install -e papers/jia-2026-nonlin-magnetoelectric-edelstein
+          python -m pip install 'git+https://github.com/Xin-Jiaqi/group-theory-operations-toolkit.git@551a0daf8d4ba5a5f24b2811694bfe438616de48'
+      - name: Integration tests using actual toolkit
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          cd studies/bsf-nmee-connection
+          python -m unittest discover -s tests -v
+          python scripts/mirror_covariance_nmee.py --mesh 11
