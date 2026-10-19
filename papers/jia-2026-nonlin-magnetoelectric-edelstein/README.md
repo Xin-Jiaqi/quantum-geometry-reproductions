@@ -4,6 +4,16 @@
 
 This folder is the independently tested **paper reproduction module**, not an implementation endorsed by the original authors. It reproduces the Kane–Mele and CuMnAs tight-binding mechanisms, separates *published* and *static* response conventions, and offers a checked input interface for an existing Wannier Stage-1 pipeline. It does **not** claim perfect agreement with published curves or universal metallic driven-DC physics.
 
+## Source article, Supplemental Material, and study notes
+
+- [Published PRL article (official DOI)](https://doi.org/10.1103/r3x2-kb93)
+- [Official Supplemental Material](https://link.aps.org/supplemental/10.1103/r3x2-kb93)
+- [PDF provenance, SHA256 and redistribution policy](references/README.md)
+- [Researcher's PRL-specific Chinese Markdown notes, preserved verbatim](docs/RESEARCH_NOTES.md)
+- [Final verification matrix and the open scientific acceptance gate](docs/FINAL_VERIFICATION.md)
+
+Publisher-formatted article/SM PDFs were supplied for **offline research**, but are **not mirrored publicly** without evidence of a license or publisher's permission. The uploaded full research notebook also includes unpublished cross-paper research plans; only its PRL-specific Section 3.3 is released here.
+
 ## Reproduce the verified model paths
 
 ```bash
