@@ -1,0 +1,87 @@
+{
+  "status": "ELECTRONIC_BAND_SUM_ONLY_NO_FE_CLAIM",
+  "parameter_scope": "8-band two-center hopping, no onsite layer polarity, N mesh midpoint",
+  "mesh": 13,
+  "shell": 3,
+  "n_intervals": 40,
+  "grid_0_to_1": true,
+  "note": "No ionic/electrostatic/elastic/relaxation energy; u=0.5 and -0.5 are translation equivalent; only a sampled 1D translation path, not 2D landscape.",
+  "checks": {
+    "AF": {
+      "grid_min_u": 0.5,
+      "grid_min_electronic_band_sum_eV_cell": -4.122542078218786,
+      "E_at_u0_eV_cell": -3.95764385825377,
+      "E_at_u0p5_eV_cell": -4.122542078218786,
+      "E_at_u1_eV_cell": -3.9576438582607025,
+      "Delta_E_0p19_minus_0p5_eV_cell": 0.10600819923365812,
+      "max_periodicity_residual_eV_cell": 6.9326766549693275e-12,
+      "all_steps_0_to_0p5_decrease": true,
+      "all_steps_0p5_to_1_increase": true,
+      "points": {
+        "0.0": {
+          "Dxx_over_omega": -3.358277612191072e-17,
+          "indirect_gap_eV": 0.13646187519992464,
+          "layer_tau_z": 4.432240870352279e-17
+        },
+        "0.19": {
+          "Dxx_over_omega": 0.003086229183613899,
+          "indirect_gap_eV": 0.235928282644984,
+          "layer_tau_z": -0.11360939699041718
+        },
+        "0.5": {
+          "Dxx_over_omega": -1.0079325477419451e-16,
+          "indirect_gap_eV": 0.4441491701158633,
+          "layer_tau_z": -1.5401726668480293e-14
+        },
+        "0.81": {
+          "Dxx_over_omega": -0.003086229183777594,
+          "indirect_gap_eV": 0.23592828259953957,
+          "layer_tau_z": 0.11360939698764769
+        },
+        "1.0": {
+          "Dxx_over_omega": 3.263724271497148e-11,
+          "indirect_gap_eV": 0.13646187459397852,
+          "layer_tau_z": -1.4089430148821142e-10
+        }
+      }
+    },
+    "FM": {
+      "grid_min_u": 0.5,
+      "grid_min_electronic_band_sum_eV_cell": -4.087254354277208,
+      "E_at_u0_eV_cell": -3.9393048211944377,
+      "E_at_u0p5_eV_cell": -4.087254354277208,
+      "E_at_u1_eV_cell": -3.9393048211999364,
+      "Delta_E_0p19_minus_0p5_eV_cell": 0.09875343727316022,
+      "max_periodicity_residual_eV_cell": 5.498712596363475e-12,
+      "all_steps_0_to_0p5_decrease": true,
+      "all_steps_0p5_to_1_increase": true,
+      "points": {
+        "0.0": {
+          "Dxx_over_omega": 0.043241269379639236,
+          "indirect_gap_eV": 0.046430702934753196,
+          "layer_tau_z": 7.226303710577942e-18
+        },
+        "0.19": {
+          "Dxx_over_omega": 0.019388916867608016,
+          "indirect_gap_eV": 0.10528636932056208,
+          "layer_tau_z": -0.1034759867196818
+        },
+        "0.5": {
+          "Dxx_over_omega": 0.006771784139887163,
+          "indirect_gap_eV": 0.3001444649695761,
+          "layer_tau_z": -1.8803909777062868e-14
+        },
+        "0.81": {
+          "Dxx_over_omega": 0.01938891686697973,
+          "indirect_gap_eV": 0.10528636932149185,
+          "layer_tau_z": 0.10347598671563832
+        },
+        "1.0": {
+          "Dxx_over_omega": 0.04324126933475997,
+          "indirect_gap_eV": 0.046430702119095994,
+          "layer_tau_z": -1.3320553987584043e-10
+        }
+      }
+    }
+  }
+}

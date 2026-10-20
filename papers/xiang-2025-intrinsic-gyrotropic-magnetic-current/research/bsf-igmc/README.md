@@ -58,3 +58,14 @@ Review [physical definitions](docs/MODEL_AND_VALIDATION.md), [scientific judgmen
 Magnetic operation matrices are attributed to [`Xin-Jiaqi/group-theory-operations-toolkit`](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit), pinned at v0.18.0 (`551a0daf8d4ba5a5f24b2811694bfe438616de48`). A 2.8kB subset of its generator data and license notice is included under `data/`; **no claim is made that the upstream live API was installed or called**. Internal single-state `m'_x` and partner `m_z` / `m'_z` identities are also validated directly on the computed 8×8 Hamiltonian.
 
 This directory does not modify `src/igmc_lab`, the original PRL-related datasets, baseline CI gates or research history. The first four-band pilot remains an offline antecedent (with a phenomenological `delta(u)`), not rewritten as an eight-band result.
+
+## Stage 3: electronic energy and nonpolar IGMC gate
+
+The Stage-2 `±0.19` responses were **not** established as stable BSF states. [Stage 3](docs/STAGE3_ELECTRONIC_ENERGY_GATE.md) audits the electronic occupied-band sum across a complete translation period: with the frozen eight-band parameters the **sampled 1D energy minimum is at `u=0.5`**, translation-equivalent to `u=-0.5`, whereas `±0.19` are **not local minima** in this band-energy model. A realistic structural total-energy double well remains unverified.
+
+At this translation-identified nonpolar configuration, the AF-like `m_z` branch requires `Dxx/ω≈0`, while the FM-like `m'_z` branch retains **nonzero** `Dxx/ω≈0.00677` despite `〈τ_z〉≈0` (mesh 13², reduced model units). This is a **magnetic-symmetry model observation**, not ferroelectric switching, and not a physical SI response.
+
+```bash
+OPENBLAS_NUM_THREADS=1 python scripts/audit_sliding_energy.py --mesh 13 --shell 3 --intervals 40 --outdir results
+OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
+```
