@@ -144,3 +144,52 @@ def feshbach_static_at_k(spec:SlidingSpec,k,*,step_T=.25,contour_n=64):
         'gamma_missing_contacts':full-dressed,
         'plus_minus':rows,
         'protocol':'8band T=0 insulating equilibrium static, not driven DC'}
+
+def feshbach_on_shell_vertices(spec:SlidingSpec,k):
+    """Exact projected metric Z and energy-pair-dependent S/v/Zeeman vertices.
+
+    For an exact eigenstate with P component p, q=r(E)B p and
+    p†[I+B†r(E)^2B]p=1. For two energies Em,En the dressed vertex is
+    O_PP+O_PQ*r(En)*B+B†*r(Em)*O_QP+B†*r(Em)*O_QQ*r(En)*B.
+    The complete outer-band Kubo processes are NOT thereby eliminated.
+    """
+    obj=SlidingBilayer(spec)
+    k=np.asarray(k,float)
+    frame=reference_basis(obj,k)
+    H=obj.matrices(k[None,:])[0]
+    vx=obj.matrices(k[None,:],axis=0)[0]
+    e,W=np.linalg.eigh(H)
+    h=frame.conj().T@H@frame
+    B=h[4:,:4];D=h[4:,4:]
+    projected=frame.conj().T@W
+    p=projected[:4,:]
+    metrics=[];recon=[];resolvents=[]
+    for n in range(2,6):
+        r=np.linalg.inv(e[n]*np.eye(4)-D)
+        Z=np.eye(4)+B.conj().T@r@r@B
+        metrics.append(float(np.real(p[:,n].conj()@Z@p[:,n])))
+        recon.append(float(np.linalg.norm(projected[4:,n]-r@B@p[:,n])))
+        resolvents.append(r)
+    result={}
+    for name,O in [('spin_x',obj.spins['total_x']),
+                   ('Zeeman_spin_z',obj.spins['total_z']),
+                   ('velocity_x',vx)]:
+        o=frame.conj().T@O@frame
+        exact=W[:,2:6].conj().T@O@W[:,2:6]
+        dressed=np.zeros((4,4),complex)
+        bare=np.zeros((4,4),complex)
+        for m in range(4):
+            rm=resolvents[m]
+            for n in range(4):
+                rn=resolvents[n]
+                oe=(o[:4,:4]+o[:4,4:]@rn@B+
+                    B.conj().T@rm@o[4:,:4]+
+                    B.conj().T@rm@o[4:,4:]@rn@B)
+                dressed[m,n]=p[:,m+2].conj()@oe@p[:,n+2]
+                bare[m,n]=p[:,m+2].conj()@o[:4,:4]@p[:,n+2]
+        result[name]={'dressed_error':float(np.max(abs(dressed-exact))),
+                      'bare_error':float(np.max(abs(bare-exact))),
+                      'exact_norm':float(np.linalg.norm(exact))}
+    return {'metric_normalization':metrics,
+            'Q_amplitude_reconstruction_error':recon,'vertices':result,
+            'scope':'four central exact eigenstates only; outer-band response remains'}
