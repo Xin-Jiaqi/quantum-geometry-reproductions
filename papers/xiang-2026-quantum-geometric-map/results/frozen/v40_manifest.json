@@ -13,9 +13,9 @@
       "bytes": 4878
     },
     "tests/test_v40_frozen.py": {
-      "sha256": "dbb94e98beb565892f6a8b2a3ace2502a24560c1846111742d7d1e6da1794911",
-      "git_blob_sha1": "9d38fbd4c6546407d7a2a4441766cb0fee5a3fc4",
-      "bytes": 1552
+      "sha256": "250baa80cb3885dd1c924c9d07f50704717eda0e549e117a72add8af4c7597d8",
+      "git_blob_sha1": "7aef838be81b05e78b920be745fa47dfceda9bb2",
+      "bytes": 1697
     },
     "tests/test_v40_cli.py": {
       "sha256": "4f3b59d6befa2d540a79c65449d4ebb8bc602fc12dfe6e626a93dcafba6a0ea4",

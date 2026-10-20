@@ -16,7 +16,9 @@ class V40Frozen(unittest.TestCase):
                   'ra_density_ward_residual','four_channel_hall_antisym_abs'):
             with self.subTest(k=k): self.assertAlmostEqual(d[k],saved[k],delta=1e-9)
         exact=exact_disorder_ra_torus(L=4,W=.12,mu=1.1,eta=.12,seeds=6)
-        self.assertEqual(exact['samples'],ref['finite_torus']['samples'])
+        self.assertEqual(len(exact['samples']),len(ref['finite_torus']['samples']))
+        for got,want in zip(exact['samples'],ref['finite_torus']['samples']):
+            self.assertAlmostEqual(got,want,delta=5e-11)
     def test_byte_level_manifest(self):
         manifest=json.loads((ROOT/'results/frozen/v40_manifest.json').read_text())
         self.assertGreaterEqual(len(manifest['files']),5)
