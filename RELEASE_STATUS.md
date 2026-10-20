@@ -4,7 +4,7 @@
 | --- | --- | --- | --- |
 | Jia 2026 PRL NMEE | `papers/jia-2026-nonlin-magnetoelectric-edelstein` | `scripts/verify_release.py` | PARTIAL |
 | Xiang 2025 PRL IGMC | `papers/xiang-2025-intrinsic-gyrotropic-magnetic-current` | `scripts/verify_round9.py` | PARTIAL |
-| Xiang, Jin & Wang 2025 PRL spin quantum geometry | `papers/xiang-2025-spin-quantum-geometry` | 20 tests incl. V29 Eq.(13) sea/surface and frozen baselines, Python 3.11/3.12 CI, JSON smoke | PARTIAL; curated Dirac/SM subset; metal driven DC and paper absolute factors OPEN |
+| Xiang, Jin & Wang 2025 PRL spin quantum geometry | `papers/xiang-2025-spin-quantum-geometry` | 32 tests incl. V30 multi-band finite-eta and PT projectors, Python 3.11/3.12 CI, JSON smoke | PARTIAL; curated Dirac/SM subset; metal driven DC and paper absolute factors OPEN |
 | Xiang 2026 PRB magnetotransport | `papers/xiang-2026-quantum-geometric-map` | `scripts/verify_release.py` | PARTIAL; GitHub **curated core + migrated nondegenerate spin/orbital method subset** |
 
 For the PRB, the complete 30-round original **offline** v30 checkpoint is separate from the independently readable/callable core published in this repository. It includes additional model branches, scans, plots, and scientific logs; those are **not** claimed to have been uploaded here. The core implements selected independently checked methods and leaves absent advanced interfaces explicitly unimplemented.
@@ -52,3 +52,7 @@ A new `streda_clean_sea_v38` method computes the *bare clean* two-band antisymme
 ## 2026-10-20: v39 energy-dependent SCBA model audit
 
 Published a named QWZ noncrossing scalar-disorder SCBA method with self-energy energy derivative, same-disorder RR density Bethe–Salpeter vertex, finite-difference proof, 14 method/frozen tests, an exact finite-disorder torus spectral control and a JSON entry point. \(\partial_E G^R=-G^R(I-\partial_E\Sigma^R)G^R\) is essential for the defined sea kernel; the disorder-dressed transverse current vertex, full Středa I sector and the original paper's nonlinear EB response remain OPEN.
+
+## 2026-10-20 Xiang 2025 spin-QGT V30 methods migration
+
+PR #12 merged: the Xiang/Jin/Wang 2025 PRL paper module now contains independent N-band (N=2–6 regression) **finite-eta** Liouville band/orbital solvers, exact synthetic PT rank-2 projector checks, U(2) gauge covariance, a 6-band three-doublet test, and a V16 offline staggered-spin baseline (2.0232340477418247 at the declared synthetic-model parameters). Paper-core+methods scope: **32 tests, GitHub Actions Python 3.11 and 3.12 PASS**; see `papers/xiang-2025-spin-quantum-geometry/docs/METHODS_ACCEPTANCE_V30.md`. This is a curated/reimplemented subset, **not** a full upload of the V14–V19 offline derivations or a validated intrinsic tau^0 driven-DC solver. The original Fig. 1(a) ~2x absolute discrepancy, metallic DC protocol and the supplemental algebra issues remain open. No stacking, intercalation or real-material DFT claims.
