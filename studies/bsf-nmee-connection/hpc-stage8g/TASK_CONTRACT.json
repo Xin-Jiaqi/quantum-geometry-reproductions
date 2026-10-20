@@ -1,0 +1,99 @@
+{
+  "schema": "stage8g-autonomous-hpc-task-v1",
+  "scientific_case": "WSe2 BiDB row2685, AB to mirror-derived BA path A",
+  "scope": "NON_SOC_Z_ONLY_STRUCTURAL_PILOT_ONLY",
+  "authoritative_repo": "https://github.com/Xin-Jiaqi/quantum-geometry-reproductions",
+  "branch": "research/bsf-nmee-stage7-sw-gate-20261020",
+  "workdir_in_repo": "studies/bsf-nmee-connection/hpc-stage8g",
+  "files": [
+    "prepare.py",
+    "onsite_pbs.py"
+  ],
+  "original_structure_relaxation": "BiDB z-scan frozen monolayers; NOT full ionic relaxation",
+  "pilot_jobs": [
+    "path_A_s0.00",
+    "path_A_s0.25",
+    "path_A_s0.50"
+  ],
+  "pilot_max_jobs": 3,
+  "full_generated_jobs": 15,
+  "site_preferences": [
+    {
+      "id": "japan",
+      "status": "PREVIOUSLY_VERIFIED_PBS",
+      "role": "primary_execution",
+      "site_root_hint": "/work/sunq/xjq",
+      "queues_previously_observed": [
+        "DP_002",
+        "CP_001"
+      ],
+      "requires_fresh_probe": true
+    },
+    {
+      "id": "wsl",
+      "status": "AVAILABLE_UBUNTU_WORKSPACE_NOT_A_VERIFIED_SCHEDULER",
+      "role": "local_agent_or_compute_only_if_verified",
+      "requires_fresh_probe": true
+    }
+  ],
+  "credential_policy": "Use only existing local SSH keys/profiles; never copy passwords/tokens/private keys to git or chat logs.",
+  "pseudopotential_policy": "Licensed local PBE PAW W then Se; no POTCAR or its contents to GitHub. Record checksum, TITEL and ENMAX only. Verify ENCUT >=1.3x maximal ENMAX.",
+  "site_config_required": [
+    "scheduler",
+    "queue",
+    "ncpus",
+    "mem_gb",
+    "walltime",
+    "vasp_binary",
+    "mpi_command",
+    "validated",
+    "license_confirmed"
+  ],
+  "execution": {
+    "step0": "Checkout exact research branch and record commit SHA. Abort if tree untrusted or previous historical files changed.",
+    "step1": "Run python3 hpc-stage8g/prepare.py --out <a fresh external workdir>; verify 15 files and only 3 pilot flagged.",
+    "step2": "Probe WSL and Japan PBS read-only via existing configured access; do not echo credentials. Prefer authorized Japan PBS.",
+    "step3": "Determine VASP executable/MPI/bootstrap and authorized pseudopotentials ON THE COMPUTE SITE; set separate local profile file validated only after actual checks.",
+    "step4": "Check three pilot inputs are identical in INCAR/KPOINTS/POTCAR and PBE+D3; all F F T, identical lattice; run onsite_pbs.py --jobs workdir --site local_site.json (dry run).",
+    "step5": "Submit only flagged 3 pilot jobs with onsite_pbs.py --jobs workdir --site local_site.json --submit; persist IDs; don't duplicate on rerun.",
+    "step6": "Track PBS job status and gather authentic OUTCAR/CONTCAR. Audit inputs vs outputs, ionic/electronic convergence, last forces, fixed lateral coordinates, cell, comparison settings, and actual final symmetry.",
+    "step7": "Return a concise Chinese report with job IDs, remote output paths, energies if actually complete, status and blockers. Do not infer NEB barrier or static NMEE."
+  },
+  "stop_conditions": [
+    "SSH authentication unverified",
+    "No legal VASP binary/POTCAR",
+    "No actual PBS queue verified",
+    "Pilot scientific inputs differ or hashes change",
+    "ENCUT cannot meet 1.3 ENMAX without explicit convergence adjustment",
+    "More than three jobs requested",
+    "Existing nonempty or inconsistent remote directory",
+    "Prior job ID exists but scheduler state unknown",
+    "Charge/allocations not authorized by local access policy"
+  ],
+  "forbidden_actions": [
+    "Invent queue names, credentials, DFT output or results",
+    "Upload POTCAR, private keys, SSH config, raw large outputs or private job data to public GitHub",
+    "Treat WSL itself as a proven supercomputer queue",
+    "Treat stage8f z-only energies as an NEB barrier",
+    "Claim source row2685 is fully relaxed",
+    "Claim actual WSe2 NMEE or driven DC calculated",
+    "Modify frozen papers/jia-2026-nonlin-magnetoelectric-edelstein original reproduction"
+  ],
+  "result_contract": {
+    "stage": "8g",
+    "git_commit": "string",
+    "site": "japan | wsl-verified | BLOCKED",
+    "job_id_by_name": "map or empty",
+    "input_hashes": "map",
+    "potcar_sha256": "string or null; no bytes",
+    "software_version": "string or unknown",
+    "ionic_status_by_name": "map",
+    "final_TOTEN_eV_by_name": "numbers only from actual converged VASP outputs; otherwise null",
+    "max_residual_force_eV_A_by_name": "map or null",
+    "output_paths": "remote paths no secrets",
+    "full_gap_SOC": "NOT_RUN",
+    "NEB_barrier": "NOT_RUN",
+    "static_NMEE": "NOT_RUN",
+    "warnings": "list"
+  }
+}
