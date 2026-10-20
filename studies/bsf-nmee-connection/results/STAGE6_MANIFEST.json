@@ -1,0 +1,19 @@
+{
+  "prior_source": "BSF_NMEE_stage5_weak_coupling_20261020.zip",
+  "scientific_status": "synthetic_8band_static_only",
+  "sha256": {
+    "STAGE6_README.md": "d2c86a3c4b2c9ae7692da1681ba806aa7a56fde3e8b6d56f9023ff0286234a71",
+    "bsf_nmee/symmetry_scaling.py": "64fc6c71e83f5f7d0d5b1a7b913ce3daf8424518c1d2e240995df3b7656254bb",
+    "docs/STAGE6_PHYSICS.md": "c786c6059411c548b7a4e77a9924484bddf548527a180ec41e6d325096896497",
+    "docs/STAGE6_WORKLOG.md": "c033a2d0c0eacc667e0511d2727ce36bd48c1f78f3a14e0ccf9ec403bea46b6f",
+    "results/sliding_stage6_nematic_linear.svg": "c051db6e4ae47adee2a7601b96893f0c4c431d43e5396bdbd9cb07260e472743",
+    "results/sliding_stage6_symmetry.json": "10e40aca96c214b5e96c8449c64ad43ecc8a774046e5e1ab3c0903be94b226bd",
+    "results/sliding_stage6_trace_cubic.svg": "5b41e8287ea19677dc5b684ada02e305c707c6628fc526b12bbf984f1a8cc0a7",
+    "scripts/plot_stage6_symmetry.py": "6fa591f1daf6a3b398da85ca481cbf150174eddf924d1db9f2d07689d4afb56c",
+    "scripts/run_stage6_symmetry.py": "5a3ddc2ff293ee2bca3436e03e82ab0a931d3ef2abe318b75a8117afb96c2874",
+    "tests/test_stage6_manifest.py": "6f88aa1e1805d12226b789159799e85bdd6243d9a02c08b023700af39ee0c34a",
+    "tests/test_stage6_symmetry.py": "966cd4fe3e2a5614519a5e0c06eb79f14b2c9e7556d580d94211e54886de2c64"
+  },
+  "stage": 6,
+  "unresolved": "the Jia et al. PRL driven-DC formula and equilibrium static susceptibility are not established as identical"
+}
