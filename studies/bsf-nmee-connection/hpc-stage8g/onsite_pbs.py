@@ -120,28 +120,76 @@ def dispatch(root,site,execute=False):
     return {"status":"SUBMITTED_IDEMPOTENT","pbs_ids":ids,
             "note":"Submission does not imply convergence or completed DFT"}
 
+def read_poscar(file):
+    lines=Path(file).read_text().splitlines()
+    scale=float(lines[1].strip())
+    lat=[[float(v)*scale for v in lines[i].split()[:3]] for i in range(2,5)]
+    counts=[int(x) for x in lines[6].split()]
+    n=sum(counts)
+    coord_line=7
+    if lines[coord_line].lower().startswith("s"):coord_line+=1
+    if not lines[coord_line].strip().lower().startswith("d"):
+        raise RuntimeError("Expected Direct POSCAR/CONTCAR coordinates")
+    frac=[[float(v) for v in lines[i].split()[:3]]
+          for i in range(coord_line+1,coord_line+1+n)]
+    if n!=6 or lines[5].split()!=["W","Se"] or counts!=[2,4]:
+        raise RuntimeError("Final structure is not expected six-atom W2Se4")
+    return lat,frac
+
+def review_output(folder):
+    out=folder/"OUTCAR"
+    if not out.exists():return {"status":"NOT_RUN_OR_OUTPUT_NOT_COLLECTED"}
+    content=out.read_text(errors="replace")
+    vals=re.findall(r"free\s+energy\s+TOTEN\s*=\s*([-+\d.Ee]+)\s+eV",content)
+    if not vals:return {"status":"INVALID_NO_TOTEN"}
+    if not (folder/"CONTCAR").exists():return {"status":"INCOMPLETE_NO_CONTCAR"}
+    rec={"final_TOTEN_eV":float(vals[-1]),
+         "OUTCAR_sha256":checksum(out),"CONTCAR_sha256":checksum(folder/"CONTCAR")}
+    try:
+        old_lat,old=read_poscar(folder/"POSCAR")
+        new_lat,new=read_poscar(folder/"CONTCAR")
+        cell_error=max(abs(a-b) for x,y in zip(old_lat,new_lat)
+                       for a,b in zip(x,y))
+        dx=max(abs(((v[0]-u[0]+0.5)%1-0.5)*old_lat[0][0]+
+                   ((v[1]-u[1]+0.5)%1-0.5)*old_lat[1][0])
+               for u,v in zip(old,new))
+        dy=max(abs(((v[1]-u[1]+0.5)%1-0.5)*old_lat[1][1])
+               for u,v in zip(old,new))
+        rec.update({"fixed_cell_error_A":cell_error,
+                    "max_lateral_xy_drift_A":max(dx,dy)})
+        headings=list(re.finditer(r"POSITION\s+TOTAL-FORCE\s+\(eV/Angst\)",content))
+        if not headings:raise RuntimeError("Missing final force table")
+        forces=[]
+        for line in content[headings[-1].end():].splitlines():
+            fields=line.split()
+            if len(fields)==6:
+                try:forces.append([float(x) for x in fields])
+                except ValueError:continue
+            if len(forces)==6:break
+        if len(forces)!=6:raise RuntimeError("Final ionic force table incomplete")
+        fz=max(abs(f[5]) for f in forces)
+        rec["max_abs_Fz_eV_A"]=fz
+        rec["vasp_ionic_accuracy_flag"]=("reached required accuracy" in content)
+        rec["status"]=("CONVERGED_REQUIRES_SCIENTIFIC_REVIEW"
+            if fz<=.012 and rec["vasp_ionic_accuracy_flag"]
+            and max(dx,dy)<=.002 and cell_error<=.0001
+            else "NOT_CONVERGED_OR_FAILED_CONSTRAINTS")
+    except (ValueError,IndexError,RuntimeError) as exc:
+        rec["status"]="INVALID_GEOMETRY_OR_FORCES"
+        rec["reason"]=str(exc)
+    return rec
+
 def audit(root):
     root,selected=load_inputs(root)
     ids_file=root/"pbs_ids.json"
     ids=json.loads(ids_file.read_text()) if ids_file.exists() else {}
     rows=[]
     for j in selected:
-        folder=root/j["name"];out=folder/"OUTCAR"
-        row={"job":j["name"],"pbs_id":ids.get(j["name"])}
-        if not out.is_file():
-            row["status"]="NOT_RUN_OR_OUTPUT_NOT_COLLECTED"
-        else:
-            text=out.read_text(errors="replace")
-            vals=re.findall(r"free\s+energy\s+TOTEN\s*=\s*([-+\d.Ee]+)\s+eV",text)
-            if vals and (folder/"CONTCAR").exists():
-                row["status"]="ENERGY_FOUND_NEEDS_FORCE_AND_STRUCTURE_REVIEW"
-                row["final_TOTEN_eV"]=float(vals[-1])
-                row["OUTCAR_sha256"]=checksum(out)
-                row["CONTCAR_sha256"]=checksum(folder/"CONTCAR")
-            else:row["status"]="INCOMPLETE_OUTPUT"
-        rows.append(row)
+        rows.append({"job":j["name"],"pbs_id":ids.get(j["name"]),
+                     **review_output(root/j["name"])})
     return {"scope":"initial z-only relaxation, NOT NEB barrier or NMEE",
-            "rows":rows,"no_barrier_claim":True}
+            "rows":rows,"no_barrier_claim":True,"no_NMEE_claim":True}
+
 
 if __name__=="__main__":
     p=argparse.ArgumentParser()
