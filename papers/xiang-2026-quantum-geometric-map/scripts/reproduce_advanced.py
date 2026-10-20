@@ -10,6 +10,8 @@ from qgmap.orbital_mnhe_v5 import orbital_mnhe_2d,orbital_mnhe_3d
 from qgmap.warped_disorder_v17 import Lattice,ra_observable,density_ward,slope as ra_slope
 from qgmap.spectral_kubo_v18 import spectral_bubble,slope as spectral_slope
 from qgmap.finite_qomega_ward_v19 import finite_ward
+from qgmap.real_frequency_continuity_v20 import ExactSystem,kinematic_ward,uniform_density_vs_compressibility
+from qgmap.limit_order_v20 import scan_limit
 
 
 def _spin(n): return four_band_audit(N=n)
@@ -52,6 +54,40 @@ def _ward(n):
             "iterations":r["iterations"],"warnings":r["warnings"],
             "limit":"finite-eta resolvent Ward identity; not physical continuity at eta>0"}
 
+
+def _complex_dict(z):
+    return {"real":float(z.real),"imag":float(z.imag)}
+
+def _exact_kubo_v20(L):
+    system=ExactSystem(L=L)
+    axes={}
+    for direction,name in ((0,"x"),(1,"y")):
+        out=kinematic_ward(system,direction=direction)
+        axes[name]={
+            "ward_density_abs":out["ward_density_abs"],
+            "ward_current_abs":out["ward_current_abs"],
+            "commutator_abs":out["commutator_abs"],
+            "contact_rho_j":_complex_dict(out["contact_rho_j"]),
+            "missing_contact_abs":out["bare_missing_current_contact_abs"],
+            "q":out["q"],"omega":out["omega"],"delta":out["delta"],
+        }
+    thermo=uniform_density_vs_compressibility(system)
+    return {"protocol":"exact_finite_system_real_frequency_longitudinal_Kubo_continuity",
+            "L":L,"hilbert_space_dim":2*L*L,
+            "directions":axes,
+            "thermodynamic":{
+                "uniform_dynamic_density":_complex_dict(thermo["dynamic_uniform_density"]),
+                "grand_canonical_compressibility":thermo["equilibrium_compressibility"],
+                "compressibility_finite_difference":thermo["compressibility_finite_difference"],
+            },
+            "limits":"finite size, exact static disorder, longitudinal charge continuity; not PHE or generic open-system DC"}
+
+def _limit_order_v20(n):
+    result=scan_limit(n=n,eta_values=(.02,.005,.001),q=.06,omega=.04)
+    return {"protocol":result["protocol"],"n":n,"q":result["q"],"omega":result["omega"],
+            "values":result["values"],"warnings":result["warnings"],
+            "limits":"noncrossing SCBA regulator order; external eta not a physical collision rate"}
+
 CASES={
     "spin-four-band":(_spin,23,"Four-band spin-MNHE density matrix versus SM Eq.29","Synthetic nondegenerate four-band model; no impurity or material Wannier operator."),
     "orbital-phe":(_phe,61,"2D Bz orbital PHE; literal SM Eq.56 versus finite-field derivative","Two-band periodic 2D model; printed Eq.56 discrepancy remains open."),
@@ -60,13 +96,17 @@ CASES={
     "scba-ra":(_scba_ra,41,"SCBA self-energy, RA bubble and noncrossing current ladder","Independent periodic regulator; RA Fermi-surface kernel only."),
     "kubo-spectral":(_spectral,31,"Symmetric four-channel spectral Kubo with RA, AR, RR, AA ladders","Zero-temperature finite-eta spectral sector; not complete Kubo-Streda."),
     "finite-qomega-ward":(_ward,31,"Finite-(q,omega) SCBA resolvent Ward identity","External eta is a regulator; real-frequency physical continuity and dc limits remain open."),
+    "exact-kubo-v20":(_exact_kubo_v20,5,"Exact finite-system real-frequency continuity and contact terms","L is a finite periodic-system linear size, not a k-mesh. Exact longitudinal benchmark; not PHE."),
+    "limit-order-v20":(_limit_order_v20,41,"SCBA regulator limit at fixed finite probe versus static origin","Numerical regulator-order evidence, not exact dc electromagnetic transport."),
 }
 
 def evaluate(case,mesh=None):
     if case not in CASES: raise ValueError("Unknown case; use one of "+",".join(CASES))
     fn,default_mesh,description,limits=CASES[case]
     n=default_mesh if mesh is None else mesh
-    if n<12: raise ValueError("Mesh must be >=12 for the shared CLI")
+    if case=="exact-kubo-v20":
+        if not 3<=n<=12:raise ValueError("Exact system requires 3<=L<=12")
+    elif n<12: raise ValueError("Mesh must be >=12 for momentum-grid cases")
     result=fn(n)
     return {"schema":"qgmap-advanced-2","case":case,
             "science_status":"PARTIAL","validation_scope":"named synthetic model / method subset",

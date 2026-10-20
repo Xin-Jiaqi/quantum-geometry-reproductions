@@ -1,0 +1,38 @@
+{
+  "schema": "qgmap-v35-real-frequency-frozen-1",
+  "science_status": "PARTIAL",
+  "model": "v20 exact finite disordered L=5 and SCBA n=41 illustrative protocols",
+  "exact": {
+    "L": 5,
+    "omega": 0.27,
+    "delta": 0.035,
+    "compressibility": 3.7449214344038797,
+    "missing_contact_y_abs": 19.695046698299386,
+    "max_ward_residual_accepted": 1e-10
+  },
+  "scba": {
+    "n": 41,
+    "q": 0.06,
+    "omega": 0.04,
+    "eta": [
+      0.02,
+      0.005,
+      0.001
+    ],
+    "fixed_probe_leak": [
+      0.05805908031880683,
+      0.0171990366135657,
+      0.0037875989274626523
+    ],
+    "uniform_static_leak": [
+      0.07275038594615313,
+      0.042931741168497,
+      0.03562275014459327
+    ]
+  },
+  "limitations": [
+    "exact Kubo test is longitudinal finite system",
+    "SCBA limit-order scan is external finite regulator",
+    "published static PHE not reproduced"
+  ]
+}

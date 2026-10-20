@@ -60,3 +60,16 @@ python scripts/reproduce_advanced.py --case orbital-mnhe-3d --output results/loc
 Run `python scripts/reproduce_advanced.py --case scba-ra`, `--case kubo-spectral`, or `--case finite-qomega-ward`. See [v34 method scope and limits](docs/SCBA_KUBO_WARD_MIGRATION_V34.md).
 
 A real Wannier input pipeline is still **BLOCKED** until consistent magnetic/position operators and response limits are provided. The finite-eta Ward identity is a resolvent identity, not a proof of physical dc charge conservation.
+
+
+## Exact finite-system charge continuity and regulator limits (v35)
+
+- `qgmap.real_frequency_continuity_v20.kinematic_ward`: **exact** finite-disorder longitudinal Kubo Ward identity, including the equal-time density-current contact term. The q=0 dynamical density response and equilibrium compressibility are intentionally separate.
+- `qgmap.limit_order_v20.scan_limit`: **SCBA** finite-regulator limit, contrasting nonzero probe ((q,\omega)) against static uniform origin. This is not the physical charge Ward identity at finite eta.
+
+```bash
+python scripts/reproduce_advanced.py --case exact-kubo-v20
+python scripts/reproduce_advanced.py --case limit-order-v20
+```
+
+See [v35 scientific gate and numbers](docs/EXACT_KUBO_LIMITS_MIGRATION_V35.md). These methods do not upgrade the paper's static PHE or full Kubo–Středa status.
