@@ -1,0 +1,522 @@
+{
+  "model": "eight-band bilayer Kane-Mele with real-space sliding hoppings",
+  "protocol": "T0 insulating, frozen occupation, static finite-Bz derivative of interband spin-electric susceptibility",
+  "exclude": "not nonequilibrium driven DC NMEE; not proven ferroelectric minima; no material claim",
+  "physics_relation": "chi_xx(Bz) = -2 sum_occupied_v,empty_c Im[Sx_vc vx_cv]/(Ev-Ec)^2; gamma = finite d/dBz chi",
+  "spin_hopping_channels": "full, same-sublattice-only, cross-sublattice-only at IDENTICAL t, SOC, mu, decay; nonadditivity is inclusion-exclusion at fixed parameters",
+  "diagnostic_warning": "matrix-element vs denominator split uses instantaneous sorted eigenbasis and is not a universal gauge-invariant separation in degenerate occupied/empty manifolds",
+  "base_parameters": {
+    "shift": [
+      0.0,
+      0.0
+    ],
+    "tunneling_eV": 0.02,
+    "decay_nm": 0.16,
+    "cross_sublattice": true,
+    "lattice_shell": 5,
+    "mu_eV": 0.02541381265,
+    "bond_nm": 0.142,
+    "rashba_soc_eV": 0.02,
+    "intrinsic_soc_eV": 0.01
+  },
+  "coarse_quadrature": {
+    "n_exterior_kept": 1647,
+    "n_valley_total": 4480,
+    "exterior_area_weight": 18.70239867619162,
+    "valley_area_weight": 0.35809862195676445,
+    "bz_area_weight": 19.08848340903347,
+    "normalization_error": -0.027986110885084514
+  },
+  "fine_quadrature": {
+    "n_exterior_kept": 3651,
+    "n_valley_total": 9600,
+    "exterior_area_weight": 18.729388047939047,
+    "valley_area_weight": 0.35809862195676445,
+    "bz_area_weight": 19.08848340903347,
+    "normalization_error": -0.000996739137658409
+  },
+  "parameter_robustness": {
+    "baseline": {
+      "parameter_changes": {},
+      "endpoints_and_midpoint": {
+        "0.1": {
+          "gamma": -1.69808000114991e-05,
+          "matrix_element_diagnostic": 1.9380071423505843e-05,
+          "energy_denominator_diagnostic": -3.63608714350047e-05,
+          "decomposition_closure_error": -2.439454888092385e-19,
+          "sampled_min_middle_gap_eV": 0.01523753557410292,
+          "sampled_min_mu_distance_eV": 0.002434767902549158,
+          "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+          "hopping_channel": "full",
+          "cross_amplitude_sign": 1
+        },
+        "0.2": {
+          "gamma": 9.321712248935918e-07,
+          "matrix_element_diagnostic": 2.2271755595390046e-05,
+          "energy_denominator_diagnostic": -2.1339584370495834e-05,
+          "decomposition_closure_error": -6.2002811739014785e-19,
+          "sampled_min_middle_gap_eV": 0.01675888503139457,
+          "sampled_min_mu_distance_eV": 0.0033693016183125417,
+          "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+          "hopping_channel": "full",
+          "cross_amplitude_sign": 1
+        },
+        "0.4": {
+          "gamma": 9.850210490805101e-05,
+          "matrix_element_diagnostic": -5.964248600208881e-05,
+          "energy_denominator_diagnostic": 0.00015814459091013951,
+          "decomposition_closure_error": 2.981555974335137e-19,
+          "sampled_min_middle_gap_eV": 0.02154691424729699,
+          "sampled_min_mu_distance_eV": 0.006404769565586513,
+          "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+          "hopping_channel": "full",
+          "cross_amplitude_sign": 1
+        }
+      },
+      "zero_bracket": [
+        0.19609374999999998,
+        0.1984375
+      ],
+      "zero_midpoint": 0.197265625,
+      "min_sampled_mu_distance_eV": 0.002434767902549158
+    },
+    "weak_hopping_10meV": {
+      "parameter_changes": {
+        "tunneling_eV": 0.01
+      },
+      "endpoints_and_midpoint": {
+        "0.1": {
+          "gamma": -2.9825243611076333e-06,
+          "matrix_element_diagnostic": 2.416314495277149e-06,
+          "energy_denominator_diagnostic": -5.398838856384486e-06,
+          "decomposition_closure_error": -2.964615315390051e-19,
+          "sampled_min_middle_gap_eV": 0.02444766924582384,
+          "sampled_min_mu_distance_eV": 0.00944485273914892,
+          "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+          "hopping_channel": "full",
+          "cross_amplitude_sign": 1
+        },
+        "0.2": {
+          "gamma": -2.830330142394671e-06,
+          "matrix_element_diagnostic": -1.6915307159498843e-06,
+          "energy_denominator_diagnostic": -1.1387994264451377e-06,
+          "decomposition_closure_error": 3.510951566369075e-19,
+          "sampled_min_middle_gap_eV": 0.024945013487920498,
+          "sampled_min_mu_distance_eV": 0.009797546875633466,
+          "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+          "hopping_channel": "full",
+          "cross_amplitude_sign": 1
+        },
+        "0.4": {
+          "gamma": 1.1753649467544751e-05,
+          "matrix_element_diagnostic": -4.1726539952872236e-05,
+          "energy_denominator_diagnostic": 5.348018942041937e-05,
+          "decomposition_closure_error": -2.3852447794681098e-18,
+          "sampled_min_middle_gap_eV": 0.026735861991006214,
+          "sampled_min_mu_distance_eV": 0.01108503547432338,
+          "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+          "hopping_channel": "full",
+          "cross_amplitude_sign": 1
+        }
+      },
+      "zero_bracket": [
+        0.26640624999999996,
+        0.26875
+      ],
+      "zero_midpoint": 0.267578125,
+      "min_sampled_mu_distance_eV": 0.00944485273914892
+    }
+  },
+  "hopping_channel_competition": {
+    "0.05": {
+      "full": {
+        "gamma": -1.1496802050082761e-05,
+        "matrix_element_diagnostic": 1.0821960822909496e-05,
+        "energy_denominator_diagnostic": -2.2318762872992054e-05,
+        "decomposition_closure_error": -2.0328790734103208e-19,
+        "sampled_min_middle_gap_eV": 0.014827226017406932,
+        "sampled_min_mu_distance_eV": 0.0021856556347231056,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "same_only": {
+        "gamma": 2.028307584140486e-09,
+        "matrix_element_diagnostic": 1.775743980947212e-08,
+        "energy_denominator_diagnostic": -1.5729132225331732e-08,
+        "decomposition_closure_error": 9.595295105615121e-23,
+        "sampled_min_middle_gap_eV": 0.014756919568892858,
+        "sampled_min_mu_distance_eV": 0.002151557053958225,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "same_only",
+        "cross_amplitude_sign": 1
+      },
+      "cross_only": {
+        "gamma": 1.6749199040434644e-07,
+        "matrix_element_diagnostic": -1.6981823006111023e-07,
+        "energy_denominator_diagnostic": 3.37310220465395e-07,
+        "decomposition_closure_error": 6.167458647195374e-20,
+        "sampled_min_middle_gap_eV": 0.03311371273690364,
+        "sampled_min_mu_distance_eV": 0.01654932728082232,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "cross_only",
+        "cross_amplitude_sign": 1
+      },
+      "inclusion_exclusion_nonadditivity": -1.1666322348071248e-05
+    },
+    "0.1": {
+      "full": {
+        "gamma": -1.69808000114991e-05,
+        "matrix_element_diagnostic": 1.9380071423505843e-05,
+        "energy_denominator_diagnostic": -3.63608714350047e-05,
+        "decomposition_closure_error": -2.439454888092385e-19,
+        "sampled_min_middle_gap_eV": 0.01523753557410292,
+        "sampled_min_mu_distance_eV": 0.002434767902549158,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "same_only": {
+        "gamma": 4.028192228798918e-09,
+        "matrix_element_diagnostic": 3.591771808482714e-08,
+        "energy_denominator_diagnostic": -3.1889525856028345e-08,
+        "decomposition_closure_error": 1.1911400820763599e-22,
+        "sampled_min_middle_gap_eV": 0.014964501761378507,
+        "sampled_min_mu_distance_eV": 0.0023024529623507893,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "same_only",
+        "cross_amplitude_sign": 1
+      },
+      "cross_only": {
+        "gamma": 1.2351860829188776e-06,
+        "matrix_element_diagnostic": -2.022326827858969e-06,
+        "energy_denominator_diagnostic": 3.2575129107778924e-06,
+        "decomposition_closure_error": -4.573977915173222e-20,
+        "sampled_min_middle_gap_eV": 0.03317323398354263,
+        "sampled_min_mu_distance_eV": 0.016548625258914908,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "cross_only",
+        "cross_amplitude_sign": 1
+      },
+      "inclusion_exclusion_nonadditivity": -1.8220014286646778e-05
+    },
+    "0.15": {
+      "full": {
+        "gamma": -1.290530713093837e-05,
+        "matrix_element_diagnostic": 2.3689950804682464e-05,
+        "energy_denominator_diagnostic": -3.6595257935620736e-05,
+        "decomposition_closure_error": -9.486769009248164e-20,
+        "sampled_min_middle_gap_eV": 0.015893239516047472,
+        "sampled_min_mu_distance_eV": 0.0028357376775065522,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "same_only": {
+        "gamma": 5.970886604604799e-09,
+        "matrix_element_diagnostic": 5.494317224238691e-08,
+        "energy_denominator_diagnostic": -4.897228563778202e-08,
+        "decomposition_closure_error": -9.26442286059391e-23,
+        "sampled_min_middle_gap_eV": 0.015307302629491301,
+        "sampled_min_mu_distance_eV": 0.0025521253559034306,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "same_only",
+        "cross_amplitude_sign": 1
+      },
+      "cross_only": {
+        "gamma": 3.983022453856088e-06,
+        "matrix_element_diagnostic": -7.111572253621561e-06,
+        "energy_denominator_diagnostic": 1.1094594707477766e-05,
+        "decomposition_closure_error": -1.1689054672109345e-19,
+        "sampled_min_middle_gap_eV": 0.033256614792072606,
+        "sampled_min_mu_distance_eV": 0.016549069871077376,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "cross_only",
+        "cross_amplitude_sign": 1
+      },
+      "inclusion_exclusion_nonadditivity": -1.689430047139906e-05
+    },
+    "0.2": {
+      "full": {
+        "gamma": 9.321712248935918e-07,
+        "matrix_element_diagnostic": 2.2271755595390046e-05,
+        "energy_denominator_diagnostic": -2.1339584370495834e-05,
+        "decomposition_closure_error": -6.2002811739014785e-19,
+        "sampled_min_middle_gap_eV": 0.01675888503139457,
+        "sampled_min_mu_distance_eV": 0.0033693016183125417,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "same_only": {
+        "gamma": 7.827402314845502e-09,
+        "matrix_element_diagnostic": 7.542559471935893e-08,
+        "energy_denominator_diagnostic": -6.759819240451316e-08,
+        "decomposition_closure_error": -2.6469779601696886e-22,
+        "sampled_min_middle_gap_eV": 0.015780621237621428,
+        "sampled_min_mu_distance_eV": 0.0028978585190515063,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "same_only",
+        "cross_amplitude_sign": 1
+      },
+      "cross_only": {
+        "gamma": 8.974653258260554e-06,
+        "matrix_element_diagnostic": -1.675163853911121e-05,
+        "energy_denominator_diagnostic": 2.572629179737175e-05,
+        "decomposition_closure_error": 1.3552527156068805e-20,
+        "sampled_min_middle_gap_eV": 0.03339051985906478,
+        "sampled_min_mu_distance_eV": 0.016551893236390426,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "cross_only",
+        "cross_amplitude_sign": 1
+      },
+      "inclusion_exclusion_nonadditivity": -8.050309435681808e-06
+    },
+    "0.3": {
+      "full": {
+        "gamma": 4.755774454625002e-05,
+        "matrix_element_diagnostic": -1.1681662802547049e-06,
+        "energy_denominator_diagnostic": 4.872591082650519e-05,
+        "decomposition_closure_error": -4.743384504624082e-19,
+        "sampled_min_middle_gap_eV": 0.01896224016156378,
+        "sampled_min_mu_distance_eV": 0.00474974715137862,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "same_only": {
+        "gamma": 1.1170212132307494e-08,
+        "matrix_element_diagnostic": 1.244001081642279e-07,
+        "energy_denominator_diagnostic": -1.1322989603192055e-07,
+        "decomposition_closure_error": 1.3234889800848443e-22,
+        "sampled_min_middle_gap_eV": 0.01709122241512236,
+        "sampled_min_mu_distance_eV": 0.0038613855334086733,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "same_only",
+        "cross_amplitude_sign": 1
+      },
+      "cross_only": {
+        "gamma": 2.6582473466294237e-05,
+        "matrix_element_diagnostic": -5.328898203619697e-05,
+        "energy_denominator_diagnostic": 7.987145550249135e-05,
+        "decomposition_closure_error": -1.3552527156068805e-19,
+        "sampled_min_middle_gap_eV": 0.03367719004180647,
+        "sampled_min_mu_distance_eV": 0.016547201473121706,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "cross_only",
+        "cross_amplitude_sign": 1
+      },
+      "inclusion_exclusion_nonadditivity": 2.096410086782347e-05
+    },
+    "0.4": {
+      "full": {
+        "gamma": 9.850210490805101e-05,
+        "matrix_element_diagnostic": -5.964248600208881e-05,
+        "energy_denominator_diagnostic": 0.00015814459091013951,
+        "decomposition_closure_error": 2.981555974335137e-19,
+        "sampled_min_middle_gap_eV": 0.02154691424729699,
+        "sampled_min_mu_distance_eV": 0.006404769565586513,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "same_only": {
+        "gamma": 1.3861699958443967e-08,
+        "matrix_element_diagnostic": 1.95620476272732e-07,
+        "energy_denominator_diagnostic": -1.8175877631428794e-07,
+        "decomposition_closure_error": -7.940933880509066e-23,
+        "sampled_min_middle_gap_eV": 0.018825031746942132,
+        "sampled_min_mu_distance_eV": 0.005150634419518858,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "same_only",
+        "cross_amplitude_sign": 1
+      },
+      "cross_only": {
+        "gamma": 5.3296462978690995e-05,
+        "matrix_element_diagnostic": -0.00011513289994187018,
+        "energy_denominator_diagnostic": 0.00016842936292056155,
+        "decomposition_closure_error": -3.7947076036992655e-19,
+        "sampled_min_middle_gap_eV": 0.0340485523131896,
+        "sampled_min_mu_distance_eV": 0.01655961694570148,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "cross_only",
+        "cross_amplitude_sign": 1
+      },
+      "inclusion_exclusion_nonadditivity": 4.519178022940157e-05
+    },
+    "1.0": {
+      "full": {
+        "gamma": 0.0001828874179024798,
+        "matrix_element_diagnostic": -0.0006725961507083034,
+        "energy_denominator_diagnostic": 0.0008554835686107821,
+        "decomposition_closure_error": 1.0842021724855044e-18,
+        "sampled_min_middle_gap_eV": 0.033137265138154286,
+        "sampled_min_mu_distance_eV": 0.014473585528381704,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "same_only": {
+        "gamma": 1.4262730378033776e-08,
+        "matrix_element_diagnostic": 3.8381096152371654e-07,
+        "energy_denominator_diagnostic": -3.6954823114568e-07,
+        "decomposition_closure_error": -2.752857078576476e-21,
+        "sampled_min_middle_gap_eV": 0.03007572307579075,
+        "sampled_min_mu_distance_eV": 0.013998450568634392,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "same_only",
+        "cross_amplitude_sign": 1
+      },
+      "cross_only": {
+        "gamma": 0.0001917394099667041,
+        "matrix_element_diagnostic": -0.0006501539590537983,
+        "energy_denominator_diagnostic": 0.0008418933690205024,
+        "decomposition_closure_error": -1.0842021724855044e-19,
+        "sampled_min_middle_gap_eV": 0.03485152713124113,
+        "sampled_min_mu_distance_eV": 0.016546467928724697,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "cross_only",
+        "cross_amplitude_sign": 1
+      },
+      "inclusion_exclusion_nonadditivity": -8.866254794602334e-06
+    }
+  },
+  "weak_hopping_controls": {
+    "0.005": {
+      "0.1": {
+        "full": -6.878794939440687e-07,
+        "same_only": 2.28814960101519e-10,
+        "cross_only": 7.843573556572467e-08,
+        "inclusion_exclusion_nonadditivity": -7.665440444698948e-07
+      },
+      "0.4": {
+        "full": 2.168500632872311e-06,
+        "same_only": 8.090639225877863e-10,
+        "cross_only": 4.1419303067506615e-06,
+        "inclusion_exclusion_nonadditivity": -1.974238737800938e-06
+      }
+    },
+    "0.01": {
+      "0.1": {
+        "full": -2.9825243611076333e-06,
+        "same_only": 9.369597925425044e-10,
+        "cross_only": 3.127450218284689e-07,
+        "inclusion_exclusion_nonadditivity": -3.296206342728645e-06
+      },
+      "0.4": {
+        "full": 1.1753649467544751e-05,
+        "same_only": 3.284832910517976e-09,
+        "cross_only": 1.5837396843415162e-05,
+        "inclusion_exclusion_nonadditivity": -4.087032208780929e-06
+      }
+    },
+    "0.015": {
+      "0.1": {
+        "full": -7.727604116770544e-06,
+        "same_only": 2.1843520556229596e-09,
+        "cross_only": 6.999557833440486e-07,
+        "inclusion_exclusion_nonadditivity": -8.429744252170216e-06
+      },
+      "0.4": {
+        "full": 3.8476419981499206e-05,
+        "same_only": 7.568101549295851e-09,
+        "cross_only": 3.311190601922247e-05,
+        "inclusion_exclusion_nonadditivity": 5.356945860727436e-06
+      }
+    },
+    "0.02": {
+      "0.1": {
+        "full": -1.69808000114991e-05,
+        "same_only": 4.028192228798918e-09,
+        "cross_only": 1.2351860829188776e-06,
+        "inclusion_exclusion_nonadditivity": -1.8220014286646778e-05
+      },
+      "0.4": {
+        "full": 9.850210490805101e-05,
+        "same_only": 1.3861699958443967e-08,
+        "cross_only": 5.3296462978690995e-05,
+        "inclusion_exclusion_nonadditivity": 4.519178022940157e-05
+      }
+    }
+  },
+  "relative_channel_sign_controls": {
+    "0.1": {
+      "cross_plus_gamma": -1.69808000114991e-05,
+      "cross_minus_gamma": 2.9656589148480884e-05,
+      "odd_under_cross_sign": -2.3318694579989993e-05,
+      "even_under_cross_sign": 6.337894568490892e-06
+    },
+    "0.2": {
+      "cross_plus_gamma": 9.321712248935918e-07,
+      "cross_minus_gamma": 7.60759989951633e-05,
+      "odd_under_cross_sign": -3.7571913885134855e-05,
+      "even_under_cross_sign": 3.850408511002845e-05
+    },
+    "0.4": {
+      "cross_plus_gamma": 9.850210490805101e-05,
+      "cross_minus_gamma": 0.00017821623808857596,
+      "odd_under_cross_sign": -3.9857066590262474e-05,
+      "even_under_cross_sign": 0.0001383591714983135
+    }
+  },
+  "global_layer_gauge_evenness": {
+    "0.0025": {
+      "positive_t": -1.686156706657988e-07,
+      "negative_t": -1.686156706657988e-07,
+      "even_residual": 0.0,
+      "gamma_over_t_sq": -0.02697850730652781
+    },
+    "0.005": {
+      "positive_t": -6.878794939440687e-07,
+      "negative_t": -6.878794939440687e-07,
+      "even_residual": 0.0,
+      "gamma_over_t_sq": -0.027515179757762746
+    },
+    "0.01": {
+      "positive_t": -2.9825243611076333e-06,
+      "negative_t": -2.9825243611076333e-06,
+      "even_residual": 0.0,
+      "gamma_over_t_sq": -0.029825243611076333
+    },
+    "0.02": {
+      "positive_t": -1.69808000114991e-05,
+      "negative_t": -1.69808000114991e-05,
+      "even_residual": 0.0,
+      "gamma_over_t_sq": -0.04245200002874775
+    }
+  },
+  "independent_static_kernel_and_quadrature_checks": {
+    "0.1": {
+      "prior_independent_kernel": -1.6980800011500395e-05,
+      "stage4_full": -1.69808000114991e-05,
+      "high_resolution": {
+        "gamma": -1.698148425213316e-05,
+        "matrix_element_diagnostic": 1.9392294867166542e-05,
+        "energy_denominator_diagnostic": -3.6373779119300243e-05,
+        "decomposition_closure_error": 5.421010862427522e-19,
+        "sampled_min_middle_gap_eV": 0.015237234694468896,
+        "sampled_min_mu_distance_eV": 0.00243485078686545,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "mesh_change": 6.842406340586409e-10
+    },
+    "0.4": {
+      "prior_independent_kernel": 9.850210490805304e-05,
+      "stage4_full": 9.850210490805101e-05,
+      "high_resolution": {
+        "gamma": 9.850135356648258e-05,
+        "matrix_element_diagnostic": -5.960659157764464e-05,
+        "energy_denominator_diagnostic": 0.00015810794514412726,
+        "decomposition_closure_error": -5.421010862427522e-20,
+        "sampled_min_middle_gap_eV": 0.021546677131800217,
+        "sampled_min_mu_distance_eV": 0.0064039812783052985,
+        "method": "exact static mixed-spin/momentum Berry-curvature finite-field difference; split is nonunique under intrablock degeneracy",
+        "hopping_channel": "full",
+        "cross_amplitude_sign": 1
+      },
+      "mesh_change": 7.513415684290382e-10
+    }
+  }
+}

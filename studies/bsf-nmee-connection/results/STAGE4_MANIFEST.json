@@ -1,0 +1,18 @@
+{
+  "schema": "bsf-nmee-stage4-v1",
+  "purpose": "static mixed-curvature and orbital-channel interference in synthetic sliding bilayer",
+  "stage3_ref": "666cd08e68eb1ef7d1bffc211beaf394d5b00c87",
+  "computation": "OPENBLAS_NUM_THREADS=1 python scripts/run_stage4_mechanism.py --quick",
+  "sha256": {
+    "STAGE4_README.md": "6cfa2dd92debc1af48a3f1533d6a6f94d08d2f85c9ff9c5f4c1acd475ed8539a",
+    "bsf_nmee/response_mechanism.py": "c74fd8ee48baa681460b972e4bac8b43e4f99a85f1f88d1a0b8180f8c4a43b89",
+    "scripts/run_stage4_mechanism.py": "68681e5d055937a26150b1a4f642fd639a52e1056534b91b70eaf2c24372125b",
+    "docs/STAGE4_PHYSICS.md": "b9e6792e7df4d53d7417e39a4f3c8d9e86de185c2c487cfcd8614c21964217b2",
+    "docs/STAGE4_WORKLOG.md": "5e0948163c1b724796f8410e7756cd82fe0244e5e198414079ae91de6947d98b",
+    "results/sliding_stage4_mechanism.json": "89d61d22979db277166fec50bbdc06f6024ce71480f3e892475579787238d742",
+    "results/sliding_stage4_channels.csv": "5ac5535c8f67905ecafd1a3d9c5991c6ded23d5dd1a4c17a1f07a79f8a3dce05",
+    "results/sliding_stage4_channels.svg": "85f2ef11fbe7567bca29b6dd33203ccdcc5a2eb66068015fd563a6233dd43ab0",
+    "tests/test_stage4_mechanism.py": "c97c43aa0e635aad67e701d4e76d3665c17c8daff589b9e4e222b4e94ce9862c",
+    "tests/test_stage4_manifest.py": "ac23eccdf6d17216d2f63a2afb3d9ff7bbe83e2049d0156e7997ec8b9dd2d2d4"
+  }
+}
