@@ -15,6 +15,9 @@ Supported:
 - Classical orbital Hall effect (spinless parabolic band, finite temperature).
 - Finite-dimensional **two-color Liouville resolvent** with explicit `E→B` and `B→E` orderings, independent frequencies, broadenings, and a **separately labelled** equilibrium population correction. This is a method module, not the complete published driven-DC formula.
 - SM Table I 11 representative magnetic-group tensor spaces using Neumann operators.
+- SCBA self-energy and a noncrossing Bethe-Salpeter ladder using the same scalar-disorder variance.
+- Symmetric four-channel spectral Kubo-Greenwood response with separate RA, AR, RR, and AA ladders.
+- Finite-(q, omega) resolvent Ward identity with the exact finite-difference longitudinal insertion.
 - SCBA self-energy and noncrossing Bethe-Salpeter ladder in an independent periodic two-band regulator.
 - Symmetric four-channel spectral Kubo-Greenwood response (`RA+AR-RR-AA`) with a distinct ladder in each channel.
 - Finite-((q,\omega)) SCBA resolvent Ward identity using the exact finite-difference longitudinal insertion `[H(k+q/2)-H(k-q/2)]/q`.
@@ -48,7 +51,7 @@ See [scientific acceptance](docs/SCIENTIFIC_ACCEPTANCE.md), [integration contrac
 
 ## Migrated advanced-method subset (v31)
 
-The first advanced method is now independently callable: `qgmap.spin_multiband_v5.four_band_audit` reconstructs the four spin-density-matrix terms of SM Eqs. (16–19) and checks their sum against Eq. (29). See [the v31 migration protocol](docs/SPIN_MULTIBAND_MIGRATION_V31.md). It is **not** a general degeneracy-robust material solver. The orbital and SCBA/Ward methods remain in the offline v30 checkpoint until individually migrated and tested.
+The public core now includes independently callable spin-MNHE, orbital PHE/MNHE, SCBA/ladder, four-channel spectral Kubo, and finite-(q, omega) resolvent-Ward method subsets. See the [v31 spin](docs/SPIN_MULTIBAND_MIGRATION_V31.md), [v32 orbital](docs/ORBITAL_MIGRATION_V32.md), and [v34 SCBA/Kubo/Ward](docs/SCBA_KUBO_WARD_MIGRATION_V34.md) protocols. These are model-level methods, not a general degeneracy-robust real-material solver.
 
 ### Orbital advanced-method subset (v32)
 
