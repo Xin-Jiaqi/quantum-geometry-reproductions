@@ -12,6 +12,11 @@ from qgmap.spectral_kubo_v18 import spectral_bubble,slope as spectral_slope
 from qgmap.finite_qomega_ward_v19 import finite_ward
 from qgmap.real_frequency_continuity_v20 import ExactSystem,kinematic_ward,uniform_density_vs_compressibility
 from qgmap.limit_order_v20 import scan_limit
+from qgmap.electromagnetic_eb_v21 import EBSpec, liouville_slope, finite_zeeman_slope, mixed_ward, gauge_mixed
+from qgmap.two_color_exact_v22 import TwoColorSpec, frequency_channels, independent_sylvester_channels, static_preparation
+from qgmap.homogeneous_length_gauge_v23 import UniformSpec, source_and_channels, algebraic_channels, leading_fermi_pole, eq20_direct_band_current
+from dataclasses import replace
+
 
 
 def _spin(n): return four_band_audit(N=n)
@@ -88,6 +93,62 @@ def _limit_order_v20(n):
             "values":result["values"],"warnings":result["warnings"],
             "limits":"noncrossing SCBA regulator order; external eta not a physical collision rate"}
 
+
+def _complex_eb(z):
+    return {"real":float(complex(z).real),"imag":float(complex(z).imag)}
+
+def _eb_v21(L):
+    spec=EBSpec(system=ExactSystem(L=L),magnetic_step=2e-4)
+    analytic=liouville_slope(spec)
+    fd=finite_zeeman_slope(spec)
+    ward=mixed_ward(spec)
+    gauge=gauge_mixed(spec)
+    return {
+      "protocol":"v21_finite_q_scalar_potential_exact_disorder_static_B_derivative",
+      "L":L,"q":float(2*3.141592653589793/L),
+      "liouville":_complex_eb(analytic),"finite_B_difference":_complex_eb(fd),
+      "finite_difference_error":float(abs(analytic-fd)),
+      "mixed_ward_density_abs":float(ward["density_source_ward_abs"]),
+      "mixed_ward_current_abs":float(ward["current_source_ward_abs"]),
+      "pure_gauge_magnetic_total_abs":float(abs(gauge["total_mixed"])),
+      "limits":"finite-q finite-omega longitudinal scalar potential, not homogeneous DC PHE"}
+
+def _eb_v22(L):
+    spec=TwoColorSpec(system=ExactSystem(L=L))
+    freq=frequency_channels(spec)
+    independent=independent_sylvester_channels(spec)
+    prepared=static_preparation(replace(spec,omega_b=0.,omega_e=.31,eta_e=.045))
+    return {
+      "protocol":"v22_two_color_finite_q_scalar_E_and_dynamic_onsite_Zeeman",
+      "L":L,
+      "B_then_E":_complex_eb(freq["b_then_e"]),
+      "E_then_B":_complex_eb(freq["e_then_b"]),
+      "total":_complex_eb(freq["total"]),
+      "independent_sylvester_error":float(abs(freq["total"]-independent["total"])),
+      "static_prepared_response":_complex_eb(prepared["total"]),
+      "static_prepared_population":_complex_eb(prepared["population"]),
+      "limits":"adiabatic eta E/B are regulators, not a microscopic scattering time; not homogeneous DC PHE"}
+
+def _eb_v23(n):
+    spec=UniformSpec(n=n,omega_e=.023,omega_b=.015,eta_e=.07,eta_b=.04)
+    freq=source_and_channels(spec)
+    direct=algebraic_channels(spec)
+    poleSpec=UniformSpec(n=n)
+    residue=leading_fermi_pole(poleSpec)
+    eq20=eq20_direct_band_current(poleSpec)
+    return {
+      "protocol":"v23_periodic_homogeneous_length_gauge_two_color_EB",
+      "n":n,
+      "B_then_E":_complex_eb(freq["b_then_e"]),
+      "E_then_B":_complex_eb(freq["e_then_b"]),
+      "total":_complex_eb(freq["total"]),
+      "independent_algebraic_error":float(abs(freq["total"]-direct["total"])),
+      "sm20_pole":_complex_eb(residue),
+      "sm20_direct":_complex_eb(eq20),
+      "pole_difference":float(abs(residue-eq20)),
+      "minimum_direct_gap":float(freq["gap_min"]),
+      "limits":"independent periodic two-band model, dimensionless fields, no conserving collision or physical DC PHE"}
+
 CASES={
     "spin-four-band":(_spin,23,"Four-band spin-MNHE density matrix versus SM Eq.29","Synthetic nondegenerate four-band model; no impurity or material Wannier operator."),
     "orbital-phe":(_phe,61,"2D Bz orbital PHE; literal SM Eq.56 versus finite-field derivative","Two-band periodic 2D model; printed Eq.56 discrepancy remains open."),
@@ -98,14 +159,19 @@ CASES={
     "finite-qomega-ward":(_ward,31,"Finite-(q,omega) SCBA resolvent Ward identity","External eta is a regulator; real-frequency physical continuity and dc limits remain open."),
     "exact-kubo-v20":(_exact_kubo_v20,5,"Exact finite-system real-frequency continuity and contact terms","L is a finite periodic-system linear size, not a k-mesh. Exact longitudinal benchmark; not PHE."),
     "limit-order-v20":(_limit_order_v20,41,"SCBA regulator limit at fixed finite probe versus static origin","Numerical regulator-order evidence, not exact dc electromagnetic transport."),
+    "eb-finite-q-v21":(_eb_v21,4,"Finite-q equilibrium-B mixed Kubo/Liouville derivative and gauge contact","Finite-q scalar-electric probe, not published homogeneous DC PHE."),
+    "eb-two-color-v22":(_eb_v22,3,"Independently switched E then B and B then E density-matrix channels","Finite-q scalar-potential and onsite Zeeman, adiabatic regulators."),
+    "eb-uniform-v23":(_eb_v23,64,"Uniform length-gauge EB and SM Eq.20 pole model benchmark","Independent periodic model, not original continuum surface or steady-state transport."),
 }
 
 def evaluate(case,mesh=None):
     if case not in CASES: raise ValueError("Unknown case; use one of "+",".join(CASES))
     fn,default_mesh,description,limits=CASES[case]
     n=default_mesh if mesh is None else mesh
-    if case=="exact-kubo-v20":
-        if not 3<=n<=12:raise ValueError("Exact system requires 3<=L<=12")
+    if case in ("exact-kubo-v20","eb-finite-q-v21","eb-two-color-v22"):
+        if not 3<=n<=12:raise ValueError("Finite exact system requires 3<=L<=12")
+    elif case=="eb-uniform-v23":
+        if n<12 or n%2:raise ValueError("Homogeneous FFT mesh must be even n>=12")
     elif n<12: raise ValueError("Mesh must be >=12 for momentum-grid cases")
     result=fn(n)
     return {"schema":"qgmap-advanced-2","case":case,

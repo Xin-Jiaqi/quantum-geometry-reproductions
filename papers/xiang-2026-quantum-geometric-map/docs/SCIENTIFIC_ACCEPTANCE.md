@@ -18,6 +18,9 @@
 | Finite-(q,omega) Ward | Matrix resolvent identity with exact finite-difference longitudinal insertion | PASS finite-eta resolvent identity; physical continuity remains OPEN |
 | Exact real-frequency Kubo charge continuity | `real_frequency_continuity_v20`: full finite-system Lehmann sum and lattice contact terms | PASS finite-disordered longitudinal benchmark; mixed-EB transverse PHE OPEN |
 | SCBA regulator order | `limit_order_v20`: eta leakage at fixed nonzero probe and at uniform static origin | PASS numerical model limit-order diagnostic; physical dc Ward OPEN |
+| Finite-q exact mixed EB | `electromagnetic_eb_v21`: Kubo/Liouville static-B derivative, density-current contact and pure gauge | PASS independent finite-q test; uniform DC PHE OPEN |
+| Finite-q two-color | `two_color_exact_v22`: both E/B orderings; resolvent, Sylvester and time-domain | PASS two-color finite-system method; steady-state OPEN |
+| Homogeneous length gauge | `homogeneous_length_gauge_v23`: FFT covariant derivative, equilibrium preparation and SM Eq.20 residue | PASS periodic two-band method; continuum Fig.2/physical DC OPEN |
 | General orbital QMQ/BCQ | General omitted three-band pieces and complete Kubo–Středa physical DC response | OPEN |
 | Real Wannier materials | Requires consistent projected magnetic/position operators, Berry connection and validated response protocol | BLOCKED |
 

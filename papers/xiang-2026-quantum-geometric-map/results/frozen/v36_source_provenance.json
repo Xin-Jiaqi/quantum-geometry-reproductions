@@ -1,0 +1,43 @@
+{
+  "origin": "v30 cleancheck frozen source tree",
+  "sources": [
+    {
+      "filename": "electromagnetic_eb_v21.py",
+      "source": "src/qgmap/electromagnetic_eb_v21.py",
+      "size": 7610,
+      "sha256": "54120e8c98b81fe80768dea99097c7f52b1d345dab6ef99b5d69b12ff11eb18c"
+    },
+    {
+      "filename": "two_color_exact_v22.py",
+      "source": "src/qgmap/two_color_exact_v22.py",
+      "size": 8296,
+      "sha256": "4572bfa2bb1ce140a1f90d324f874a0cc1015415a63295d2d03bf9839fe79e48"
+    },
+    {
+      "filename": "homogeneous_length_gauge_v23.py",
+      "source": "src/qgmap/homogeneous_length_gauge_v23.py",
+      "size": 8816,
+      "sha256": "b8eafa8dd93ae5d4ef571829aa66e5faaae486e5f15d34bc20712bf202bc1db3"
+    },
+    {
+      "filename": "test_electromagnetic_eb_v21.py",
+      "source": "validation_v21/test_v21.py",
+      "size": 4562,
+      "sha256": "03c63edabc7e1b95d1035a923fa8c57e5c5af07188ef146027c9a9ec89567a00"
+    },
+    {
+      "filename": "test_two_color_exact_v22.py",
+      "source": "validation_v22/test_v22.py",
+      "size": 5576,
+      "sha256": "24a094ae095158822d8b65e56fba97745672f3a5ac17b7c92dcf52fdca16a860"
+    },
+    {
+      "filename": "test_homogeneous_length_gauge_v23.py",
+      "source": "validation_v23/test_v23.py",
+      "size": 4540,
+      "sha256": "4a17a4c8ec9a53f2db506e0ad6c0da77d2499489a6e129977828ce5d1a1e7ddf"
+    }
+  ],
+  "scientific_status": "PARTIAL",
+  "note": "Unchanged copied original v21-v23 research source and tests, exported into GitHub v36."
+}

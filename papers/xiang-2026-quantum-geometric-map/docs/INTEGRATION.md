@@ -73,3 +73,13 @@ python scripts/reproduce_advanced.py --case limit-order-v20
 ```
 
 See [v35 scientific gate and numbers](docs/EXACT_KUBO_LIMITS_MIGRATION_V35.md). These methods do not upgrade the paper's static PHE or full Kubo–Středa status.
+
+## v36: independently callable second-order EB protocols
+
+| Workflow | API | Protocol |
+| --- | --- | --- |
+| Finite-q E / static B | `qgmap.electromagnetic_eb_v21`; `--case eb-finite-q-v21` | disordered finite system, scalar-electric and Zeeman, contact terms and thermal equilibrium density derivative |
+| Finite-q two-color Liouville | `qgmap.two_color_exact_v22`; `--case eb-two-color-v22` | dynamic E/B, two separate action orderings, independent Sylvester and time-domain validation |
+| Uniform E length gauge | `qgmap.homogeneous_length_gauge_v23`; `--case eb-uniform-v23` | periodic synthetic two-band E/B, FFT covariant derivative and SM Eq.20 pole |
+
+The finite-q scalar-electric models and homogeneous-E length-gauge model must **not** be merged as if they used the same experimental electric-field protocol. All results retain model units; neither static RTA `tau` nor (B) in tesla is automatically inferred. See [v36](docs/SCIENCE_MIGRATION_V36.md).

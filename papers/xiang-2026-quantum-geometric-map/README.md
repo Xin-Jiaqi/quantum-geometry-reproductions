@@ -66,3 +66,7 @@ The original v11/v17/v18/v19 SCBA, ladder, four-channel spectral Kubo, and finit
 ### Exact Kubo and limit-order subset (v35)
 
 The original v20 finite-disorder full-Lehmann Kubo continuity/contact-term benchmark and the separate SCBA external-regulator limit-order scan are now migrated with their 18 original tests. Two new JSON cases are `exact-kubo-v20` and `limit-order-v20`. See [v35 methods, reference numbers and physical limits](docs/EXACT_KUBO_LIMITS_MIGRATION_V35.md). Neither constitutes a complete transverse or mixed-field DC response.
+
+### Two-color and length-gauge EB migration (v36)
+
+Three more independent original research modules are published with 66 historical tests: `electromagnetic_eb_v21` (finite-q scalar E and static-B Liouville/Kubo derivative), `two_color_exact_v22` (both dynamic E/B switch orderings), and `homogeneous_length_gauge_v23` (periodic uniform E, gauge-covariant derivative and SM Eq.20 pole). Use `python scripts/reproduce_advanced.py --case eb-finite-q-v21`, `--case eb-two-color-v22`, and `--case eb-uniform-v23`. See [v36 migration scope](docs/SCIENCE_MIGRATION_V36.md) and [frozen provenance](results/frozen/v36_source_provenance.json). The paper's physical steady-state DC response remains OPEN.

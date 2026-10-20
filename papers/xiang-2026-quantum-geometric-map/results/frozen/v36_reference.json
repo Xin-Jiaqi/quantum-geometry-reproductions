@@ -1,0 +1,44 @@
+{
+  "schema": "qgmap-eb-v36-frozen-1",
+  "scientific_status": "PARTIAL",
+  "v21": {
+    "L": 4,
+    "liouville_slope": {
+      "real": -0.5013185224459267,
+      "imag": -0.17904312452188173
+    },
+    "mixed_ward_tol": 1e-10,
+    "gauge_total_tol": 1e-09,
+    "finite_B_difference_tol": 2e-07
+  },
+  "v22": {
+    "L": 3,
+    "B_then_E": {
+      "real": 0.559090353576692,
+      "imag": 0.04421258246073823
+    },
+    "E_then_B": {
+      "real": -0.5671831780252455,
+      "imag": -0.07102534021631202
+    },
+    "total": {
+      "real": -0.00809282444855352,
+      "imag": -0.026812757755573707
+    },
+    "independent_error_tol": 1e-11
+  },
+  "v23": {
+    "N": 64,
+    "total": {
+      "real": 0.03254037287627427,
+      "imag": 0.01059782201791099
+    },
+    "sm20_pole": 0.002513459754146514,
+    "algebraic_error_tol": 3e-08
+  },
+  "limits": [
+    "v21 and v22 finite-q scalar-electric, v23 uniform length gauge",
+    "not full steady-state dc PHE",
+    "not complete Kubo-Streda"
+  ]
+}
