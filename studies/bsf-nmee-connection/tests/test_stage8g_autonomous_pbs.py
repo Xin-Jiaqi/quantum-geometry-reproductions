@@ -64,6 +64,37 @@ class Stage8GAutonomousHpcTests(unittest.TestCase):
             self.assertEqual(onsite.audit(dest)["rows"][0]["status"],
                              "INVALID_GEOMETRY_OR_FORCES")
 
+    def test_mock_pbs_submission_is_bounded_and_idempotent(self):
+        from unittest.mock import patch
+        import subprocess
+        with tempfile.TemporaryDirectory() as t:
+            dest=Path(t)/"pilot"
+            prepare.build(dest)
+            pot="TITEL = PAW_PBE W 06Sep2000\nENMAX = 340.0;\n"
+            pot+="TITEL = PAW_PBE Se 06Sep2000\nENMAX = 280.0;\n"
+            for name in onsite.PILOT:
+                (dest/name/"POTCAR").write_text(pot)
+            site=Path(t)/"local_site.json"
+            site.write_text("{}")
+            cfg={"scheduler":"pbs","queue":"CP_001","ncpus":4,
+                 "mem_gb":8,"walltime":"02:00:00",
+                 "vasp_binary":"/usr/bin/true","mpi_command":"mpirun",
+                 "license_confirmed":True,"validated":True}
+            seq=iter(("1001.test","1002.test","1003.test"))
+            def fake_submit(*args,**kwargs):
+                return subprocess.CompletedProcess(
+                    args[0],0,stdout=next(seq)+"\n",stderr="")
+            with patch.object(onsite,"load_site",return_value=cfg), \
+                 patch.object(onsite.subprocess,"run",side_effect=fake_submit) as mock:
+                a=onsite.dispatch(dest,site,execute=False)
+                self.assertEqual(a["status"],"DRY_RUN_VALIDATED")
+                b=onsite.dispatch(dest,site,execute=True)
+                self.assertEqual(len(b["pbs_ids"]),3)
+                again=onsite.dispatch(dest,site,execute=True)
+                self.assertEqual(b["pbs_ids"],again["pbs_ids"])
+                self.assertEqual(mock.call_count,3)
+            self.assertEqual(len(json.loads((dest/"pbs_ids.json").read_text())),3)
+
     def test_source_sha_and_separate_material_provenance(self):
         lat,pos=prepare.source_atoms()
         self.assertEqual(len(pos),6)
