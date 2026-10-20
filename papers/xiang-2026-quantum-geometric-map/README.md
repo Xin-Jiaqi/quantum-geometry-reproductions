@@ -46,3 +46,7 @@ See [scientific acceptance](docs/SCIENTIFIC_ACCEPTANCE.md), [integration contrac
 ## Migrated advanced-method subset (v31)
 
 The first advanced method is now independently callable: `qgmap.spin_multiband_v5.four_band_audit` reconstructs the four spin-density-matrix terms of SM Eqs. (16–19) and checks their sum against Eq. (29). See [the v31 migration protocol](docs/SPIN_MULTIBAND_MIGRATION_V31.md). It is **not** a general degeneracy-robust material solver. The orbital and SCBA/Ward methods remain in the offline v30 checkpoint until individually migrated and tested.
+
+### Orbital advanced-method subset (v32)
+
+The migrated `qgmap.orbital_phe_v4` and `qgmap.orbital_mnhe_v5` modules independently check 2D/3D model responses and preserve the literal SM Eq. (52)/(56) and finite-field comparison branches. [Methods and limitations](docs/ORBITAL_MIGRATION_V32.md). They **do not** implement the paper's omitted general multiband three-band orbital terms.
