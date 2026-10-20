@@ -1,0 +1,30 @@
+name: Xiang 2025 spin quantum geometry (paper-core)
+on:
+  push:
+    paths:
+      - 'papers/xiang-2025-spin-quantum-geometry/**'
+      - '.github/workflows/xiang-2025-spin-geometry.yml'
+  pull_request:
+    paths:
+      - 'papers/xiang-2025-spin-quantum-geometry/**'
+      - '.github/workflows/xiang-2025-spin-geometry.yml'
+jobs:
+  paper-core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Dependencies
+        run: python -m pip install -r papers/xiang-2025-spin-quantum-geometry/requirements.txt
+      - name: Paper model unit tests
+        working-directory: papers/xiang-2025-spin-quantum-geometry
+        run: python -m unittest discover -s tests -v
+      - name: Reproduction JSON smoke
+        working-directory: papers/xiang-2025-spin-quantum-geometry
+        run: python scripts/reproduce.py > /tmp/xiang-paper-model.json
