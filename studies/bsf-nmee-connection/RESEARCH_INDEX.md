@@ -16,6 +16,7 @@ Corresponding source-paper page: [Paper-associated independent follow-up index](
 | 7h | Exact Feshbach downfolding of static response needs energy-dependent spin/velocity vertices and remote contacts | [Schur response](docs/STAGE7H_RESPONSE_PRESERVING_SCHUR.md) |
 | 7i | Independent non-Abelian mixed Wilson-loop versus Kubo verification; symmetry and preliminary DFT gates | [Mixed geometry](docs/STAGE7I_GEOMETRY_DFT_BRIDGE.md) |
 | **7j** | **NEW: orbital/Wannier gauge must be aligned over *both* momentum and spin-source axes; omitting cross-parameter basis overlap can fabricate even the sign of static NMEE** | [Gauge derivation](docs/STAGE7J_WANNIER_GAUGE_PHYSICS.md) · [Code](bsf_nmee/wannier_gauge_links.py) |
+| **8b** | **Ideal-structure full-motif gate:** AA = D3h forbids Γ_xz;x, AB/BA = C3v allow it, and horizontal mirror maps AB↔BA; actual relaxed bilayer CIF remains unverified. | [Stage8b structure symmetry](material-screening/STAGE8B_IDEAL_STRUCTURE_SYMMETRY.md) · [NumPy checker](material-screening/ideal_stack_symmetry.py) |
 | **8a** | **Literature-only candidate prescreen:** 3R-WSe2 primary, 3R-MoS2 control, 3R-WS2 secondary; Cd2Se2 and PtS2 are exploratory. No DFT or actual-material response calculation has run. | [Candidate rationale and gates](material-screening/STAGE8_CANDIDATE_PRESCREEN.md) · [Machine-readable matrix](material-screening/STAGE8_CANDIDATE_MATRIX.json) |
 
 ## Scientific status and next decision
