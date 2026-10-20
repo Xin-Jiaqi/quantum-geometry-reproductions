@@ -20,6 +20,7 @@ from qgmap.si_fig2_v25 import FigureInputs, evaluate as fig2_SI_evaluate
 from qgmap.physical_si_liouville_v26 import SIConfig, eq20_physical, eq11_SI_magnitude, frequency_hypotheses
 from qgmap.fig2_source_audit_v27 import load_points, fit_branch, ratio_to_literal, calibration_sensitivity
 from qgmap.streda_clean_sea_v38 import qwz_model, fhs_chern, bulk_sea
+from qgmap.scba_streda_v39 import derivative_audit,sea_energy_scan,exact_finite_disorder_sea
 
 from dataclasses import replace
 
@@ -219,6 +220,17 @@ def _clean_streda_v38(n):
             "scope":"clean_antisymmetric_sea_only",
             "not_implemented":"complete_metallic_disorder_Bastin_Streda_and_EB_PHE"}
 
+def _scba_sea_v39(n):
+    return {
+      "protocol":"energy_dependent_SCBA_QWZ_antisymmetric_bare_current_sea_method",
+      "energy_derivative":derivative_audit(mesh=n, W=.12, eta=.12, h=3e-5),
+      "insulating":sea_energy_scan(mesh=n, mu=0., W=.12, eta=.12, quadrature=192),
+      "metallic":sea_energy_scan(mesh=n, mu=1.1, W=.12, eta=.12, quadrature=192),
+      "independent_exact_finite_disorder":exact_finite_disorder_sea(L=4, W=.12, eta=.12, seeds=6),
+      "open":["physical transverse current vertex","full Kubo-Streda Fermi surface",
+              "physical dc limit","second-order mixed EB PHE"]
+    }
+
 CASES={
     "spin-four-band":(_spin,23,"Four-band spin-MNHE density matrix versus SM Eq.29","Synthetic nondegenerate four-band model; no impurity or material Wannier operator."),
     "orbital-phe":(_phe,61,"2D Bz orbital PHE; literal SM Eq.56 versus finite-field derivative","Two-band periodic 2D model; printed Eq.56 discrepancy remains open."),
@@ -237,6 +249,7 @@ CASES={
     "si-liouville-v26":(_si_liouville_v26,92,"Direct physical-SI band current vs Eq11 restored magnitude","Adiabatic Liouville coefficient, not measurable steady-state DC."),
     "fig2-curve-v27":(_source_fig2_v27,0,"Digitized approximate Fig2b curve, fit temperatures, amplitudes and calibration","Approximate PDF pixel data, not published raw dataset or accepted 2pi correction."),
     "clean-streda-sea-v38":(_clean_streda_v38,61,"Antisymmetric clean QWZ Fermi-sea trace and independent integer Chern check","Clean two-band insulator method only; not complete disorder or original EB PHE."),
+    "scba-energy-sea-v39":(_scba_sea_v39,21,"Noncrossing energy-dependent SCBA RR Ward derivative and antisymmetric bare-current sea","Synthetic QWZ method ONLY; incomplete transverse vertex and full disordered Kubo-Streda/Bastin."),
 }
 
 def evaluate(case,mesh=None):

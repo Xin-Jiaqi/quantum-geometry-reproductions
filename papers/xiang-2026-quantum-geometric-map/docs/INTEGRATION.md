@@ -99,3 +99,11 @@ See [v37 provenance and physical limitations](docs/CONTINUUM_SI_FIG2_MIGRATION_V
 ### v38 reusable clean Hall Fermi-sea calculation
 
 `qgmap.streda_clean_sea_v38.bulk_sea(n,mass,mu,eta)` runs a clean nondegenerate QWZ Bloch model and returns `sea_sigma_over_e2h` and the independent sharp occupied-band Berry-Chern value. `fhs_chern(H)` supplies a separate velocity-free topological check; `direct_energy_sea` checks the matrix-energy integral against the analytic primitive. `metallic_pole_audit` **only diagnoses** the sea integral's rational pole boundary and does not compute a complete physical Středa Fermi-surface term. See [full science and formulas](docs/V38_CLEAN_STREDA_AUDIT.md). The original PRB mixed \(EB\) PHE and real Wannier are not in this routine.
+
+## v39: QWZ SCBA with energy-dependent self-energy and exact finite disorder
+
+- `qgmap.scba_streda_v39.derivative_audit`: SCBA self-energy in the independent QWZ model, `Gamma_0^{RR}=I-dSigma^R/dE`, full four-Pauli-basis RR density-ladder solve, and finite-difference derivatives of both `Sigma` and `G`.
+- `qgmap.scba_streda_v39.sea_energy_scan`: independent real-energy quadrature of the **bare-current** antisymmetric sea kernel using either the consistent self-energy derivative or a deliberately naive constant-`Sigma` derivative, with both branches named.
+- `qgmap.scba_streda_v39.exact_finite_disorder_sea`: exactly diagonalized finite torus with sampled site disorder and complete single-particle eigenstates, **not** SCBA.
+
+Use `python scripts/reproduce_advanced.py --case scba-energy-sea-v39` or the detailed `scripts/reproduce_scba_streda_v39.py`; both return `PARTIAL` science status. See [v39 standalone protocol](docs/SCBA_ENERGY_DERIVATIVE_V39.md). General metallic Hall, current vertices, Středa I and nonlinear EB remain OPEN.

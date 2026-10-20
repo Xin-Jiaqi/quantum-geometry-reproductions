@@ -47,3 +47,8 @@ The Xiang/Jin/Wang PRL 135, 146303 paper-model module now includes the **printed
 ## 2026-10-20 v38 clean antisymmetric sea benchmark
 
 A new `streda_clean_sea_v38` method computes the *bare clean* two-band antisymmetric Green-function Fermi-sea integral and independently checks it with direct real-energy quadrature, Chern link phases and Berry-curvature integration. Twelve tests are included. The metallic rational pole boundary is shown separately and is NOT claimed as a complete disorder-dressed Středa surface term. Original paper physical DC EB and generic Kubo–Středa remain PARTIAL/OPEN.
+
+
+## 2026-10-20: v39 energy-dependent SCBA model audit
+
+Published a named QWZ noncrossing scalar-disorder SCBA method with self-energy energy derivative, same-disorder RR density Bethe–Salpeter vertex, finite-difference proof, 14 method/frozen tests, an exact finite-disorder torus spectral control and a JSON entry point. \(\partial_E G^R=-G^R(I-\partial_E\Sigma^R)G^R\) is essential for the defined sea kernel; the disorder-dressed transverse current vertex, full Středa I sector and the original paper's nonlinear EB response remain OPEN.

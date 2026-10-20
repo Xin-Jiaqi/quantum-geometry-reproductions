@@ -95,3 +95,14 @@ python scripts/reproduce_advanced.py --case clean-streda-sea-v38
 ```
 
 All resulting conductances are dimensionless `sigma/(e²/h)`, not an SI prediction of the PRB steady-state \(EB\) PHE. Full finite-energy disorder self-energy, conserving vertices and Kubo–Středa remain OPEN.
+
+### v39: energy-dependent SCBA Green function and RR density Ward derivative
+
+The new `qgmap.scba_streda_v39` method solves `Sigma(E)=W<GR(E)>` together with the **same-`W` RR density Bethe–Salpeter vertex** `Gamma_0=I-dSigma/dE`, verified by finite differences in a QWZ band model. It integrates the explicitly defined antisymmetric bare-current Green-function sea kernel both with and without the selfenergy derivative, and separately checks an **exact finite static-disorder Lehmann sum**. These are intentionally different algorithms, not assumed to produce identical full Hall conductivities.
+
+```bash
+python scripts/reproduce_scba_streda_v39.py --mesh 21 --W .12 --eta .12
+python scripts/reproduce_advanced.py --case scba-energy-sea-v39
+```
+
+14 new tests plus frozen JSON checks enforce the method boundary. The v39 module is **not** a complete disordered Kubo–Středa conductivity, an electromagnetic transverse Ward identity, or the original paper's nonlinear \(EB\) DC PHE. See [v39 numerical audit](docs/SCBA_ENERGY_DERIVATIVE_V39.md).

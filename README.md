@@ -81,3 +81,5 @@ The PRB module also exposes v21–v23 second-order EB response methods (finite-q
 The PRB reproduction also contains the original v24–v27 continuum Dirac, direct-SI Liouville and Fig. 2(b) source-curve diagnostics. The unresolved factor of approximately \(2\pi\) between Eq. (11) and the plotted ordinate is preserved as an OPEN issue, not silently corrected; see [v37 method notes](papers/xiang-2026-quantum-geometric-map/docs/CONTINUUM_SI_FIG2_MIGRATION_V37.md).
 
 The PRB module now includes an independent **clean antisymmetric Hall Fermi-sea** benchmark against integer Chern numbers; it is separate from v18's symmetric dissipative Kubo and from the original paper's EB response. See [v38 scientific scope](papers/xiang-2026-quantum-geometric-map/docs/V38_CLEAN_STREDA_AUDIT.md).
+
+The PRB module also includes the v39 energy-dependent SCBA derivative and RR density Ward benchmark, with separate finite-torus exact disorder comparisons. This is not a full disordered Hall conductivity or original mixed-field EB response. [v39 method limits](papers/xiang-2026-quantum-geometric-map/docs/SCBA_ENERGY_DERIVATIVE_V39.md).
