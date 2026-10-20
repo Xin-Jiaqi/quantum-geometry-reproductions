@@ -1,0 +1,37 @@
+{
+  "schema_version": "agf2_stage1_frozen_protocol_v1",
+  "source": "Zhu et al., PRL 135, 056801 (2025), DOI 10.1103/dmzg-ck2t, Supplemental Material Sec. 2 (verbatim extraction, pdftotext of the APS published SM PDF)",
+  "frozen_parameters_from_sm": {
+    "code": "VASP with PAW pseudopotentials",
+    "functional": "PBE (GGA)",
+    "hubbard": "GGA+U, Dudarev scheme, Ueff(Ag-4d) = 4.0 eV [Derzsi et al. PRB 105, L081113 (2022)]",
+    "vdw": "DFT-D3 (Grimme 2010)",
+    "soc": true,
+    "encut_ev": 500,
+    "k_spacing": "0.02 x 2*pi / Angstrom",
+    "vacuum_ang": 20,
+    "force_criterion_ev_per_ang": "1e-2 (ionic)",
+    "electronic_convergence_ev": "1e-6",
+    "polarization": "Berry-phase polarization",
+    "barrier": "CI-NEB (17.1 meV/f.u. for AgF2 B1->B2)",
+    "transport": "Wannier90 + WannierTools for AHE",
+    "aux_tools": "Bilbao Crystallographic Server, pymatgen, spglib, PyXtal, VASPKIT, VESTA"
+  },
+  "still_missing_items": [
+    "PAW POTCAR version/date (not stated in SM; no VASP installation on this machine - lock cannot be established)",
+    "exact integer k-mesh (only k-spacing published)",
+    "ISMEAR/smearing parameters",
+    "MAGMOM initialization values",
+    "dipole-correction (or absence) for the slab",
+    "exact relaxed lattice constants and interlayer distance of the authors' B1/B2",
+    "monolayer atomic coordinates as used by the authors (PRL data-availability: not public)",
+    "spin-orbit coupling implementation details (VASP SOC / noncollinear flag)"
+  ],
+  "assumptions_for_constructed_candidates": [
+    "interlayer F-F gap = 3.0 A (nominal vdW contact; NOT from the paper)",
+    "lateral cell = C2DB 2AgF2-1 monolayer cell (a=3.8270, b=5.8797 Angstrom)",
+    "vacuum = 20 A between periodic images (paper protocol)",
+    "stacking rule B = S + Ohat S with Ohat={m_001|t_o}, t_o=(0.5,-0.16)/(0.5,+0.16) per paper"
+  ],
+  "declaration": "Nothing in this protocol file is fabricated. Every value is either a verbatim SM parameter, a clearly marked assumption, or a missing item."
+}

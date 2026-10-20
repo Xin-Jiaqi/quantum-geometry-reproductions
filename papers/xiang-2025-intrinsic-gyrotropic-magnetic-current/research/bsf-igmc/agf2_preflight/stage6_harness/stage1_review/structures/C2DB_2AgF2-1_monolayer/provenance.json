@@ -1,0 +1,93 @@
+{
+  "schema_version": "stage1_structure_provenance_v1",
+  "structure_label": "C2DB 2AgF2-1 monolayer",
+  "source": {
+    "database": "Computational 2D Materials Database (C2DB)",
+    "uid": "2AgF2-1",
+    "registry": "C2DB all-data registry (C2DB_all_data.csv row 4194)",
+    "folder": "/home/niflheim2/cmr/C2DB-ASR/ICSD-COD/2el/Ag4F8",
+    "protocol_label": "exfoliated02-21",
+    "layer_group": "p2_1/b11",
+    "layer_group_number": 17,
+    "local_dump": "project-cy/c2db.db (ASE sqlite format), system id 4195",
+    "local_dump_file_mtime": "2024-09-26",
+    "license": "CC BY-SA 4.0 (per local DATA_LICENSES.md registry: https://cmr.fysik.dtu.dk/c2db/c2db.html ; https://creativecommons.org/licenses/by-sa/4.0/)",
+    "license_text": "CC BY-SA 4.0 (Creative Commons Attribution-ShareAlike 4.0 International); full legal text at https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+    "disclaimer": "Third-party PBE/GPAW-relaxed monolayer from the C2DB; NOT the author-relaxed structure of Zhu et al. PRL 135, 056801 (2025).",
+    "conversion_algorithm": "scripts/export_c2db_monolayer.py: reads the local C2DB row dump (project-cy/c2db.db, system id 4195, UID 2AgF2-1; input path configurable via env AGF2_C2DB_ROW_JSON, default /tmp/agf2_2AgF2-1_structure.json; numbers, 3x3 row-major cell, flat Cartesian positions); asserts composition Ag2F4 and an orthorhombic cell (a,b in-plane, z = vacuum slab height); reorders atoms into VASP species blocks [Ag, F]; writes Cartesian POSCAR (8 dp) and a visualization CIF (P1, no symmetry applied); hashes POSCAR, CIF and the raw database-row dump. Cell vectors and positions are copied verbatim from the database row - nothing is fabricated or symmetrized.",
+    "original_row_verification": "source_row_uid_sha256 = SHA-256 of the raw JSON dump of the database row (system 4195); cross-checked against the 2022-11-30 dump (system 10217, same cell, E=-19.3594 eV)",
+    "retrieval_route": "independent retrieval: https://cmr.fysik.dtu.dk/c2db/ (search UID 2AgF2-1) or the registry C2DB_all_data.csv row 4194"
+  },
+  "cell": {
+    "a_ang": 3.827024970065565,
+    "b_ang": 5.879665745808328,
+    "c_ang": 31.5265558,
+    "alpha_deg": 90.0,
+    "beta_deg": 90.0,
+    "gamma_deg": 90.0,
+    "vacuum_z_ang": 29.55728508,
+    "pbc": [
+      true,
+      true,
+      false
+    ]
+  },
+  "composition": {
+    "Ag": 2,
+    "F": 4,
+    "formula": "Ag2F4",
+    "formula_units": 2
+  },
+  "coordinates": {
+    "mode": "Cartesian",
+    "species_order_in_poscar": [
+      "Ag",
+      "F"
+    ],
+    "numbers": [
+      9,
+      9,
+      9,
+      47,
+      9,
+      47
+    ],
+    "positions_cartesian": [
+      [
+        0.40361554,
+        1.84080995,
+        14.77864254
+      ],
+      [
+        2.31712803,
+        1.09902292,
+        16.74791326
+      ],
+      [
+        3.42340943,
+        4.0388558,
+        16.74791326
+      ],
+      [
+        1.91351249,
+        2.93983287,
+        15.7632779
+      ],
+      [
+        1.50989694,
+        4.78064282,
+        14.77864254
+      ],
+      [
+        -0.0,
+        0.0,
+        15.7632779
+      ]
+    ]
+  },
+  "hashes": {
+    "POSCAR_sha256": "42468f68fc87912a365df505ab7e73952df88fab574be74c31bb077c0686fa7c",
+    "CIF_sha256": "e55ffb7a8bd2747e91cd2a77d5d0ff72700a095a2fb2ecd086336f2a65360a6d",
+    "source_row_uid_sha256": "3f4fc6b51b64a59dc1b7189623824600e5d89cc6976ef5f9334de802122f5caf"
+  }
+}

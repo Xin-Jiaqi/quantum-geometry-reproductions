@@ -1,0 +1,5 @@
+# Private local archive only - never commit these files.
+# PDFs are additionally covered by the repo-wide *.pdf rule.
+*
+!.gitignore
+!README.md

@@ -1,0 +1,509 @@
+{
+  "monolayer": {
+    "expected_layer_group": "p2_1/b11 (LG17)",
+    "operation_count_total": 4,
+    "single_global_transform": {
+      "S_basis_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "origin_shift_delta_fractional": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "matched_operations_after_global_shift": 4,
+      "detected_operations": 4,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "detected_translation": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "registry_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "registry_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "verdict": "CONSISTENT"
+    },
+    "direct_atom_mapping_with_same_delta": {
+      "operation_count_matching_structure": 4,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maps_structure_exactly": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maps_structure_exactly": true
+        },
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "maps_structure_exactly": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "maps_structure_exactly": true
+        }
+      ],
+      "all_map_exactly": true
+    },
+    "verdict": "CONSISTENT_WITH_LAYER_GROUP",
+    "notes": "spglib ops reported in the input (POSCAR) frame; the single global transform (S, delta) maps the full detected set onto the toolkit standard setting simultaneously."
+  },
+  "B1": {
+    "expected_layer_group": "pb11 (LG12)",
+    "operation_count_total": 2,
+    "single_global_transform": {
+      "S_basis_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "origin_shift_delta_fractional": [
+        0.75,
+        0.0,
+        0.0
+      ],
+      "matched_operations_after_global_shift": 2,
+      "detected_operations": 2,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "verdict": "CONSISTENT"
+    },
+    "direct_atom_mapping_with_same_delta": {
+      "operation_count_matching_structure": 2,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maps_structure_exactly": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "maps_structure_exactly": true
+        }
+      ],
+      "all_map_exactly": true
+    },
+    "verdict": "CONSISTENT_WITH_LAYER_GROUP",
+    "notes": "spglib ops reported in the input (POSCAR) frame; the single global transform (S, delta) maps the full detected set onto the toolkit standard setting simultaneously."
+  },
+  "B2": {
+    "expected_layer_group": "pb11 (LG12)",
+    "operation_count_total": 2,
+    "single_global_transform": {
+      "S_basis_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "origin_shift_delta_fractional": [
+        0.75,
+        0.0,
+        0.0
+      ],
+      "matched_operations_after_global_shift": 2,
+      "detected_operations": 2,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "verdict": "CONSISTENT"
+    },
+    "direct_atom_mapping_with_same_delta": {
+      "operation_count_matching_structure": 2,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "maps_structure_exactly": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "maps_structure_exactly": true
+        }
+      ],
+      "all_map_exactly": true
+    },
+    "verdict": "CONSISTENT_WITH_LAYER_GROUP",
+    "notes": "spglib ops reported in the input (POSCAR) frame; the single global transform (S, delta) maps the full detected set onto the toolkit standard setting simultaneously."
+  }
+}

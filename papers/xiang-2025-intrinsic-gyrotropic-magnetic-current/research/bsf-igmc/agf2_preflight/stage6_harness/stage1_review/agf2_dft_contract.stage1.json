@@ -1,0 +1,49 @@
+{
+  "schema_version": "stage1_dft_contract_v1",
+  "material": "AgF2",
+  "task": "bsf_igmc_stage4",
+  "physics": {
+    "functional": "PBE (PAW, VASP 5.x/6.x)",
+    "vdw": "DFT-D3 (Grimme 2010)",
+    "hub_u_ag_ev": 4.0,
+    "hub_u_scheme": "GGA+U Dudarev, Ueff(Ag-4d)=4.0 eV [Derzsi et al. PRB 105, L081113 (2022), as cited by Zhu et al. SM Sec. 2]",
+    "soc": true,
+    "vacuum_axis": "z",
+    "magnetic_axis": "x",
+    "magnetic_order": "type_I",
+    "strain_percent": 0,
+    "kmesh": "k-spacing 0.02*2*pi/Angstrom (authors' protocol); explicit rounding: N_i = floor(2*pi/(a_i*Delta_k)) + 1 -> initial candidate 14x9x1 (Gamma-centered) for a=3.827, b=5.880 A (N_a=13.06, N_b=8.50); k-convergence sweep (12x8, 14x9, 16x10) to be recorded before production runs",
+    "kmesh_note": "integer mesh is an OPERATOR CHOICE (not an author parameter): Gamma-centered initial candidate 14x9x1 (14 even x 9 odd - Gamma-centered grids may mix parity; parity recorded as an operator choice); Gamma vs Monkhorst-Pack, ISMEAR/SIGMA to be decided and recorded in the convergence record",
+    "ismear_sigma_note": "operator choice to be frozen with the k-mesh: ISMEAR/SIGMA appropriate to the (insulating) state, recorded in the convergence record",
+    "magnetic_moment_init": "MAGMOM initialization is an operator choice (collinear Ag +-x patterns for Type-I/II); exact values to be recorded before production runs",
+    "dipole_correction_note": "slab dipole correction (or its absence) is an operator choice; SM does not state it - to be decided and recorded",
+    "ecut_ev": 500,
+    "encut_note": "ENCUT 500 eV (authors' protocol)",
+    "scf_convergence_ev": 1.0e-6,
+    "force_convergence_ev_per_ang": 1.0e-2,
+    "vacuum_ang": 20,
+    "pseudopotential_lock_sha256": "",
+    "pseudopotential_note": "PAW POTCAR version NOT published in SM; lock must be established from the local VASP installation before any DFT run (never fabricated)",
+    "magnetic_order_note": "stage-1 contract uses type_I (ground state per paper). Per the paper's definitions (main text Fig. 2(b)/(c); SM Sec. 1/3): type_I = interlayer Neel vectors OPPOSITE, connected by the UNITARY {m_001|t_o2} (axial-vector rule: in-plane S_x -> -S_x); type_II = Neel vectors SAME, connected by the ANTIUNITARY {m'_001|t_o2} (S_x -> +S_x). MAGMOM initialization must follow these patterns."
+  },
+  "structures": {
+    "B1": {
+      "poscar": "structures/constructed_B1_candidate/POSCAR",
+      "sha256": "b3c1b942df69b5442e52d0d38fe839b4b61feff3619b2adb4736faa82501c122",
+      "status": "CONSTRUCTED_CANDIDATE_UNRELAXED",
+      "note": "built from C2DB 2AgF2-1 monolayer via Ohat={m_001|(0.5,-0.16)}; NOT the authors' relaxed B1 (not public)"
+    },
+    "B2": {
+      "poscar": "structures/constructed_B2_candidate/POSCAR",
+      "sha256": "ab2f3d84af0a074079824b1f0b94d928d16609e889ac7b1ba3fd9a50e2c69087",
+      "status": "CONSTRUCTED_CANDIDATE_UNRELAXED",
+      "note": "built from C2DB 2AgF2-1 monolayer via Ohat={m_001|(0.5,0.16)}; NOT the authors' relaxed B2 (not public)"
+    }
+  },
+  "honesty_notes": [
+    "All parameter values above are frozen from the published SM (Sec. 2) or clearly marked assumptions; nothing fabricated.",
+    "Interlayer F-F gap 3.0 A of the B1/B2 candidates is an UNCONVERGED INITIAL GUESS (not a frozen material parameter); before production runs, relax from >=2-3 different initial gaps (non-SOC, fixed in-plane lattice) and compare minimum interlayer distances, residual forces, magnetic order and connection symmetry; B1/B2 pair share the same parameters.",
+    "Integer k-mesh, ISMEAR/SIGMA, MAGMOM initialization, dipole-correction usage, POTCAR version: OPERATOR CHOICES or missing items (BLOCKED_PROTOCOL) - to be frozen with recorded convergence before production runs.",
+    "Passing this input precheck does NOT validate physics, relaxation, or convergence; it only validates the contract shape and structure files."
+  ]
+}
