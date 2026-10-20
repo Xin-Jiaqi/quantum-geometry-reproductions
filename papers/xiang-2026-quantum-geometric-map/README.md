@@ -70,3 +70,16 @@ The original v20 finite-disorder full-Lehmann Kubo continuity/contact-term bench
 ### Two-color and length-gauge EB migration (v36)
 
 Three more independent original research modules are published with 66 historical tests: `electromagnetic_eb_v21` (finite-q scalar E and static-B Liouville/Kubo derivative), `two_color_exact_v22` (both dynamic E/B switch orderings), and `homogeneous_length_gauge_v23` (periodic uniform E, gauge-covariant derivative and SM Eq.20 pole). Use `python scripts/reproduce_advanced.py --case eb-finite-q-v21`, `--case eb-two-color-v22`, and `--case eb-uniform-v23`. See [v36 migration scope](docs/SCIENCE_MIGRATION_V36.md) and [frozen provenance](results/frozen/v36_source_provenance.json). The paper's physical steady-state DC response remains OPEN.
+
+### Continuum Dirac and physical SI completion (v37)
+
+The original v24–v27 continuum tilted Dirac, restored-SI Liouville, Eq. (11)/Fig. 2(b) dimensional audit and approximate publication-curve digitization are now migrated with **62 original model tests**, numeric snapshots and exact Git blob SHA provenance. The main Eq. (10) helicity, Supplemental Material helicity and \(\bar B_x=-g\mu_B B_x\) sign conventions remain explicitly distinct. No publisher PDF or original figure is mirrored.
+
+```bash
+python scripts/reproduce_advanced.py --case continuum-dirac-v24
+python scripts/reproduce_advanced.py --case fig2-si-v25
+python scripts/reproduce_advanced.py --case si-liouville-v26
+python scripts/reproduce_advanced.py --case fig2-curve-v27
+```
+
+The literal SI formula gives an ordinate near **11.02**, while the published figure's approximate digitized plateau is **1.75**. The \(1/(2\pi)\) branch fits the ordinate but remains a **diagnostic hypothesis, not a proven correction or confirmed source of the difference**. Source curve coordinates are approximate PDF pixel readings, not author raw data. For full details see [v37 migration and verification](docs/CONTINUUM_SI_FIG2_MIGRATION_V37.md).

@@ -34,3 +34,7 @@ The original v20 exact finite-disorder real-frequency longitudinal Kubo continui
 ## 2026-10-20 v36 second-order Liouville migration
 
 Migrated unchanged original v21–v23 physics modules and 66 historical tests, plus frozen JSON numbers, source-file SHA256 manifest and three callable JSON cases. Finite-q scalar electric and homogeneous length-gauge electric remain distinct protocols. Original continuum steady-state DC PHE and complete Kubo–Středa remain OPEN.
+
+## 2026-10-20 v37 continuum/SI/Fig. 2 migration
+
+Migrated the original v24–v27 continuous tilted Dirac, published Eq. 11/SM Eq. 20, independent direct SI Liouville and approximate published Fig. 2(b) digitization. All **62 original tests** are in the PRB module, with exact-source Git blob hashes and four JSON cases. The ~2pi Eq.11-versus-published-ordinate discrepancy and full physical steady-state PHE remain OPEN.

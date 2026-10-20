@@ -15,6 +15,11 @@ from qgmap.limit_order_v20 import scan_limit
 from qgmap.electromagnetic_eb_v21 import EBSpec, liouville_slope, finite_zeeman_slope, mixed_ward, gauge_mixed
 from qgmap.two_color_exact_v22 import TwoColorSpec, frequency_channels, independent_sylvester_channels, static_preparation
 from qgmap.homogeneous_length_gauge_v23 import UniformSpec, source_and_channels, algebraic_channels, leading_fermi_pole, eq20_direct_band_current
+from qgmap.continuum_ti_v24 import DiracSpec, projector_channels, eigen_channels, eq20_direct, angular_exact
+from qgmap.si_fig2_v25 import FigureInputs, evaluate as fig2_SI_evaluate
+from qgmap.physical_si_liouville_v26 import SIConfig, eq20_physical, eq11_SI_magnitude, frequency_hypotheses
+from qgmap.fig2_source_audit_v27 import load_points, fit_branch, ratio_to_literal, calibration_sensitivity
+
 from dataclasses import replace
 
 
@@ -149,6 +154,63 @@ def _eb_v23(n):
       "minimum_direct_gap":float(freq["gap_min"]),
       "limits":"independent periodic two-band model, dimensionless fields, no conserving collision or physical DC PHE"}
 
+
+def _continuum_dirac_v24(n):
+    spec=DiracSpec(nr=n,nphi=160,omega_e=.016,omega_b=.007,eta_e=.023,eta_b=.017)
+    proj=projector_channels(spec)
+    diag=eigen_channels(spec)
+    zero=DiracSpec(nr=n,nphi=160)
+    direct=eq20_direct(zero)
+    analytic=angular_exact(zero)
+    return {"protocol":"source_main_eq10_continuum_two_color_length_gauge_per_zeeman_energy",
+            "model":"continuum tilted Dirac with UV cutoff, e=hbar=vF=1",
+            "omega_e":spec.omega_e,"omega_b":spec.omega_b,
+            "B_then_E":_complex_eb(proj["b_then_e"]),
+            "E_then_B":_complex_eb(proj["e_then_b"]),
+            "total":_complex_eb(proj["total"]),
+            "projector_eigensolver_abs_diff":float(abs(proj["total"]-diag["total"])),
+            "sm20_direct_per_bbar_tau":_complex_eb(direct),
+            "analytic_angular_limit":float(analytic),
+            "sm20_angular_abs_diff":float(abs(direct-analytic)),
+            "limits":"Not a physical dc conductivity; bbar=-g muB B, distinct from Tesla and Fig2 SI."}
+
+def _fig2_SI_v25(n):
+    inp=FigureInputs()
+    literal=fig2_SI_evaluate(inp,mu_mev=20.,temp_K=0.,hypothesis="literal_hbar")
+    diagnostic=fig2_SI_evaluate(inp,mu_mev=20.,temp_K=0.,hypothesis="single_2pi_diagnostic")
+    return {"protocol":"published_eq11_literal_SI_vs_single_2pi_diagnostic",
+            "model":"original tilted Dirac closed form and conditional Hall-bar estimate",
+            "literal_hbar":literal,"single_2pi_diagnostic":diagnostic,
+            "ratio":literal["minus_1e4_sigma_over_e2_hbar"]/diagnostic["minus_1e4_sigma_over_e2_hbar"],
+            "limits":"The 1/(2pi) branch is diagnostic, not an accepted correction; 1000ohm assumed sheet R."}
+
+def _si_liouville_v26(n):
+    cfg=SIConfig(nr=n,nphi=max(96,2*n))
+    current=eq20_physical(cfg)
+    sigma=current/cfg.E_Vm
+    expected=eq11_SI_magnitude(cfg)
+    return {"protocol":"direct_2band_SI_Liouville_vs_main_eq11",
+            "model":"tilted Dirac, Hamiltonian in joules, momentum in inverse meters",
+            "current_A_per_m":_complex_eb(current),
+            "conductivity_S":_complex_eb(sigma),
+            "literal_eq11_magnitude_S":float(expected),
+            "relative_magnitude_error":float(abs(abs(sigma)/expected-1)),
+            "field_T":cfg.B_T,"electric_field_V_per_m":cfg.E_Vm,
+            "limits":"SI magnitude audit of adiabatic SM20; not microscopic steady-state DC PHE."}
+
+def _source_fig2_v27(n):
+    csv_path=Path(__file__).resolve().parents[1]/"results/raw/v27_fig2b_digitized.csv"
+    points=load_points(csv_path)
+    fits={key:fit_branch(value) for key,value in points.items()}
+    plateau=float(sum(x["amplitude"] for x in fits.values())/len(fits))
+    ratio,literal=ratio_to_literal(plateau)
+    return {"protocol":"published_Fig2b_approximate_raster_digitization_temperature_fit",
+            "model":"published figure approximate pixel read-off, NOT authors' source data",
+            "fits":fits,"platform_mean":plateau,
+            "literal_SI_paper_ordinate":float(literal),"ratio_to_literal":float(ratio),
+            "axis_calibration_sensitivity":calibration_sensitivity(csv_path),
+            "limits":"Pixel-origin ambiguity; inferred normalization remains OPEN. No publisher image redistributed."}
+
 CASES={
     "spin-four-band":(_spin,23,"Four-band spin-MNHE density matrix versus SM Eq.29","Synthetic nondegenerate four-band model; no impurity or material Wannier operator."),
     "orbital-phe":(_phe,61,"2D Bz orbital PHE; literal SM Eq.56 versus finite-field derivative","Two-band periodic 2D model; printed Eq.56 discrepancy remains open."),
@@ -162,16 +224,26 @@ CASES={
     "eb-finite-q-v21":(_eb_v21,4,"Finite-q equilibrium-B mixed Kubo/Liouville derivative and gauge contact","Finite-q scalar-electric probe, not published homogeneous DC PHE."),
     "eb-two-color-v22":(_eb_v22,3,"Independently switched E then B and B then E density-matrix channels","Finite-q scalar-potential and onsite Zeeman, adiabatic regulators."),
     "eb-uniform-v23":(_eb_v23,64,"Uniform length-gauge EB and SM Eq.20 pole model benchmark","Independent periodic model, not original continuum surface or steady-state transport."),
+    "continuum-dirac-v24":(_continuum_dirac_v24,96,"Original tilted Dirac two-color kernel, Eq20 current and angular limit","Model-level E field and Zeeman-energy protocol, no steady-state DC."),
+    "fig2-si-v25":(_fig2_SI_v25,0,"Published Eq11 literal SI vs 1/(2pi) diagnostic and voltage estimate","Independent units check; sheet-resistance assumption and figure normalization OPEN."),
+    "si-liouville-v26":(_si_liouville_v26,92,"Direct physical-SI band current vs Eq11 restored magnitude","Adiabatic Liouville coefficient, not measurable steady-state DC."),
+    "fig2-curve-v27":(_source_fig2_v27,0,"Digitized approximate Fig2b curve, fit temperatures, amplitudes and calibration","Approximate PDF pixel data, not published raw dataset or accepted 2pi correction."),
 }
 
 def evaluate(case,mesh=None):
     if case not in CASES: raise ValueError("Unknown case; use one of "+",".join(CASES))
     fn,default_mesh,description,limits=CASES[case]
     n=default_mesh if mesh is None else mesh
-    if case in ("exact-kubo-v20","eb-finite-q-v21","eb-two-color-v22"):
+    if case in ("fig2-si-v25","fig2-curve-v27"):
+        if mesh is not None:raise ValueError("No mesh override for closed-form or frozen digitization")
+    elif case in ("exact-kubo-v20","eb-finite-q-v21","eb-two-color-v22"):
         if not 3<=n<=12:raise ValueError("Finite exact system requires 3<=L<=12")
     elif case=="eb-uniform-v23":
         if n<12 or n%2:raise ValueError("Homogeneous FFT mesh must be even n>=12")
+    elif case=="continuum-dirac-v24":
+        if n<24:raise ValueError("Continuum radial quadrature requires >=24")
+    elif case=="si-liouville-v26":
+        if n<32:raise ValueError("Physical SI radial quadrature requires >=32")
     elif n<12: raise ValueError("Mesh must be >=12 for momentum-grid cases")
     result=fn(n)
     return {"schema":"qgmap-advanced-2","case":case,

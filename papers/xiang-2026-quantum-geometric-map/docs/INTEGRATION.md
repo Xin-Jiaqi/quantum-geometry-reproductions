@@ -83,3 +83,14 @@ See [v35 scientific gate and numbers](docs/EXACT_KUBO_LIMITS_MIGRATION_V35.md). 
 | Uniform E length gauge | `qgmap.homogeneous_length_gauge_v23`; `--case eb-uniform-v23` | periodic synthetic two-band E/B, FFT covariant derivative and SM Eq.20 pole |
 
 The finite-q scalar-electric models and homogeneous-E length-gauge model must **not** be merged as if they used the same experimental electric-field protocol. All results retain model units; neither static RTA `tau` nor (B) in tesla is automatically inferred. See [v36](docs/SCIENCE_MIGRATION_V36.md).
+
+## v37: continuum tilted Dirac, physical SI and published-figure checks
+
+| Purpose | Independent API | Science boundary |
+| --- | --- | --- |
+| Original main Eq. (10) Dirac two-color kernel | `qgmap.continuum_ti_v24`, `--case continuum-dirac-v24` | \(\bar B_x\) units, finite UV cutoff and adiabatic regulators, NOT transport DC |
+| Eq. (11), Fig. 2(b), voltage dimensional audit | `qgmap.si_fig2_v25`, `--case fig2-si-v25` | \(\hbar\) vs \(h\) hypothesis separately named |
+| SI current from full two-band Liouville | `qgmap.physical_si_liouville_v26`, `--case si-liouville-v26` | [A/m], [S], tesla and J units, still adiabatic response |
+| Fig. 2(b) fitted curves | `qgmap.fig2_source_audit_v27`, `--case fig2-curve-v27` | Approximate publisher raster pixels, source raw data not available |
+
+See [v37 provenance and physical limitations](docs/CONTINUUM_SI_FIG2_MIGRATION_V37.md). No original PDF or figure is included. Do not silently replace Eq. (11) with its \(1/(2\pi)\) diagnostic branch.
