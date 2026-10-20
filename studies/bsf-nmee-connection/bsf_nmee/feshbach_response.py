@@ -121,7 +121,7 @@ def feshbach_static_at_k(spec:SlidingSpec,k,*,step_T=.25,contour_n=64):
                     derivatives[key]+=w*total
                     derivatives[key+'_dressed']+=w*terms['dressed']
         def chi(A,B):
-            return float(np.real(1j*np.trace(Pexact@(A@B-B@A))))
+            return float(np.real(1j*np.trace(P@(A@B-B@A))))
         rows.append({'field_sign':sign,
             'chi_eigen':eigen_static_chi(Hb,sx,vel),
             'chi_exact_schur':chi(derivatives['sx'],derivatives['velocity']),
