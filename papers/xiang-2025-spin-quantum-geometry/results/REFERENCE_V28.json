@@ -1,0 +1,12 @@
+{
+  "paper": "Xiang, Jin, Wang PRL 135, 146303 (2025)",
+  "scope": "curated two-band paper-model subset, not full paper",
+  "scientific_status": "PARTIAL",
+  "main_fig1a_mu20_ndsc_natural": 0.004977183817785516,
+  "main_fig1b_mu0_maintext_natural": -2.1657306083370316e-7,
+  "main_fig1b_mu0_sm70_natural": -1.0455050561039914e-6,
+  "main_fig1b_mu0_static_source_natural": 4.1446599763514416e-6,
+  "sm_fig1b_omega40_printed_eq56": 0.04148600997623736,
+  "sm_fig1b_omega40_integrated_eq55": 0.0746530721670275,
+  "sm_fig1b_omega40_berry_eq58": 0.019722457733621957
+}
