@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "research_scope": "8band BSF\u00d7IGMC model study; not paper reproduction",
+  "reference_toolkit_commit": "551a0daf8d4ba5a5f24b2811694bfe438616de48",
+  "sha256": {
+    "src/bsf_igmc_micro/model.py": "52c922199acf5f5eedbafdf074ffc7fbad9c3d10c8d46c86604a3a111be3f1f1",
+    "src/bsf_igmc_micro/symmetry.py": "b4f51f5f1da27c23bc2ca411c39ba656cdea9ecf12b413473fe24dfa2ed4d588",
+    "data/toolkit_mpg_generators_v018.txt": "c3705c1317fac99130562465521cc103ec7370f24f0cb208937523f66b55c5b1",
+    "data/TOOLKIT_BSD3_LICENSE.txt": "4ace5dd1d7594fb1dc09e79081a2867047975ee28cdf444ab9ed438981715830",
+    "results/stage2_af.json": "96b50096371e302b4081ec4eff6a4a8dffc1c5b348149e065ba66ba935aef6c0",
+    "results/stage2_fm.json": "db805f3674af1bad471be7cc16aaded3a4d27b14e3f6de94b7f702b0e5650b99",
+    "results/shift_scan_17.csv": "e3f36c5abc2b45c5db9ab95fb6813ebbdfe756d80d839a98f3d33abeb913ff02",
+    "tests/test_eightband.py": "cda6a89bee5a74cd04fbfc2e0afbaae4e94c9940de11dd128b4772440a9781ca"
+  }
+}

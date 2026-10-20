@@ -1,0 +1,29 @@
+name: BSF x IGMC eight-band model study
+
+on:
+  push:
+    paths:
+      - ".github/workflows/bsf-igmc-model.yml"
+      - "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc/**"
+  pull_request:
+    paths:
+      - ".github/workflows/bsf-igmc-model.yml"
+      - "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc/**"
+
+jobs:
+  eight-band-model-validation:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install standalone study
+        run: python -m pip install -e .
+      - name: Verify frozen eight-band model (scientific status remains model only)
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python scripts/verify_stage2.py
