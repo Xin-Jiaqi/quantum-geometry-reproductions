@@ -127,3 +127,14 @@ python scripts/reproduce_rr_ward_v40.py --mesh 21 --W .12 --energy 1.1 --eta .12
 ```
 
 Details and limitations: [v40b RR spatial Ward](docs/RR_SPATIAL_WARD_TWIST_V40.md). Passing the two spatial derivative tests **does not** establish a complete disordered Hall/Středa conductivity or the physical mixed-EB DC protocol.
+
+### v41: Exact finite-torus Hall reference (not full Kubo–Středa)
+
+`qgmap.exact_hall_v41` computes the **full exact finite-system single-particle linear Hall Lehmann response** for a fixed clean or scalar-disordered QWZ torus. Its twist average is independently compared with the FHS occupied-subspace Chern number, including large-gauge seams; a separate retarded correlator and the QWZ-specific zero mixed diamagnetic contact are tested. Neither the finite-sample exact Hall nor v40's RA ladder is a complete disorder-averaged Středa surface/sea calculation, and the original second-order `EB` PHE is still **OPEN**.
+
+```bash
+python -m unittest tests.test_exact_hall_v41 -v
+python scripts/reproduce_exact_hall_v41.py --L 4 --mass -1 --W .12 --seed 1947 --ntheta 7
+```
+
+See [v41 exact Hall protocol](docs/EXACT_HALL_V41.md).
