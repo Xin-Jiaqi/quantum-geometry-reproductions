@@ -1,0 +1,19 @@
+{
+  "paper": "Xiang et al. PRL 134 116301 (2025)",
+  "model": "Dirac Eq. (17), beta=0.25 eV; v_F=0.825 eV Angstrom; M=0.1 eV Angstrom^2; a=1 Angstrom",
+  "occupied": "zero-temperature filled lower band; mu=0 eV for independent two-route benchmark",
+  "magnetic_perturbation": "H1=-b cos(omega*t) sigma_x; b=g*mu_B*B energy in eV; paper H1 convention",
+  "frequency_hz": 1000000000000.0,
+  "frequency_protocol": "cyclic_hz",
+  "g_factor": 2.0,
+  "wilson_meshes": [41, 71, 101, 151, 201, 301],
+  "field_amplitudes_eV": [0.001, 0.0001],
+  "liouville_meshes": [31, 51, 101],
+  "mu_mesh_N": 201,
+  "approximate_source_visual_estimates_A_per_m_T": {
+    "mu_eV": [-1.0, 0.0, 1.0],
+    "displacement_A_per_m_T": [-0.135, 0.040, -0.135],
+    "visual_reading_uncertainty_A_per_m_T": [0.01, 0.003, 0.01],
+    "provenance": "Manually read rough values from Fig.2(d), supplementary and raw data do not contain official numerical series. NOT fitted inputs."
+  }
+}

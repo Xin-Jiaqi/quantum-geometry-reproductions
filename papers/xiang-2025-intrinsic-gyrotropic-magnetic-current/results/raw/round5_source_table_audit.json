@@ -1,0 +1,41 @@
+{
+  "source_rows": 23,
+  "source_covered_groups_C": 58,
+  "source_covered_groups_D": 58,
+  "all_mpg_response_pairs": 244,
+  "matched_mpg_response_pairs": 243,
+  "mismatches": [
+    {
+      "mpg_number": 52,
+      "symbol": "-42'm'",
+      "channel": "D",
+      "sm_table_row": "D05",
+      "sm_page": 9,
+      "sm_dimension": 2,
+      "independently_calculated_dimension": 1,
+      "max_projector_residual": 0.5000000000000001,
+      "status": "FAIL"
+    }
+  ],
+  "max_projector_residual": 0.5000000000000001,
+  "exception": {
+    "channel": "D",
+    "group": "-42'm'",
+    "magnetic_group_number": 52,
+    "sm_table": "II",
+    "sm_page": 9,
+    "sm_row": "D05",
+    "printed_pattern": "sigma_xy and sigma_yx listed as independent",
+    "calculated_pattern": "sigma_xy = sigma_yx; all other components vanish",
+    "permitted_tensor_shape_preserved": true,
+    "printed_dimension": 2,
+    "symmetry_dimension": 1,
+    "source_superset_containment_error": 0.0,
+    "independent_generator_analytic_subspace_residual": 1.1102230246251565e-16,
+    "classification_affected": false,
+    "conclusion": "Missing equality relation in printed Table II row; do not overstate as nonzero/forbidden mismatch."
+  },
+  "status": "PASS_WITH_ONE_SOURCE_TABLE_INDEPENDENCE_EXCEPTION",
+  "source_path": "supple-2(1).pdf, Table I pp8-9 / Table II pp9-10; manually transcribed and visually checked",
+  "source_transcription_sha256": "5569b5d19631d7a44efd2202b3a082a9272c9b8f4d22f6db17af444cee8cee90"
+}

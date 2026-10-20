@@ -1,0 +1,24 @@
+{
+  "description": "Round-1 code, frozen data, documentation SHA256. Generated figures/raw can be platform-dependent and are excluded from code integrity.",
+  "files": {
+    "README.md": "542f385c66d46eefd99a627d4298159def52b4b7b1e745eba2d582ce72792dc8",
+    "REPORT_ROUND1.md": "700a4033914d753cf614e1de6392de4a95173d5a71fa54fa44a2965216f0d344",
+    "docs/FIGURE_ACCEPTANCE.md": "a1dc9af1808176d7850e930e81f6d14b228f516431a1af604c8c8c44ae4a2336",
+    "docs/HANDOFF.md": "3ff4224112cb1fb1f2d3f4045563a4fd90cb1b296a372c91ea88bf34929d7c22",
+    "docs/INDEPENDENT_THEORY_AUDIT.md": "d6dcd87342845a47b0795ec10777a38a3b771100c61956f56f4379b91a1fd4d7",
+    "docs/NUMERICAL_CONVERGENCE.md": "8d283b211469d574ffb1130303962bd0d1dcb72bef3abde5b9543c94692581d5",
+    "docs/OPEN_PHYSICS_QUESTIONS.md": "b45646d387291e422259f5c41f1f9da8b163234889e79cacd967531f7175f77a",
+    "docs/SOURCE_MAP.md": "7052b7fdd98de394ce0a15fd1a77f6b0150ed65fa5ec1884a9b4f2b7b98688de",
+    "docs/THEORY_PROTOCOLS.md": "f94cfa37b59fbaef59939807f1d5619bf84597e7dd57c02def42fdfc15af7b4d",
+    "docs/WORKLOG.md": "8ea0cbac9d51325fb9f9d5de9432f3b0d7552ad024f6019f0e366409f8274860",
+    "parameters.json": "3a31097e87a19355010ee07160b85276f715225f375264f84dfcd15d857781b9",
+    "pyproject.toml": "74c9c37709d15d18bf0cbab491da1268a4ae1bc0a6aad643348610e323327beb",
+    "references/README.md": "dcf54228d31a2f1b452613b4d4e63843a0dbdcce96eed4671ad1343af87d0e30",
+    "results/frozen/model_reference.json": "03b6df67646cbecb7e1ace1355493231eb32d91d9ef128f653434d4931b80783",
+    "scripts/reproduce_all.py": "fae86baf091abaff06023286fd317886b4c74c801e2194a19d6a4474b1e5ae50",
+    "scripts/verify_release.py": "5bf853b3bb8033ea20ae00fb20ef92e6dd63da96cf13100609947d4df16f874d",
+    "src/igmc_lab/__init__.py": "16bc64979188cd631789efc31d6c43ebe83e02c0827e84d0a12fc3a7bba69c6f",
+    "src/igmc_lab/core.py": "f6aad2eed01ba9f346f9748ea46a48b6a41c0cfff4a112af83122052ecfdd6d1",
+    "tests/test_models.py": "a7098d3ad448359d782b8a842b80a15fbe4749e4f00575052f419c3c71d9b60a"
+  }
+}

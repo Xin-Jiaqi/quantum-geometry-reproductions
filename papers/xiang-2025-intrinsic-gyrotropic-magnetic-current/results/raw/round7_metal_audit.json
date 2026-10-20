@@ -1,0 +1,49 @@
+{
+  "protocol": "Xi2025 PRL Eq11/12, T=0 Fermi domain partition, no eta",
+  "parameters_file": "parameters_round7.json",
+  "photon_eV": 0.0041356676943898555,
+  "tested_mu_eV": [
+    0.0,
+    0.8,
+    0.95,
+    1.0,
+    1.05,
+    1.1,
+    1.2
+  ],
+  "orders": [
+    32,
+    64,
+    96,
+    160,
+    224
+  ],
+  "fs_order": 448,
+  "max_absolute_convergence_C_Ainv": 1.0623245061402997e-09,
+  "max_absolute_convergence_Dperomega_Ainv_eVinv": 3.435038087307163e-10,
+  "max_absolute_occupied_vs_FS_eq13_C_Ainv": 5.349639897733738e-10,
+  "max_absolute_particle_hole_mirror_error": 0.0,
+  "mu1_C_xy_Ainv": -0.11883230822771439,
+  "mu1_Dperomega_xx_Ainv_eVinv": -0.05506958188347791,
+  "mu1_C_SI_A_per_mT": -33.48623534315167,
+  "mu1_D_SI_A_per_mT": -0.06417844742657552,
+  "mu1_full_Kubo_relative_deviation_C": 2.97543058747074e-06,
+  "mu1_full_Kubo_relative_deviation_D": 3.0575082226036443e-06,
+  "curve_C_peak": {
+    "abs_mu_eV": 1.05,
+    "C_xy_Ainv": -0.1232148602381013,
+    "D_peromega_xx_Ainv_eVinv": -0.054676541550631834,
+    "C_xy_SI_A_per_mT": -34.72121234740372,
+    "D_xx_SI_A_per_mT": -0.06372039567685535
+  },
+  "curve_D_peak": {
+    "abs_mu_eV": 1.01,
+    "C_xy_Ainv": -0.12009927949680953,
+    "D_peromega_xx_Ainv_eVinv": -0.055070919514890446,
+    "C_xy_SI_A_per_mT": -33.84326028630629,
+    "D_xx_SI_A_per_mT": -0.06418000631088787
+  },
+  "independent_checks": "Fermi-contour root partition and Eq13 1D Fermi-line delta integral",
+  "figure_comparison": "visual estimate only, paper raw data not available; not used for fitting",
+  "overall_paper_status": "PARTIAL"
+}

@@ -1,0 +1,33 @@
+{
+  "definition": "2026-10-20 SM pp8-10 244 source tensor subspaces: 243 match, 1 documented missing equality; not full-paper PASS",
+  "expected": {
+    "all_mpg_response_pairs": 244,
+    "exception": {
+      "channel": "D",
+      "classification_affected": false,
+      "group": "-42'm'",
+      "magnetic_group_number": 52,
+      "printed_dimension": 2,
+      "symmetry_dimension": 1
+    },
+    "matched_mpg_response_pairs": 243,
+    "max_projector_residual": 0.5000000000000001,
+    "source_covered_groups_C": 58,
+    "source_covered_groups_D": 58,
+    "source_rows": 23,
+    "status": "PASS_WITH_ONE_SOURCE_TABLE_INDEPENDENCE_EXCEPTION"
+  },
+  "prior_round_frozen_sha256": {
+    "results/frozen/ROUND1_RELEASE_MANIFEST.json": "2d9007ee2e0816e00e578e8a3cc0d6201dff443fe428196d389e6d9143802c8a",
+    "results/frozen/model_reference.json": "03b6df67646cbecb7e1ace1355493231eb32d91d9ef128f653434d4931b80783",
+    "results/frozen/round2_si_reference.json": "ada7d264f24f6cb0bcd92d7492324a3f09e446f45c46183d86daf0b96c7831d6",
+    "results/frozen/round3_independent_reference.json": "fd3bd3dcc7a19f89c13614822bd94e8296f50ec6f44c1919e3739703ecf1c472",
+    "results/frozen/round4_mpg_reference_v1.json": "8bd3cf52fc782fde603417d00b0522d63c0cec2d0626b6033ba1e6a9918a321e",
+    "results/frozen/round4_mpg_reference_v2.json": "eeaf61fcb123d25e5d0737db4cfd0322d13d8495995c3fe986f0f7fb1d337464"
+  },
+  "sha256": {
+    "results/raw/round5_source_table_244.csv": "6a2633c717f00b75c4c8debf98035dd876945c8caba3dd31234c6d2651bb45b9",
+    "results/raw/round5_source_table_audit.json": "c6883dc7a110f95eb414a54d62f39270b88248a1c404105808cdab0b7035e6f6",
+    "src/igmc_lab/paper_table_source.py": "5569b5d19631d7a44efd2202b3a082a9272c9b8f4d22f6db17af444cee8cee90"
+  }
+}

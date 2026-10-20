@@ -1,0 +1,29 @@
+{
+  "source_paths_reference_only_do_not_publish_file_bytes": [
+    {
+      "filename": "IGMC_Xiang2025_Reproduction_Round1.zip",
+      "sha256": "4f94500779aec6096ad505e3dca65cb405c91d819cd726bf706c522be48f72af",
+      "size_bytes": 444690
+    },
+    {
+      "filename": "IGMC_Xiang2025_Reproduction_Round2.zip",
+      "sha256": "a061d818bb1d2bfd4f85430ceb42053c4d40e8c770a8b908e851c012843af951",
+      "size_bytes": 665476
+    },
+    {
+      "filename": "REPRODUCTION_PROTOCOL_Quantum_Geometry_v1_20261019(1).md",
+      "sha256": "40519ce909ce5bbbe8723ea8efcb31ae93eeb319e0cf1bca7b385e907036acee",
+      "size_bytes": 9959
+    },
+    {
+      "filename": "supple-2(1).pdf",
+      "sha256": "9efa730976083b892e201659509e75cdc640e88a5065abd190524a99bc82b073",
+      "size_bytes": 124707
+    },
+    {
+      "filename": "Xiang 等 - 2025 - Intrinsic Gyrotropic Magnetic Current from Zeeman Quantum Geometry(1).pdf",
+      "sha256": "6b61f8a1ddd37123053d0de744795f986587d837e2d9706cc5640580d94080c2",
+      "size_bytes": 484736
+    }
+  ]
+}

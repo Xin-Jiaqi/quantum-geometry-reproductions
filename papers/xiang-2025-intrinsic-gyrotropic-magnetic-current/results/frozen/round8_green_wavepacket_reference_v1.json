@@ -1,0 +1,162 @@
+{
+  "scientific_status": "PARTIAL: Two-band SM III/IV model closed, Fig2d original curves BLOCKED",
+  "prior_frozen": {
+    "results/frozen/ROUND1_RELEASE_MANIFEST.json": "2d9007ee2e0816e00e578e8a3cc0d6201dff443fe428196d389e6d9143802c8a",
+    "results/frozen/ROUND6_RELEASE_MANIFEST.json": "be86caf3ee75480e98aedb2b989da0d5e490629ac5fdd98e9de906e0847d5179",
+    "results/frozen/model_reference.json": "03b6df67646cbecb7e1ace1355493231eb32d91d9ef128f653434d4931b80783",
+    "results/frozen/round2_si_reference.json": "ada7d264f24f6cb0bcd92d7492324a3f09e446f45c46183d86daf0b96c7831d6",
+    "results/frozen/round3_independent_reference.json": "fd3bd3dcc7a19f89c13614822bd94e8296f50ec6f44c1919e3739703ecf1c472",
+    "results/frozen/round4_mpg_reference_v1.json": "8bd3cf52fc782fde603417d00b0522d63c0cec2d0626b6033ba1e6a9918a321e",
+    "results/frozen/round4_mpg_reference_v2.json": "eeaf61fcb123d25e5d0737db4cfd0322d13d8495995c3fe986f0f7fb1d337464",
+    "results/frozen/round5_source_table_reference_v1.json": "520fe86d91d7b9e2472b91432db9dafd5819ea3daf093122881de20f149f63ae",
+    "results/frozen/round6_dvector_reference_v1.json": "4baafd005386c4988bc80953a64fdb7c32ee33b1447fb7038a5b90168ab2cfbf",
+    "results/frozen/round7_metal_reference_v1.json": "47bdd2404a07b6fde5dd504a22f6eee7a911ee046bb9176b772d7a83fb5df9c3"
+  },
+  "source_files": {
+    "src/igmc_lab/green_wavepacket_audit.py": "80b5c300ab49e14eab3f3f75b66e9b4009e21f73d918b3273b800f5c9a62e3db",
+    "scripts/audit_round8.py": "fc4ff1025a18d6d826db40d39fd52a8bdba9cc7dddf64291ff9f5d7aae2660f8",
+    "scripts/verify_round8.py": "d672efb33b8b0ff4c56a31cb92b9e258fb066bbeea57e7c511b8ce48529d39ab",
+    "parameters_round8.json": "bc80a38921d7d58ba011cbb8a891b1da70c4306002c7c7b3fbdb5916af5fc3ca",
+    "tests/test_round8_green_wavepacket.py": "1957b2b3d5030a18d2f24f2b60612923c61086bafc993b133f961d64b3c497b3",
+    "scripts/verify_release.py": "3a980136bce3178d7992f14894a046c14a544328a3c4586b5f3d36d11cb02619",
+    "README.md": "6fea21e928b7d29599198e266190954e50b9b3cd25d1e39a5f48cfbff9cfa8c4",
+    "docs/WORKLOG.md": "5832e394f0a33499e9c56f678009e097f5ffe2a2d4eb6ce97ba43d956995abee",
+    "docs/HANDOFF.md": "3011672743b249125ba4a6ab62bee0c2184681b8bec6ab5c40db29a487eb0616",
+    "docs/OPEN_PHYSICS_QUESTIONS.md": "7105d81131699b262bf8d899e21e698606391ed81e03c553900979093ca052e8",
+    "docs/FINAL_ACCEPTANCE_MATRIX.md": "526cdbaf5eb69d9566003a68a6812bef3d228b30d52a6d61c951d467c0877bff",
+    "docs/AUTHOR_DISCUSSION_BRIEF.md": "4507c6e03048d666e38e0e1a0725a8ffdb71f5276e3caaefb2ad22c27b0db993"
+  },
+  "evidence_files": {
+    "results/raw/round8_GF_wavepacket_audit.json": "4e90ba627fa6542fa230006e41e7a08f0e82a48c7bcb90904964685344d14cbe",
+    "results/figures/round8_GF_wavepacket_audit.png": "d71f6513132521c17e2d7824effda2553842706a69cec07eb70f33618017edfa",
+    "docs/ROUND8_SEMICLASSICAL_GREEN_CLOSURE.md": "0ae7c1cc48538f92792b4eb75025bc49cea37784b6cb4fcbc425fb647c18b36b",
+    "REPORT_ROUND8.md": "1410e5540ef1332415ffc5583647c6e4f401cfb8ef0d772a0629a0c29d88cf67"
+  },
+  "expected": {
+    "response_protocol": "SM_Eq21_24_wavepacket_AND_SM_Eq44_lesserGreen_resolvent",
+    "physical_scope": "two-band periodic Dirac, filled lower band, no disorder, nonresonant",
+    "mesh": [
+      101,
+      101
+    ],
+    "photon_energy_eV": 0.0041356676943898555,
+    "eta_eV": 0.0,
+    "chemical_potential_eV": 0.0,
+    "columns": {
+      "xx": {
+        "green_mean_K_Ainv": {
+          "real": -2.4378978288014416e-18,
+          "imag": 6.30109046490295e-05
+        },
+        "wave_mean_K_Ainv": {
+          "real": -8.706777960005148e-20,
+          "imag": 6.301090464913468e-05
+        },
+        "max_abs_green_vs_wave_per_k": 1.3814577475633784e-13,
+        "P_cos_over_b_Ainv": 0.01523596896689999,
+        "P_sin_over_b_Ainv": -2.793141171739933e-20,
+        "P_sin_main_Eq10_over_b_Ainv": 5.526763353518893e-22,
+        "physical_imag_K_SI_A_m_inv_T_inv": 0.01775609692120911
+      },
+      "xy": {
+        "green_mean_K_Ainv": {
+          "real": 1.5282242574339318e-06,
+          "imag": 7.04500776029479e-18
+        },
+        "wave_mean_K_Ainv": {
+          "real": 1.5282242574339318e-06,
+          "imag": -1.7005425703135055e-22
+        },
+        "max_abs_green_vs_wave_per_k": 5.069668859494234e-14,
+        "P_cos_over_b_Ainv": -4.353388980002574e-20,
+        "P_sin_over_b_Ainv": -0.00036952297675982434,
+        "P_sin_main_Eq10_over_b_Ainv": 0.0003695093202504464,
+        "physical_imag_K_SI_A_m_inv_T_inv": 1.9852411467384207e-15
+      },
+      "yx": {
+        "green_mean_K_Ainv": {
+          "real": -1.5282242573964926e-06,
+          "imag": -2.5882215406607297e-17
+        },
+        "wave_mean_K_Ainv": {
+          "real": -1.5282242574327128e-06,
+          "imag": 4.251356425783764e-23
+        },
+        "max_abs_green_vs_wave_per_k": 5.395869303228082e-14,
+        "P_cos_over_b_Ainv": 4.353388980002574e-20,
+        "P_sin_over_b_Ainv": 0.00036952297675982466,
+        "P_sin_main_Eq10_over_b_Ainv": -0.00036950932025044635,
+        "physical_imag_K_SI_A_m_inv_T_inv": -7.293453853029377e-15
+      },
+      "yy": {
+        "green_mean_K_Ainv": {
+          "real": 1.1884751915407028e-17,
+          "imag": 6.301090464912957e-05
+        },
+        "wave_mean_K_Ainv": {
+          "real": 4.353388980002574e-19,
+          "imag": 6.301090464913469e-05
+        },
+        "max_abs_green_vs_wave_per_k": 1.108696263241203e-13,
+        "P_cos_over_b_Ainv": 0.01523596896689999,
+        "P_sin_over_b_Ainv": 2.5720706375991774e-20,
+        "P_sin_main_Eq10_over_b_Ainv": 2.1150498218274227e-21,
+        "physical_imag_K_SI_A_m_inv_T_inv": 0.017756096921237308
+      },
+      "xz": {
+        "green_mean_K_Ainv": {
+          "real": 4.457870315522636e-17,
+          "imag": -1.9934712313054288e-16
+        },
+        "wave_mean_K_Ainv": {
+          "real": -5.572337894403295e-18,
+          "imag": 0.0
+        },
+        "max_abs_green_vs_wave_per_k": 9.959641012222279e-14,
+        "P_cos_over_b_Ainv": -1.3930844736008237e-18,
+        "P_sin_over_b_Ainv": -1.197181969500708e-19,
+        "P_sin_main_Eq10_over_b_Ainv": -2.176694490001287e-20,
+        "physical_imag_K_SI_A_m_inv_T_inv": -5.6174829721709825e-14
+      },
+      "yz": {
+        "green_mean_K_Ainv": {
+          "real": -9.664523535605716e-18,
+          "imag": -4.314208479182551e-17
+        },
+        "wave_mean_K_Ainv": {
+          "real": 3.3085756248019566e-18,
+          "imag": 0.0
+        },
+        "max_abs_green_vs_wave_per_k": 7.249568399181063e-14,
+        "P_cos_over_b_Ainv": 5.572337894403295e-18,
+        "P_sin_over_b_Ainv": -1.4845736638836904e-19,
+        "P_sin_main_Eq10_over_b_Ainv": 0.0,
+        "physical_imag_K_SI_A_m_inv_T_inv": -1.2157182049892596e-14
+      }
+    },
+    "SM_eq46_FT_coefficient_positive_harmonic": 0.5,
+    "SM_eq46_printed_over_correct": 2.0,
+    "SM_eq34_metric_intermediate_over_main": 2.0,
+    "max_per_k_GF_vs_wave_abs": 1.3814577475633784e-13,
+    "max_per_k_GF_vs_spectral_abs": 1.3812647607697396e-13,
+    "max_per_k_mainEq10_F_sine_difference": 0.10918536221734348,
+    "fig2d_Dxx_1THz_GF_SI": 0.01775609692120911,
+    "source_notes": {
+      "SM_eq34": "SM page 6 Eq.(34) writes Q=2Re(r sigma) after starting with 2Re of the wavepacket and B harmonics each carrying 1/2. The correct coefficient for its displayed denominator bracket is Re(r sigma).",
+      "SM_eq34_F_vs_main10": "Main Eq.(10) says F=-omega Z/gap^2 and P=-gmuB F sin; direct SM Eq.(21,24) gives P_sin/b=-omega Z/(gap^2-omega^2). Their signs disagree at O(omega); its derivative first affects J at O(omega^2), omitted in Eq(12).",
+      "SM_eq46": "SM page 7 Eq.(46) writes the Fourier integral of cos with 2pi delta at each +/- frequency; with declared integral convention coefficient is pi. Eq.(47) actually uses the correct harmonic field amplitude B/2.",
+      "paper_fig2d_status": "UNRESOLVED original numeric data not supplied; do not infer author plot from local factor-2 algebra alone",
+      "main_eq14_status": "Open response-domain antiunitary convention; round6 already tested K_TR(omega)=K_H(omega)* in the real phase convention."
+    }
+  },
+  "prior_release_manifest_SHA256": "634c8bea2369f354024762da0054cf2f12ae677b05d885e081b9a2ce6db8baba",
+  "old_manifest_mutables_preserved": {
+    "scripts/verify_release.py": "a240093063a867230d1e689c614a66dfd9468c046400e9eeff083f62c9168216",
+    "README.md": "eccb2ebb2092cc2db584d1d0a1507584fa11164f64f360d03a6b2b2b75984933",
+    "docs/WORKLOG.md": "20cfccee16e40c65556aad18018bc95d646c5d2f10ca9479fcedae10aa889b29",
+    "docs/HANDOFF.md": "7e5100fb26533a5beb0d7dd3c791648ff613237afa52c125d68d26700c24315c",
+    "docs/OPEN_PHYSICS_QUESTIONS.md": "91c6bd5b1f8697aeb2216023efb53c7f7598cb8f771870392af267e24e41c2bc",
+    "docs/FINAL_ACCEPTANCE_MATRIX.md": "0dda360b54efeffd3007fab91b22986bbf9ae977e1be4c9d019dc2f907c5aedb",
+    "docs/AUTHOR_DISCUSSION_BRIEF.md": "707ddfcc6eb16751bcabd4ac54f24c388ab46909057bb239e66caf2777afadd9"
+  }
+}
