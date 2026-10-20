@@ -1,0 +1,23 @@
+{
+  "protocol": "exact_finite_torus_linear_Hall_Lehmann_twist_FHS",
+  "scientific_status": "PARTIAL",
+  "L": 4,
+  "mass": -1.0,
+  "W": 0.12,
+  "seed": 1947,
+  "ntheta": 7,
+  "mu": 0.0,
+  "eta_response": 0.0,
+  "sigma_units": "e^2/h",
+  "hall_zero_twist": -1.2876199332395937,
+  "hall_twist_average": -1.0000000192256713,
+  "chern_fhs": -1.0000000000000002,
+  "twist_ave_minus_chern": -1.922567105516748e-08,
+  "minimum_fermi_gap_twist_grid": 1.446949225938846,
+  "limitations": [
+    "exact finite L and finite sample, not thermodynamic disorder average",
+    "this is a complete exact linear Lehmann reference, not Streda I/II decomposition",
+    "SCBA self-energy/current vertices/contact protocol not yet matched",
+    "no nonlinear EB PHE evaluated"
+  ]
+}
