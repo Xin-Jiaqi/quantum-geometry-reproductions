@@ -130,14 +130,19 @@ def fig1a_ndsc(mu,vx,vy,alpha,beta,tau=1.,nodes=128):
 def reproduce():
     """Machine-readable model subset, NOT publisher vector-curve extraction."""
     vx=.6582119569*1e5*1e-3;alpha=.1*vx;tau=.5/.6582119569
+    from paper_eq13 import intrinsic_reduced_eq13
+    fig1a_intrinsic=[{'mu_meV':mu, **intrinsic_reduced_eq13(mu,vx,vx,alpha,10.,nr=48,ntheta=96)}
+                     for mu in (0.,12.,20.,40.)]
     return {'paper':'PRL 135 146303 (2025)','status':'PARTIAL',
-            'fig1a':{'v_hbar_meV_nm':vx,'ndsc_mu20':fig1a_ndsc(20,vx,vx,alpha,10.,tau)},
+            'fig1a':{'v_hbar_meV_nm':vx,'ndsc_mu20':fig1a_ndsc(20,vx,vx,alpha,10.,tau),
+                     'intrinsic_eq13_reduced_mu_scan':fig1a_intrinsic},
             'fig1b':[main_fig1b(mu) for mu in (0.,60.,80.)],
             'sm_fig1b':[{'omega_meV':w,'printed_eq56':sm_metric_printed(w),
                         'integrated_eq55':sm_metric_independent_2d(w),
                         'closed_eq55':sm_metric_from_eq55(w),
                         'printed_eq58':sm_berry_printed(w)} for w in (20.,40.,60.)],
             'scientific_gates':{'fig1a_absolute':'OPEN_FACTOR_TWO',
+                'fig1a_intrinsic_eq13':'PASS_REDUCED_FORMULA_ONLY',
                 'fig1b_published_formula':'PASS',
                 'SM_eq55_vs_eq56':'OPEN_SOURCE_INCONSISTENCY',
                 'metal_DC_protocol':'NOT_VALIDATED','DFT':'OUT_OF_SCOPE'}}
