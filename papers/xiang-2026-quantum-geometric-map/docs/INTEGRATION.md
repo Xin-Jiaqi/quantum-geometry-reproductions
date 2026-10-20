@@ -27,3 +27,25 @@ Do NOT infer a quantitative magnetic response from `wannier90_hr.dat` alone. Sta
 ## Cross-paper reuse
 
 NMEE, IGMC and PRB have different perturbations and observables. Reuse common linear-algebra, integration, tensor symmetry and provenance helpers only after agreeing on observables, units, gauge and limiting procedure. Never copy a response coefficient across papers because the API name sounds similar.
+
+## Newly migrated advanced physical methods (v31–v33)
+
+| Calculable method | Python function | Independent physics gate |
+| --- | --- | --- |
+| Four-band intrinsic spin MNHE, SM (16–19) | `qgmap.spin_multiband_v5.four_band_audit(N=23)` | sum of four density-matrix currents vs independently evaluated SM Eq.(29) |
+| 2D orbital PHE, SM Eq.(56) | `qgmap.orbital_phe_v4.orbital_phe_eq56(N=61)` | literal first/second lines and independent finite-field Boltzmann derivative |
+| Strict 2D orbital MNHE SBC | `qgmap.orbital_mnhe_v5.orbital_mnhe_2d(N=61)` | orbital-moment Fermi-surface term vs squared Berry curvature |
+| 3D two-band orbital MNHE, SM Eq.(52) | `qgmap.orbital_mnhe_v5.orbital_mnhe_3d(N=17)` | positional-shift Eq.(48)/(49) versus literal Eq.(52), factor-two issue retained |
+
+Each function returns a `protocol` label and normalized model-unit results. The synthetic spin and orbital protocols must **not** be combined into a physical SI coefficient without separately defining the perturbation, magnetic moment units, collision model, dimensionality and band/occupancy convention.
+
+Unified JSON commands (run from this paper module after `pip install -e .`):
+
+```bash
+python scripts/reproduce_advanced.py --case spin-four-band
+python scripts/reproduce_advanced.py --case orbital-phe
+python scripts/reproduce_advanced.py --case orbital-mnhe-2d
+python scripts/reproduce_advanced.py --case orbital-mnhe-3d --output results/local-orbital3d.json
+```
+
+A real Wannier input pipeline is still **BLOCKED** until consistent magnetic/position operators and response limits are provided. The original v30 SCBA and Ward code paths are not yet published in this repo.
