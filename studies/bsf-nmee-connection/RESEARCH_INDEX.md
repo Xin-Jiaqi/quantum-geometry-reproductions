@@ -16,12 +16,13 @@ Corresponding source-paper page: [Paper-associated independent follow-up index](
 | 7h | Exact Feshbach downfolding of static response needs energy-dependent spin/velocity vertices and remote contacts | [Schur response](docs/STAGE7H_RESPONSE_PRESERVING_SCHUR.md) |
 | 7i | Independent non-Abelian mixed Wilson-loop versus Kubo verification; symmetry and preliminary DFT gates | [Mixed geometry](docs/STAGE7I_GEOMETRY_DFT_BRIDGE.md) |
 | **7j** | **NEW: orbital/Wannier gauge must be aligned over *both* momentum and spin-source axes; omitting cross-parameter basis overlap can fabricate even the sign of static NMEE** | [Gauge derivation](docs/STAGE7J_WANNIER_GAUGE_PHYSICS.md) · [Code](bsf_nmee/wannier_gauge_links.py) |
+| **8a** | **Literature-only candidate prescreen:** 3R-WSe2 primary, 3R-MoS2 control, 3R-WS2 secondary; Cd2Se2 and PtS2 are exploratory. No DFT or actual-material response calculation has run. | [Candidate rationale and gates](material-screening/STAGE8_CANDIDATE_PRESCREEN.md) · [Machine-readable matrix](material-screening/STAGE8_CANDIDATE_MATRIX.json) |
 
 ## Scientific status and next decision
 
 - **Validated within synthetic gapped T=0 static protocol:** source-independent occupied-bundle mixed Berry curvature, tensor/symmetry identities and channel-resolved numerical benchmarks with explicit assumptions.
 - **Not established:** real material, ferroic stability, actual spinor Wannier operator provenance, generic signs or quantitative driven-DC intrinsic NMEE.
-- **Next material gate:** first audit a realistic structure for symmetry and a *same-Hilbert-space* spinor Wannier package supplying H, Sxyz, physical basis overlaps/connection and a full BZ gap. Only after the operator and gauge gate passes should a DFT response be claimed.
+- **Next material gate:** Stage 8a is literature-only. First retrieve exact structures and audit full-motif symmetry/stacking with the existing toolkit; then, only after this structure gate, plan the DFT/Wannier operator preflight. No DFT response has been calculated.
 - **Reproducibility:** every new stage adds its own `docs/STAGE*`, module, regression tests and machine-readable evidence. The paper's frozen sources and tests remain unchanged. GitHub CI success is a software/model gate, not acceptance of all physical claims.
 
 Updated 2026-10-20.
