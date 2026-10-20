@@ -2,9 +2,9 @@
 
 | Paper | Remote module | Software gate | Scientific status |
 | --- | --- | --- | --- |
-| Jia 2026 PRL NMEE | \`papers/jia-2026-nonlin-magnetoelectric-edelstein\` | \`scripts/verify_release.py\` | PARTIAL |
-| Xiang 2025 PRL IGMC | \`papers/xiang-2025-intrinsic-gyrotropic-magnetic-current\` | \`scripts/verify_round9.py\` | PARTIAL |
-| Xiang 2026 PRB magnetotransport | \`papers/xiang-2026-quantum-geometric-map\` | \`scripts/verify_release.py\` | PARTIAL; GitHub **core-code subset** |
+| Jia 2026 PRL NMEE | `papers/jia-2026-nonlin-magnetoelectric-edelstein` | `scripts/verify_release.py` | PARTIAL |
+| Xiang 2025 PRL IGMC | `papers/xiang-2025-intrinsic-gyrotropic-magnetic-current` | `scripts/verify_round9.py` | PARTIAL |
+| Xiang 2026 PRB magnetotransport | `papers/xiang-2026-quantum-geometric-map` | `scripts/verify_release.py` | PARTIAL; GitHub **core-code subset** |
 
 For the PRB, the complete 30-round original **offline** v30 checkpoint is separate from the independently readable/callable core published in this repository. It includes additional model branches, scans, plots, and scientific logs; those are **not** claimed to have been uploaded here. The core implements selected independently checked methods and leaves absent advanced interfaces explicitly unimplemented.
 

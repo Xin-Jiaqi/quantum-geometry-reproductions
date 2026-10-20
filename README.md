@@ -14,45 +14,45 @@ The two Xiang papers are **different physics**: 2025 IGMC concerns magnetic-fiel
 
 ## Layout
 
-\`\`\`text
+```text
 papers/
   jia-2026-nonlin-magnetoelectric-edelstein/         # NMEE, existing frozen module
   xiang-2025-intrinsic-gyrotropic-magnetic-current/   # IGMC, existing frozen module
   xiang-2026-quantum-geometric-map/                   # PRB magnetotransport, independent
 studies/                                               # Cross-paper research
 .github/workflows/                                     # Path-scoped CI for each module
-\`\`\`
+```
 
 ## Run
 
 Use Python 3.11; create a separate virtual environment per paper.
 
-\`\`\`bash
+```bash
 cd papers/jia-2026-nonlin-magnetoelectric-edelstein
 python -m pip install -e .
 python scripts/verify_release.py
-\`\`\`
+```
 
-\`\`\`bash
+```bash
 cd papers/xiang-2025-intrinsic-gyrotropic-magnetic-current
 python -m pip install -e .
 python scripts/verify_round9.py
-\`\`\`
+```
 
-\`\`\`bash
+```bash
 cd papers/xiang-2026-quantum-geometric-map
 python -m pip install -e .
 python scripts/verify_release.py
-\`\`\`
+```
 
-See each module's README and [PRB physical integration contract](papers/xiang-2026-quantum-geometric-map/docs/INTEGRATION.md). The published PRB core uses its own import namespace \`qgmap\` and never modifies NMEE or IGMC frozen benchmarks.
+See each module's README and [PRB physical integration contract](papers/xiang-2026-quantum-geometric-map/docs/INTEGRATION.md). The published PRB core uses its own import namespace `qgmap` and never modifies NMEE or IGMC frozen benchmarks.
 
 ## Reuse without overstating physics
 
 - Choose the physical protocol first: intrinsic vs extrinsic, static equilibrium vs driven DC vs AC, magnetic-field preparation, temperature, relaxation, and degeneracy.
 - Preserve source equations, units, signs, and convergence evidence. An independently generated model figure does not equal original publication data.
 - Never silently replace the printed formula with an independently preferred correction. Label branches and keep disputed factors visible.
-- For a real Wannier-material response, \`wannier90_hr.dat\` alone is **not sufficient**. Same-gauge projected positions/Berry connection, velocities, spin/magnetic moment operators, derivatives where necessary, occupations, and validated collision assumptions are required.
+- For a real Wannier-material response, `wannier90_hr.dat` alone is **not sufficient**. Same-gauge projected positions/Berry connection, velocities, spin/magnetic moment operators, derivatives where necessary, occupations, and validated collision assumptions are required.
 - Publisher PDF/SM, unlicensed figures, private research archives and unpublished author communications are not mirrored here.
 
 ## Workflows and licensing

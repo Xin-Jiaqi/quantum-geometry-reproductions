@@ -4,10 +4,10 @@
 
 | Branch | Public capability | Scientific gate |
 | --- | --- | --- |
-| Spin Zeeman geometry | Direct eigenvectors vs analytic two-band \`Z\`, correct helicity and U(1) gauge tests | PASS two-band nondegenerate |
+| Spin Zeeman geometry | Direct eigenvectors vs analytic two-band `Z`, correct helicity and U(1) gauge tests | PASS two-band nondegenerate |
 | Spin MNHE / PHE | Full general multi-band static and dissipative theory **not included in this GitHub core** | PARTIAL/offline |
 | Tilted Dirac Fig.2 | Spectrum, local Z, formal Eq.(11) thermal-step, named printed SM Eq.(63) opposite-sign branch | PASS stated model definitions |
-| Fig.2(b) physical ordinate | Literal SI Eq.(11) about \`2π\` above published plateau in offline independent SI audits | OPEN |
+| Fig.2(b) physical ordinate | Literal SI Eq.(11) about `2π` above published plateau in offline independent SI audits | OPEN |
 | Two-color Liouville | Generic finite-dimensional sequential resolvents, two orderings and separately defined thermal occupancy derivative | PASS method subset; no uniform-gauge/steady-state claim |
 | Steady-state static PHE | Collision operator, bath preparation, Ward/contact terms and order of limits | OPEN |
 | Orbital OHE | Classical one-band benchmark; exact T=0 Rashba two-ring and two-helicity analytic formulas | PASS these named models |
