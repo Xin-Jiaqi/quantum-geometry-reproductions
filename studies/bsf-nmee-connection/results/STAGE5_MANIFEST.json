@@ -1,0 +1,22 @@
+{
+  "schema": "bsf-nmee-stage5-v1",
+  "purpose": "leading mixed hopping coefficient; fixed-stacking tunneling-induced response reversal; 0K static toy model only",
+  "stage4_commit": "048be2433f81218a213713008501d7bb7fd0f408",
+  "sha256": {
+    "STAGE5_README.md": "8e3bf4ea5e29bf94b55bfc7a7ac86f2718bf4f0e2f64ad741bb442596dc5924b",
+    "bsf_nmee/channel_perturbation.py": "bdeda7f78a2f9fad47530b814b8bfe7f488e5283e17bc382fb6c74b8c14b5e98",
+    "scripts/run_stage5_weak_coupling.py": "f46d1ef7ee97177f74d2dc38c939a45db3637ee6e0c64b88a16322430157d299",
+    "scripts/verify_stage5_global_gap.py": "b5fb9b536770e61addcfb4ad5f4dd44b4d4dbe15b87e7983929670afb43b8c5b",
+    "scripts/plot_stage5.py": "b5e01f9a1c48cb70f9468c5e3ef697d84def8efc9fa9967ee85e0703f61a559a",
+    "docs/STAGE5_PHYSICS.md": "8135187b2e26a67db6b2f903ce4516670c3b591b47a70260128ebab75c08bae5",
+    "docs/STAGE5_WORKLOG.md": "4219b1770068c7ff227aaccaa40cf3f70f9541f9b537814295714b09f1919878",
+    "results/sliding_stage5_weak_coupling.json": "db141f0470706bd401199388817c5afae63f85211d62437eb7c2a7b61ccd1890",
+    "results/sliding_stage5_fixed_shift_transition.json": "a4b3c00b387bbc1264a270dbacaa150def678a16befdfae6ab895d56464e69fb",
+    "results/sliding_stage5_global_gap_screen.json": "6d1269e6e960f9ddc64a52c0710bd5f6e977045e64826728a077d59ab4c2738d",
+    "results/sliding_stage5_hopping_transition.svg": "2e7f9b14ad165a2a3a30290410425895d3d9b2c67badb3ff381c7abbe16fb494",
+    "results/sliding_stage5_parity_competition.svg": "f6d831458cc0d336b01108b6ec518a3dcdc08676af99e7633af31987291d2d81",
+    "tests/test_stage5_weak_coupling.py": "74817a29521b84391497de44b42e2b5ecf1a5862e34a85ddc12c4e85668afe14",
+    "tests/test_stage5_manifest.py": "b5ba4690fdaad2845f60d798097127d252bec697f2c2c8b68c8f3670d835aded"
+  },
+  "notes": "All previous stage frozen code, numbers, manifests and their tests unchanged. Binary PNG figures are in offline archive; SVG versions are committed to GitHub."
+}

@@ -1,0 +1,128 @@
+{
+  "cases": [
+    {
+      "u": 0.2,
+      "t_eV": 0.01,
+      "gap_to_mu_eV": 0.009797394309851847,
+      "full_gap_lower_bound_from_minima_eV": 0.024944036430875192,
+      "edges": [
+        {
+          "band_edge": "valence",
+          "minimum_distance_eV": 0.015146642121023348,
+          "fractional_k": [
+            0.6666695189646985,
+            0.33332122813163256
+          ],
+          "grid_min_eV": 0.06494208377338606,
+          "multiple_start_count": 14,
+          "max_negative_search_gap_eV": 0.015146642121023348
+        },
+        {
+          "band_edge": "conduction",
+          "minimum_distance_eV": 0.009797394309851847,
+          "fractional_k": [
+            0.3333409330431977,
+            0.6666349322749127
+          ],
+          "grid_min_eV": 0.04571712876571473,
+          "multiple_start_count": 14,
+          "max_negative_search_gap_eV": 0.009797394309851847
+        }
+      ],
+      "method": "grid + multi-start continuous Nelder-Mead local minimization; cannot mathematically certify global minimum"
+    },
+    {
+      "u": 0.2,
+      "t_eV": 0.015,
+      "gap_to_mu_eV": 0.0065165104888704126,
+      "full_gap_lower_bound_from_minima_eV": 0.020798555941564545,
+      "edges": [
+        {
+          "band_edge": "valence",
+          "minimum_distance_eV": 0.01428204545269413,
+          "fractional_k": [
+            0.6666707786885202,
+            0.3333148115818513
+          ],
+          "grid_min_eV": 0.06386542395822373,
+          "multiple_start_count": 14,
+          "max_negative_search_gap_eV": 0.01428204545269413
+        },
+        {
+          "band_edge": "conduction",
+          "minimum_distance_eV": 0.0065165104888704126,
+          "fractional_k": [
+            0.3333443818311107,
+            0.6666188033989706
+          ],
+          "grid_min_eV": 0.04350267787213661,
+          "multiple_start_count": 14,
+          "max_negative_search_gap_eV": 0.0065165104888704126
+        }
+      ],
+      "method": "grid + multi-start continuous Nelder-Mead local minimization; cannot mathematically certify global minimum"
+    },
+    {
+      "u": 0.2,
+      "t_eV": 0.01963385,
+      "gap_to_mu_eV": 0.003592359315945405,
+      "full_gap_lower_bound_from_minima_eV": 0.017043150674947258,
+      "edges": [
+        {
+          "band_edge": "valence",
+          "minimum_distance_eV": 0.013450791359001853,
+          "fractional_k": [
+            0.6666720222636191,
+            0.3333066638786376
+          ],
+          "grid_min_eV": 0.06270456071669867,
+          "multiple_start_count": 14,
+          "max_negative_search_gap_eV": 0.013450791359001853
+        },
+        {
+          "band_edge": "conduction",
+          "minimum_distance_eV": 0.003592359315945405,
+          "fractional_k": [
+            0.3333472750461942,
+            0.666603014080435
+          ],
+          "grid_min_eV": 0.04125497225198053,
+          "multiple_start_count": 14,
+          "max_negative_search_gap_eV": 0.003592359315945405
+        }
+      ],
+      "method": "grid + multi-start continuous Nelder-Mead local minimization; cannot mathematically certify global minimum"
+    },
+    {
+      "u": 0.2,
+      "t_eV": 0.02,
+      "gap_to_mu_eV": 0.003368613506397479,
+      "full_gap_lower_bound_from_minima_eV": 0.016755205634771154,
+      "edges": [
+        {
+          "band_edge": "valence",
+          "minimum_distance_eV": 0.013386592128373676,
+          "fractional_k": [
+            0.6666721333607697,
+            0.3333057946107688
+          ],
+          "grid_min_eV": 0.06260657828575236,
+          "multiple_start_count": 14,
+          "max_negative_search_gap_eV": 0.013386592128373676
+        },
+        {
+          "band_edge": "conduction",
+          "minimum_distance_eV": 0.003368613506397479,
+          "fractional_k": [
+            0.3333474874339344,
+            0.666601694750236
+          ],
+          "grid_min_eV": 0.041071354733311576,
+          "multiple_start_count": 14,
+          "max_negative_search_gap_eV": 0.003368613506397479
+        }
+      ],
+      "method": "grid + multi-start continuous Nelder-Mead local minimization; cannot mathematically certify global minimum"
+    }
+  ]
+}

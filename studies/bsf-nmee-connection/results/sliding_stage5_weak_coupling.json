@@ -1,0 +1,418 @@
+{
+  "scope": "toy 8band Kane-Mele; 0K insulator; equilibrium/static mixed curvature; finite field difference",
+  "excluded": "not author driven DC NMEE / not proven ferroelectric / not a material prediction",
+  "conventions": "s and c multiply same- and cross-sublattice interlayer amplitudes, respectively; basis fixed; u is fraction of (0.23,0.41)",
+  "base_spec": {
+    "shift": [
+      0.023000000000000003,
+      0.041
+    ],
+    "tunneling_eV": 0.02,
+    "decay_nm": 0.16,
+    "cross_sublattice": true,
+    "lattice_shell": 5,
+    "mu_eV": 0.02541381265,
+    "bond_nm": 0.142,
+    "rashba_soc_eV": 0.02,
+    "intrinsic_soc_eV": 0.01
+  },
+  "coarse": {
+    "params": [
+      41,
+      1.5,
+      35,
+      64
+    ],
+    "meta": {
+      "n_exterior_kept": 1647,
+      "n_valley_total": 4480,
+      "exterior_area_weight": 18.70239867619162,
+      "valley_area_weight": 0.35809862195676445,
+      "bz_area_weight": 19.08848340903347,
+      "normalization_error": -0.027986110885084514
+    }
+  },
+  "fine": {
+    "params": [
+      61,
+      1.5,
+      60,
+      80
+    ],
+    "meta": {
+      "n_exterior_kept": 3651,
+      "n_valley_total": 9600,
+      "exterior_area_weight": 18.729388047939047,
+      "valley_area_weight": 0.35809862195676445,
+      "bz_area_weight": 19.08848340903347,
+      "normalization_error": -0.000996739137658409
+    }
+  },
+  "data": {
+    "0.10": {
+      "sweep": [
+        {
+          "t_eV": 0.00125,
+          "plus": -4.194802323410736e-08,
+          "cross_sign_reversed": 5.186496865918547e-08,
+          "even_under_cross_sign": 4.958472712539056e-09,
+          "odd_under_cross_sign": -4.690649594664641e-08,
+          "total_coefficient_over_t_sq": -0.026846734869828706,
+          "even_coefficient_over_t_sq": 0.0031734225360249956,
+          "mixed_coefficient_over_t_sq": -0.0300201574058537,
+          "same_only": 1.419333893730152e-11,
+          "cross_only": 4.907120185122862e-09,
+          "nonadditivity": -4.686933675816752e-08,
+          "min_mu_gap_eV": 0.01565781415420945
+        },
+        {
+          "t_eV": 0.0025,
+          "plus": -1.6861567066639073e-07,
+          "cross_sign_reversed": 2.091764543655693e-07,
+          "even_under_cross_sign": 2.028039184958929e-08,
+          "odd_under_cross_sign": -1.8889606251598003e-07,
+          "total_coefficient_over_t_sq": -0.026978507306622514,
+          "even_coefficient_over_t_sq": 0.003244862695934286,
+          "mixed_coefficient_over_t_sq": -0.030223370002556805,
+          "same_only": 5.6859378776498094e-11,
+          "cross_only": 1.9624569020058237e-08,
+          "nonadditivity": -1.8829709906522545e-07,
+          "min_mu_gap_eV": 0.01476816240211818
+        },
+        {
+          "t_eV": 0.005,
+          "plus": -6.878794939448592e-07,
+          "cross_sign_reversed": 8.649559728143359e-07,
+          "even_under_cross_sign": 8.853823943473838e-08,
+          "odd_under_cross_sign": -7.764177333795975e-07,
+          "total_coefficient_over_t_sq": -0.027515179757794366,
+          "even_coefficient_over_t_sq": 0.003541529577389535,
+          "mixed_coefficient_over_t_sq": -0.0310567093351839,
+          "same_only": 2.2881496010154157e-10,
+          "cross_only": 7.843573556563647e-08,
+          "nonadditivity": -7.665440444705972e-07,
+          "min_mu_gap_eV": 0.01299059149912117
+        },
+        {
+          "t_eV": 0.01,
+          "plus": -2.9825243611071967e-06,
+          "cross_sign_reversed": 3.967448434348255e-06,
+          "even_under_cross_sign": 4.92462036620529e-07,
+          "odd_under_cross_sign": -3.4749863977277257e-06,
+          "total_coefficient_over_t_sq": -0.029825243611071965,
+          "even_coefficient_over_t_sq": 0.00492462036620529,
+          "mixed_coefficient_over_t_sq": -0.03474986397727726,
+          "same_only": 9.369597925424994e-10,
+          "cross_only": 3.127450218283932e-07,
+          "nonadditivity": -3.2962063427281326e-06,
+          "min_mu_gap_eV": 0.009444828335140397
+        },
+        {
+          "t_eV": 0.02,
+          "plus": -1.698080001149866e-05,
+          "cross_sign_reversed": 2.965658914848155e-05,
+          "even_under_cross_sign": 6.337894568491444e-06,
+          "odd_under_cross_sign": -2.3318694579990104e-05,
+          "total_coefficient_over_t_sq": -0.04245200002874665,
+          "even_coefficient_over_t_sq": 0.01584473642122861,
+          "mixed_coefficient_over_t_sq": -0.05829673644997526,
+          "same_only": 4.028192228798915e-09,
+          "cross_only": 1.235186082918968e-06,
+          "nonadditivity": -1.822001428664643e-05,
+          "min_mu_gap_eV": 0.0024346889470721333
+        }
+      ],
+      "taylor_extrapolation": {
+        "total_coefficient_t_to_zero": {
+          "intercept": -0.026801213606898005,
+          "quartic_slope": -28.54951965109571,
+          "raw_first": -0.026846734869828706,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        },
+        "even_coefficient_t_to_zero": {
+          "intercept": 0.0031477914424188854,
+          "quartic_slope": 15.739138501856404,
+          "raw_first": 0.0031734225360249956,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        },
+        "mixed_coefficient_t_to_zero": {
+          "intercept": -0.02994900504931689,
+          "quartic_slope": -44.28865815295211,
+          "raw_first": -0.0300201574058537,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        }
+      }
+    },
+    "0.20": {
+      "sweep": [
+        {
+          "t_eV": 0.00125,
+          "plus": -5.1218660397559395e-08,
+          "cross_sign_reversed": 1.2669131481822936e-07,
+          "even_under_cross_sign": 3.773632721033498e-08,
+          "odd_under_cross_sign": -8.895498760789438e-08,
+          "total_coefficient_over_t_sq": -0.03277994265443801,
+          "even_coefficient_over_t_sq": 0.024151249414614384,
+          "mixed_coefficient_over_t_sq": -0.0569311920690524,
+          "same_only": 2.7728408151855642e-11,
+          "cross_only": 3.7445281502887136e-08,
+          "nonadditivity": -8.869167030859838e-08,
+          "min_mu_gap_eV": 0.01569560219778933
+        },
+        {
+          "t_eV": 0.0025,
+          "plus": -2.037955166831408e-07,
+          "cross_sign_reversed": 5.118204371518799e-07,
+          "even_under_cross_sign": 1.5401246023436956e-07,
+          "odd_under_cross_sign": -3.5780797691751034e-07,
+          "total_coefficient_over_t_sq": -0.032607282669302524,
+          "even_coefficient_over_t_sq": 0.024641993637499127,
+          "mixed_coefficient_over_t_sq": -0.05724927630680165,
+          "same_only": 1.1106793063646826e-10,
+          "cross_only": 1.49663642718449e-07,
+          "nonadditivity": -3.535702273322263e-07,
+          "min_mu_gap_eV": 0.014845151880855896
+        },
+        {
+          "t_eV": 0.005,
+          "plus": -7.969822683228892e-07,
+          "cross_sign_reversed": 2.13026593724145e-06,
+          "even_under_cross_sign": 6.666418344592804e-07,
+          "odd_under_cross_sign": -1.4636241027821695e-06,
+          "total_coefficient_over_t_sq": -0.031879290732915566,
+          "even_coefficient_over_t_sq": 0.026665673378371214,
+          "mixed_coefficient_over_t_sq": -0.058544964111286776,
+          "same_only": 4.467324253404428e-10,
+          "cross_only": 5.967798793795546e-07,
+          "nonadditivity": -1.3942088801277844e-06,
+          "min_mu_gap_eV": 0.013150878455723318
+        },
+        {
+          "t_eV": 0.01,
+          "plus": -2.8303301423955276e-06,
+          "cross_sign_reversed": 9.993886282229712e-06,
+          "even_under_cross_sign": 3.581778069917092e-06,
+          "odd_under_cross_sign": -6.41210821231262e-06,
+          "total_coefficient_over_t_sq": -0.028303301423955277,
+          "even_coefficient_over_t_sq": 0.035817780699170916,
+          "mixed_coefficient_over_t_sq": -0.0641210821231262,
+          "same_only": 1.825777849776887e-09,
+          "cross_only": 2.3574440541891158e-06,
+          "nonadditivity": -5.18959997443442e-06,
+          "min_mu_gap_eV": 0.009797465705456032
+        },
+        {
+          "t_eV": 0.02,
+          "plus": 9.32171224894565e-07,
+          "cross_sign_reversed": 7.607599899516415e-05,
+          "even_under_cross_sign": 3.850408511002936e-05,
+          "odd_under_cross_sign": -3.757191388513479e-05,
+          "total_coefficient_over_t_sq": 0.0023304280622364125,
+          "even_coefficient_over_t_sq": 0.09626021277507339,
+          "mixed_coefficient_over_t_sq": -0.09392978471283696,
+          "same_only": 7.827402314846013e-09,
+          "cross_only": 8.974653258260409e-06,
+          "nonadditivity": -8.05030943568069e-06,
+          "min_mu_gap_eV": 0.003367797063820871
+        }
+      ],
+      "taylor_extrapolation": {
+        "total_coefficient_t_to_zero": {
+          "intercept": -0.032843721315457354,
+          "quartic_slope": 38.54164997229483,
+          "raw_first": -0.03277994265443801,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        },
+        "even_coefficient_t_to_zero": {
+          "intercept": 0.023977550865430627,
+          "quartic_slope": 107.46708828016376,
+          "raw_first": 0.024151249414614384,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        },
+        "mixed_coefficient_t_to_zero": {
+          "intercept": -0.056821272180887984,
+          "quartic_slope": -68.92543830786931,
+          "raw_first": -0.0569311920690524,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        }
+      }
+    },
+    "0.40": {
+      "sweep": [
+        {
+          "t_eV": 0.00125,
+          "plus": 1.2093505149007732e-07,
+          "cross_sign_reversed": 4.0692757497639605e-07,
+          "even_under_cross_sign": 2.6393131323323667e-07,
+          "odd_under_cross_sign": -1.4299626174315938e-07,
+          "total_coefficient_over_t_sq": 0.07739843295364948,
+          "even_coefficient_over_t_sq": 0.16891604046927147,
+          "mixed_coefficient_over_t_sq": -0.09151760751562199,
+          "same_only": 5.0327239870422925e-11,
+          "cross_only": 2.6258706140858255e-07,
+          "nonadditivity": -1.4170233715837564e-07,
+          "min_mu_gap_eV": 0.01583831427825895
+        },
+        {
+          "t_eV": 0.0025,
+          "plus": 4.953429373706876e-07,
+          "cross_sign_reversed": 1.6411952882432557e-06,
+          "even_under_cross_sign": 1.0682691128069717e-06,
+          "odd_under_cross_sign": -5.72926175436284e-07,
+          "total_coefficient_over_t_sq": 0.07925486997931001,
+          "even_coefficient_over_t_sq": 0.17092305804911545,
+          "mixed_coefficient_over_t_sq": -0.09166818806980544,
+          "same_only": 2.0150085930130327e-10,
+          "cross_only": 1.0473513947876686e-06,
+          "nonadditivity": -5.522099582762823e-07,
+          "min_mu_gap_eV": 0.015135285129330676
+        },
+        {
+          "t_eV": 0.005,
+          "plus": 2.1685006328739286e-06,
+          "cross_sign_reversed": 6.781543879377482e-06,
+          "even_under_cross_sign": 4.475022256125705e-06,
+          "odd_under_cross_sign": -2.3065216232517764e-06,
+          "total_coefficient_over_t_sq": 0.08674002531495714,
+          "even_coefficient_over_t_sq": 0.17900089024502822,
+          "mixed_coefficient_over_t_sq": -0.09226086493007105,
+          "same_only": 8.090639225877626e-10,
+          "cross_only": 4.141930306750243e-06,
+          "nonadditivity": -1.9742387377989023e-06,
+          "min_mu_gap_eV": 0.013750002970387379
+        },
+        {
+          "t_eV": 0.01,
+          "plus": 1.1753649467547443e-05,
+          "cross_sign_reversed": 3.064600391303537e-05,
+          "even_under_cross_sign": 2.119982669029141e-05,
+          "odd_under_cross_sign": -9.446177222743964e-06,
+          "total_coefficient_over_t_sq": 0.11753649467547442,
+          "even_coefficient_over_t_sq": 0.21199826690291407,
+          "mixed_coefficient_over_t_sq": -0.09446177222743964,
+          "same_only": 3.2848329105174065e-09,
+          "cross_only": 1.583739684341469e-05,
+          "nonadditivity": -4.087032208777766e-06,
+          "min_mu_gap_eV": 0.011083520738272165
+        },
+        {
+          "t_eV": 0.02,
+          "plus": 9.850210490805277e-05,
+          "cross_sign_reversed": 0.00017821623808857555,
+          "even_under_cross_sign": 0.00013835917149831415,
+          "odd_under_cross_sign": -3.985706659026139e-05,
+          "total_coefficient_over_t_sq": 0.24625526227013192,
+          "even_coefficient_over_t_sq": 0.34589792874578534,
+          "mixed_coefficient_over_t_sq": -0.09964266647565347,
+          "same_only": 1.3861699958442475e-08,
+          "cross_only": 5.329646297868989e-05,
+          "nonadditivity": 4.5191780229404435e-05,
+          "min_mu_gap_eV": 0.006393213521419146
+        }
+      ],
+      "taylor_extrapolation": {
+        "total_coefficient_t_to_zero": {
+          "intercept": 0.07676971940626179,
+          "quartic_slope": 398.7556580306662,
+          "raw_first": 0.07739843295364948,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        },
+        "even_coefficient_t_to_zero": {
+          "intercept": 0.16823874096323405,
+          "quartic_slope": 430.43857900840294,
+          "raw_first": 0.16891604046927147,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        },
+        "mixed_coefficient_t_to_zero": {
+          "intercept": -0.09146902155697222,
+          "quartic_slope": -31.68292097773248,
+          "raw_first": -0.09151760751562199,
+          "fit_points_eV": [
+            0.00125,
+            0.0025,
+            0.005
+          ]
+        }
+      }
+    }
+  },
+  "convergence": [
+    {
+      "u": 0.1,
+      "t_eV": 0.005,
+      "coarse": -6.878794939448592e-07,
+      "fine": -6.878950186178757e-07,
+      "fine_minus_coarse": -1.5524673016578268e-11,
+      "half_B_step": -6.878621918692108e-07,
+      "half_B_step_minus_default": 1.730207564838322e-11
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.005,
+      "coarse": 2.1685006328739286e-06,
+      "fine": 2.168532346043736e-06,
+      "fine_minus_coarse": 3.17131698073959e-11,
+      "half_B_step": 2.1684165896063864e-06,
+      "half_B_step_minus_default": -8.404326754217213e-11
+    },
+    {
+      "u": 0.1,
+      "t_eV": 0.02,
+      "coarse": -1.698080001149866e-05,
+      "fine": -1.6981484252134274e-05,
+      "fine_minus_coarse": -6.842406356137934e-10,
+      "half_B_step": -1.6980386859158755e-05,
+      "half_B_step_minus_default": 4.131523399053094e-10
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.02,
+      "coarse": 9.850210490805277e-05,
+      "fine": 9.850135356648273e-05,
+      "fine_minus_coarse": -7.513415700417889e-10,
+      "half_B_step": 9.849689848560914e-05,
+      "half_B_step_minus_default": -5.206422443629452e-09
+    }
+  ],
+  "four_quadrant": {
+    "responses": {
+      "+1+1": -6.878794939448592e-07,
+      "+1-1": 8.649559728143359e-07,
+      "-1+1": 8.649559728143359e-07,
+      "-1-1": -6.878794939448592e-07
+    },
+    "finite_mixed_coefficient": -0.0310567093351839
+  }
+}
