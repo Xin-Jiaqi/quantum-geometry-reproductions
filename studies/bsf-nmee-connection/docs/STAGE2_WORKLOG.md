@@ -1,0 +1,9 @@
+# BSF+NMEE Stage 2 worklog / handoff
+
+- **History preserved:** Stage-1 GitHub study `studies/bsf-nmee-connection` and the original PRL reproduction remain untouched except for adding new files and an extra CI command. The only original study edits are README and the existing stage CI definition.
+- **Models:** First independently displacement-generated eight-band Hamiltonian with finite-range A/B tunneling and mirror-related opposite Rashba layers (`sliding_tight_binding.py`). All experimental results live in the `results/` folder; test physics is precisely documented in `STAGE2_PHYSICS.md`.
+- **Numerics:** A naive regular grid produces unstable amplitudes and sign changes. The failure motivated valley-patch integration with physical 2D weights and strongly graded radial shells. Repeated integration showed `2.03110e-4` stable to `~1e-9` absolute across quadrature refinements.
+- **Key correction:** A hopping lattice sum truncated at three shells had `~1e-6 eV` spurious dependence on adding a Bravais lattice vector to `tau`. Five shells reduced errors to `<3e-17 eV`. The correction was incorporated **before** archiving numerical results.
+- **Controls:** `t_perp=0`, no-Rashba, A/B-filtered, tunneling-strength scan, mirror partners, `B_step` halving, reciprocal `k+G` covariance, analytic vs finite-difference velocity, layer sum and gap checks.
+- **Pending physics:** field definition in original NMEE PRL still awaiting correspondence; high-symmetry sliding points may require adjusting the chemical potential or changing the model so the full path remains insulating. No calculation of sliding energy/polarization has been performed. This is a new exploratory study and must not be merged into the frozen PRL paper reproduction.
+- **Next narrow task:** inspect valley- and band-resolved contributions to see *why* AB interlayer mixing changes the cancellation. Do not claim PRL-level novelty without that mechanism and an independent second model.

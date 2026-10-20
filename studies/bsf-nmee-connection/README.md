@@ -63,3 +63,20 @@ The result file `results/mirror_11.json` records the mesh and parameter conventi
 - Only **unitary**, layer-normal-preserving operations. Antiunitary magnetic operations and nonsymmorphic atomic mappings are not yet covered by this adapter.
 - NMEE's existing finite-T driven DC vs complete static Eq. (9) ambiguity remains unresolved; these response branches must never be combined.
 - The original paper reproduction and its frozen tests are **not modified**.
+
+## Stage 2: microscopic relative-sliding hopping (independent preliminary model)
+
+[`bsf_nmee/sliding_tight_binding.py`](bsf_nmee/sliding_tight_binding.py) now provides a *different* eight-band model in which interlayer hopping is independently generated from real-space orbital displacements for each stacking `shift`. It is **not** the stage-1 abstract unitary-rotated toy model. The hopping uses five-shell lattice sums and the *full* interorbital Bloch phase, including intra-cell orbital positions and relative displacement. Both spin-orbit-reversed monolayers are related by a physical `m_z` mirror with top/bottom exchange.
+
+[`bsf_nmee/valley_quadrature.py`](bsf_nmee/valley_quadrature.py) integrates small valley disks with nonlinear radial resolution and the rest of the BZ on a uniform grid. A static zero-temperature finite-Zeeman-field derivative of the **interband spin-electric susceptibility** is evaluated using the already-reviewed NMEE routines. This is *not* the paper's nonequilibrium DC branch. See [`docs/STAGE2_PHYSICS.md`](docs/STAGE2_PHYSICS.md) and `results/sliding_stage2_validated.json` / `results/sliding_convergence_extended.json` for numbers and physical caveats.
+
+A key finding in this particular synthetic model is a nonzero **net** static `Gamma_xz;x` induced by interlayer hopping between otherwise mirror-compensated layers. At relative shift `(0.23,0.41)`, `t_perp=0.028 eV`, zero layer potential difference, the well-refined reference is approximately `+2.03110e-4 (nm V T)^-1`; `t_perp=0` yields numerical zero. With only same-sublattice tunneling, it shrinks to `+2.83e-8` in this model. Neither result demonstrates ferroelectric stability or a universal enhancement, and a prior informal `5.80e-5` estimate should **not** be treated as a frozen result for this microscopically specified model.
+
+Reproduction with the paper package installed, from this study directory:
+
+```bash
+python -m unittest discover -s tests -v
+python scripts/run_stage2_benchmark.py   # ~30 s in a single-thread BLAS environment
+```
+
+No original PRL reproduction modules are modified. True static-response amplitude depends on the microscopic hopping, SOC, and position convention; the existing final-DC-formula disagreement remains unresolved.

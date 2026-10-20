@@ -1,0 +1,54 @@
+{
+  "fine": {
+    "result": {
+      "response": {
+        "top_x": -0.008364006618373006,
+        "bottom_x": 0.008567117087121314,
+        "total_x": 0.00020311046874830533
+      },
+      "sampled_middle_band_gap_eV": 0.034187071484114734,
+      "min_mu_to_band_eV": 0.013749426948389161,
+      "total_vs_layers_error": -3.469446951953614e-18
+    },
+    "meta": {
+      "n_exterior_kept": 19509,
+      "n_valley_total": 50400,
+      "exterior_area_weight": 18.7313124504217,
+      "valley_area_weight": 0.3580986219567645,
+      "bz_area_weight": 19.08848340903347,
+      "normalization_error": 0.0009276633449957217
+    },
+    "params": [
+      141,
+      140,
+      180,
+      1.5
+    ]
+  },
+  "radius2": {
+    "result": {
+      "response": {
+        "top_x": -0.008363562133641866,
+        "bottom_x": 0.008566672652708007,
+        "total_x": 0.00020311051906614263
+      },
+      "sampled_middle_band_gap_eV": 0.034188861832765025,
+      "min_mu_to_band_eV": 0.013751706184660463,
+      "total_vs_layers_error": 1.734723475976807e-18
+    },
+    "meta": {
+      "n_exterior_kept": 22049,
+      "n_valley_total": 50400,
+      "exterior_area_weight": 18.45892595437827,
+      "valley_area_weight": 0.6366197723675813,
+      "bz_area_weight": 19.08848340903347,
+      "normalization_error": 0.007062317712382082
+    },
+    "params": [
+      151,
+      140,
+      180,
+      2.0
+    ]
+  }
+}

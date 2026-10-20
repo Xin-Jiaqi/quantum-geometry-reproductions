@@ -1,0 +1,210 @@
+{
+  "models": {
+    "base": {
+      "response": {
+        "top_x": -0.008358568380684063,
+        "bottom_x": 0.008561679865949275,
+        "total_x": 0.0002031114852652173
+      },
+      "sampled_middle_band_gap_eV": 0.03418697735548446,
+      "min_mu_to_band_eV": 0.013750739912793165,
+      "total_vs_layers_error": 5.204170427930421e-18,
+      "inputs": {
+        "tunneling_eV": 0.028,
+        "cross_sublattice": true,
+        "shift": [
+          0.23,
+          0.41
+        ],
+        "B_step_T": 0.25
+      }
+    },
+    "decoupled": {
+      "response": {
+        "top_x": -0.009543751858877453,
+        "bottom_x": 0.009543751858877486,
+        "total_x": 6.399897880845668e-18
+      },
+      "sampled_middle_band_gap_eV": 0.0330954359898727,
+      "min_mu_to_band_eV": 0.01654771726489923,
+      "total_vs_layers_error": -2.6020852139652106e-17,
+      "inputs": {
+        "tunneling_eV": 0.0,
+        "cross_sublattice": true,
+        "shift": [
+          0.23,
+          0.41
+        ],
+        "B_step_T": 0.25
+      }
+    },
+    "same_sublattice": {
+      "response": {
+        "top_x": -0.009715947902595936,
+        "bottom_x": 0.009715976210942901,
+        "total_x": 2.830834698923339e-08
+      },
+      "sampled_middle_band_gap_eV": 0.02883892922741056,
+      "min_mu_to_band_eV": 0.012977977356595727,
+      "total_vs_layers_error": 2.42861286636753e-17,
+      "inputs": {
+        "tunneling_eV": 0.028,
+        "cross_sublattice": false,
+        "shift": [
+          0.23,
+          0.41
+        ],
+        "B_step_T": 0.25
+      }
+    },
+    "weak10": {
+      "response": {
+        "top_x": -0.00933654505885684,
+        "bottom_x": 0.00941282098897872,
+        "total_x": 7.627593012191849e-05
+      },
+      "sampled_middle_band_gap_eV": 0.03251057870553465,
+      "min_mu_to_band_eV": 0.01542252241824734,
+      "total_vs_layers_error": 3.642919299551295e-17,
+      "inputs": {
+        "tunneling_eV": 0.01,
+        "cross_sublattice": true,
+        "shift": [
+          0.23,
+          0.41
+        ],
+        "B_step_T": 0.25
+      }
+    },
+    "weak20": {
+      "response": {
+        "top_x": -0.008837340171297626,
+        "bottom_x": 0.00902023097985424,
+        "total_x": 0.00018289080855655234
+      },
+      "sampled_middle_band_gap_eV": 0.03312161873519912,
+      "min_mu_to_band_eV": 0.014462782693218108,
+      "total_vs_layers_error": -6.071532165918825e-17,
+      "inputs": {
+        "tunneling_eV": 0.02,
+        "cross_sublattice": true,
+        "shift": [
+          0.23,
+          0.41
+        ],
+        "B_step_T": 0.25
+      }
+    },
+    "strong40": {
+      "response": {
+        "top_x": -0.007635652177191537,
+        "bottom_x": 0.007780113406970844,
+        "total_x": 0.00014446122977930428
+      },
+      "sampled_middle_band_gap_eV": 0.03646877855955635,
+      "min_mu_to_band_eV": 0.01275143598050834,
+      "total_vs_layers_error": -2.6020852139652106e-18,
+      "inputs": {
+        "tunneling_eV": 0.04,
+        "cross_sublattice": true,
+        "shift": [
+          0.23,
+          0.41
+        ],
+        "B_step_T": 0.25
+      }
+    },
+    "mirror_partner": {
+      "response": {
+        "top_x": -0.008561679865949252,
+        "bottom_x": 0.008358568380684023,
+        "total_x": -0.00020311148526527681
+      },
+      "sampled_middle_band_gap_eV": 0.03418697735548443,
+      "min_mu_to_band_eV": 0.013750739912793124,
+      "total_vs_layers_error": -4.683753385137379e-17,
+      "inputs": {
+        "tunneling_eV": 0.028,
+        "cross_sublattice": true,
+        "shift": [
+          -0.23,
+          -0.41
+        ],
+        "B_step_T": 0.25
+      }
+    },
+    "step_0p125": {
+      "response": {
+        "top_x": -0.008358518283612884,
+        "bottom_x": 0.008561627486001632,
+        "total_x": 0.00020310920238872395
+      },
+      "sampled_middle_band_gap_eV": 0.03418697735548446,
+      "min_mu_to_band_eV": 0.013750739912793165,
+      "total_vs_layers_error": -2.42861286636753e-17,
+      "inputs": {
+        "tunneling_eV": 0.028,
+        "cross_sublattice": true,
+        "shift": [
+          0.23,
+          0.41
+        ],
+        "B_step_T": 0.125
+      }
+    },
+    "small05": {
+      "response": {
+        "top_x": -0.009489397239452345,
+        "bottom_x": 0.009511371123377067,
+        "total_x": 2.1973883924726645e-05
+      },
+      "sampled_middle_band_gap_eV": 0.03260440973149986,
+      "min_mu_to_band_eV": 0.015954194215789072,
+      "total_vs_layers_error": 5.204170427930421e-18,
+      "inputs": {
+        "tunneling_eV": 0.005,
+        "cross_sublattice": true,
+        "shift": [
+          0.23,
+          0.41
+        ],
+        "B_step_T": 0.25
+      }
+    }
+  },
+  "convergence": {
+    "coarse": {
+      "response": {
+        "top_x": -0.008358568380684063,
+        "bottom_x": 0.008561679865949275,
+        "total_x": 0.0002031114852652173
+      },
+      "sampled_middle_band_gap_eV": 0.03418697735548446,
+      "min_mu_to_band_eV": 0.013750739912793165,
+      "total_vs_layers_error": 5.204170427930421e-18
+    }
+  },
+  "quadrature": {
+    "coarse": {
+      "n_exterior_kept": 6433,
+      "n_valley_total": 21600,
+      "exterior_area_weight": 18.716081964687138,
+      "valley_area_weight": 0.3580986219567645,
+      "bz_area_weight": 19.08848340903347,
+      "normalization_error": -0.014302822389566927,
+      "n_exterior": 81,
+      "n_radial": 90,
+      "n_angular": 120,
+      "radius_1_over_nm": 1.5
+    }
+  },
+  "physics_scope": "T=0 insulating equilibrium static finite-B derivative (frozen occupied projector), NOT driven NMEE DC",
+  "exact_checks": {
+    "mirror_hamiltonian_eV": 2.0817811058350032e-17,
+    "mirror_velocity_eV_nm": 1.742330095302999e-18,
+    "sliding_plus_a1_H_eV": 2.823925224926892e-17,
+    "sliding_plus_a1_velocity_eV_nm": 1.802248162585635e-17,
+    "velocity_central_difference_error_eV_nm": 1.318307066550977e-11
+  },
+  "elapsed_s": 27.9
+}

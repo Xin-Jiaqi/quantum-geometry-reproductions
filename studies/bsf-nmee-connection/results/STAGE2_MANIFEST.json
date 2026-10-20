@@ -1,0 +1,25 @@
+{
+  "project": "BSF+NMEE stage2 reproducible study",
+  "stage1_original": "BSF_NMEE_connection_stage1_20261019.zip",
+  "scope": "microscopic hopping toy-model equilibrium static response only",
+  "reference_group_toolkit_commit": "551a0daf8d4ba5a5f24b2811694bfe438616de48",
+  "file_sha256": {
+    "studies/bsf-nmee-connection/README.md": "eaf1628b8fe75fb27541f212f5553b75a9341d0e0d92255b17b491f4d3c87760",
+    "studies/bsf-nmee-connection/bsf_nmee/__init__.py": "146a36ea10fbc47c2457a3449639c46ee26f071ad02d8e20b3f24b031fab4dd0",
+    "studies/bsf-nmee-connection/bsf_nmee/connection.py": "62b5bdc913331ec0cee6b0ef9fa37dd3c54649e2b8ea77e2f3d05b6c731e6dcd",
+    "studies/bsf-nmee-connection/bsf_nmee/sliding_tight_binding.py": "39e3ecc4b4996ce02dcb64fdf8417253c3ccc8b5f6a9df201a57f3098739d125",
+    "studies/bsf-nmee-connection/bsf_nmee/valley_quadrature.py": "9f3cb1d89bff0955c2e0c942ed9b4d45d81b1575506db727949e54751d252760",
+    "studies/bsf-nmee-connection/docs/STAGE2_PHYSICS.md": "f8851761d3022b53c9c5fafe94bd2ec2cbeaf9d3e6b8bb8ce7cecec952702e09",
+    "studies/bsf-nmee-connection/docs/STAGE2_WORKLOG.md": "68c9bb63f9e875e89484fd423330d519e878a4c75fcf4dece33386eac9fbf6d2",
+    "studies/bsf-nmee-connection/results/mirror_11.json": "242b8edf69fdcd054ff8e129a38b9a3b51c9d290ab3463c93c24e86bb3dedd50",
+    "studies/bsf-nmee-connection/results/sliding_convergence_extended.json": "9120e226473479f86be705206ddacef89670c7473ed2293769f16974c92dc99f",
+    "studies/bsf-nmee-connection/results/sliding_stage2_validated.json": "8097577f10a88fb12dc6ff3abd800496752c33b62e9fd2761898cb1a33370e1d",
+    "studies/bsf-nmee-connection/scripts/mirror_covariance_nmee.py": "0d68c671ffdfb53cb4cb1bf885a87c5afe21ea4dfa8fcb4fb07111ef2a5733c2",
+    "studies/bsf-nmee-connection/scripts/run_stage2_benchmark.py": "95f89524f8c144344e69882739ea242362797bc9abe811d1b2753eeec1bd5e3e",
+    "studies/bsf-nmee-connection/scripts/sliding_static_scan.py": "3b6d624f7919952e6281a6e7ff518acb5e435b9f2cb3b8c0224eef6f90ef5c99",
+    "studies/bsf-nmee-connection/tests/test_physical_model.py": "a8bb1f2f4a5bac6e29166e559e7f90132b081ba0eec36d7c84037f9019e3c49c",
+    "studies/bsf-nmee-connection/tests/test_real_toolkit.py": "d5c9e241800f03d0cba615f97d864e12e40f2009abbf7cfb20dacb7af588699d",
+    "studies/bsf-nmee-connection/tests/test_sliding_microscopic.py": "2f713d8791ad05f057d62349d7f3dc12f1ca0705910ab0b7e35cb8bac7be3bce",
+    "studies/bsf-nmee-connection/tests/test_tensor_contract.py": "8ea2d0424913b5d3c389ceb4f447f3c448a36450e09029332aec7746bb03f1da"
+  }
+}

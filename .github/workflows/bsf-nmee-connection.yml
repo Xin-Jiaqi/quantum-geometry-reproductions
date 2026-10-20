@@ -28,3 +28,4 @@ jobs:
           cd studies/bsf-nmee-connection
           python -m unittest discover -s tests -v
           python scripts/mirror_covariance_nmee.py --mesh 11
+          python scripts/sliding_static_scan.py --n 19
