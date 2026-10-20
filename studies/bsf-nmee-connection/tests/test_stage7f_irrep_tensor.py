@@ -57,6 +57,17 @@ class Stage7FIrrepTensorTests(unittest.TestCase):
         self.assertLess(tensor_covariance_residual(
             self.reference,rotated,240,odd=True),1e-9)
 
+    def test_directional_sign_at_fixed_hopping_ratio(self):
+        spec=spec_u(.4)
+        a=analytic_tensor_ABC(spec,nr=12,nt=36)
+        rotated=analytic_tensor_ABC(rotate_slide(spec,60),nr=12,nt=36)
+        gamma=lambda r:sum(r['tensors'][ch]['matrix'][0][0]
+                           for ch in ('A','B','C'))
+        self.assertGreater(gamma(a),0)
+        self.assertLess(gamma(rotated),0)
+        self.assertLess(tensor_covariance_residual(
+            a,rotated,240,odd=True),1e-9)
+
 
 if __name__=='__main__':
     unittest.main()
