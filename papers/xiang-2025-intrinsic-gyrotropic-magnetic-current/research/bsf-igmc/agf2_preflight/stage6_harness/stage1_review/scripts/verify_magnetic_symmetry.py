@@ -8,11 +8,12 @@ Checks:
      [100]) -> magnetic layer group p21'/b'11 (uni 86 = P2_1'/c') with the
      antiunitary mirror m'_100, matching C2DB and the paper (sub-lattice
      connectors {m_100|(1/2,1/2)} and {2_100|(1/2,1/2)}).
-  2. B1/B2 Type-I (ferromagnetic stacking): internal magnetic point group
-     m' = {1, m'_100}; B2 = {m_001 | t_o2} B1 with moments preserved
-     (unitary connector m_z).
-  3. B1/B2 Type-II (antiferromagnetic stacking): same internal group m';
-     connector becomes antiunitary m'_z (needs time reversal).
+  2. B1/B2 Type-I (opposite interlayer Neel vectors): internal magnetic
+     point group m' = {1, m'_100}; B2 = {m_001 | t_o2} B1; the unitary
+     m_z connector reverses the in-plane axial spin at mapped sites.
+  3. B1/B2 Type-II (parallel interlayer Neel vectors): same internal group m';
+     the antiunitary m'_z connector preserves the mapped in-plane axial spin.
+     Type-II belongs to a separate strained-material campaign.
 
 Uses spglib magnetic symmetry (2.5.0) and the pinned toolkit v0.18.0 registry.
 """
