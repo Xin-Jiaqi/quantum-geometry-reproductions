@@ -1,0 +1,306 @@
+[
+  {
+    "u": 0.1,
+    "t_eV": 0.005,
+    "radius_inv_nm": 0.1,
+    "BZ_gamma_xx": -6.878950186178132e-07,
+    "BZ_trace": 1.605787116308992e-07,
+    "disk_exact_gamma_xx": -5.157761993555703e-07,
+    "disk_kp2_gamma_xx": -5.157721554573418e-07,
+    "disk_exact_trace": 1.6510024928441648e-07,
+    "disk_kp2_trace": 1.6509986094531252e-07,
+    "disk_fraction_signed_xx": 0.7497891181010715,
+    "disk_fraction_signed_trace": 1.0281577651707052,
+    "kp2_vs_disk_relative_error_xx": 7.84041263162754e-06,
+    "kp2_vs_BZ_relative_error_xx": 0.2502167605550011,
+    "min_mu_distance_eV": [
+      0.012990444802801447,
+      0.012990444802801412
+    ]
+  },
+  {
+    "u": 0.1,
+    "t_eV": 0.005,
+    "radius_inv_nm": 0.25,
+    "BZ_gamma_xx": -6.878950186178132e-07,
+    "BZ_trace": 1.605787116308992e-07,
+    "disk_exact_gamma_xx": -6.94056718671566e-07,
+    "disk_kp2_gamma_xx": -6.940477998506794e-07,
+    "disk_exact_trace": 1.662068567434966e-07,
+    "disk_kp2_trace": 1.6620611541780265e-07,
+    "disk_fraction_signed_xx": 1.0089573261718532,
+    "disk_fraction_signed_trace": 1.0350491360619087,
+    "kp2_vs_disk_relative_error_xx": 1.28502767088691e-05,
+    "kp2_vs_BZ_relative_error_xx": 0.008944360791024534,
+    "min_mu_distance_eV": [
+      0.012990441750966981,
+      0.01299044175096694
+    ]
+  },
+  {
+    "u": 0.1,
+    "t_eV": 0.005,
+    "radius_inv_nm": 0.5,
+    "BZ_gamma_xx": -6.878950186178132e-07,
+    "BZ_trace": 1.605787116308992e-07,
+    "disk_exact_gamma_xx": -6.916783724408696e-07,
+    "disk_kp2_gamma_xx": -6.91671798812892e-07,
+    "disk_exact_trace": 1.6089461812289662e-07,
+    "disk_kp2_trace": 1.6090036290239688e-07,
+    "disk_fraction_signed_xx": 1.0054999000147702,
+    "disk_fraction_signed_trace": 1.0019672999539537,
+    "kp2_vs_disk_relative_error_xx": 9.503879605849844e-06,
+    "kp2_vs_BZ_relative_error_xx": 0.00549034386477675,
+    "min_mu_distance_eV": [
+      0.012990465234163064,
+      0.012990465234163383
+    ]
+  },
+  {
+    "u": 0.1,
+    "t_eV": 0.005,
+    "radius_inv_nm": 0.75,
+    "BZ_gamma_xx": -6.878950186178132e-07,
+    "BZ_trace": 1.605787116308992e-07,
+    "disk_exact_gamma_xx": -6.88762825835095e-07,
+    "disk_kp2_gamma_xx": -6.887669731680747e-07,
+    "disk_exact_trace": 1.6064598118789216e-07,
+    "disk_kp2_trace": 1.6065313068805696e-07,
+    "disk_fraction_signed_xx": 1.00126154019697,
+    "disk_fraction_signed_trace": 1.00041891952121,
+    "kp2_vs_disk_relative_error_xx": 6.021423956269583e-06,
+    "kp2_vs_BZ_relative_error_xx": 0.0012675692171946525,
+    "min_mu_distance_eV": [
+      0.012990524430153902,
+      0.012990524430155193
+    ]
+  },
+  {
+    "u": 0.1,
+    "t_eV": 0.02,
+    "radius_inv_nm": 0.1,
+    "BZ_gamma_xx": -1.6981484252133678e-05,
+    "BZ_trace": 7.658123327316672e-06,
+    "disk_exact_gamma_xx": -1.4054814021474709e-05,
+    "disk_kp2_gamma_xx": -1.405464159386584e-05,
+    "disk_exact_trace": 6.511678270978085e-06,
+    "disk_kp2_trace": 6.511710450689387e-06,
+    "disk_fraction_signed_xx": 0.8276552162811539,
+    "disk_fraction_signed_trace": 0.8502968668251665,
+    "kp2_vs_disk_relative_error_xx": 1.2268224154821417e-05,
+    "kp2_vs_BZ_relative_error_xx": 0.1723549375785623,
+    "min_mu_distance_eV": [
+      0.0024347989120591836,
+      0.0024347989120594334
+    ]
+  },
+  {
+    "u": 0.1,
+    "t_eV": 0.02,
+    "radius_inv_nm": 0.25,
+    "BZ_gamma_xx": -1.6981484252133678e-05,
+    "BZ_trace": 7.658123327316672e-06,
+    "disk_exact_gamma_xx": -1.7071493605277867e-05,
+    "disk_kp2_gamma_xx": -1.707133108262499e-05,
+    "disk_exact_trace": 7.755429225723167e-06,
+    "disk_kp2_trace": 7.755300249768454e-06,
+    "disk_fraction_signed_xx": 1.0053004408688764,
+    "disk_fraction_signed_trace": 1.0127062328781522,
+    "kp2_vs_disk_relative_error_xx": 9.520119131656065e-06,
+    "kp2_vs_BZ_relative_error_xx": 0.0052908702889161476,
+    "min_mu_distance_eV": [
+      0.002434828275983139,
+      0.00243482827598758
+    ]
+  },
+  {
+    "u": 0.1,
+    "t_eV": 0.02,
+    "radius_inv_nm": 0.5,
+    "BZ_gamma_xx": -1.6981484252133678e-05,
+    "BZ_trace": 7.658123327316672e-06,
+    "disk_exact_gamma_xx": -1.704503706937061e-05,
+    "disk_kp2_gamma_xx": -1.704488125342713e-05,
+    "disk_exact_trace": 7.663587431585584e-06,
+    "disk_kp2_trace": 7.663573698029859e-06,
+    "disk_fraction_signed_xx": 1.0037424771765135,
+    "disk_fraction_signed_trace": 1.0007135043450426,
+    "kp2_vs_disk_relative_error_xx": 9.141425908725445e-06,
+    "kp2_vs_BZ_relative_error_xx": 0.0037333015390269004,
+    "min_mu_distance_eV": [
+      0.0024347989120591836,
+      0.0024347989120594334
+    ]
+  },
+  {
+    "u": 0.1,
+    "t_eV": 0.02,
+    "radius_inv_nm": 0.75,
+    "BZ_gamma_xx": -1.6981484252133678e-05,
+    "BZ_trace": 7.658123327316672e-06,
+    "disk_exact_gamma_xx": -1.6995533778887812e-05,
+    "disk_kp2_gamma_xx": -1.6995558461574096e-05,
+    "disk_exact_trace": 7.659383189441687e-06,
+    "disk_kp2_trace": 7.659394269735816e-06,
+    "disk_fraction_signed_xx": 1.0008273438614395,
+    "disk_fraction_signed_trace": 1.0001645131674128,
+    "kp2_vs_disk_relative_error_xx": 1.4523042703681634e-06,
+    "kp2_vs_BZ_relative_error_xx": 0.0008287973672648868,
+    "min_mu_distance_eV": [
+      0.0024347629028801457,
+      0.002434762902880982
+    ]
+  },
+  {
+    "u": 0.4,
+    "t_eV": 0.005,
+    "radius_inv_nm": 0.1,
+    "BZ_gamma_xx": 2.1685323460426183e-06,
+    "BZ_trace": 8.371706500707402e-06,
+    "disk_exact_gamma_xx": 2.7744336868116313e-06,
+    "disk_kp2_gamma_xx": 2.774435949029833e-06,
+    "disk_exact_trace": 8.682621112128602e-06,
+    "disk_kp2_trace": 8.682598657268448e-06,
+    "disk_fraction_signed_xx": 1.279406180809214,
+    "disk_fraction_signed_trace": 1.0371387376510306,
+    "kp2_vs_disk_relative_error_xx": 8.153801665243603e-07,
+    "kp2_vs_BZ_relative_error_xx": 0.2794072240116388,
+    "min_mu_distance_eV": [
+      0.01375020442034075,
+      0.013750204420487785
+    ]
+  },
+  {
+    "u": 0.4,
+    "t_eV": 0.005,
+    "radius_inv_nm": 0.25,
+    "BZ_gamma_xx": 2.1685323460426183e-06,
+    "BZ_trace": 8.371706500707402e-06,
+    "disk_exact_gamma_xx": 2.293643430720526e-06,
+    "disk_kp2_gamma_xx": 2.2936534911236153e-06,
+    "disk_exact_trace": 8.676331814689714e-06,
+    "disk_kp2_trace": 8.676297600743073e-06,
+    "disk_fraction_signed_xx": 1.057693898320781,
+    "disk_fraction_signed_trace": 1.0363874813285165,
+    "kp2_vs_disk_relative_error_xx": 4.386210582833857e-06,
+    "kp2_vs_BZ_relative_error_xx": 0.05769853758895137,
+    "min_mu_distance_eV": [
+      0.013750032719685147,
+      0.013750032719741727
+    ]
+  },
+  {
+    "u": 0.4,
+    "t_eV": 0.005,
+    "radius_inv_nm": 0.5,
+    "BZ_gamma_xx": 2.1685323460426183e-06,
+    "BZ_trace": 8.371706500707402e-06,
+    "disk_exact_gamma_xx": 2.1647902490517636e-06,
+    "disk_kp2_gamma_xx": 2.164959835479295e-06,
+    "disk_exact_trace": 8.386995380849568e-06,
+    "disk_kp2_trace": 8.387314081630037e-06,
+    "disk_fraction_signed_xx": 0.9982743642271771,
+    "disk_fraction_signed_trace": 1.0018262561092979,
+    "kp2_vs_disk_relative_error_xx": 7.833850305160406e-05,
+    "kp2_vs_BZ_relative_error_xx": 0.0016474324534945864,
+    "min_mu_distance_eV": [
+      0.013750215793238173,
+      0.013750215793257213
+    ]
+  },
+  {
+    "u": 0.4,
+    "t_eV": 0.005,
+    "radius_inv_nm": 0.75,
+    "BZ_gamma_xx": 2.1685323460426183e-06,
+    "BZ_trace": 8.371706500707402e-06,
+    "disk_exact_gamma_xx": 2.1668009518011427e-06,
+    "disk_kp2_gamma_xx": 2.1669759147967127e-06,
+    "disk_exact_trace": 8.373442378419262e-06,
+    "disk_kp2_trace": 8.373837603878305e-06,
+    "disk_fraction_signed_xx": 0.999201582469067,
+    "disk_fraction_signed_trace": 1.0002073505218696,
+    "kp2_vs_disk_relative_error_xx": 8.074714727465503e-05,
+    "kp2_vs_BZ_relative_error_xx": 0.00071773485359627,
+    "min_mu_distance_eV": [
+      0.013750084929152383,
+      0.013750084929254384
+    ]
+  },
+  {
+    "u": 0.4,
+    "t_eV": 0.02,
+    "radius_inv_nm": 0.1,
+    "BZ_gamma_xx": 9.850135356648417e-05,
+    "BZ_trace": 0.0001949039768923534,
+    "disk_exact_gamma_xx": 8.686429442500219e-05,
+    "disk_kp2_gamma_xx": 8.686545132005921e-05,
+    "disk_exact_trace": 0.00017212512842208354,
+    "disk_kp2_trace": 0.0001721260032840153,
+    "disk_fraction_signed_xx": 0.88185889106968,
+    "disk_fraction_signed_trace": 0.8831278415480934,
+    "kp2_vs_disk_relative_error_xx": 1.3318418858735182e-05,
+    "kp2_vs_BZ_relative_error_xx": 0.11812936396423451,
+    "min_mu_distance_eV": [
+      0.006403628592986148,
+      0.006403628593350197
+    ]
+  },
+  {
+    "u": 0.4,
+    "t_eV": 0.02,
+    "radius_inv_nm": 0.25,
+    "BZ_gamma_xx": 9.850135356648417e-05,
+    "BZ_trace": 0.0001949039768923534,
+    "disk_exact_gamma_xx": 0.00010030734266882258,
+    "disk_kp2_gamma_xx": 0.00010030676712538624,
+    "disk_exact_trace": 0.00019991323567004608,
+    "disk_kp2_trace": 0.00019991086809536987,
+    "disk_fraction_signed_xx": 1.018334662793435,
+    "disk_fraction_signed_trace": 1.0257011624778662,
+    "kp2_vs_disk_relative_error_xx": 5.737799656820747e-06,
+    "kp2_vs_BZ_relative_error_xx": 0.01832881979315645,
+    "min_mu_distance_eV": [
+      0.0064037666900003745,
+      0.006403766691939962
+    ]
+  },
+  {
+    "u": 0.4,
+    "t_eV": 0.02,
+    "radius_inv_nm": 0.5,
+    "BZ_gamma_xx": 9.850135356648417e-05,
+    "BZ_trace": 0.0001949039768923534,
+    "disk_exact_gamma_xx": 9.8433071191341e-05,
+    "disk_kp2_gamma_xx": 9.843503016688978e-05,
+    "disk_exact_trace": 0.0001951607931936146,
+    "disk_kp2_trace": 0.00019516429403998946,
+    "disk_fraction_signed_xx": 0.9993067874433108,
+    "disk_fraction_signed_trace": 1.0013176555212264,
+    "kp2_vs_disk_relative_error_xx": 1.9901599381899214e-05,
+    "kp2_vs_BZ_relative_error_xx": 0.0006733247533458512,
+    "min_mu_distance_eV": [
+      0.0064048003261722095,
+      0.006404800324178797
+    ]
+  },
+  {
+    "u": 0.4,
+    "t_eV": 0.02,
+    "radius_inv_nm": 0.75,
+    "BZ_gamma_xx": 9.850135356648417e-05,
+    "BZ_trace": 0.0001949039768923534,
+    "disk_exact_gamma_xx": 9.847342607998011e-05,
+    "disk_kp2_gamma_xx": 9.847545641144769e-05,
+    "disk_exact_trace": 0.00019493411084124679,
+    "disk_kp2_trace": 0.0001949389123669246,
+    "disk_fraction_signed_xx": 0.9997164761143591,
+    "disk_fraction_signed_trace": 1.0001546092048703,
+    "kp2_vs_disk_relative_error_xx": 2.0618064673926413e-05,
+    "kp2_vs_BZ_relative_error_xx": 0.00026291166668074024,
+    "min_mu_distance_eV": [
+      0.006408573889486922,
+      0.006408573906231119
+    ]
+  }
+]

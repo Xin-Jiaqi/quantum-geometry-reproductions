@@ -1,0 +1,144 @@
+{
+  "protocol": "zero-temperature insulating full-BZ static finite-B NMEE",
+  "integration": {
+    "n_exterior_kept": 1647,
+    "n_valley_total": 4480,
+    "exterior_area_weight": 18.70239867619162,
+    "valley_area_weight": 0.35809862195676445,
+    "bz_area_weight": 19.08848340903347,
+    "normalization_error": -0.027986110885084514
+  },
+  "values": {
+    "reference": {
+      "parameter_updates": {},
+      "data": [
+        {
+          "u": 0.1,
+          "gamma_xz_x": -6.878794939452532e-07,
+          "trace": 1.6063429199364628e-07,
+          "min_mu_distance_eV": 0.012990601735055007
+        },
+        {
+          "u": 0.4,
+          "gamma_xz_x": 2.168500632869689e-06,
+          "trace": 8.371708344965393e-06,
+          "min_mu_distance_eV": 0.013750658475043628
+        }
+      ]
+    },
+    "rashba_minus20": {
+      "parameter_updates": {
+        "rashba_soc_eV": 0.016
+      },
+      "data": [
+        {
+          "u": 0.1,
+          "gamma_xz_x": -2.1715376296316902e-07,
+          "trace": 5.587474183151361e-08,
+          "min_mu_distance_eV": 0.012989625036334773
+        },
+        {
+          "u": 0.4,
+          "gamma_xz_x": 8.126701148246105e-07,
+          "trace": 2.9618885526361988e-06,
+          "min_mu_distance_eV": 0.01373915481236617
+        }
+      ]
+    },
+    "rashba_plus20": {
+      "parameter_updates": {
+        "rashba_soc_eV": 0.024
+      },
+      "data": [
+        {
+          "u": 0.1,
+          "gamma_xz_x": -3.1949711441992665e-06,
+          "trace": 6.954534862241507e-07,
+          "min_mu_distance_eV": 0.004117311925896063
+        },
+        {
+          "u": 0.4,
+          "gamma_xz_x": 8.965941334359367e-06,
+          "trace": 3.467005958342463e-05,
+          "min_mu_distance_eV": 0.004336524614896819
+        }
+      ]
+    },
+    "intrinsic_minus20": {
+      "parameter_updates": {
+        "intrinsic_soc_eV": 0.008
+      },
+      "data": [
+        {
+          "u": 0.1,
+          "gamma_xz_x": -1.3453873280256303e-05,
+          "trace": 3.936962121644596e-06,
+          "min_mu_distance_eV": 0.0026081355439954226
+        },
+        {
+          "u": 0.4,
+          "gamma_xz_x": 6.535207523709392e-05,
+          "trace": 0.00017409474477207167,
+          "min_mu_distance_eV": 0.0034626611680998835
+        }
+      ]
+    },
+    "intrinsic_plus20": {
+      "parameter_updates": {
+        "intrinsic_soc_eV": 0.012
+      },
+      "data": [
+        {
+          "u": 0.1,
+          "gamma_xz_x": -1.4722208731584209e-07,
+          "trace": 2.99362836529024e-08,
+          "min_mu_distance_eV": 0.023381253977729333
+        },
+        {
+          "u": 0.4,
+          "gamma_xz_x": 3.492234339659179e-07,
+          "trace": 1.5996655610520506e-06,
+          "min_mu_distance_eV": 0.024123358087465525
+        }
+      ]
+    },
+    "decay_minus12p5": {
+      "parameter_updates": {
+        "decay_nm": 0.14
+      },
+      "data": [
+        {
+          "u": 0.1,
+          "gamma_xz_x": -8.3099079381017e-07,
+          "trace": 2.3865138290894827e-07,
+          "min_mu_distance_eV": 0.012297918729593252
+        },
+        {
+          "u": 0.4,
+          "gamma_xz_x": 3.743574576679478e-06,
+          "trace": 1.220892305069427e-05,
+          "min_mu_distance_eV": 0.013236398012284809
+        }
+      ]
+    },
+    "decay_plus12p5": {
+      "parameter_updates": {
+        "decay_nm": 0.18
+      },
+      "data": [
+        {
+          "u": 0.1,
+          "gamma_xz_x": -4.783694695334831e-07,
+          "trace": 9.154268090516028e-08,
+          "min_mu_distance_eV": 0.013805285231838778
+        },
+        {
+          "u": 0.4,
+          "gamma_xz_x": 9.942031073222923e-07,
+          "trace": 4.8624193785898035e-06,
+          "min_mu_distance_eV": 0.014378632632467983
+        }
+      ]
+    }
+  }
+}

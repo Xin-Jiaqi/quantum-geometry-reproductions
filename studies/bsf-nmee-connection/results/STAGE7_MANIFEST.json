@@ -1,0 +1,28 @@
+{
+  "stage": 7,
+  "scope": "8band synthetic sliding, static gapped T=0 response only",
+  "parent_commit": "3947a6fbaeeda3056d5ea38385f743386690a0e6",
+  "verified_models": "quadratic local k.p vs exact full 8-band, K/K prime disks",
+  "scientific_status": "model-validated; not material or published driven DC",
+  "sha256": {
+    "STAGE7_README.md": "db27b9458940d13fb9dbd6026d04988edea961286c24a8408426ea557cba53aa",
+    "bsf_nmee/valley_kp.py": "6f36e29c459ad54334966530cd244c32e7f081aae71f0c71fe3dce7f5e4dc597",
+    "docs/STAGE7_PHYSICS.md": "9277043822e7c0f62e4e2629c74c833b168a0751c34bfb0cd97407a4b9892985",
+    "docs/STAGE7_WORKLOG.md": "21e4ad3455b830f61dd0d54281c4a31f54d38fd51a579538e5400fa58019baf5",
+    "scripts/run_stage7_kp.py": "9c9a08a8b3a3a1f4c3255523e6eda533d14652078b41c9d9ffdc5b822bf657dd",
+    "scripts/run_stage7_capture.py": "360d7222ae91239022b7a9dd23a46a25e9e473aee89c08e42164467dedf0de1a",
+    "scripts/run_stage7_channels.py": "3c2ea4373e0ac68d9dded2a1e63e984b1d306e4fd9e850f3c54953a6618d1e83",
+    "scripts/run_stage7_robust.py": "6ef8bf4922286fbe88c19f5805a533a48dcb8437a8ad496684bf6345ba85917d",
+    "scripts/run_stage7_root_and_trace.py": "d7b31f9b3a1c63c13e0f0224a1f5437422f37014b14164a7493374fcd9648e6b",
+    "scripts/plot_stage7.py": "b283b94c86f8222d111013e406bab4b3d8c25badc7ef8b46e2283bc6ebad146b",
+    "tests/test_stage7_valley_kp.py": "c094675bd891f50556eed6ab28d9053f7355a4982dbdc4584eeddd0b4d7d222a",
+    "results/sliding_stage7_valley_kp.json": "223c8b027e1e525b3a1a31637030934d5ede82926019f19639e4ebb4a2621412",
+    "results/sliding_stage7_capture.json": "b962889c84dff1dc36d842135e2d2f07529f43dd8a49dbcdae73731366daebeb",
+    "results/sliding_stage7_channels.json": "805b10b50c4c91a7763241ce6fbe8797ece2107a378ecc7256d9583770e61d5f",
+    "results/sliding_stage7_root_and_trace.json": "49cbadb54606b8346031b0c7e1600d65fa9a34f664cd8895a99c23eda20dc3d3",
+    "results/sliding_stage7_robust.json": "e75bcd4d0648e563bb58c709b994f763525b3f7d40e8762e14d78ebfeeecbe72",
+    "results/sliding_stage7_valley_capture.svg": "3c2ac45d4e5b05dcf4389ce375aefb59c07a3010f7639bd44a115abdec793902",
+    "results/sliding_stage7_valley_channels.svg": "a648e7505c3fc77853bef52d9049267fa3b2fd278c8defa8391c9bf3c29e9c18",
+    "results/sliding_stage7_valley_sign_reversal.svg": "b116dc9292943d78bfdd1ce1b7afd9428f82ea5adc599cf884c8cc6001a44049"
+  }
+}
