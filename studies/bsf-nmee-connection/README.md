@@ -105,15 +105,3 @@ Run from this directory after installation of the parent paper module:
 OPENBLAS_NUM_THREADS=1 python scripts/run_stage3_sign_reversal.py
 OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
 ```
-
-
-## Stage 8a: literature-only material candidate prescreen
-
-The first candidate shortlist is documented in [material-screening/STAGE8_CANDIDATE_PRESCREEN.md](material-screening/STAGE8_CANDIDATE_PRESCREEN.md), with a machine-readable evidence/unknowns matrix in [material-screening/STAGE8_CANDIDATE_MATRIX.json](material-screening/STAGE8_CANDIDATE_MATRIX.json).
-
-- **Primary:** 3R-WSe2 homobilayer (strong SOC evidence, semiconducting band structure, reported AB/BA ferroelectric domains).
-- **Control:** 3R-MoS2 homobilayer (well-studied switching and the same clean 1H-TMD stacking-symmetry route).
-- **Secondary:** 3R-WS2.
-- **Exploratory/separate classes:** Cd2Se2, 1T-PtS2, and MoS2/WS2 heterobilayer.
-
-This is a **literature and symmetry pre-screen only**. No DFT, Wannierization, or real-material NMEE has been calculated. The next gate is to retrieve exact structures and test the complete atomic motif with the existing group-theory toolkit before planning any electronic-structure run.
