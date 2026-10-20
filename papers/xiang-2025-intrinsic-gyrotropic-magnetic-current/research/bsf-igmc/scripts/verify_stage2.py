@@ -25,6 +25,6 @@ def verify():
   env=os.environ.copy();env['PYTHONPATH']=str(base/'src')+os.pathsep+env.get('PYTHONPATH','')
   env['OPENBLAS_NUM_THREADS']='1'
   tests=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],cwd=base,env=env,check=True)
-  return {'status':'PASS_MODEL_LEVEL_ONLY','physics_status':'BSF_FE_BLOCKED_REAL_MATERIAL_BLOCKED','tests':'12 passed'}
+  return {'status':'PASS_MODEL_LEVEL_ONLY','physics_status':'BSF_FE_BLOCKED_REAL_MATERIAL_BLOCKED','tests':'all dynamically discovered unittest tests passed'}
 
 if __name__=='__main__':print(json.dumps(verify(),indent=2))
