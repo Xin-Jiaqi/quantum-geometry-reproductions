@@ -112,3 +112,7 @@ Use `python scripts/reproduce_advanced.py --case scba-energy-sea-v39` or the det
 ## v40 matched noncrossing current vertex
 
 The exact four-Pauli-basis solver `qgmap.current_vertex_v40.pauli_vertex` returns the current vertex and its Bethe–Salpeter residual for a named RA, AR, RR or AA branch with the SAME disorder variance as SCBA. `current_audit` also checks the RA density Ward identity and the RR periodic-momentum Ward limit, and enforces that the four-channel symmetric spectral Hall antisymmetry vanishes. `exact_disorder_ra_torus` provides an independent full-eigenspectrum **bare** RA benchmark. Use `--case scba-current-vertex-v40`; see [method limitations](docs/CURRENT_VERTEX_V40.md). Neither the isolated RA Hall-odd correlator nor the dressed symmetric spectral 4-channel sum is the complete physical disorder Hall conductivity.
+
+## v41 exact disordered linear Hall reference
+
+`qgmap.exact_hall_v41.torus`, `hall_lehmann`, `hall_retarded_crosscheck`, `twist_chern` and `audit` accept a declared finite-size QWZ torus with **frozen site disorder**, Peierls derivatives and zero-T occupancy. `scripts/reproduce_exact_hall_v41.py` returns a protocol-labelled JSON object with `scientific_status=PARTIAL`. For named gapped finite tori, independently computed occupied-subspace FHS Chern and flux-averaged exact Hall agree. There is no claim of separate Středa I/II, SCBA conserving vertex completion, material-ready operators or original EB DC reproduction. Details: [v41](docs/EXACT_HALL_V41.md).
