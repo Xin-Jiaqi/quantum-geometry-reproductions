@@ -45,6 +45,25 @@ class Stage8GAutonomousHpcTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError,"Scientific input changed"):
                 onsite.load_inputs(dest)
 
+    def test_audit_requires_authentic_forces_and_frozen_lateral_coordinates(self):
+        with tempfile.TemporaryDirectory() as t:
+            dest=Path(t)/"pilot"
+            prepare.build(dest)
+            folder=dest/"path_A_s0.00"
+            (folder/"CONTCAR").write_text((folder/"POSCAR").read_text())
+            force="\n".join(["0.0 0.0 0.0 0.0001 0.0001 0.0001"]*6)
+            (folder/"OUTCAR").write_text(
+                "free energy TOTEN = -123.456789 eV\n"
+                "POSITION TOTAL-FORCE (eV/Angst)\n----\n"+force+
+                "\nreached required accuracy\n")
+            row=onsite.audit(dest)["rows"][0]
+            self.assertEqual(row["status"],"CONVERGED_REQUIRES_SCIENTIFIC_REVIEW")
+            self.assertAlmostEqual(row["final_TOTEN_eV"],-123.456789)
+            self.assertLess(row["max_lateral_xy_drift_A"],1e-8)
+            (folder/"OUTCAR").write_text("free energy TOTEN = -123.456789 eV\n")
+            self.assertEqual(onsite.audit(dest)["rows"][0]["status"],
+                             "INVALID_GEOMETRY_OR_FORCES")
+
     def test_source_sha_and_separate_material_provenance(self):
         lat,pos=prepare.source_atoms()
         self.assertEqual(len(pos),6)
