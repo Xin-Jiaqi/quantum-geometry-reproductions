@@ -1,0 +1,62 @@
+{
+  "schema": "qgmap-v38-1",
+  "scientific_status": "PARTIAL",
+  "protocol": "clean two-band QWZ Streda antisymmetric sea, energy-independent eta, zero disorder and no vertex",
+  "topology": {
+    "-3": {
+      "fhs_integer": 1.1043592643970545e-18,
+      "occupied_berry": -1.049828733611843e-17,
+      "sea_eta_0p02": -0.0007696664860035187
+    },
+    "-1": {
+      "fhs_integer": -1.0000000000000002,
+      "occupied_berry": -0.9999999999999997,
+      "sea_eta_0p02": -0.9750936556674081
+    },
+    "1": {
+      "fhs_integer": 1.0,
+      "occupied_berry": 1.0000000000000002,
+      "sea_eta_0p02": 0.9750936556674081
+    },
+    "3": {
+      "fhs_integer": -1.965759490626757e-16,
+      "occupied_berry": 4.499266001193613e-18,
+      "sea_eta_0p02": 0.0007696664860035127
+    }
+  },
+  "eta_scan": {
+    "0.16": {
+      "sea": -0.8037445630033672,
+      "gap": 2.0000002212328014,
+      "abs_error_to_berry": 0.1962554369966325
+    },
+    "0.06": {
+      "sea": -0.9254261666713796,
+      "gap": 2.0000002212328014,
+      "abs_error_to_berry": 0.07457383332862011
+    },
+    "0.02": {
+      "sea": -0.9750936556674081,
+      "gap": 2.0000002212328014,
+      "abs_error_to_berry": 0.024906344332591535
+    },
+    "0.008": {
+      "sea": -0.9900354235691807,
+      "gap": 2.0000002212328014,
+      "abs_error_to_berry": 0.009964576430818939
+    }
+  },
+  "metal": {
+    "sea_only": 2.447258952134689,
+    "compensating_boundary_pole": -2.7118356675032644,
+    "log_occupancy": -0.26457671536857524,
+    "occupied_berry_clean": -0.21918130285435536,
+    "sea_plus_boundary_residual": -1.6653345369377348e-16,
+    "warning": "Boundary pole is an exact algebraic diagnostic; no complete disordered Streda I vertex"
+  },
+  "spectral_control": {
+    "0.12": 0.010870989241790726,
+    "0.04": 0.0012334400817165033,
+    "0.015": 0.00017384571798823785
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "stage": "v38",
+  "science_status": "PARTIAL",
+  "files": {
+    "streda_clean_sea_v38.py": {
+      "sha256": "14cfeb53762e82ec4765496903b1d21b781f35819125414381e901b941a23e3c",
+      "size": 8280
+    },
+    "test_streda_clean_sea_v38.py": {
+      "sha256": "6da77cad392de4dafac534915d3ae3fb029142fc727ae1553eccb89f9212fd37",
+      "size": 3717
+    },
+    "test_streda_v38_frozen.py": {
+      "sha256": "8c1ea36323403b5d004027e9bc9cff0f756d2f97c95c4c3d01dacbbb2f5f6702",
+      "size": 1963
+    },
+    "reproduce_streda_v38.py": {
+      "sha256": "0052c2c0bebfbe5bcb4e263025ac89e1ee8024715279fe5bc76032993868e09a",
+      "size": 1398
+    },
+    "v38_frozen.json": {
+      "sha256": "5ac9852dd8638f0e511499ac9c7ad7d6abe6bf6fd0240e8777f69c92c7b7a56a",
+      "size": 1850
+    },
+    "V38_CLEAN_STREDA_AUDIT.md": {
+      "sha256": "d5afa11ac49a2971dd8edb0dd710ce20b19587bc1ac7d48f9465c4266b394e9b",
+      "size": 6103
+    }
+  }
+}
