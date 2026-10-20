@@ -1,18 +1,22 @@
 # Scientific acceptance (public core, 2026-10-20)
 
-**Overall: PARTIAL.** Software regression PASS verifies only the published files and numeric protocol, not every claim in Xiang et al., PRB 113 L201406 (2026).
+**Overall: PARTIAL.** Software regression PASS verifies only the published code and named numerical protocols, not every claim in Xiang et al., PRB 113 L201406 (2026).
 
 | Branch | Public capability | Scientific gate |
 | --- | --- | --- |
-| Spin Zeeman geometry | Direct eigenvectors vs analytic two-band `Z`, correct helicity and U(1) gauge tests | PASS two-band nondegenerate |
-| Four-band spin MNHE | `spin_multiband_v5.four_band_audit` computes SM Eqs.(16–19) currents and compares Eq.(29) in a periodic nondegenerate four-band model | PASS synthetic model; physical driven DC and degeneracy OPEN |
-| Tilted Dirac Fig.2 | Spectrum, local Z, formal Eq.(11) thermal-step, named printed SM Eq.(63) opposite-sign branch | PASS stated model definitions |
-| Fig.2(b) physical ordinate | Literal SI Eq.(11) about `2π` above published plateau in offline independent SI audits | OPEN |
-| Two-color Liouville | Generic finite-dimensional sequential resolvents, two orderings and separately defined thermal occupancy derivative | PASS method subset; no uniform-gauge/steady-state claim |
+| Spin Zeeman geometry | Direct eigenvectors versus analytic two-band response, helicity and U(1) gauge tests | PASS for stated nondegenerate model |
+| Four-band spin MNHE | SM Eqs. (16–19) density-matrix currents compared with Eq. (29) | PASS synthetic nondegenerate model; physical driven DC and degeneracy OPEN |
+| Tilted Dirac Fig. 2 | Spectrum, local Zeeman geometry, formal Eq. (11), literal SM Eq. (63) branch | PASS for stated model definitions |
+| Fig. 2(b) physical ordinate | Literal SI Eq. (11) remains about (2\pi) above the published plateau in independent audits | OPEN |
+| Two-color Liouville | Sequential resolvents, both orderings and separately defined equilibrium population derivative | PASS method subset; no general steady-state claim |
 | Steady-state static PHE | Collision operator, bath preparation, Ward/contact terms and order of limits | OPEN |
-| Orbital OHE | Classical one-band benchmark; exact T=0 Rashba two-ring and two-helicity analytic formulas | PASS these named models |
-| Orbital PHE (2D Bz) | `orbital_phe_v4.orbital_phe_eq56` tests literal SM Eq.(56) against finite-field semiclassical derivative | PASS model method; Eq.(56) sign difference OPEN |\n| Orbital MNHE (strict 2D and 3D) | `orbital_mnhe_v5.orbital_mnhe_2d/3d` tests SBC, Eq.(49) positional shift and literal Eq.(52) | PASS named model subset; Eq.(52) factor-two difference OPEN |\n| General orbital QMQ/BCQ | Full omitted three-band pieces and complete Kubo–Středa/Ward physical DC response are not yet remotely migrated | OPEN/offline only |
-| Magnetic symmetry | SM Table I 11 representative tensor nullspaces | PASS for stated generators |
-| Real Wannier materials | Need projected spin/orbital magnetic moment and Berry/position operators in a consistent gauge | BLOCKED |
+| Orbital OHE | Classical one-band and analytic T=0 Rashba Fermi-ring benchmarks | PASS for named models |
+| Orbital PHE (2D Bz) | Literal SM Eq. (56) compared with finite-field semiclassical derivative | PASS model method; printed-line sign difference OPEN |
+| Orbital MNHE (strict 2D and 3D) | SBC, Eq. (49) positional shift and literal Eq. (52) comparison | PASS named model subset; factor-two difference OPEN |
+| SCBA + ladder | Matched scalar-disorder self-energy and noncrossing Bethe-Salpeter vertex | PASS independent periodic model; not full PHE |
+| Four-channel spectral Kubo | (RA+AR-RR-AA), with channel-specific ladders | PASS symmetric finite-eta spectral sector; not full Kubo–Středa |
+| Finite-(q,omega) Ward | Matrix resolvent identity with exact finite-difference longitudinal insertion | PASS finite-eta resolvent identity; physical continuity remains OPEN |
+| General orbital QMQ/BCQ | General omitted three-band pieces and complete Kubo–Středa physical DC response | OPEN |
+| Real Wannier materials | Requires consistent projected magnetic/position operators, Berry connection and validated response protocol | BLOCKED |
 
-This concise matrix applies to **this GitHub core**. The original 30-round offline research archive contains additional programs/results and separate partial acceptances, but is not represented by the remote CI.
+This matrix applies only to the code in this GitHub repository. The original v30 research archive includes additional offline programs and results that are not represented by remote CI. In particular, a finite-eta resolvent Ward identity is not a proof of physical charge conservation at finite eta, and a symmetric spectral Kubo sector is not a complete Kubo–Středa calculation.
