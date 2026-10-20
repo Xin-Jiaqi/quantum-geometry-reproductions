@@ -28,3 +28,7 @@ jobs:
       - name: Reproduction JSON smoke
         working-directory: papers/xiang-2025-spin-quantum-geometry
         run: python scripts/reproduce.py > /tmp/xiang-paper-model.json
+
+      - name: Multiband PT finite-eta JSON smoke
+        working-directory: papers/xiang-2025-spin-quantum-geometry
+        run: python scripts/reproduce_methods_v30.py > /tmp/xiang-method-v30.json
