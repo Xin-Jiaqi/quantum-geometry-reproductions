@@ -18,9 +18,10 @@
 | Exact response downfolding | Schur/Feshbach response requires dressed vertices and additional remote/contact contributions | [Stage 7h](../../../studies/bsf-nmee-connection/docs/STAGE7H_RESPONSE_PRESERVING_SCHUR.md) |
 | Occupied-bundle mixed quantum geometry | Non-Abelian Wilson loop independently reproduces the gapped static Kubo response on synthetic valley patches | [Stage 7i](../../../studies/bsf-nmee-connection/docs/STAGE7I_GEOMETRY_DFT_BRIDGE.md) |
 | DFT/Wannier gauge gate | Under k- or spin-source-dependent orbital reembeddings, **correct physical overlaps and covariant source derivatives** are required; naive overlaps can create a spurious response sign flip | [Stage 7j](../../../studies/bsf-nmee-connection/docs/STAGE7J_WANNIER_GAUGE_PHYSICS.md) |
+| Literature candidate prescreen | 3R-WSe2 primary and 3R-MoS2 control for later structural/symmetry audit; **no DFT or real-material NMEE calculated** | [Stage 8a prescreen](../../../studies/bsf-nmee-connection/material-screening/STAGE8_CANDIDATE_PRESCREEN.md) |
 
 ## Maintenance contract
 
 **Each new research stage** with a validated theory or numerical mechanism gets (i) a standalone source/derivation under `studies/bsf-nmee-connection/`, (ii) a physics scope and independent evidence, (iii) separate regression/CI, and (iv) an update of this research index. No paper figure, original author formula, paper-test baseline, or release hash is altered to support an original-research claim.
 
-Current conclusions are conditional on a synthetic model. No DFT run, proven sliding ferroelectric energy landscape, or quantitative driven-DC equivalence is claimed.
+Current conclusions are conditional on a synthetic model. Stage 8a is literature-only candidate navigation; no DFT run or real-material NMEE prediction is claimed. The paper reproduction remains frozen and separate.
