@@ -1,0 +1,21 @@
+{
+  "local_k": 0.37,
+  "mu": 0.6,
+  "protocol": "adiabatic_L1_eta_L2_2eta_zero_frequency",
+  "pt_6band_bz48": {
+    "C_adiabatic": -0.029214294033338434,
+    "C_half_population_candidate": -0.029346009733854133,
+    "delta_printed_candidate": 0.0001317157005156913
+  },
+  "pt_6band_local": {
+    "A": 0.0003062945081532783,
+    "B": -2.0973674186297586e-14,
+    "C_adiabatic": -0.0019945363606316373,
+    "C_half_population_candidate": -0.0012326843477635345,
+    "delta_printed_candidate": -0.0007618520128681056,
+    "triple_norm": 0.002034903118411678
+  },
+  "source": "independent offline V19 validated 3-doublet model, recomputed NumPy V31",
+  "status": "PARTIAL",
+  "temperature": 0.32
+}

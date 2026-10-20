@@ -32,3 +32,6 @@ jobs:
       - name: Multiband PT finite-eta JSON smoke
         working-directory: papers/xiang-2025-spin-quantum-geometry
         run: python scripts/reproduce_methods_v30.py > /tmp/xiang-method-v30.json
+      - name: V31 PT Laurent JSON smoke
+        working-directory: papers/xiang-2025-spin-quantum-geometry
+        run: python scripts/reproduce_laurent_v31.py > /tmp/xiang-laurent-v31.json

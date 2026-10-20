@@ -43,3 +43,9 @@ python -m unittest discover -s tests -v
 ```
 
 See [`docs/METHODS_ACCEPTANCE_V30.md`](docs/METHODS_ACCEPTANCE_V30.md) for the exact protocol, comparison and exclusions.
+
+## V31 adiabatic Laurent projectors
+
+New methods/laurent_v31.py extracts eta^-2, eta^-1 and the scheme-specific eta^0 coefficient for arbitrary isolated spectral clusters, including exact PT doublets. methods/pt_synthetic_v31.py verifies a genuine three-doublet six-band model. The analytic dH/dk population check, finite-eta limiting residual, and source-program regulator counterfactual establish a **math-method gate only**. The coefficient C_adiabatic is **not** accepted as general physical intrinsic driven DC tau^0. See docs/LAURENT_ACCEPTANCE_V31.md.
+
+Run: python scripts/reproduce_laurent_v31.py; python -m unittest discover -s tests -v.
