@@ -1,0 +1,20 @@
+{
+  "material": "AgF2", "task": "bsf_igmc_stage4",
+  "reference": "Zhu et al. PRL 135, 056801 (2025), DOI 10.1103/dmzg-ck2t",
+  "stacking_convention": {
+    "B1": [0.5, -0.16], "B2": [0.5, 0.16],
+    "operator": "m_001", "layer_rotation": "m_001",
+    "coordinates": "fractional in-plane translation; not atomic coordinates"
+  },
+  "physics": {
+    "functional": null, "vdw": null, "hub_u_ag_ev": null,
+    "soc": true, "vacuum_axis": "z", "magnetic_axis": "x",
+    "magnetic_order": "type_I", "strain_percent": 0, "kmesh": null, "ecut_ev": null,
+    "pseudopotential_lock_sha256": null
+  },
+  "structures": {
+    "B1": {"poscar": null, "sha256": null},
+    "B2": {"poscar": null, "sha256": null}
+  },
+  "source_warning": "Fractional translations and layer group do not define full POSCAR. Populate all fields from authorized relaxed atomic coordinates and user-frozen DFT protocol; no guesses."
+}

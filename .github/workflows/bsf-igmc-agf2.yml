@@ -1,0 +1,29 @@
+name: BSF IGMC AgF2 symmetry and DFT-input gate
+
+on:
+  push:
+    paths:
+      - ".github/workflows/bsf-igmc-agf2.yml"
+      - "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc/agf2_preflight/**"
+  pull_request:
+    paths:
+      - ".github/workflows/bsf-igmc-agf2.yml"
+      - "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc/agf2_preflight/**"
+
+jobs:
+  symmetry-and-dft-input-preflight:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc/agf2_preflight
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exact finite-operation and fail-closed input gate tests
+        run: python -m unittest discover -s tests -v
+      - name: Verify source-constrained stage 4 physics gate is BLOCKED (not invented DFT)
+        run: |
+          python agf2_preflight.py --out /tmp/agf2_preflight.json > /tmp/preflight.log
+          python -c 'import json; x=json.load(open("/tmp/agf2_preflight.json")); assert x["dft_input_gate"]["status"]=="BLOCKED_INPUTS"; assert x["symmetry"]["switches"]["type_I"]["D_xx"]==-1; assert x["symmetry"]["switches"]["type_II_strained"]["D_xx"]==1'

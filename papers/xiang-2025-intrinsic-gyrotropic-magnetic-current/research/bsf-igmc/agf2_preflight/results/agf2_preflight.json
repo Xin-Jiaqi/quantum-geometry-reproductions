@@ -1,0 +1,69 @@
+{
+  "symmetry": {
+    "protocol": "real-phase spin-Zeeman IGMC; polar current <- axial AC B",
+    "axes": "x=[100], y=[010], z=[001], Cartesian",
+    "source_magnetic_point_group": "m'_x (published for AgF2 Type-I, x-axis SOC easy axis)",
+    "single_state_type_I": {
+      "C": {
+        "allowed_components": [
+          "xy",
+          "xz",
+          "yx",
+          "zx"
+        ],
+        "dimension": 4,
+        "xx_allowed": false,
+        "xy_allowed": true
+      },
+      "D": {
+        "allowed_components": [
+          "xx",
+          "yy",
+          "yz",
+          "zy",
+          "zz"
+        ],
+        "dimension": 5,
+        "xx_allowed": true,
+        "xy_allowed": false
+      }
+    },
+    "switches": {
+      "type_I": {
+        "connector": "m_z",
+        "C_xy": -1,
+        "D_xx": -1,
+        "AHE_xy": 1,
+        "P_z": -1
+      },
+      "type_II_strained": {
+        "connector": "m_z'",
+        "C_xy": -1,
+        "D_xx": 1,
+        "AHE_xy": -1,
+        "P_z": -1
+      }
+    },
+    "caveats": [
+      "Type-II single-state magnetic group and stable magnetization must be verified from SOC magnetic structure; parity uses literature connector only.",
+      "Allowed tensor element may vanish accidentally; conduction IGMC at T=0 vanishes for an insulator.",
+      "No Wannier spin/position operator provided; no quantitative real-material IGMC.",
+      "C/D antiunitary labels refer to declared real-phase model convention; complex causal response needs independent check."
+    ]
+  },
+  "dft_input_gate": {
+    "status": "BLOCKED_INPUTS",
+    "reasons": [
+      "MISSING_PHYSICS_functional",
+      "MISSING_PHYSICS_vdw",
+      "MISSING_PHYSICS_hub_u_ag_ev",
+      "MISSING_PHYSICS_kmesh",
+      "MISSING_PHYSICS_ecut_ev",
+      "MISSING_PHYSICS_pseudopotential_lock_sha256",
+      "MISSING_ATOMIC_STRUCTURE_B1",
+      "MISSING_ATOMIC_STRUCTURE_B2"
+    ],
+    "verified_structure_sha256": {},
+    "note": "This is an INPUT-PRECHECK only; passing does not verify physical geometry, magnetic order, relaxation or DFT convergence."
+  }
+}

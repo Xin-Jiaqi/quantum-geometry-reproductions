@@ -69,3 +69,7 @@ At this translation-identified nonpolar configuration, the AF-like `m_z` branch 
 OPENBLAS_NUM_THREADS=1 python scripts/audit_sliding_energy.py --mesh 13 --shell 3 --intervals 40 --outdir results
 OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
 ```
+
+## Stage 4: first real-material candidate, AgF₂ (source-grounded preflight)
+
+See [`agf2_preflight/`](agf2_preflight/) for the independent AgF₂ Type-I/strained Type-II magnetic-connector tensor predictions, the published BSF structural evidence and the **fail-closed DFT input gate**. This follow-up does **not** modify or promote the eight-band model's artificial energy surface to a ferroelectric double well, and no AgF₂ DFT/IGMC values have been computed.
