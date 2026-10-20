@@ -1,0 +1,27 @@
+name: BSF IGMC AgF2 stage6 harness contract
+
+on:
+  push:
+    paths:
+      - ".github/workflows/bsf-igmc-agf2-stage6.yml"
+      - "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc/agf2_preflight/stage6_harness/**"
+  pull_request:
+    paths:
+      - ".github/workflows/bsf-igmc-agf2-stage6.yml"
+      - "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc/agf2_preflight/stage6_harness/**"
+
+jobs:
+  validate-handoff:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/research/bsf-igmc/agf2_preflight
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate Stage-6 scientific handoff tests
+        run: python -m unittest discover -s stage6_harness/tests -v
+      - name: Report blocked-input baseline (not real DFT)
+        run: python stage6_harness/audit_receipt.py --receipt stage6_harness/stage6_receipt.template.json --out /tmp/agf2_stage6_example_audit.json

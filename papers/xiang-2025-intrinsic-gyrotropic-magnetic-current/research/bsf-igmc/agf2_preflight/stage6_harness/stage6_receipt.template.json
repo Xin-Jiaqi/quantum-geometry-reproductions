@@ -1,0 +1,65 @@
+{
+  "schema_version": "bsf_igmc_agf2_stage6_v1",
+  "data_origin": "NOT_RUN",
+  "campaign": {
+    "material": "AgF2",
+    "magnetic_branch": "type_I",
+    "strain_percent": 0,
+    "coordinate_system": "same Cartesian laboratory axes x=[100],y=[010],z=[001]",
+    "protocol_sha256": null,
+    "source_structure_url": null,
+    "source_structure_sha256": null,
+    "method_source_url": null,
+    "physics_approved_by_user": false,
+    "potcar_lock_sha256": null,
+    "functional": null,
+    "ag_hubbard_u_ev": null,
+    "vdw_method": null,
+    "soc": true
+  },
+  "states": {
+    "B1": {
+      "poscar_path": null,
+      "poscar_sha256": null,
+      "num_fu": null,
+      "relaxed_outcar_sha256": null,
+      "total_energy_ev": null,
+      "max_force_ev_per_ang": null,
+      "scf_converged": null,
+      "ionic_converged": null,
+      "magnetic_group_verified": false,
+      "magnetic_axis": null,
+      "direct_gap_ev": null,
+      "indirect_gap_ev": null,
+      "operators_gauge_validated": false,
+      "igmc": null
+    },
+    "B2": {
+      "poscar_path": null,
+      "poscar_sha256": null,
+      "num_fu": null,
+      "relaxed_outcar_sha256": null,
+      "total_energy_ev": null,
+      "max_force_ev_per_ang": null,
+      "scf_converged": null,
+      "ionic_converged": null,
+      "magnetic_group_verified": false,
+      "magnetic_axis": null,
+      "direct_gap_ev": null,
+      "indirect_gap_ev": null,
+      "operators_gauge_validated": false,
+      "igmc": null
+    }
+  },
+  "calculation_evidence": {
+    "software_and_version": null,
+    "kmesh_and_convergence_record": null,
+    "energy_cutoff_convergence_record": null,
+    "vacuum_convergence_record": null,
+    "magnetic_order_comparison_record": null,
+    "wannier_operator_audit_record": null,
+    "field_frequency_thz": null,
+    "zeeman_g_factor": null
+  },
+  "notes": "No structures, magnetic calculations, Wannier operators or AgF2 IGMC are included in this template. Do not replace nulls with guessed numbers."
+}
