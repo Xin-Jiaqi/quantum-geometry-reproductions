@@ -4,7 +4,8 @@ import unittest
 import numpy as np
 from bsf_nmee.sliding_tight_binding import SlidingBilayer, SlidingSpec
 from bsf_nmee.feshbach_response import (
-    reference_basis,feshbach,inserted_source,feshbach_static_at_k,\n    feshbach_on_shell_vertices)
+    reference_basis,feshbach,inserted_source,feshbach_static_at_k,
+    feshbach_on_shell_vertices)
 
 
 class Stage7HExactResponseTests(unittest.TestCase):
