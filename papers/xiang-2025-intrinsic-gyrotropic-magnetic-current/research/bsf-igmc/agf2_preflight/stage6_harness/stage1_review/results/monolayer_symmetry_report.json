@@ -1,0 +1,172 @@
+{
+  "structure": "C2DB 2AgF2-1 monolayer",
+  "poscar": "structures/C2DB_2AgF2-1_monolayer/POSCAR",
+  "spglib_symprec_0.0001": {
+    "number": 14,
+    "international": "P2_1/c",
+    "hall": "-P 2ybc",
+    "pointgroup": "2/m",
+    "n_operations": 4
+  },
+  "spglib_symprec_0.001": {
+    "number": 14,
+    "international": "P2_1/c",
+    "hall": "-P 2ybc",
+    "pointgroup": "2/m",
+    "n_operations": 4
+  },
+  "toolkit_layer_group": {
+    "number": 17,
+    "international_short": "p2_1/b11",
+    "international_full": "p 2_1/b 1 1",
+    "crystal_system": "monoclinic",
+    "point_group_hm": "2/m"
+  },
+  "toolkit_lg17_operation_count": 4,
+  "detected_vs_lg17_matches": {
+    "detected": 4,
+    "matched_to_lg17_after_single_global_transform": 4,
+    "S_basis_permutation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "origin_shift_delta_fractional": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "per_operation": [
+      {
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "detected_translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "registry_translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "match": true
+      },
+      {
+        "rotation": [
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "detected_translation": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "mapped_translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "registry_translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "match": true
+      },
+      {
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "detected_translation": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "mapped_translation": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "registry_translation": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "match": true
+      },
+      {
+        "rotation": [
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "detected_translation": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "mapped_translation": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "registry_translation": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "match": true
+      }
+    ],
+    "direct_atom_mapping_all_ops_exact": true,
+    "verdict": "CONSISTENT"
+  }
+}

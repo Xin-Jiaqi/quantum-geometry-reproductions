@@ -1,0 +1,1729 @@
+{
+  "monolayer": {
+    "spin_config": "collinear altermagnet, Ag(0,0)=+x, Ag(1/2,1/2)=-x, moments along [100]",
+    "spglib_magnetic_dataset": {
+      "msg_type": 3,
+      "uni_number": 86,
+      "hall_number": 81,
+      "n_operations": 4,
+      "time_reversals": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "rotations": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      ],
+      "translations": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999995060664,
+          0.0
+        ],
+        [
+          0.5,
+          0.49999999950606644,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.0
+        ]
+      ],
+      "equivalent_atoms": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "std_types": [
+        47,
+        47,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    "toolkit_magnetic_layer_group": {
+      "matches": [
+        {
+          "litvin_og_symbol_ascii": "p21'/b'11",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "2'/m'",
+          "parent_layer_group_symbol": "p2_1/b11",
+          "parent_layer_group_number": 17,
+          "bns_number": "14.79",
+          "og_number": "14.5.90"
+        }
+      ],
+      "selected": {
+        "litvin_og_symbol_ascii": "p21'/b'11",
+        "magnetic_type": "III",
+        "magnetic_point_group_symbol": "2'/m'",
+        "parent_layer_group_symbol": "p2_1/b11",
+        "parent_layer_group_number": 17,
+        "bns_number": "14.79",
+        "og_number": "14.5.90"
+      },
+      "note": "uni-number lookup is ambiguous when several magnetic layer groups share the same corresponding MSG uni number; selection is by the independently verified parent layer group."
+    },
+    "setting_correspondence": {
+      "global_origin_shift_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "note": "spglib magnetic dataset and toolkit standard setting agree directly (delta = 0); expected ops E, {-I|0}, {2_x|(1/2,1/2,0)}*T, {m_x|(1/2,1/2,0)}*T (p21'/b'11 standard setting)."
+    },
+    "expected": {
+      "c2db_msg": "P2_1'/c' (uni 86)",
+      "paper_sublattice_connectors": [
+        "{m_100|(1/2,1/2)}",
+        "{2_100|(1/2,1/2)}"
+      ],
+      "comment": "antiunitary mirror m'_100 present iff an op with R=diag(-1,1,1) has time_reversal=1"
+    },
+    "antiunitary_mirror_m100_present": true
+  },
+  "B1_typeI": {
+    "spin_config": "interlayer Neel vectors OPPOSITE (top images flip the bottom-layer sign; unitary m_001 connector flips in-plane S_x -> -S_x); moments along [100]",
+    "spglib_magnetic_dataset": {
+      "msg_type": 3,
+      "uni_number": 33,
+      "hall_number": 21,
+      "n_operations": 2,
+      "time_reversals": [
+        0,
+        1
+      ],
+      "rotations": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      ],
+      "translations": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.500000001297932,
+          0.5,
+          0.0
+        ]
+      ],
+      "equivalent_atoms": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        5,
+        4,
+        8,
+        9,
+        9,
+        8
+      ],
+      "std_types": [
+        47,
+        47,
+        47,
+        47,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    "toolkit_magnetic_layer_group": {
+      "matches": [
+        {
+          "litvin_og_symbol_ascii": "p11a'",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "m'",
+          "parent_layer_group_symbol": "p11a",
+          "parent_layer_group_number": 5,
+          "bns_number": "7.26",
+          "og_number": "7.3.34"
+        },
+        {
+          "litvin_og_symbol_ascii": "pb'11",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "m'",
+          "parent_layer_group_symbol": "pb11",
+          "parent_layer_group_number": 12,
+          "bns_number": "7.26",
+          "og_number": "7.3.34"
+        }
+      ],
+      "selected": {
+        "litvin_og_symbol_ascii": "pb'11",
+        "magnetic_type": "III",
+        "magnetic_point_group_symbol": "m'",
+        "parent_layer_group_symbol": "pb11",
+        "parent_layer_group_number": 12,
+        "bns_number": "7.26",
+        "og_number": "7.3.34"
+      },
+      "note": "uni-number lookup is ambiguous when several magnetic layer groups share the same corresponding MSG uni number; selection is by the independently verified parent layer group."
+    },
+    "internal_magnetic_point_group": "m' = {1, m'_100} (verified from the spglib magnetic op set; same for type-I and type-II)",
+    "external_connector_verdict": "see connector_B1_to_B2_* below (cross-state mapping; kept separate from the internal MPG verdict per review)",
+    "setting_correspondence": {
+      "global_origin_shift_delta": [
+        0.75,
+        0.0,
+        0.0
+      ],
+      "expected_op_set_toolkit_standard": {
+        "unitary": "{E|0}",
+        "antiunitary": "{m_x|(0,1/2,0)}*T  (mirror perp. a, b/2 glide)"
+      },
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation_after_global_delta": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "time_reversal": 0,
+          "expected_toolkit_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation_after_global_delta": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "time_reversal": 1,
+          "expected_toolkit_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "all_ops_match_after_global_delta": true,
+      "note": "the SAME single global origin shift reconciles the non-magnetic op set with the toolkit pb11 standard setting and the magnetic op set with the pb'11 standard setting."
+    },
+    "expected_internal_magnetic_point_group": "m' = {1, m'_100}"
+  },
+  "B1_typeII": {
+    "spin_config": "interlayer Neel vectors SAME (top images keep the bottom-layer sign; antiunitary m'_001 connector keeps in-plane S_x -> +S_x); moments along [100]",
+    "spglib_magnetic_dataset": {
+      "msg_type": 3,
+      "uni_number": 33,
+      "hall_number": 21,
+      "n_operations": 2,
+      "time_reversals": [
+        0,
+        1
+      ],
+      "rotations": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      ],
+      "translations": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.500000001297932,
+          0.5,
+          0.0
+        ]
+      ],
+      "equivalent_atoms": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        5,
+        4,
+        8,
+        9,
+        9,
+        8
+      ],
+      "std_types": [
+        47,
+        47,
+        47,
+        47,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    "toolkit_magnetic_layer_group": {
+      "matches": [
+        {
+          "litvin_og_symbol_ascii": "p11a'",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "m'",
+          "parent_layer_group_symbol": "p11a",
+          "parent_layer_group_number": 5,
+          "bns_number": "7.26",
+          "og_number": "7.3.34"
+        },
+        {
+          "litvin_og_symbol_ascii": "pb'11",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "m'",
+          "parent_layer_group_symbol": "pb11",
+          "parent_layer_group_number": 12,
+          "bns_number": "7.26",
+          "og_number": "7.3.34"
+        }
+      ],
+      "selected": {
+        "litvin_og_symbol_ascii": "pb'11",
+        "magnetic_type": "III",
+        "magnetic_point_group_symbol": "m'",
+        "parent_layer_group_symbol": "pb11",
+        "parent_layer_group_number": 12,
+        "bns_number": "7.26",
+        "og_number": "7.3.34"
+      },
+      "note": "uni-number lookup is ambiguous when several magnetic layer groups share the same corresponding MSG uni number; selection is by the independently verified parent layer group."
+    },
+    "internal_magnetic_point_group": "m' = {1, m'_100} (verified from the spglib magnetic op set; same for type-I and type-II)",
+    "external_connector_verdict": "see connector_B1_to_B2_* below (cross-state mapping; kept separate from the internal MPG verdict per review)",
+    "setting_correspondence": {
+      "global_origin_shift_delta": [
+        0.75,
+        0.0,
+        0.0
+      ],
+      "expected_op_set_toolkit_standard": {
+        "unitary": "{E|0}",
+        "antiunitary": "{m_x|(0,1/2,0)}*T  (mirror perp. a, b/2 glide)"
+      },
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation_after_global_delta": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "time_reversal": 0,
+          "expected_toolkit_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation_after_global_delta": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "time_reversal": 1,
+          "expected_toolkit_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "all_ops_match_after_global_delta": true,
+      "note": "the SAME single global origin shift reconciles the non-magnetic op set with the toolkit pb11 standard setting and the magnetic op set with the pb'11 standard setting."
+    },
+    "expected_internal_magnetic_point_group": "m' = {1, m'_100}"
+  },
+  "B2_typeI": {
+    "spin_config": "interlayer Neel vectors OPPOSITE (top images flip the bottom-layer sign; unitary m_001 connector flips in-plane S_x -> -S_x); moments along [100]",
+    "spglib_magnetic_dataset": {
+      "msg_type": 3,
+      "uni_number": 33,
+      "hall_number": 21,
+      "n_operations": 2,
+      "time_reversals": [
+        0,
+        1
+      ],
+      "rotations": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      ],
+      "translations": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.500000001297932,
+          0.5,
+          0.0
+        ]
+      ],
+      "equivalent_atoms": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        5,
+        4,
+        8,
+        9,
+        9,
+        8
+      ],
+      "std_types": [
+        47,
+        47,
+        47,
+        47,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    "toolkit_magnetic_layer_group": {
+      "matches": [
+        {
+          "litvin_og_symbol_ascii": "p11a'",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "m'",
+          "parent_layer_group_symbol": "p11a",
+          "parent_layer_group_number": 5,
+          "bns_number": "7.26",
+          "og_number": "7.3.34"
+        },
+        {
+          "litvin_og_symbol_ascii": "pb'11",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "m'",
+          "parent_layer_group_symbol": "pb11",
+          "parent_layer_group_number": 12,
+          "bns_number": "7.26",
+          "og_number": "7.3.34"
+        }
+      ],
+      "selected": {
+        "litvin_og_symbol_ascii": "pb'11",
+        "magnetic_type": "III",
+        "magnetic_point_group_symbol": "m'",
+        "parent_layer_group_symbol": "pb11",
+        "parent_layer_group_number": 12,
+        "bns_number": "7.26",
+        "og_number": "7.3.34"
+      },
+      "note": "uni-number lookup is ambiguous when several magnetic layer groups share the same corresponding MSG uni number; selection is by the independently verified parent layer group."
+    },
+    "internal_magnetic_point_group": "m' = {1, m'_100} (verified from the spglib magnetic op set; same for type-I and type-II)",
+    "external_connector_verdict": "see connector_B1_to_B2_* below (cross-state mapping; kept separate from the internal MPG verdict per review)",
+    "setting_correspondence": {
+      "global_origin_shift_delta": [
+        0.75,
+        0.0,
+        0.0
+      ],
+      "expected_op_set_toolkit_standard": {
+        "unitary": "{E|0}",
+        "antiunitary": "{m_x|(0,1/2,0)}*T  (mirror perp. a, b/2 glide)"
+      },
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation_after_global_delta": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "time_reversal": 0,
+          "expected_toolkit_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation_after_global_delta": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "time_reversal": 1,
+          "expected_toolkit_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "all_ops_match_after_global_delta": true,
+      "note": "the SAME single global origin shift reconciles the non-magnetic op set with the toolkit pb11 standard setting and the magnetic op set with the pb'11 standard setting."
+    },
+    "expected_internal_magnetic_point_group": "m' = {1, m'_100}"
+  },
+  "B2_typeII": {
+    "spin_config": "interlayer Neel vectors SAME (top images keep the bottom-layer sign; antiunitary m'_001 connector keeps in-plane S_x -> +S_x); moments along [100]",
+    "spglib_magnetic_dataset": {
+      "msg_type": 3,
+      "uni_number": 33,
+      "hall_number": 21,
+      "n_operations": 2,
+      "time_reversals": [
+        0,
+        1
+      ],
+      "rotations": [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      ],
+      "translations": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.500000001297932,
+          0.5,
+          0.0
+        ]
+      ],
+      "equivalent_atoms": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        5,
+        4,
+        8,
+        9,
+        9,
+        8
+      ],
+      "std_types": [
+        47,
+        47,
+        47,
+        47,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    "toolkit_magnetic_layer_group": {
+      "matches": [
+        {
+          "litvin_og_symbol_ascii": "p11a'",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "m'",
+          "parent_layer_group_symbol": "p11a",
+          "parent_layer_group_number": 5,
+          "bns_number": "7.26",
+          "og_number": "7.3.34"
+        },
+        {
+          "litvin_og_symbol_ascii": "pb'11",
+          "magnetic_type": "III",
+          "magnetic_point_group_symbol": "m'",
+          "parent_layer_group_symbol": "pb11",
+          "parent_layer_group_number": 12,
+          "bns_number": "7.26",
+          "og_number": "7.3.34"
+        }
+      ],
+      "selected": {
+        "litvin_og_symbol_ascii": "pb'11",
+        "magnetic_type": "III",
+        "magnetic_point_group_symbol": "m'",
+        "parent_layer_group_symbol": "pb11",
+        "parent_layer_group_number": 12,
+        "bns_number": "7.26",
+        "og_number": "7.3.34"
+      },
+      "note": "uni-number lookup is ambiguous when several magnetic layer groups share the same corresponding MSG uni number; selection is by the independently verified parent layer group."
+    },
+    "internal_magnetic_point_group": "m' = {1, m'_100} (verified from the spglib magnetic op set; same for type-I and type-II)",
+    "external_connector_verdict": "see connector_B1_to_B2_* below (cross-state mapping; kept separate from the internal MPG verdict per review)",
+    "setting_correspondence": {
+      "global_origin_shift_delta": [
+        0.75,
+        0.0,
+        0.0
+      ],
+      "expected_op_set_toolkit_standard": {
+        "unitary": "{E|0}",
+        "antiunitary": "{m_x|(0,1/2,0)}*T  (mirror perp. a, b/2 glide)"
+      },
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation_after_global_delta": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "time_reversal": 0,
+          "expected_toolkit_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation_after_global_delta": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "time_reversal": 1,
+          "expected_toolkit_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "all_ops_match_after_global_delta": true,
+      "note": "the SAME single global origin shift reconciles the non-magnetic op set with the toolkit pb11 standard setting and the magnetic op set with the pb'11 standard setting."
+    },
+    "expected_internal_magnetic_point_group": "m' = {1, m'_100}"
+  },
+  "connector_B1_to_B2_typeI_magnetic": {
+    "positions_match_mod_lattice": true,
+    "moment_mismatches": 0,
+    "connector": "m_001 (unitary, axial S_x -> -S_x)",
+    "spin_transform_rule": "m' = (-1)**tau * det(R) * R @ m  (axial vector, R=diag(1,1,-1))",
+    "per_atom": [
+      {
+        "b1_atom": 0,
+        "b1_position_frac": [
+          0.5,
+          0.5,
+          0.592233
+        ],
+        "b1_moment": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 2,
+        "b2_position_frac": [
+          1.0,
+          0.66,
+          0.407767
+        ],
+        "b2_moment": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.5,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 1,
+        "b1_position_frac": [
+          -0.0,
+          0.0,
+          0.592233
+        ],
+        "b1_moment": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 3,
+        "b2_position_frac": [
+          0.5,
+          0.16,
+          0.407767
+        ],
+        "b2_moment": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.5,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 2,
+        "b1_position_frac": [
+          1.0,
+          0.34,
+          0.407767
+        ],
+        "b1_moment": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 0,
+        "b2_position_frac": [
+          0.5,
+          0.5,
+          0.592233
+        ],
+        "b2_moment": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.5,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 3,
+        "b1_position_frac": [
+          0.5,
+          -0.16,
+          0.407767
+        ],
+        "b1_moment": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 1,
+        "b2_position_frac": [
+          -0.0,
+          0.0,
+          0.592233
+        ],
+        "b2_moment": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.5,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 4,
+        "b1_position_frac": [
+          0.105465,
+          0.313081,
+          0.555682
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 8,
+        "b2_position_frac": [
+          0.605465,
+          0.473081,
+          0.444318
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 5,
+        "b1_position_frac": [
+          0.605465,
+          0.186919,
+          0.628785
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 9,
+        "b2_position_frac": [
+          1.105465,
+          0.346919,
+          0.371215
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 6,
+        "b1_position_frac": [
+          0.894535,
+          0.686919,
+          0.628785
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 10,
+        "b2_position_frac": [
+          1.394535,
+          0.846919,
+          0.371215
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 7,
+        "b1_position_frac": [
+          0.394535,
+          0.813081,
+          0.555682
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 11,
+        "b2_position_frac": [
+          0.894535,
+          0.973081,
+          0.444318
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 8,
+        "b1_position_frac": [
+          0.605465,
+          0.153081,
+          0.444318
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 4,
+        "b2_position_frac": [
+          0.105465,
+          0.313081,
+          0.555682
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 9,
+        "b1_position_frac": [
+          1.105465,
+          0.026919,
+          0.371215
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 5,
+        "b2_position_frac": [
+          0.605465,
+          0.186919,
+          0.628785
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 10,
+        "b1_position_frac": [
+          1.394535,
+          0.526919,
+          0.371215
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 6,
+        "b2_position_frac": [
+          0.894535,
+          0.686919,
+          0.628785
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      },
+      {
+        "b1_atom": 11,
+        "b1_position_frac": [
+          0.894535,
+          0.653081,
+          0.444318
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 7,
+        "b2_position_frac": [
+          0.394535,
+          0.813081,
+          0.555682
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)}",
+        "match": true
+      }
+    ]
+  },
+  "connector_B1_to_B2_typeII_magnetic": {
+    "positions_match_mod_lattice": true,
+    "moment_mismatches": 0,
+    "connector": "m'_001 (antiunitary, axial S_x -> +S_x)",
+    "spin_transform_rule": "m' = (-1)**tau * det(R) * R @ m  (axial vector, R=diag(1,1,-1))",
+    "per_atom": [
+      {
+        "b1_atom": 0,
+        "b1_position_frac": [
+          0.5,
+          0.5,
+          0.592233
+        ],
+        "b1_moment": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 2,
+        "b2_position_frac": [
+          1.0,
+          0.66,
+          0.407767
+        ],
+        "b2_moment": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 1,
+        "b1_position_frac": [
+          -0.0,
+          0.0,
+          0.592233
+        ],
+        "b1_moment": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 3,
+        "b2_position_frac": [
+          0.5,
+          0.16,
+          0.407767
+        ],
+        "b2_moment": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 2,
+        "b1_position_frac": [
+          1.0,
+          0.34,
+          0.407767
+        ],
+        "b1_moment": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 0,
+        "b2_position_frac": [
+          0.5,
+          0.5,
+          0.592233
+        ],
+        "b2_moment": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          -0.5,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 3,
+        "b1_position_frac": [
+          0.5,
+          -0.16,
+          0.407767
+        ],
+        "b1_moment": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 1,
+        "b2_position_frac": [
+          -0.0,
+          0.0,
+          0.592233
+        ],
+        "b2_moment": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 4,
+        "b1_position_frac": [
+          0.105465,
+          0.313081,
+          0.555682
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 8,
+        "b2_position_frac": [
+          0.605465,
+          0.473081,
+          0.444318
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 5,
+        "b1_position_frac": [
+          0.605465,
+          0.186919,
+          0.628785
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 9,
+        "b2_position_frac": [
+          1.105465,
+          0.346919,
+          0.371215
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 6,
+        "b1_position_frac": [
+          0.894535,
+          0.686919,
+          0.628785
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 10,
+        "b2_position_frac": [
+          1.394535,
+          0.846919,
+          0.371215
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 7,
+        "b1_position_frac": [
+          0.394535,
+          0.813081,
+          0.555682
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 11,
+        "b2_position_frac": [
+          0.894535,
+          0.973081,
+          0.444318
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 8,
+        "b1_position_frac": [
+          0.605465,
+          0.153081,
+          0.444318
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 4,
+        "b2_position_frac": [
+          0.105465,
+          0.313081,
+          0.555682
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 9,
+        "b1_position_frac": [
+          1.105465,
+          0.026919,
+          0.371215
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 5,
+        "b2_position_frac": [
+          0.605465,
+          0.186919,
+          0.628785
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 10,
+        "b1_position_frac": [
+          1.394535,
+          0.526919,
+          0.371215
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 6,
+        "b2_position_frac": [
+          0.894535,
+          0.686919,
+          0.628785
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      },
+      {
+        "b1_atom": 11,
+        "b1_position_frac": [
+          0.894535,
+          0.653081,
+          0.444318
+        ],
+        "b1_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "b2_atom": 7,
+        "b2_position_frac": [
+          0.394535,
+          0.813081,
+          0.555682
+        ],
+        "b2_moment": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mapped_moment_axial": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "operation": "{m_001 | (0.5, 0.16)} * T",
+        "match": true
+      }
+    ]
+  },
+  "connector_summary": {
+    "operator": "{m_001 | (0.5,0.16)}",
+    "note": "rotational part m_001 (z-mirror about interlayer midplane); translational part t_o2 per SM Eq.(3); maps B1 structure onto B2 modulo lattice",
+    "spin_transform_rule": "m' = (-1)**tau * det(R) * (R @ m),  R=diag(1,1,-1),  det(R)=-1 (real spin = axial vector)",
+    "type_I": "interlayer Neel vectors OPPOSITE; connector m_001 UNITARY (axial S_x -> -S_x); paper: B1 and B2 with the type-I magnetic configuration are connected by N_s^- = {2_perp || m_001} (main text around Fig. 2(b)); switches k-space spin polarization, does NOT switch AHE",
+    "type_II": "interlayer Neel vectors SAME; connector m'_001 ANTIUNITARY (axial S_x -> +S_x); paper: switching AHE requires N_m^- = m'_001, i.e. the type-II configuration (main text around Fig. 2(c), 4% strain; SM: the magnetic atoms connected by N^- = m_001 have the same spin)",
+    "verification_separation": "internal magnetic point group m' = {1,m'_100} (same for both types, verified from the spglib magnetic op set) is reported separately from the external connector cross-state mapping verification (per-atom table above)"
+  }
+}

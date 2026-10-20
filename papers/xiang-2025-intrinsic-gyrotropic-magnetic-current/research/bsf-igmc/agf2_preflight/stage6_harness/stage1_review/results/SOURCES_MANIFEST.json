@@ -1,0 +1,98 @@
+{
+  "schema_version": "stage1_source_manifest_v2",
+  "description": "Declared SHA-256 registry of Zhu et al. PRL 135, 056801 (2025) sources used by the Stage-1 review. Copyrighted artifacts are private local archives (hashed for provenance, never redistributed in this repository). Only URLs, hashes, short protocol excerpts and archive notes are public.",
+  "download_date": "2026-10-20",
+  "note": "git-tracked content contains no publisher PDFs, TeX sources, original figures or full-text SM dumps; see sources/README.md.",
+  "files": [
+    {
+      "path": "zhu2025_prl_published.pdf",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/dmzg-ck2t",
+      "role": "PRL published paper (Zhu et al., PRL 135, 056801 (2025))",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 1150418,
+      "sha256": "9ed5820084379a21b30040a40bb8099bebc79b0ca6114a651ab552a3a3c0f94b"
+    },
+    {
+      "path": "zhu2025_prl_sm.pdf",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/dmzg-ck2t (Supplemental Material)",
+      "role": "PRL published Supplemental Material (SM Sec. 1-4)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 1112609,
+      "sha256": "37ff3366a198e81d78750ed1fe27b621d4af66fbc0632284e68b02ad6fbb6e21"
+    },
+    {
+      "path": "zhu2025_arxiv_v2.pdf",
+      "url": "https://arxiv.org/abs/2502.17095",
+      "role": "arXiv preprint v2 (full derivation text)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 2136002,
+      "sha256": "59c53499e5f38d95c9b18b3d99427f723298c2ae9c806998ce0162573fcaa1b3"
+    },
+    {
+      "path": "zhu2025_arxiv_v2.tar.gz",
+      "url": "https://arxiv.org/abs/2502.17095",
+      "role": "arXiv TeX source bundle (redistributed nowhere)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 1708120,
+      "sha256": "704aab4f6be8dbdaccdd0b4399266e0add4ec51407e15cb482814821e46c0668"
+    },
+    {
+      "path": "zhu2025_prl_sm.txt",
+      "url": null,
+      "role": "Full-text pdftotext extraction of the SM (private working copy only; short excerpts only in results/agf2_protocol_frozen.json)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 36429,
+      "sha256": "0072ec815ae32b9f7954882d4285d7b304e89e7588963cca5965c4efb34e643c"
+    },
+    {
+      "path": "zhu2025_src/main_text-clean.tex",
+      "url": null,
+      "role": "Extracted arXiv main text TeX (private working copy only)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 115588,
+      "sha256": "06a85e8d404468c4a94b374b20cfe80c367f3833c6f77b5a857fb79d4586430a"
+    },
+    {
+      "path": "zhu2025_src/Figure_1.png",
+      "url": null,
+      "role": "Original figure from arXiv bundle (private working copy only)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 354856,
+      "sha256": "d0ff9745cc46f9286b6920005db33d7d6176665f7a44f1e98a8b3bd48ef3c1e1"
+    },
+    {
+      "path": "zhu2025_src/Figure_2.png",
+      "url": null,
+      "role": "Original figure from arXiv bundle (private working copy only)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 716488,
+      "sha256": "7a4ca226e53383104df316371100d72b99331f53764b4caffded055944a1585c"
+    },
+    {
+      "path": "zhu2025_src/Figure_3.png",
+      "url": null,
+      "role": "Original figure from arXiv bundle (private working copy only)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 670668,
+      "sha256": "b1c88a7eab6b3e7324d19bc1df19d118bd2ba35723f35d713a804c1c1c1ef412"
+    },
+    {
+      "path": "zhu2025_src/00README.json",
+      "url": null,
+      "role": "arXiv bundle metadata (private working copy only)",
+      "availability": "private_local_only",
+      "local_archive": "sibling of the repository root (outside public staging; absolute local path NOT published)",
+      "size_bytes": 217,
+      "sha256": "1af751c0d3fb15e34022dfa0637a2b64dec2904def1726f7d1fb692511b192ea"
+    }
+  ]
+}

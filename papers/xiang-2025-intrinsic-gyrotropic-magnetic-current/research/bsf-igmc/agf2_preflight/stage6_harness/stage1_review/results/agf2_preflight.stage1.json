@@ -1,0 +1,65 @@
+{
+  "symmetry": {
+    "protocol": "real-phase spin-Zeeman IGMC; polar current <- axial AC B",
+    "axes": "x=[100], y=[010], z=[001], Cartesian",
+    "source_magnetic_point_group": "m'_x (published for AgF2 Type-I, x-axis SOC easy axis)",
+    "single_state_type_I": {
+      "C": {
+        "allowed_components": [
+          "xy",
+          "xz",
+          "yx",
+          "zx"
+        ],
+        "dimension": 4,
+        "xx_allowed": false,
+        "xy_allowed": true
+      },
+      "D": {
+        "allowed_components": [
+          "xx",
+          "yy",
+          "yz",
+          "zy",
+          "zz"
+        ],
+        "dimension": 5,
+        "xx_allowed": true,
+        "xy_allowed": false
+      }
+    },
+    "switches": {
+      "type_I": {
+        "connector": "m_z",
+        "C_xy": -1,
+        "D_xx": -1,
+        "AHE_xy": 1,
+        "P_z": -1
+      },
+      "type_II_strained": {
+        "connector": "m_z'",
+        "C_xy": -1,
+        "D_xx": 1,
+        "AHE_xy": -1,
+        "P_z": -1
+      }
+    },
+    "caveats": [
+      "Type-II single-state magnetic group and stable magnetization must be verified from SOC magnetic structure; parity uses literature connector only.",
+      "Allowed tensor element may vanish accidentally; conduction IGMC at T=0 vanishes for an insulator.",
+      "No Wannier spin/position operator provided; no quantitative real-material IGMC.",
+      "C/D antiunitary labels refer to declared real-phase model convention; complex causal response needs independent check."
+    ]
+  },
+  "dft_input_gate": {
+    "status": "BLOCKED_INPUTS",
+    "reasons": [
+      "MISSING_PHYSICS_pseudopotential_lock_sha256"
+    ],
+    "verified_structure_sha256": {
+      "B1": "b3c1b942df69b5442e52d0d38fe839b4b61feff3619b2adb4736faa82501c122",
+      "B2": "ab2f3d84af0a074079824b1f0b94d928d16609e889ac7b1ba3fd9a50e2c69087"
+    },
+    "note": "This is an INPUT-PRECHECK only; passing does not verify physical geometry, magnetic order, relaxation or DFT convergence."
+  }
+}

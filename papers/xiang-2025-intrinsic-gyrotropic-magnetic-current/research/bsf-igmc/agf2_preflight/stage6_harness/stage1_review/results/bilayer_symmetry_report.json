@@ -1,0 +1,495 @@
+{
+  "monolayer": {
+    "label": "C2DB 2AgF2-1 monolayer",
+    "poscar": "structures/C2DB_2AgF2-1_monolayer/POSCAR",
+    "natoms": 6,
+    "spglib": {
+      "number": 14,
+      "international": "P2_1/c",
+      "hall": "-P 2ybc",
+      "pointgroup": "2/m",
+      "n_operations": 4,
+      "wyckoffs": [
+        "d",
+        "d",
+        "e",
+        "e",
+        "e",
+        "e"
+      ],
+      "site_symmetry_symbols": [
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "equivalent_atoms": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "note": "spglib operations reported in the input (POSCAR) frame; hall symbol labels the conventional space-group type."
+    },
+    "expected_layer_group": {
+      "number": 17,
+      "international_short": "p2_1/b11",
+      "international_full": "p 2_1/b 1 1",
+      "point_group_hm": "2/m"
+    },
+    "expected_layer_group_operation_count": 4,
+    "setting_reconciliation": {
+      "method": "single global transform (S, delta) applied to ALL detected operations simultaneously; per-operation shifts rejected",
+      "S_basis_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "origin_shift_delta_fractional": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "matched_operations_after_global_shift": 4,
+      "detected_operations": 4,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "detected_translation": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "registry_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "registry_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "verdict": "CONSISTENT",
+      "cross_reference": "direct atom-mapping with the same delta in results/layer_groups_2d_report.json"
+    }
+  },
+  "B1": {
+    "label": "constructed B1 candidate",
+    "poscar": "structures/constructed_B1_candidate/POSCAR",
+    "natoms": 12,
+    "spglib": {
+      "number": 7,
+      "international": "Pc",
+      "hall": "P -2yc",
+      "pointgroup": "m",
+      "n_operations": 2,
+      "wyckoffs": [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "site_symmetry_symbols": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "equivalent_atoms": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        5,
+        4,
+        8,
+        9,
+        9,
+        8
+      ],
+      "note": "spglib operations reported in the input (POSCAR) frame; hall symbol labels the conventional space-group type."
+    },
+    "expected_layer_group": {
+      "number": 12,
+      "international_short": "pb11",
+      "international_full": "p b 1 1",
+      "point_group_hm": "m"
+    },
+    "expected_layer_group_operation_count": 2,
+    "setting_reconciliation": {
+      "method": "single global transform (S, delta) applied to ALL detected operations simultaneously; per-operation shifts rejected",
+      "S_basis_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "origin_shift_delta_fractional": [
+        0.75,
+        0.0,
+        0.0
+      ],
+      "matched_operations_after_global_shift": 2,
+      "detected_operations": 2,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "verdict": "CONSISTENT",
+      "cross_reference": "direct atom-mapping with the same delta in results/layer_groups_2d_report.json"
+    }
+  },
+  "B2": {
+    "label": "constructed B2 candidate",
+    "poscar": "structures/constructed_B2_candidate/POSCAR",
+    "natoms": 12,
+    "spglib": {
+      "number": 7,
+      "international": "Pc",
+      "hall": "P -2yc",
+      "pointgroup": "m",
+      "n_operations": 2,
+      "wyckoffs": [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "site_symmetry_symbols": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "equivalent_atoms": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        5,
+        4,
+        8,
+        9,
+        9,
+        8
+      ],
+      "note": "spglib operations reported in the input (POSCAR) frame; hall symbol labels the conventional space-group type."
+    },
+    "expected_layer_group": {
+      "number": 12,
+      "international_short": "pb11",
+      "international_full": "p b 1 1",
+      "point_group_hm": "m"
+    },
+    "expected_layer_group_operation_count": 2,
+    "setting_reconciliation": {
+      "method": "single global transform (S, delta) applied to ALL detected operations simultaneously; per-operation shifts rejected",
+      "S_basis_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "origin_shift_delta_fractional": [
+        0.75,
+        0.0,
+        0.0
+      ],
+      "matched_operations_after_global_shift": 2,
+      "detected_operations": 2,
+      "per_operation": [
+        {
+          "rotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        {
+          "rotation": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "detected_translation": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "mapped_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "registry_translation": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "match": true
+        }
+      ],
+      "verdict": "CONSISTENT",
+      "cross_reference": "direct atom-mapping with the same delta in results/layer_groups_2d_report.json"
+    }
+  }
+}

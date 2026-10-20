@@ -1,0 +1,65 @@
+{
+  "schema_version": "bsf_igmc_agf2_stage6_v1",
+  "data_origin": "NOT_RUN",
+  "campaign": {
+    "material": "AgF2",
+    "magnetic_branch": "type_I",
+    "strain_percent": 0,
+    "coordinate_system": "same Cartesian laboratory axes x=[100],y=[010],z=[001]",
+    "protocol_sha256": "2dbd5edc48aa30da1a494bd95ec81345456ea4099627cde6253df8fe240a3ddd",
+    "source_structure_url": "https://cmr.fysik.dtu.dk/c2db/ (C2DB entry UID 2AgF2-1, registry C2DB_all_data.csv row 4194, local dump project-cy/c2db.db system 4195)",
+    "source_structure_sha256": "3f4fc6b51b64a59dc1b7189623824600e5d89cc6976ef5f9334de802122f5caf",
+    "method_source_url": "https://journals.aps.org/prl/abstract/10.1103/dmzg-ck2t (Zhu et al., PRL 135, 056801 (2025))",
+    "physics_approved_by_user": false,
+    "potcar_lock_sha256": null,
+    "functional": "PBE",
+    "ag_hubbard_u_ev": 4.0,
+    "vdw_method": "DFT-D3 (Grimme 2010)",
+    "soc": true
+  },
+  "states": {
+    "B1": {
+      "poscar_path": "structures/constructed_B1_candidate/POSCAR",
+      "poscar_sha256": "b3c1b942df69b5442e52d0d38fe839b4b61feff3619b2adb4736faa82501c122",
+      "num_fu": 4,
+      "relaxed_outcar_sha256": null,
+      "total_energy_ev": null,
+      "max_force_ev_per_ang": null,
+      "scf_converged": null,
+      "ionic_converged": null,
+      "magnetic_group_verified": true,
+      "magnetic_axis": "x",
+      "direct_gap_ev": null,
+      "indirect_gap_ev": null,
+      "operators_gauge_validated": false,
+      "igmc": null
+    },
+    "B2": {
+      "poscar_path": "structures/constructed_B2_candidate/POSCAR",
+      "poscar_sha256": "ab2f3d84af0a074079824b1f0b94d928d16609e889ac7b1ba3fd9a50e2c69087",
+      "num_fu": 4,
+      "relaxed_outcar_sha256": null,
+      "total_energy_ev": null,
+      "max_force_ev_per_ang": null,
+      "scf_converged": null,
+      "ionic_converged": null,
+      "magnetic_group_verified": true,
+      "magnetic_axis": "x",
+      "direct_gap_ev": null,
+      "indirect_gap_ev": null,
+      "operators_gauge_validated": false,
+      "igmc": null
+    }
+  },
+  "calculation_evidence": {
+    "software_and_version": null,
+    "kmesh_and_convergence_record": null,
+    "energy_cutoff_convergence_record": null,
+    "vacuum_convergence_record": null,
+    "magnetic_order_comparison_record": null,
+    "wannier_operator_audit_record": null,
+    "field_frequency_thz": null,
+    "zeeman_g_factor": null
+  },
+  "notes": "Stage-1 literature/input review receipt (rev. 2026-10-20, per PR #8 review). data_origin=NOT_RUN: no DFT was executed. B1/B2 poscar files are CONSTRUCTED, UNRELAXED CANDIDATES built from the public C2DB monolayer (2AgF2-1, CC BY-SA 4.0) via the published stacking rule Ohat={m_001|(0.5,-0.16)}/(0.5,+0.16); they are NOT the authors' relaxed B1/B2 (PRL data-availability statement: not public); the user CONDITIONALLY accepted them as to-be-relaxed starting geometries only. magnetic_group_verified=true refers to the layer-group (LG12 pb11) and magnetic-point-group (m'={1,m'_100}) verification of the CONSTRUCTED INPUT candidates by spglib 2.5.0 and group-theory-operations-toolkit v0.18.0 (single-global-transform setting reconciliation, results/layer_groups_2d_report.json + magnetic_symmetry_report.json), NOT to a DFT-verified magnetic ground state. magnetic_axis='x' is the published easy axis [100] used as the input assumption. All DFT-derived fields (energies, forces, gaps, OUTCAR hashes) are null because no calculation was performed; they must never be replaced by guesses. protocol_sha256 is the SHA-256 of results/agf2_protocol_frozen.json; potcar_lock_sha256 is null because the PAW POTCAR version is not published in the SM and no VASP installation is available on this machine (checked via WSL: no vasp binary, no POTCAR files). Axial-vector spin transform fix (PR #8 second-round review, BLOCKER 1): real spin transforms as m' = (-1)**tau * det(R) * (R @ m); for the connector m_001 (R=diag(1,1,-1), det=-1) the unitary m_001 maps in-plane S_x -> -S_x and the antiunitary m'_001 maps S_x -> +S_x. Per the paper's definitions, type-I = interlayer Neel vectors OPPOSITE (unitary connector), type-II = Neel vectors SAME (antiunitary connector); the earlier draft had these two assignments inverted. 12/12-atom per-atom connector tables and an independent stdlib regression test (stage6_harness/tests/test_magnetic_connector_axial.py) pin the rule; the internal magnetic point group m' = {1, m'_100} holds for both types and is reported separately from the external cross-state connector verification. Git-history cleanup (BLOCKER 2): the branch was rewritten to a single clean commit based on main containing only the final reviewed files; older commits with copyrighted attachments are unreachable from the new branch and were purged from the local object store; GitHub-side removal of old PR-referenced blobs, if still reachable, requires the owner's sensitive-data takedown request (documented in the PR). Copyrighted sources (publisher/arXiv PDFs, TeX, figures, full SM text) are private local archives only (sources/README.md); the repository contains URLs, SHA-256 and short protocol excerpts. k-mesh/ISMEAR/MAGMOM/dipole and the 3.0 A interlayer gap are OPERATOR CHOICES to be approved and converged before production runs."
+}

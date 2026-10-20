@@ -1,0 +1,82 @@
+{
+  "schema_version": "stage1_structures_manifest_v1",
+  "generated": "2026-10-20",
+  "note": "Structure files are either the public C2DB monolayer (CC BY-SA 4.0) or clearly-labeled constructed unrelaxed candidates; none is the authors' relaxed B1/B2 (not public per PRL data-availability statement). This manifest itself is excluded from its own entries (self-referential hashes are not a fixed point); regeneration is byte-identical.",
+  "files": {
+    "results/SOURCES_MANIFEST.json": {
+      "sha256": "c20d02b1063791a60fa58fdfc422a779965eb7dfe923872fe1f87fa34e8aaf00",
+      "size_bytes": 4974,
+      "role": "analysis artifact"
+    },
+    "results/agf2_preflight.stage1.json": {
+      "sha256": "04fb471a665e7e27266cf5b30c18e830976c991c345c8081b9feb81fc7d4353c",
+      "size_bytes": 1988,
+      "role": "analysis artifact"
+    },
+    "results/agf2_protocol_frozen.json": {
+      "sha256": "2dbd5edc48aa30da1a494bd95ec81345456ea4099627cde6253df8fe240a3ddd",
+      "size_bytes": 2027,
+      "role": "analysis artifact"
+    },
+    "results/audit_receipt.stage1.json": {
+      "sha256": "3255ce53af4ea90f09af8477ac96fe2f6caae95363e1cd5a85f602e9194fae62",
+      "size_bytes": 1437,
+      "role": "analysis artifact"
+    },
+    "results/bilayer_symmetry_report.json": {
+      "sha256": "3e043bc308b8a579ecb68fc8b675c6bcd5de48ca9c073d765d1e35858a304822",
+      "size_bytes": 9574,
+      "role": "analysis artifact"
+    },
+    "results/layer_groups_2d_report.json": {
+      "sha256": "bcb3fbac5280e39342873465b6e8fd11f258874087375135b0c11c6952d3cc4d",
+      "size_bytes": 9605,
+      "role": "analysis artifact"
+    },
+    "results/magnetic_symmetry_report.json": {
+      "sha256": "34639030d534d271a6efa458f24fb88d777c214b7b8fecf2926dc98a121cb9f6",
+      "size_bytes": 36951,
+      "role": "analysis artifact"
+    },
+    "results/monolayer_symmetry_report.json": {
+      "sha256": "870d792d5c7ca3c9cd52a994ae074ac129408b10504ba7930b8755ad03f5041f",
+      "size_bytes": 2930,
+      "role": "analysis artifact"
+    },
+    "structures/C2DB_2AgF2-1_monolayer/AgF2_monolayer.cif": {
+      "sha256": "e55ffb7a8bd2747e91cd2a77d5d0ff72700a095a2fb2ecd086336f2a65360a6d",
+      "size_bytes": 610,
+      "role": "monolayer CIF (visualization)"
+    },
+    "structures/C2DB_2AgF2-1_monolayer/POSCAR": {
+      "sha256": "42468f68fc87912a365df505ab7e73952df88fab574be74c31bb077c0686fa7c",
+      "size_bytes": 571,
+      "role": "monolayer source (C2DB 2AgF2-1, CC BY-SA 4.0)"
+    },
+    "structures/C2DB_2AgF2-1_monolayer/provenance.json": {
+      "sha256": "ddc395462e1c04c668425d58469282d582794950636766f83a736f44aa23b6d3",
+      "size_bytes": 3387,
+      "role": "monolayer provenance"
+    },
+    "structures/constructed_B1_candidate/POSCAR": {
+      "sha256": "b3c1b942df69b5442e52d0d38fe839b4b61feff3619b2adb4736faa82501c122",
+      "size_bytes": 804,
+      "role": "B1 CONSTRUCTED CANDIDATE (unrelaxed)"
+    },
+    "structures/constructed_B1_candidate/provenance.json": {
+      "sha256": "a48dec9b782f4dd4ef06281dca79a2c16d6eab547ec0ba46ad4f811bca900b2a",
+      "size_bytes": 1653,
+      "role": "B1 provenance/construction record"
+    },
+    "structures/constructed_B2_candidate/POSCAR": {
+      "sha256": "ab2f3d84af0a074079824b1f0b94d928d16609e889ac7b1ba3fd9a50e2c69087",
+      "size_bytes": 803,
+      "role": "B2 CONSTRUCTED CANDIDATE (unrelaxed)"
+    },
+    "structures/constructed_B2_candidate/provenance.json": {
+      "sha256": "666865e2d5bc9f4340482bb2cc364c96e4e267ea13b936fea2769a0ab2bce34e",
+      "size_bytes": 1651,
+      "role": "B2 provenance/construction record"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "BLOCKED_SOURCE_PROTOCOL",
+  "data_origin": "NOT_RUN",
+  "issues": [
+    "SOURCE_OR_PROTOCOL_LOCK_MISSING_potcar_lock_sha256",
+    "SCIENCE_INPUT_NOT_USER_APPROVED",
+    "DFT_EVIDENCE_MISSING_software_and_version",
+    "DFT_EVIDENCE_MISSING_kmesh_and_convergence_record",
+    "DFT_EVIDENCE_MISSING_energy_cutoff_convergence_record",
+    "DFT_EVIDENCE_MISSING_vacuum_convergence_record",
+    "DFT_EVIDENCE_MISSING_magnetic_order_comparison_record"
+  ],
+  "state_checks": {
+    "B1": {
+      "missing_or_unverified": [
+        "MISSING_RELAXED_OUTCAR_SHA256",
+        "MISSING_TOTAL_ENERGY_EV",
+        "MISSING_MAX_FORCE_EV_PER_ANG",
+        "DFT_CONVERGENCE_NOT_CONFIRMED",
+        "INSULATING_DIRECT_GAP_NOT_VERIFIED",
+        "INSULATING_INDIRECT_GAP_NOT_VERIFIED"
+      ]
+    },
+    "B2": {
+      "missing_or_unverified": [
+        "MISSING_RELAXED_OUTCAR_SHA256",
+        "MISSING_TOTAL_ENERGY_EV",
+        "MISSING_MAX_FORCE_EV_PER_ANG",
+        "DFT_CONVERGENCE_NOT_CONFIRMED",
+        "INSULATING_DIRECT_GAP_NOT_VERIFIED",
+        "INSULATING_INDIRECT_GAP_NOT_VERIFIED"
+      ]
+    }
+  },
+  "delta_E_B2_minus_B1_meV_per_fu": null,
+  "symmetry_parity_diagnostic": {},
+  "notes": [
+    "No real DFT provenance asserted. Never count this as a material calculation.",
+    "No response result here is independently authenticated: scientific review of real OUTCAR, magnetic symmetry and Wannier gauge is mandatory."
+  ]
+}
