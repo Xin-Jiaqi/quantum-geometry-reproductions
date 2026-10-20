@@ -4,13 +4,13 @@
 | --- | --- | --- | --- |
 | Jia 2026 PRL NMEE | `papers/jia-2026-nonlin-magnetoelectric-edelstein` | `scripts/verify_release.py` | PARTIAL |
 | Xiang 2025 PRL IGMC | `papers/xiang-2025-intrinsic-gyrotropic-magnetic-current` | `scripts/verify_round9.py` | PARTIAL |
-| Xiang, Jin & Wang 2025 PRL spin quantum geometry | `papers/xiang-2025-spin-quantum-geometry` | 32 tests incl. V30 multi-band finite-eta and PT projectors, Python 3.11/3.12 CI, JSON smoke | PARTIAL; curated Dirac/SM subset; metal driven DC and paper absolute factors OPEN |
+| Xiang, Jin & Wang 2025 PRL spin quantum geometry | `papers/xiang-2025-spin-quantum-geometry` | 46 tests incl. V30 finite-eta/PT and V31 3-doublet Laurent, Python 3.11/3.12 CI, JSON smoke | PARTIAL; curated Dirac/SM subset; metal driven DC and paper absolute factors OPEN |
 | Xiang 2026 PRB magnetotransport | `papers/xiang-2026-quantum-geometric-map` | `scripts/verify_release.py` | PARTIAL; GitHub **curated core + migrated nondegenerate spin/orbital method subset** |
 
 For the PRB, the complete 30-round original **offline** v30 checkpoint is separate from the independently readable/callable core published in this repository. It includes additional model branches, scans, plots, and scientific logs; those are **not** claimed to have been uploaded here. The core implements selected independently checked methods and leaves absent advanced interfaces explicitly unimplemented.
 
 Open physics:
-- Spin QGT PRL 135: Fig.1(a) ~2× axis, SM Eq.55/56 and SM Eq.69/70 algebra, finite-eta DC interpretation; original multiband/PT methods remain offline for later migration.
+- Spin QGT PRL 135: Fig.1(a) ~2× axis, SM Eq.55/56 and SM Eq.69/70 algebra, finite-eta DC interpretation; selected finite-eta/PT/Laurent methods are public, but original V14 four-source audit and full V17–V19 non-Abelian differential derivations remain offline.
 - NMEE: static-versus-driven density-matrix response and CuMnAs PT-degenerate DC.
 - IGMC: source Fig.2(d) normalization and response convention.
 - PRB: Eq.(11) vs Fig.2(b) ~2π SI amplitude, physical steady-state PHE collision protocol, SM Eq.(52)/(56) internal algebra, multiband orbital response and Rashba QMQ attribution.
@@ -64,3 +64,7 @@ In the PRB quantum-geometric-map module, the noncrossing four-Pauli-basis curren
 ## 2026-10-20: v40b independent RR spatial Ward
 
 Added independent uniform-vector-potential finite-difference tests of the RR SCBA current ladder in both x and y, checking \(\partial_A\Sigma^R=C^{RR}\) and \(\partial_A G^R=G^R\Gamma^{RR}G^R\). Four new tests were added. This is separate from the v40 RA current response and does not constitute physical Hall transport. Full disordered Kubo–Středa and original two-field EB DC remain OPEN.
+
+## 2026-10-20 Xiang 2025 V31 Laurent
+
+Migrated the **adiabatic finite-eta** Laurent decomposition A/eta^2+B/eta+C using isolated-energy-cluster projectors, including exact PT three-doublet six-band benchmarks and independent dH/dk population-gradient identity. Original offline V19 nonzero extra term is preserved and frozen. A controlled counterfactual outer regulator ratio shows the constant C depends on the specified adiabatic protocol, so **C is not claimed to be a general intrinsic driven-DC tau^0 coefficient**. PR #13 merged after 46/46 tests succeeded on Python 3.11 and 3.12. SM Eq.(2) four-source migration and full physical DC limit are still open.
