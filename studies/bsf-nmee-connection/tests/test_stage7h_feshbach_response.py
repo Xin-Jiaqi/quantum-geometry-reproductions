@@ -4,7 +4,7 @@ import unittest
 import numpy as np
 from bsf_nmee.sliding_tight_binding import SlidingBilayer, SlidingSpec
 from bsf_nmee.feshbach_response import (
-    reference_basis,feshbach,inserted_source,feshbach_static_at_k)
+    reference_basis,feshbach,inserted_source,feshbach_static_at_k,\n    feshbach_on_shell_vertices)
 
 
 class Stage7HExactResponseTests(unittest.TestCase):
@@ -51,6 +51,20 @@ class Stage7HExactResponseTests(unittest.TestCase):
         self.assertLess(res['gamma_missing_contacts'],0)
         self.assertGreater(abs(res['gamma_missing_contacts']),
                            abs(res['gamma_feshbach_exact']))
+
+    def test_on_shell_metric_and_dressed_spin_velocity(self):
+        for t in (.005,.020):
+            spec=replace(SlidingSpec(),shift=(.4*.23,.4*.41),
+                         tunneling_eV=t)
+            g=SlidingBilayer(spec).model().reciprocal
+            k=np.array([1/3,2/3])@g+np.array([.05,.02])
+            res=feshbach_on_shell_vertices(spec,k)
+            self.assertLess(max(abs(x-1) for x in
+                                res['metric_normalization']),1e-9)
+            self.assertLess(max(res['Q_amplitude_reconstruction_error']),1e-9)
+            for row in res['vertices'].values():
+                self.assertLess(row['dressed_error'],1e-9)
+                self.assertGreater(row['bare_error'],1e-4)
 
     def test_contour_converges_and_field_step_sign_is_stable(self):
         spec=replace(SlidingSpec(),shift=(.4*.23,.41*.4),
