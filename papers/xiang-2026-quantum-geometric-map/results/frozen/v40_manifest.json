@@ -1,0 +1,41 @@
+{
+  "schema": "qgmap-v40-provenance-1",
+  "scientific_status": "PARTIAL",
+  "files": {
+    "src/qgmap/current_vertex_v40.py": {
+      "sha256": "3cae1b42ee2d36f627333efe529f00793cf3bf4521c0c5b6c870d6fb6e39af1b",
+      "git_blob_sha1": "e6a3a0188fc6f13ff54d34c4086f1641be871b72",
+      "bytes": 8415
+    },
+    "tests/test_current_vertex_v40.py": {
+      "sha256": "f5c91aa296799ba348a6b8999ae4a7bd6ea30435b2a6423771c475350933f8d5",
+      "git_blob_sha1": "79bdb272ac68fc752056806d8ddfa873af308f08",
+      "bytes": 4878
+    },
+    "tests/test_v40_frozen.py": {
+      "sha256": "dbb94e98beb565892f6a8b2a3ace2502a24560c1846111742d7d1e6da1794911",
+      "git_blob_sha1": "9d38fbd4c6546407d7a2a4441766cb0fee5a3fc4",
+      "bytes": 1552
+    },
+    "tests/test_v40_cli.py": {
+      "sha256": "4f3b59d6befa2d540a79c65449d4ebb8bc602fc12dfe6e626a93dcafba6a0ea4",
+      "git_blob_sha1": "fc5db50224e47ff124fdb6ee2d1a471dd2388bab",
+      "bytes": 836
+    },
+    "scripts/reproduce_current_vertex_v40.py": {
+      "sha256": "4722fe64faa79787068649af86eae3913b219d2206002aacf35a26a19c564e03",
+      "git_blob_sha1": "4e42bbe04edf3d2ea51f7473fca68cbc7c7b0412",
+      "bytes": 1601
+    },
+    "results/frozen/v40_reference.json": {
+      "sha256": "e74a7147e06ae9ef915a6c3892b4fabc446cc1a5ea0181035a701f02c3bd5fa3",
+      "git_blob_sha1": "4d10acf6cfd64dec4e3cd457d02985e046ae0302",
+      "bytes": 4563
+    },
+    "docs/CURRENT_VERTEX_V40.md": {
+      "sha256": "466ce98b3102d6bb00a60aa43de57ed0d31375515161b40dda4bf4aab6b0db6d",
+      "git_blob_sha1": "2af12f4ec5fc06c9ba53b2db142304451845734b",
+      "bytes": 5168
+    }
+  }
+}

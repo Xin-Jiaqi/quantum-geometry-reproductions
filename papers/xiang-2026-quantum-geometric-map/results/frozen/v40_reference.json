@@ -1,0 +1,155 @@
+{
+  "schema": "qgmap-v40-model-1",
+  "science_status": "PARTIAL",
+  "validation_scope": "separate SCBA ladder channels + finite-torus bare RA",
+  "SCBA": {
+    "protocol": "noncrossing_QWZ_current_ladder_four_channel_Hall_zero_control",
+    "mesh": 21,
+    "mass": -1.0,
+    "W": 0.12,
+    "energy": 1.1,
+    "eta": 0.12,
+    "offset": [
+      0.0,
+      0.0
+    ],
+    "selfenergy_residual": 1.7312112899864051e-12,
+    "selfenergy_iterations": 24,
+    "max_bethe_salpeter_residual": 6.973502068242161e-17,
+    "max_linear_condition": 1.7263091101761556,
+    "current_correction_norms": {
+      "ra": {
+        "x": 0.10843855375004059,
+        "y": 0.10843855375004051
+      },
+      "ar": {
+        "x": 0.10843855375004055,
+        "y": 0.10843855375004055
+      },
+      "rr": {
+        "x": 0.00038219371206346154,
+        "y": 0.0003821937120634621
+      },
+      "aa": {
+        "x": 0.0003821937120634624,
+        "y": 0.0003821937120634628
+      }
+    },
+    "channel_bubbles": {
+      "ra": {
+        "xy": {
+          "real": -1.4310682340406244,
+          "imag": -1.787433894521227e-17
+        },
+        "yx": {
+          "real": 1.4310682340406247,
+          "imag": -1.969953552764592e-17
+        },
+        "bare_xy": {
+          "real": -1.2788621328465257,
+          "imag": 1.564791380370916e-17
+        },
+        "bare_yx": {
+          "real": 1.2788621328465257,
+          "imag": -4.799008255536746e-18
+        }
+      },
+      "ar": {
+        "xy": {
+          "real": 1.4310682340406247,
+          "imag": -6.970362810500913e-18
+        },
+        "yx": {
+          "real": -1.4310682340406247,
+          "imag": -1.0691561015203995e-17
+        },
+        "bare_xy": {
+          "real": 1.2788621328465257,
+          "imag": 8.88209888606719e-18
+        },
+        "bare_yx": {
+          "real": -1.2788621328465257,
+          "imag": -2.2476666534538495e-17
+        }
+      },
+      "rr": {
+        "xy": {
+          "real": -5.035025054989372e-19,
+          "imag": -1.7119085186963865e-17
+        },
+        "yx": {
+          "real": 0.0,
+          "imag": -8.056040087982996e-18
+        },
+        "bare_xy": {
+          "real": 1.460157265946918e-17,
+          "imag": -9.06304509898087e-18
+        },
+        "bare_yx": {
+          "real": 1.460157265946918e-17,
+          "imag": -1.409807015397024e-17
+        }
+      },
+      "aa": {
+        "xy": {
+          "real": 1.3091065142972368e-17,
+          "imag": 1.1077055120976619e-17
+        },
+        "yx": {
+          "real": 2.4168120263948988e-17,
+          "imag": 3.0210150329936235e-17
+        },
+        "bare_xy": {
+          "real": 1.0070050109978744e-18,
+          "imag": -3.0210150329936235e-18
+        },
+        "bare_yx": {
+          "real": 3.52451753849256e-17,
+          "imag": 2.5175125274946862e-17
+        }
+      }
+    },
+    "ra_antisymmetric_dressed": -1.4310682340406244,
+    "ra_antisymmetric_bare": -1.2788621328465257,
+    "ra_vertex_effect": -0.15220610119409872,
+    "four_channel_spectral_xy": {
+      "real": 5.2364260571889464e-17,
+      "imag": -4.7006679224314845e-18
+    },
+    "four_channel_spectral_yx": {
+      "real": -6.042030065987247e-18,
+      "imag": -1.313630169620079e-17
+    },
+    "four_channel_hall_antisym_abs": 2.9506163352939e-17,
+    "bare_spectral_hall_antisym_abs": 2.0029851082714805e-17,
+    "ra_density_ward_residual": 1.2793544001965532e-11,
+    "ra_density_vertex_norm": 2.1554626448416627,
+    "warnings": [
+      "RA antisymmetric bubble is NOT a physical Hall conductivity",
+      "four-channel spectral combination is symmetric in current indices",
+      "RR current Ward uses periodic momentum covariance and momentum-independent Sigma",
+      "full disorder Hall Streda/Bastin and original nonlinear EB DC remain OPEN"
+    ]
+  },
+  "finite_torus": {
+    "protocol": "finite_torus_exact_disorder_bare_RA_antisymmetric_bubble_only",
+    "L": 4,
+    "mass": -1.0,
+    "W": 0.12,
+    "mu": 1.1,
+    "eta": 0.12,
+    "seeds": 6,
+    "mean": -2.012197218233685,
+    "standard_deviation": 0.45349628030635386,
+    "samples": [
+      -1.8406736806886252,
+      -2.0333802520945445,
+      -2.6236007972981286,
+      -1.1651534575647458,
+      -2.06681090286499,
+      -2.3435642188910744
+    ],
+    "caveat": "W=0 agrees with same-mesh clean QWZ; W>0 finite ensembles are not SCBA and do not include a transport current vertex"
+  },
+  "physical_caveat": "The antisymmetric RA correlator is not Hall conductivity; the 4-channel symmetric spectral sum cannot replace Kubo-Streda/Bastin Fermi-sea and surface terms."
+}
