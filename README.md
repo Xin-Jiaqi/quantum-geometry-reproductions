@@ -8,6 +8,7 @@ Independent, **paper-by-paper** reproductions of quantum geometry and magnetotra
 | --- | --- | --- |
 | [Jia et al., PRL **136**, 226302 (2026): NMEE](papers/jia-2026-nonlin-magnetoelectric-edelstein/) | Kane–Mele/CuMnAs, spin response, printed vs full-static expressions, non-Abelian diagnostics, Wannier input preflight | **PARTIAL:** equilibrium vs driven DC remains open |
 | [Xiang et al., PRL **134**, 116301 (2025): IGMC](papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/) | Rashba/Dirac, Zeeman geometry, finite-frequency response, 122 magnetic point groups | **PARTIAL:** Fig. 2(d) amplitude and some conventions remain open |
+| [Xiang, Jin & Wang, PRL **135**, 146303 (2025): Spin Transport Revealed by Spin Quantum Geometry](papers/xiang-2025-spin-quantum-geometry/) | Two-valley Dirac NDSC, spin-QGT, printed vs independent SM integrals, reproducible paper-model JSON | **PARTIAL:** Fig. 1(a) absolute factor, metallic DC protocol and SM algebra remain open; initial curated core only |
 | [Xiang et al., PRB **113**, L201406 (2026): Quantum Geometric Map of Magnetotransport](papers/xiang-2026-quantum-geometric-map/) | Dirac/Rashba, Liouville, spin/orbital responses, SCBA + ladder, four-channel spectral Kubo, finite-(q, omega) resolvent Ward | **PARTIAL:** full Kubo-Streda, physical dc continuity and real-material multiband acceptance remain open; this is a curated subset of the v30 archive |
 
 The two Xiang papers are **different physics**: 2025 IGMC concerns magnetic-field-driven gyrotropic AC current; 2026 PRB concerns spin/orbital magnetotransport under electric and magnetic perturbations. Do not merge them simply because they share authors and quantum geometry terminology.
@@ -17,6 +18,7 @@ The two Xiang papers are **different physics**: 2025 IGMC concerns magnetic-fiel
 ```text
 papers/
   jia-2026-nonlin-magnetoelectric-edelstein/         # NMEE, existing frozen module
+  xiang-2025-spin-quantum-geometry/                    # Xiang PRL 135 (2025), curated Dirac paper core
   xiang-2025-intrinsic-gyrotropic-magnetic-current/   # IGMC, existing frozen module
   xiang-2026-quantum-geometric-map/                   # PRB magnetotransport, independent
 studies/                                               # Cross-paper research
@@ -43,6 +45,14 @@ python scripts/verify_round9.py
 cd papers/xiang-2026-quantum-geometric-map
 python -m pip install -e .
 python scripts/verify_release.py
+```
+
+
+```bash
+cd papers/xiang-2025-spin-quantum-geometry
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python scripts/reproduce.py
 ```
 
 See each module's README and [PRB physical integration contract](papers/xiang-2026-quantum-geometric-map/docs/INTEGRATION.md). The published PRB core uses its own import namespace `qgmap` and never modifies NMEE or IGMC frozen benchmarks.
