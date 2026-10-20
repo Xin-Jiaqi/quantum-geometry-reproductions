@@ -94,6 +94,12 @@ class Stage8GAutonomousHpcTests(unittest.TestCase):
                 self.assertEqual(b["pbs_ids"],again["pbs_ids"])
                 self.assertEqual(mock.call_count,3)
             self.assertEqual(len(json.loads((dest/"pbs_ids.json").read_text())),3)
+            with patch.object(onsite.subprocess,"run",
+                return_value=subprocess.CompletedProcess(["qstat"],0,
+                    stdout="    job_state = R\n",stderr="")):
+                status=onsite.scheduler_status(dest)
+                self.assertEqual([r["scheduler_state"] for r in status["rows"]],
+                                 ["R","R","R"])
 
     def test_source_sha_and_separate_material_provenance(self):
         lat,pos=prepare.source_atoms()
