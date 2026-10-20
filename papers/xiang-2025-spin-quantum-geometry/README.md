@@ -10,7 +10,7 @@ python -m unittest discover -s tests -v
 python scripts/reproduce.py
 ```
 
-This GitHub directory is a **curated V28 paper-model core**. The complete V1–V27 offline archive (including independent multiband, non-Abelian Liouville, original published-vector extraction and 54 targeted V25–V27 candidate tests) is deliberately **not claimed to be uploaded here**. Full on-paper scientific status remains **PARTIAL**; software CI success does not imply article reproduction.
+This GitHub directory is a **curated V30 paper-model plus method subset**. The complete V1–V27 offline archive (including original published-vector extraction, all 54 V25–V27 candidate tests and advanced V14–V19 derivations) is **not claimed to be uploaded here**. Full on-paper scientific status remains **PARTIAL**; software CI success does not imply article reproduction.
 
 ## What is independently executable here
 
@@ -23,7 +23,7 @@ This GitHub directory is a **curated V28 paper-model core**. The complete V1–V
 
 - Reduced Eq. (13) does **not** establish a general intrinsic τ^0 solver: its omitted four-band channels and source DC protocol remain open.
 - Paper's uniquely specified **metallic driven-DC intrinsic** `tau^0` response (the static density-matrix branch is not a substitute).
-- Spinful multiband/`PT` degeneracy solver and generic finite-`eta` Liouville tools: these exist in the offline V27 package but are **not part of this first remote curated core**.
+- The V30 **generic finite-η multiband resolvent** and **PT rank-two projector method** are now published in `methods/`. This is a narrowly scoped finite-η method migration, not the full offline band-covariant V14–V19 solver, and not the paper's general intrinsic τ⁰ response.
 - MnBi₂Te₄ DFT/Wannier material calculations (out of scope by project decision).
 - Stacking, intercalation, and group-theory toolkit integration (deferred to an independent `studies/` module after paper model acceptance).
 
@@ -32,3 +32,14 @@ Scientific discrepancies and limitations are explicitly recorded in `docs/ACCEPT
 ## V29 Eq. (13) migration
 
 `paper_eq13.py` retains the reduced printed two-band implementation from the frozen offline V27 project, with independent Bloch-matrix element checks (`kernel_matrix_at_k`). `python scripts/reproduce.py` now prints `fig1a.intrinsic_eq13_reduced_mu_scan` at four chemical potentials; `results/REFERENCE_V29.json` freezes separate Fermi-sea and Fermi-surface branches. No ad hoc factor has been added to reconcile Fig. 1(a) with the published ordinate.
+
+## V30 multiband and PT finite-η method interface
+
+`methods/finite_eta.py` accepts any smooth Hermitian Bloch Hamiltonian `H(kx,ky)` and a same-basis Hermitian observable; it computes the finite-η full second-order density-matrix response with independent band and orbital Liouville inversions. `methods/pt_doublet.py` supplies a synthetic exactly-PT four-band benchmark with projector inversion, U(2) gauge rotations and an independently frozen V16 staggered-spin point. The solver does **not** drop divergent finite-η Drude contributions to imply a verified intrinsic τ⁰ response.
+
+```bash
+python scripts/reproduce_methods_v30.py
+python -m unittest discover -s tests -v
+```
+
+See [`docs/METHODS_ACCEPTANCE_V30.md`](docs/METHODS_ACCEPTANCE_V30.md) for the exact protocol, comparison and exclusions.
