@@ -18,3 +18,7 @@
 ## V29 extension
 
 V29 migrates the frozen intrinsic Eq. (13) two-band reduced model. The eigenstate matrix oracle validates local Q and g_yy terms independently; the Fermi-pocket and Fermi-shell integrations agree with offline V27 frozen reference at μ=0,12,20,40 meV. This does not resolve the Fig. 1(a) ordinate normalization, finite-eta/DC interpretation, or omitted four-band terms. Multiband and PT solvers remain unported.
+
+## V31 isolated-cluster Laurent audit
+
+PASS for 46 scoped unit tests (32 old + 14 V31), with 3/4/5 nondegenerate bands, exact PT four/six bands, an independent dH population-gradient derivative, true three-cluster intermediate term, U(6) fixed-orbital covariance, finite-eta O(eta) remainder and a converged one-dimensional BZ diagnostic. The adiabatic finite constant is **NOT** established as a universal intrinsic metallic driven-DC tau^0. No source equations were silently corrected. See LAURENT_ACCEPTANCE_V31.md.
