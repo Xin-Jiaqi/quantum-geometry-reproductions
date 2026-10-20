@@ -191,14 +191,35 @@ def audit(root):
             "rows":rows,"no_barrier_claim":True,"no_NMEE_claim":True}
 
 
+def scheduler_status(root):
+    root,selected=load_inputs(root)
+    state=root/"pbs_ids.json"
+    ids=json.loads(state.read_text()) if state.exists() else {}
+    rows=[]
+    for job in PILOT:
+        row={"job":job,"pbs_id":ids.get(job),"scheduler_state":"NOT_SUBMITTED"}
+        if job in ids:
+            result=subprocess.run(["qstat","-f",ids[job]],capture_output=True,
+                                  text=True,timeout=20)
+            if result.returncode:
+                row["scheduler_state"]="UNKNOWN_OR_PURGED_REQUIRES_OUTPUT_AUDIT"
+            else:
+                found=re.search(r"\bjob_state\s*=\s*([A-Z])",result.stdout)
+                row["scheduler_state"]=found.group(1) if found else "UNKNOWN"
+        rows.append(row)
+    return {"stage":"8g","scheduler":"pbs","rows":rows,
+            "warning":"PBS qstat state is not convergence evidence"}
+
 if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("--jobs",required=True)
     p.add_argument("--site",help="Local HPC profile (not committed)")
     p.add_argument("--submit",action="store_true")
     p.add_argument("--audit",action="store_true")
+    p.add_argument("--status",action="store_true")
     args=p.parse_args()
-    if args.audit:ans=audit(args.jobs)
+    if args.status:ans=scheduler_status(args.jobs)
+    elif args.audit:ans=audit(args.jobs)
     else:
         if not args.site:p.error("--site required for PBS preflight")
         ans=dispatch(args.jobs,args.site,args.submit)
