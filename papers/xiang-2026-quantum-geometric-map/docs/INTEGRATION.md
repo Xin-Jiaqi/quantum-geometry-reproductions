@@ -48,4 +48,15 @@ python scripts/reproduce_advanced.py --case orbital-mnhe-2d
 python scripts/reproduce_advanced.py --case orbital-mnhe-3d --output results/local-orbital3d.json
 ```
 
-A real Wannier input pipeline is still **BLOCKED** until consistent magnetic/position operators and response limits are provided. The original v30 SCBA and Ward code paths are not yet published in this repo.
+### Disorder, Kubo and Ward methods (v34)
+
+| Method | API | What is tested |
+| --- | --- | --- |
+| SCBA + ladder | `qgmap.microscopic_ward_v11.scba`, `ladder_vertex` | same scalar disorder variance in self-energy and Pauli-basis Bethe-Salpeter vertex |
+| RA control | `qgmap.warped_disorder_v17.ra_observable` | RA bubble and exact momentum-shift control in an independent periodic model |
+| Spectral Kubo | `qgmap.spectral_kubo_v18.spectral_bubble` | four (RA,AR,RR,AA) channels, each with its own noncrossing ladder |
+| Finite-((q,\omega)) Ward | `qgmap.finite_qomega_ward_v19.finite_ward` | matrix resolvent identity with separately solved energies and finite-difference current insertion |
+
+Run `python scripts/reproduce_advanced.py --case scba-ra`, `--case kubo-spectral`, or `--case finite-qomega-ward`. See [v34 method scope and limits](docs/SCBA_KUBO_WARD_MIGRATION_V34.md).
+
+A real Wannier input pipeline is still **BLOCKED** until consistent magnetic/position operators and response limits are provided. The finite-eta Ward identity is a resolvent identity, not a proof of physical dc charge conservation.

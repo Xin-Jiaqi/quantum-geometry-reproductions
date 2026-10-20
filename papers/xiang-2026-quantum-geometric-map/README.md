@@ -15,6 +15,9 @@ Supported:
 - Classical orbital Hall effect (spinless parabolic band, finite temperature).
 - Finite-dimensional **two-color Liouville resolvent** with explicit `E→B` and `B→E` orderings, independent frequencies, broadenings, and a **separately labelled** equilibrium population correction. This is a method module, not the complete published driven-DC formula.
 - SM Table I 11 representative magnetic-group tensor spaces using Neumann operators.
+- SCBA self-energy and noncrossing Bethe-Salpeter ladder in an independent periodic two-band regulator.
+- Symmetric four-channel spectral Kubo-Greenwood response (`RA+AR-RR-AA`) with a distinct ladder in each channel.
+- Finite-((q,\omega)) SCBA resolvent Ward identity using the exact finite-difference longitudinal insertion `[H(k+q/2)-H(k-q/2)]/q`.
 
 ## Start
 
@@ -50,3 +53,8 @@ The first advanced method is now independently callable: `qgmap.spin_multiband_v
 ### Orbital advanced-method subset (v32)
 
 The migrated `qgmap.orbital_phe_v4` and `qgmap.orbital_mnhe_v5` modules independently check 2D/3D model responses and preserve the literal SM Eq. (52)/(56) and finite-field comparison branches. [Methods and limitations](docs/ORBITAL_MIGRATION_V32.md). They **do not** implement the paper's omitted general multiband three-band orbital terms.
+
+
+### Disorder/Kubo/Ward subset (v34)
+
+The original v11/v17/v18/v19 SCBA, ladder, four-channel spectral Kubo, and finite-((q,\omega)) resolvent-Ward modules are now migrated with 48 original regression tests. See [the v34 protocol and boundaries](docs/SCBA_KUBO_WARD_MIGRATION_V34.md). This remains a method subset: it is not full Kubo–Středa, physical finite-(eta) continuity, or the paper's driven-DC PHE.
