@@ -1,0 +1,117 @@
+{
+  "version": "v27",
+  "status": "PARTIAL_PUBLISHED_FIGURE_SHAPE_VALIDATED_SI_AMPLITUDE_OPEN",
+  "source": "Original user-supplied Xiang et al PRB 113 L201406 (2026), PDF page 4, Fig.2(b), main Eq.(11)",
+  "curve_extraction": "color-filtered high-resolution raster approximation, not authors raw data",
+  "calibration": {
+    "pdf_page_1indexed": 4,
+    "render_dpi_equivalent": 576,
+    "pdf_crop_points": [
+      175,
+      51,
+      279,
+      160
+    ],
+    "plot_x_center_px": 438,
+    "plot_x_left_px": 97,
+    "plot_x_right_px": 779,
+    "plot_y_zero_px": 450,
+    "plot_y_upper_px": 110,
+    "plot_y_lower_px": 792,
+    "pixel_selection": "color-filtered curve medians, positive branch, 454..535 px, sampled every 3 px"
+  },
+  "fit": {
+    "T20": {
+      "amplitude": 1.7495268448402572,
+      "effective_T_K": 20.16198189172784,
+      "n_points": 28,
+      "rms_ordinate": 0.0019005907275977366,
+      "max_abs_ordinate": 0.00417182904631308
+    },
+    "T40": {
+      "amplitude": 1.7495463520350705,
+      "effective_T_K": 39.95347985473117,
+      "n_points": 28,
+      "rms_ordinate": 0.001268130502347604,
+      "max_abs_ordinate": 0.0025224448054792514
+    }
+  },
+  "axis_calibration_sensitivity": {
+    "T20": {
+      "amplitude_range": [
+        1.7442516419216003,
+        1.7547954767066944
+      ],
+      "T_K_range": [
+        19.697447842469607,
+        20.626815715210252
+      ],
+      "calibration_model": "plot origin +/-0.5 raster pixels in x and y, all other anchors fixed"
+    },
+    "T40": {
+      "amplitude_range": [
+        1.7384262026203439,
+        1.7607890363894882
+      ],
+      "T_K_range": [
+        38.98517784236858,
+        40.94189884481788
+      ],
+      "calibration_model": "plot origin +/-0.5 raster pixels in x and y, all other anchors fixed"
+    }
+  },
+  "figure_amplitude_to_literal_ratio": 0.1587480822858015,
+  "literal_predicted_plateau": 11.02083611497046,
+  "figure_ratio_to_1_over_2pi": 0.997443618161084,
+  "independent_finiteT_eq20_check": [
+    {
+      "T_K": 20,
+      "mu_meV": 2.0,
+      "direct_eq20_S": 1.4025531916428588e-07,
+      "analytic_eq11_S": 1.4025531916521221e-07,
+      "relative_deviation": 6.604605751192594e-12
+    },
+    {
+      "T_K": 20,
+      "mu_meV": 5.0,
+      "direct_eq20_S": 2.403103097621638e-07,
+      "analytic_eq11_S": 2.403103112669638e-07,
+      "relative_deviation": 6.2619035512412324e-09
+    },
+    {
+      "T_K": 20,
+      "mu_meV": 10.0,
+      "direct_eq20_S": 2.6664580063258017e-07,
+      "analytic_eq11_S": 2.6664619822404857e-07,
+      "relative_deviation": 1.4910824570613102e-06
+    },
+    {
+      "T_K": 40,
+      "mu_meV": 2.0,
+      "direct_eq20_S": 7.571393946488513e-08,
+      "analytic_eq11_S": 7.571393946488713e-08,
+      "relative_deviation": 2.6423307986078726e-14
+    },
+    {
+      "T_K": 40,
+      "mu_meV": 5.0,
+      "direct_eq20_S": 1.6636822999119055e-07,
+      "analytic_eq11_S": 1.6636822999119722e-07,
+      "relative_deviation": 4.007905118896815e-14
+    },
+    {
+      "T_K": 40,
+      "mu_meV": 10.0,
+      "direct_eq20_S": 2.403103112669326e-07,
+      "analytic_eq11_S": 2.403103112669638e-07,
+      "relative_deviation": 1.297850715786808e-13
+    }
+  ],
+  "limitations": [
+    "Pixel read-off uncertainty; digitized points are correlated image pixels, not independent observations",
+    "Only T=20,40 K positive-side curves extracted; original raw data not provided",
+    "Literal Eq11 magnitude is an adiabatic prescription and not a proven physical steady-state transport coefficient",
+    "Actual origin of any approximately 2pi amplitude difference is not established",
+    "No author contact or remote CI claim"
+  ]
+}

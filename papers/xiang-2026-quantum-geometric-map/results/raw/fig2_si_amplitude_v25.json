@@ -1,0 +1,62 @@
+{
+  "paper": "Xiang et al. PRB 113 L201406 (2026); main Eq. (8),(11), Fig. 2(b), p.4 voltage estimate; SM Eq. (63)",
+  "scientific_acceptance": "PARTIAL_EQ11_SI_NORMALIZATION_AUDIT_NOT_TRANSPORT_DC",
+  "inputs": {
+    "beta": 0.125,
+    "tau_s": 5e-13,
+    "g": 10.0,
+    "B_tesla": 1.0,
+    "E_vm": 10000.0,
+    "resistance_ohms": 1000.0,
+    "transverse_width_m": 0.0001
+  },
+  "units": {
+    "geom": "dimensionless",
+    "sigma_per_bbar": "S/J",
+    "sigma_per_B": "S/T",
+    "sheet_sigma": "S",
+    "voltage": "V",
+    "figure_ordinate": "dimensionless (-10^4 sigma/(e^2/hbar))"
+  },
+  "analytic_factor_closed": -0.002506415906691721,
+  "analytic_factor_printed": -0.002506415906687881,
+  "independent_angular_integral": -0.002506415906691722,
+  "literal_hbar": {
+    "hypothesis": "literal_hbar",
+    "temperature_K": 0.0,
+    "mu_mev": 20.0,
+    "F": -0.002506415906691721,
+    "sigma_per_zeeman_energy_S_per_J": -2892621485882502.5,
+    "sigma_per_B_S_per_T": -2.6826200776334416e-07,
+    "sigma_sheet_S": -2.6826200776334416e-07,
+    "minus_1e4_sigma_over_e2_hbar": 11.02083611497046,
+    "open_circuit_voltage_V": 0.0002682620077633442,
+    "open_circuit_voltage_microV": 268.2620077633442,
+    "tau_zeeman_over_hbar": 0.4397050020926946,
+    "assumption": "quoted R approximates 2D sheet resistance; transverse width=100 um; weak Hall angle"
+  },
+  "single_2pi_diagnostic": {
+    "hypothesis": "single_2pi_diagnostic",
+    "temperature_K": 0.0,
+    "mu_mev": 20.0,
+    "F": -0.002506415906691721,
+    "sigma_per_zeeman_energy_S_per_J": -460375007972023.5,
+    "sigma_per_B_S_per_T": -4.2695224579292633e-08,
+    "sigma_sheet_S": -4.2695224579292633e-08,
+    "minus_1e4_sigma_over_e2_hbar": 1.754020544703229,
+    "open_circuit_voltage_V": 4.269522457929264e-05,
+    "open_circuit_voltage_microV": 42.69522457929264,
+    "tau_zeeman_over_hbar": 0.4397050020926946,
+    "assumption": "quoted R approximates 2D sheet resistance; transverse width=100 um; weak Hall angle"
+  },
+  "eq11_to_figure_ratio": 6.2831853071795845,
+  "figure_plateau_visually_estimated": 1.75,
+  "paper_voltage_approx_microV": 43.0,
+  "assumptions": [
+    "Eq. (11) is interpreted as coefficient per Zeeman energy (g mu_B is restored when multiplying physical B).",
+    "R=1000 ohm is interpreted as the sheet resistance; Hall width=100 micrometers.",
+    "The 1/(2pi) branch is a numerical diagnostic, NOT a claimed correction or validated SI protocol.",
+    "The figure plateau ~1.75 is a visual estimate only.",
+    "The model clean adiabatic pole has not been identified with a measured driven-DC current."
+  ]
+}

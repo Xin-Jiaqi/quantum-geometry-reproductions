@@ -1,0 +1,80 @@
+{
+  "continuum_ti_two_color_v24.json": {
+    "sha256": "755a1fd32392e3db11049ae43bdc439633f361a038f9bb0c705af219b2f2e777",
+    "git_blob_sha1": "30ef2547cc51062acde968c51ddae8ff92fab40e",
+    "size": 8430,
+    "trailing_newline": true
+  },
+  "continuum_ti_v24.py": {
+    "sha256": "0c464f944057117da4b7c36dd675e70ab4fe2235ee360a3bba93dc560c122eb4",
+    "git_blob_sha1": "c7c43e9f69c669af9c8a1f5a3f342a1b7c895c6b",
+    "size": 6951,
+    "trailing_newline": true
+  },
+  "fig2_si_amplitude_v25.json": {
+    "sha256": "3f17b78c2989ca7734ebc06d6589102bcc4e36a8faa83dde80782850e2203bb1",
+    "git_blob_sha1": "dad6bd95907d2aee8e083dae9f56bb8d44e9fc98",
+    "size": 2597,
+    "trailing_newline": true
+  },
+  "fig2_source_audit_v27.py": {
+    "sha256": "62faed0f8fd800d43aabcd17952aa3ef20defd76544f408a431be2d3b943c33b",
+    "git_blob_sha1": "03a348f694b656c8f3a39f5d1a673690ba16e069",
+    "size": 4511,
+    "trailing_newline": true
+  },
+  "physical_si_liouville_v26.py": {
+    "sha256": "172a82414e4df60d21704f1f1958be9ef4639e56b7c0d9446de7498137f904d4",
+    "git_blob_sha1": "789420d829475ee41d3952ca3d2040d23a5fc671",
+    "size": 5229,
+    "trailing_newline": true
+  },
+  "si_fig2_v25.py": {
+    "sha256": "3e4805ec5a428cbbb1263415b26fd9271ffdefdea9fafb5e6015456c797359d1",
+    "git_blob_sha1": "a99486f40a030269922f60e536d1982e7f8ca866",
+    "size": 5111,
+    "trailing_newline": true
+  },
+  "test_continuum_ti_v24.py": {
+    "sha256": "8a4154625b90f5378f9422caccfae35fe5f84c1b1687c82d710882c0298279b1",
+    "git_blob_sha1": "b270fe5f91857a30b2b640f23a2554e9867ef83f",
+    "size": 4474,
+    "trailing_newline": true
+  },
+  "test_fig2_source_audit_v27.py": {
+    "sha256": "b35db05506e12f75975df7651c208cd14da6409099844a6ba79f7a1bea41f0ea",
+    "git_blob_sha1": "8db0e0500c3db8d218d4e2aa9c9011fb2f5f6370",
+    "size": 3503,
+    "trailing_newline": true
+  },
+  "test_physical_si_liouville_v26.py": {
+    "sha256": "e79d51c0685468ce3ab6cc9298e4a0fea4cad54bfee84c26defb081dfaf5af80",
+    "git_blob_sha1": "d9dffd3816374798b28eb82c8b82050922716c2a",
+    "size": 4756,
+    "trailing_newline": true
+  },
+  "test_si_fig2_v25.py": {
+    "sha256": "b2c99700e7fcbaf959df6ac32caa3b349aa83390cdb3c2e2e66a0dcbac3b38da",
+    "git_blob_sha1": "e4f43398800ddbd637229af610f1588c09a07254",
+    "size": 4068,
+    "trailing_newline": true
+  },
+  "v26_si_liouville_prefactor.json": {
+    "sha256": "6f351d45c6612beb9d83ac31b4790183ff8ff5ebc83dbc923afbc49b657918db",
+    "git_blob_sha1": "d713742bd6ef18fa37b62fd1db1d61f498f259bc",
+    "size": 4505,
+    "trailing_newline": true
+  },
+  "v27_curve_shape_and_amplitude.json": {
+    "sha256": "89563bfcc8d750bfa9decdcf2f4bd13004cc54986113eed9e3d6e9b227f28481",
+    "git_blob_sha1": "4586e58433ed21df4e50e6cba3c625e4f7b724b1",
+    "size": 3656,
+    "trailing_newline": true
+  },
+  "v27_fig2b_digitized.csv": {
+    "sha256": "7f178cad91292a73e77c6e490ee0ec1393abb6c2edf6e21eb9072038c8690329",
+    "git_blob_sha1": "1df3e0d167d69195e8fea003e2d0150c35f9b4f1",
+    "size": 2957,
+    "trailing_newline": true
+  }
+}

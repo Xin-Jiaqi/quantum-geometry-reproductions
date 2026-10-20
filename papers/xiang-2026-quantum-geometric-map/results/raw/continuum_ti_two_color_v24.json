@@ -1,0 +1,298 @@
+{
+  "reference": "Xiang et al. PRB 113 L201406 (2026) main Eqs.(10),(11), SM Eqs.(4)-(10),(20),(31),(62),(63)",
+  "scientific_acceptance": "PARTIAL_ORIGINAL_CONTINUUM_LIOUVILLE_KERNEL_NOT_PHYSICAL_DC",
+  "field_conventions": {
+    "electric": "E_y uniform length gauge, complex Fourier amplitude 1",
+    "magnetic": "bbar_x sigma_x with bbar_x=-g mu_B B_x; model bbar energy units",
+    "particle": "e=hbar=vF=1; no SI charge/time/length conversion",
+    "cutoff": "radial momentum UV cutoff; not a lattice or physical surface-bandwidth model"
+  },
+  "parameters": {
+    "beta": 0.125,
+    "mu": 0.2,
+    "temp": 0.035,
+    "cutoff": 2.5,
+    "nr": 144,
+    "nphi": 176,
+    "eta_e": 0.012,
+    "eta_b": 0.012,
+    "omega_e": 0.0,
+    "omega_b": 0.0,
+    "helicity": "main"
+  },
+  "eq20_direct_per_bbar_per_tau": {
+    "real": 0.0024899354131046854,
+    "imag": 1.0551898017185243e-19
+  },
+  "independent_angular_reference": 0.0024899354131046785,
+  "direct_vs_angular_abs_diff": 6.939696165168717e-18,
+  "main_eq11_zeroT_geometric_factor_per_physical_B": -0.002506415906687881,
+  "main_eq20_zeroT_geometric_factor_per_physical_B": -0.002506415906691721,
+  "helicity_and_printed_eq31_sign_audit": {
+    "main": {
+      "eq20_bbar": {
+        "real": 0.0024899354131046854,
+        "imag": 1.0551898017185243e-19
+      },
+      "paper_sm31_printed_bbar": {
+        "real": -0.0024899354131046854,
+        "imag": -1.0551898017185243e-19
+      },
+      "eq20_physical_B_per_gmuB": {
+        "real": -0.0024899354131046854,
+        "imag": -1.0551898017185243e-19
+      }
+    },
+    "sm": {
+      "eq20_bbar": {
+        "real": -0.0024899354131046854,
+        "imag": -1.0551898017185243e-19
+      },
+      "paper_sm31_printed_bbar": {
+        "real": 0.0024899354131046854,
+        "imag": 1.0551898017185243e-19
+      },
+      "eq20_physical_B_per_gmuB": {
+        "real": 0.0024899354131046854,
+        "imag": 1.0551898017185243e-19
+      }
+    }
+  },
+  "finite_frequency": {
+    "parameters": {
+      "beta": 0.125,
+      "mu": 0.2,
+      "temp": 0.035,
+      "cutoff": 2.5,
+      "nr": 144,
+      "nphi": 176,
+      "eta_e": 0.023,
+      "eta_b": 0.017,
+      "omega_e": 0.016,
+      "omega_b": 0.007,
+      "helicity": "main"
+    },
+    "projector": {
+      "b_then_e": {
+        "real": -0.13730797714676984,
+        "imag": -0.081385799318908
+      },
+      "e_then_b": {
+        "real": 0.2147171884093634,
+        "imag": 0.13075585420420405
+      },
+      "total": {
+        "real": 0.07740921126259351,
+        "imag": 0.049370054885296
+      }
+    },
+    "eigensystem": {
+      "b_then_e": {
+        "real": -0.13730797714678136,
+        "imag": -0.08138579931895196
+      },
+      "e_then_b": {
+        "real": 0.21471718840936316,
+        "imag": 0.13075585420420402
+      },
+      "total": {
+        "real": 0.0774092112625818,
+        "imag": 0.049370054885252056
+      }
+    },
+    "max_alg_difference": 4.547820781230697e-14
+  },
+  "regulator_series": [
+    {
+      "eta_e_equals_eta_b": 0.08,
+      "b_then_e": {
+        "real": -0.037710984550725114,
+        "imag": -1.3174454830483207e-18
+      },
+      "e_then_b": {
+        "real": 0.08130120671234144,
+        "imag": -5.33051519692732e-18
+      },
+      "total": {
+        "real": 0.04359022216161633,
+        "imag": -6.825646720587009e-18
+      },
+      "eta_times_total": {
+        "real": 0.0034872177729293064,
+        "imag": -5.460517376469607e-19
+      },
+      "eta_times_e_population_then_b": {
+        "real": 0.0027007293256269787,
+        "imag": 1.720246842752057e-20
+      },
+      "abs_err_to_eq20": 0.000997282359824621
+    },
+    {
+      "eta_e_equals_eta_b": 0.04,
+      "b_then_e": {
+        "real": -0.08787410462051691,
+        "imag": -3.253377959052329e-18
+      },
+      "e_then_b": {
+        "real": 0.15869849557478827,
+        "imag": -2.0697004539667077e-17
+      },
+      "total": {
+        "real": 0.07082439095427137,
+        "imag": -2.4839613346519534e-17
+      },
+      "eta_times_total": {
+        "real": 0.002832975638170855,
+        "imag": -9.935845338607813e-19
+      },
+      "eta_times_e_population_then_b": {
+        "real": 0.002588834017669596,
+        "imag": -7.001880821735738e-20
+      },
+      "abs_err_to_eq20": 0.00034304022506616945
+    },
+    {
+      "eta_e_equals_eta_b": 0.02,
+      "b_then_e": {
+        "real": -0.18322683053359973,
+        "imag": 4.6452670839239617e-17
+      },
+      "e_then_b": {
+        "real": 0.31279996747922967,
+        "imag": -8.456587191232218e-17
+      },
+      "total": {
+        "real": 0.12957313694562997,
+        "imag": -3.969313783217279e-17
+      },
+      "eta_times_total": {
+        "real": 0.0025914627389125996,
+        "imag": -7.938627566434558e-19
+      },
+      "eta_times_e_population_then_b": {
+        "real": 0.002522186861379325,
+        "imag": -3.070275477543161e-19
+      },
+      "abs_err_to_eq20": 0.0001015273258079142
+    },
+    {
+      "eta_e_equals_eta_b": 0.01,
+      "b_then_e": {
+        "real": -0.370625870308722,
+        "imag": 1.2805307131376643e-16
+      },
+      "e_then_b": {
+        "real": 0.6224593876942391,
+        "imag": -3.369449477558323e-16
+      },
+      "total": {
+        "real": 0.2518335173855172,
+        "imag": -2.0546528291455878e-16
+      },
+      "eta_times_total": {
+        "real": 0.002518335173855172,
+        "imag": -2.054652829145588e-18
+      },
+      "eta_times_e_population_then_b": {
+        "real": 0.0024992735798144428,
+        "imag": -5.925705778210037e-19
+      },
+      "abs_err_to_eq20": 2.839976075048661e-05
+    },
+    {
+      "eta_e_equals_eta_b": 0.005,
+      "b_then_e": {
+        "real": -0.7435322267442186,
+        "imag": 1.1331932897817742e-15
+      },
+      "e_then_b": {
+        "real": 1.2430732155010276,
+        "imag": -1.2491111726350543e-15
+      },
+      "total": {
+        "real": 0.499540988756809,
+        "imag": -1.261870418456899e-16
+      },
+      "eta_times_total": {
+        "real": 0.002497704943784045,
+        "imag": -6.309352092284495e-19
+      },
+      "eta_times_e_population_then_b": {
+        "real": 0.002492528475952663,
+        "imag": -1.0816479091956598e-18
+      },
+      "abs_err_to_eq20": 7.76953067935975e-06
+    },
+    {
+      "eta_e_equals_eta_b": 0.0025,
+      "b_then_e": {
+        "real": -1.4882996883064197,
+        "imag": 1.0547115622981156e-15
+      },
+      "e_then_b": {
+        "real": 2.4851149833293036,
+        "imag": -4.52619125448537e-15
+      },
+      "total": {
+        "real": 0.9968152950228834,
+        "imag": -3.4577099775949575e-15
+      },
+      "eta_times_total": {
+        "real": 0.0024920382375572085,
+        "imag": -8.644274943987395e-18
+      },
+      "eta_times_e_population_then_b": {
+        "real": 0.002490643207100191,
+        "imag": -2.1187968553864046e-18
+      },
+      "abs_err_to_eq20": 2.1028244525230985e-06
+    }
+  ],
+  "uv_checks": [
+    {
+      "cutoff": 1.0,
+      "radial_nodes": 128,
+      "direct_eq20": {
+        "real": 0.002489935389018989,
+        "imag": 5.930449766949568e-20
+      },
+      "eta_times_total": {
+        "real": 0.0025183351497284497,
+        "imag": 2.5147773534809287e-18
+      }
+    },
+    {
+      "cutoff": 2.5,
+      "radial_nodes": 144,
+      "direct_eq20": {
+        "real": 0.0024899354131046854,
+        "imag": 1.0551898017185243e-19
+      },
+      "eta_times_total": {
+        "real": 0.002518335173855172,
+        "imag": -2.054652829145588e-18
+      }
+    },
+    {
+      "cutoff": 4.0,
+      "radial_nodes": 160,
+      "direct_eq20": {
+        "real": 0.002489935413104659,
+        "imag": 6.796460031067751e-20
+      },
+      "eta_times_total": {
+        "real": 0.0025183351750005436,
+        "imag": 1.6001306181234892e-18
+      }
+    }
+  ],
+  "source_file": "src/qgmap/continuum_ti_v24.py",
+  "limitations": [
+    "Eq11 SI normalization and any g mu_B factor must be checked independently; only geometric shape and bbar-to-B sign are verified.",
+    "The continuum field-coupled current is clean and noncollisional; tau=1/eta is a formal regulator substitution.",
+    "Main Eq10 and SM Eq62 opposite helicities, not silently identified.",
+    "SM Eq20-to-Eq31 sign discrepancy retained for identical formal energy/velocity definitions.",
+    "T>0 analytical angular formula assumes UV infinity and exact linear dispersion; finite cutoff checked separately.",
+    "No assertion of full experimental DC response or manuscript correction."
+  ]
+}

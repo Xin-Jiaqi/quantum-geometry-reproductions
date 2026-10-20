@@ -1,0 +1,131 @@
+{
+  "version": "v26",
+  "scientific_status": "PARTIAL_SI_PREFAC_CONFIRMATION_FIG2_AMPLITUDE_UNEXPLAINED",
+  "source_reference": "Xiang et al. Phys Rev B 113 L201406 (2026), main Eqs 8,10,11, Fig2b and SM Eqs 20,31,63",
+  "physical_inputs_SI": {
+    "beta": 0.125,
+    "vF_eVnm": 0.3,
+    "mu_eV": 0.06,
+    "thermal_eV": 0.006,
+    "kmax_eV": 0.48,
+    "tau_s": 5e-13,
+    "E_Vm": 10000.0,
+    "B_T": 1.0,
+    "g": 10.0,
+    "nr": 128,
+    "nphi": 160,
+    "eta_scale": 1.0,
+    "omega_e_scale": 0.0,
+    "omega_b_scale": 0.0
+  },
+  "meaning_of_test": "SI Liouville with H[J], k[m^-1], E[V/m], B[T], j[A/m]. Neither original Fig2 data nor full microscopic DC measured transport.",
+  "eq20_physical_j_A_per_m": {
+    "real": -0.002682376507237176,
+    "imag": -1.1673047498367493e-19
+  },
+  "eq20_physical_sheet_S": -2.682376507237176e-07,
+  "SI_restore_main_eq11_magnitude_S": 2.6823765071653156e-07,
+  "eq20_vs_eq11_relative_error": 2.6789903628809952e-11,
+  "frequency_units": {
+    "E_Z_J": 9.2740100657e-23,
+    "omega_Z_rad_s": 879410004185.3893,
+    "f_Z_Hz": 139962449170.56906,
+    "tau_omega_Z_rad": 0.4397050020926946,
+    "tau_f_Z_cycles": 0.06998122458528454,
+    "rad_per_cycle": 6.283185307179587
+  },
+  "two_color_liouville_vs_eta": [
+    {
+      "eta_scale": 2.0,
+      "effective_tau_s": 2.5e-13,
+      "sum_sigma_S": -1.3492163024914379e-07,
+      "eta_scale_times_sigma_S": -2.6984326049828757e-07,
+      "ratio_eta_times_sigma_to_Eq20": 1.0059857733253998,
+      "b_then_e_A_per_m": 0.0020007147216894784,
+      "e_then_b_A_per_m": -0.0033499310241809164
+    },
+    {
+      "eta_scale": 1.0,
+      "effective_tau_s": 5e-13,
+      "sum_sigma_S": -2.686425192115522e-07,
+      "eta_scale_times_sigma_S": -2.686425192115522e-07,
+      "ratio_eta_times_sigma_to_Eq20": 1.0015093648738058,
+      "b_then_e_A_per_m": 0.004007500763711942,
+      "e_then_b_A_per_m": -0.006693925955827463
+    },
+    {
+      "eta_scale": 0.7,
+      "effective_tau_s": 7.142857142857143e-13,
+      "sum_sigma_S": -3.8348100691610784e-07,
+      "eta_scale_times_sigma_S": -2.6843670484127545e-07,
+      "ratio_eta_times_sigma_to_Eq20": 1.0007420811993424,
+      "b_then_e_A_per_m": 0.005726482160794662,
+      "e_then_b_A_per_m": -0.009561292229955741
+    },
+    {
+      "eta_scale": 0.5,
+      "effective_tau_s": 1e-12,
+      "sum_sigma_S": -5.36679010010297e-07,
+      "eta_scale_times_sigma_S": -2.683395050051485e-07,
+      "ratio_eta_times_sigma_to_Eq20": 1.000379716572808,
+      "b_then_e_A_per_m": 0.008018053438150314,
+      "e_then_b_A_per_m": -0.013384843538253284
+    },
+    {
+      "eta_scale": 0.3,
+      "effective_tau_s": 1.6666666666666668e-12,
+      "sum_sigma_S": -8.942482393353922e-07,
+      "eta_scale_times_sigma_S": -2.682744718006177e-07,
+      "ratio_eta_times_sigma_to_Eq20": 1.0001372703526172,
+      "b_then_e_A_per_m": 0.013364512927757645,
+      "e_then_b_A_per_m": -0.02230699532111156
+    },
+    {
+      "eta_scale": 0.2,
+      "effective_tau_s": 2.5e-12,
+      "sum_sigma_S": -1.3412703459843707e-06,
+      "eta_scale_times_sigma_S": -2.6825406919687415e-07,
+      "ratio_eta_times_sigma_to_Eq20": 1.0000612086823466,
+      "b_then_e_A_per_m": 0.020047282435686088,
+      "e_then_b_A_per_m": -0.033459985895529794
+    },
+    {
+      "eta_scale": 0.125,
+      "effective_tau_s": 4e-12,
+      "sum_sigma_S": -2.1459527016928663e-06,
+      "eta_scale_times_sigma_S": -2.682440877116083e-07,
+      "ratio_eta_times_sigma_to_Eq20": 1.000023997331744,
+      "b_then_e_A_per_m": 0.03207605341093335,
+      "e_then_b_A_per_m": -0.05353558042786201
+    }
+  ],
+  "original_fig2_inputs": {
+    "beta": 0.125,
+    "tau_s": 5e-13,
+    "g": 10.0,
+    "B_tesla": 1.0,
+    "E_vm": 10000.0,
+    "resistance_ohms": 1000.0,
+    "transverse_width_m": 0.0001
+  },
+  "fig2_eq11_literal": {
+    "sigma_S": -2.6826200776334416e-07,
+    "ordinate": 11.02083611497046,
+    "voltage_uV": 268.2620077633442
+  },
+  "fig2_single_2pi_diagnostic": {
+    "sigma_S": -4.2695224579292633e-08,
+    "ordinate": 1.754020544703229,
+    "voltage_uV": 42.69522457929264
+  },
+  "source_figure_estimates_not_raw": {
+    "plateau_approx": 1.75,
+    "voltage_uV_approx": 43
+  },
+  "phase_frequency_candidate": "Difference of tau*E_Z/hbar (rad) vs tau*E_Z/h (cycles) equals 2pi; no evidence authors actually used cyclic frequency.",
+  "excluded_sources": [
+    "BZ measure: explicit 1/(2pi)^2 verified",
+    "Zeeman B unit: g*mu_B in J/T explicitly multiplied",
+    "tau_s SI: frequency parameter eta_energy=hbar/tau"
+  ]
+}
