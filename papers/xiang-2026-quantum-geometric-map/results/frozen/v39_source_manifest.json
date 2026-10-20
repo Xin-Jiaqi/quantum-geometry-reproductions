@@ -1,0 +1,35 @@
+{
+  "scientific_status": "PARTIAL",
+  "files": {
+    "src/qgmap/scba_streda_v39.py": {
+      "sha256": "1abeebd843dc22afe6b21ed2b467929869e1cd4ea020c0cafcb712d4a6c1577e",
+      "git_blob_sha1": "82c7e0eb37b60db1398fe5e4edeb4e2e0379ab39",
+      "bytes": 10484
+    },
+    "tests/test_scba_streda_v39.py": {
+      "sha256": "51768aef62ea7572d56e9f61ad19483e3a241fcd1fe56425f75fac9e597918c3",
+      "git_blob_sha1": "d5313d0874bd2db7df1ff83f4b301c162ed6adae",
+      "bytes": 5553
+    },
+    "tests/test_v39_frozen.py": {
+      "sha256": "58151a861b33f5f305ed22abc3e99fae18279deaf667f59ff729b1ac33ae903c",
+      "git_blob_sha1": "3fe00f9e4dda1f4d30062240b94d036f9054cdc0",
+      "bytes": 1416
+    },
+    "scripts/reproduce_scba_streda_v39.py": {
+      "sha256": "a6e0ea5c5cf531e0130a2bf9615ec726b4f885cffcb6e1932ac6b35aa5ae158b",
+      "git_blob_sha1": "171d3cee72fd7f2905df80f41d28a592756f82ac",
+      "bytes": 1302
+    },
+    "results/frozen/v39_benchmark.json": {
+      "sha256": "e5567876f09b6da9cdd424f112fc9b514e92dfbf6355cbc98b7c65591ebe117d",
+      "git_blob_sha1": "31b0bd9a90021c6ad17506b70be664f359993fbc",
+      "bytes": 3173
+    },
+    "docs/SCBA_ENERGY_DERIVATIVE_V39.md": {
+      "sha256": "b359609cba0c33f027da23d0ebc24e17fbf321b02535b05e59ac496ba9a81a4d",
+      "git_blob_sha1": "2497906a9616beb1f69ed2315bf33a7aa6cfc133",
+      "bytes": 5397
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "qgmap-scba-sea-v39-1",
+  "scientific_status": "PARTIAL",
+  "derivative_W": {
+    "protocol": "SCBA_energy_derivative_RR_density_vertex",
+    "mesh": 21,
+    "mass": -1.0,
+    "W": 0.12,
+    "energy": 0.7,
+    "eta": 0.12,
+    "self_energy_residual": 2.7950719510484616e-12,
+    "derivative_vertex_residual": 2.2887833992611187e-16,
+    "derivative_max_abs": 9.369871315273532e-08,
+    "propagator_derivative_max_abs": 1.6299547169200223e-06,
+    "gamma_minus_identity": 0.32958192981851164,
+    "sample_sea_kernel": 0.7121571249968992,
+    "sample_sea_naive": 0.5417409899900876,
+    "warnings": [
+      "RR density vertex, not a transverse current vertex",
+      "finite external eta is a resolvent regulator"
+    ]
+  },
+  "clean_insulator": {
+    "protocol": "energy_dependent_SCBA_bare_current_antisymmetric_sea_ONLY",
+    "mesh": 21,
+    "mass": -1.0,
+    "mu": 0,
+    "eta": 0.12,
+    "W": 0.12,
+    "quadrature": 256,
+    "lower": -7.0,
+    "dressed_sea": -0.8415186490376378,
+    "naive_constant_sigma_derivative": -0.8148486952645347,
+    "derivative_correction": -0.02666995377310301,
+    "clean_reference_if_W0": null,
+    "max_scba_residual": 2.8263929315322834e-12,
+    "max_density_vertex_residual": 5.572324966150414e-16,
+    "maximum_gamma_deviation": 0.35415363206048694,
+    "max_scba_iterations": 36,
+    "explicit_missing": [
+      "transverse current ladder",
+      "contact/seagull vertices",
+      "complete Kubo-Streda/Bastin I term",
+      "crossed diagrams",
+      "real physical dc order of limits",
+      "original EB nonlinear response"
+    ]
+  },
+  "metallic_control": {
+    "protocol": "energy_dependent_SCBA_bare_current_antisymmetric_sea_ONLY",
+    "mesh": 21,
+    "mass": -1.0,
+    "mu": 1.1,
+    "eta": 0.12,
+    "W": 0.12,
+    "quadrature": 256,
+    "lower": -7.0,
+    "dressed_sea": 0.9743195898128385,
+    "naive_constant_sigma_derivative": 1.0976937849278625,
+    "derivative_correction": -0.1233741951150239,
+    "clean_reference_if_W0": null,
+    "max_scba_residual": 2.8334846987316462e-12,
+    "max_density_vertex_residual": 5.835275607609835e-16,
+    "maximum_gamma_deviation": 0.3541583456077053,
+    "max_scba_iterations": 37,
+    "explicit_missing": [
+      "transverse current ladder",
+      "contact/seagull vertices",
+      "complete Kubo-Streda/Bastin I term",
+      "crossed diagrams",
+      "real physical dc order of limits",
+      "original EB nonlinear response"
+    ]
+  },
+  "exact_finite_sample": {
+    "protocol": "exact_finite_torus_static_disorder_bare_sea_Lehmann",
+    "L": 4,
+    "Nbands": 32,
+    "mass": -1.0,
+    "W": 0.12,
+    "mu": 0.0,
+    "eta": 0.12,
+    "seeds": 6,
+    "mean": -1.056819021813024,
+    "standard_deviation": 0.02397451607214844,
+    "samples": [
+      -1.0638926703702165,
+      -1.0503855166086766,
+      -1.0721089052496793,
+      -1.006584405453525,
+      -1.0763732307473628,
+      -1.071569402448684
+    ],
+    "warning": "finite torus and finite disorder ensemble; does not include disordered Hall vertex/completeness"
+  },
+  "warning": "Bare-current SCBA sea only; RR density vertex does not replace full transverse current ladder or Streda I, nor mixed EB dc"
+}
