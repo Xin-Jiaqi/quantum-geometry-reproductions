@@ -1,0 +1,362 @@
+{
+  "protocol": "T=0 insulating interband E-linear susceptibility, static Bz finite difference, frozen valence occupancy",
+  "NOT": "author PRL finite-temperature driven nonlinear DC response",
+  "source_parent_github_sha": "c429336f1a3e4827559c89a75425ced7af69c696",
+  "date": "2026-10-20",
+  "fixed_controls": {
+    "tunneling_eV": 0.02,
+    "layer_potential_difference_eV": 0.0,
+    "mu_eV": 0.02541381265,
+    "B_step_T": 0.25,
+    "trajectory": "tau(u)=(0.23u,0.41u) in fractional primitive lattice",
+    "unit": "(nm V T)^-1 under current NMEE Pauli-spin conventions"
+  },
+  "quadratures": {
+    "coarse": {
+      "exterior_n": 41,
+      "radial_n": 35,
+      "angular_n": 64,
+      "radius_inv_nm": 1.5,
+      "n_exterior_kept": 1647,
+      "n_valley_total": 4480,
+      "exterior_area_weight": 18.70239867619162,
+      "valley_area_weight": 0.35809862195676445,
+      "bz_area_weight": 19.08848340903347,
+      "normalization_error": -0.027986110885084514
+    },
+    "fine": {
+      "exterior_n": 61,
+      "radial_n": 60,
+      "angular_n": 80,
+      "radius_inv_nm": 1.5,
+      "n_exterior_kept": 3651,
+      "n_valley_total": 9600,
+      "exterior_area_weight": 18.729388047939047,
+      "valley_area_weight": 0.35809862195676445,
+      "bz_area_weight": 19.08848340903347,
+      "normalization_error": -0.000996739137658409
+    }
+  },
+  "scan": [
+    {
+      "path_parameter": 0,
+      "shift_fractional": [
+        0.0,
+        0.0
+      ],
+      "gamma": 1.4387562234138096e-16,
+      "top": -0.01287013718784126,
+      "bottom": 0.012870137187841406,
+      "sampled_direct_gap_eV": 0.014687411491731034,
+      "sampled_min_mu_to_band_eV": 0.0021010817828214755
+    },
+    {
+      "path_parameter": 0.05,
+      "shift_fractional": [
+        0.011500000000000002,
+        0.0205
+      ],
+      "gamma": -1.149680205008146e-05,
+      "top": -0.01283075735606714,
+      "bottom": 0.012819260554017019,
+      "sampled_direct_gap_eV": 0.014827226017406932,
+      "sampled_min_mu_to_band_eV": 0.0021856556347231056
+    },
+    {
+      "path_parameter": 0.1,
+      "shift_fractional": [
+        0.023000000000000003,
+        0.041
+      ],
+      "gamma": -1.6980800011500395e-05,
+      "top": -0.012702072021488937,
+      "bottom": 0.01268509122147747,
+      "sampled_direct_gap_eV": 0.01523753557410292,
+      "sampled_min_mu_to_band_eV": 0.002434767902549158
+    },
+    {
+      "path_parameter": 0.15,
+      "shift_fractional": [
+        0.0345,
+        0.06149999999999999
+      ],
+      "gamma": -1.2905307130927474e-05,
+      "top": -0.012493291606667851,
+      "bottom": 0.012480386299536982,
+      "sampled_direct_gap_eV": 0.015893239516047472,
+      "sampled_min_mu_to_band_eV": 0.0028357376775065522
+    },
+    {
+      "path_parameter": 0.175,
+      "shift_fractional": [
+        0.04025,
+        0.07175
+      ],
+      "gamma": -7.103691221053542e-06,
+      "top": -0.012363584445245566,
+      "bottom": 0.012356480754024561,
+      "sampled_direct_gap_eV": 0.016302262596164706,
+      "sampled_min_mu_to_band_eV": 0.0030876756153190785
+    },
+    {
+      "path_parameter": 0.2,
+      "shift_fractional": [
+        0.046000000000000006,
+        0.082
+      ],
+      "gamma": 9.321712248970375e-07,
+      "top": -0.012220051054512793,
+      "bottom": 0.012220983225737725,
+      "sampled_direct_gap_eV": 0.01675888503139457,
+      "sampled_min_mu_to_band_eV": 0.0033693016183125417
+    },
+    {
+      "path_parameter": 0.225,
+      "shift_fractional": [
+        0.051750000000000004,
+        0.09225
+      ],
+      "gamma": 1.0843013384797574e-05,
+      "top": -0.012065126562944908,
+      "bottom": 0.012075969576329657,
+      "sampled_direct_gap_eV": 0.017258082296188665,
+      "sampled_min_mu_to_band_eV": 0.0036783115825482285
+    },
+    {
+      "path_parameter": 0.25,
+      "shift_fractional": [
+        0.0575,
+        0.1025
+      ],
+      "gamma": 2.220768923407758e-05,
+      "top": -0.011901246662001097,
+      "bottom": 0.011923454351235159,
+      "sampled_direct_gap_eV": 0.01779488452911617,
+      "sampled_min_mu_to_band_eV": 0.00401301478388387
+    },
+    {
+      "path_parameter": 0.3,
+      "shift_fractional": [
+        0.069,
+        0.12299999999999998
+      ],
+      "gamma": 4.755774454624469e-05,
+      "top": -0.011555919908078159,
+      "bottom": 0.011603477652624372,
+      "sampled_direct_gap_eV": 0.01896224016156378,
+      "sampled_min_mu_to_band_eV": 0.00474974715137862
+    },
+    {
+      "path_parameter": 0.35,
+      "shift_fractional": [
+        0.0805,
+        0.1435
+      ],
+      "gamma": 7.379057429620172e-05,
+      "top": -0.011201097324755674,
+      "bottom": 0.011274887899051893,
+      "sampled_direct_gap_eV": 0.02022368808125128,
+      "sampled_min_mu_to_band_eV": 0.005550689767746152
+    },
+    {
+      "path_parameter": 0.4,
+      "shift_fractional": [
+        0.09200000000000001,
+        0.164
+      ],
+      "gamma": 9.850210490805304e-05,
+      "top": -0.010850752039590426,
+      "bottom": 0.010949254144498523,
+      "sampled_direct_gap_eV": 0.02154691424729699,
+      "sampled_min_mu_to_band_eV": 0.006404769565586513
+    },
+    {
+      "path_parameter": 0.5,
+      "shift_fractional": [
+        0.115,
+        0.205
+      ],
+      "gamma": 0.00013822701413065313,
+      "top": -0.01020344396265661,
+      "bottom": 0.01034167097678721,
+      "sampled_direct_gap_eV": 0.024276622237752166,
+      "sampled_min_mu_to_band_eV": 0.008193562588623186
+    },
+    {
+      "path_parameter": 0.6,
+      "shift_fractional": [
+        0.138,
+        0.24599999999999997
+      ],
+      "gamma": 0.00016316344607009235,
+      "top": -0.009667266371787393,
+      "bottom": 0.009830429817857467,
+      "sampled_direct_gap_eV": 0.02695802612359057,
+      "sampled_min_mu_to_band_eV": 0.009988475922048483
+    },
+    {
+      "path_parameter": 0.75,
+      "shift_fractional": [
+        0.17250000000000001,
+        0.3075
+      ],
+      "gamma": 0.00017944092245356265,
+      "top": -0.009113349577395069,
+      "bottom": 0.009292790499848595,
+      "sampled_direct_gap_eV": 0.030487908305733103,
+      "sampled_min_mu_to_band_eV": 0.012374522003719343
+    },
+    {
+      "path_parameter": 1.0,
+      "shift_fractional": [
+        0.23,
+        0.41
+      ],
+      "gamma": 0.00018288741790246227,
+      "top": -0.008834318304030999,
+      "bottom": 0.009017205721933423,
+      "sampled_direct_gap_eV": 0.033137265138154286,
+      "sampled_min_mu_to_band_eV": 0.014473585528381704
+    },
+    {
+      "path_parameter": 1.25,
+      "shift_fractional": [
+        0.28750000000000003,
+        0.5125
+      ],
+      "gamma": 0.00016145063963551344,
+      "top": -0.009147772927273475,
+      "bottom": 0.009309223566909015,
+      "sampled_direct_gap_eV": 0.030718467567934164,
+      "sampled_min_mu_to_band_eV": 0.012693908985024607
+    }
+  ],
+  "zero_crossing": {
+    "root_bracket": [
+      0.19738769531250003,
+      0.19741210937500003
+    ],
+    "estimated_zero_u": 0.19739990234375004,
+    "residual_gamma_at_center": 2.2198980956407433e-09,
+    "sampled_mu_gap_eV": 0.0033387397769982473
+  },
+  "mesh_convergence": {
+    "0.1": {
+      "coarse_gamma": -1.6980800011500395e-05,
+      "fine_gamma": -1.698148425213794e-05,
+      "absolute_change": 6.842406375450285e-10,
+      "relative_change_if_nonzero": 4.029333522238398e-05,
+      "fine_sampled_mu_gap_eV": 0.00243485078686545
+    },
+    "0.2": {
+      "coarse_gamma": 9.321712248970375e-07,
+      "fine_gamma": 9.308693834062424e-07,
+      "absolute_change": 1.3018414907951356e-09,
+      "relative_change_if_nonzero": 0.0013985221922665778,
+      "fine_sampled_mu_gap_eV": 0.0033688691396735228
+    },
+    "0.4": {
+      "coarse_gamma": 9.850210490805304e-05,
+      "fine_gamma": 9.850135356648784e-05,
+      "absolute_change": 7.513415652035367e-10,
+      "relative_change_if_nonzero": 7.627728330620203e-06,
+      "fine_sampled_mu_gap_eV": 0.0064039812783052985
+    },
+    "1.0": {
+      "coarse_gamma": 0.00018288741790246227,
+      "fine_gamma": 0.00018289001899209032,
+      "absolute_change": 2.6010896280544062e-09,
+      "relative_change_if_nonzero": 1.422215188335072e-05,
+      "fine_sampled_mu_gap_eV": 0.014468017081033423
+    }
+  },
+  "magnetic_field_difference": {
+    "0.1": {
+      "step_0p25_T": -1.6980800011500395e-05,
+      "step_0p125_T": -1.698038685915646e-05,
+      "absolute_change": 4.1315234393379807e-10
+    },
+    "0.2": {
+      "step_0p25_T": 9.321712248970375e-07,
+      "step_0p125_T": 9.309525104178769e-07,
+      "absolute_change": 1.2187144791606097e-09
+    },
+    "0.4": {
+      "step_0p25_T": 9.850210490805304e-05,
+      "step_0p125_T": 9.849689848562141e-05,
+      "absolute_change": 5.206422431635466e-09
+    }
+  },
+  "valley_partition": {
+    "0.1": {
+      "exterior": 5.294408091889364e-10,
+      "K": -8.490664726156397e-06,
+      "Kprime": -8.490664726153466e-06
+    },
+    "0.2": {
+      "exterior": 9.729253450011764e-10,
+      "K": 4.655991498145065e-07,
+      "Kprime": 4.655991497383472e-07
+    },
+    "0.4": {
+      "exterior": 1.3395509693831428e-09,
+      "K": 4.9250382678536237e-05,
+      "Kprime": 4.925038267855154e-05
+    },
+    "1.0": {
+      "exterior": -1.0985410512552509e-09,
+      "K": 9.144425822172298e-05,
+      "Kprime": 9.144425822179651e-05
+    }
+  },
+  "equal_hopping_norm_controls": {
+    "0.4": {
+      "normalization": {
+        "bz_mesh": 41,
+        "total_norm_sq_eV2": 0.00255532486689987,
+        "same_norm_sq_eV2": 0.0014271635628747422,
+        "cross_norm_sq_eV2": 0.0011281613040251277,
+        "same_amplitude_rescale": 1.338092652757996
+      },
+      "full_gamma": 9.850210490805304e-05,
+      "same_only_raw_gamma": 1.3861699961907941e-08,
+      "same_only_norm_matched_gamma": 2.5730885208023603e-08,
+      "matched_same_tunneling_eV": 0.02676185305515992,
+      "matched_same_sampled_mu_gap_eV": 0.0012973029843481691
+    },
+    "1.0": {
+      "normalization": {
+        "bz_mesh": 41,
+        "total_norm_sq_eV2": 0.002355788615933981,
+        "same_norm_sq_eV2": 0.0010235504936292636,
+        "cross_norm_sq_eV2": 0.0013322381223047175,
+        "same_amplitude_rescale": 1.5170976071211448
+      },
+      "full_gamma": 0.00018288741790246227,
+      "same_only_raw_gamma": 1.4262730378359374e-08,
+      "same_only_norm_matched_gamma": 3.336626394394398e-08,
+      "matched_same_tunneling_eV": 0.0303419521424229,
+      "matched_same_sampled_mu_gap_eV": 0.01268005760387067
+    }
+  },
+  "mirror_oddness": {
+    "0.1": {
+      "positive": -1.6980800011500395e-05,
+      "negative": 1.698080001155016e-05,
+      "odd_residual": 4.9764879717084654e-17,
+      "top_partner_error": -2.7755575615628914e-17
+    },
+    "0.4": {
+      "positive": 9.850210490805304e-05,
+      "negative": -9.850210490812894e-05,
+      "odd_residual": -7.589415207398531e-17,
+      "top_partner_error": 6.938893903907228e-17
+    },
+    "1.0": {
+      "positive": 0.00018288741790246227,
+      "negative": -0.0001828874179024588,
+      "odd_residual": 3.469446951953614e-18,
+      "top_partner_error": 1.0408340855860843e-17
+    }
+  }
+}

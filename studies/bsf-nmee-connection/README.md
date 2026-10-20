@@ -80,3 +80,28 @@ python scripts/run_stage2_benchmark.py   # ~30 s in a single-thread BLAS environ
 ```
 
 No original PRL reproduction modules are modified. True static-response amplitude depends on the microscopic hopping, SOC, and position convention; the existing final-DC-formula disagreement remains unresolved.
+
+## Stage 3: sign change *within* a gapped continuous sliding path
+
+At fixed `t_perp=20 meV`, zero layer potential difference and a fixed chemical
+potential, the independently calculated **static insulating** `Gamma_xz;x`
+changes sign as `tau(u) = u(0.23, 0.41)` is varied from `u=0` to `u=1`.
+The sampled bandgap does not close along this path. The zero is near
+`u ≈ 0.1974`, **not** a symmetry-forced or topological transition. Each
+of K and K′ changes sign independently; their contributions are equal, not
+mutually canceling. BZ-averaged Frobenius-norm matching confirms that omitting
+cross-sublattice tunneling suppresses the response by orders of magnitude in
+this model. These are synthetic static susceptibility results, not ferroelectric
+switchability or the author's driven-DC NMEE prediction.
+
+See [stage-3 physics report](docs/STAGE3_PHYSICS.md),
+[complete numeric scan](results/sliding_stage3_sign_reversal.json), and
+[`scripts/run_stage3_sign_reversal.py`](scripts/run_stage3_sign_reversal.py).
+The frozen Jia et al. PRL reproduction folder has **not been modified**.
+
+Run from this directory after installation of the parent paper module:
+
+```bash
+OPENBLAS_NUM_THREADS=1 python scripts/run_stage3_sign_reversal.py
+OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
+```

@@ -1,0 +1,18 @@
+{
+  "manifest_schema": "bsf-nmee-stage3-v1",
+  "date": "2026-10-20",
+  "previous_stage2_commit": "c429336f1a3e4827559c89a75425ced7af69c696",
+  "physics_protocol": "T0 interband static finite-Zeeman, not non-equilibrium DC",
+  "sha256": {
+    "README.md": "797a0e810301ae69d230a489967a9f0cdd5345b9ad9a1a7d77f832b01146d412",
+    "docs/STAGE3_PHYSICS.md": "c0c97be39ab8876ca3aa98409faa7e03534cbf2336dfe0bff395b4252428d097",
+    "docs/STAGE3_WORKLOG.md": "d625d61a5fb76ccb9d39eb8c28158417a77015bcc61a22dd6d3f842006eef202",
+    "scripts/run_stage3_sign_reversal.py": "612afa063d17f59f86167fc063fea33e5d0eb9ecd023067e23a743e3f22da724",
+    "tests/test_sliding_sign_reversal.py": "546c6b430d603cdfb65fab297520c9fe1fe76ebd226e904db11105d3729afacf",
+    "results/sliding_stage3_sign_reversal.json": "b7fdd8c9c8acbf5db1940c61dee9d15b7d8538a5f87891121b43003fd44fb673",
+    "results/sliding_stage3_scan.csv": "c5e42c75d89a84a80e233c6d92c53c99a779b21cbf3f56234f39f4b1150d76f4",
+    "results/sliding_stage3_sign_reversal.svg": "b3338324f05462405a19cc000323c1152d75e15ee9bbf35da302f7e8d5a6e5a2"
+  },
+  "files": 8,
+  "test_gate": "python -m unittest discover -s tests -v (toolkit installed in CI)"
+}
