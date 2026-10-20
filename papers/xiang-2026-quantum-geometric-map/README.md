@@ -106,3 +106,14 @@ python scripts/reproduce_advanced.py --case scba-energy-sea-v39
 ```
 
 14 new tests plus frozen JSON checks enforce the method boundary. The v39 module is **not** a complete disordered Kubo–Středa conductivity, an electromagnetic transverse Ward identity, or the original paper's nonlinear \(EB\) DC PHE. See [v39 numerical audit](docs/SCBA_ENERGY_DERIVATIVE_V39.md).
+
+### v40: Current-vertex Bethe–Salpeter and Hall zero controls
+
+`qgmap.current_vertex_v40` solves the four Pauli-basis noncrossing current vertices separately in RA, AR, RR and AA channels, using **the same scalar-disorder variance** as `scba_streda_v39`. In a doped QWZ model the RA antisymmetric correlator changes when the ladder is included, but the **four-channel symmetric spectral combination has zero antisymmetric Hall part**. The RR current correction converges to zero on a full periodic BZ (momentum Ward identity), and the RA density ladder matches the SCBA self-energy difference.
+
+```bash
+python scripts/reproduce_current_vertex_v40.py --mesh 21 --energy 1.1 --W .12 --eta .12
+python scripts/reproduce_advanced.py --case scba-current-vertex-v40
+```
+
+The independent exact disordered finite torus is a **bare RA control**, not an ensemble-converged SCBA transport coefficient. [v40 model proof and benchmarks](docs/CURRENT_VERTEX_V40.md). Full Hall Kubo–Bastin/Středa surface and sea, transverse gauge contact terms and the PRB's second-order physical EB PHE remain **OPEN**.

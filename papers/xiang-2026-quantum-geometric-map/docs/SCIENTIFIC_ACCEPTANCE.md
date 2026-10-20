@@ -26,6 +26,7 @@
 | Published Fig. 2(b) digital fit | `fig2_source_audit_v27`: approximate 20/40 K published-raster curve digitization and T fits | PASS approximate curve-shape check; author raw data unavailable |
 | Clean antisymmetric Kubo–Středa sea | `streda_clean_sea_v38`: exact two-pole energy primitive, independent matrix energy integral and FHS Chern | PASS only clean two-band gapped benchmark; metallic/disordered full Hall OPEN |
 | Energy-dependent SCBA RR Ward + sea | `scba_streda_v39`: independent self-energy finite difference versus RR density ladder; clean W=0 and exact finite-disorder controls | PASS for model derivative and defined bare-current sea; complete disordered Středa Hall and EB OPEN |
+| Same-disorder RA/AR/RR/AA current ladder | `current_vertex_v40`: four-Pauli-basis BSE, finite-eta RA density Ward, RR momentum Ward, spectral Hall-zero, finite-torus bare RA | PASS QWZ model method; physical disordered Středa and EB DC OPEN |
 | General orbital QMQ/BCQ | General omitted three-band pieces and complete Kubo–Středa physical DC response | OPEN |
 | Real Wannier materials | Requires consistent projected magnetic/position operators, Berry connection and validated response protocol | BLOCKED |
 

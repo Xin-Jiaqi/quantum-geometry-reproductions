@@ -107,3 +107,8 @@ See [v37 provenance and physical limitations](docs/CONTINUUM_SI_FIG2_MIGRATION_V
 - `qgmap.scba_streda_v39.exact_finite_disorder_sea`: exactly diagonalized finite torus with sampled site disorder and complete single-particle eigenstates, **not** SCBA.
 
 Use `python scripts/reproduce_advanced.py --case scba-energy-sea-v39` or the detailed `scripts/reproduce_scba_streda_v39.py`; both return `PARTIAL` science status. See [v39 standalone protocol](docs/SCBA_ENERGY_DERIVATIVE_V39.md). General metallic Hall, current vertices, Středa I and nonlinear EB remain OPEN.
+
+
+## v40 matched noncrossing current vertex
+
+The exact four-Pauli-basis solver `qgmap.current_vertex_v40.pauli_vertex` returns the current vertex and its Bethe–Salpeter residual for a named RA, AR, RR or AA branch with the SAME disorder variance as SCBA. `current_audit` also checks the RA density Ward identity and the RR periodic-momentum Ward limit, and enforces that the four-channel symmetric spectral Hall antisymmetry vanishes. `exact_disorder_ra_torus` provides an independent full-eigenspectrum **bare** RA benchmark. Use `--case scba-current-vertex-v40`; see [method limitations](docs/CURRENT_VERTEX_V40.md). Neither the isolated RA Hall-odd correlator nor the dressed symmetric spectral 4-channel sum is the complete physical disorder Hall conductivity.

@@ -21,6 +21,7 @@ from qgmap.physical_si_liouville_v26 import SIConfig, eq20_physical, eq11_SI_mag
 from qgmap.fig2_source_audit_v27 import load_points, fit_branch, ratio_to_literal, calibration_sensitivity
 from qgmap.streda_clean_sea_v38 import qwz_model, fhs_chern, bulk_sea
 from qgmap.scba_streda_v39 import derivative_audit,sea_energy_scan,exact_finite_disorder_sea
+from qgmap.current_vertex_v40 import current_audit,exact_disorder_ra_torus
 
 from dataclasses import replace
 
@@ -231,6 +232,14 @@ def _scba_sea_v39(n):
               "physical dc limit","second-order mixed EB PHE"]
     }
 
+def _qgmap_v40_current(n):
+    return {
+       "SCBA":current_audit(mesh=n,mass=-1.,W=.12,energy=1.1,eta=.12),
+       "finite_torus":exact_disorder_ra_torus(L=4,mass=-1.,W=.12,mu=1.1,eta=.12,seeds=6),
+       "physics_scope":"RA/AR/RR/AA self-consistent Bethe-Salpeter correlation, NOT full physical Hall Kubo-Streda",
+       "scientific_status":"PARTIAL"
+    }
+
 CASES={
     "spin-four-band":(_spin,23,"Four-band spin-MNHE density matrix versus SM Eq.29","Synthetic nondegenerate four-band model; no impurity or material Wannier operator."),
     "orbital-phe":(_phe,61,"2D Bz orbital PHE; literal SM Eq.56 versus finite-field derivative","Two-band periodic 2D model; printed Eq.56 discrepancy remains open."),
@@ -250,6 +259,7 @@ CASES={
     "fig2-curve-v27":(_source_fig2_v27,0,"Digitized approximate Fig2b curve, fit temperatures, amplitudes and calibration","Approximate PDF pixel data, not published raw dataset or accepted 2pi correction."),
     "clean-streda-sea-v38":(_clean_streda_v38,61,"Antisymmetric clean QWZ Fermi-sea trace and independent integer Chern check","Clean two-band insulator method only; not complete disorder or original EB PHE."),
     "scba-energy-sea-v39":(_scba_sea_v39,21,"Noncrossing energy-dependent SCBA RR Ward derivative and antisymmetric bare-current sea","Synthetic QWZ method ONLY; incomplete transverse vertex and full disordered Kubo-Streda/Bastin."),
+    "scba-current-vertex-v40":(_qgmap_v40_current,21,"Matched SCBA current ladder RA/AR/RR/AA and antisymmetric spectral zero controls","QWZ two-band model only; RA antisymmetric correlator is not a physical Hall conductivity or nonlinear EB PHE."),
 }
 
 def evaluate(case,mesh=None):

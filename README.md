@@ -83,3 +83,5 @@ The PRB reproduction also contains the original v24–v27 continuum Dirac, direc
 The PRB module now includes an independent **clean antisymmetric Hall Fermi-sea** benchmark against integer Chern numbers; it is separate from v18's symmetric dissipative Kubo and from the original paper's EB response. See [v38 scientific scope](papers/xiang-2026-quantum-geometric-map/docs/V38_CLEAN_STREDA_AUDIT.md).
 
 The PRB module also includes the v39 energy-dependent SCBA derivative and RR density Ward benchmark, with separate finite-torus exact disorder comparisons. This is not a full disordered Hall conductivity or original mixed-field EB response. [v39 method limits](papers/xiang-2026-quantum-geometric-map/docs/SCBA_ENERGY_DERIVATIVE_V39.md).
+
+The PRB module now provides a v40 same-disorder RA/AR/RR/AA **current-vertex** calculation, plus a Hall-zero check proving that the antisymmetric RA correlator alone is **not** a physical Hall conductivity. [Scientific scope](papers/xiang-2026-quantum-geometric-map/docs/CURRENT_VERTEX_V40.md).
