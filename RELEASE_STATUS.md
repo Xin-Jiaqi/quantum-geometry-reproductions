@@ -60,3 +60,7 @@ PR #12 merged: the Xiang/Jin/Wang 2025 PRL paper module now contains independent
 ## 2026-10-20: v40 current-vertex Hall method benchmark
 
 In the PRB quantum-geometric-map module, the noncrossing four-Pauli-basis current ladder is now paired with the v39 SCBA self-energy, across RA/AR/RR/AA channels. The result includes the self-energy-matched RA density Ward, periodic-momentum RR current Ward, exact finite-torus bare RA control, and the **vanishing antisymmetric 4-channel symmetric-spectral** diagnostic. The *isolated* antisymmetric RA bubble is not identified as a physical Hall conductivity. Full disordered Kubo-Bastin/Středa plus the original second-order EB DC remain OPEN.
+
+## 2026-10-20: v40b independent RR spatial Ward
+
+Added independent uniform-vector-potential finite-difference tests of the RR SCBA current ladder in both x and y, checking \(\partial_A\Sigma^R=C^{RR}\) and \(\partial_A G^R=G^R\Gamma^{RR}G^R\). Four new tests were added. This is separate from the v40 RA current response and does not constitute physical Hall transport. Full disordered Kubo–Středa and original two-field EB DC remain OPEN.

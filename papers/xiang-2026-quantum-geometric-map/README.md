@@ -117,3 +117,13 @@ python scripts/reproduce_advanced.py --case scba-current-vertex-v40
 ```
 
 The independent exact disordered finite torus is a **bare RA control**, not an ensemble-converged SCBA transport coefficient. [v40 model proof and benchmarks](docs/CURRENT_VERTEX_V40.md). Full Hall Kubo–Bastin/Středa surface and sea, transverse gauge contact terms and the PRB's second-order physical EB PHE remain **OPEN**.
+
+### Independent finite-twist RR Ward control (v40b)
+
+The `qgmap.rr_spatial_ward_v40` module independently computes `Sigma^R(A_x, A_y)` at small positive and negative **uniform vector potential** and verifies that its finite difference matches the RR current Bethe–Salpeter correction. The same SCBA propagators are also checked against `dG^R/dA=G^R Gamma^{RR} G^R`. This **independent twist test** is different from the RA transport ladder and the v39 energy/density Ward; both momentum directions and the zero-disorder limit are tested.
+
+```bash
+python scripts/reproduce_rr_ward_v40.py --mesh 21 --W .12 --energy 1.1 --eta .12
+```
+
+Details and limitations: [v40b RR spatial Ward](docs/RR_SPATIAL_WARD_TWIST_V40.md). Passing the two spatial derivative tests **does not** establish a complete disordered Hall/Středa conductivity or the physical mixed-EB DC protocol.
