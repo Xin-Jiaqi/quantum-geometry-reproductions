@@ -42,3 +42,7 @@ The source and benchmarks use explicit model units; they are not automatically a
 - Degeneracies and response limits must not be treated as covered by nondegenerate expressions.
 
 See [scientific acceptance](docs/SCIENTIFIC_ACCEPTANCE.md), [integration contract](docs/INTEGRATION.md), and [provenance](docs/PROVENANCE.md). Do not redistribute publisher PDF, original figure images, or private logs.
+
+## Migrated advanced-method subset (v31)
+
+The first advanced method is now independently callable: `qgmap.spin_multiband_v5.four_band_audit` reconstructs the four spin-density-matrix terms of SM Eqs. (16–19) and checks their sum against Eq. (29). See [the v31 migration protocol](docs/SPIN_MULTIBAND_MIGRATION_V31.md). It is **not** a general degeneracy-robust material solver. The orbital and SCBA/Ward methods remain in the offline v30 checkpoint until individually migrated and tested.
