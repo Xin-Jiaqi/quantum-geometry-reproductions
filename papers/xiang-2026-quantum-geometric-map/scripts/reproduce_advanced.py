@@ -19,6 +19,7 @@ from qgmap.continuum_ti_v24 import DiracSpec, projector_channels, eigen_channels
 from qgmap.si_fig2_v25 import FigureInputs, evaluate as fig2_SI_evaluate
 from qgmap.physical_si_liouville_v26 import SIConfig, eq20_physical, eq11_SI_magnitude, frequency_hypotheses
 from qgmap.fig2_source_audit_v27 import load_points, fit_branch, ratio_to_literal, calibration_sensitivity
+from qgmap.streda_clean_sea_v38 import qwz_model, fhs_chern, bulk_sea
 
 from dataclasses import replace
 
@@ -211,6 +212,13 @@ def _source_fig2_v27(n):
             "axis_calibration_sensitivity":calibration_sensitivity(csv_path),
             "limits":"Pixel-origin ambiguity; inferred normalization remains OPEN. No publisher image redistributed."}
 
+def _clean_streda_v38(n):
+    result=bulk_sea(n=n,mass=-1.,mu=0.,eta=.02)
+    h,_,_=qwz_model(n,-1.)
+    return {**result,"fhs_chern":fhs_chern(h),
+            "scope":"clean_antisymmetric_sea_only",
+            "not_implemented":"complete_metallic_disorder_Bastin_Streda_and_EB_PHE"}
+
 CASES={
     "spin-four-band":(_spin,23,"Four-band spin-MNHE density matrix versus SM Eq.29","Synthetic nondegenerate four-band model; no impurity or material Wannier operator."),
     "orbital-phe":(_phe,61,"2D Bz orbital PHE; literal SM Eq.56 versus finite-field derivative","Two-band periodic 2D model; printed Eq.56 discrepancy remains open."),
@@ -228,6 +236,7 @@ CASES={
     "fig2-si-v25":(_fig2_SI_v25,0,"Published Eq11 literal SI vs 1/(2pi) diagnostic and voltage estimate","Independent units check; sheet-resistance assumption and figure normalization OPEN."),
     "si-liouville-v26":(_si_liouville_v26,92,"Direct physical-SI band current vs Eq11 restored magnitude","Adiabatic Liouville coefficient, not measurable steady-state DC."),
     "fig2-curve-v27":(_source_fig2_v27,0,"Digitized approximate Fig2b curve, fit temperatures, amplitudes and calibration","Approximate PDF pixel data, not published raw dataset or accepted 2pi correction."),
+    "clean-streda-sea-v38":(_clean_streda_v38,61,"Antisymmetric clean QWZ Fermi-sea trace and independent integer Chern check","Clean two-band insulator method only; not complete disorder or original EB PHE."),
 }
 
 def evaluate(case,mesh=None):

@@ -42,3 +42,8 @@ Migrated the original v24–v27 continuous tilted Dirac, published Eq. 11/SM Eq.
 ## 2026-10-20 Xiang 2025 spin-QGT Eq.(13) migration
 
 The Xiang/Jin/Wang PRL 135, 146303 paper-model module now includes the **printed reduced Fig. 1(a) intrinsic Eq. (13)** in addition to the two-valley NDSC and supplemental Dirac models. It freezes the Fermi-sea and Fermi-surface branches at μ=0,12,20,40 meV and verifies Pauli-algebra kernels against Bloch-eigenbasis matrix elements. GitHub Actions Python 3.11/3.12 pass 20 local-scoped tests. The source Fig. 1(a) factor ~2, omitted four-band terms and metallic driven-DC response remain **OPEN**. The offline PT/multiband methods have *not* been migrated in this update.
+
+
+## 2026-10-20 v38 clean antisymmetric sea benchmark
+
+A new `streda_clean_sea_v38` method computes the *bare clean* two-band antisymmetric Green-function Fermi-sea integral and independently checks it with direct real-energy quadrature, Chern link phases and Berry-curvature integration. Twelve tests are included. The metallic rational pole boundary is shown separately and is NOT claimed as a complete disorder-dressed Středa surface term. Original paper physical DC EB and generic Kubo–Středa remain PARTIAL/OPEN.

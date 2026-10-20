@@ -83,3 +83,15 @@ python scripts/reproduce_advanced.py --case fig2-curve-v27
 ```
 
 The literal SI formula gives an ordinate near **11.02**, while the published figure's approximate digitized plateau is **1.75**. The \(1/(2\pi)\) branch fits the ordinate but remains a **diagnostic hypothesis, not a proven correction or confirmed source of the difference**. Source curve coordinates are approximate PDF pixel readings, not author raw data. For full details see [v37 migration and verification](docs/CONTINUUM_SI_FIG2_MIGRATION_V37.md).
+
+## v38: clean antisymmetric Fermi-sea Green-function benchmark
+
+In a *separate, intentionally topological* QWZ two-band model, `qgmap.streda_clean_sea_v38` evaluates the antisymmetric retarded–advanced Fermi-sea trace via both an analytic two-pole primitive and independent direct real-energy quadrature. A gauge-invariant link Chern invariant and clean Berry-curvature integration verify the insulating limit. Unlike v18's **symmetric dissipative** spectral kernel, this is an **antisymmetric Hall** test. At finite doping, the module explicitly exposes the rational boundary-pole contribution and avoids identifying it with the physically complete disorder-dressed Středa surface term. [Derivation and 12 test gates](docs/V38_CLEAN_STREDA_AUDIT.md).
+
+```bash
+python scripts/reproduce_streda_v38.py --mesh 61 --mass -1 --mu 0 --eta .02
+python scripts/reproduce_streda_v38.py --mesh 101 --mass -1 --mu 1.1 --eta .02
+python scripts/reproduce_advanced.py --case clean-streda-sea-v38
+```
+
+All resulting conductances are dimensionless `sigma/(e²/h)`, not an SI prediction of the PRB steady-state \(EB\) PHE. Full finite-energy disorder self-energy, conserving vertices and Kubo–Středa remain OPEN.

@@ -94,3 +94,8 @@ The finite-q scalar-electric models and homogeneous-E length-gauge model must **
 | Fig. 2(b) fitted curves | `qgmap.fig2_source_audit_v27`, `--case fig2-curve-v27` | Approximate publisher raster pixels, source raw data not available |
 
 See [v37 provenance and physical limitations](docs/CONTINUUM_SI_FIG2_MIGRATION_V37.md). No original PDF or figure is included. Do not silently replace Eq. (11) with its \(1/(2\pi)\) diagnostic branch.
+
+
+### v38 reusable clean Hall Fermi-sea calculation
+
+`qgmap.streda_clean_sea_v38.bulk_sea(n,mass,mu,eta)` runs a clean nondegenerate QWZ Bloch model and returns `sea_sigma_over_e2h` and the independent sharp occupied-band Berry-Chern value. `fhs_chern(H)` supplies a separate velocity-free topological check; `direct_energy_sea` checks the matrix-energy integral against the analytic primitive. `metallic_pole_audit` **only diagnoses** the sea integral's rational pole boundary and does not compute a complete physical Středa Fermi-surface term. See [full science and formulas](docs/V38_CLEAN_STREDA_AUDIT.md). The original PRB mixed \(EB\) PHE and real Wannier are not in this routine.

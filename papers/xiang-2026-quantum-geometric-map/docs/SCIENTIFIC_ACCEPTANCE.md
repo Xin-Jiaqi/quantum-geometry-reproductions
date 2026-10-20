@@ -24,6 +24,7 @@
 | Continuous tilted Dirac SM Eq. (20) | `continuum_ti_v24`: independent projector vs eigensolver; analytic angular kernel and two-color limits | PASS model-adiabatic source formalism; transport DC OPEN |
 | SI Liouville + Eq. (11) | `si_fig2_v25` and `physical_si_liouville_v26`: joules, magnetic moment, electric current and conductance | PASS standard-SI literal coefficient; published Fig. 2(b) normalization OPEN |
 | Published Fig. 2(b) digital fit | `fig2_source_audit_v27`: approximate 20/40 K published-raster curve digitization and T fits | PASS approximate curve-shape check; author raw data unavailable |
+| Clean antisymmetric Kubo–Středa sea | `streda_clean_sea_v38`: exact two-pole energy primitive, independent matrix energy integral and FHS Chern | PASS only clean two-band gapped benchmark; metallic/disordered full Hall OPEN |
 | General orbital QMQ/BCQ | General omitted three-band pieces and complete Kubo–Středa physical DC response | OPEN |
 | Real Wannier materials | Requires consistent projected magnetic/position operators, Berry connection and validated response protocol | BLOCKED |
 
