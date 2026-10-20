@@ -1,0 +1,48 @@
+{
+  "source": "paper-model Eq.13 V27 independently audited offline, exact parameters, no fit",
+  "paper": "PRL 135 146303",
+  "parameter_conventions": {
+    "vx_meV_nm": 65.82119569000001,
+    "vy_meV_nm": 65.82119569000001,
+    "alpha_over_vx": 0.1,
+    "beta_meV": 10,
+    "quadrature": {
+      "nr": 48,
+      "ntheta": 96
+    }
+  },
+  "intrinsic_eq13": [
+    {
+      "mu_meV": 0,
+      "sea": 0,
+      "surface": 0,
+      "total": 0
+    },
+    {
+      "mu_meV": 12,
+      "sea": 0.00002467945372011815,
+      "surface": -0.000017095036235398974,
+      "total": 0.000007584417484719176
+    },
+    {
+      "mu_meV": 20,
+      "sea": 0.000017590089199599122,
+      "surface": -0.000001510992477883146,
+      "total": 0.000016079096721715977
+    },
+    {
+      "mu_meV": 40,
+      "sea": 0.000004970688908697533,
+      "surface": 0.0000013179358190188854,
+      "total": 0.000006288624727716419
+    }
+  ],
+  "acceptance": {
+    "fig1a_absolute": "OPEN_FACTOR_TWO",
+    "fig1a_intrinsic_eq13": "PASS_REDUCED_FORMULA_ONLY",
+    "fig1b_published_formula": "PASS",
+    "SM_eq55_vs_eq56": "OPEN_SOURCE_INCONSISTENCY",
+    "metal_DC_protocol": "NOT_VALIDATED",
+    "DFT": "OUT_OF_SCOPE"
+  }
+}
