@@ -1,0 +1,28 @@
+{
+  "project": "Xiang et al., PRL 134, 116301 (2025)",
+  "doi": "10.1103/PhysRevLett.134.116301",
+  "scientific_status": "PARTIAL",
+  "release_type": "validated-method subset; independent reproduction, not endorsed by authors",
+  "publication_status": "LOCAL_DRAFT_NOT_PUBLISHED",
+  "response_branches": [
+    "paper-defined-low-frequency",
+    "independent-full-frequency"
+  ],
+  "scope": {
+    "rashba": "PASS_MODEL",
+    "dirac_conduction": "PASS_MODEL",
+    "dirac_displacement_eq12": "PASS_MODEL",
+    "smIII_IV": "PASS_TWO_BAND_CLEAN_SUBSET",
+    "mpg": "PASS_243_OF_244_PRINTED_SUBSPACES",
+    "original_fig2d_absolute": "BLOCKED_AUTHOR_DATA",
+    "eq14_antiunitary": "PARTIAL_SOURCE_CONVENTION",
+    "wannier_real_material": "BLOCKED_OPERATOR_INPUT"
+  },
+  "frozen_baseline_round8": "results/frozen/round8_green_wavepacket_reference_v1.json",
+  "frozen_earlier": "results/RELEASE_MANIFEST.json",
+  "publisher_pdf_or_figures_redistributed": false,
+  "native_group_toolkit_API": "NOT_TESTED_OPTIONAL_DEPENDENCY",
+  "allow_empirical_multiplier": false,
+  "author_contact": "NOT_SENT",
+  "github_push": "NOT_DONE"
+}

@@ -1,0 +1,1 @@
+Original copyrighted PRL/Supplemental PDFs are referenced by DOI, not redistributed here. Local source hashes, original filenames and provenance are recorded in docs/SOURCE_MAP.md. GitHub baseline is a read-only snapshot of `main` at 78a34431bd4a165484ac3f714786b98120132f81. No modification or upload to GitHub has yet been made.

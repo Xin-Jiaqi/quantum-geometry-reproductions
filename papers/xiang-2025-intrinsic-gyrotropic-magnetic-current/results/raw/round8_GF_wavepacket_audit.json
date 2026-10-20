@@ -1,0 +1,117 @@
+{
+  "response_protocol": "SM_Eq21_24_wavepacket_AND_SM_Eq44_lesserGreen_resolvent",
+  "physical_scope": "two-band periodic Dirac, filled lower band, no disorder, nonresonant",
+  "mesh": [
+    101,
+    101
+  ],
+  "photon_energy_eV": 0.0041356676943898555,
+  "eta_eV": 0.0,
+  "chemical_potential_eV": 0.0,
+  "columns": {
+    "xx": {
+      "green_mean_K_Ainv": {
+        "real": -2.4378978288014416e-18,
+        "imag": 6.30109046490295e-05
+      },
+      "wave_mean_K_Ainv": {
+        "real": -8.706777960005148e-20,
+        "imag": 6.301090464913468e-05
+      },
+      "max_abs_green_vs_wave_per_k": 1.3814577475633784e-13,
+      "P_cos_over_b_Ainv": 0.01523596896689999,
+      "P_sin_over_b_Ainv": -2.793141171739933e-20,
+      "P_sin_main_Eq10_over_b_Ainv": 5.526763353518893e-22,
+      "physical_imag_K_SI_A_m_inv_T_inv": 0.01775609692120911
+    },
+    "xy": {
+      "green_mean_K_Ainv": {
+        "real": 1.5282242574339318e-06,
+        "imag": 7.04500776029479e-18
+      },
+      "wave_mean_K_Ainv": {
+        "real": 1.5282242574339318e-06,
+        "imag": -1.7005425703135055e-22
+      },
+      "max_abs_green_vs_wave_per_k": 5.069668859494234e-14,
+      "P_cos_over_b_Ainv": -4.353388980002574e-20,
+      "P_sin_over_b_Ainv": -0.00036952297675982434,
+      "P_sin_main_Eq10_over_b_Ainv": 0.0003695093202504464,
+      "physical_imag_K_SI_A_m_inv_T_inv": 1.9852411467384207e-15
+    },
+    "yx": {
+      "green_mean_K_Ainv": {
+        "real": -1.5282242573964926e-06,
+        "imag": -2.5882215406607297e-17
+      },
+      "wave_mean_K_Ainv": {
+        "real": -1.5282242574327128e-06,
+        "imag": 4.251356425783764e-23
+      },
+      "max_abs_green_vs_wave_per_k": 5.395869303228082e-14,
+      "P_cos_over_b_Ainv": 4.353388980002574e-20,
+      "P_sin_over_b_Ainv": 0.00036952297675982466,
+      "P_sin_main_Eq10_over_b_Ainv": -0.00036950932025044635,
+      "physical_imag_K_SI_A_m_inv_T_inv": -7.293453853029377e-15
+    },
+    "yy": {
+      "green_mean_K_Ainv": {
+        "real": 1.1884751915407028e-17,
+        "imag": 6.301090464912957e-05
+      },
+      "wave_mean_K_Ainv": {
+        "real": 4.353388980002574e-19,
+        "imag": 6.301090464913469e-05
+      },
+      "max_abs_green_vs_wave_per_k": 1.108696263241203e-13,
+      "P_cos_over_b_Ainv": 0.01523596896689999,
+      "P_sin_over_b_Ainv": 2.5720706375991774e-20,
+      "P_sin_main_Eq10_over_b_Ainv": 2.1150498218274227e-21,
+      "physical_imag_K_SI_A_m_inv_T_inv": 0.017756096921237308
+    },
+    "xz": {
+      "green_mean_K_Ainv": {
+        "real": 4.457870315522636e-17,
+        "imag": -1.9934712313054288e-16
+      },
+      "wave_mean_K_Ainv": {
+        "real": -5.572337894403295e-18,
+        "imag": 0.0
+      },
+      "max_abs_green_vs_wave_per_k": 9.959641012222279e-14,
+      "P_cos_over_b_Ainv": -1.3930844736008237e-18,
+      "P_sin_over_b_Ainv": -1.197181969500708e-19,
+      "P_sin_main_Eq10_over_b_Ainv": -2.176694490001287e-20,
+      "physical_imag_K_SI_A_m_inv_T_inv": -5.6174829721709825e-14
+    },
+    "yz": {
+      "green_mean_K_Ainv": {
+        "real": -9.664523535605716e-18,
+        "imag": -4.314208479182551e-17
+      },
+      "wave_mean_K_Ainv": {
+        "real": 3.3085756248019566e-18,
+        "imag": 0.0
+      },
+      "max_abs_green_vs_wave_per_k": 7.249568399181063e-14,
+      "P_cos_over_b_Ainv": 5.572337894403295e-18,
+      "P_sin_over_b_Ainv": -1.4845736638836904e-19,
+      "P_sin_main_Eq10_over_b_Ainv": 0.0,
+      "physical_imag_K_SI_A_m_inv_T_inv": -1.2157182049892596e-14
+    }
+  },
+  "SM_eq46_FT_coefficient_positive_harmonic": 0.5,
+  "SM_eq46_printed_over_correct": 2.0,
+  "SM_eq34_metric_intermediate_over_main": 2.0,
+  "max_per_k_GF_vs_wave_abs": 1.3814577475633784e-13,
+  "max_per_k_GF_vs_spectral_abs": 1.3812647607697396e-13,
+  "max_per_k_mainEq10_F_sine_difference": 0.10918536221734348,
+  "fig2d_Dxx_1THz_GF_SI": 0.01775609692120911,
+  "source_notes": {
+    "SM_eq34": "SM page 6 Eq.(34) writes Q=2Re(r sigma) after starting with 2Re of the wavepacket and B harmonics each carrying 1/2. The correct coefficient for its displayed denominator bracket is Re(r sigma).",
+    "SM_eq34_F_vs_main10": "Main Eq.(10) says F=-omega Z/gap^2 and P=-gmuB F sin; direct SM Eq.(21,24) gives P_sin/b=-omega Z/(gap^2-omega^2). Their signs disagree at O(omega); its derivative first affects J at O(omega^2), omitted in Eq(12).",
+    "SM_eq46": "SM page 7 Eq.(46) writes the Fourier integral of cos with 2pi delta at each +/- frequency; with declared integral convention coefficient is pi. Eq.(47) actually uses the correct harmonic field amplitude B/2.",
+    "paper_fig2d_status": "UNRESOLVED original numeric data not supplied; do not infer author plot from local factor-2 algebra alone",
+    "main_eq14_status": "Open response-domain antiunitary convention; round6 already tested K_TR(omega)=K_H(omega)* in the real phase convention."
+  }
+}

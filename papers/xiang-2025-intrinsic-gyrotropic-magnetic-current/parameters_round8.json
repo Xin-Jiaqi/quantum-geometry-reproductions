@@ -1,0 +1,18 @@
+{
+  "source": "Xiang et al., Phys. Rev. Lett. 134, 116301 (2025), SM Sections III-IV",
+  "model": "periodic Dirac, Eq.(17)",
+  "beta_eV": 0.25,
+  "v_eV_A": 0.825,
+  "M_eV_A2": 0.1,
+  "a_A": 1.0,
+  "mu_eV": 0.0,
+  "temperature_K": 0,
+  "frequency_hz": 1000000000000,
+  "frequency_convention": "cyclic_hz",
+  "mesh": 101,
+  "g_factor": 2,
+  "zeeman": "H1=-g*mu_B*B*sigma, no sigma/2",
+  "eta_eV": 0.0,
+  "observable": "linear charge current / magnetic field; complex phase-resolved K",
+  "limits": "two gapped bands, no resonance, clean monochromatic drive"
+}

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "source": "PRL 134 116301 main Eqs. 9-17, caption Fig.2, SM section VI",
+  "physics_protocol": "paper-defined-low-frequency, unit-restored, g=2, no empirical fit",
+  "symmetry_protocol": "channel_resolved_symmetry (paper_printed_eq14 retained as alternative)",
+  "mass_sign": 1,
+  "time_reversed_partner_mass_sign": -1,
+  "g_factor": 2,
+  "frequency_input": {"value": 1000000000000.0, "protocol": "cyclic_hz", "hbar_omega_eV": 0.0041356676943898555},
+  "comparison_only_frequency_protocol": "angular_rad_s",
+  "source_plot_data": "visually estimated from supplied PDF, no author numeric data or calibrated digitization",
+  "fig2d_physical_status": "OPEN: 2x amplitude discrepancy with Eq12 remains at 401x401 and full Kubo"
+}

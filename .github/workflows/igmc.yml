@@ -1,0 +1,27 @@
+name: IGMC validated-method regression
+
+on:
+  push:
+    paths:
+      - ".github/workflows/igmc.yml"
+      - "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/**"
+  pull_request:
+    paths:
+      - ".github/workflows/igmc.yml"
+      - "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/**"
+
+jobs:
+  offline-reproduction:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: papers/xiang-2025-intrinsic-gyrotropic-magnetic-current
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install reproduction module
+        run: python -m pip install -e .
+      - name: Strict frozen regression and source-provenance gate
+        run: python scripts/verify_round9.py

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "g_factor": 2.0,
+  "frequency_hz_cyclic": 1000000000000.0,
+  "expected": {
+    "energy_1THz_eV": 0.0041356676943898555,
+    "si_factor_g2": 281.7940326378506,
+    "rashba_platform_si": 3.8845697693923107,
+    "dirac_insulator_D_si": 0.01775389321777393,
+    "dirac_insulator_D_fullKubo_si": 0.017756096921151175,
+    "dirac_metal_mu085_C_si": -22.72184576396585
+  },
+  "note": "Software regression values only. Frozen curve does not imply comparison to original graph is accepted."
+}

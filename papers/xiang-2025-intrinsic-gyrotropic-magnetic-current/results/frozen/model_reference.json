@@ -1,0 +1,11 @@
+{
+  "protocol": "validated two-band model subset only",
+  "baseline": {
+    "rashba_mu_minus0015": 0.00895246554891911,
+    "rashba_mu_plus0009": 0.01379342840129759,
+    "dirac_gap_c_101": 2.0082705771429478e-14,
+    "dirac_gap_dperomega_101": 0.015234078035779133,
+    "dirac_metal_c_201": -0.08063281380116014,
+    "dirac_metal_dperomega_201": -0.05039945664974845
+  }
+}

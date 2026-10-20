@@ -1,0 +1,21 @@
+{
+  "toolkit_snapshot_sha256": "c3705c1317fac99130562465521cc103ec7370f24f0cb208937523f66b55c5b1",
+  "csv_sha256": "5a1aa3c25403366781da37d8f058c0a28d81ab7fb0e36ecc5702edad808c9baa",
+  "tensor_shapes_sha256": "e66da487da7591907af12e752be901c14e6c8de217ab0a5ba698a87eec500ef6",
+  "class_counts": {
+    "C": {
+      "both": 16,
+      "forbidden": 64,
+      "transverse_only": 18,
+      "longitudinal_only": 24
+    },
+    "D": {
+      "both": 16,
+      "forbidden": 64,
+      "transverse_only": 19,
+      "longitudinal_only": 23
+    }
+  },
+  "Eq14_C_dim_mismatch": 58,
+  "method": "closure+Neumann+character average, 122 groups 244 tensors, NOT author plotting values"
+}

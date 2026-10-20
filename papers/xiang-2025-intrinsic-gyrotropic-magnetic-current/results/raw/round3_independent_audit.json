@@ -1,0 +1,154 @@
+{
+  "protocol": "Paper Eq(12) + finite field Wilson loop + orbital Liouville; source SM p6 literal intermediate is DIAGNOSTIC ONLY",
+  "frequency_hbaromega_eV": 0.0041356676943898555,
+  "SI_factor_A_per_m_T_per_Ainv": 281.7940326378506,
+  "parameters": {
+    "paper": "Xiang et al. PRL 134 116301 (2025)",
+    "model": "Dirac Eq. (17), beta=0.25 eV; v_F=0.825 eV Angstrom; M=0.1 eV Angstrom^2; a=1 Angstrom",
+    "occupied": "zero-temperature filled lower band; mu=0 eV for independent two-route benchmark",
+    "magnetic_perturbation": "H1=-b cos(omega*t) sigma_x; b=g*mu_B*B energy in eV; paper H1 convention",
+    "frequency_hz": 1000000000000.0,
+    "frequency_protocol": "cyclic_hz",
+    "g_factor": 2.0,
+    "wilson_meshes": [
+      41,
+      71,
+      101,
+      151,
+      201,
+      301
+    ],
+    "field_amplitudes_eV": [
+      0.001,
+      0.0001
+    ],
+    "liouville_meshes": [
+      31,
+      51,
+      101
+    ],
+    "mu_mesh_N": 201,
+    "approximate_source_visual_estimates_A_per_m_T": {
+      "mu_eV": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "displacement_A_per_m_T": [
+        -0.135,
+        0.04,
+        -0.135
+      ],
+      "visual_reading_uncertainty_A_per_m_T": [
+        0.01,
+        0.003,
+        0.01
+      ],
+      "provenance": "Manually read rough values from Fig.2(d), supplementary and raw data do not contain official numerical series. NOT fitted inputs."
+    }
+  },
+  "wilson": [
+    {
+      "N": 41,
+      "Q_kernel_dperomega_Ainv_per_eV": 0.015236647006393525,
+      "Kubo_imag_full_Ainv": 6.302153211415369e-05,
+      "wilson_dperomega_Ainv_per_eV_b0.001": 0.01518278853690624,
+      "wilson_relative_error_b0.001": -0.003534798008031914,
+      "wilson_dperomega_Ainv_per_eV_b0.0001": 0.01518277072342741,
+      "wilson_relative_error_b0.0001": -0.00353596712869364
+    },
+    {
+      "N": 71,
+      "Q_kernel_dperomega_Ainv_per_eV": 0.015234078475994454,
+      "Kubo_imag_full_Ainv": 6.301090647059652e-05,
+      "wilson_dperomega_Ainv_per_eV_b0.001": 0.01521658642590378,
+      "wilson_relative_error_b0.001": -0.0011482184576007137,
+      "wilson_dperomega_Ainv_per_eV_b0.0001": 0.015216568176595151,
+      "wilson_relative_error_b0.0001": -0.0011494163842529215
+    },
+    {
+      "N": 101,
+      "Q_kernel_dperomega_Ainv_per_eV": 0.015234078035779133,
+      "Kubo_imag_full_Ainv": 6.301090464913824e-05,
+      "wilson_dperomega_Ainv_per_eV_b0.001": 0.015225442576748963,
+      "wilson_relative_error_b0.001": -0.0005668514372768607,
+      "wilson_dperomega_Ainv_per_eV_b0.0001": 0.015225424318534908,
+      "wilson_relative_error_b0.0001": -0.000568049948536431
+    },
+    {
+      "N": 151,
+      "Q_kernel_dperomega_Ainv_per_eV": 0.01523407803570313,
+      "Kubo_imag_full_Ainv": 6.30109046488243e-05,
+      "wilson_dperomega_Ainv_per_eV_b0.001": 0.015230224571215431,
+      "wilson_relative_error_b0.001": -0.00025295029201422015,
+      "wilson_dperomega_Ainv_per_eV_b0.0001": 0.015230206308329932,
+      "wilson_relative_error_b0.0001": -0.00025414910991816697
+    },
+    {
+      "N": 201,
+      "Q_kernel_dperomega_Ainv_per_eV": 0.015234078035703164,
+      "Kubo_imag_full_Ainv": 6.30109046488239e-05,
+      "wilson_dperomega_Ainv_per_eV_b0.001": 0.015231911260842829,
+      "wilson_relative_error_b0.001": -0.0001422320967017221,
+      "wilson_dperomega_Ainv_per_eV_b0.0001": 0.015231892996293673,
+      "wilson_relative_error_b0.0001": -0.00014343102381186856
+    },
+    {
+      "N": 301,
+      "Q_kernel_dperomega_Ainv_per_eV": 0.015234078035703156,
+      "Kubo_imag_full_Ainv": 6.30109046488241e-05,
+      "wilson_dperomega_Ainv_per_eV_b0.001": 0.015233122031988781,
+      "wilson_relative_error_b0.001": -6.275428760005308e-05,
+      "wilson_dperomega_Ainv_per_eV_b0.0001": 0.01523310376637059,
+      "wilson_relative_error_b0.0001": -6.395328488417729e-05
+    }
+  ],
+  "liouville": [
+    {
+      "N": 31,
+      "orbital_liouville_real": 4.433382785638958e-17,
+      "orbital_liouville_imag": 6.320486158369131e-05,
+      "Kubo_geometric_imag": 6.320486158332878e-05,
+      "absolute_imag_error": 3.6253010142484055e-16
+    },
+    {
+      "N": 51,
+      "orbital_liouville_real": 1.2719971600857234e-17,
+      "orbital_liouville_imag": 6.301149349523415e-05,
+      "Kubo_geometric_imag": 6.301149349525117e-05,
+      "absolute_imag_error": 1.702197410802242e-17
+    },
+    {
+      "N": 101,
+      "orbital_liouville_real": -1.7195886471010167e-17,
+      "orbital_liouville_imag": 6.301090464897298e-05,
+      "Kubo_geometric_imag": 6.301090464913824e-05,
+      "absolute_imag_error": 1.6525951614110301e-16
+    }
+  ],
+  "fig2_d_source_visual_estimate": {
+    "mu_eV": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "displacement_A_per_m_T": [
+      -0.135,
+      0.04,
+      -0.135
+    ],
+    "visual_reading_uncertainty_A_per_m_T": [
+      0.01,
+      0.003,
+      0.01
+    ],
+    "provenance": "Manually read rough values from Fig.2(d), supplementary and raw data do not contain official numerical series. NOT fitted inputs."
+  },
+  "main_fig2_d_gap_si": 0.01775389321777393,
+  "SM_literal_double_gap_si": 0.03550778643554786,
+  "warnings": [
+    "Figure point readings are hand-estimated from publisher figure, not original numerical data.",
+    "The SM Eq(34) intermediate normalization is not independently verified and must not be called a physical alternative.",
+    "No fitted normalization or g factor used."
+  ]
+}

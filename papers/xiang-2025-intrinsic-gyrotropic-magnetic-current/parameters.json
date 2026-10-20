@@ -1,0 +1,33 @@
+{
+  "source": "Xiang et al. PRL 134 116301 (2025)",
+  "conventions": {
+    "e": 1,
+    "hbar": 1,
+    "spin_operator": "Pauli sigma, as printed H1=-g*mu_B*B*sigma",
+    "zeeman_amplitude": "g*mu_B factored out of response sigma",
+    "frequency": "hbar omega energy units in code; figure SI normalization not yet validated",
+    "integration_measure": "d^2k/(2pi)^2",
+    "temperature_K": 0,
+    "chemical_potential_eV": 0,
+    "eta_eV": 0,
+    "resp_protocol": "paper-defined-low-frequency with independent finite-omega test"
+  },
+  "rashba": {
+    "lambda_eV_angstrom": 0.6,
+    "mass_over_m_e": 1.1,
+    "hbar_sq_over_2m_e_eV_angstrom2": 3.80998212,
+    "continuum": true,
+    "k_cutoff_inv_angstrom": 0.5
+  },
+  "dirac": {
+    "beta_eV": 0.25,
+    "a_angstrom": 1.0,
+    "vF_eV_angstrom": 0.825,
+    "M_eV_angstrom2": 0.1,
+    "omega_caption_Hz": 1000000000000,
+    "hbar_omega_for_synthetic_test_eV": 0.001,
+    "BZ": "[-pi/a,pi/a)^2",
+    "mesh": "midpoint periodic NxN"
+  },
+  "figure_data_source": "author figures only, no published numeric arrays; no digitized values yet"
+}

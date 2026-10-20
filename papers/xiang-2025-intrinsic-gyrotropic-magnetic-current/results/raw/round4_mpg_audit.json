@@ -1,0 +1,394 @@
+{
+  "provenance": {
+    "github_repo": "Xin-Jiaqi/group-theory-operations-toolkit",
+    "git_tree": "551a0daf8d4ba5a5f24b2811694bfe438616de48",
+    "magnetic_point_groups_blob_sha": "406309c2686cbdaf7634dbea10ad8b059ee40e4d",
+    "group_operations_blob_sha": "1c43c66646e214c8f5939c06a17a8e69fb4c5122",
+    "minimal_snapshot_sha256": "c3705c1317fac99130562465521cc103ec7370f24f0cb208937523f66b55c5b1"
+  },
+  "protocol": "real AC in-phase conduction C / quadrature displacement D; not full complex finite-omega tensor",
+  "method": "122 complete magnetic group closures; 244 independent 9D Neumann-SVD subspaces checked against 244 complete-group character averages",
+  "status": "PASS_METHOD_SYMMETRY_SUBSET",
+  "character_crosschecks": 244,
+  "class_counts": {
+    "C": {
+      "both": 16,
+      "forbidden": 64,
+      "transverse_only": 18,
+      "longitudinal_only": 24
+    },
+    "D": {
+      "both": 16,
+      "forbidden": 64,
+      "transverse_only": 19,
+      "longitudinal_only": 23
+    }
+  },
+  "allowed_groups": {
+    "C": 58,
+    "D": 58
+  },
+  "Eq14_C_dimension_disagreements": 58,
+  "Eq14_mismatches": [
+    {
+      "number": 2,
+      "symbol": "11'",
+      "C_dim": 9,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 5,
+      "symbol": "-1'",
+      "C_dim": 0,
+      "Eq14_C_dim": 9
+    },
+    {
+      "number": 7,
+      "symbol": "21'",
+      "C_dim": 5,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 8,
+      "symbol": "2'",
+      "C_dim": 5,
+      "Eq14_C_dim": 4
+    },
+    {
+      "number": 10,
+      "symbol": "m1'",
+      "C_dim": 4,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 11,
+      "symbol": "m'",
+      "C_dim": 4,
+      "Eq14_C_dim": 5
+    },
+    {
+      "number": 14,
+      "symbol": "2'/m",
+      "C_dim": 0,
+      "Eq14_C_dim": 4
+    },
+    {
+      "number": 15,
+      "symbol": "2/m'",
+      "C_dim": 0,
+      "Eq14_C_dim": 5
+    },
+    {
+      "number": 18,
+      "symbol": "2221'",
+      "C_dim": 3,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 19,
+      "symbol": "2'2'2",
+      "C_dim": 3,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 21,
+      "symbol": "mm21'",
+      "C_dim": 2,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 23,
+      "symbol": "m'm'2",
+      "C_dim": 2,
+      "Eq14_C_dim": 3
+    },
+    {
+      "number": 26,
+      "symbol": "m'mm",
+      "C_dim": 0,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 28,
+      "symbol": "m'm'm'",
+      "C_dim": 0,
+      "Eq14_C_dim": 3
+    },
+    {
+      "number": 30,
+      "symbol": "41'",
+      "C_dim": 3,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 31,
+      "symbol": "4'",
+      "C_dim": 3,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 33,
+      "symbol": "-41'",
+      "C_dim": 2,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 34,
+      "symbol": "-4'",
+      "C_dim": 2,
+      "Eq14_C_dim": 3
+    },
+    {
+      "number": 38,
+      "symbol": "4/m'",
+      "C_dim": 0,
+      "Eq14_C_dim": 3
+    },
+    {
+      "number": 39,
+      "symbol": "4'/m'",
+      "C_dim": 0,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 41,
+      "symbol": "4221'",
+      "C_dim": 2,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 42,
+      "symbol": "4'22'",
+      "C_dim": 2,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 43,
+      "symbol": "42'2'",
+      "C_dim": 2,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 45,
+      "symbol": "4mm1'",
+      "C_dim": 1,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 47,
+      "symbol": "4m'm'",
+      "C_dim": 1,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 49,
+      "symbol": "-42m1'",
+      "C_dim": 1,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 51,
+      "symbol": "-4'2m'",
+      "C_dim": 1,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 55,
+      "symbol": "4/m'mm",
+      "C_dim": 0,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 57,
+      "symbol": "4'/m'm'm",
+      "C_dim": 0,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 59,
+      "symbol": "4/m'm'm'",
+      "C_dim": 0,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 61,
+      "symbol": "31'",
+      "C_dim": 3,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 64,
+      "symbol": "-3'",
+      "C_dim": 0,
+      "Eq14_C_dim": 3
+    },
+    {
+      "number": 66,
+      "symbol": "321'",
+      "C_dim": 2,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 67,
+      "symbol": "32'",
+      "C_dim": 2,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 69,
+      "symbol": "3m1'",
+      "C_dim": 1,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 70,
+      "symbol": "3m'",
+      "C_dim": 1,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 73,
+      "symbol": "-3'm",
+      "C_dim": 0,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 74,
+      "symbol": "-3'm'",
+      "C_dim": 0,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 77,
+      "symbol": "61'",
+      "C_dim": 3,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 78,
+      "symbol": "6'",
+      "C_dim": 3,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 81,
+      "symbol": "-6'",
+      "C_dim": 0,
+      "Eq14_C_dim": 3
+    },
+    {
+      "number": 85,
+      "symbol": "6/m'",
+      "C_dim": 0,
+      "Eq14_C_dim": 3
+    },
+    {
+      "number": 88,
+      "symbol": "6221'",
+      "C_dim": 2,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 89,
+      "symbol": "6'22'",
+      "C_dim": 2,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 90,
+      "symbol": "62'2'",
+      "C_dim": 2,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 92,
+      "symbol": "6mm1'",
+      "C_dim": 1,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 93,
+      "symbol": "6'mm'",
+      "C_dim": 1,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 94,
+      "symbol": "6m'm'",
+      "C_dim": 1,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 97,
+      "symbol": "-6'm'2",
+      "C_dim": 0,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 98,
+      "symbol": "-6'm2'",
+      "C_dim": 0,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 102,
+      "symbol": "6/m'mm",
+      "C_dim": 0,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 106,
+      "symbol": "6/m'm'm'",
+      "C_dim": 0,
+      "Eq14_C_dim": 2
+    },
+    {
+      "number": 108,
+      "symbol": "231'",
+      "C_dim": 1,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 111,
+      "symbol": "m'-3'",
+      "C_dim": 0,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 113,
+      "symbol": "4321'",
+      "C_dim": 1,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 114,
+      "symbol": "4'32'",
+      "C_dim": 1,
+      "Eq14_C_dim": 0
+    },
+    {
+      "number": 117,
+      "symbol": "-4'3m'",
+      "C_dim": 0,
+      "Eq14_C_dim": 1
+    },
+    {
+      "number": 122,
+      "symbol": "m'-3'm'",
+      "C_dim": 0,
+      "Eq14_C_dim": 1
+    }
+  ],
+  "matched_sm_reference": {
+    "4mm1prime": {
+      "C_dim": 1,
+      "D_dim": 0
+    },
+    "4mprimemprime": {
+      "C_dim": 1,
+      "D_dim": 2
+    }
+  },
+  "external_live_toolkit_comparison": "not_executed_external_toolkit_unavailable",
+  "coordinate_warning": "SM monoclinic 2/m uses unique axis y; standard toolkit snapshots use z; shape comparison requires y<->z transform"
+}

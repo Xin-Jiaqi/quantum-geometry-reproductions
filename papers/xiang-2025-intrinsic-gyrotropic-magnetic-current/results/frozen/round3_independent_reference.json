@@ -1,0 +1,17 @@
+{
+  "snapshot": "round3 physically independent gapped-Dirac checks; first and second frozen original unchanged",
+  "protocol": "paper_main_eq12_correct_two_independent_methods",
+  "values": {
+    "omega_eV": 0.0041356676943898555,
+    "N301_wilson_b1e-4": 0.01523310376637059,
+    "N301_main_D_peromega": 0.015234078035703156,
+    "N101_liouville_imag": 6.301090464897298e-05,
+    "N101_kubo_imag": 6.301090464913824e-05,
+    "in_gap_D_SI": 0.01775389321777393,
+    "SM_literal_intermediate_D_SI_diagnostic": 0.03550778643554786
+  },
+  "warnings": [
+    "SM literal intermediate is not a validated physical response.",
+    "Source Fig2(d) original numerical data unavailable; remain PARTIAL."
+  ]
+}

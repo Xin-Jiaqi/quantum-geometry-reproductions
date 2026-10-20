@@ -1,0 +1,16 @@
+{
+  "release_id": "round9-local-review-2026-10-20",
+  "status": "LOCAL_DRAFT_PARTIAL",
+  "files_sha256": {
+    "release/release_contract.json": "99273268d20b4998ead6d5cdf09cd0b5003b2f15f1178e6da7e9d2569f104508",
+    "scripts/verify_round9.py": "19c29cd2e6ca72e01d4c0bcbe7f1e2c309a59df6104e123831f7106d0e30af6b",
+    "tests/test_round9_release.py": "b8f37e45f8dfcc7579b9a42b499a29b3c435cb1b55c9b7ba33b059811c7a52ee",
+    "docs/RELEASE_CANDIDATE_ROUND9.md": "326ffdc7f8892bbfdbb945cf22ded2d5d5f4a4a30a03e21ecef38c136c702cc7",
+    "docs/WORKLOG_ROUND9.md": "00be1ff2211beb184d4dfda1a12e54f2979398f075fcde31c59c5f20de29a9e6",
+    "docs/HANDOFF_ROUND9.md": "37fa937d99b8a2a47b7426ccbe97e4a4af4bab5b915bccc2a82bf3e3996b2f13",
+    "REPORT_ROUND9.md": "a6e33fb1c2a2a6d0ecf4acabe047e27e479e3d27663d0db5dacc46d140f1f4ba"
+  },
+  "staged_workflow_sha256": "baadb381ef6debfbdfa3b1a8496f4495390e6e2c48165537fc1f49649f0d0e71",
+  "round8_frozen_reference_sha256": "89203e01fc6226795fe1d55dbe754c9e3141ea0663799eac86353d71a0f1facb",
+  "note": "Never report GitHub CI PASS without remote commit, run URL, and conclusion."
+}

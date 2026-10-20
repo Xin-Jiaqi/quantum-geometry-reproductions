@@ -1,0 +1,53 @@
+{
+  "protocol": "ROUND6_dvector_BZ_gauss_TR_fixed_source_2026-10-20",
+  "older_file_hashes_at_round5": {
+    "results/frozen/ROUND1_RELEASE_MANIFEST.json": "2d9007ee2e0816e00e578e8a3cc0d6201dff443fe428196d389e6d9143802c8a",
+    "results/frozen/model_reference.json": "03b6df67646cbecb7e1ace1355493231eb32d91d9ef128f653434d4931b80783",
+    "results/frozen/round2_si_reference.json": "ada7d264f24f6cb0bcd92d7492324a3f09e446f45c46183d86daf0b96c7831d6",
+    "results/frozen/round3_independent_reference.json": "fd3bd3dcc7a19f89c13614822bd94e8296f50ec6f44c1919e3739703ecf1c472",
+    "results/frozen/round4_mpg_reference_v1.json": "8bd3cf52fc782fde603417d00b0522d63c0cec2d0626b6033ba1e6a9918a321e",
+    "results/frozen/round4_mpg_reference_v2.json": "eeaf61fcb123d25e5d0737db4cfd0322d13d8495995c3fe986f0f7fb1d337464",
+    "results/frozen/round5_source_table_reference_v1.json": "520fe86d91d7b9e2472b91432db9dafd5819ea3daf093122881de20f149f63ae"
+  },
+  "new_evidence_file_hashes": {
+    "results/raw/round6_analytic_dirac_audit.json": "46c79ff5310fa11d1d9090e6c078bd215fe9a4135ee2b886a1eb1f33415493f6",
+    "results/raw/round6_complex_TR_quadrature.csv": "9396f571bb1a452dcb864693e76b049b94643f1b356661a8de2c8fe48099c08f",
+    "results/raw/round6_gauss_convergence.csv": "25fafa6a7a74bc3dd4b5fb8f2e50ecf955d8f7e2896f41fdac8d3ae398d374d6",
+    "results/figures/round6_independent_gauss_convergence.png": "8887900e85ab0cefd66cc0bbc9a9d79d7b66cc7f4b9a6bb925a712f1313adf05"
+  },
+  "expected": {
+    "photon_eV": 0.0041356676943898555,
+    "pointwise_checks": 12,
+    "max_pair_kernels_abs_error": {
+      "Z_abs": 1.7763568394002505e-15,
+      "Dperomega_abs": 2.6645352591003757e-15
+    },
+    "TR_exact_complex_checks": 12,
+    "max_complex_TR_conjugation_error": 1.732766921530499e-17,
+    "max_complex_vs_spectral_Kubo_error": 5.563820617334597e-17,
+    "gauss_convergence_abs_Dperomega_last_step": 7.126895046338788e-09,
+    "gauss_orders": [
+      16,
+      24,
+      32,
+      48,
+      64,
+      96,
+      128
+    ],
+    "gauss_Dperomega": [
+      0.002673355684059385,
+      0.011864075597284529,
+      0.01439655200312559,
+      0.015187037228465462,
+      0.015231546109013921,
+      0.015234070888735879,
+      0.015234078015630925
+    ],
+    "midpoint_N301_Dperomega": 0.015234078035703156,
+    "spectral_N301_Dperomega": 0.015234078035703156,
+    "gauss_main_fig2d_gap_SI_A_m1_T1": 0.01775389319438161
+  },
+  "parameter_input_file": "parameters_round6.json",
+  "parameter_input_sha256": "a7471aa333cf4d67ff23d5a77d6ec1b53a24c6618a174cd2711bd5e5674645cd"
+}

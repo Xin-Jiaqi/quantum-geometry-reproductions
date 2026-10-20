@@ -1,0 +1,69 @@
+{
+  "parameters_round6": {
+    "source": "Xiang et al., PRL 134, 116301 (2025), main Eqs (5), (6), (8), (11), (12), (17), Fig 2 caption",
+    "model": "two-band lattice Dirac; H=d(k).sigma, mass_sign +/- 1",
+    "energy_unit": "eV",
+    "k_unit": "inverse Angstrom",
+    "lattice_a_Angstrom": 1.0,
+    "beta_eV": 0.25,
+    "vF_eV_Angstrom": 0.825,
+    "M_eV_Angstrom_squared": 0.1,
+    "g_factor": 2.0,
+    "Zeeman_perturbation": "H1=-g*mu_B*B*sigma; Pauli sigma not hbar sigma/2",
+    "electric_charge_and_hbar": "restore SI only at final current conversion; response kernels use e=hbar=1",
+    "frequency_protocol": "cyclic_hz",
+    "frequency_hz": 1000000000000.0,
+    "temperature_K": 0.0,
+    "chemical_potential_eV": 0.0,
+    "BZ": "[-pi/a,pi/a]^2, primitive square lattice, normalized d2k/(2pi)^2",
+    "gauss_legendre_orders": [
+      16,
+      24,
+      32,
+      48,
+      64,
+      96,
+      128
+    ],
+    "midpoint_reference_N": 301,
+    "phase_convention": "B(t)=Re[B0 exp(-i*omega*t)]; real K is in-phase C; positive imaginary K is sin-phase D",
+    "physical_response_protocol": "paper_main_eq12; sm_eq34_literal_x2 is diagnostic only",
+    "convergence_note": "Gauss quadrature is validated only in the gapped insulator (mu=0) where the Fermi projector is smooth; metal is separate",
+    "source_figure_data": "NOT AVAILABLE; only approximate reading from PDF outside numerical acceptance"
+  },
+  "protocol": "PRL Eq.(17) d-vector identity -> no eigenvectors -> independent Gauss quadrature",
+  "source_fig2d_values": "manual approximate only; no author raw data; neither source curve used as input",
+  "photon_eV": 0.0041356676943898555,
+  "pointwise_checks": 12,
+  "max_pair_kernels_abs_error": {
+    "Z_abs": 1.7763568394002505e-15,
+    "Dperomega_abs": 2.6645352591003757e-15
+  },
+  "TR_exact_complex_checks": 12,
+  "max_complex_TR_conjugation_error": 1.732766921530499e-17,
+  "max_complex_vs_spectral_Kubo_error": 5.563820617334597e-17,
+  "gauss_convergence_abs_Dperomega_last_step": 7.126895046338788e-09,
+  "gauss_orders": [
+    16,
+    24,
+    32,
+    48,
+    64,
+    96,
+    128
+  ],
+  "gauss_Dperomega": [
+    0.002673355684059385,
+    0.011864075597284529,
+    0.01439655200312559,
+    0.015187037228465462,
+    0.015231546109013921,
+    0.015234070888735879,
+    0.015234078015630925
+  ],
+  "midpoint_N301_Dperomega": 0.015234078035703156,
+  "spectral_N301_Dperomega": 0.015234078035703156,
+  "gauss_main_fig2d_gap_SI_A_m1_T1": 0.01775389319438161,
+  "SM_eq34_doubled_intermediate_diagnostic_only": 0.03550778638876322,
+  "conclusion": "Independent 3-vector formulas and Gauss quadrature support main Eq.(12). Author plot absolute normalization remains unresolved."
+}
