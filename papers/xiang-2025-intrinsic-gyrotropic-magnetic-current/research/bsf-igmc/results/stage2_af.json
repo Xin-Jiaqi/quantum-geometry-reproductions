@@ -1,0 +1,231 @@
+{
+  "scientific_status": "MODEL_VALIDATED_BSF_NOT_ESTABLISHED",
+  "model": "8 bands: 2 layers x 2 displaced orbitals x physical spin",
+  "onsite_layer_polar_term": 0,
+  "hopping_source": "explicit real-space Gaussian of layer/orbital center displacement",
+  "parameters": {
+    "yB": 0.37,
+    "xB": 0.0,
+    "t0": 0.45,
+    "kappa": 2.8,
+    "tAB": 0.22,
+    "mass": 0.85,
+    "lambda_so": 0.38,
+    "lambda_z": 0.15,
+    "exchange": 0.23,
+    "cant": 0.14,
+    "inter_soc": 0.16,
+    "inter_spin": 0.18,
+    "shell": 2,
+    "inter_orbital": 1.0
+  },
+  "conventions": "lattice momentum a=1, e=hbar=1, Dxx/omega reduced BZ averaged kernel (not SI current)",
+  "toolkit": {
+    "source": "Xin-Jiaqi/group-theory-operations-toolkit v0.18.0 pinned generators",
+    "setting": "Cartesian x,y,z; mx = P_xz mz P_xz^T",
+    "internal_state_groups": {
+      "identity": {
+        "C": {
+          "dimension": 9,
+          "xy_allowed": true,
+          "xx_allowed": true
+        },
+        "D": {
+          "dimension": 9,
+          "xy_allowed": true,
+          "xx_allowed": true
+        }
+      },
+      "1prime": {
+        "C": {
+          "dimension": 9,
+          "xy_allowed": true,
+          "xx_allowed": true
+        },
+        "D": {
+          "dimension": 0,
+          "xy_allowed": false,
+          "xx_allowed": false
+        }
+      },
+      "mx": {
+        "C": {
+          "dimension": 4,
+          "xy_allowed": true,
+          "xx_allowed": false
+        },
+        "D": {
+          "dimension": 4,
+          "xy_allowed": true,
+          "xx_allowed": false
+        }
+      },
+      "mxprime": {
+        "C": {
+          "dimension": 4,
+          "xy_allowed": true,
+          "xx_allowed": false
+        },
+        "D": {
+          "dimension": 5,
+          "xy_allowed": false,
+          "xx_allowed": true
+        }
+      }
+    },
+    "connection_pairs": {
+      "mz": {
+        "time_reversal": false,
+        "polar_Pz_sign": -1,
+        "Cxy_switch_sign": -1,
+        "Dxx_switch_sign": -1
+      },
+      "mzprime": {
+        "time_reversal": true,
+        "polar_Pz_sign": -1,
+        "Cxy_switch_sign": -1,
+        "Dxx_switch_sign": 1
+      },
+      "2x": {
+        "time_reversal": false,
+        "polar_Pz_sign": -1,
+        "Cxy_switch_sign": -1,
+        "Dxx_switch_sign": 1
+      },
+      "2xprime": {
+        "time_reversal": true,
+        "polar_Pz_sign": -1,
+        "Cxy_switch_sign": -1,
+        "Dxx_switch_sign": -1
+      }
+    }
+  },
+  "branches": {
+    "AF": {
+      "mu_eV": 0.0,
+      "symmetry_errors": {
+        "partner": 2.2247786310271853e-16,
+        "internal_mxT": 1.7010907505015192e-16,
+        "hermiticity": 0.0,
+        "derivative_x": 2.515515573620064e-11,
+        "derivative_y": 2.893590922425915e-11
+      },
+      "plus": {
+        "21": {
+          "Dxx_over_omega": 0.0030853300263805985,
+          "Cxx": -2.0049135411835123e-19,
+          "indirect_gap": 0.23538472261388,
+          "E4_max": -0.10938819917655299,
+          "E5_min": 0.125996523437327,
+          "occ_range": [
+            4,
+            4
+          ],
+          "mesh": 21
+        },
+        "31": {
+          "Dxx_over_omega": 0.0030853327390024357,
+          "Cxx": -7.337544099170239e-18,
+          "indirect_gap": 0.23390068578287154,
+          "E4_max": -0.10805989504478088,
+          "E5_min": 0.12584079073809068,
+          "occ_range": [
+            4,
+            4
+          ],
+          "mesh": 31
+        }
+      },
+      "minus": {
+        "31": {
+          "Dxx_over_omega": -0.0030853327390024297,
+          "Cxx": 2.8302640790902816e-18,
+          "indirect_gap": 0.233900685782872,
+          "E4_max": -0.10805989504478104,
+          "E5_min": 0.12584079073809096,
+          "occ_range": [
+            4,
+            4
+          ],
+          "mesh": 31
+        }
+      },
+      "u0": {
+        "21": {
+          "Dxx_over_omega": -2.5394333331672915e-18,
+          "Cxx": 6.245157086565378e-18,
+          "indirect_gap": 0.1311167337237041,
+          "E4_max": -0.023856055668852395,
+          "E5_min": 0.10726067805485172,
+          "occ_range": [
+            4,
+            4
+          ],
+          "mesh": 21
+        }
+      },
+      "wilson": {
+        "21": 0.003040233718703106
+      },
+      "ablation": {
+        "inter_spin": {
+          "Dxx_over_omega": 5.395516160091366e-05,
+          "Cxx": 1.1599242289765555e-18,
+          "indirect_gap": 0.19807040726947606,
+          "E4_max": -0.1567853250228761,
+          "E5_min": 0.04128508224659997,
+          "occ_range": [
+            4,
+            4
+          ],
+          "mesh": 21
+        },
+        "inter_soc": {
+          "Dxx_over_omega": 0.0025561272058562865,
+          "Cxx": 6.355244026927504e-19,
+          "indirect_gap": 0.2760469935508642,
+          "E4_max": -0.12377050288944762,
+          "E5_min": 0.1522764906614166,
+          "occ_range": [
+            4,
+            4
+          ],
+          "mesh": 21
+        },
+        "lambda_so": {
+          "Dxx_over_omega": -0.00023608179428916164,
+          "Cxx": -8.932759523293447e-19,
+          "indirect_gap": 0.3500004407398222,
+          "E4_max": -0.17302224392980114,
+          "E5_min": 0.17697819681002108,
+          "occ_range": [
+            4,
+            4
+          ],
+          "mesh": 21
+        },
+        "cant": {
+          "Dxx_over_omega": 0.003517115652966724,
+          "Cxx": -3.619415959939137e-18,
+          "indirect_gap": 0.21734553573713244,
+          "E4_max": -0.16366309507621266,
+          "E5_min": 0.05368244066091979,
+          "occ_range": [
+            4,
+            4
+          ],
+          "mesh": 21
+        }
+      },
+      "band_energy_only": {
+        "0.000": -3.957641832713165,
+        "0.190": -4.016533549179751,
+        "0.380": -4.10334510747524,
+        "0.480": -4.121993920306579
+      },
+      "layer_charge_+0.00": -2.81470732875125e-17,
+      "layer_charge_+0.19": -0.1136127099425272,
+      "layer_charge_-0.19": 0.11361270994252716
+    }
+  }
+}

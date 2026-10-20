@@ -1,0 +1,9 @@
+# Next-stage DFT gates, not yet executed
+
+1. Select one **real** bilayer (AgF₂ Type-I is a symmetry-motivated starting point, not a prediction). Fix lattice/functional/U/vdW/SOC/magnetic configuration and relaxed atomic positions for two candidate sliding partners. Identify correct magnetic layer groups and magnetic domains; test multiple structural symmetry tolerances with the toolkit. Do not infer magnetic symmetry from atomic positions alone.
+2. Compute relaxed energy landscape \(E(u_x,u_y)\) including **ions** and magnetism. Require two actual local minima, meaningful and independently justified finite barrier, charge/polarization difference and magnetically self-consistent moments and anisotropy. If unsuccessful, **stop BSF claim** regardless of IGMC toy evidence.
+3. At each minimum and along any candidate path, check band gaps, SOC, magnetic ordering and per-spin orbital projections. Group-theory screening must verify allowed `Dxx` in the actual **magnetic group**, and compare both configurations in the same laboratory axes.
+4. Extend W90Flow top-K handoff to include **same-gauge full spin and position/Berry matrices** with SHA256 and physical provenance. HR and Wannier centers alone cannot provide quantitative multiband IGMC. Verify projected operator gauge covariance and phase/normalization against a trusted independent small-band reference; also distinguish spin-Zeeman, orbital-Zeeman and Faraday-electric drives.
+5. Only then compute \(\sigma^D(\omega)\) and \(\sigma^C(\mu,\omega)\), with metal/insulator handling, degenerate-subspace covariance, k-mesh and broadening convergence. Report amplitude and switching parity without altering upstream paper frozen benchmarks.
+
+**Current status:** ALL 1–5 unperformed; no DFT, no real material screening run, no real material evidence. See original Xiang reproduction for open Fig.2(d) normalization and Eq.(14) conventions.
