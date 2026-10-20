@@ -1,0 +1,71 @@
+{
+  "schema": "bsf_igmc_agf2_stage2_geometry_only_v1",
+  "data_origin": "NOT_RUN",
+  "physics_approved_by_user": false,
+  "potcar_lock_sha256": null,
+  "dft_job_submitted": false,
+  "source": "C2DB-derived Stage-1 AgF2 candidates, not author-relaxed coordinates",
+  "source_poscar_sha256": {
+    "B1": "b3c1b942df69b5442e52d0d38fe839b4b61feff3619b2adb4736faa82501c122",
+    "B2": "ab2f3d84af0a074079824b1f0b94d928d16609e889ac7b1ba3fd9a50e2c69087"
+  },
+  "gaps_nominal_vertical_FF_interface_plane_ang": [
+    2.6,
+    3,
+    3.4
+  ],
+  "note": "These are 6 unrelaxed initial geometries, NOT 6 DFT results. Actual minimum interlayer distances differ from F-F vertical plane gaps.",
+  "connector": "B2 = {m_001 | (0.5, 0.16)} B1, modulo lateral translations; axial spin reversed for Type-I",
+  "max_partner_fractional_residual": 1.29793e-9,
+  "conditions": "NO VASP; NO POTCAR; NO INCAR; NO SLURM",
+  "cases": [
+    {
+      "state": "B1",
+      "gap_ang": 2.6,
+      "file": "candidates/B1_g2.6/POSCAR",
+      "atoms": 12,
+      "vacuum_ang": 20,
+      "unrelaxed": true
+    },
+    {
+      "state": "B2",
+      "gap_ang": 2.6,
+      "file": "candidates/B2_g2.6/POSCAR",
+      "atoms": 12,
+      "vacuum_ang": 20,
+      "unrelaxed": true
+    },
+    {
+      "state": "B1",
+      "gap_ang": 3,
+      "file": "candidates/B1_g3.0/POSCAR",
+      "atoms": 12,
+      "vacuum_ang": 20,
+      "unrelaxed": true
+    },
+    {
+      "state": "B2",
+      "gap_ang": 3,
+      "file": "candidates/B2_g3.0/POSCAR",
+      "atoms": 12,
+      "vacuum_ang": 20,
+      "unrelaxed": true
+    },
+    {
+      "state": "B1",
+      "gap_ang": 3.4,
+      "file": "candidates/B1_g3.4/POSCAR",
+      "atoms": 12,
+      "vacuum_ang": 20,
+      "unrelaxed": true
+    },
+    {
+      "state": "B2",
+      "gap_ang": 3.4,
+      "file": "candidates/B2_g3.4/POSCAR",
+      "atoms": 12,
+      "vacuum_ang": 20,
+      "unrelaxed": true
+    }
+  ]
+}
