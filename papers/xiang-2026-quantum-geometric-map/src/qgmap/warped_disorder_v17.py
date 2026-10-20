@@ -102,6 +102,6 @@ def density_ward(p:Lattice,b=0.,protocol='onsite'):
     sig,gr,ga,niter=scba(h,p)
     vertex,constant,res=ladder_vertex(gr,ga,np.broadcast_to(I,h.shape),p.disorder_variance)
     from_sigma=I-(sig-sig.conj().T)/(2j*p.eta)
-    return dict(abs_error=float(np.max(abs(I+constant-from_sigma)),
+    return dict(abs_error=float(np.max(abs(I+constant-from_sigma))),
                 residual=res,iterations=niter,
                 causality_max_eigenvalue=float(np.max(np.linalg.eigvalsh((sig-sig.conj().T)/(2j)))))

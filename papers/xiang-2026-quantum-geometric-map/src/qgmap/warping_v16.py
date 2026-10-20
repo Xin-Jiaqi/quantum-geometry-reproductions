@@ -71,7 +71,7 @@ def _elements(p:Surface,kx,ky,b=0.,shifted=False):
     dy_y=np.zeros_like(kx)
     R=np.sqrt(dx*dx+dy*dy+dz*dz)
     assert np.min(R)>0, 'grid contains band touching; use offset/nonzero quadrature'
-    Ax=dx*dx_x+dy*dy_y+dz*dz_x
+    Ax=dx*dx_x+dy*dy_x+dz*dz_x
     Ay=dx*dx_y+dy*dy_y+dz*dz_y
     energy=np.stack((c-R,c+R),axis=0)
     vx=np.stack((c_x-Ax/R,c_x+Ax/R),axis=0)
@@ -150,10 +150,10 @@ def matrix_vy(p:Surface,kx,ky):
     c=2*p.alpha*ky
     dz=(3*p.lam*(ky*ky-kx*kx) if p.warp_axis=="mirror_y" else -6*p.lam*kx*ky)
     return np.stack([np.stack([c+dz,-np.ones_like(kx)],axis=-1),
-                     np.stack([-np.ones_like(kx),c-dz]],axis=-1)],axis=-2)
+                     np.stack([-np.ones_like(kx),c-dz],axis=-1)],axis=-2)
 
 
 def matrix_zeeman_b(p:Surface,kx,ky):
     kx=np.asarray(kx);ky=np.asarray(ky)
     return np.stack([np.stack([np.zeros_like(kx),-np.ones_like(kx)],axis=-1),
-                     np.stack([-np.ones_like(kx),np.zeros_like(kx)],axis=-2)],axis=-2)
+                     np.stack([-np.ones_like(kx),np.zeros_like(kx)],axis=-1)],axis=-2)

@@ -181,6 +181,6 @@ def density_ward_identity(k,p,B=0.,coupling='shift'):
     from_ladder=I+correction
     return dict(max_abs_diff=float(np.max(abs(from_ladder-from_selfenergy))),
                 ladder_residual=residual,
-                selfenergy_residual=float(np.max(abs(sig-p.disorder_variance*gr.mean((0,1)))),
+                selfenergy_residual=float(np.max(abs(sig-p.disorder_variance*gr.mean((0,1))))),
                 gamma_from_ward=from_selfenergy,
                 gamma_from_ladder=from_ladder,scba_iterations=its)

@@ -69,7 +69,7 @@ def finite_ward(p:Lattice, *, q=.08, omega=.04, direction=1,
         ladder=float(max(r0,rL)),
         selfenergy=float(max(np.max(abs(x['sr']-p.disorder_variance*gr.mean((0,1)))),
                               np.max(abs(x['sa']-p.disorder_variance*ga.mean((0,1)))))),
-        bare=float(np.max(abs((z*bare_density-q*bare_L)-right)) if calc_bare else None,
+        bare=(float(np.max(abs((z*bare_density-q*bare_L)-right))) if calc_bare else None),
     )
     out=dict(protocol='independent_periodic_SCBA_finite_qomega_resolvent_WTI',
              q=float(q),omega=float(omega),eta=float(p.eta),W=float(p.disorder_variance),
