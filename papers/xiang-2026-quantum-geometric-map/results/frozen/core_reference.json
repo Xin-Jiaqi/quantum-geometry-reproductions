@@ -1,0 +1,13 @@
+{
+  "scientific_status": "PARTIAL",
+  "scope": "published-core-subset",
+  "dirac_beta_1_8_kernel": -0.0025064159066917205,
+  "original_checkpoint": "v30 offline staging, 421 files; not fully mirrored",
+  "open_physics": [
+    "steady-state DC PHE",
+    "Eq11/Fig2b 2pi difference",
+    "SM Eq52 and Eq56",
+    "general multiband orbital QMQ and BCQ",
+    "real-material same-gauge operators"
+  ]
+}

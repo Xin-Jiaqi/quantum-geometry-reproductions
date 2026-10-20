@@ -1,26 +1,16 @@
-# Current release status, 2026-10-19
+# Quantum geometry releases (2026-10-20)
 
-## Purpose
+| Paper | Remote module | Software gate | Scientific status |
+| --- | --- | --- | --- |
+| Jia 2026 PRL NMEE | \`papers/jia-2026-nonlin-magnetoelectric-edelstein\` | \`scripts/verify_release.py\` | PARTIAL |
+| Xiang 2025 PRL IGMC | \`papers/xiang-2025-intrinsic-gyrotropic-magnetic-current\` | \`scripts/verify_round9.py\` | PARTIAL |
+| Xiang 2026 PRB magnetotransport | \`papers/xiang-2026-quantum-geometric-map\` | \`scripts/verify_release.py\` | PARTIAL; GitHub **core-code subset** |
 
-Create one expandable quantum-geometry **paper reproduction** repository, one folder per paper. Current first paper: Jia et al., *Nonlinear Magnetoelectric Edelstein Effect*, PRL 136, 226302 (2026).
+For the PRB, the complete 30-round original **offline** v30 checkpoint is separate from the independently readable/callable core published in this repository. It includes additional model branches, scans, plots, and scientific logs; those are **not** claimed to have been uploaded here. The core implements selected independently checked methods and leaves absent advanced interfaces explicitly unimplemented.
 
-## Tested and included
+Open physics:
+- NMEE: static-versus-driven density-matrix response and CuMnAs PT-degenerate DC.
+- IGMC: source Fig.2(d) normalization and response convention.
+- PRB: Eq.(11) vs Fig.2(b) ~2π SI amplitude, physical steady-state PHE collision protocol, SM Eq.(52)/(56) internal algebra, multiband orbital response and Rashba QMQ attribution.
 
-- 30 automated tests (20 inherited and 10 new): model band kernels, PT symmetries, Eq(2) tau & length scaling, static-versus-printed protocol split, import regression, signed Stage-1 handoff preflight.
-- Recalculated 451×451 Kane–Mele: `printed=-0.010739723280418214`, `full=-0.009548371489696384`, `diagonal=+0.0011913517907195352` in 2D convention `(nm T V)^-1`.
-- CuMnAs generated examples `fig1b`, `fig1c-static-diagnostic`, `fig1d-printed`, `fig1-bgk` with fixed model parameters and protocol names; no claim of absolute paper curve identity.
-- Exact inverse-pair k mesh used in the NEW CuMnAs CLI for symmetry-protected response checks; legacy modules retained for historic reproducibility.
-- `package-manifest.json` SHA256/quality/NOCC/SOC/dimension preflight wired to the existing Stage-1 → Stage-2 export contract.
-
-## Blockers still present
-
-1. CuMnAs Fig.1(c) *paper-defined finite-temperature driven-dc intrinsic* coefficient in exact PT doublets is not established from independent final formula; static and BGK paths are labelled diagnostics, not promoted.
-2. PRL printed intrinsic formula and SM full-static density-matrix term have a documented physics protocol discrepancy. Both implementations are provided, neither falsely overwritten.
-3. No real projected Wannier spin or position matrices were provided, so no real material NMEE can be calculated by this reproduction alone.
-4. Repository `Xin-Jiaqi/quantum-geometry-reproductions` is publicly available on GitHub; the curated code and source-link documentation have been published. No open-source license has yet been chosen.
-
-The source release excludes the 33 internal research ZIPs, original publisher PDF/figures and any private input data. Those retain their separate offline archive.
-
-## Release polish
-
-The frozen offline verifier (`scripts/verify_release.py`) checks paper-model outputs, the source inventory and existing regression tests. Its passing result does not resolve Fig. 1(c) finite-T PT-degenerate intrinsic DC physics; see `docs/AUTHOR_DISCUSSION_BRIEF.md`.
+Do not infer a full-paper science PASS from the software CI result.

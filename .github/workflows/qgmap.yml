@@ -1,0 +1,25 @@
+name: QGMap PRB 2026 core regression
+on:
+  push:
+    paths:
+      - ".github/workflows/qgmap.yml"
+      - "papers/xiang-2026-quantum-geometric-map/**"
+  pull_request:
+    paths:
+      - ".github/workflows/qgmap.yml"
+      - "papers/xiang-2026-quantum-geometric-map/**"
+jobs:
+  standalone-model-regression:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: papers/xiang-2026-quantum-geometric-map
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install PRB method module
+        run: python -m pip install -e .
+      - name: Verify core model and explicit PARTIAL scientific status
+        run: python scripts/verify_release.py
