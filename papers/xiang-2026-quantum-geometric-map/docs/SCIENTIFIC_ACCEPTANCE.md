@@ -1,6 +1,8 @@
 # Scientific acceptance (public core, 2026-10-20)
 
-**v49 primary-source update:** The original 8-page published PRB and authentic 16-page Supplemental Material were directly supplied by the user and SHA256-verified. Statements from v45–v48 that SM was inaccessible are superseded. The original mixed-field τ pole (SM Eq15/20) is now source-verified, but a literal SM Eq20/31 sign difference and opposite main Eq10/SM Eq62 helicities are OPEN.\n\n**Overall: PARTIAL.** The original paper works with phenomenological RTA; conserving SCBA-Streda is a separate extension, not a prerequisite for the symmetric PHE. Software regression PASS verifies only the published code and named numerical protocols, not every claim in Xiang et al., PRB 113 L201406 (2026).
+**v49 primary-source update:** The original 8-page published PRB and authentic 16-page Supplemental Material were directly supplied by the user and SHA256-verified. Statements from v45–v48 that SM was inaccessible are superseded. The original mixed-field τ pole (SM Eq15/20) is now source-verified, but a literal SM Eq20/31 sign difference and opposite main Eq10/SM Eq62 helicities are OPEN.
+
+**Overall: PARTIAL.** The original paper works with phenomenological RTA; conserving SCBA-Streda is a separate extension, not a prerequisite for the symmetric PHE. Software regression PASS verifies only the published code and named numerical protocols, not every claim in Xiang et al., PRB 113 L201406 (2026).
 
 | Branch | Public capability | Scientific gate |
 | --- | --- | --- |
