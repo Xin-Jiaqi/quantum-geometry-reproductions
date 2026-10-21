@@ -41,6 +41,8 @@
 | v49 authentic source PDF/SM provenance | Independently inspect original 8-page PRB and 16-page SM, freeze both SHA256; read SM Eq4–20,31–33,62–63 rather than infer from historic notes | PASS original source now available and directly checked |
 | v49 literal SM Eq20 → Eq31/32 sign | Independent two-band eigenbasis current from actual SM Eq20 versus printed Eq31/32, both XY/YX, U(1) gauge, multiple tilts and raw signed physical B | **OPEN**: literal Eq20 contraction and Eq31 are equal magnitude/opposite sign; must resolve the manuscript's index/velocity conventions |
 | v49 main Eq10 versus SM Eq62 helicity | Direct comparison of two opposite spin helicities; sigma_z rotation also changes Zeeman sigma_x; source Eq32/SM Eq62 agrees with Eq11 whereas main Eq10 gives negative | **OPEN** physical spin/B sign convention; no silent correction |
+| v50 authentic full two-colour source SM Eq4–9 | Two independently regulated complex frequencies, fixed spin-basis Liouvillian, independently verified SM Eq6/7, both EB orderings, finite-omega conjugation, eta_a/eta_b limit path | PASS original source-method protocol for named 2-band model; physical bath/experiment OPEN |
+| v50 independent original Eq9 -> Eq20/31 source sign | Extract eta_a times complete current along multiple regulator paths, compare to source literal Eq20 and printed Eq31 *without inserting either in source solver* | **Eq20 sign supported; Eq31 opposite sign remains an OPEN source-algebra inconsistency** |
 | General orbital QMQ/BCQ | General omitted three-band pieces and complete Kubo–Středa physical DC response | OPEN |
 | Real Wannier materials | Requires consistent projected magnetic/position operators, Berry connection and validated response protocol | BLOCKED |
 

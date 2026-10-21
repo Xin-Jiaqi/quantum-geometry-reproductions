@@ -1,0 +1,115 @@
+{
+  "protocol": "v50_authenticated_SM_Eq4_9_two_frequency_to_selected_adiabatic_pole_Eq20",
+  "scientific_status": "PARTIAL",
+  "primary_source_sha256": {
+    "main": "b87e0970f25dd45c5048f8cbbb8691b53ea215040935e9b21a4cde80c69b2730",
+    "sm": "9b0b8603d13962e100cc059bf4d96b91aa37062360d13decd1cb2eda495332c4"
+  },
+  "config": {
+    "beta": 0.125,
+    "mu": 0.3,
+    "T": 0.03,
+    "nr": 100,
+    "nphi": 128,
+    "uv": 2.5,
+    "dk": 0.00002,
+    "main_helicity": "kx_sy-ky_sx",
+    "channel": "xy",
+    "field_convention": "Bbar=-gmuB B; output physical B response"
+  },
+  "original_literals": {
+    "SM_Eq20_physical_B": -0.0025061882472380568,
+    "printed_SM_Eq31_physical_B": 0.0025061882472380568
+  },
+  "eta_regulator_paths": [
+    {
+      "eta_a": 0.02,
+      "eta_b": 0.002,
+      "eta_a_full": -0.0025121906175893226
+    },
+    {
+      "eta_a": 0.01,
+      "eta_b": 0.0005,
+      "eta_a_full": -0.0025073389418540626
+    },
+    {
+      "eta_a": 0.005,
+      "eta_b": 0.002,
+      "eta_a_full": -0.0025071377434262043
+    },
+    {
+      "eta_a": 0.002,
+      "eta_b": 0.002,
+      "eta_a_full": -0.002506541162325303
+    },
+    {
+      "eta_a": 0.002,
+      "eta_b": 0.0002,
+      "eta_a_full": -0.0025062497349786794
+    },
+    {
+      "eta_a": 0.002,
+      "eta_b": 0.001,
+      "eta_a_full": -0.002506373113629541,
+      "eta_a_B_then_E": 0.004994806720937642,
+      "eta_a_E_then_B": -0.007501182004824643
+    },
+    {
+      "eta_a": 0.0002,
+      "eta_b": 0.002,
+      "eta_a_full": -0.002506249653779614
+    },
+    {
+      "eta_a": 0.001,
+      "eta_b": 0.001,
+      "eta_a_full": -0.0025062769477338393
+    },
+    {
+      "eta_a": 0.0005,
+      "eta_b": 0.0005,
+      "eta_a_full": -0.002506210563816801
+    }
+  ],
+  "finite_frequency": [
+    {
+      "omega_a": 0,
+      "omega_b": 0,
+      "eta_a_full_real": -0.002506373113629541,
+      "eta_a_full_imag": 1.5526786619060272e-12
+    },
+    {
+      "omega_a": 0,
+      "omega_b": 0.05,
+      "eta_a_full_real": -0.0024869461461946873,
+      "eta_a_full_imag": 0.000008973340654486572
+    },
+    {
+      "omega_a": 0.04,
+      "omega_b": 0,
+      "eta_a_full_real": -0.000006464515772500963,
+      "eta_a_full_imag": -0.00012458650478429823
+    },
+    {
+      "omega_a": 0.03,
+      "omega_b": -0.07,
+      "eta_a_full_real": -0.000012233987059101149,
+      "eta_a_full_imag": -0.00017493982460857537
+    }
+  ],
+  "independent_checks": [
+    "First-order SM Eq6/Eq7 source fractions",
+    "Full spin basis Liouville matrix inverse",
+    "Both EB orderings and k derivatives of full f(H)",
+    "Two distinct adiabatic regulators without uniform bath",
+    "Selected electric adiabatic pole agrees with original SM Eq20 sign",
+    "Original printed SM Eq31 opposite sign under same conventions",
+    "Finite drive-frequency pair reversal complex conjugation",
+    "Original main and SM helicity sign reversal"
+  ],
+  "scientific_limits": [
+    "Source literal Eq20/31 sign mismatch OPEN",
+    "Authors physical steady-state collision model not established",
+    "Fig2(b) absolute ordinate and orbital multiband OPEN",
+    "Whole paper PARTIAL"
+  ]
+}

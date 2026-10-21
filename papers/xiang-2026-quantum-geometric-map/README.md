@@ -227,3 +227,14 @@ Scientific state remains **PARTIAL**.
 For the **actual user-provided primary PDFs**, SM Eq.(4)–(20), Eq.(31)–(33) and Eq.(62)–(63) have been read directly and linked to the published Eq.(10)–(11). `sm_literal_spin_phe_v49` evaluates the literal Eq20 tau-density-current and the Eq31/32 Zeeman-curvature expressions **independently** on both printed Hamiltonians with exactly the same physical sigma_x. At beta=.125,mu=.3,T=.03, Eq20/main gives -0.002506188247 versus Eq31/main +0.002506188247; Eq32/main gives +0.002506188497 whereas Eq32/SM gives -0.002506188497, agreeing with the signed Eq11 (-0.002506188335 finite-T model continuation). The earlier v47 eta-scaled frozen-H0 response approaches the **literal Eq20/main** coefficient, not Eq32/main, under fixed spin/B conventions. Separate adiabatic eta_a/eta_b regulators and one selected tau pole are explicitly distinguished from the v47 all-sector finite-eta bath model. No material experimental correction is claimed. Source PDF raw bytes are **not** committed; hashes and source lines are frozen.
 
 Run `python -m unittest tests.test_sm_literal_spin_phe_v49 -v` and `python scripts/reproduce_sm_source_v49.py --beta .125 --mu .3 --temperature .03`. The original-publisher Eq20/31 and helicity sign issues remain **OPEN**, whole-paper scientific acceptance **PARTIAL**.
+
+### v50: Original Supplemental Eq.(4)/(9) full two-frequency Liouville, independently solved
+
+`qgmap.sm_two_color_liouville_v50` now computes the **actual source SM** first/second-order response using **separate** omega_a, omega_b, eta_a, eta_b and **both** field orderings in a fixed spin basis, with no imagined uniform finite collision operator. First-order Eq.(6)/(7) are verified as eigenbasis fractions at finite frequencies; full second-order Eq.(9) is solved with entire matrix k derivatives. Taking the electric dc **eta_a** pole only *after summing both orderings*, at beta=.125,mu=.3,T=.03,100x128, eta_a=eta_b=.0005 gives **-0.00250621056**. The same-basis authentic SM Eq.(20) direct current gives **-0.00250618825**; **printed SM Eq.(31) gives +0.00250618825**. Two field-ordering terms are individually large and strongly regulator-path dependent. Keeping omega_a nonzero removes the selected 1/eta_a dc divergence. Hence the original Liouville Eq9 independently supports the Eq20 sign, while source Eq20/31 sign disagreement remains OPEN. No published Fig2 normalization adjustment is applied. [v50 scientific protocol](docs/AUTHENTIC_SM_TWO_COLOR_LIOUVILLE_V50.md).
+
+```
+python -m unittest tests.test_sm_two_color_liouville_v50 -v
+python scripts/reproduce_sm_two_color_v50.py --eta-a .002 --eta-b .001 --nr 100 --nphi 128
+```
+
+The original main+SM source SHA256 are retained but raw PDFs are private and not published. Whole paper scientific status **PARTIAL**.
