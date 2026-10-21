@@ -16,7 +16,7 @@
 
 ## 本地 Harness：一次执行完整闭环
 
-1. 拉取 GitHub main 最新代码；复制冻结 `B1_g3.0` POSCAR 和本目录 `*.smoke` 文件到**新的私有单作业目录**，不复用旧版三组 relax INCAR。保留原文件 SHA256。仅保存可公开的 IN​CAR/KPOINTS/PBS 脚本摘要和 SHA，不提交受许可 POTCAR、私人主机/账号/作业日志原文。
+1. 拉取 GitHub main 最新代码；复制冻结 `B1_g3.0` POSCAR 和本目录 `*.smoke` 文件到**新的私有单作业目录**，不复用旧版三组 relax INCAR。保留原文件 SHA256。仅保存可公开的 INCAR/KPOINTS/PBS 脚本摘要和 SHA，不提交受许可 POTCAR、私人主机/账号/作业日志原文。
 2. 登录现有日本 PBS 站点，检查 `qsub/qstat` 与 `CP_001` 的实际约束，选择**一个**存在且可由当前账号合法使用的 CPU `vasp_std`（优先检查已发现的 6.6.1，若不兼容则使用另一站点支持版并记录实际版本）。在**不运行 VASP 生产计算的登录节点**查对执行权限、MPI launcher 版本、库依赖 `ldd`、站点现有加载脚本。PBS 脚本必须采用与所选 MPI 实现兼容的命令，不能不验证就沿用 `mpirun -ppn`。不要猜 MPI/软件路径。
 3. 私下按 **Ag 然后 F** 拼接已获得合法授权的 PAW；在计算端核验 **完整拼接** SHA256=`8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff`；另核对 TITEL：Ag 02Apr2005、F 08Apr2002，和 POSCAR 物种顺序。**不能上传 POTCAR 内容**。
 4. 仅当 POSCAR/INCAR/KPOINTS、VASP bin、MPI、PBS 队列、PAW 均核对无误，且站点本次计费不超上限时，才 **`qsub` 一次**。记录 Job ID、作业脚本与四份输入摘要、耗时和状态；如队列超时或任务失败，**不要自动重新提交**。
