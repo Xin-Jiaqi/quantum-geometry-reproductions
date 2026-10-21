@@ -45,8 +45,7 @@ Each case directory contains: `POSCAR` (copy of candidate), `INCAR`, `KPOINTS`,
 ### 3.1 Frozen from literature (Zhu et al. PRL 135, 056801 (2025), SM)
 - XC: PBE (PAW, LEXCH=PE)
 - Hubbard: Dudarev `U_eff(Ag-4d)=4 eV` → `LDAU=.TRUE. LDAUTYPE=2 LDAUL=2 -1 LDAUU=4 0 LDAUJ=0 0`
-- Dispersion: DFT-D3 family (Grimme); **IVDW variant (zero vs BJ) is an
-  operator choice, TODO/BLOCKED until verified against site implementation**
+- Dispersion: DFT-D3 family (Grimme); **`IVDW` damping variant must be documented**。根据文献所引 Grimme 2010 D3 方法及 VASP 手册，首选核对 `IVDW=11`（D3 zero damping）；`IVDW=12` 是不同的 D3(BJ) 方法，不能静默混用。需结合原作者 SM/计算输入和所选 VASP 实际输出确认。
 - `ENCUT=500 eV` (≥ both PAW ENMAX: Ag 249.8, F 400.0 — factual from TITEL/ENMAX headers)
 - Vacuum ≈ 20 Å (verified in all three POSCARs)
 - `EDIFF=1E-6 eV`, max residual force `< 0.01 eV/Å` (`EDIFFG=-0.01`)
@@ -57,7 +56,7 @@ Each case directory contains: `POSCAR` (copy of candidate), `INCAR`, `KPOINTS`,
 ### 3.2 Operator choices (explicit, not author parameters — each to be recorded in the convergence record)
 - k mesh: **12×8×1 Gamma-centered** (screening candidate); 14×9×1 and 16×10×1
   reserved for convergence checks. **Not claimed converged.**
-- `ISMEAR=1, SIGMA=0.1` (metallic Ag) — TO CONFIRM
+- **科学审查不予批准原候选：** 私有输入草稿曾建议 `ISMEAR=1, SIGMA=0.1`，并错误称为“metallic Ag”。AgF₂ 不是元素 Ag 金属；对于待检验的磁性绝缘体/未知带隙，应先采用 `ISMEAR=0, SIGMA=0.05 eV` 的低成本单点与弛豫候选，并检查占据、展宽和带隙。**此处仅更新公开审查结论，私有 INCAR 仍须在 G1 前实质改写、重新计算 SHA256 并核验。**
 - `MAGMOM` seed magnitude m=1.0 μB per Ag — TO CONFIRM (see §4)
 - `ISIF=2` (ions relax, cell fixed; keeps the in-plane lattice fixed, also
   fixes c) — chosen for the pilot; ISIF=4 alternative to be discussed
@@ -87,17 +86,16 @@ Each case directory contains: `POSCAR` (copy of candidate), `INCAR`, `KPOINTS`,
 B1 POSCAR Ag order (e.g. B1_g3.0):
 | idx | frac (x,y) | layer | sublattice | moment (Type-I) |
 | --- | --- | --- | --- | --- |
-| Ag0 | (0.5,0.5) | bottom | B | −m |
-| Ag1 | (0,0) | bottom | A | +m |
-| Ag2 | (0,0.34) | top | image of B | +m (flipped) |
-| Ag3 | (0.5,−0.16) | top | image of A | −m (flipped) |
+| Ag0 | (0.5,0.5) | **upper-z reference layer** | B | −m |
+| Ag1 | (0,0) | **upper-z reference layer** | A | +m |
+| Ag2 | (0,0.34) | **lower-z mirror-image layer** | image of B | +m (flipped) |
+| Ag3 | (0.5,−0.16) | **lower-z mirror-image layer** | image of A | −m (flipped) |
 
 `MAGMOM = -1 1 1 -1 0 0 0 0 0 0 0 0` (F atoms zero). Basis: Stage-1 review —
 monolayer altermagnet Ag(0,0)=+x̂, Ag(½,½)=−x̂; the stacking mirror
 {m_001|t₁=(0.5,−0.16)} maps bottom→top; physical spin is an axial vector so
 the unitary connector flips the in-plane S_x; therefore Type-I (Néel OPPOSITE)
-top images carry the flipped sign. Non-SOC collinear input: direction is a
-seed, not a magnetocrystalline-anisotropy result.
+mirror images carry the flipped sign. **Important coordinate convention:** in the frozen B1 POSCAR, Ag0/Ag1 have the larger physical z coordinate and Ag2/Ag3 the smaller z; earlier narrative labels “bottom/top” incorrectly referred to construction roles, not geometric height. The sign sequence itself is unchanged. Non-SOC collinear input: direction is a seed, not a magnetocrystalline-anisotropy result.
 
 ## 5. PBS template (site-verified syntax, unexecuted)
 
@@ -117,3 +115,7 @@ exec mpirun -np 32 -ppn 32 -hostfile "$PBS_NODEFILE" "$VASP_BIN"
 The template in the private input dir carries a `BLOCKED_PROTOCOL` header and
 TODO placeholders for the loader path and VASP binary; it must not be run
 until the user approves budget/queue/binary/PAW set.
+
+## 6. Independent physics audit (2026-10-21)
+
+This report is a **prepared-input snapshot**, not a ready-to-run scientific protocol. Changes to comments here do **not** automatically modify private INCAR files or their existing SHA-256 values. Before any PBS submission: (i) regenerate the actual private INCARs with verified Gaussian smearing, (ii) freeze the selected D3 variant and complete the VASP/PBS interface, (iii) compare **effective VASP tags** across all three cases (their draft INCAR hashes differ), and (iv) record the resulting updated SHA-256 hashes. Preserve `BLOCKED_PROTOCOL`/`NOT_RUN` until user budget approval and an actual successful calculation.
