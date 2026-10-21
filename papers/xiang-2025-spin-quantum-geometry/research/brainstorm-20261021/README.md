@@ -41,3 +41,6 @@ This folder archives user/assistant explorations motivated by that paper. The or
 Numerical toy-model tests do **not** establish a new quantum-geometric effect or any material-specific realization. Original papers and supplemental PDFs are not mirrored. Publication-priority screening is provisional; check linked literature before claiming originality.
 
 This directory deliberately has **no imports into paper reproduction code and no new CI acceptance claim**.
+
+
+**2026-10-21 Gate 1b correction:** [Complete four-band PT operator-basis enumeration](scripts/pt_operator_basis_gate.py) leaves only six PT-even Hermitian `tau_a sigma_b` products. Direct spinful interlayer `tau_{x,y} sigma_i` terms are forbidden **in this specific four-band PT representation**. The next scientifically meaningful construction requires extra orbital freedom or justified PT breaking; see the amended [Gate 1 report](docs/STACKING_REGISTRY_GATE1_20261021.md).
