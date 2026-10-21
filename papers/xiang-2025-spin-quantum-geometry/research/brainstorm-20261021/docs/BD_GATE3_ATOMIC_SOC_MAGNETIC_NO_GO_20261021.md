@@ -171,3 +171,14 @@ These papers establish *close conceptual overlap*; a final novelty decision woul
 **The next genuinely scientific bottleneck is not another response formula.** Construct two **microscopically inequivalent, noncentrosymmetric monolayer sublattices** with explicit atomic registry, electronic/ionic charges and a total-energy surface \(E(\boldsymbol\delta)\); establish paired minima with opposite calculated \(P_z\) and a finite switching barrier. Only then run the full band spin and torque response, test the disconnected-layer/SOC-off controls, and compare equation-by-equation with 2025 NSOT and 2026 bilayer EE/SHE papers. If symmetry/continuity says the remaining signal is just a known response, archive and redirect without material DFT.
 
 **No modifications to original-paper reproduction code, frozen figures or scientific acceptance.**
+
+
+### Gate S: a structural reason why tuning this one-site model will never create genuine sliding FE
+
+There is a simple *ionic-geometry* no-go, separate from the electronic \(PT\) constraint. Take identical one-site centrosymmetric Bravais layers at
+\(\mathbf r_{T,\mathbf R}=(\mathbf R-\boldsymbol\delta/2,+h/2)\) and
+\(\mathbf r_{B,\mathbf R}=(\mathbf R+\boldsymbol\delta/2,-h/2)\).
+Ordinary spatial inversion about the midpoint sends
+\(\mathbf r_{T,\mathbf R}\mapsto\mathbf r_{B,-\mathbf R}\) **for every \(\boldsymbol\delta\)**, and vice versa. Therefore no amount of changing *only the real-space interlayer hopping magnitudes* between these identical, single-site layers can manufacture a **structurally switchable net \(P_z\)**. In the AFM state, inversion may be broken by staggered spins but its product \(PT\) remains, again forbidding electric polarization. The opposite-parity \(s,p_z\) orbitals on the **same atomic center** do not change this geometric conclusion.
+
+The minimum credible replacement is an explicitly decorated/noncentrosymmetric atomic motif (at least an inequivalent two-site arrangement with correct site symmetry and chemically meaningful positions), possibly with an appropriate relative layer orientation. Only then can different registries possess distinct top/bottom electrostatic environments and an actual calculated electronic+ionic \(P_z\). Even with such a motif, *paired opposite dipoles and distinct minima* must be checked rather than assumed. This is a **model-scoped geometric no-go**, not a universal no-go for single-orbital models with inequivalent chemical layer structures.
