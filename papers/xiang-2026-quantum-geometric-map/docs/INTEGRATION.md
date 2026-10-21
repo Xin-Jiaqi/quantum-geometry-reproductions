@@ -1,3 +1,7 @@
+## v47 critical erratum: v46 source sign and PHE symmetry
+
+Before using v46, read [v47 corrected physics](docs/ORIGINAL_PHE_SYMMETRIC_SOURCE_CORRECTION_V47.md). The analytic y-source in v46 had the sign of d_y(kx/r) wrong, so former v46 frozen outputs and near-Eq8 XY-only comparison are **RETRACTED**. Corrected source is finite-difference checked. `qgmap.dirac_source_tensor_v47.tensor` evaluates both XY/YX orders and their **symmetric** part, compares eta*symmetric (NOT XY alone) to the signed original main Eq.(11) and separates an antisymmetric remainder. `independent_mixed_B_derivative` recalculates the finite-b stationary density through an independently diagonalized Liouville superoperator for both electric directions. The successful five-beta numerical Eq.(11) comparison is bounded to the **researcher-defined frozen-H0 collision target**. Exact original Supplemental Material collision input and Fig.2(b) absolute units remain unverified; entire paper PARTIAL.
+
 # Callable physical interfaces and fail-closed material input contract
 
 Import from `qgmap`, **not** from the other two independent modules. This module deliberately avoids a speculative universal NMEE/IGMC/magnetotransport solver.
