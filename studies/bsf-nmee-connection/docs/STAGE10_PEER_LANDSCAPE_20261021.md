@@ -36,9 +36,24 @@ i\,\mathrm{Tr}P[\partial_{\lambda_i^\pm}P,\partial_{k_j}P]\right|_{B=0},
 | **P11** | **Li et al., Nat. Commun. 17, 2457 (2026)** [DOI](https://doi.org/10.1038/s41467-026-68854-x)，Nature 全文，A | 3R-WSe₂ AB/BA **实验极化畴**、电场诱导 band switching、导带/价带边缘 \(\Lambda/K\)，非泛泛材料假设。 | 直接支持选材和真实域存在，**未直接给我们的静态 NMEE 数值**。 | WSe₂ 合适作为可实证材料，但不能把其 FE/开关声称为新发现；采样需全 2D BZ。 |
 | **P12** | **Non-relativistic torque and Edelstein effect in non-collinear magnets**, Nat. Commun. (2024) [article](https://doi.org/10.1038/s41467-024-51565-6)，Nature，A | 线性 spin–E 响应拆分 intraband / interband，包括与 spin–momentum Berry 几何相关的清洁极限；文章讨论绝缘隙内依然存在带间响应。 | 提醒**“Edelstein 都只发生在金属/费米面”并不准确**。我们的独特性不只是“insulating response”。 | 必须比较作者实际的散射、带间磁响应定义，避免过度强化静态/输运二分。 |
 | **P13** | **Mixed Weyl semimetals and low-dissipation magnetization control in insulators by spin–orbit torques**, Nat. Commun. (2017) [article](https://pmc.ncbi.nlm.nih.gov/articles/PMC5684220/)，全文，A | \(k\)–磁化方向的 **mixed Berry curvature** 与绝缘体内低耗散 SOT。 | **混合 Berry 曲率与绝缘体响应都有先例**。我们不能包装为首次发明参数空间 Berry curvature。 | 指向最接近的早期 Berry 自旋响应理论链，正文必须引用。 |
-| **P14** | **Quantum metric induced nonlinear Edelstein**, P08，及 **2014/2015 Berry-curvature SOT** [DOI](https://doi.org/10.1103/PhysRevB.92.064415)，理论先例，A | 已有成熟带间 Berry/混合曲率、驱动 SOT 的 Kubo/Wannier 分析。 | 我们的 Wannier gauge source derivative、remote-band completeness 更可能是**数值严谨性的贡献**，而不是新理论类别。 | “精确数值实现”可以作为方法优势，但不能在无新物理结果时替代科学发现。 |
+| **P14** | **Freimuth/Blügel/Mokrousov, Direct and inverse spin-orbit torques**, PRB 92, 064415 (2015) [DOI](https://doi.org/10.1103/PhysRevB.92.064415)，发表 PDF，A | 发展 direct/inverse SOT 的 Kubo 响应关系及微观 DFT 公式，包含磁性双层。 | 我们的静态 spin-source/MEE 是其方法后继，但响应协议、磁性背景和多场阶次需要具体区分。 | 普适 Kubo 带间几何/数值路径不是全新；只能凭新的层分辨响应、材料预测与算符验收形成独立贡献。 |
 
 **证据等级：A = 出版社官方文章、摘要或可读全文直接支持此行所列事实；B = arXiv 预印本摘要与正文，未在本轮确认同行评审。** 对只读摘要的 A 级来源，**A 只表示对摘要明确陈述部分有高可信度**，不是对所有公式、方法和与我们细节的全文级审计。本报告对不存在的对照、未核实的公式号或精确能量不作推断。
+
+
+## 1a. 用项目中已经精读的三篇原始 Markdown 再次校正定位
+
+这一节补充前面按出版社摘要整理的矩阵，依据项目上传的现有完整阅读笔记，而不将笔记中的解释自动当成作者原文定理：
+
+- **《Layer Edelstein Effect.md》**：正文明确以 \(\delta S_j=\chi_{ji}^{(j)}j_i\)（charge current）为输出；其 bilayer \(k\cdot p\) 以 layer pseudospin \(\tau\)、interlayer hopping 和外部 \(E_z\) detuning 为关键变量，SM 包含 80 layer groups 的 Type-I/II 分析。**不能把其 \(\chi(j)\) 直接视为我们 \(\Gamma^{\mathrm{stat}}(E,B)\)**，即便出现相似层奇偶性。
+- **《Sliding Ferroelectric Control of Unconventional Magnetism in Stacked Bilayers.md》**：重点是 magnetic connection operator 对非相对论 spin splitting、SOC 下 AHE 的连接关系，以及 AM/CFiM 具体材料。它证明了堆叠连接算符已经是完整的同行研究路线；我们的新价值应集中在**不同物理响应的算符/实际量化**，而非重做 80 层群枚举。
+- **《Intrinsic Magnetoelectric Hall Effect from Layer-Orbital Quantum Geometry.md》**：笔记清楚区分**三个**场：面内驱动 \(E_x\)、面外 gate \(\mathcal E_z\) 和面外轨道磁场 \(B_z\)，可观测量是
+  \[
+  j_y=\chi^{\mathrm{in}}_{yx;zz}\,E_x\mathcal E_z B_z.
+  \]
+  而我们是 \(\delta S_x=\Gamma^{\mathrm{stat}}_{xz;x}E_xB_z\)（在本身无净电流的绝缘体静态物理定义里）。因此 P09 不能被写成“已经研究同一张量”；它的 **layer dipole–orbital moment** mixed geometry 仍是概念上的重要参照。
+  
+这些上传笔记本身也可能包含教学习惯性的简化，因此**具体对比仍须返回对应文章与 SM**。原始上传笔记保留在 Project 中，Stage10 不复制整个笔记或改写旧文件。
 
 ## 2. 文献审阅中最值得纠正的四个“新意幻觉”
 
@@ -134,4 +149,4 @@ PEERS / 始终校准创新与验证门槛
 
 **相邻预印本**：P09 [Das/Agarwal layer-orbital](https://arxiv.org/abs/2604.20249), 注意**截至本轮只确认 arXiv 预印本，不能冒称 Science 正式发表**。
 
-> **可复现范围声明：** 本轮核验出版社原文标题/作者/日期/摘要和部分可读正文；并非逐式推导每篇完整 supplemental material。特别是 P01、P02、P03 与 P04 的有些公式、数值归一化、碰撞算符和 layer projector 实现，需要下一轮得到全文和 SM 后逐式细审。在没有这些证据前，任何“已经证明我们的 Eq. X 与同行 Eq. Y 不同”的断言都不成立。新增文献是否与我们有**完全相同的** \(\Gamma_{iz;j}\) 和 layer projection，仍属开放检索目标。
+> **可复现范围声明：** 本轮核验出版社原文标题/作者/日期/摘要和部分可读正文，并抽查了本 Project 中《Layer Edelstein Effect》《Sliding Ferroelectric Control》《Intrinsic Magnetoelectric Hall Effect》的完整中文精读笔记；并非逐式推导每篇完整 supplemental material。特别是 P01、P02、P03 与 P04 的有些公式、数值归一化、碰撞算符和 layer projector 实现，需要下一轮得到全文和 SM 后逐式细审。在没有这些证据前，任何“已经证明我们的 Eq. X 与同行 Eq. Y 不同”的断言都不成立。新增文献是否与我们有**完全相同的** \(\Gamma_{iz;j}\) 和 layer projection，仍属开放检索目标。
