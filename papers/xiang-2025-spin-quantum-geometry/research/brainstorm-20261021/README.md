@@ -44,3 +44,11 @@ This directory deliberately has **no imports into paper reproduction code and no
 
 
 **2026-10-21 Gate 1b correction:** [Complete four-band PT operator-basis enumeration](scripts/pt_operator_basis_gate.py) leaves only six PT-even Hermitian `tau_a sigma_b` products. Direct spinful interlayer `tau_{x,y} sigma_i` terms are forbidden **in this specific four-band PT representation**. The next scientifically meaningful construction requires extra orbital freedom or justified PT breaking; see the amended [Gate 1 report](docs/STACKING_REGISTRY_GATE1_20261021.md).
+
+## B+D Gate 2 (2026-10-21): eight-band physical-registry experiment
+
+- [Scientific report](docs/BD_EIGHTBAND_GATE2_20261021.md) and [standalone NumPy code](scripts/bd_eightband_gate2.py).
+- Two opposite inversion-parity orbitals per layer permit PT-even spin-dependent interlayer hopping; every hopping term is generated from displaced real-space bonds. This is **symmetry-compatible toy hopping**, not first-principles Wannier/Slater–Koster extraction.
+- With both ordinary and spin-dependent hopping present, the gapped model has an interband AC layer-staggered **spin-density** response. It changes sign across C2z-related registries and vanishes when either hopping family is absent, unlike the Gate 1 disconnected-layer artifact.
+- Independent rank-two PT-doublet projectors, random U(2) mixing, orbital-embedding k sewing, direct/indirect gaps, k convergence and torque commutators tested.
+- **NOT an FE pair, NOT a new quantum metric, NOT peer-priority clearance, NOT a completed original-paper reproduction.** Next gates: microscopic orbital SOC hopping, magnetic connection to actual polar states, torque/edge observable, equation-level peers.
