@@ -10,6 +10,14 @@ This folder archives user/assistant explorations motivated by that paper. The or
 - **C2:** four-band AC interlayer spin-transfer response and Ward identity verified; *NO-GO for the original novelty claim* because conventional mixed Berry curvature and prior insulating Néel spin-orbit torque account for the effect.
 - **D:** competing switching-operator constraints are Neumann/stabilizer algebra, not a new theorem. Physical magnetic connection and phase-resolved observables remain to be tested.
 
+## Research workflow: three separate records (2026-10-21)
+
+1. **Idea:** A/B/C/D hypotheses are exploratory; read [ABCD round 1](docs/ABCD_round1.md). No new mechanism is established by proposing a tensor or connection operator.
+2. **Testing:** [Registry-built PT magnetic bilayer Gate 1](docs/STACKING_REGISTRY_GATE1_20261021.md), [script](scripts/stacking_registry_gate1.py). This synthetic first step checks physical-bond interlayer hopping, orbital-embedding seam, PT/C2z partner relation, spin-torque identity, metallic/insulating controls and the necessary `t_perp=0` falsification. **NO-GO for the first interlayer novelty claim**; a switchable Drude proxy mainly survives as a disconnected-layer effect in the optional assumed chiral channel.
+3. **Peers:** [Verified peer-work / competing-paper audit](docs/PEER_WORK_AUDIT_20261021.md) records direct overlaps, DOI sources, uncertainty levels, and the remaining gates. Do not turn abstract-level overlap into claimed equation-level proof.
+
+**Scientific boundary:** nothing here changes `paper_models.py`, `methods/`, paper `tests/`, paper `results/`, paper `docs/ACCEPTANCE.md` or original-prl reproduction scientific status. This directory is **not published-paper data**. `C2z` registry partners are not established sliding-ferroelectric states.
+
 ## Documents
 
 - [A exploration and counterexamples](docs/A_exploration.md)
