@@ -267,3 +267,15 @@ Reading the authentic 16-page SM **pp11–12** reveals that source Eq49's veloci
 python -m unittest tests.test_orbital_sm_v53 -v
 python scripts/reproduce_orbital_sm_v53.py --output results/frozen/v53_original_orbital_source_audit.json
 ```
+
+### v54 physics-first API: independently validated general multiband geometry
+
+Physical capability now takes priority over matching disputed printed paper formulas. `qgmap.orbital_geometry_v54.band_geometry(H,dHdk)` accepts arbitrary **nondegenerate N-band** Hermitian Bloch matrices and operator velocities in a **fixed orthonormal orbital basis**, and returns **pairwise/per-band quantum metric, Berry curvature and energy-geometric orbital moment**. These primitives pass 13 independent physical tests including a separate **finite-difference eigenprojector** method on true 2/3-band models, arbitrary bandwise U1 phase changes, constant orbital-unitary transformations, energy shifts/scales and rejected degeneracies. The complete local **m=l / m≠l curvature×moment geometric subterm** is separately verified and reproduces the v53 three-band figures without relying on the published orbital Eq49/52 discrepancy. It is **not** an accepted full orbital MNHE/PHE or general Wannier gauge response; full magnetic positional shift, embedding and contacts remain **UNRESOLVED**. See [v54 new reusable physics](docs/INDEPENDENT_MULTIBAND_ORBITAL_GEOMETRY_V54.md) and [physics capability registry](../../physics/README.md).
+
+```
+python -m unittest tests.test_orbital_geometry_v54 -v
+python scripts/reproduce_orbital_geometry_v54.py --N 36 --mu -1.1 --temperature .45
+python scripts/reproduce_orbital_geometry_v54.py --input-npz my_H_and_dHdk.npz --mu .1 --temperature .025
+```
+
+Scientific full paper **PARTIAL**; independently validated physical subroutines **VERIFIED** within declared scope.
