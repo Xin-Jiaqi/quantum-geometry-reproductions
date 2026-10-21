@@ -1,3 +1,5 @@
+> **Independent scientific ERRATUM (2026-10-22):** This original external-agent Stage8i report is retained for provenance, but its ~1.3-eV “K/K′ valley offset”, 87.5/35.3-meV “Ising spin splitting”, and inference of Sz nonconservation from the Γ-point Kramers spin texture **are not scientifically supported as labeled**. K′ must be −K; the old Kp (−1/3,+1/3) is Γ→M interior, and the K band35/36 spin polarizations have the SAME Sz sign. Read the detailed [independent Stage8j correction](STAGE8J_INDEPENDENT_VALLEY_SPIN_ERRATUM_20261022.md) before citing any spin/valley result. Original external observations are preserved below; sampled positive gap and SCF electronic convergence remain provisionally supported, with MPI exit-255 and incomplete PROCAR retained as limitations.
+
 # Stage8i Review Conclusions — WSe2 SOC Electronic-Structure Preflight (AB s=0.00, Glide s=0.50)
 
 Date: 2026-10-22 · Branch: research/bsf-nmee-stage7-sw-gate-20261020
