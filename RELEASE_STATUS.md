@@ -76,3 +76,12 @@ Merged PR #14 (head `70b3d8d`, squash commit `b3d2821`) after the **291/291 PRB 
 ## 2026-10-21 Xiang 2025 V32: original SM Eq.(2) four-source audit
 
 PR #16 merged. An independent nondegenerate 2–5-band explicit evaluation of all *four* SM Eq.(2) source groups agrees with fixed-orbital Liouville (max absolute error < 8e-9 in the frozen reference), with a further separate V30 solver crosscheck. The source Eq.(2) eta^0 result differs from printed SM Eq.(6) by the occupation-gradient term -i*r_mn*(f'_n-f'_m)/(epsilon_m-epsilon_n)^2; this is recorded as a **source-algebra discrepancy under the specified eta/2eta prescription**, not a universal claim of incorrect physical DC response. 70/70 tests and both Python 3.11/3.12 GitHub CI pass. Previously unresolved Fig.1(a) normalization, SM Eq.55/56, Eq.69/70 and metallic collision/limit-order physics remain OPEN. No DFT, stack or intercalation simulation claimed.
+
+
+## 2026-10-21: v42 exact finite-disorder Streda linear Hall
+
+PR #18 merged as squash commit `c39aed71` after remote PRB Actions run `39530869244` confirmed **301/301 PASS**, including ten new v42 tests. For exactly the v41 frozen-disorder QWZ finite torus, standard linear Smrčka–Středa I(a), Hall-odd I(b)=0, and II are independently evaluated and their **sum** converges to v41's full Lehmann Hall in the external regulator `eta->0` limit. The II eigenpair primitive agrees with a separate direct real-energy dense Green matrix integral and the v38 clean Bloch result; I(a) matches the independent inverse-matrix current trace. The surface/sea split has overlap, hence the separate terms are not independently observable intrinsic/extrinsic mechanisms.
+
+For `L=4,m=-1,W=.12,seed=1947,theta=(.11,.33),mu=1.1`, `eta=.003`: I(a) `-0.115816488`, II `-0.191177158`, sum `-0.306993647`, v41 exact `-0.307005888` e²/h. Near finite sample Fermi eigenlevels, `eta` regularization is highly sensitive. Six exact-disorder seeds are frozen as a **finite sampling diagnostic**, not infinite-size or SCBA acceptance.
+
+**Scientific status PARTIAL.** Conserving energy-dependent SCBA/Středa I+II with matched current/density vertices, contact and thermodynamic dc order of limits remain OPEN, as do original PRB nonlinear EB response, material-specific calculations, and other historical discrepancies. See PRB paper-local `docs/EXACT_STREDA_V42.md`.
