@@ -42,7 +42,7 @@ class ExactFiniteDisorderStreda(unittest.TestCase):
                 self.assertLess(abs(quad['sea_II']-analytical),3e-7)
     def test_v38_clean_bloch_sea_matches_exact_realspace_v42(self):
         from qgmap.streda_clean_sea_v38 import qwz_model,sea_per_k
-        L=5;theta=(.11,.33);offset=tuple(t/(2*np.pi) for t in theta)
+        L=9;theta=(.11,.33);offset=tuple(t/(2*np.pi) for t in theta)
         H,x,y=torus(L,-1.,0.,1947,theta)
         h,vx,vy=qwz_model(L,-1.,offset=offset)
         for mu in (0.,1.1):
