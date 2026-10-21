@@ -347,3 +347,10 @@ Same Fourier QWZ Hamiltonian now drives the periodic Berry/Fukui Chern oracle, a
 ## v62: periodic Kubo at μ/T, genuine contact widths and bond currents
 
 [Scientific report](docs/QWZ_BULK_KUBO_SPATIAL_CHARGE_V62.md) | [Frozen observable examples](results/frozen/v62_qwz_bulk_spatial_charge.json) | [Independent 30 tests](tests/test_qwz_spatial_v62.py). Same QWZ Hamiltonian: two analytically independent periodic **intrinsic charge** Hall oracles now use explicit μ/T; physical narrow/full strip electrodes sample the **local** spectral density and commutator-derived bond currents of an open device. Floating voltage probes preserve zero net current but can strongly redistribute **local** current while Hall plateau persists. Metallic μ breaks naive `Rxy=1/sigma_xy` and is a scientific **negative control**, not a source correction. Original orbital mixed E/B and generic bulk-vs-device equality remain **UNRESOLVED**; Xiang paper stays **PARTIAL**.
+
+
+## v63: non-invasive voltage-probe limit
+
+[v63 scientific report](docs/QWZ_NONINVASIVE_PROBE_LIMIT_V63.md) | [Frozen coupling/width/size evidence](results/frozen/v63_noninvasive_probe_limit.json) | [32 new independent gates](tests/test_qwz_probe_limit_v63.py).
+
+The new sweep rescales only top/bottom voltage-probe coupling amplitudes (C	o\lambda C), so their self-energy/broadening scale as (\lambda^2), while left/right drive contacts are fixed. For (L=7), drive/probe widths 3, (eta=10^{-4}), the maximum x-cut-current deviation shrinks from 0.974659 at (\lambda=1) to (7.58\times10^{-8}) at (\lambda=10^{-4}). The finite-device weak-probe Hall resistance approaches 1.00215746 (h/q^2), **not** asserted as exactly quantized; it remains size/position dependent. Full generic Kubo–NEGF limit and original orbital mixed (E/B) remain **UNRESOLVED**, source status **PARTIAL**.
