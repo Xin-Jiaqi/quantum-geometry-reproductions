@@ -123,3 +123,10 @@ These sources have not been exhaustively matched to the exact new *eight-band* s
 - **G6, peer equation-level comparison:** especially insulating Néel torque, layer Edelstein, magnetic-coupling quantum metric, and proper spin-current literature; identify a genuinely different measurable prediction.
 
 **Decision:** keep B+D alive as a mathematically consistent, physically explicit *toy hypothesis*. No paper-style discovery language, no claim of ferroelectricity, and no changes to the original PRL reproduction tests or scientific acceptance.
+
+
+## Supplementary phase-gauge and amplitude counterfactual (2026-10-21)
+
+On the same $17^2$ mesh, keeping $\lambda=0.22$ and varying the ordinary $t_0=0,0.10,0.15,0.20,0.25,0.30,0.35$ gives $\operatorname{Im}\chi\approx0,\ 9.2299\times10^{-9},\ 2.55084\times10^{-8},\ 6.03346\times10^{-8},\ 1.373751\times10^{-7},\ 3.282797\times10^{-7},\ 9.645773\times10^{-7}$. Thus the signal does not require a registry-dependent **intralayer** odd-dispersion term and goes continuously to zero when ordinary interlayer hopping is removed. This is **only model interference**, not an identified quantum-geometric mechanism or originality proof.
+
+For fixed $t_0=0.3$, the response is an **even function of $\lambda$** within numerical noise. This is expected: the global opposite-orbital phase redefinition $\rho_z$ sends $\rho_x\to-\rho_x$ and hence $\lambda\to-\lambda$, while leaving the other Hamiltonian terms and observable invariant. Similarly, the sign of $t_0$ alone is unobservable in this model by an allowed combination of orbital/layer phase conventions. **Do not interpret the sign or evenness of an individual hopping coefficient as a stacking-switchable physical observable.** The physically distinct $\pm\boldsymbol\delta$ registries have instead been checked with the actual $C_{2z}$ connection operator.
