@@ -1,0 +1,108 @@
+{
+  "scientific_status": "PARTIAL",
+  "primary_source": "original SM pages 11-12, Eq48/49/50/51/52/56",
+  "sha256": {
+    "main": "b87e0970f25dd45c5048f8cbbb8691b53ea215040935e9b21a4cde80c69b2730",
+    "sm": "9b0b8603d13962e100cc059bf4d96b91aa37062360d13decd1cb2eda495332c4"
+  },
+  "metric_eq49_52_mesh": [
+    {
+      "N": 20,
+      "eq48_from_F49": -0.000015366827588712358,
+      "printed_eq52_metric": -0.000021501793190760994,
+      "retained_factor2_metric": -0.000014572252100256034,
+      "missing_velocity_contribution": 0.0000069295410905049495,
+      "factor2_residual": -7.945754884563238e-7
+    },
+    {
+      "N": 28,
+      "eq48_from_F49": -0.000016317806876171465,
+      "printed_eq52_metric": -0.000022836475960425514,
+      "retained_factor2_metric": -0.000015906932381970035,
+      "missing_velocity_contribution": 0.0000069295435784554765,
+      "factor2_residual": -4.108744942014293e-7
+    },
+    {
+      "N": 36,
+      "eq48_from_F49": -0.000016731450873415168,
+      "printed_eq52_metric": -0.000023411065535129305,
+      "retained_factor2_metric": -0.00001648152196032733,
+      "missing_velocity_contribution": 0.0000069295435748020294,
+      "factor2_residual": -2.4992891308783826e-7
+    },
+    {
+      "N": 48,
+      "eq48_from_F49": -0.000017015874612294222,
+      "printed_eq52_metric": -0.000023804312784190127,
+      "retained_factor2_metric": -0.000016874769209385255,
+      "missing_velocity_contribution": 0.000006929543574804755,
+      "factor2_residual": -1.4110540290896643e-7
+    }
+  ],
+  "three_band_curvature_moment": [
+    {
+      "N": 32,
+      "mu": -1.1,
+      "T": 0.45,
+      "complete_moment_Berry": -0.0007994510534583237,
+      "printed_eq52_m_eq_l": -0.0015421831497385813,
+      "omitted_threeband": 0.0007427320962802576,
+      "ratio_abs_to_complete": 0.9290526206292342
+    },
+    {
+      "N": 56,
+      "mu": -1.1,
+      "T": 0.45,
+      "complete_moment_Berry": -0.0007994510535619775,
+      "printed_eq52_m_eq_l": -0.0015421831498146532,
+      "omitted_threeband": 0.0007427320962526757,
+      "ratio_abs_to_complete": 0.9290526204742756
+    },
+    {
+      "N": 56,
+      "mu": 1.5,
+      "T": 0.45,
+      "complete_moment_Berry": 0.0010239324224398814,
+      "printed_eq52_m_eq_l": 0.0009668354613395717,
+      "omitted_threeband": 0.00005709696110030977,
+      "ratio_abs_to_complete": 0.055762431044283224
+    }
+  ],
+  "orbital_phe_eq56_mesh": [
+    {
+      "N": 24,
+      "first_eq56": 0.007513115839395149,
+      "second_eq56": 0.007532713023531052,
+      "delta": -0.000019597184135903244
+    },
+    {
+      "N": 32,
+      "first_eq56": 0.0075444431704891025,
+      "second_eq56": 0.007555484714377156,
+      "delta": -0.000011041543888053347
+    },
+    {
+      "N": 48,
+      "first_eq56": 0.0075668638408296395,
+      "second_eq56": 0.007571777078921093,
+      "delta": -0.00000491323809145329
+    },
+    {
+      "N": 64,
+      "first_eq56": 0.007574719802231528,
+      "second_eq56": 0.007577484672487283,
+      "delta": -0.00000276487025575433
+    }
+  ],
+  "scope": {
+    "eq49_to_52": "Bona fide periodic two-band quantum metric, printed Eq49 coefficient 2 vs printed Eq52 coefficient 1; original Eq48 selects 2 by periodic integration by parts.",
+    "threeband": "Genuine periodic three-band eigenvector Berry/moment double sum; m!=l can be 92.9% of this specific subterm, NOT entire MNHE.",
+    "eq56": "Both printed lines consistent after BZ integration by parts, N^-2 numerical residual.",
+    "unresolved": [
+      "Full source Eq49 already drops a different three-band class",
+      "General full orbital MNHE, physical bath, contacts, material response",
+      "v49-51 spin Eq20/31 source sign and v52 Fig2 e2/hbar factor remain OPEN"
+    ]
+  },
+  "new_tests": 12
+}
