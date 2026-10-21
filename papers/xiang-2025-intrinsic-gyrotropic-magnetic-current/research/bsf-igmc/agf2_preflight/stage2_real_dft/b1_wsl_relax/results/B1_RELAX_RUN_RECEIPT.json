@@ -1,0 +1,41 @@
+{
+  "schema": "bsf_igmc_agf2_b1_wsl_relax_run_receipt_v1",
+  "date_utc": "2026-10-21T11:40:00Z",
+  "status": "RUNNING",
+  "status_meaning": "one WSL B1_g3.0 fixed-cell ionic relaxation is in progress (first ionic step, electronic SCF); NOT finished; no scientific conclusion claimed yet. Will be updated to CONVERGED/PARTIAL/FAILED/BLOCKED at the end.",
+  "authorization": "user-approved single B1_g3.0 Type-I non-SOC WSL relaxation per B1_WSL_RELAX_EXECUTION_TASK_20261021.md; no new PBS job; no B2/NEB/SOC/Wannier/IGMC",
+  "inputs": {
+    "poscar_sha256": "2d323c3fe2353ef984330b3b99fc24a75a85337883bbaf36d08b20ed45e6d60a",
+    "poscar_source": "verified original G1 POSCAR (C2DB-derived unrelaxed B1_g3.0; no selective dynamics; 12 atoms Ag4F8, order Ag/F; lattice a=3.827025 b=5.879666 c=26.938541 A)",
+    "kpoints_sha256": "4ab9ad06699176341f30e79f18b822be389d066f64e0295ce368e74b8b99420a",
+    "kpoints": "12x8x1 Gamma-centered screening mesh (NOT k-converged production)",
+    "potcar_sha256": "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff",
+    "potcar_note": "locked Ag||F PAW (Ag 02Apr2005, F 08Apr2002); element order Ag F; content not uploaded",
+    "incar_sha256": "1d8ff5dcbdae142eef2bc06ace2a604be3dc73cc3ec821139ce2df3b795fe097",
+    "incar_note": "INCAR.relax = G1 INCAR with ONLY the following changes: SYSTEM=AgF2_B1_g3.0_TypeI_nosoc_WSL_relax1; IBRION=-1->2; +ISIF=2; NSW=0->30; +POTIM=0.25; +EDIFFG=-0.02. All other settings unchanged (GGA=PE, ENCUT=500, EDIFF=1E-6, ISPIN=2, MAGMOM=-1 1 1 -1 8*0, LDAUTYPE=2/LDAUU=4 Ag-4d, IVDW=11 D3-zero, ISMEAR=0/SIGMA=0.05, ISYM=0, LORBIT=11, NCORE=4, LREAL=.FALSE., ALGO=Normal, ISTART=0/ICHARG=2, LWAVE/LCHARG=.FALSE.)"
+  },
+  "environment": {
+    "host": "researcher's local Windows machine, WSL2 VM",
+    "ram_total_gb": 7.8,
+    "vasp": "vasp.6.6.0 06Mar2026 (build 2026-09-02), complex, private local build",
+    "mpi": "OpenMPI 4.1.6 (mpirun.openmpi)",
+    "ranks": 8,
+    "parallel_layout": "NCORE=4 -> 2 band groups, k serial (KPAR=1)",
+    "persistent_session": "held ssh session (previous session-end kill of a background job observed and avoided)",
+    "safety_boundary_hours": 8,
+    "stop_plan": "STOPCAR graceful stop at the boundary if not finished; record PARTIAL if so"
+  },
+  "force_audit_before_run": {
+    "max_force_ev_ang": 0.1443,
+    "max_fy_ev_ang": 0.0484,
+    "verdict": "PASS - structure neither static (<0.02) nor suspect (>5 eV/A); no interlayer F-F below 2.2 A (nearest = 3.6806 A); one relaxation authorized (see G1_FORCE_AND_GEOMETRY_AUDIT.md)"
+  },
+  "run_progress_at_receipt": {
+    "started_utc": "2026-10-21T10:52:00Z",
+    "ionic_steps_completed": 0,
+    "electronic": "first ionic step SCF in progress (DAV ~15, E ~ -34.04 eV); EDIFF not yet reached in step 1",
+    "peak_memory_gb_sampled": 3.1,
+    "errors_so_far": []
+  },
+  "boundary": "RUNNING receipt is not a scientific result. FINAL values (TOTEN/E0/Delta-E per step, forces, ionic steps, final Ag moments, net M, F moments, gap/occupations, final coordinates, F-F separation, sliding) go into B1_RELAX_SCIENTIFIC_ASSESSMENT.md when the run finishes."
+}
