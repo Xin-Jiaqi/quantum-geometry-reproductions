@@ -319,3 +319,12 @@ A [new independent v58 calculation](docs/FIXED_LATTICE_ADAPTIVE_HALL_SCALING_V58
     python scripts/reproduce_planar_hall_scaling_v58.py --coverage .4 --sizes 5x5,7x7,9x9
 
 Finite coherent contact algorithms VERIFIED, device observables CONDITIONAL, bulk orbital MNHE UNRESOLVED, original Xiang source audit PARTIAL.
+
+
+### v59: finite-band physical electrode Green functions and independent periodic Kubo
+
+The semi-infinite 1D chain interface computes exact retarded g(E), the dispersive real selfenergy and energy-dependent Γ(E), and complete four-terminal Caroli magnetic derivative including specified dBΣ/dBΓ. At B=.31 with matched t=2 physical lead, Hall voltage/bias **−0.066126570518**, slope **−0.155571799467**; full independent five-point B error ~3.89e−13; increasing bandwidth recovers v57 wideband Γ=.55. Magnetic gauge, optical theorem and properly specified spinless Onsager pass. A separate QWZ periodic *charge* Chern oracle produces (0,+1,−1,0) by spectral Bloch Berry curvature and independent Fukui-Wilson links. **This is NOT the original orbital mixed E/B MNHE/PHE**; do not compare finite-device Hall voltage numerically with charge Chern conductivity. [v59 physics](docs/INDEPENDENT_LEAD_SELFENERGY_PERIODIC_KUBO_V59.md), [frozen](results/frozen/v59_lead_and_bulk_benchmark.json).
+
+Run: python -m unittest tests.test_lead_selfenergy_v59 -v
+
+Original source-paper science PARTIAL.
