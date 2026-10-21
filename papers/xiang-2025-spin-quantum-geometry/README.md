@@ -49,3 +49,10 @@ See [`docs/METHODS_ACCEPTANCE_V30.md`](docs/METHODS_ACCEPTANCE_V30.md) for the e
 New methods/laurent_v31.py extracts eta^-2, eta^-1 and the scheme-specific eta^0 coefficient for arbitrary isolated spectral clusters, including exact PT doublets. methods/pt_synthetic_v31.py verifies a genuine three-doublet six-band model. The analytic dH/dk population check, finite-eta limiting residual, and source-program regulator counterfactual establish a **math-method gate only**. The coefficient C_adiabatic is **not** accepted as general physical intrinsic driven DC tau^0. See docs/LAURENT_ACCEPTANCE_V31.md.
 
 Run: python scripts/reproduce_laurent_v31.py; python -m unittest discover -s tests -v.
+
+
+## V32: Original Supplemental Material Eq.(2) four-source validation
+
+The four printed SM Eq.(2) groups now have a reproducible 2–5 band nondegenerate implementation in methods/sm_eq2_v32.py, compared to an independent fixed-orbital recursion and the existing V30 Liouville code. A source-level discrepancy in the eta^0 occupation-gradient coefficient of printed Eq.(6) is retained without correction or curve fitting. This does **not** establish a general physical intrinsic tau^0 DC response. See docs/SM_EQ2_ACCEPTANCE_V32.md.
+
+Run python scripts/reproduce_sm_eq2_v32.py followed by python -m unittest discover -s tests -v.

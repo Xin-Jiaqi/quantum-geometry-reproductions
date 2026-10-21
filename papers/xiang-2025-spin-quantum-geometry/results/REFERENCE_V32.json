@@ -1,0 +1,44 @@
+{
+  "paper": "Xiang/Jin/Wang PRL 135 146303 (2025)",
+  "source": "offline V14 independent four-source original audit",
+  "status": "PARTIAL",
+  "protocol": "omega1=omega2=0, eta=.02, outer=2eta, k=.23, mu=.25, T=.45, synthetic nondegenerate",
+  "cases": [
+    {
+      "n": 2,
+      "eq2_vs_orbital_max": 1.6365339242217766e-9,
+      "extra_max": 0.00003230660220633536,
+      "triple_max": 0,
+      "delta_spin_trace": -0.0000025980434880143218,
+      "eq2_offdiag_spin_trace": -0.00010230240021694362,
+      "eq6_offdiag_spin_trace": -0.00009970435672892932
+    },
+    {
+      "n": 3,
+      "eq2_vs_orbital_max": 5.212491866986911e-9,
+      "extra_max": 0.00009003221253275127,
+      "triple_max": 0.000582312137651374,
+      "delta_spin_trace": -0.000005139067467700576,
+      "eq2_offdiag_spin_trace": 0.000030486427425153938,
+      "eq6_offdiag_spin_trace": 0.000035625494892854506
+    },
+    {
+      "n": 4,
+      "eq2_vs_orbital_max": 2.8151490454540596e-9,
+      "extra_max": 0.0028400173135611382,
+      "triple_max": 0.00769529336446657,
+      "delta_spin_trace": 0.00066274564681135,
+      "eq2_offdiag_spin_trace": 0.0002243512924968959,
+      "eq6_offdiag_spin_trace": -0.00043839435431445407
+    },
+    {
+      "n": 5,
+      "eq2_vs_orbital_max": 7.500745081647071e-9,
+      "extra_max": 0.0018615582129898867,
+      "triple_max": 0.006661206001723735,
+      "delta_spin_trace": 0.00010881200977546252,
+      "eq2_offdiag_spin_trace": 0.0006595929820694204,
+      "eq6_offdiag_spin_trace": 0.0005507809722939582
+    }
+  ]
+}
