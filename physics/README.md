@@ -110,3 +110,8 @@ A different same-Hamiltonian test uses identical real-space Fourier hoppings and
 ## v62: periodic charge Kubo and contact-sensitive local NEGF currents
 
 [Acceptance and explicit negative controls](../papers/xiang-2026-quantum-geometric-map/docs/QWZ_BULK_KUBO_SPATIAL_CHARGE_V62.md). Named analytic Pauli vs eigenstate velocity-Kubo charge Hall σxy(μ,T) and local QWZ strip-lead current continuity/spectral identities: **VERIFIED**. The finite-size contact geometry and measurable Rxy remain **CONDITIONAL**; persistent Hall plateau does not imply invariant local bond current. At metallic μ=1.5, naive reciprocal conductivity is decisively false. Generic Kubo–NEGF physical limit and the original Xiang multiband orbital E×B remain **UNRESOLVED**, original paper status **PARTIAL**.
+
+
+## v63: non-invasive QWZ voltage-probe limit
+
+The [v63 report](../papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINVASIVE_PROBE_LIMIT_V63.md) independently scales top/bottom probe amplitudes while holding drive leads fixed. Verified (Sigma,Gammaproptolambda^2) and vanishing local cut-current redistribution as (lambda	o0^+) for the stated finite clean QWZ geometry. The measured weak-probe (R_{xy}=1.00215746,h/q^2) is finite-size/position dependent, not an exact universal value. Generic thermodynamic Kubo–NEGF equality and original multiband orbital (E\times B) remain **UNRESOLVED**; Xiang paper **PARTIAL**.

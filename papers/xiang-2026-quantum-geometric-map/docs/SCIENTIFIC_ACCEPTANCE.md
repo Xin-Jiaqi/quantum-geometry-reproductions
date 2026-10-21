@@ -158,3 +158,18 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Full original orbital mixed EB | **UNRESOLVED**, manuscript audit remains **PARTIAL** | None of these charge-Hall source-independent tests replaces complete original orbital E/B Ward/contact method |
 
 30 new independent local tests, plus v60/v61 49 existing tests. [v62 physics report](QWZ_BULK_KUBO_SPATIAL_CHARGE_V62.md).
+
+
+## v63: non-invasive voltage-probe coupling limit (charge transport only)
+
+| Question | Status | Evidence / boundary |
+| --- | --- | --- |
+| Top/bottom coupling scaling | **VERIFIED** | (C_{T,B}	olambda C), fixed lead (g^r), therefore (Sigma,Gammaproptolambda^2); left/right drive leads are held fixed |
+| Local probe-current invasiveness | **VERIFIED for this finite QWZ device** | (L=7,w_d=w_p=3): (Delta J_{cut}) falls from 0.974659 at (lambda=1) to (7.58\times10^{-8}) at (10^{-4}), with interior continuity and zero net floating-probe current |
+| Weak-probe (R_{xy}) | **CONDITIONAL** | At fixed geometry (R_{xy}	o1.00215746,h/q^2); do not claim exact quantization, because it differs from the strong-probe result and is size/position dependent |
+| Probe width | **CONDITIONAL geometry result** | With drive width fixed at 3, wider probes perturb the local current more strongly at unit coupling; weak-coupling current-profile perturbation vanishes |
+| (eta) and size limit | **UNRESOLVED generally** | (eta=10^{-3}ldots10^{-6}) varies (R_{xy}) by ~(9.2\times10^{-6}) for this device; sizes 5–11 remain measurably size-dependent and do not establish a thermodynamic limit |
+| Kubo–NEGF same-observable limit | **UNRESOLVED** | No general proof for metallic (sigma_{xx}), disorder, bath, Ward/current-vertex or ordered ((lambda,eta,L)) limits |
+| Xiang orbital mixed (E/B) | **UNRESOLVED**, paper **PARTIAL** | The probe-limit study is charge-only and does not complete Wannier orbital B perturbation or conserving mixed Kubo–Středa response |
+
+32 new v63 tests; local v60–v63 standalone **111/111 PASS**. [v63 report](QWZ_NONINVASIVE_PROBE_LIMIT_V63.md).

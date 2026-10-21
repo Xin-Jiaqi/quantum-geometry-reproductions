@@ -173,3 +173,8 @@ The [Xiang PRB workbench](papers/xiang-2026-quantum-geometric-map/docs/SAME_QWZ_
 ### v62: conditional bulk charge Kubo and spatial four-terminal QWZ
 
 Further [v62 science](papers/xiang-2026-quantum-geometric-map/docs/QWZ_BULK_KUBO_SPATIAL_CHARGE_V62.md): independent periodic analytic-vs-eigenbasis Kubo charge σxy at finite μ/T and same-lattice finite coherent NEGF edge/local spectral current with genuinely different QWZ strip-electrode widths. Negative controls reveal that invasive floating voltage probes change local currents despite clean Rxy plateau, and metallic Rxy cannot equal 1/σxy without σxx, bath and geometry. 30 new tests, original source **PARTIAL**.
+
+
+### v63: non-invasive voltage probes in the same-QWZ device
+
+New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINVASIVE_PROBE_LIMIT_V63.md): scaling only floating top/bottom probe coupling by (lambda) gives (Sigma,Gammaproptolambda^2). In the specified (L=7) device, local current-cut deviations collapse from 0.974659 to (7.58\times10^{-8}) as (lambda) decreases from 1 to (10^{-4}). The weak-probe finite-device resistance approaches 1.00215746 (h/q^2), still size/position dependent. 32 new gates; source paper remains **PARTIAL**.
