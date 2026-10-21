@@ -21,7 +21,12 @@ This folder archives user/assistant explorations motivated by that paper. The or
 ## Independent scripts (toy models, not original paper reproductions)
 
 - [C2 minimal test](scripts/c2_minimal.py): finite-frequency Kubo/Liouville, interlayer/local torque Ward identity, disconnected limit.
-- Additional B null-test and three-parameter Bianchi scripts are in the accompanying offline research workspace; their numerical claims must be reconfirmed if transplanted. Do not assume these scripts are part of the paper's frozen CI.
+- [B rephasing null test](scripts/b_geometry_nulltest.py) and [three-parameter Bianchi check](scripts/bc_three_parameter_bianchi.py) are independently runnable; they are not paper reproduction tests.
+- [PT doublet projector and Drude reality check](scripts/pt_hidden_metric_and_drude.py): new conditional PT-staggered interband kernel and Fermi-surface model; no novelty claim.
+
+## Round 2: PT-staggered spin-geometry audit
+
+- [Round 2 report](docs/PT_staggered_spin_geometry_round2.md): U(2)-invariant doublet projector calculation; distinction between a surviving geometric kernel and a vanishing insulating dc Drude response. **Exploratory; novelty not established.**
 
 ## Research integrity and provenance
 
