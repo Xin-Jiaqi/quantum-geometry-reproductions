@@ -106,3 +106,15 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | True bulk orbital MNHE/PHE or fixed carrier-density thermodynamic limit | **UNRESOLVED** | This fixes lattice-site density, NOT electron filling, and has no microscopic inelastic/dephasing/lead bulk oracle |
 
 25 new independent local tests. Source Xiang original manuscript remains **PARTIAL**; v58 is a physics tool, not source-equation correction.
+
+
+## v59 exact finite-band coherent leads + independent periodic bulk charge Kubo
+
+| Scope | Status | Science gate |
+| --- | --- | --- |
+| 1D semi-infinite chain retarded g, Σ and Γ(E) | VERIFIED | Dyson equation, causal ImΣ, band edges and high energy asymptote |
+| Full four-probe Caroli magnetic derivative, including optional dBΣ and dBΓ | VERIFIED named mathematical algorithm; CONDITIONAL physical device | Explicit Caroli trace and optical theorem, both gauges, independent complete five-point magnetic field derivatives, v57 wideband limit |
+| Periodic bulk charge AHE QWZ | VERIFIED bounded charge Hall benchmark | Separate spectral Berry versus Fukui-Wilson links, 0,+1,-1,0 Chern, gapless phase refused |
+| Genuine orbital bulk mixed E/B, realistic matrix Wannier electrodes and conserving microscopic bath | UNRESOLVED | Original-paper science remains PARTIAL |
+
+21 new independent scientific tests. Spinless Onsager verified only for B-independent lead onsite; a B-odd scalar lead shift may violate it.
