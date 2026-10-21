@@ -105,3 +105,8 @@ A different same-Hamiltonian test uses identical real-space Fourier hoppings and
 - **VERIFIED named primitives:** QWZ Fourier hopping identical in periodic Bloch model, finite open device and four microscopic semi-infinite principal-layer leads; coherent Caroli scattering, independent S-matrix unitarity, zero-current floating contacts and phase-gauge covariance.
 - **CONDITIONAL charge Hall plateau:** clean T=0, μ=0, η=10^-4, L=3/5/7. m=-1/+1 leads Rxy→+1/-1 h/q², while periodic σxy=+1/-1 q²/h. Relates distinct observables via clean chiral transport and conductivity/resistivity inversion, not via their direct equality. At m=+3, the current is unresolved at measurement threshold and Rxy is **not** reported.
 - **UNRESOLVED:** bulk Kubo ↔ general finite-device transport with fully controlled thermodynamic/contact/disorder limits; original full multiband orbital E×B susceptibility. Scientific source audit remains PARTIAL.
+
+
+## v62: periodic charge Kubo and contact-sensitive local NEGF currents
+
+[Acceptance and explicit negative controls](../papers/xiang-2026-quantum-geometric-map/docs/QWZ_BULK_KUBO_SPATIAL_CHARGE_V62.md). Named analytic Pauli vs eigenstate velocity-Kubo charge Hall σxy(μ,T) and local QWZ strip-lead current continuity/spectral identities: **VERIFIED**. The finite-size contact geometry and measurable Rxy remain **CONDITIONAL**; persistent Hall plateau does not imply invariant local bond current. At metallic μ=1.5, naive reciprocal conductivity is decisively false. Generic Kubo–NEGF physical limit and the original Xiang multiband orbital E×B remain **UNRESOLVED**, original paper status **PARTIAL**.
