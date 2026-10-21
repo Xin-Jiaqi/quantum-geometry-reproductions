@@ -1,0 +1,21 @@
+# Never commit licensed site PAW, credentials, PBS states or private raw spinor outputs.
+**/POTCAR
+**/POTCAR.*
+**/site.json
+**/soc_pbs_ids.json
+**/OUTCAR
+**/CONTCAR
+**/OSZICAR
+**/EIGENVAL
+**/PROCAR
+**/WAVECAR
+**/CHGCAR
+**/vasprun.xml
+**/vasp.stdout
+**/vasp.stderr
+**/submit_soc.pbs
+**/*secret*
+**/*token*
+work/
+runs/
+stage8i-inputs/
