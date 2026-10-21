@@ -1,11 +1,13 @@
 # AgF₂ G1 · SCF Audit (pending — job queued, not started)
 
-**As of 2026-10-21 ~04:05 UTC**: job `490620.cmspbs1` has been submitted
+**Queue state as reported by the local Harness, timestamp pending independent reconciliation**: job `490620.cmspbs1` has been submitted
 exactly once (no auto-retry, no scope expansion) and is **still queued** on
 `CP_001` (`job_state = Q`; PBS comment "Not Running: Insufficient amount of
 resource: Qlist"). No OUTCAR/vasprun.xml exists yet, so **no SCF result is
 claimed**. This audit file records the *plan* and will be updated with real
 values when the job completes.
+
+**Provenance warning:** the original receipt used `2026-10-21T04:05:00Z` as its as-of time, but its companion input record reports submission at `2026-10-21T04:14:00Z`. The chronology is internally inconsistent. Both original timestamps remain preserved as reported values in JSON and must be checked against actual PBS `qstat -f` / accounting timestamps. No live queue state has been independently observed by the GitHub reviewer, and no VASP result is yet available.
 
 ## What will be audited from the real output (private copies stay on the cluster)
 | item | source | status now |
