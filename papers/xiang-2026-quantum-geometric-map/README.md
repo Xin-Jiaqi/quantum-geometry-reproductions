@@ -1,3 +1,5 @@
+> **v49 ORIGINAL PRIMARY SOURCE AVAILABLE:** Both user-provided PDFs have now been SHA256-verified: published PRB (8 pages) and authentic Supplemental Material (16 pages). Prior v45–v48 statements that the SM was unavailable are superseded. The original SM Eq15 inserts phenomenological tau at a selected electric-field adiabatic pole, while Eq20 and printed Eq31 have a literal **overall sign mismatch** under the velocity-r identity quoted in Eq31. Main Eq10 and SM Eq62 use opposite spin helicities for fixed physical sigma_x. Independent both-direction eigenbasis calculations keep all branches, no signs fitted. See [v49 source-certified scientific audit](docs/ORIGINAL_SM_SOURCE_AUDIT_V49.md). The article is still **PARTIAL**, with the source-level sign bridge OPEN.
+
 > **v47 SCIENTIFIC CORRECTION:** The original v46 electric-y equilibrium source contained a wrong Pauli derivative sign. The v46 frozen outputs and claim that unsymmetrized xy approximately matches Eq.(8) are **RETRACTED**. Code and tests are corrected. The properly symmetrized frozen-target response `(xy+yx)/2` matches signed main Eq.(11) across beta=.025–.6 at eta=.002, with relative residual about 5×10^-5; the author's Supplemental Material relaxation operator is still **not independently checked**. See [v47 correction](docs/ORIGINAL_PHE_SYMMETRIC_SOURCE_CORRECTION_V47.md). Whole paper scientific status **PARTIAL**.
 
 # Xiang et al. (2026): Quantum Geometric Map of Magnetotransport
@@ -219,3 +221,9 @@ python scripts/reproduce_phe_limit_v48.py --mode all
 ```
 
 Scientific state remains **PARTIAL**.
+
+### v49 authentic original Supplemental Material and main-article audit
+
+For the **actual user-provided primary PDFs**, SM Eq.(4)–(20), Eq.(31)–(33) and Eq.(62)–(63) have been read directly and linked to the published Eq.(10)–(11). `sm_literal_spin_phe_v49` evaluates the literal Eq20 tau-density-current and the Eq31/32 Zeeman-curvature expressions **independently** on both printed Hamiltonians with exactly the same physical sigma_x. At beta=.125,mu=.3,T=.03, Eq20/main gives -0.002506188247 versus Eq31/main +0.002506188247; Eq32/main gives +0.002506188497 whereas Eq32/SM gives -0.002506188497, agreeing with the signed Eq11 (-0.002506188335 finite-T model continuation). The earlier v47 eta-scaled frozen-H0 response approaches the **literal Eq20/main** coefficient, not Eq32/main, under fixed spin/B conventions. Separate adiabatic eta_a/eta_b regulators and one selected tau pole are explicitly distinguished from the v47 all-sector finite-eta bath model. No material experimental correction is claimed. Source PDF raw bytes are **not** committed; hashes and source lines are frozen.
+
+Run `python -m unittest tests.test_sm_literal_spin_phe_v49 -v` and `python scripts/reproduce_sm_source_v49.py --beta .125 --mu .3 --temperature .03`. The original-publisher Eq20/31 and helicity sign issues remain **OPEN**, whole-paper scientific acceptance **PARTIAL**.

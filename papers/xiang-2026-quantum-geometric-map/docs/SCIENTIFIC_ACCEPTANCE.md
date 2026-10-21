@@ -1,5 +1,7 @@
 # Scientific acceptance (public core, 2026-10-20)
 
+**v49 primary-source update:** The original 8-page published PRB and authentic 16-page Supplemental Material were directly supplied by the user and SHA256-verified. Statements from v45–v48 that SM was inaccessible are superseded. The original mixed-field τ pole (SM Eq15/20) is now source-verified, but a literal SM Eq20/31 sign difference and opposite main Eq10/SM Eq62 helicities are OPEN.
+
 **Overall: PARTIAL.** The original paper works with phenomenological RTA; conserving SCBA-Streda is a separate extension, not a prerequisite for the symmetric PHE. Software regression PASS verifies only the published code and named numerical protocols, not every claim in Xiang et al., PRB 113 L201406 (2026).
 
 | Branch | Public capability | Scientific gate |
@@ -36,6 +38,9 @@
 | v46 historical model RTA (source derivative retracted by v47) | The original k_y electric source contained an incorrect sign in d_y(k_x/r); previous v46 frozen numbers and its single-xy Eq8 match are INVALID | **RETRACTED numerics**; repaired implementation and all new physical gates in v47; original author SM still OPEN |
 | v47 repaired original symmetric PHE tensor vs main Eq.(11) | Independent finite-difference of full f(H_B) electric source; corrected sign; both xy and yx field orderings; independent direct finite-B Liouville superoperator; eta->0 numeric beta scan | PASS **named frozen-H0 model**: symmetric eta*response matches signed Eq.(11) at beta=.025-.6 to about 5e-5 relative; author SM collision operator and Fig2 SI amplitude OPEN |
 | v48 original PHE Eq. (11) physical limit robustness and source-provenance gate | Corrected v47 symmetric tensor across eta, eta-squared extrapolation, mu electron/hole reversal, thermal tanh crossover, four UV cutoffs, full Fermi source finite differences | PASS the **named frozen-H0 model**: eta² extrapolated ratio 1.00000024; source-author Supplemental Material relaxation inaccessible, hence **author-method identity OPEN** |
+| v49 authentic source PDF/SM provenance | Independently inspect original 8-page PRB and 16-page SM, freeze both SHA256; read SM Eq4–20,31–33,62–63 rather than infer from historic notes | PASS original source now available and directly checked |
+| v49 literal SM Eq20 → Eq31/32 sign | Independent two-band eigenbasis current from actual SM Eq20 versus printed Eq31/32, both XY/YX, U(1) gauge, multiple tilts and raw signed physical B | **OPEN**: literal Eq20 contraction and Eq31 are equal magnitude/opposite sign; must resolve the manuscript's index/velocity conventions |
+| v49 main Eq10 versus SM Eq62 helicity | Direct comparison of two opposite spin helicities; sigma_z rotation also changes Zeeman sigma_x; source Eq32/SM Eq62 agrees with Eq11 whereas main Eq10 gives negative | **OPEN** physical spin/B sign convention; no silent correction |
 | General orbital QMQ/BCQ | General omitted three-band pieces and complete Kubo–Středa physical DC response | OPEN |
 | Real Wannier materials | Requires consistent projected magnetic/position operators, Berry connection and validated response protocol | BLOCKED |
 

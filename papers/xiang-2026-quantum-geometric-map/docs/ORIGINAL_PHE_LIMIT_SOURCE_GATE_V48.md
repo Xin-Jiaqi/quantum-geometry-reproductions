@@ -1,3 +1,5 @@
+> **Source status superseded by v49:** The user has now supplied the original 16-page SM and 8-page published main PDF, both directly inspected and SHA256-pinned. Earlier paragraphs claiming SM is unavailable accurately describe v48 only, NOT current access. See [v49 primary-source audit](ORIGINAL_SM_SOURCE_AUDIT_V49.md) for source Eq15/20/31 sign and Eq10/62 helicity discrepancies.
+
 # v48 | Original symmetric spin PHE: robust RTA limit and source-provenance audit
 
 **Paper:** Xiang et al., *Quantum geometric map of magnetotransport*, PRB **113**, L201406 (2026), DOI [10.1103/kd12-4ycj](https://doi.org/10.1103/kd12-4ycj). Entire-paper scientific acceptance remains **PARTIAL**.
