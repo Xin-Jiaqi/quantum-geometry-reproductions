@@ -92,3 +92,17 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Intrinsic thermodynamic bulk MNHE/PHE, scattering/microscopic leads and bulk size limit | **UNRESOLVED** | Sparse diamond ring enlargement is *not* controlled thermodynamic scaling |
 
 20 new independent physical tests PASS locally; full GitHub CI required before accepting merged module. Original-paper source status remains PARTIAL.
+
+
+## v58: fixed-site-density planar family and verified adaptive energy integration
+
+| Gate | Status | Independent evidence |
+| --- | --- | --- |
+| Fixed a,t,onsite,mu and qBa²/hbar across real Nx×Ny rectangular devices, centered multi-site wideband leads | **VERIFIED model construction** | True site/hopping checks, disjoint symmetric contacts, per-site vs fixed-reservoir-total Γ |
+| Multi-site Caroli T and d_BT, floating voltage Hall ratio and true Rxy=VH/I | **VERIFIED mathematical algorithm** | Independent Caroli trace; v57 single-site limit; Onsager/current conservation and magnetic-gauge invariance |
+| Complete magnetic derivative of Rxy and Hall voltage | **VERIFIED within finite model** | Independent five-point full B/transmission and re-solved floating probes; matched rotated rectangles |
+| Narrow coherent resonances and energy integration | **VERIFIED convergence gate** | Deliberate 80/120/180-point Gauss mismatch; fail-closed adaptive split at H eigenvalues, separately tightened integration, adaptive two magnetic gauges |
+| Size/contact-dependent spinless coherent Peierls Hall voltage | **CONDITIONAL device observable** | Nonmonotonic finite-size response and large changes with lead coverage/Γ normalization |
+| True bulk orbital MNHE/PHE or fixed carrier-density thermodynamic limit | **UNRESOLVED** | This fixes lattice-site density, NOT electron filling, and has no microscopic inelastic/dephasing/lead bulk oracle |
+
+25 new independent local tests. Source Xiang original manuscript remains **PARTIAL**; v58 is a physics tool, not source-equation correction.
