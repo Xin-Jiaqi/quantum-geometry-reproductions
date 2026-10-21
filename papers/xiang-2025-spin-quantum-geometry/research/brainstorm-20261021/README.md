@@ -52,3 +52,15 @@ This directory deliberately has **no imports into paper reproduction code and no
 - With both ordinary and spin-dependent hopping present, the gapped model has an interband AC layer-staggered **spin-density** response. It changes sign across C2z-related registries and vanishes when either hopping family is absent, unlike the Gate 1 disconnected-layer artifact.
 - Independent rank-two PT-doublet projectors, random U(2) mixing, orbital-embedding k sewing, direct/indirect gaps, k convergence and torque commutators tested.
 - **NOT an FE pair, NOT a new quantum metric, NOT peer-priority clearance, NOT a completed original-paper reproduction.** Next gates: microscopic orbital SOC hopping, magnetic connection to actual polar states, torque/edge observable, equation-level peers.
+
+
+## B+D Gate 3 (2026-10-21): atomic-SOC microscopic path and negative novelty tests
+
+- [Scientific source/peer/physics report](docs/BD_GATE3_ATOMIC_SOC_MAGNETIC_NO_GO_20261021.md) and [independent standalone 16-band NumPy script](scripts/bd_gate3_atomic_soc.py).
+- **PASS (model):** explicit spin-INDEPENDENT \(s,p_x,p_y,p_z\) Slater–Koster interlayer bonds plus onsite atomic \(L\cdot S\) produce PT-even spin-dependent \(s_T\to p_{z,B}\) hopping after \(p_x,p_y\) Schur downfolding. Controls \(V_{sp}=0\) and SOC=0 remove it. This is **well-known perturbation theory**, not novelty.
+- **NO-GO (original magnetic claim):** subgap AC layer-staggered \(S_-^z\) response persists at \(m=0\) and is even under Néel reversal.
+- **OVERLAPS (geometry):** static \(E_x\to S_{\rm tot}^z\) signal is magnetic-odd, but independently agrees with **standard mixed \((k_x,b_z)\) Berry curvature** (difference ~\(1.3\times10^{-12}\) on \(11^2\)).
+- **SYMMETRY TEMPLATE, NOT FE:** exact PT forbids *net* \(P_z\). An \(m_zT\) *connection* maps two PT-broken daughter models with manually imposed layer potentials \((+\delta,+u)\leftrightarrow(-\delta,-u)\); total and staggered spin response have opposite switching parities. No self-consistent polarization, structural double well or FE barrier demonstrated.
+- Next decisive gate: genuinely polar sublattice geometry + hopping/charge-energy-derived polar asymmetry, **not an inserted \(u(\delta)\)**; then full proper spin/torque/finite-\(\omega\) response and near-neighbor equation-level comparison.
+
+The original PRL-paper reproduction, frozen data, CI and acceptance statuses remain strictly untouched.
