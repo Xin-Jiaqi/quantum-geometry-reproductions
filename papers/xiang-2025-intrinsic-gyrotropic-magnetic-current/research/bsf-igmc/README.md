@@ -73,3 +73,7 @@ OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
 ## Stage 4: first real-material candidate, AgF₂ (source-grounded preflight)
 
 See [`agf2_preflight/`](agf2_preflight/) for the independent AgF₂ Type-I/strained Type-II magnetic-connector tensor predictions, the published BSF structural evidence and the **fail-closed DFT input gate**. This follow-up does **not** modify or promote the eight-band model's artificial energy surface to a ferroelectric double well, and no AgF₂ DFT/IGMC values have been computed.
+
+## Peer literature, novelty and research decisions (2026-10-21)
+
+See [the source-audited peer-literature and novelty review](docs/PEER_LITERATURE_AND_NOVELTY_REVIEW_20261021.md), organized as **I. idea / II. model-and-material tests / III. competing peer work**. It cross-checks the direct Xiang, Zhu, Ghorai and Peng papers, adjacent layer-response literature, and the next discriminating computational tests. This is an **assessment only**, not an AgF₂ DFT or PBS update. The first G1 receipt remains separately tracked in [PR #25](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/25).
