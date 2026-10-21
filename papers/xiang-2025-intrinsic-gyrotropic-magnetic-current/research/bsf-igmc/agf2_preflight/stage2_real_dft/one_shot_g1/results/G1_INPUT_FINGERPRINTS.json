@@ -75,7 +75,7 @@
   },
   "executables_verified": {
     "vasp_bin": "/work/app/VASP6/vasp.6.4.3_wannier90_cpu/bin/vasp_std",
-    "vasp_choice_note": "vasp.6.6.1_cpu / 6.6.0_cpu / 6.5.1_cpu builds are NOT accessible to this account (group permission denied); the user-proven vasp.6.4.3_wannier90_cpu build (group vasp6grp) was selected; exact VASP version string confirmed from the real OUTCAR after the run",
+    "vasp_choice_note": "vasp.6.6.1_cpu / 6.6.0_cpu / 6.5.1_cpu builds are NOT accessible to this account (group permission denied); the previously used vasp.6.4.3_wannier90_cpu build (group vasp6grp) was selected; exact executed VASP version string must be confirmed from real OUTCAR after the job runs; no OUTCAR exists as of this queued-only report",
     "mpi": "Intel MPI Library 2021.10.0 (oneapi/2023.2.0 site loader)",
     "mpi_launch": "mpirun -np 32 -ppn 32 -hostfile $PBS_NODEFILE (site-proven pattern used by existing VASP jobs on this site)",
     "ldd_after_loader": "0 unresolved dependencies",
