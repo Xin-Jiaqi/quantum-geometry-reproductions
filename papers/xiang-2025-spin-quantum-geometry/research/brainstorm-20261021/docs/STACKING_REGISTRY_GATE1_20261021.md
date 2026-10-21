@@ -117,3 +117,8 @@ The finite `Rmax=3` truncation is small but is **not exactly invariant** under `
 Read with the [peer-work audit](PEER_WORK_AUDIT_20261021.md), especially the 2024 sliding-layer-spin Hall, 2024 extended-space layer multipoles, 2025/2026 magnetic stacking theory, 2025 insulating NSOT, and Shi et al. proper-spin-current discussion. The existence of this model symmetry and of a nonzero `C_stag` is already within familiar ingredients; there is **no originality claim**.
 
 **Decision:** Gate 1 complete as a negative control. Proceed only after finding a microscopic interlayer spinful channel and defining an independently measurable observable. Do not modify paper-specific PRL reproduction code or promote this branch to `PAPER_REPRODUCED`.
+
+
+## Gate 1b: critical four-band PT constraint (additional audit)
+
+An exhaustive independent test of all 16 Hermitian `tau_a sigma_b` matrices for the **specific** `PT=tau_x(i sigma_y)K` representation gives just six PT-even matrices: `I, tau_x, tau_y, tau_z sigma_x, tau_z sigma_y, tau_z sigma_z`. Thus all direct `tau_x sigma_i` and `tau_y sigma_i` interlayer spinful hopping operators are PT-odd in this four-band representation. **Correction to the preliminary future-work suggestion above:** simply inserting PT-even spinful hopping in this same one-orbital/layer model is impossible. Next consider at least two orbitals per layer (eight-band), with physical orbital-dependent PT action, or a physically justified PT-breaking route. [16-operator numerical proof](../scripts/pt_operator_basis_gate.py). This is representation-specific, not a universal bilayer no-go.
