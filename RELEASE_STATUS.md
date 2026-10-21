@@ -229,3 +229,11 @@ New module `papers/xiang-2026-quantum-geometric-map/src/qgmap/qwz_probe_limit_v6
 ## v64 — exact virtual-probe limit at fixed L and eta (2026-10-22)
 
 Independent v64 QWZ two-drive G0 oracle computes lambda→0+ probe spectral potential without attaching voltage probe selfenergies, and demonstrates O(lambda²) approach of full four-probe Hall/contact current. Fixed-width size L=5/7/9/11 remains finite-size dependent; sensor position controls and metallic/trivial failure guards are included. **VERIFIED named mathematics**, **CONDITIONAL mesoscopic reading**, **UNRESOLVED bulk dc and original orbital mixed E/B**; Xiang scientific audit **PARTIAL**. 26 new independent local tests, 137 standalone v60–v64 total. Pending real final PR and post-merge remote CI log verification; do not treat this note as a completed release.
+
+
+### v64 independently certified release
+
+- [PR #45](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/45) squash merged as `a88bf2f5e3a1effc6e808dd56c8bca4fafc09a00`, original final PR head `b77383ed4909e292b96c6d5d3056d40f8cf9cc92`.
+- PR-head [Actions 39689754928](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39689754928): **675/675 PASS** in 119.632 s. Same-source push [39689723311](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39689723311): **675/675 PASS** in 112.377 s.
+- Independent post-merge **main** [Actions 39690102473](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39690102473): **675/675 PASS** in 119.076 s, validated the merged commit `a88bf2f5e3a1effc6e808dd56c8bca4fafc09a00`.
+- Separate standalone 137/137 local scientific tests; v64 frozen output byte-identical on regeneration and SHA256-verified handoff archive. **VERIFIED** defined finite-QWZ virtual-probe lambda→0+ algorithm; **CONDITIONAL** mesoscopic observable; **UNRESOLVED** thermodynamic bulk Kubo/DC and original orbital mixed E/B. Xiang PRB source review **PARTIAL**. This certification appends root release documentation only; no tested source code changes.
