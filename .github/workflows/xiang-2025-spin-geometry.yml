@@ -35,3 +35,6 @@ jobs:
       - name: V31 PT Laurent JSON smoke
         working-directory: papers/xiang-2025-spin-quantum-geometry
         run: python scripts/reproduce_laurent_v31.py > /tmp/xiang-laurent-v31.json
+      - name: V32 SM Eq2 source-by-source JSON smoke
+        working-directory: papers/xiang-2025-spin-quantum-geometry
+        run: python scripts/reproduce_sm_eq2_v32.py > /tmp/xiang-sm-eq2-v32.json

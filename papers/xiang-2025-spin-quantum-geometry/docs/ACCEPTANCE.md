@@ -22,3 +22,8 @@ V29 migrates the frozen intrinsic Eq. (13) two-band reduced model. The eigenstat
 ## V31 isolated-cluster Laurent audit
 
 PASS for 46 scoped unit tests (32 old + 14 V31), with 3/4/5 nondegenerate bands, exact PT four/six bands, an independent dH population-gradient derivative, true three-cluster intermediate term, U(6) fixed-orbital covariance, finite-eta O(eta) remainder and a converged one-dimensional BZ diagnostic. The adiabatic finite constant is **NOT** established as a universal intrinsic metallic driven-DC tau^0. No source equations were silently corrected. See LAURENT_ACCEPTANCE_V31.md.
+
+
+## V32 — SM Eq.(2) four-source algebra
+
+PASS: 70 scoped tests on nondegenerate source Eq.(2), independent finite-eta orbital recursion (N=2..5), gauge choices, printed Eq.(6) algebra and frozen original V14 values. Max matrix difference < 8e-9 for the four original band-versus-orbital comparisons. Printed Eq.(6) has an additional source-equation occupation-gradient difference: deltaC=-i*r_mn*(f'_n-f'_m)/(epsilon_m-epsilon_n)^2. **Scientific status stays PARTIAL; no metallic intrinsic physical DC gate is closed.** See SM_EQ2_ACCEPTANCE_V32.md.
