@@ -48,7 +48,7 @@ class SourceBackedRelaxationReviewTests(unittest.TestCase):
             prepare.build(folder)
             result=review.gate(folder)
             self.assertEqual(result["status"],"BLOCKED_RAW_OUTPUT_INCOMPLETE_OR_IONIC_CHECK_FAILED")
-            self.assertIsNone(result["no_NEBar_or_NMEE_claim"] if False else None)
+            self.assertTrue(result["no_NEBar_or_NMEE_claim"])
 
     def test_all_three_mock_outputs_still_not_neb(self):
         with tempfile.TemporaryDirectory() as t:
