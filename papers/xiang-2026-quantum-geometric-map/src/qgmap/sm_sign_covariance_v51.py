@@ -5,6 +5,7 @@ main PRB Eq(10)-(11). This is algebra / basis-covariance and finite-T
 Dirac-model method audit, NOT a manuscript erratum claim or physical transport.
 """
 from __future__ import annotations
+from dataclasses import dataclass, asdict
 import numpy as np
 from numpy.polynomial.legendre import leggauss
 
