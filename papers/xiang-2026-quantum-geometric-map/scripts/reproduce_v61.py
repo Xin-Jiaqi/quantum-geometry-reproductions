@@ -8,8 +8,10 @@ def create():
     for m in (-1.,1.,3.):
         for L in (3,5,7):
             d=qwz_four_terminal(L,m,eta=1e-4)
-            d.pop('transmissions')
-            cases[f'm{m:+g}_L{L}']=d
+            cases[f'm{m:+g}_L{L}']={'bulk_chern':int(round(d['bulk_sigma_xy_q2_over_h'])),
+                                      'hall_resistance_h_over_q2':d['hall_resistance_h_over_q2'],
+                                      'drive_current_q2_over_h':d['drive_current_q2_over_h'],
+                                      'reportable':d['hall_resistance_reportable']}
     eta_scan={}
     for eta in (1e-3,1e-4,1e-5):
         d=qwz_four_terminal(5,-1,eta=eta)
