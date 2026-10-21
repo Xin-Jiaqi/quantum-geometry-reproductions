@@ -150,3 +150,25 @@ PEERS / 始终校准创新与验证门槛
 **相邻预印本**：P09 [Das/Agarwal layer-orbital](https://arxiv.org/abs/2604.20249), 注意**截至本轮只确认 arXiv 预印本，不能冒称 Science 正式发表**。
 
 > **可复现范围声明：** 本轮核验出版社原文标题/作者/日期/摘要和部分可读正文，并抽查了本 Project 中《Layer Edelstein Effect》《Sliding Ferroelectric Control》《Intrinsic Magnetoelectric Hall Effect》的完整中文精读笔记；并非逐式推导每篇完整 supplemental material。特别是 P01、P02、P03 与 P04 的有些公式、数值归一化、碰撞算符和 layer projector 实现，需要下一轮得到全文和 SM 后逐式细审。在没有这些证据前，任何“已经证明我们的 Eq. X 与同行 Eq. Y 不同”的断言都不成立。新增文献是否与我们有**完全相同的** \(\Gamma_{iz;j}\) 和 layer projection，仍属开放检索目标。
+
+
+## 8. 完整题名检索索引（原始出版社 / 预印本链接）
+
+此表供今后逐篇下载正文与 SM，对应上文证据矩阵。标题为文章原题，不代表本轮已经逐式阅读其全文。
+
+| ID | 原文完整标题 | 来源 |
+|---|---|---|
+| P01 | Nonlinear Magnetoelectric Edelstein Effect | [原始链接](https://doi.org/10.1103/r3x2-kb93) |
+| P02 | Layer Edelstein Effect | [原始链接](https://doi.org/10.1103/qhvs-pfkq) |
+| P03 | Prediction of a layer nonlinear Hall effect in bilayer nonmagnetic or antiferromagnetic systems | [原始链接](https://doi.org/10.1103/2gyh-y52n) |
+| P04 | Multistate manipulation of charge-spin conversion in two-dimensional ferroelectric bilayers | [原始链接](https://doi.org/10.1103/np2g-86h3) |
+| P05 | Rashba splitting in bilayer transition metal dichalcogenides controlled by electronic ferroelectricity | [原始链接](https://doi.org/10.1103/PhysRevB.100.155408) |
+| P06 | Tunable Edelstein effect in the intrinsic two-dimensional ferroelectric metal PtBi2 | [原始链接](https://doi.org/10.1103/j5s5-m7j5) |
+| P07 | Spin Transport Revealed by Spin Quantum Geometry | [原始链接](https://doi.org/10.1103/14mp-263q) |
+| P08 | Quantum metric induced nonlinear Edelstein effect and giant intrinsic antidamping spin-orbit torque | [原始链接](https://doi.org/10.1103/5v7q-7x7y) |
+| P09 | Intrinsic Magnetoelectric Hall Effect from Layer-Orbital Quantum Geometry | [原始链接](https://doi.org/10.48550/arXiv.2604.20249) |
+| P10 | Sliding Ferroelectric Control of Unconventional Magnetism in Stacked Bilayers | [原始链接](https://doi.org/10.1103/dmzg-ck2t) |
+| P11 | Highly tunable band structure in ferroelectric R-stacked bilayer WSe2 | [原始链接](https://doi.org/10.1038/s41467-026-68854-x) |
+| P12 | Non-relativistic torque and Edelstein effect in non-collinear magnets | [原始链接](https://doi.org/10.1038/s41467-024-51565-6) |
+| P13 | Mixed Weyl semimetals and low-dissipation magnetization control in insulators by spin-orbit torques | [原始链接](https://pmc.ncbi.nlm.nih.gov/articles/PMC5684220) |
+| P14 | Direct and inverse spin-orbit torques | [原始链接](https://doi.org/10.1103/PhysRevB.92.064415) |
