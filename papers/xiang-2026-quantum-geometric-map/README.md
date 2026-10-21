@@ -238,3 +238,14 @@ python scripts/reproduce_sm_two_color_v50.py --eta-a .002 --eta-b .001 --nr 100 
 ```
 
 The original main+SM source SHA256 are retained but raw PDFs are private and not published. Whole paper scientific status **PARTIAL**.
+
+### v51: Original SM Eq20/31 signed-source discrepancy survives complete spin-basis covariance
+
+An independent **generic Hermitian two-band** matrix check (120 random cases, arbitrary U(1) band phases) shows that direct current from source SM Eq.(20), using the very velocity–Berry-connection identity printed below Eq.(31), yields **plus tau sum Z d f per E Bbar**, whereas printed Eq.(31) yields **minus**. This is an explicitly bounded local source formula inconsistency. The opposite spin helicities in main Eq.(10) and SM Eq.(62) are basis-related by **U=sigma_z**, but that same transformation must flip **the physical sigma_x magnetic operator** and the current velocity, leaving all correctly paired results invariant. Flipping the Hamiltonian alone changes both signs but **cannot** cure their relative disagreement. Separately, original SM Eq.(33) `sum Z_nm = d_k <sigma_x>_n` passes independent finite-difference spin-texture and integrated xy/yx checks (~1e-10 at generic momentum). See [v51 primary-source signed-covariance report](docs/AUTHENTIC_SM_SIGN_COVARIANCE_V51.md).
+
+```bash
+python -m unittest tests.test_sm_sign_covariance_v51 -v
+python scripts/reproduce_sm_sign_covariance_v51.py --beta .125 --mu .3
+```
+
+No original PDF is redistributed, source SHA256 hashes remain pinned. This does not declare any physical experiment invalid. Whole-paper science **PARTIAL**, original signed Eq20/31 source **OPEN**.
