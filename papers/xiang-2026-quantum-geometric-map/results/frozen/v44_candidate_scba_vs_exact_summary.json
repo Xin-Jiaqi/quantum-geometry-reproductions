@@ -1,0 +1,62 @@
+{
+  "protocol": "v44_SCBA_Ia_plus_II_vs_exact_finite_disorder",
+  "scientific_status": "PARTIAL",
+  "model": "QWZ m=-1, mu=1.1, eta=.12, QWZ scalar onsite disorder variance W; units e²/h",
+  "scba": {
+    "mesh": 35,
+    "lower": -12,
+    "quadrature": 420
+  },
+  "exact": {
+    "L": 4,
+    "twist_grid": [
+      7,
+      7
+    ],
+    "independent_seed_start": 1947,
+    "independent_seed_end": 1970,
+    "seeds": 24
+  },
+  "rows": [
+    {
+      "W": 0,
+      "surface_Ia": -2.0110331977149745,
+      "sea_II_candidate": 1.7181352929069276,
+      "candidate_total": -0.2928979048080469,
+      "clean_analytic_reference": -0.2928990006364909
+    },
+    {
+      "W": 0.03,
+      "surface_Ia": -1.8101741974651027,
+      "sea_II_candidate": 1.4340506594653215,
+      "candidate_total": -0.37612353799978115,
+      "exact_surface_Ia": -1.8542010190987206,
+      "exact_sea_II": 1.4643486342768157,
+      "exact_total": -0.3898523848219049,
+      "exact_seed_sem_total": 0.021380310191115477,
+      "candidate_minus_exact": 0.01372884682212372
+    },
+    {
+      "W": 0.12,
+      "surface_Ia": -1.4303235528399285,
+      "sea_II_candidate": 0.9742643264534461,
+      "candidate_total": -0.45605922638648244,
+      "exact_surface_Ia": -1.5002754668406124,
+      "exact_sea_II": 1.0165858032840585,
+      "exact_total": -0.4836896635565539,
+      "exact_seed_sem_total": 0.027787510405982308,
+      "candidate_minus_exact": 0.027630437170071465
+    }
+  ],
+  "provenance": {
+    "source_blob": "d2f509889c9c34b1efcc634c4fd4899f56b8f309",
+    "tests_blob": "1a41da10ea870f7e61a5b2594914dc93b22c5f6c",
+    "cli_blob": "7b91205370af0457a0360eb5eaad9c01d7021cdd"
+  },
+  "unresolved": [
+    "candidate SCBA I(a)+II does not constitute a proven conserving electromagnetic Hall theory",
+    "missing transverse contact/Ward closure and crossed disorder sectors",
+    "metallic thermodynamic and eta/omega/q limit order unverified",
+    "nonlinear EB PHE remains OPEN"
+  ]
+}
