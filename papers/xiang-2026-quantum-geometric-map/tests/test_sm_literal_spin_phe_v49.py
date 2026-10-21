@@ -85,6 +85,18 @@ class SourceCertifiedPHEV49(unittest.TestCase):
                 self.assertAlmostEqual(lhs.real,rhs.real,delta=1e-8)
                 self.assertAlmostEqual(lhs.imag,rhs.imag,delta=1e-8)
 
+    def test_v47_small_eta_symmetric_limit_matches_literal_Eq20_main_not_printed_Eq32_main(self):
+        from qgmap.dirac_source_tensor_v47 import tensor
+        from qgmap.dirac_mixed_rta_v46 import Spec
+        c=self.s
+        out=tensor(Spec(beta=c.beta,mu=c.mu,temperature=c.temperature,eta=.002,
+                        nr=c.nr,nphi=c.nphi,cutoff=c.cutoff),step=2e-5)
+        literal_eq20=.5*(self.a['main']['xy']['SM_Eq20_current_physical_B']+
+                         self.a['main']['yx']['SM_Eq20_current_physical_B'])
+        self.assertLess(abs(out['eta_times_symmetric']/literal_eq20-1),2e-4)
+        self.assertGreater(abs(out['eta_times_symmetric']-
+                    self.a['main']['SM_printed_Eq32_symmetric']),.004)
+
     def test_fail_closed(self):
         with self.assertRaises(ValueError):SourceConfig(beta=1.)
         with self.assertRaises(ValueError):SourceConfig(temperature=-1.)
