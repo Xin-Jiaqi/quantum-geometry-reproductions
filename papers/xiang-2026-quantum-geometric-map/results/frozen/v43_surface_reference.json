@@ -1,0 +1,87 @@
+{
+  "protocol": "same_variance_SCBA_RA_ladder_vs_exact_disorder_Ia_v43",
+  "scientific_status": "PARTIAL",
+  "model": "QWZ m=-1, mu=1.1, eta=0.12; Gaussian scalar onsite V_r std=sqrt(W)",
+  "quantity": "antisymmetric linear Streda I(a) RA surface ONLY, units e2/h",
+  "scba_mesh": 35,
+  "exact_torus_L": 4,
+  "exact_twist_grid": [
+    7,
+    7
+  ],
+  "seed_first": 1947,
+  "seed_last": 1970,
+  "number_independent_seed_samples": 24,
+  "rows": [
+    {
+      "W": 0,
+      "scba_bare": -2.0110331977149745,
+      "scba_one_ladder": -2.0110331977149745,
+      "exact_finite_mean": -2.008080543902591,
+      "seed_sem": 0
+    },
+    {
+      "W": 0.03,
+      "scba_bare": -1.7361377829834912,
+      "scba_one_ladder": -1.8101741974651027,
+      "exact_finite_mean": -1.8542010190987206,
+      "seed_sem": 0.043971650178643046
+    },
+    {
+      "W": 0.12,
+      "scba_bare": -1.278069927703984,
+      "scba_one_ladder": -1.4303235528399285,
+      "exact_finite_mean": -1.5002754668406124,
+      "seed_sem": 0.05502456542802276
+    }
+  ],
+  "additional_NONacceptance_scaling": {
+    "W": 0.12,
+    "mu": 1.1,
+    "eta": 0.12,
+    "scba_mesh": 49,
+    "scba_one_ladder": -1.4303166256453608,
+    "finite_sample_rows": [
+      {
+        "L": 3,
+        "seeds": 96,
+        "twist_grid": [
+          9,
+          9
+        ],
+        "mean": -1.565877712530827,
+        "seed_sem": 0.03112206798239481
+      },
+      {
+        "L": 4,
+        "seeds": 96,
+        "twist_grid": [
+          9,
+          9
+        ],
+        "mean": -1.5294815060108713,
+        "seed_sem": 0.022508263563616234
+      },
+      {
+        "L": 5,
+        "seeds": 64,
+        "twist_grid": [
+          7,
+          7
+        ],
+        "mean": -1.5434882511443004,
+        "seed_sem": 0.021897888067297998
+      }
+    ]
+  },
+  "source_sha256": {
+    "src/qgmap/scba_surface_v43.py": "713b4cbf1f3cdd346eac4a591ee355c0a10194be9b3e28e2566dbe331bc10af7",
+    "tests/test_scba_surface_v43.py": "0a18eaf0882e50c3e0e494958c6c88ebf613dd736b20eb8dba939582a47868de",
+    "scripts/reproduce_scba_surface_v43.py": "1a49e34b592e3981df9853ac77dca77e893d0e577b0b8505d115755f45600561"
+  },
+  "explicit_OPEN": [
+    "conserving matched averaged sea II and full Streda I+II",
+    "crossed diagrams and physical DC limit",
+    "original PRB nonlinear mixed EB response"
+  ]
+}

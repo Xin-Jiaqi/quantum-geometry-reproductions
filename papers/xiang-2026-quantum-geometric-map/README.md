@@ -149,3 +149,14 @@ python scripts/reproduce_exact_streda_v42.py --L 4 --mass -1 --W .12 --mu 1.1
 ```
 
 [Full v42 derivation and reproducibility](docs/EXACT_STREDA_V42.md). **The self-consistent disorder-averaged conserving Středa I/II, physical thermodynamic DC, and Xiang original mixed second-order EB PHE are still OPEN; whole-paper state PARTIAL.**
+
+### v43: Matched SCBA Hall I(a) versus exact sample averaging
+
+The **linear charge Hall Středa I(a) RA surface channel only** can now be computed using the same scalar disorder variance, Green regulator, and QWZ currents on both sides: `qgmap.scba_surface_v43.scba_surface` reuses v39 SCBA and v40 **single-leg** current ladder, while `exact_ensemble_surface` independently averages the v42 **dense real-space** surface trace over disorder seeds and twists. `comparison` returns bare/dressed/exact values and **seed-based standard errors**. At W=.12, L=4, 24 seeds and 7x7 twists (μ=1.1, η=.12), bare SCBA is -1.27807, single ladder -1.43032, exact finite mean -1.50028±.05502 e²/h: the residual is explicitly **not closed**. Eleven new physics gates include independent iterated BSE and left/right-vertex identity. See [v43 scope](docs/SCBA_SURFACE_V43.md).
+
+```bash
+python -m unittest tests.test_scba_surface_v43 -v
+python scripts/reproduce_scba_surface_v43.py --W .12 --seeds 24
+```
+
+**This is NOT a full conserving disorder-averaged Středa I+II, thermodynamic DC Hall, or original nonlinear EB PHE. Status remains PARTIAL.**
