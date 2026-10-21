@@ -118,3 +118,16 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Genuine orbital bulk mixed E/B, realistic matrix Wannier electrodes and conserving microscopic bath | UNRESOLVED | Original-paper science remains PARTIAL |
 
 21 new independent scientific tests. Spinless Onsager verified only for B-independent lead onsite; a B-odd scalar lead shift may violate it.
+
+
+## v60 independent physics acceptance
+
+| Component | State | Independent physical evidence |
+| --- | --- | --- |
+| General n-orbital semi-infinite block lead retarded g(z), finite positive eta | **VERIFIED** | Matrix Dyson residual, spectral causality, 160-layer independent sparse inversion and complex one-orbital analytic root |
+| Full matrix/nonlocal contact C, Sigma, Gamma and magnetic derivative d_B C | **VERIFIED specified finite-model algorithm** | Gauge transform with nontrivial G(B), negative omitted-contact control, full independent finite B Hall derivative |
+| Same QWZ Fourier H for periodic Bloch Chern and finite-open local projector Chern marker | **VERIFIED topology only** | Exact hopping Fourier reconstruction, center marker tends to periodic Chern, vanishing finite total marker with edge compensation |
+| Specific coherent two-orbital finite Hall voltage | **CONDITIONAL** | Depends on eta, electrode band structure and contact C |
+| Intrinsic bulk orbital EB and same-H **transport** finite-to-bulk limit | **UNRESOLVED** | Topology agreement is not an electrical conductivity equality |
+
+21 new tests for independently derived physics. Original Xiang paper scientific audit remains **PARTIAL**.
