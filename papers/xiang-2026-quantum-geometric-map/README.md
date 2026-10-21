@@ -258,3 +258,12 @@ From the **actual published 8-page PDF p.4**, original main Eq11 plus its printe
 python -m unittest tests.test_fig2_si_v52 -v
 python scripts/reproduce_fig2_si_v52.py --beta .125 --tau-ps .5 --g 10 --bx-tesla 1 --ey-vm 10000 --width-um 100
 ```
+
+### v53: original orbital source Eq49/52/56 independent model audit
+
+Reading the authentic 16-page SM **pp11–12** reveals that source Eq49's velocity-local-metric term has explicit factor **2**, but printed Eq52's corresponding term has factor **1**. Integrating source Eq48's F49 over a periodic BZ retains **2**; a **genuine 3D two-band Bloch quantum metric** validates this through grid convergence and a zero-band-sum-velocity negative control. Independently, Eq52 openly **drops** the m≠l three-band processes from its last orbital-moment × Berry-curvature term. In an actual **3-band Hermitian periodic lattice model**, their magnitude can be **92.9% of that one complete subterm** near mu=-1.1, but this is **NOT 92.9% of total MNHE**, and varies significantly with mu. Conversely, original orbital PHE **Eq56's two printed lines are verified to agree after BZ integration**, with N^-2 finite-difference residual. No manuscript coefficient is silently patched; full physical orbital response remains OPEN/PARTIAL. [v53 source report](docs/ORIGINAL_ORBITAL_SM_EQ49_52_56_V53.md) · [frozen model evidence](results/frozen/v53_original_orbital_source_audit.json).
+
+```
+python -m unittest tests.test_orbital_sm_v53 -v
+python scripts/reproduce_orbital_sm_v53.py --output results/frozen/v53_original_orbital_source_audit.json
+```
