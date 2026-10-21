@@ -1,0 +1,89 @@
+{
+  "protocol": "v56_finite_open_graph_E_ac_and_mixed_EB_independent_response",
+  "acceptance": "VERIFIED_OPERATOR_AND_DIFFERENTIATION_CONDITIONAL_SCALAR_GAMMA_RESPONSE",
+  "scenario": {
+    "mu": 0.1,
+    "temperature": 0.4,
+    "gamma": 0.08,
+    "omega": 0.35,
+    "field_B": 0.27,
+    "charge_over_hbar": -0.87,
+    "electric_driver": "H_E=-E*P_y",
+    "probe_axis": "x",
+    "drive_axis": "y",
+    "boundary": "finite open graph",
+    "units": "hbar=1"
+  },
+  "gauges": {
+    "symmetric": {
+      "sigma": {
+        "real": 0.0031650181156708257,
+        "imag": -0.004410588199116217
+      },
+      "mixed_dsigma_dB": {
+        "real": -0.0041868983909916085,
+        "imag": -0.03909337651134432
+      },
+      "finite_5point_B": {
+        "real": -0.004186898391019336,
+        "imag": -0.03909337651103693
+      },
+      "contributions": {
+        "current_contact": {
+          "real": -0.015382587670474384,
+          "imag": -0.025118860224945694
+        },
+        "equilibrium_fermi_derivative": {
+          "real": 0.009330948737124114,
+          "imag": 0.0027701695689303293
+        },
+        "magnetic_liouvillian": {
+          "real": 0.0018647405423586616,
+          "imag": -0.016744685855328956
+        }
+      }
+    },
+    "landau_y": {
+      "sigma": {
+        "real": 0.0031650181156707875,
+        "imag": -0.00441058819911621
+      },
+      "mixed_dsigma_dB": {
+        "real": -0.004186898390991796,
+        "imag": -0.039093376511344195
+      },
+      "finite_5point_B": {
+        "real": -0.004186898390825625,
+        "imag": -0.03909337651089815
+      },
+      "contributions": {
+        "current_contact": {
+          "real": 0.007772328003178045,
+          "imag": -0.005256508736240723
+        },
+        "equilibrium_fermi_derivative": {
+          "real": 0.012770870353213296,
+          "imag": 0.014407974354629205
+        },
+        "magnetic_liouvillian": {
+          "real": -0.024730096747383135,
+          "imag": -0.04824484212973268
+        }
+      }
+    }
+  },
+  "gauge_total_residual": {
+    "real": 1.8735013540549517e-16,
+    "imag": -1.249000902703301e-16
+  },
+  "source": "independent four-site model, exact v55 finite open-graph Peierls B and scalar gamma-f(H_B) bath",
+  "tests_added": 19,
+  "local_tests": "19/19 PASS",
+  "published_source_original_paper_science": "PARTIAL",
+  "limitations": [
+    "Individual three B derivative contributions are gauge dependent",
+    "Only complete sum and full independent finite-B derivative are gauge invariant",
+    "Scalar gamma bath, finite system; not bulk intrinsic orbital MNHE",
+    "No conserving microscopic scattering/leads/thermodynamic limit/SI normalization"
+  ]
+}
