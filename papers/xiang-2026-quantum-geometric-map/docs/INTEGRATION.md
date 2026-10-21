@@ -116,3 +116,7 @@ The exact four-Pauli-basis solver `qgmap.current_vertex_v40.pauli_vertex` return
 ## v41 exact disordered linear Hall reference
 
 `qgmap.exact_hall_v41.torus`, `hall_lehmann`, `hall_retarded_crosscheck`, `twist_chern` and `audit` accept a declared finite-size QWZ torus with **frozen site disorder**, Peierls derivatives and zero-T occupancy. `scripts/reproduce_exact_hall_v41.py` returns a protocol-labelled JSON object with `scientific_status=PARTIAL`. For named gapped finite tori, independently computed occupied-subspace FHS Chern and flux-averaged exact Hall agree. There is no claim of separate Středa I/II, SCBA conserving vertex completion, material-ready operators or original EB DC reproduction. Details: [v41](docs/EXACT_HALL_V41.md).
+
+## v42: Exact finite-sample charge Hall Středa split
+
+Callable: `qgmap.exact_streda_v42.spectral_streda(H,Jx,Jy,mu,eta)` for surface I(a) and sea II plus full total; `direct_surface_trace`, `direct_sea_quadrature` are intentionally independent checks; `streda_audit`, `ensemble_audit` provide JSON-ready finite-sample audits. The external positive `eta` is a Green regulator, not a conserving collision operator. The method reuses `qgmap.exact_hall_v41.torus`; its exact Hall sum agrees with the independent v41 Lehmann as `eta -> 0` at fixed finite gapped samples. Do **not** use I or II alone as physical conductivity or treat this as a disorder-averaged SCBA solver or nonlinear EB PHE. See [v42](docs/EXACT_STREDA_V42.md).

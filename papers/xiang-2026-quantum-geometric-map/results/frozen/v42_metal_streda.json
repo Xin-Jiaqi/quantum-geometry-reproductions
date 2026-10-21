@@ -1,0 +1,59 @@
+{
+  "protocol": "finite_exact_disorder_Smrcka_Streda_linear_Hall_v42",
+  "scientific_status": "PARTIAL",
+  "L": 4,
+  "mass": -1,
+  "W": 0.12,
+  "seed": 1947,
+  "theta": [
+    0.11,
+    0.33
+  ],
+  "etas": [
+    0.16,
+    0.05,
+    0.01,
+    0.003
+  ],
+  "sigma_units": "e^2/h",
+  "limitations": [
+    "finite sample and scalar Green regulator, not SCBA disorder averaging",
+    "Streda I/II partition has overlap and need not identify distinct mechanisms",
+    "a fixed external eta is not a collision operator or conserving SCBA",
+    "the original paper nonlinear EB steady-state DC remains OPEN"
+  ],
+  "mu": 1.1,
+  "reference_v41_exact_DC": -0.30700588775934573,
+  "minimum_fermi_gap": 0.1457512003790693,
+  "nearest_level_distance": 0.04970331103517944,
+  "rows": [
+    {
+      "eta": 0.16,
+      "surface_Ia": -1.1015673249841207,
+      "sea_II": 0.9016547889390788,
+      "total": -0.1999125360450419,
+      "abs_error_vs_exact_lehmann": 0.10709335171430384
+    },
+    {
+      "eta": 0.05,
+      "surface_Ia": -1.188019579256508,
+      "sea_II": 0.9132152528211674,
+      "total": -0.2748043264353406,
+      "abs_error_vs_exact_lehmann": 0.032201561324005146
+    },
+    {
+      "eta": 0.01,
+      "surface_Ia": -0.3762762793540863,
+      "sea_II": 0.06971386983873307,
+      "total": -0.30656240951535324,
+      "abs_error_vs_exact_lehmann": 0.00044347824399249003
+    },
+    {
+      "eta": 0.003,
+      "surface_Ia": -0.1158164881282457,
+      "sea_II": -0.1911771584039892,
+      "total": -0.3069936465322349,
+      "abs_error_vs_exact_lehmann": 0.00001224122711085407
+    }
+  ]
+}

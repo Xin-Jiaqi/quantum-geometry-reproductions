@@ -1,0 +1,36 @@
+{
+  "protocol": "v42_GitHub_source_provenance",
+  "scientific_status": "PARTIAL",
+  "basis": "v41 exact_hall_v41 torus + v38 clean Bloch sea; independent v42 two-pole Streda and dense matrix trace",
+  "notes": [
+    "sha256 for core three source files matches the standalone local-tested source",
+    "GitHub blob SHA pins the actual files committed to the v42 branch; docs and frozen JSON have independent on-repository blob refs",
+    "Do not claim original PRB steady-state EB response or averaged conserving SCBA from this artifact"
+  ],
+  "files": {
+    "src/qgmap/exact_streda_v42.py": {
+      "sha256": "c73ba0a4dc1438e23cbfa869de34ca710fa77d6d34af366abf3169c5baa369b2",
+      "git_blob_sha": "7fae480fb0ad368a7fcd4764af712cca1a2354fc"
+    },
+    "tests/test_exact_streda_v42.py": {
+      "sha256": "05b4aa8ba85448bbf1461c7d58aa492a1d6c4c3af99ffd6f13fd3627d612095d",
+      "git_blob_sha": "08e2421b147701c8be166fa2735ef167ad4a832d"
+    },
+    "scripts/reproduce_exact_streda_v42.py": {
+      "sha256": "9635b304a75fbd27f8ba1231a44ef6127a55b31529be10cba21aec727a534bdf",
+      "git_blob_sha": "084ed9113068f405f2b5bc3e447d6d2f8cfe3eea"
+    },
+    "docs/EXACT_STREDA_V42.md": {
+      "git_blob_sha": "bba56ccb4afc276ac3708eaf25e461573086ecb8"
+    },
+    "results/frozen/v42_metal_streda.json": {
+      "git_blob_sha": "88bfb7922359259aa1b3bfd7964d61f269adde15"
+    },
+    "results/frozen/v42_gap_streda.json": {
+      "git_blob_sha": "66e807e5ece7fc010fb48ef57c7dd095de571aa5"
+    },
+    "results/frozen/v42_ensemble_streda.json": {
+      "git_blob_sha": "e661fd95948dab0434ee159287d0b4aaabb0eecc"
+    }
+  }
+}
