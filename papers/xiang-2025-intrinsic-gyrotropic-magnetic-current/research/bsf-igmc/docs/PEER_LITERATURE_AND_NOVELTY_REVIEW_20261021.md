@@ -86,13 +86,13 @@ B_1\xrightarrow{\mathrm{slide}}B_2,\quad P_z(B_2)=-P_z(B_1),
 - AF-like 模型中移除 spin-dependent interlayer hopping 后响应约下降 57 倍：这是既定模型的受控灵敏度，**非**材料普适增强规律；以后需分解 gap denominator 与矩阵元变化。
 - 占据带 band-energy scan 的样本最小点在 \(u=0.5\)，\(\pm0.19\) 不是模型中已证明的 local minima；此模型**未证明 BSF**。
 - \(u=0.5\) 的 FM-like \(\langle\tau_z\rangle\approx0\) 而 \(D_{xx}/\omega\approx0.00677\)；严格表述是「零 layer-occupation imbalance proxy 下存在 finite response」，**不是**完整晶体极化为零的结论。
-- AgF₂：已有来自 C2DB 单层的构造 B1/B2，磁镜面映射经轴矢量规则核查；不是作者 relaxed POSCAR。真实 B1/B2 结构稳定性、磁基态与材料 α 均未独立建立。
+- AgF₂：已有来自 C2DB 单层的构造 B1/B2，磁镜面映射经轴矢量规则核查；不是作者 relaxed POSCAR。2026-10-21 本地 WSL 对 B1_g3.0 非 SOC 单点达到电子 SCF 收敛、保留指定的补偿 Type-I 磁矩并显示初步有隙，详见 §7；但真实 B1/B2 结构稳定性、磁基态与材料 α 均未独立建立。
 
 ### 3.2 短链 decision tree（不增加未经授权的计算）
 
 | 阶段 | 要回答的二元科学问题 | 通过的最低证据 | 未通过时停止什么 |
 | --- | --- | --- | --- |
-| **P0：已提交 G1** | 作业真的运行且可信 SCF 吗？ | 真实 PBS history/OUTCAR/vasprun，收敛、Ag site moments、gap/occupancy、TOTEN、程序版本；解释 receipt timestamp 不一致 | **停止任何材料结果主张** |
+| **P0：本地 SCF 已过，PBS 待核** | 本地 SCF 是否可信、PBS 是否独立完成？ | 本地 WSL 诊断已报告 EDIFF、Ag 磁矩与 gap；PBS 仍须 qstat/accounting/OUTCAR 并解决时间戳矛盾 | **不得将本地 SCF 当作 PBS 结果、磁基态或稳定结构证明** |
 | **P1：B1 结构磁态** | 有可重复的稳定、有隙磁性局部状态吗？ | 额外授权后极少量不同起始层距、磁种子 relaxation；力、能量、磁态 | **停止 B2/NEB/IGMC 投入** |
 | **P2：双稳态** | B1/B2 都是局部极小值且 Pz 相反吗？ | 一致泛函/磁序下 relaxed pairs、2D 极化、少量滑移中间点的能量升高 | **停止「ferroelectric switching of IGMC」主张** |
 | **P3：真实响应** | 非零 spin α、正确磁群映射与独立数值校验都过关吗？ | SOC 下 MPG、Wannier H+spin+position 同规范、Kubo/Wilson finite-B 交叉验证；首先 αxx/αyy | **停止增加应变/材料/频率扫描** |
@@ -126,4 +126,32 @@ B_1\xrightarrow{\mathrm{slide}}B_2,\quad P_z(B_2)=-P_z(B_1),
 
 - 外部 DOI 与期刊状态核查截至 2026-10-21，直接指向期刊/预印本。不对未收到的作者 relaxed POSCAR、自洽作业输出或尚未完成的材料 α 进行臆断。
 - 关联现有仓库 [研究 README](../README.md)、[模型审查](SCIENTIFIC_ASSESSMENT.md)、[原论文未决事项](../../../docs/OPEN_PHYSICS_QUESTIONS.md)、[AgF₂ magnetic readout](../agf2_preflight/docs/STAGE5_MAGNETIC_POLARIZATION_READOUT.md) 和 [DFT gates](NEXT_DFT_GATES.md)。
-- 此次仅新增同行审查文档及 README 文档索引。**没有**改动任何代码、模型冻结数值、VASP 参数、POTCAR、PBS 作业或 G1 PR #25。
+- 本同行审查分支仅维护研究文档与 README 索引；不改动代码、模型冻结数值、VASP 参数、POTCAR、PBS 作业或独立的 G1 PR #25。
+
+
+## 7. 2026-10-21 更新：本地 WSL 单点 SCF 证据已交付
+
+**来源及审查层级：** 直接核对 [PR #25](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/25) head ca5c5eefc8588a37fcb4c602f29fb195394d7d89，新增的 G1_LOCAL_WSL_DIAGNOSTIC.json、G1_SCF_AUDIT.md 及独立 PBS receipt。本节可核对的是 GitHub 中保存的诊断、报告内部一致性及明确的计算边界；尚未拿到私有 WSL 原始 OUTCAR 进行独立重解析；也没有实时查询 PBS。
+
+| 项目 | 本地 VASP 6.6.0 非 SOC B1_g3.0 单点 | 能证明什么 |
+| --- | --- | --- |
+| 执行 | WSL，OpenMPI 4.1.6，8 MPI ranks，约 1195 s，干净退出 | 本地运行存在并有记录，不是 PBS vasp.6.4.3 执行 |
+| 输入 | POSCAR、INCAR、KPOINTS、POTCAR 四个 SHA256 在两份 GitHub 指纹记录中一致 | 可追溯性；未重新读取私有原始输入字节 |
+| 电子自洽 | 27 Davidson 迭代；OUTCAR 记载 EDIFF=1e-6 达到 | 固定几何 electronic SCF 通过，不代表离子受力收敛 |
+| 总能 | TOTEN = -35.17579601 eV / Ag4F8 12 原子胞 | 仅此未弛豫结构的基准单点值 |
+| 局域磁矩 | Ag 按 POSCAR 顺序 [-0.567,+0.567,+0.567,-0.567] μB；Ag-d 为 ±0.575 μB；F 约 0；总磁矩 0 | 与目标 Type-I 补偿层间 Néel 反平行种子一致，**不是磁基态证明** |
+| 初判 gap | HOMO -5.9015 eV、LUMO -4.4076 eV，差 1.4939 eV | 12×8×1、Gaussian smearing SIGMA=0.05 eV、occ≥0.5 阈值诊断；未证明 k 收敛或严格全局带隙 |
+| 结构与磁性 | IBRION=-1、NSW=0、SOC off | 没有 relaxed 极小值、磁各向异性、FE 双稳态或材料 IGMC |
+
+**研究状态更新：** LOCAL_SINGLEPOINT_SCF_PASS / TYPE_I_MAGNETIC_SEED_PRESERVED / PRELIMINARY_GAPPED_DIAGNOSTIC / STRUCTURAL_STABILITY_PENDING / PBS_STATUS_NOT_INDEPENDENTLY_CHECKED。
+
+这一结果说明指定磁序在固定构造几何、当前 U/vdW 和 k 设置下可以得到有磁矩、自洽的电子解；**不能**证明该磁态相对 FM/其他 AFM/nonmagnetic 最低能，也不能证明滑移势垒、磁群的 SOC 稳定性、现代极化或 α^PB。与八带模型的数值不同，本次确实是 AgF₂ 真实电子结构单点，但仍无定量 IGMC。
+
+### 7.1 下一步的最小高信息量动作（先只读，不投新作业）
+
+1. **复用已有 WSL 输出**：从原始 OUTCAR/vasprun.xml 提取 12 原子逐项力矢量、最大力（eV/Å）、带边在每一 k/spin 通道的起源和 occupation、Ag/F moment/PDOS，并计算真实最近跨层 F–F 距离。上述值不在当前 GitHub 诊断中，不能编造。观察是否已有明显面内滑移力，从而判断初始 B1_g3.0 是否接近能谷。
+2. **有条件的第一条新计算**：如力明显非零且 magnetic state 保留，在用户明确批准资源后优先做 **一次** Type-I B1 非 SOC 固定面内晶格、放开离子位置的 relaxation，保持 PBE+U_eff(Ag-4d)=4 eV、D3(0)、已确认的磁矩设置并检查收敛与最终 gap。初始层距候选已有 2.6/3.0/3.4 Å；不需要首批全并行。
+3. **拒绝从这次单点直接推进 B2/NEB/SOC/Wannier**：B1 结构是否有局部极小值，以及不同初始磁序能否改变收敛态，必须先判断。文献磁态能差约 0.26 meV/f.u.，远小于现有 coarse SCF 可以独立认证的磁基态精度。
+4. **PBS 记录不变**：原 Job 490620.cmspbs1 在旧 receipt 时是 Q，独立 PBS 结果仍待核实；本地 6.6.0 不能充当 PBS 6.4.3 的计算。只在获得真实 qstat/accounting 和 OUTCAR 后核对原时间戳及版本差异。**不重复 qsub**。
+
+**同行定位不变：** Ghorai 2026 已有 orbital IGMC；Zhu/Peng 已有滑移磁性与双稳态先例。本次成功电子自洽仅为判断真实材料是否值得进入结构优化提供依据；可发表物理仍须双稳态及同一 Wannier gauge 下的实际 spin/orbital mixed magnetoelectric geometry。
