@@ -286,3 +286,13 @@ The new [v55 module](docs/PHYSICAL_EMBEDDING_MAGNETIC_INTERFACE_V55.md) computes
 
     python -m unittest tests.test_embedding_magnetic_v55 -v
     python scripts/reproduce_embedding_magnetic_v55.py --mode reference
+
+
+### v56: Independent finite-graph mixed electric–magnetic response with all current contacts
+
+A [new v56 physics module](docs/INDEPENDENT_FINITE_GRAPH_MIXED_EB_V56.md) now computes **finite-frequency electric conductivity sigma_ab(B)** of explicit v55 open Peierls graphs and the **complete derivative d_B sigma_ab**, with a declared scalar gamma bath relaxing toward f(H_B). The derivative retains (1) d_B current/contact, (2) full equilibrium Fermi-matrix Fréchet change, and (3) magnetic Liouvillian change. This is independently tested against a separately implemented spectral band sum and **five-point full finite-B differences**: model mixed response -0.00418689839099-0.03909337651134i, analytic vs FD around 1e-13, symmetric vs Landau magnetic gauge around 2e-16. **Separate components are gauge dependent**, but their sum is not. Physical tests include Onsager, ac conjugation, q/B reversal and vanishing stationary DC finite-graph current. The chosen gamma bath is a specific phenomenology, **not certified intrinsic bulk orbital MNHE**. [Full frozen model](results/frozen/v56_finite_graph_mixed_EB.json).
+
+    python -m unittest tests.test_finite_graph_eb_v56 -v
+    python scripts/reproduce_finite_graph_eb_v56.py
+
+The original PRB source reconstruction and disputed signs remain PARTIAL; independently verified finite-model mathematics and model-conditional transport are tracked separately in [physics registry](../../physics/README.md).
