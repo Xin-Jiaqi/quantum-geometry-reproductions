@@ -1,0 +1,138 @@
+{
+  "version": "v58",
+  "status": "VERIFIED_MODEL_ALGORITHM_CONDITIONAL_FINITE_COHERENT_DEVICE_NOT_BULK",
+  "numerical_protocol": "adaptive",
+  "energy_integration_relative_tolerance": 3e-8,
+  "lead_spec": {
+    "field": 0.12,
+    "charge_over_hbar": -0.87,
+    "mu": 0.65,
+    "temperature": 0.12,
+    "broadening": 0.6,
+    "energy_points": 80,
+    "window_in_kT": 20
+  },
+  "results": [
+    {
+      "nx": 5,
+      "ny": 5,
+      "sites": 25,
+      "aspect_ratio": 1,
+      "lattice_site_density": 1,
+      "onsite": 0,
+      "hopping": 1,
+      "spacing": 1,
+      "flux_per_plaquette": -0.1044,
+      "chemical_potential": 0.65,
+      "coverage_requested": 1,
+      "coverage_actual": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "gamma_mode": "fixed_reservoir_sum",
+      "gamma_parameter": 0.6,
+      "gamma_reservoir_total": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "hall_voltage_per_LR_bias": 0.020422624499854033,
+      "magnetic_derivative_hall_voltage_per_bias": -0.020474875200755506,
+      "hall_resistance_h_over_q2": 0.05266331026179627,
+      "magnetic_derivative_hall_resistance_h_over_q2": -0.09915715115209889,
+      "LR_conductance_q2_over_h": 0.3877960651985314,
+      "longitudinal_resistance_h_over_q2": 2.578674952485792,
+      "max_floating_probe_current": 0,
+      "quadrature_error_estimate": 3.958147154232178e-9,
+      "quadrature_integrand_evaluations": 1995,
+      "quadrature_converged": true
+    },
+    {
+      "nx": 7,
+      "ny": 7,
+      "sites": 49,
+      "aspect_ratio": 1,
+      "lattice_site_density": 1,
+      "onsite": 0,
+      "hopping": 1,
+      "spacing": 1,
+      "flux_per_plaquette": -0.1044,
+      "chemical_potential": 0.65,
+      "coverage_requested": 1,
+      "coverage_actual": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "gamma_mode": "fixed_reservoir_sum",
+      "gamma_parameter": 0.6,
+      "gamma_reservoir_total": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "hall_voltage_per_LR_bias": -0.006748544392097676,
+      "magnetic_derivative_hall_voltage_per_bias": -0.3376912503787269,
+      "hall_resistance_h_over_q2": -0.02338144971518531,
+      "magnetic_derivative_hall_resistance_h_over_q2": -1.2099707414883372,
+      "LR_conductance_q2_over_h": 0.28862814215128707,
+      "longitudinal_resistance_h_over_q2": 3.464665616271891,
+      "max_floating_probe_current": 2.168404344971009e-19,
+      "quadrature_error_estimate": 2.9062599401787736e-9,
+      "quadrature_integrand_evaluations": 4179,
+      "quadrature_converged": true
+    },
+    {
+      "nx": 9,
+      "ny": 9,
+      "sites": 81,
+      "aspect_ratio": 1,
+      "lattice_site_density": 1,
+      "onsite": 0,
+      "hopping": 1,
+      "spacing": 1,
+      "flux_per_plaquette": -0.1044,
+      "chemical_potential": 0.65,
+      "coverage_requested": 1,
+      "coverage_actual": [
+        7,
+        7,
+        7,
+        7
+      ],
+      "gamma_mode": "fixed_reservoir_sum",
+      "gamma_parameter": 0.6,
+      "gamma_reservoir_total": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "hall_voltage_per_LR_bias": -0.00804447601020421,
+      "magnetic_derivative_hall_voltage_per_bias": 0.21004705305176524,
+      "hall_resistance_h_over_q2": -0.023349849562738556,
+      "magnetic_derivative_hall_resistance_h_over_q2": 0.65124691849268,
+      "LR_conductance_q2_over_h": 0.34451939352283883,
+      "longitudinal_resistance_h_over_q2": 2.902594219079014,
+      "max_floating_probe_current": 0,
+      "quadrature_error_estimate": 5.422365147995816e-9,
+      "quadrature_integrand_evaluations": 6342,
+      "quadrature_converged": true
+    }
+  ],
+  "bulk_limit_verdict": "UNRESOLVED_NO_CONTROLLED_THERMODYNAMIC_OR_INCOHERENT_LIMIT",
+  "caveats": [
+    "Fixed density means fixed spatial lattice-site density a^-2, NOT fixed carrier density",
+    "Chemical potential and plaquette magnetic flux held fixed across sizes",
+    "Coherent phase-sensitive mesoscopic Hall voltage can be contact/size dependent",
+    "Contact protocol per_site scales total Gamma with contact width; fixed_reservoir_sum does not",
+    "Four-terminal Hall resistance is a device ratio, not an intrinsic bulk tensor",
+    "Energy integration MUST be converged; fixed Gauss mode is uncertified by default",
+    "Spinless square-lattice conventional magnetic Hall response, not original-paper quantum geometry MNHE"
+  ]
+}
