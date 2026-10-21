@@ -1,0 +1,126 @@
+{
+  "scientific_status": "PARTIAL",
+  "protocol": "v52_PRB_original_published_Fig2b_and_Hall_voltage_Eq11_SI_unfitted_audit",
+  "evidence": {
+    "main_source_SHA256": "b87e0970f25dd45c5048f8cbbb8691b53ea215040935e9b21a4cde80c69b2730",
+    "sm_source_SHA256": "9b0b8603d13962e100cc059bf4d96b91aa37062360d13decd1cb2eda495332c4",
+    "source_page": "Published PRB 113 L201406-4 (page 4 of 8)",
+    "source_figure": "Fig2(b) ordinate prints -10^4 sigma^(1)_xy,x g mu_B Bx (e^2/hbar); T0 red plateau about +1.75",
+    "source_text": "beta=1/8,tau=0.5ps,g=10,Bx=1T,Ey=1e4 V/m,width=100um,R~1000ohm; predicted Hall voltage ~43 microV"
+  },
+  "params": {
+    "beta": 0.125,
+    "tau_ps": 0.5,
+    "g_factor": 10,
+    "bx_tesla": 1,
+    "ey_v_per_m": 10000,
+    "lateral_um": 100,
+    "resistance_ohm": 1000
+  },
+  "physics_constants": {
+    "mu_B_J_T": 9.2740100657e-24,
+    "mu_B_eV_T": 0.00005788381798170701,
+    "h_J_s": 6.62607015e-34,
+    "hbar_J_s": 1.0545718176461565e-34,
+    "e2_h_S": 0.000038740458649318244,
+    "e2_hbar_S": 0.0002434134805787947
+  },
+  "original_Eq11_geometry_F_beta": -0.002506415906691721,
+  "original_spin_zeeman_gmuBB_eV": 0.0005788381798170701,
+  "tau_zeeman_over_hbar": 0.4397050020926946,
+  "direct_literal_Eq11": {
+    "delta_sigma_sheet_S": -2.6826200776334416e-7,
+    "sigma_over_e2_hbar": -0.0011020836114970462,
+    "figure_y_positive_mu": 11.02083611497046,
+    "hall_voltage_microV": 268.2620077633441
+  },
+  "alternative_e2_over_h": {
+    "delta_sigma_sheet_S": -4.269522457929263e-8,
+    "sigma_over_e2_hbar": -0.00017540205447032288,
+    "figure_y_positive_mu": 1.7540205447032287,
+    "hall_voltage_microV": 42.69522457929262
+  },
+  "published_approximately": {
+    "fig2b_y_positive_mu": 1.75,
+    "hall_voltage_microV": 43
+  },
+  "consistency": {
+    "conductance_quantum_ratio": 6.283185307179586,
+    "original_Eq11_vs_published_fig_y_ratio": 6.297620637125978,
+    "original_Eq11_vs_claimed_43microV_ratio": 6.238651343333584,
+    "alternative_minus_fig_y": 0.004020544703228657,
+    "alternative_minus_claimed_voltage_microV": -0.3047754207073794
+  },
+  "digitized_thermal_fig2b": {
+    "figure_coordinates": "8x original page4 crop PDF (140,55,285,215), zero x=718.5, zero y=418.5, 170.5 pixels per y-axis unit, mu +/-40 meV x=379/1059",
+    "ordinate_readout_uncertainty": 0.03,
+    "no_fit_model": "A=1.7540205447032287 times tanh(mu/(2 kB T)); T0 Eq11 source does not itself state finite-T analytic continuation",
+    "samples": [
+      {
+        "T_K": 20,
+        "mu_meV": -10,
+        "pixel_y": 715,
+        "source_fig_y": -1.739,
+        "model_y": -1.7435
+      },
+      {
+        "T_K": 20,
+        "mu_meV": -5,
+        "pixel_y": 683,
+        "source_fig_y": -1.5513,
+        "model_y": -1.5713
+      },
+      {
+        "T_K": 20,
+        "mu_meV": 5,
+        "pixel_y": 151,
+        "source_fig_y": 1.5689,
+        "model_y": 1.5713
+      },
+      {
+        "T_K": 20,
+        "mu_meV": 10,
+        "pixel_y": 122,
+        "source_fig_y": 1.739,
+        "model_y": 1.7435
+      },
+      {
+        "T_K": 40,
+        "mu_meV": -10,
+        "pixel_y": 685,
+        "source_fig_y": -1.563,
+        "model_y": -1.5713
+      },
+      {
+        "T_K": 40,
+        "mu_meV": -5,
+        "pixel_y": 601,
+        "source_fig_y": -1.0704,
+        "model_y": -1.0878
+      },
+      {
+        "T_K": 40,
+        "mu_meV": 5,
+        "pixel_y": 232,
+        "source_fig_y": 1.0938,
+        "model_y": 1.0878
+      },
+      {
+        "T_K": 40,
+        "mu_meV": 10,
+        "pixel_y": 150,
+        "source_fig_y": 1.5748,
+        "model_y": 1.5713
+      }
+    ],
+    "max_abs_deviation_original_source_pixel_vs_unfitted_model": 0.019939832816813663
+  },
+  "tests_added": 13,
+  "unresolved": [
+    "Printed Eq11 literal SI e2/hbar disagrees with both publisher Fig2(b) and publisher ~43 microV",
+    "Alternative e2/h exactly reproduces both approximate publisher claims, but original figure-generation unit intent NOT independently available",
+    "Source SM Eq20/31 physical spin PHE relative sign OPEN",
+    "General orbital three-band response and physical bath remain OPEN"
+  ],
+  "original_PDFs_not_committed": true
+}

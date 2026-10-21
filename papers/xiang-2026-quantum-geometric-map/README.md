@@ -249,3 +249,12 @@ python scripts/reproduce_sm_sign_covariance_v51.py --beta .125 --mu .3
 ```
 
 No original PDF is redistributed, source SHA256 hashes remain pinned. This does not declare any physical experiment invalid. Whole-paper science **PARTIAL**, original signed Eq20/31 source **OPEN**.
+
+### v52: Figure 2(b) SI units and original 43 microV independently cross-check at 2pi
+
+From the **actual published 8-page PDF p.4**, original main Eq11 plus its printed Fig2b ordinate e²/hbar, beta=1/8,tau=.5ps,g=10,Bx=1T predicts **T0 ordinate +11.0208361**. The original graphic shows about **+1.75**. Independently using the same physical constants and source quoted Ey=10^4 V/m, width 100 micrometers and Hall resistance 1 kilohm, Eq11 predicts **268.262 microV** while the source text estimates **about 43 microV**. Evaluate e²/h instead of e²/hbar as a **SEPARATE normalization alternative**: predicted figure **+1.7540205** and voltage **42.6952 microV**, simultaneously matching two different publisher claims without fitted scale factors. The ratio is exactly h/hbar=2pi. Source 20 K and 40 K plot curve pixels agree with this amplitude and a separately declared tanh(mu/2 kB T) **model** continuation, max ordinate pixel error ~0.02; Eq11 source itself is only T=0. **This is a source normalization question, NOT proof of the authors' intended code or an erratum.** Original SM Eq20/31 sign and orbital physics remain OPEN; scientific acceptance **PARTIAL**. [v52 derivation](docs/ORIGINAL_FIG2B_ABSOLUTE_SI_V52.md), [frozen source audit](results/frozen/v52_original_Fig2b_SI_audit.json).
+
+```
+python -m unittest tests.test_fig2_si_v52 -v
+python scripts/reproduce_fig2_si_v52.py --beta .125 --tau-ps .5 --g 10 --bx-tesla 1 --ey-vm 10000 --width-um 100
+```
