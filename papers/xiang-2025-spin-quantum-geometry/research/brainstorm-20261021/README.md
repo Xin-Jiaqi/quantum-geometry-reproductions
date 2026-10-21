@@ -64,3 +64,15 @@ This directory deliberately has **no imports into paper reproduction code and no
 - Next decisive gate: genuinely polar sublattice geometry + hopping/charge-energy-derived polar asymmetry, **not an inserted \(u(\delta)\)**; then full proper spin/torque/finite-\(\omega\) response and near-neighbor equation-level comparison.
 
 The original PRL-paper reproduction, frozen data, CI and acceptance statuses remain strictly untouched.
+
+
+## B+D Gate 4 (2026-10-21): genuine A/B registry and symmetry-filtered spin response
+
+- [Detailed science / peer review](docs/BD_GATE4_POLAR_HONEYCOMB_MAGNETIC_RESPONSE_20261021.md); [structural/electronic polar honeycomb toy](scripts/bd_gate4_polar_honeycomb.py); [32-band orbital/SOC/AFM spin Kubo](scripts/bd_gate4b_atomic_spin.py).
+- **Structural test:** inequivalent A/B honeycomb sublattices, real displaced bonds and an *uncalibrated* band+screened-pair energy produce two opposite-electronic-dipole AB/BA **local minima** and a candidate saddle. Charge transfer vanishes for disconnected layers or identical A/B species. Ionic-model parameters matter.
+- **Physical group constraint:** stable polar AB/BA retain \(C_{3z}\), which **strictly forbids linear** \(\chi_{S_z,E_x}\) and \(\chi_{S_z,E_y}\), despite generic-registry prior nonzero toy signals.
+- **Magnetic readout model:** 32-band all-spinless spatial Slater–Koster hopping plus onsite atomic SOC and fixed A-type AFM (hypothetical material). An **\(m_zT\) connection** gives FE-even total \(\chi_{S^x,E_x}\) and FE-odd layer-staggered \(\chi_{S_-^x,E_x}\). The response vanishes for magnetic \(m=0\), atomic SOC=0 or interlayer hopping=0. **Not novel standard symmetry or magnetoelectric physics.**
+- **Important negative result:** in the 32-band + empirical ionic toy energy, AB/BA are only metastable; AA is lower. No physical switching barrier/real FE claim.
+- **Peer-work correction:** 2026 *Nature Communications* already has a three-type FE-spin symmetry framework with **six DFT FE minima in bilayer MnPS3**. 2022 npj already has FE-controlled light-induced spin/orbital magnetization. See [expanded peer audit](docs/PEER_WORK_AUDIT_20261021.md).
+
+All files remain under independent \`research/\`. Xiang et al. PRL reproduction frozen code, tests, CI and scientific acceptance are unchanged.
