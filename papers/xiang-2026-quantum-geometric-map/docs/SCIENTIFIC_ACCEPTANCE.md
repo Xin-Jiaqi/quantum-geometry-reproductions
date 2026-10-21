@@ -173,3 +173,16 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Xiang orbital mixed (E/B) | **UNRESOLVED**, paper **PARTIAL** | The probe-limit study is charge-only and does not complete Wannier orbital B perturbation or conserving mixed Kubo–Středa response |
 
 32 new v63 tests; local v60–v63 standalone **111/111 PASS**. [v63 report](QWZ_NONINVASIVE_PROBE_LIMIT_V63.md).
+
+
+## v64: independent two-terminal virtual floating probes, NOT orbital mixed EB
+
+| Capability | Status | Independent science gate |
+| --- | --- | --- |
+| Virtual lambda→0+ voltage probe | **VERIFIED mathematical finite-QWZ operator-level limit** | Two-drive-only G0; probe weights w_pL/R from independent semi-infinite QWZ strip Gammas; no top/bottom Sigma inserted; compare v63 lambda² approach |
+| Local current disturbance and Hall finite-lambda deviations | **VERIFIED specified coherent finite model; CONDITIONAL measurement** | Leading lambda² scaling, exactly fixed driving contacts; distinct weak positive coupling vs undefined lambda=0 voltage |
+| Probe geometry, finite size and eta | **CONDITIONAL** | L=5,7,9,11 still drifts; offsets shift Rxy despite invariant drive T; width spectral weights alter even when selected Hall ratios nearly cancel |
+| Trivial insulator and metallic fillings | **NEGATIVE controls** | Under-threshold I yields Rxy=None; metallic virtual Hall ≠ reciprocal intrinsic bulk Hall |
+| Thermodynamic bulk electrical transport and Xiang orbital E/B | **UNRESOLVED** | No controlled L→∞/eta→0 or contact-fraction family, nor orbital position operators, full conserving mixed-field response |
+
+26 new independent local v64 tests, 137 total v60–v64 standalone. [Details](QWZ_VIRTUAL_PROBE_ORDERED_LIMITS_V64.md). Original-paper source audit remains **PARTIAL**.

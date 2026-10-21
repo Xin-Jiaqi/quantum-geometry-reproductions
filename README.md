@@ -178,3 +178,8 @@ Further [v62 science](papers/xiang-2026-quantum-geometric-map/docs/QWZ_BULK_KUBO
 ### v63: non-invasive voltage probes in the same-QWZ device
 
 New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINVASIVE_PROBE_LIMIT_V63.md): scaling only floating top/bottom probe coupling by (lambda) gives (Sigma,Gammaproptolambda^2). In the specified (L=7) device, local current-cut deviations collapse from 0.974659 to (7.58\times10^{-8}) as (lambda) decreases from 1 to (10^{-4}). The weak-probe finite-device resistance approaches 1.00215746 (h/q^2), still size/position dependent. 32 new gates; source paper remains **PARTIAL**.
+
+
+### v64: independent virtual-voltage probe in QWZ
+
+[Independent v64 weak-probe physical test](papers/xiang-2026-quantum-geometric-map/docs/QWZ_VIRTUAL_PROBE_ORDERED_LIMITS_V64.md) builds the two-terminal QWZ Green function with **no voltage-probe selfenergy**, then determines the positive-infinitesimal-coupling floating-voltage limit from hypothetical lead spectral weights. Finite-lambda deviations are quadratic. Probe position/size and regulator restrictions remain visible, so no bulk Kubo–NEGF equivalence or original orbital E×B is claimed. Xiang paper **PARTIAL**.
