@@ -76,3 +76,10 @@ The original PRL-paper reproduction, frozen data, CI and acceptance statuses rem
 - **Peer-work correction:** 2026 *Nature Communications* already has a three-type FE-spin symmetry framework with **six DFT FE minima in bilayer MnPS3**. 2022 npj already has FE-controlled light-induced spin/orbital magnetization. See [expanded peer audit](docs/PEER_WORK_AUDIT_20261021.md).
 
 All files remain under independent \`research/\`. Xiang et al. PRL reproduction frozen code, tests, CI and scientific acceptance are unchanged.
+
+
+## B+D Gate 5 and compute handoff (2026-10-21)
+
+- [Subgap interlayer spin transfer vs local-torque Ward audit](docs/BD_GATE5_TORQUE_WARD_20261021.md) and [independent NumPy test](scripts/bd_gate5_torque_ward.py). Synthetic 32-band AFM polar registry: at \(\omega=.06\), the imaginary interlayer-transfer susceptibility is about \(+1.02174\times10^{-4}\), while local torque is \(-1.02756\times10^{-4}\), net only \(-5.81921\times10^{-7}\) (23×23 mesh). The exact response continuity residual is ~\(10^{-17}\); opposite polar partner changes signs; interlayer/SOC/AFM-off null tests pass. This is a **standard Ward/torque-cancellation model result, not a novel material effect**.
+- [GPT / GitHub / local DeepSeek harness / WSL-HPC scientific responsibilities and handoff](docs/BD_RESEARCH_TO_COMPUTE_HANDOFF_20261021.md). Uses the existing group theory, structure core/benchmark, BSF generator, private Wannier/NLO workflows, private evidence archive and local bridge. Distinguishes \`IDEA\` / \`MODEL_PASS\` / \`JOB_FINISHED\` / \`NUMERIC_CONVERGED\` / \`PROPERTY_ACCEPTED\` / \`NOVELTY_REVIEWED\` with SHA evidence. Real WSL/Japan jobs and spin-response acceptance are **not** claimed to have been executed in this conversation.
+- GitHub is the **auditable research record**; raw licensed/private DFT data and scheduler credentials stay on private compute storage. The manuscript reproduction's frozen scientific status is unchanged. Review/test the actual independent spin/layer/position matrix elements before reusing a Wannier \`hr.dat\` for spin-geometry physics.
