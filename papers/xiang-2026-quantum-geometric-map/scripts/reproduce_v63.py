@@ -83,5 +83,5 @@ if __name__ == "__main__":
     args = p.parse_args()
     path = Path(args.output)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(create(), sort_keys=True, indent=2)+"\n")
+    path.write_text(json.dumps(create(), sort_keys=True, separators=(",", ":"))+"\n")
     print(f"v63 frozen evidence -> {path}")
