@@ -145,3 +145,16 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Intrinsic multiband orbital mixed E/B of Xiang et al. | **UNRESOLVED** | No substitution of charge Hall topology or finite Hall voltage for orbital magnetoelectric transport |
 
 28 new scientific tests, independently exercised locally. Reference [v61 physical report](SAME_QWZ_FOUR_TERMINAL_BULK_EDGE_V61.md). Source paper status remains **PARTIAL**.
+
+
+## v62: periodic finite-T charge Kubo vs real-space NEGF edge and contact geometry
+
+| Response/algorithm | Science status | Independent evidence |
+| --- | --- | --- |
+| Periodic QWZ intrinsic charge σxy(μ,T) | **VERIFIED specified 2-band band intrinsic charge** | Independent analytic Pauli d-vector curvature and eigenbasis velocity Kubo; signed opposite Chern, metallic μ=1.5 and thermal suppression, invalid gapless phases rejected |
+| Finite QWZ real-width lead and local spectral/bond currents | **VERIFIED specified finite-system identities; CONDITIONAL physical device** | v61 full-width limit, actual truncated strip H00/H01, A=i(Gr−Ga)=Σ GrΓGa, current commutator, zero interior divergence, local orbital-gauge covariance and contact position controls |
+| Four-probe voltage plateau vs spatial current | **CONDITIONAL** | At L7,w3,m=-1: Rxy≈0.99999783, but central x-section current≈0.0228959 vs injected 0.9975553, due to locally invasive floating probes |
+| Nontrivial metallic Kubo→Hall resistivity inversion | **NEGATIVE/UNRESOLVED** | μ=1.5: σxy=-0.07741266 and finite Rxy≈0.01001052, so Rxy ≠ 1/σxy; nonzero σxx and contact/bath needed |
+| Full original orbital mixed EB | **UNRESOLVED**, manuscript audit remains **PARTIAL** | None of these charge-Hall source-independent tests replaces complete original orbital E/B Ward/contact method |
+
+30 new independent local tests, plus v60/v61 49 existing tests. [v62 physics report](QWZ_BULK_KUBO_SPATIAL_CHARGE_V62.md).

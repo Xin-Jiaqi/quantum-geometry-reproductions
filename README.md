@@ -168,3 +168,8 @@ Separate SAME-QWZ Hamiltonian finite-versus-periodic comparison exactly reconstr
 ### v61: QWZ four-terminal charge Hall with matching microscopic leads
 
 The [Xiang PRB workbench](papers/xiang-2026-quantum-geometric-map/docs/SAME_QWZ_FOUR_TERMINAL_BULK_EDGE_V61.md) now bridges identical QWZ Fourier hoppings from periodic Bloch to a finite coherent four-terminal sample with four matching semi-infinite matrix-principal-layer leads. Independent scattering-matrix, phase-gauge, current-conservation, opposite-Chern, size/η, and trivial-insulator negative controls distinguish a **CONDITIONAL** chiral plateau from an intrinsically **UNRESOLVED** orbital mixed E/B response. Paper status **PARTIAL**. Reproduce with `python papers/xiang-2026-quantum-geometric-map/scripts/reproduce_v61.py` from within the installed paper environment.
+
+
+### v62: conditional bulk charge Kubo and spatial four-terminal QWZ
+
+Further [v62 science](papers/xiang-2026-quantum-geometric-map/docs/QWZ_BULK_KUBO_SPATIAL_CHARGE_V62.md): independent periodic analytic-vs-eigenbasis Kubo charge σxy at finite μ/T and same-lattice finite coherent NEGF edge/local spectral current with genuinely different QWZ strip-electrode widths. Negative controls reveal that invasive floating voltage probes change local currents despite clean Rxy plateau, and metallic Rxy cannot equal 1/σxy without σxx, bath and geometry. 30 new tests, original source **PARTIAL**.
