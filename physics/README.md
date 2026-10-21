@@ -115,3 +115,8 @@ A different same-Hamiltonian test uses identical real-space Fourier hoppings and
 ## v63: non-invasive QWZ voltage-probe limit
 
 The [v63 report](../papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINVASIVE_PROBE_LIMIT_V63.md) independently scales top/bottom probe amplitudes while holding drive leads fixed. Verified (Sigma,Gammaproptolambda^2) and vanishing local cut-current redistribution as (lambda	o0^+) for the stated finite clean QWZ geometry. The measured weak-probe (R_{xy}=1.00215746,h/q^2) is finite-size/position dependent, not an exact universal value. Generic thermodynamic Kubo–NEGF equality and original multiband orbital (E\times B) remain **UNRESOLVED**; Xiang paper **PARTIAL**.
+
+
+## v64: exact virtual-limit sensor algebra and finite-coherent caveat
+
+[QWZ two-terminal virtual-probe report](../papers/xiang-2026-quantum-geometric-map/docs/QWZ_VIRTUAL_PROBE_ORDERED_LIMITS_V64.md). New **VERIFIED** model-level primitive: lambda→0+ floating voltage from proposed probe-resolved Caroli spectral weights, using only the two-driver retarded resolvent, independently converged against finite-lambda probe physics with O(lambda²) error. Sensor position can change the limiting Hall reading; size 5–11 at fixed contact width is not a thermodynamic limit. **CONDITIONAL** finite coherent Hall, **UNRESOLVED** original Xiang orbital mixed EB, source audit **PARTIAL**.
