@@ -2,7 +2,7 @@
 
 **Independent follow-up study; NOT the Xiang et al. (2025) paper reproduction.**
 
-Scientific status: **MODEL-LEVEL RESULT VERIFIED / FERROELECTRICITY UNPROVEN / REAL-MATERIAL BLOCKED**.
+Scientific status: **EIGHT-BAND MODEL VERIFIED / AgF₂ LOCAL NON-SOC SINGLE-POINT SCF CONVERGED (PR #25) / STRUCTURAL FERROELECTRICITY AND MATERIAL IGMC UNPROVEN**.
 
 The existing reproduction under `../../` remains immutable. The present study asks whether sliding-modulated real-space interlayer hopping, **without inserting any phenomenological odd-in-sliding onsite polarization term**, can generate a nonzero insulating Zeeman-geometry displacement response, with different transformation laws under a unitary and an antiunitary stacking connector.
 
@@ -72,8 +72,8 @@ OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
 
 ## Stage 4: first real-material candidate, AgF₂ (source-grounded preflight)
 
-See [`agf2_preflight/`](agf2_preflight/) for the independent AgF₂ Type-I/strained Type-II magnetic-connector tensor predictions, the published BSF structural evidence and the **fail-closed DFT input gate**. This follow-up does **not** modify or promote the eight-band model's artificial energy surface to a ferroelectric double well, and no AgF₂ DFT/IGMC values have been computed.
+See [`agf2_preflight/`](agf2_preflight/) for the independent AgF₂ Type-I/strained Type-II magnetic-connector tensor predictions, the published BSF structural evidence and the **fail-closed DFT input gate**. This follow-up does **not** modify or promote the eight-band model's artificial energy surface to a ferroelectric double well, and **no relaxed AgF₂ double-well or material IGMC coefficient has been computed**. A **local WSL non-SOC B1_g3.0 DFT single point** reached electronic SCF and preserved the magnetic seed (see [PR #25](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/25)); the independent PBS execution remains unverified.
 
 ## Peer literature, novelty and research decisions (2026-10-21)
 
-See [the source-audited peer-literature and novelty review](docs/PEER_LITERATURE_AND_NOVELTY_REVIEW_20261021.md), organized as **I. idea / II. model-and-material tests / III. competing peer work**. It cross-checks the direct Xiang, Zhu, Ghorai and Peng papers, adjacent layer-response literature, and the next discriminating computational tests. This is an **assessment only**, not an AgF₂ DFT or PBS update. The first G1 receipt remains separately tracked in [PR #25](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/25).
+See [the source-audited peer-literature and novelty review](docs/PEER_LITERATURE_AND_NOVELTY_REVIEW_20261021.md), organized as **I. idea / II. model-and-material tests / III. competing peer work**. It cross-checks the direct Xiang, Zhu, Ghorai and Peng papers, adjacent layer-response literature, and the next discriminating computational tests. This document now also **audits the locally completed AgF₂ non-SOC single-point evidence**, without treating it as a relaxed structure or PBS result. The separate G1 run records remain tracked in [PR #25](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/25).
