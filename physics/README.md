@@ -73,3 +73,17 @@ The 1–4 ring scan is a sparse, changing-geometry *mesoscopic* sequence and **N
 | Bulk thermodynamic orbital MNHE/PHE, fixed electronic carrier density, microscopic disorder/dephasing and real material scattering | **UNRESOLVED** |
 
 Even the 5×5,7×5,7×7,9×5,9×9 fixed-site-density sequence is **not a demonstrated bulk-convergent limit**; the spinless model tests conventional Peierls Hall physics, *not* the disputed source-paper quantum geometry mechanism. [v58 science audit](../papers/xiang-2026-quantum-geometric-map/docs/FIXED_LATTICE_ADAPTIVE_HALL_SCALING_V58.md). Original paper reproduction PARTIAL.
+
+
+## v59 exact 1D finite-band leads and separate periodic bulk charge Kubo
+
+v59 adds exact causal semi-infinite 1D tight-binding chain surface g(E) and dispersive self-energy Σ(E), physical Γ(E), full B derivatives of four-terminal Caroli transmissions and floating Hall voltage, plus independently validated QWZ periodic **charge** Chern number via spectral Berry curvature and Fukui-Wilson links (0,+1,-1,0 for masses -3,-1,+1,+3).
+
+| Capability | Status |
+| --- | --- |
+| Semi-infinite 1D chain selfenergy, retarded causality and exact finite-band edge | VERIFIED for declared lead Hamiltonian |
+| Finite coherent four-probe Hall with B-dependent Σ/Γ and complete derivative | VERIFIED model solver; CONDITIONAL device observable |
+| Periodic intrinsic 2D **charge anomalous Hall** QWZ Chern benchmark | VERIFIED independent bulk reference |
+| General realistic Wannier electrode, inelastic scattering, full original orbital EB bulk MNHE/PHE | UNRESOLVED |
+
+The optional *B-odd scalar* lead onsite shift is an explicitly prescribed magnetogating sensitivity input, **not** a microscopic time-reversal-compatible orbital lead. Do not equate finite-device voltage and periodic bulk Chern conductivity. [v59 details](../papers/xiang-2026-quantum-geometric-map/docs/INDEPENDENT_LEAD_SELFENERGY_PERIODIC_KUBO_V59.md). Original paper PARTIAL.
