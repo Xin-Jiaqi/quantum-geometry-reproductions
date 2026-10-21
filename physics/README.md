@@ -30,3 +30,17 @@ The [v55 physics module](../papers/xiang-2026-quantum-geometric-map/src/qgmap/em
 | Full orbital E×B conductivity, primitive translation at finite B, degenerate bands | **UNRESOLVED** |
 
 These are physical interfaces, not a certified complete magnetotransport tensor. [Scientific methods](../papers/xiang-2026-quantum-geometric-map/docs/PHYSICAL_EMBEDDING_MAGNETIC_INTERFACE_V55.md). Original paper status PARTIAL.
+
+
+## v56: Conditional finite-graph mixed E×B response, complete magnetic contacts
+
+Independent v56 physics uses v55 finite OPEN Peierls H(B), P_a=q X_a, J_a=i[H,P_a], and a **declared field-equilibrated scalar gamma bath** in length gauge to calculate the full finite-frequency electric conductivity sigma_ab(B,omega) and its complete magnetic derivative. The magnetic derivative includes current contact d_B J, full equilibrium Fermi-matrix Fréchet derivative, and the magnetic Liouvillian vertex. Individual terms are **magnetic-gauge dependent**, the complete sum alone is invariant; it agrees with a completely independent five-point B difference and a separately coded electric eigenstate spectral sum.
+
+| Capability | Acceptance |
+| --- | --- |
+| Complete analytic differentiation of finite-model electric response, including current contact, Fermi preparation and Liouvillian terms | **VERIFIED mathematical implementation** |
+| Magnetic-gauge equivalence, Onsager, omega conjugation, signed charge reversal and finite-system zero equilibrium current | **VERIFIED model physical checks** |
+| Finite open graph mixed E×B prediction with specific gamma bath | **CONDITIONAL**, not intrinsic bulk |
+| Complete thermodynamic intrinsic orbital MNHE/PHE and microscopic bath/leads | **UNRESOLVED** |
+
+See [v56 derivation](../papers/xiang-2026-quantum-geometric-map/docs/INDEPENDENT_FINITE_GRAPH_MIXED_EB_V56.md), [code](../papers/xiang-2026-quantum-geometric-map/src/qgmap/finite_graph_eb_v56.py) and [frozen validation](../papers/xiang-2026-quantum-geometric-map/results/frozen/v56_finite_graph_mixed_EB.json). Original Xiang source audit remains PARTIAL.
