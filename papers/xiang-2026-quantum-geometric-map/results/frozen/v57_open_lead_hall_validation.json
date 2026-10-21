@@ -1,0 +1,136 @@
+{
+  "version": "v57",
+  "status": "VERIFIED_COHERENT_WIDEBAND_LEAD_MODEL_CONDITIONAL_FINITE_DEVICE_NOT_BULK",
+  "reference": {
+    "model": "finite open four-site diamond nearest-neighbour Peierls tight-binding",
+    "sites": 4,
+    "leads_order": [
+      "L",
+      "T",
+      "R",
+      "B"
+    ],
+    "parameter_units": "hopping=1,hbar=1,source signed q_over_hbar=-0.87, B=.31",
+    "B": 0.31,
+    "q_over_hbar": -0.87,
+    "mu": 0.15,
+    "temperature": 0.16,
+    "each_lead_width": 0.55,
+    "energy_quadrature": 160,
+    "Hall_Vtop_minus_Vbottom_over_LR_bias": -0.06642265873281976,
+    "dHall_dB_analytic": -0.16198498942298079,
+    "dHall_dB_independent_five_point": -0.161984989421766,
+    "effective_LR_conductance_in_q2_over_h": 0.5192802994620082,
+    "two_lead_transmission_at_B": 0.46269200729839743,
+    "two_lead_at_negative_B": 0.4626920072983974,
+    "two_lead_B0_slope": 8.83530808915326e-15,
+    "transmission": [
+      [
+        0,
+        0.24088411,
+        0.31045567,
+        0.17220317
+      ],
+      [
+        0.17220317,
+        0,
+        0.24088411,
+        0.31045567
+      ],
+      [
+        0.31045567,
+        0.17220317,
+        0,
+        0.24088411
+      ],
+      [
+        0.24088411,
+        0.31045567,
+        0.17220317,
+        0
+      ]
+    ],
+    "current_conservation_max": 1.1102230246251565e-16,
+    "onsager_max_abs_T_B_minus_T_transpose_negativeB": 8.326672684688674e-17,
+    "onsager_max_abs_derivative_error": 2.220446049250313e-16
+  },
+  "lead_coupling_scan": [
+    {
+      "gamma": 0.2,
+      "hall_ratio": -0.040745416132001167,
+      "dHall_dB": -0.08772612709691915
+    },
+    {
+      "gamma": 0.55,
+      "hall_ratio": -0.06642265873281976,
+      "dHall_dB": -0.16198498942298079
+    },
+    {
+      "gamma": 1.1,
+      "hall_ratio": -0.0654353163070106,
+      "dHall_dB": -0.17397509779018283
+    }
+  ],
+  "temperature_scan": [
+    {
+      "T": 0.04,
+      "hall_ratio": -0.1198951248490168,
+      "dHall_dB": -0.09524205785992654
+    },
+    {
+      "T": 0.16,
+      "hall_ratio": -0.06642265873281976,
+      "dHall_dB": -0.16198498942298079
+    },
+    {
+      "T": 0.35,
+      "hall_ratio": -0.02605403043053221,
+      "dHall_dB": -0.08000597893589659
+    }
+  ],
+  "sparse_ring_family_not_bulk_scaling": [
+    {
+      "rings": 1,
+      "sites": 4,
+      "hall_ratio": -0.06642265873281976,
+      "dHall_dB": -0.16198498942298079
+    },
+    {
+      "rings": 2,
+      "sites": 8,
+      "hall_ratio": 0.09656643512068824,
+      "dHall_dB": -0.6817331159653506
+    },
+    {
+      "rings": 3,
+      "sites": 12,
+      "hall_ratio": 0.10305928858477144,
+      "dHall_dB": -6.364919961042466
+    },
+    {
+      "rings": 4,
+      "sites": 16,
+      "hall_ratio": 0.07742759165161595,
+      "dHall_dB": 6.418303416448206
+    }
+  ],
+  "physics_gates": [
+    "Two and four independent local wideband leads with explicit Γ",
+    "Caroli T trace identity",
+    "Retarded advanced optical theorem",
+    "Magnetic gauge equivalence for individual T and derivative",
+    "Onsager T_ab(B)=T_ba(-B)",
+    "Two-terminal magnetoconductance even and derivative at B0 zero",
+    "Four-terminal Hall odd and selfconsistent floating probes",
+    "Analytic dBT and dB(VH) match independent complete five-point field difference",
+    "Temperature/lead dependence and mesoscopic finite-size caveat"
+  ],
+  "tests_added": 20,
+  "limitations": [
+    "Not an intrinsic bulk orbital conductivity tensor",
+    "Lead Γ is ideal local energy-independent diagonal and B-independent",
+    "No interacting/inelastic microscopic selfenergy",
+    "Diamond sparse size scan has no controlled bulk thermodynamic limit",
+    "Original source-paper reconstruction remains PARTIAL"
+  ]
+}
