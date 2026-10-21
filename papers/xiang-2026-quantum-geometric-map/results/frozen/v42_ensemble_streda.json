@@ -1,0 +1,81 @@
+{
+  "protocol": "exact_finite_sample_ensemble_Streda_linear_Hall_v42",
+  "scientific_status": "PARTIAL",
+  "L": 4,
+  "mass": -1,
+  "W": 0.12,
+  "mu": 1.1,
+  "theta": [
+    0.11,
+    0.33
+  ],
+  "eta": 0.005,
+  "nsamples": 6,
+  "samples": [
+    {
+      "seed": 1947,
+      "exact_lehmann": -0.30700588775934573,
+      "surface_Ia": -0.19214457175086774,
+      "sea_II": -0.11480486274161755,
+      "total": -0.3069494344924853,
+      "total_minus_lehmann": 0.0000564532668604345,
+      "nearest_level_distance": 0.04970331103517944
+    },
+    {
+      "seed": 1948,
+      "exact_lehmann": -0.1511492448097147,
+      "surface_Ia": -2.199080502710366,
+      "sea_II": 2.0396590300005037,
+      "total": -0.1594214727098624,
+      "total_minus_lehmann": -0.0082722279001477,
+      "nearest_level_distance": 0.010457435624851685
+    },
+    {
+      "seed": 1949,
+      "exact_lehmann": 0.08482753627506169,
+      "surface_Ia": -0.9077679231071347,
+      "sea_II": 0.9896757335933118,
+      "total": 0.08190781048617712,
+      "total_minus_lehmann": -0.002919725788884567,
+      "nearest_level_distance": 0.023913432182318006
+    },
+    {
+      "seed": 1950,
+      "exact_lehmann": -0.28407685084705725,
+      "surface_Ia": -2.151169419726126,
+      "sea_II": 1.862780191502797,
+      "total": -0.28838922822332913,
+      "total_minus_lehmann": -0.004312377376271881,
+      "nearest_level_distance": 0.00971665498510177
+    },
+    {
+      "seed": 1951,
+      "exact_lehmann": -0.5472969578627139,
+      "surface_Ia": -2.166439055685638,
+      "sea_II": 1.6228626407186972,
+      "total": -0.5435764149669406,
+      "total_minus_lehmann": 0.0037205428957732822,
+      "nearest_level_distance": 0.014309377241342291
+    },
+    {
+      "seed": 1952,
+      "exact_lehmann": -1.247453801005284,
+      "surface_Ia": -0.8738374565296556,
+      "sea_II": -0.36851085273678286,
+      "total": -1.2423483092664385,
+      "total_minus_lehmann": 0.005105491738845558,
+      "nearest_level_distance": 0.026644704953296516
+    }
+  ],
+  "mean_exact_lehmann": -0.4086925343348424,
+  "mean_surface_Ia": -1.415073154918298,
+  "mean_sea_II": 1.0052769800561514,
+  "mean_streda_total": -0.4097961748621464,
+  "std_exact_lehmann": 0.46010683486017095,
+  "mean_total_minus_lehmann": -0.0011036405273041454,
+  "warnings": [
+    "sample average is not infinite-system SCBA or full disorder ensemble",
+    "finite eta and finite level spacing can strongly affect metallic finite-size response",
+    "no separately measurable intrinsic/extrinsic assignment to I/II"
+  ]
+}
