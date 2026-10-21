@@ -1,3 +1,5 @@
+> **RETRACTED NUMERICAL RESULTS (v47):** The originally released v46 full equilibrium y-electric source had the wrong sign for the sigma_y derivative. All old v46 frozen mixed-field numbers and any comparison of the xy-only response with Eq.(8) are invalid. The code has been corrected; use the fully symmetrized tensor and independent source/finite-B checks in [v47](ORIGINAL_PHE_SYMMETRIC_SOURCE_CORRECTION_V47.md). The text below is preserved solely as a historical protocol record, not accepted numerical physics.
+
 # v46 | Same tilted Dirac Hamiltonian, distinct mixed-field RTA collision targets
 
 **Scientific status: PARTIAL.** This independent protocol test addresses the *original symmetric spin-induced PHE* of Xiang et al., PRB **113**, L201406 (2026), main Eqs. (8), (10), (11) ([arXiv:2510.02661v2](https://arxiv.org/pdf/2510.02661v2)). It is not the v41–v44 antisymmetric QWZ charge Hall extension. Neither v46 collision target is claimed to reproduce the complete Supplemental Material relaxation prescription without line-by-line checking.
