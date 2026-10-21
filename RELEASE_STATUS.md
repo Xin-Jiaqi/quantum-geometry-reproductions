@@ -4,7 +4,7 @@
 | --- | --- | --- | --- |
 | Jia 2026 PRL NMEE | `papers/jia-2026-nonlin-magnetoelectric-edelstein` | `scripts/verify_release.py` | PARTIAL |
 | Xiang 2025 PRL IGMC | `papers/xiang-2025-intrinsic-gyrotropic-magnetic-current` | `scripts/verify_round9.py` | PARTIAL |
-| Xiang, Jin & Wang 2025 PRL spin quantum geometry | `papers/xiang-2025-spin-quantum-geometry` | 46 tests incl. V30 finite-eta/PT and V31 3-doublet Laurent, Python 3.11/3.12 CI, JSON smoke | PARTIAL; curated Dirac/SM subset; metal driven DC and paper absolute factors OPEN |
+| Xiang, Jin & Wang 2025 PRL spin quantum geometry | `papers/xiang-2025-spin-quantum-geometry` | 70 tests incl. V32 SM Eq.(2) four sources, V31 Laurent and V30 finite-eta/PT; Python 3.11/3.12 CI | PARTIAL; curated paper model plus verified method subsets; physical metallic DC and published absolute factors OPEN |
 | Xiang 2026 PRB magnetotransport | `papers/xiang-2026-quantum-geometric-map` | `scripts/verify_release.py` | PARTIAL; GitHub **curated core + migrated nondegenerate spin/orbital method subset** |
 
 For the PRB, the complete 30-round original **offline** v30 checkpoint is separate from the independently readable/callable core published in this repository. It includes additional model branches, scans, plots, and scientific logs; those are **not** claimed to have been uploaded here. The core implements selected independently checked methods and leaves absent advanced interfaces explicitly unimplemented.
@@ -72,3 +72,7 @@ Migrated the **adiabatic finite-eta** Laurent decomposition A/eta^2+B/eta+C usin
 ## 2026-10-20: v41 exact finite-torus linear Hall benchmark
 
 Merged PR #14 (head `70b3d8d`, squash commit `b3d2821`) after the **291/291 PRB software tests PASS** at Actions run `39435808942`, including eight new exact-Hall gates. The independent same-Hamiltonian full-spectrum **linear** Hall Kubo response on finite disordered QWZ tori is checked against a separate occupied-subspace flux-twist Chern number, finite-frequency retarded correlator, model-specific zero mixed diamagnetic contact and current finite differences. Frozen representative: `L=4,m=-1,W=.12,seed=1947,ntheta=7,mu=0`, fixed-flux Hall `-1.287619933`, twist-averaged Hall `-1.000000019`, FHS Chern `-1` in units `e²/h`. This is **not** separate physical Středa surface/sea, thermodynamic disorder-averaged conserving SCBA or the original EB PHE. Scientific status is **PARTIAL**.
+
+## 2026-10-21 Xiang 2025 V32: original SM Eq.(2) four-source audit
+
+PR #16 merged. An independent nondegenerate 2–5-band explicit evaluation of all *four* SM Eq.(2) source groups agrees with fixed-orbital Liouville (max absolute error < 8e-9 in the frozen reference), with a further separate V30 solver crosscheck. The source Eq.(2) eta^0 result differs from printed SM Eq.(6) by the occupation-gradient term -i*r_mn*(f'_n-f'_m)/(epsilon_m-epsilon_n)^2; this is recorded as a **source-algebra discrepancy under the specified eta/2eta prescription**, not a universal claim of incorrect physical DC response. 70/70 tests and both Python 3.11/3.12 GitHub CI pass. Previously unresolved Fig.1(a) normalization, SM Eq.55/56, Eq.69/70 and metallic collision/limit-order physics remain OPEN. No DFT, stack or intercalation simulation claimed.
