@@ -79,3 +79,16 @@ This matrix applies only to the code in this GitHub repository. The original v30
 | Actual intrinsic infinite-system orbital MNHE and conserving scatterer/current contact theory | **UNRESOLVED** |
 
 New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang original source paper scientific state remains PARTIAL.
+
+
+## v57 physics-first independent four-terminal open-device acceptance
+
+| Physical capability | Acceptance | Independent validation |
+| --- | --- | --- |
+| Local wide-band coherent two-/four-lead Caroli scattering matrix and lead magnetic derivative | **VERIFIED specified finite-model implementation** | Independent Caroli trace and local-site formula, retarded/advanced optical theorem, same T_ab in two gauges, analytic d_B T against five-point finite B |
+| Floating voltage probes (zero I_top/I_bottom), Hall ratio and magnetic slope | **VERIFIED lead current-conserving solution** | Independent complete five-point B derivative of *all* contacts and voltages, Onsager T_ab(B)=T_ba(-B), total/current-probe conservation |
+| Two-probe B-even longitudinal conductance; symmetric four-probe B-odd Hall voltage | **VERIFIED model symmetries** | Explicit B→-B and B=0 tests, contact/temperature/coordinate dependence |
+| Four-terminal device voltage for particular finite graph and wideband leads | **CONDITIONAL physically modeled coherent device** | Lead Γ, temperature, geometry materially change response |
+| Intrinsic thermodynamic bulk MNHE/PHE, scattering/microscopic leads and bulk size limit | **UNRESOLVED** | Sparse diamond ring enlargement is *not* controlled thermodynamic scaling |
+
+20 new independent physical tests PASS locally; full GitHub CI required before accepting merged module. Original-paper source status remains PARTIAL.
