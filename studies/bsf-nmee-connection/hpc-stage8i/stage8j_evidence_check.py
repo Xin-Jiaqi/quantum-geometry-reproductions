@@ -37,7 +37,7 @@ def evaluate():
     k=tuple(valley["jobs"]["soc_AB_s0.00"]["per_k"]["K"]["k"][:2])
     kp_wrong=tuple(valley["jobs"]["soc_AB_s0.00"]["per_k"]["Kp"]["k"][:2])
     true_kp=tuple(-x for x in k)
-    assert reduced(c3(k))==reduced(k)
+    assert all(abs(x-y)<1e-6 for x,y in zip(c3(k),reduced(k)))
     assert reduced(kp_wrong)!=reduced(true_kp)
     # It is an interior Gamma--M point with M=(-1/2,+1/2).
     assert all(abs(x - 2*m/3)<1e-6 for x,m in zip(kp_wrong,(-.5,.5)))
