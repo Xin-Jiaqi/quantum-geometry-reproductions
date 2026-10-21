@@ -12,12 +12,12 @@ Here "spin metric" denotes the **real interband spin-current/velocity spectral p
 
 Natural units with independent layer Pauli matrices tau and physical-spin matrices sigma:
 
-```math
-H(k)=epsilon(k) I + t tau_x
- + alpha tau_z (sin(k_y) sigma_x - sin(k_x) sigma_y)
- + m tau_z sigma_z,
-epsilon(k)=-2b(cos k_x+cos k_y)+gamma sin k_x.
-```
+$
+H(\mathbf k)=\varepsilon(\mathbf k) I+t\tau_x+\alpha\tau_z(\sin k_y\sigma_x-\sin k_x\sigma_y)+m\tau_z\sigma_z,
+$
+$
+\varepsilon(\mathbf k)=-2b(\cos k_x+\cos k_y)+\gamma\sin k_x.
+$
 
 `PT = (tau_x i sigma_y) K`, acting at fixed k, with `(PT)^2=-1`. The last scalar term is a **synthetic symmetry-allowed PT term**, *not* derived from a realistic sliding geometry. For a magnetic crystal it requires an explicit microscopic hopping/flux explanation before being used in a material claim. In this test `t=.65, alpha=.55, m=.72`.
 
@@ -25,9 +25,9 @@ The two twofold-degenerate manifolds have spectral projectors `P_-` and `P_+`; t
 
 Define the Hermitian conventional spin current `J={v_x,sigma_y}/4`, and **one chosen** staggered-current convention `J_stag={tau_z,J}/2`. The U(2)-invariant interdoublet kernels are
 
-```math
-G_O(k) = Re Tr[P_-(k) O(k) P_+(k) v_x(k)] / Delta(k)^2.
-```
+$
+G_O(\mathbf k)=\frac{\operatorname{Re}\operatorname{Tr}[P_-(\mathbf k)O(\mathbf k)P_+(\mathbf k)v_x(\mathbf k)]}{\Delta(\mathbf k)^2}.
+$
 
 The antiunitary PT transformation makes `J` odd and `J_stag` even, while `v_x` and `P_±` are even. Accordingly, `G_J(k)=0` but `G_Jstag(k)` is symmetry-allowed. **This is standard representation theory; it is not a new symmetry theorem.**
 
@@ -52,9 +52,9 @@ For `gamma=0` an extra momentum cancellation removes the integrated signal. For 
 
 A nonzero integrated interband `G` is **not itself** a dc spin current, especially in an insulator. Using the explicitly chosen operator and a constant-tau *diagonal occupation RTA*, evaluate the Fermi-surface-only numerical coefficient
 
-```math
-C_O = integral_BZ sum_{doublets n} [-f'(epsilon_n)] v_{n,x} Tr(P_n O).
-```
+$
+C_O=\int_{\mathrm{BZ}}\!\frac{d^2k}{(2\pi)^2}\sum_{n\in\mathrm{doublets}}[-f'(\varepsilon_n)]v_{n,x}\operatorname{Tr}(P_n O).
+$
 
 This convention keeps the doublet degeneracy through the projector trace; dimensional electric-charge/tau factors have been suppressed. It is a model-only Drude-type check, **not the original paper's full linear spin-response susceptibility**.
 
