@@ -131,3 +131,17 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Intrinsic bulk orbital EB and same-H **transport** finite-to-bulk limit | **UNRESOLVED** | Topology agreement is not an electrical conductivity equality |
 
 21 new tests for independently derived physics. Original Xiang paper scientific audit remains **PARTIAL**.
+
+
+## v61: same-H QWZ coherent four-terminal charge Hall, NOT original orbital mixed E/B
+
+| Component | Science status | Independent gates |
+| --- | --- | --- |
+| QWZ Bloch ↔ finite sample ↔ matching semi-infinite leads | **VERIFIED** for the named exact QWZ Fourier Hamiltonian | Analytic Fourier reconstruction, Hermitian finite matrix, correctly oriented 2-orbital transverse strips and matrix H01; lead coupling matches actual cut bonds |
+| Zero-T four-probe charge Hall Landauer-Büttiker implementation | **VERIFIED mathematical scattering problem; CONDITIONAL finite device** | Independent S†S scattering oracle and probability blocks versus Caroli; positive Γ, floating I_T=I_B=0, total conservation, orbital gauge rephasing; wrong unchanged contacts negative control |
+| Single-channel charge Hall plateau vs periodic Chern | **CONDITIONAL clean-gapped model bulk-edge consistency** | m=-1/+1 yield σxy=+1/-1 q²/h, Rxy≈+1/-1 h/q², correct longitudinal current; 3/5/7 size, η/μ/contact sensitivity |
+| Trivial insulating m=+3 | **VERIFIED negative control** | Chern=0, tiny η-dependent current; Rxy deliberately undefined when |I|<10^-7 rather than fabricated very large resistance |
+| Same microscopic H full Kubo conductivity / four-terminal resistance equality | **UNRESOLVED** outside clean chiral plateau | These are distinct observables; equality requires tensor inversion and carefully ordered contact, finite-size and transport limits |
+| Intrinsic multiband orbital mixed E/B of Xiang et al. | **UNRESOLVED** | No substitution of charge Hall topology or finite Hall voltage for orbital magnetoelectric transport |
+
+28 new scientific tests, independently exercised locally. Reference [v61 physical report](SAME_QWZ_FOUR_TERMINAL_BULK_EDGE_V61.md). Source paper status remains **PARTIAL**.

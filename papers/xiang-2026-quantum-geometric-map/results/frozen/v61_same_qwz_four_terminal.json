@@ -1,0 +1,77 @@
+{
+  "cases": {
+    "m+1_L3": {
+      "bulk_chern": -1,
+      "drive_current_q2_over_h": 0.9969113072658904,
+      "hall_resistance_h_over_q2": -1.0000069180270992,
+      "reportable": true
+    },
+    "m+1_L5": {
+      "bulk_chern": -1,
+      "drive_current_q2_over_h": 0.9998890207012128,
+      "hall_resistance_h_over_q2": -0.9999999136441226,
+      "reportable": true
+    },
+    "m+1_L7": {
+      "bulk_chern": -1,
+      "drive_current_q2_over_h": 0.9999951335103389,
+      "hall_resistance_h_over_q2": -0.9999999972781697,
+      "reportable": true
+    },
+    "m+3_L3": {
+      "bulk_chern": 0,
+      "drive_current_q2_over_h": 1.0581858684401455e-10,
+      "hall_resistance_h_over_q2": null,
+      "reportable": false
+    },
+    "m+3_L5": {
+      "bulk_chern": 0,
+      "drive_current_q2_over_h": 1.0127686852053938e-10,
+      "hall_resistance_h_over_q2": null,
+      "reportable": false
+    },
+    "m+3_L7": {
+      "bulk_chern": 0,
+      "drive_current_q2_over_h": 1.0055162980918938e-10,
+      "hall_resistance_h_over_q2": null,
+      "reportable": false
+    },
+    "m-1_L3": {
+      "bulk_chern": 1,
+      "drive_current_q2_over_h": 0.9969113072658913,
+      "hall_resistance_h_over_q2": 1.0000069180270983,
+      "reportable": true
+    },
+    "m-1_L5": {
+      "bulk_chern": 1,
+      "drive_current_q2_over_h": 0.9998890207012114,
+      "hall_resistance_h_over_q2": 0.9999999136441239,
+      "reportable": true
+    },
+    "m-1_L7": {
+      "bulk_chern": 1,
+      "drive_current_q2_over_h": 0.9999951335103386,
+      "hall_resistance_h_over_q2": 0.9999999972781699,
+      "reportable": true
+    }
+  },
+  "eta_scan_mminus1_L5": {
+    "0.0001": {
+      "drive_current_q2_over_h": 0.9998890207012114,
+      "hall_resistance_h_over_q2": 0.9999999136441239
+    },
+    "0.001": {
+      "drive_current_q2_over_h": 0.999888442137092,
+      "hall_resistance_h_over_q2": 0.9999994866209571
+    },
+    "1e-05": {
+      "drive_current_q2_over_h": 0.9998890784774696,
+      "hall_resistance_h_over_q2": 0.9999999493084774
+    }
+  },
+  "model": "same-QWZ-Fourier-Hamiltonian-in-bulk-device-and-four-semi-infinite-leads",
+  "status": "CONDITIONAL coherent zero-T clean charge edge; NOT intrinsic orbital mixed EB",
+  "units": "q2_over_h and h_over_q2",
+  "version": "v61",
+  "zero_current_guard": "Rxy=null when |Ileft|<1e-7 for normalized unit voltage bias"
+}

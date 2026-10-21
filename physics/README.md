@@ -96,3 +96,12 @@ The general n-orbital semi-infinite block-lead retarded Green equation now has a
 A different same-Hamiltonian test uses identical real-space Fourier hoppings and periodic Bloch QWZ H(k). The **finite open projector's center Chern marker** converges to the **periodic Wilson Chern**, while the finite total marker trace vanishes due to edge cancellation. **VERIFIED geometry/topology only.** This does **NOT** prove a finite Hall voltage equals bulk Kubo charge conductivity or the original source-paper orbital mixed EB.
 
 [Methods and limitations](../papers/xiang-2026-quantum-geometric-map/docs/GENERAL_MATRIX_LEADS_SAME_H_QWZ_V60.md). Original paper science PARTIAL; real Wannier magnetic lead H00(B),H01(B), same-H transport thermodynamic limit and intrinsic orbital EB remain UNRESOLVED.
+
+
+## v61: exact same-QWZ lattice-to-four-terminal charge Hall bridge
+
+[Implementation](../papers/xiang-2026-quantum-geometric-map/src/qgmap/qwz_device_v61.py) | [28 gates](../papers/xiang-2026-quantum-geometric-map/tests/test_qwz_device_v61.py) | [Physical limits](../papers/xiang-2026-quantum-geometric-map/docs/SAME_QWZ_FOUR_TERMINAL_BULK_EDGE_V61.md).
+
+- **VERIFIED named primitives:** QWZ Fourier hopping identical in periodic Bloch model, finite open device and four microscopic semi-infinite principal-layer leads; coherent Caroli scattering, independent S-matrix unitarity, zero-current floating contacts and phase-gauge covariance.
+- **CONDITIONAL charge Hall plateau:** clean T=0, μ=0, η=10^-4, L=3/5/7. m=-1/+1 leads Rxy→+1/-1 h/q², while periodic σxy=+1/-1 q²/h. Relates distinct observables via clean chiral transport and conductivity/resistivity inversion, not via their direct equality. At m=+3, the current is unresolved at measurement threshold and Rxy is **not** reported.
+- **UNRESOLVED:** bulk Kubo ↔ general finite-device transport with fully controlled thermodynamic/contact/disorder limits; original full multiband orbital E×B susceptibility. Scientific source audit remains PARTIAL.
