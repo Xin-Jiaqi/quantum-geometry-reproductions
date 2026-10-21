@@ -2,6 +2,8 @@
 
 **Separate from paper reproduction.** This study builds on the independently reproduced model kernels of [Jia et al., PRL 136 226302 (2026)](../../papers/jia-2026-nonlin-magnetoelectric-edelstein/), but its physical conclusions refer to a NEW synthetic sliding bilayer, not results reported in that article. The published driven-DC NMEE protocol and our gapped 0 K **equilibrium/static** response remain distinct.
 
+**Three parallel research tracks:** [Idea / Test / Peer overview](docs/RESEARCH_TRACKS_IDEA_TEST_PEERS.md). The [Stage10 peer audit](docs/STAGE10_PEER_LANDSCAPE_20261021.md) is the maintained third-track literature/novelty reference; the separate Stage8i SOC harness proceeds independently.
+
 Corresponding source-paper page: [Paper-associated independent follow-up index](../../papers/jia-2026-nonlin-magnetoelectric-edelstein/research/README.md). This link is navigation only: no changes to the frozen paper `nmee_lab`, reproduction tests, published-source notes, or historical baseline.
 
 | Stage | Distinct **original** physical or theoretical update | Evidence |
