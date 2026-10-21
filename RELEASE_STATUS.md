@@ -206,3 +206,11 @@ Separate finite OBC **QWZ H built from identical Fourier hoppings to v59 periodi
 ## v62 — charge Kubo versus geometry-dependent local NEGF (2026-10-21)
 
 Code: `papers/xiang-2026-quantum-geometric-map/src/qgmap/qwz_charge_kubo_v62.py` and `qwz_spatial_v62.py`. 30 independent new science gates; v60–v62 standalone 79/79 local PASS. Physical result: periodic intrinsic σxy(μ,T) agrees between analytic Pauli and velocity-Kubo, while narrow physical strip leads reveal local probe-current redistribution and metallic failure of `Rxy≈1/σxy`. **VERIFIED** named mathematics; **CONDITIONAL** coherent finite-device plateau; **UNRESOLVED** general Kubo/NEGF matching and source-paper mixed orbital EB. Xiang source audit **PARTIAL**. This entry intentionally does not claim GitHub CI pass until logs are inspected.
+
+
+### v62 final source-independent release certification
+
+- [PR #43](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/43) **squash merged** as `abaaaae16e07b599bdbcd4f3399f61da65e31de9` from final PR head `7b6fe1260da349fb6451b6ebda4032bd40b07132`.
+- Final PR [QGMap Actions run 39613045997](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39613045997): **617/617 PASS**, `Ran 617 tests in 69.981s`, `completed/success`; source overall `PARTIAL`.
+- Independent post-merge **main** [Actions run 39613539329](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39613539329): **617/617 PASS**, `Ran 617 tests in 71.763s`, `completed/success`; verified the *merged* commit. Isolated self-contained v60–v62 archive **79/79 PASS** with file SHA256 manifest and exact locally reproduced frozen JSON.
+- Scope: VERIFIED specified periodic intrinsic **charge** Kubo and spatial NEGF identities, CONDITIONAL coherent device/probe geometry, UNRESOLVED generic Kubo–NEGF thermodynamic limit and complete orbital mixed E/B. Original Xiang PRB scientific status **PARTIAL**. This final entry changes release documentation only.
