@@ -138,3 +138,14 @@ python scripts/reproduce_exact_hall_v41.py --L 4 --mass -1 --W .12 --seed 1947 -
 ```
 
 See [v41 exact Hall protocol](docs/EXACT_HALL_V41.md).
+
+### v42: Exact finite-disorder *linear* Hall Středa I+II
+
+`qgmap.exact_streda_v42` evaluates the **standard Smrčka–Středa** antisymmetric I(a)+I(b)+II terms for the **same frozen scalar-disorder QWZ torus** and current operators as v41. It checks a direct matrix-trace I(a), a separate real-energy dense Green-function integral II, the analytic pair primitive, the v38 clean Bloch sea and convergence of the **complete sum** to the v41 independent Lehmann DC Hall. The Hall-odd I(b) is zero for these Hermitian charge-current operators. The individual surface and sea terms strongly cancel at finite `eta` and are not uniquely separable measurable mechanisms.
+
+```bash
+python -m unittest tests.test_exact_streda_v42 -v
+python scripts/reproduce_exact_streda_v42.py --L 4 --mass -1 --W .12 --mu 1.1
+```
+
+[Full v42 derivation and reproducibility](docs/EXACT_STREDA_V42.md). **The self-consistent disorder-averaged conserving Středa I/II, physical thermodynamic DC, and Xiang original mixed second-order EB PHE are still OPEN; whole-paper state PARTIAL.**
