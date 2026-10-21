@@ -44,3 +44,17 @@ Independent v56 physics uses v55 finite OPEN Peierls H(B), P_a=q X_a, J_a=i[H,P_
 | Complete thermodynamic intrinsic orbital MNHE/PHE and microscopic bath/leads | **UNRESOLVED** |
 
 See [v56 derivation](../papers/xiang-2026-quantum-geometric-map/docs/INDEPENDENT_FINITE_GRAPH_MIXED_EB_V56.md), [code](../papers/xiang-2026-quantum-geometric-map/src/qgmap/finite_graph_eb_v56.py) and [frozen validation](../papers/xiang-2026-quantum-geometric-map/results/frozen/v56_finite_graph_mixed_EB.json). Original Xiang source audit remains PARTIAL.
+
+
+## v57: independently verified real lead-based Hall device, distinct from v56 bath
+
+Coherent [two- and four-terminal wide-band lead solver](../papers/xiang-2026-quantum-geometric-map/src/qgmap/lead_transport_v57.py) now supplies explicit source/drain leads and self-consistent floating Hall voltage probes. The **finite open graph** uses v55's verified Peierls field, local B-independent Γ_a and exact Caroli transmission. Verified checks: full scattering optical theorem/current conservation, field gauge equivalence of **individual T_ab and d_B T_ab**, Onsager–Casimir reciprocity, two-terminal B-even conductance, 4-terminal B-odd transverse voltage, and independent five-point d_B of the full floating-probe solution.
+
+| Physical scope | Status |
+| --- | --- |
+| Correct coherent local-wideband NEGF/Caroli and Landauer–Büttiker four-voltage-probe linear algebra, its B derivative and gauge/current identities | **VERIFIED** within explicitly supplied finite model |
+| Finite coherent device Hall voltage and B slope for particular Γ,T,site graph | **CONDITIONAL device observable** |
+| Scalar-gamma v56 closed-system AC response vs this v57 lead-based DC response | **Different observables; no direct numerical identity claimed** |
+| Fixed-density thermodynamic bulk orbital MNHE/PHE, general nonlocal/field-dependent lead self-energy, inelastic response | **UNRESOLVED** |
+
+The 1–4 ring scan is a sparse, changing-geometry *mesoscopic* sequence and **NOT a bulk size-scaling proof**. [Physical derivation](../papers/xiang-2026-quantum-geometric-map/docs/OPEN_LEADS_FOUR_TERMINAL_HALL_V57.md), [frozen output](../papers/xiang-2026-quantum-geometric-map/results/frozen/v57_open_lead_hall_validation.json). Original Xiang paper scientific audit remains PARTIAL.
