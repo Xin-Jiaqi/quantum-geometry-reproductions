@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0.0",
+  "registry_kind": "metadata_only_no_physics_dispatch",
+  "scientific_policy": "CI_PASS_NOT_FULL_PAPER_PASS",
+  "module_root": "papers",
+  "integration_state": "DESIGN_AND_DISCOVERY_ONLY",
+  "modules": [
+    {
+      "id": "jia2026-nmee",
+      "paper": "Jia et al., PRL 136, 226302 (2026)",
+      "directory": "papers/jia-2026-nonlin-magnetoelectric-edelstein",
+      "science_status": "PARTIAL",
+      "runtime": "isolated-paper-venv",
+      "install": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-e",
+        "."
+      ],
+      "verify": [
+        "python",
+        "scripts/verify_release.py"
+      ],
+      "entrypoint": [
+        "python",
+        "scripts/reproduce.py"
+      ],
+      "default_args": [
+        "--case",
+        "fig1b",
+        "--mesh",
+        "31"
+      ],
+      "protocols": [
+        {
+          "id": "nmee.printed",
+          "kind": "paper_formula",
+          "description": "PRL printed branch; do not treat as full static correction",
+          "status": "MODEL_VALIDATED_ONLY"
+        },
+        {
+          "id": "nmee.full_static",
+          "kind": "equilibrium_static",
+          "description": "SM Eq.9 full-static branch, not equivalent to driven finite-T DC",
+          "status": "DIAGNOSTIC"
+        },
+        {
+          "id": "nmee.bgk_model",
+          "kind": "specified_collision_model",
+          "description": "Independent BGK model, not claimed to be paper protocol",
+          "status": "SYNTHETIC_ONLY"
+        }
+      ],
+      "capabilities": [
+        "Kane-Mele model",
+        "CuMnAs PT-doublet projector",
+        "printed/static comparison",
+        "Wannier Stage-1 read-only preflight"
+      ],
+      "limits": [
+        "Driven finite-T metallic DC remains open",
+        "Stage-1 preflight blocks without same-gauge position/velocity and spin operators"
+      ],
+      "evidence": "docs/RELEASE_GATES.md"
+    },
+    {
+      "id": "xiang2025-igmc",
+      "paper": "Xiang et al., PRL 134, 116301 (2025)",
+      "directory": "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current",
+      "science_status": "PARTIAL",
+      "runtime": "isolated-paper-venv",
+      "install": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-e",
+        "."
+      ],
+      "verify": [
+        "python",
+        "scripts/verify_round9.py"
+      ],
+      "entrypoint": [
+        "python",
+        "scripts/reproduce_all.py"
+      ],
+      "default_args": [],
+      "protocols": [
+        {
+          "id": "igmc.low_frequency",
+          "kind": "paper_defined_ac",
+          "description": "Paper-defined low-frequency occupied/displacement sectors",
+          "status": "MODEL_VALIDATED_ONLY"
+        },
+        {
+          "id": "igmc.full_frequency",
+          "kind": "causal_kubo_ac",
+          "description": "Independent clean complex-frequency AC comparison",
+          "status": "MODEL_VALIDATED_ONLY"
+        }
+      ],
+      "capabilities": [
+        "Rashba/Dirac spin-orbital mechanisms",
+        "Zeeman quantum geometry",
+        "AC magnetic-current susceptibility",
+        "magnetic-point-group tensor audit"
+      ],
+      "limits": [
+        "Fig.2(d) SI amplitude mismatch remains open",
+        "Equation/time reversal parity conventions remain separated"
+      ],
+      "evidence": "docs/THEORY_PROTOCOLS.md"
+    },
+    {
+      "id": "xiang2025-spin-qgt",
+      "paper": "Xiang, Jin and Wang, PRL 135, 146303 (2025)",
+      "directory": "papers/xiang-2025-spin-quantum-geometry",
+      "science_status": "PARTIAL",
+      "runtime": "isolated-paper-venv",
+      "install": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.txt"
+      ],
+      "verify": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "entrypoint": [
+        "python",
+        "scripts/reproduce.py"
+      ],
+      "default_args": [],
+      "protocols": [
+        {
+          "id": "spinqgt.reduced_eq13",
+          "kind": "printed_reduced_model",
+          "description": "Two-band printed reduced intrinsic Eq.13, not general intrinsic DC solver",
+          "status": "MODEL_VALIDATED_ONLY"
+        },
+        {
+          "id": "spinqgt.finite_eta",
+          "kind": "adiabatic_regulator",
+          "description": "Full finite-eta Liouville; Drude poles retained; eta is not collision time",
+          "status": "METHOD_VALIDATED_ONLY"
+        },
+        {
+          "id": "spinqgt.laurent_C",
+          "kind": "scheme_specific_constant",
+          "description": "Constant of specified eta/2eta Laurent scheme, not verified physical tau^0",
+          "status": "METHOD_VALIDATED_ONLY"
+        },
+        {
+          "id": "spinqgt.sm_eq2",
+          "kind": "source_algebra",
+          "description": "Four SM Eq.2 source groups, nondegenerate 2-5 band only",
+          "status": "METHOD_VALIDATED_ONLY"
+        }
+      ],
+      "capabilities": [
+        "two-valley Dirac spin QGT and NDSC",
+        "multiband finite-eta Liouville",
+        "PT degenerate projectors",
+        "isolated-cluster Laurent expansion",
+        "SM Eq.2 four-source cross-check"
+      ],
+      "limits": [
+        "Fig1(a) normalization ~2 discrepancy",
+        "SM Eq.55/56 and Eq.69/70 discrepancies",
+        "No general physical intrinsic metallic DC solver"
+      ],
+      "evidence": "docs/SM_EQ2_ACCEPTANCE_V32.md"
+    },
+    {
+      "id": "xiang2026-qgmap",
+      "paper": "Xiang et al., PRB 113, L201406 (2026)",
+      "directory": "papers/xiang-2026-quantum-geometric-map",
+      "science_status": "PARTIAL",
+      "runtime": "isolated-paper-venv",
+      "install": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-e",
+        "."
+      ],
+      "verify": [
+        "python",
+        "scripts/verify_release.py"
+      ],
+      "entrypoint": [
+        "python",
+        "scripts/reproduce_advanced.py"
+      ],
+      "default_args": [
+        "--case",
+        "eb-two-color-v22"
+      ],
+      "protocols": [
+        {
+          "id": "qgmap.two_color_eb",
+          "kind": "dynamic_mixed_field",
+          "description": "Explicit E/B orderings and frequencies; not steady-state DC",
+          "status": "METHOD_VALIDATED_ONLY"
+        },
+        {
+          "id": "qgmap.clean_orbital",
+          "kind": "model_fermi_surface",
+          "description": "Model orbital or spin magnetotransport, not general real-material input",
+          "status": "MODEL_VALIDATED_ONLY"
+        },
+        {
+          "id": "qgmap.disorder_kubo",
+          "kind": "controlled_regulator",
+          "description": "SCBA/Kubo/Ward model subset, not full Kubo-Streda physical Hall",
+          "status": "METHOD_VALIDATED_ONLY"
+        }
+      ],
+      "capabilities": [
+        "Dirac/Rashba spin-orbital response",
+        "two-color EB Liouville",
+        "SCBA and Ward benchmarks",
+        "exact finite-torus Hall benchmarks"
+      ],
+      "limits": [
+        "Full conserving nonlinear steady-state EB/PHE not accepted",
+        "Model and physical SI normalization must not be silently conflated"
+      ],
+      "evidence": "docs/SCIENTIFIC_ACCEPTANCE.md"
+    }
+  ],
+  "external_dependencies": [
+    {
+      "id": "group-theory-operations-toolkit",
+      "repo": "Xin-Jiaqi/group-theory-operations-toolkit",
+      "tested_reference": "551a0daf8d4ba5a5f24b2811694bfe438616de48",
+      "version": "0.18.0",
+      "integration_status": "OPTIONAL_FUTURE_ADAPTER",
+      "notes": "Use existing magnetic groups, layer exchange, stacking and tensor bases; do not re-implement catalog, do not reuse first-order Edelstein parity for second-order spin response."
+    },
+    {
+      "id": "wannier-stage1",
+      "integration_status": "PREFLIGHT_ONLY",
+      "notes": "No physical spin/position response from hr.dat alone; same-gauge projected operators and length-gauge matrix elements required."
+    }
+  ]
+}
