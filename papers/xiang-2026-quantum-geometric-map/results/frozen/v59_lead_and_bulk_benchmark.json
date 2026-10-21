@@ -1,0 +1,91 @@
+{
+  "version": "v59",
+  "status": "VERIFIED_DEFINED_LEAD_AND_QWZ_ALGORITHMS_CONDITIONAL_DEVICE_NOT_ORBITAL_EB",
+  "units": "finite-device hopping and signed qBarea/hbar, lead conductance q²/h, bulk QWZ Chern e²/h",
+  "lead_reference": [
+    {
+      "lead_t": 2,
+      "Hall_voltage_per_LR_bias": -0.06612657051800647,
+      "dHall_dB": -0.15557179946715355,
+      "gamma_center": 0.55
+    },
+    {
+      "lead_t": 5,
+      "Hall_voltage_per_LR_bias": -0.06638331323691728,
+      "dHall_dB": -0.15978425263655333,
+      "gamma_center": 0.55
+    },
+    {
+      "lead_t": 20,
+      "Hall_voltage_per_LR_bias": -0.06642234429493318,
+      "dHall_dB": -0.16147868045963115,
+      "gamma_center": 0.55
+    },
+    {
+      "lead_t": 100,
+      "Hall_voltage_per_LR_bias": -0.06642309613925385,
+      "dHall_dB": -0.16188603377053418,
+      "gamma_center": 0.55
+    }
+  ],
+  "independent_benchmark": {
+    "hall": -0.06612657051800647,
+    "slope_analytic": -0.15557179946715355,
+    "slope_fd": -0.1555717994675421,
+    "slope_analytic_minus_fd": 3.8855030304318916e-13,
+    "max_gauge_T_difference": 0,
+    "max_gauge_dT_difference": 0,
+    "optical_current_residual": 1.1102230246251565e-16
+  },
+  "field_dependent_selfenergy_test": {
+    "onsite_B_slope": 0.12,
+    "dHall_analytic": -0.16208380722060794,
+    "derivative_validated_to_absolute": "<1e-9",
+    "warning": "B-odd scalar reservoir magnetogating is a deliberately prescribed model and need not obey spinless Onsager"
+  },
+  "periodic_bulk_charge_chern": [
+    {
+      "mass": -3,
+      "mesh": 31,
+      "chern_spectral": 6.87592167620062e-10,
+      "chern_wilson": 1.1043592643970545e-18
+    },
+    {
+      "mass": -1,
+      "mesh": 31,
+      "chern_spectral": 0.9999999981231791,
+      "chern_wilson": 1.0000000000000002
+    },
+    {
+      "mass": 1,
+      "mesh": 31,
+      "chern_spectral": -1.000000001876821,
+      "chern_wilson": -1
+    },
+    {
+      "mass": 3,
+      "mesh": 31,
+      "chern_spectral": 6.876752710774738e-10,
+      "chern_wilson": -1.7448876377473461e-16
+    }
+  ],
+  "tests_added": 21,
+  "scope": {
+    "verified": [
+      "semiinfinite 1D chain retarded surface Green function and energy-dependent selfenergy",
+      "named coherent four-terminal Caroli Hall model with full B contact derivative",
+      "separate periodic QWZ intrinsic charge Chern via independent spectral and Wilson methods"
+    ],
+    "conditional": [
+      "device Vh and B slope under specified ideal coherent 1D chain leads"
+    ],
+    "unresolved": [
+      "general matrix principal-layer Wannier leads",
+      "microscopic disorder/dephasing",
+      "same-Hamiltonian finite-vs-periodic controlled bulk limit",
+      "full intrinsic original-paper orbital mixed EB magnetotransport"
+    ],
+    "whole_original_paper": "PARTIAL"
+  },
+  "source": "independent physical tight-binding models, not author SM formulas"
+}
