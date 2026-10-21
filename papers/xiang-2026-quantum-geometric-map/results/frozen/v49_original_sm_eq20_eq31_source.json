@@ -1,0 +1,48 @@
+{
+  "protocol": "v49_authentic_primary_SM_literal_Eq20_vs_Eq31_Eq32_source_test",
+  "scientific_status": "PARTIAL",
+  "original_uploaded_pdf_source_SHA256": {
+    "PRB_main_pdf": "b87e0970f25dd45c5048f8cbbb8691b53ea215040935e9b21a4cde80c69b2730",
+    "SM_16page_pdf": "9b0b8603d13962e100cc059bf4d96b91aa37062360d13decd1cb2eda495332c4"
+  },
+  "original_sources_verified_during_v49": true,
+  "raw_PDFs_intentionally_not_in_GitHub": true,
+  "config": {
+    "beta": 0.125,
+    "mu": 0.3,
+    "T": 0.03,
+    "radial_mesh": 100,
+    "angular_mesh": 128,
+    "cutoff": 2.5,
+    "units": "e=hbar=vF=tau=gmuB=1; responses normalized by tau*gmuB; Bbar=-gmuB B"
+  },
+  "main_Eq10": {
+    "H": "tx*kx+vF*(kx*sy-ky*sx)",
+    "Eq20_current_physical_B_xy": -0.0025061882472380568,
+    "Eq20_current_physical_B_yx": -0.002506188747292441,
+    "Eq31_current_physical_B_xy": 0.0025061882472380568,
+    "Eq31_current_physical_B_yx": 0.002506188747292442,
+    "Eq32_symmetric": 0.0025061884972652493,
+    "Eq32_to_Eq11_ratio": -1.000000064821154
+  },
+  "SM_Eq62": {
+    "H": "tx*kx+vF*(ky*sx-kx*sy)",
+    "Eq20_current_physical_B_xy": 0.0025061882472380568,
+    "Eq20_current_physical_B_yx": 0.002506188747292441,
+    "Eq31_current_physical_B_xy": -0.0025061882472380568,
+    "Eq31_current_physical_B_yx": -0.002506188747292442,
+    "Eq32_symmetric": -0.0025061884972652493,
+    "Eq32_to_Eq11_ratio": 1.000000064821154
+  },
+  "source_main_Eq11_formula_with_model_finite_T_tanh": -0.0025061883348112294,
+  "prior_v47_frozen_H0_RTA_eta_002_eta_times_symmetric": -0.002506316935434002,
+  "independent_SM_derivative_issue": "Literal SM Eq20 and printed Eq31 differ by overall sign for same rho indices, epsilon_mn, velocity-r identity",
+  "heli_orientation_issue": "Main Eq10 and SM Eq62 have opposite spin-momentum locking; sigma_z also flips physical sigma_x operator; do not silently equate with fixed spin B convention",
+  "SM_tau_prescription": "Eq15 phenomenologically regularizes a specific 1/eta_a electric field pole; distinct eta_a,eta_b,eta_Sigma, both perturbation orderings in Eq4–10.",
+  "warnings": [
+    "Source-specific numerical Eq11 agreement cannot by itself solve intermediate Eq20->Eq31 sign",
+    "No author-source correction is made or claimed",
+    "Finite-T tanh is model continuation, original Eq11 T=0",
+    "Fig2b absolute SI ordinate and orbital multiband processes remain OPEN"
+  ]
+}
