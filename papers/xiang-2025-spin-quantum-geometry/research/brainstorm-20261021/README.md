@@ -93,3 +93,12 @@ All files remain under independent \`research/\`. Xiang et al. PRL reproduction 
 - Preflight task `BD-MNPS3-L2-P1-STRUCTURE-R0` is **structure acquisition / exact moment and symmetry validation only**. WSL/Japan jobs need the user's later explicit approval; never infer that the DeepSeek bridge is connected from its README.
 
 - [Copy-ready local DeepSeek preflight task (R0; **NOT SUBMITTED**)](tasks/BD-MNPS3-L2-P1-STRUCTURE-R0.md) freezes source Eq.13, candidate states, exact layer/moment checks, SHA evidence and no-VASP/no-HPC permissions.
+
+
+## DeepSeek single-link activation (2026-10-21)
+
+**Stable task URL:** [tasks/CURRENT.md](tasks/CURRENT.md) → [versioned R1 two-job execution spec](tasks/BD-MNPS3-L2-P1-EXECUTE-R1.md).
+
+This is the single GitHub link to pass to the already-running local DeepSeek harness. The R1 mission obtains original MnPS3 L2 path-1 structures, checks exact magnetism and physical source, performs signed dry-runs and, **if all structural + platform + resource/approval gates pass**, submits only two bounded matched WSL/Japan baseline runs with explicit job IDs, provenance and native convergence audit. No automatic Wannier/NLO run, no invented HPC allocations and no confidential output in this public tree.
+
+**Status on GitHub: READY FOR LOCAL AGENT INTAKE / NOT RECEIVED / NOT SUBMITTED.** The agent or live queue must report actual execution status. Updating files is not submission.
