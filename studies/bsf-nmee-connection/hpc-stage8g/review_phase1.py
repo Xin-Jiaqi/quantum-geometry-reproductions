@@ -66,6 +66,30 @@ def structure_ops(poscar,tol=1e-3):
             "tensor_dimension":rank,"symmetry_tolerance":tol,
             "structure_sha256":onsite_pbs.checksum(poscar)}
 
+def final_forces(folder):
+    import re
+    text=(Path(folder)/"OUTCAR").read_text(errors="replace")
+    headers=list(re.finditer(r"POSITION\s+TOTAL-FORCE\s+\(eV/Angst\)",text))
+    if not headers:raise ValueError("Missing final VASP force table")
+    rows=[]
+    for line in text[headers[-1].end():].splitlines():
+        a=line.split()
+        if len(a)==6:
+            try:rows.append([float(x) for x in a])
+            except ValueError:continue
+        if len(rows)==6:break
+    if len(rows)!=6:raise ValueError("Expected six atomic force rows")
+    f=np.asarray(rows)[:,3:6]
+    # Original BiDB row2685 species order W W Se Se Se Se;
+    # second W and final two Se form upper layer in these inputs.
+    top=f[[1,4,5]].sum(axis=0)
+    return {
+        "max_abs_Fz_eV_A":float(np.max(np.abs(f[:,2]))),
+        "sum_upper_layer_inplane_force_eV_A":[float(x) for x in top[:2]],
+        "sum_upper_layer_force_along_sliding_needs_alignment":True,
+        "note":"nonzero individual Fx/Fy can be expected with frozen xy; sum over upper layer tests rigid sliding stationarity"
+    }
+
 def gate(root,tol=1e-3):
     root,selected=onsite_pbs.load_inputs(root)
     cases=[]
@@ -78,6 +102,7 @@ def gate(root,tol=1e-3):
                     "no_NEBar_or_NMEE_claim":True}
         info=structure_ops(p/"CONTCAR",tol=tol)
         expected_ops,dim,glide=GROUP_EXPECTED[job["name"]]
+        info["final_force_diagnostics"]=final_forces(p)
         info["symmetry_expected_from_ideal"]={
             "operations":expected_ops,"total_tensor_dimension":dim,
             "horizontal_glide":glide}
