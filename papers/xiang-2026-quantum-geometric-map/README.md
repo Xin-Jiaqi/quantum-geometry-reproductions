@@ -1,3 +1,5 @@
+> **v47 SCIENTIFIC CORRECTION:** The original v46 electric-y equilibrium source contained a wrong Pauli derivative sign. The v46 frozen outputs and claim that unsymmetrized xy approximately matches Eq.(8) are **RETRACTED**. Code and tests are corrected. The properly symmetrized frozen-target response `(xy+yx)/2` matches signed main Eq.(11) across beta=.025–.6 at eta=.002, with relative residual about 5×10^-5; the author's Supplemental Material relaxation operator is still **not independently checked**. See [v47 correction](docs/ORIGINAL_PHE_SYMMETRIC_SOURCE_CORRECTION_V47.md). Whole paper scientific status **PARTIAL**.
+
 # Xiang et al. (2026): Quantum Geometric Map of Magnetotransport
 
 **Reference:** L. Xiang, J. Jia, F. Xu and J. Wang, *Physical Review B* **113**, L201406 (2026). [DOI: 10.1103/kd12-4ycj](https://doi.org/10.1103/kd12-4ycj).
@@ -183,7 +185,7 @@ python scripts/reproduce_dirac_phe_protocol_v45.py --beta .125 --mu .3 --tempera
 
 [Scientific scope](docs/ORIGINAL_PHE_PROTOCOL_V45.md), whole-paper PARTIAL.
 
-### v46: Same Hamiltonian, different magnetic preparation in the original PHE
+### v46: HISTORICAL, numerics superseded by v47 (same Hamiltonian, distinct magnetic preparation)
 
 `qgmap.dirac_mixed_rta_v46` independently calculates the **full E-linear, B-derivative density matrix** of the same fixed-tilt Dirac Hamiltonian under two explicitly different scalar RTA collision targets. If the bath targets the B-equilibrated `f(H_B)`, the complete field response obeys the exact ky-translation identity and source-preparation (+0.07627530) cancels the magnetic commutator (-0.07627530) for beta=1/8, eta=.065. If the collision target remains **frozen at f(H0)**, both B-then-E and E-then-B orderings instead yield total +0.03377501 under the same model conditions. Its low-eta tau-linear coefficient is **near but not equal to** the formal original Eq.(8), and deviates further at larger tilt. Neither selected collision target is yet identified with the full author Supplemental Material RTA. See [v46 detailed method](docs/ORIGINAL_PHE_MIXED_RTA_V46.md).
 
@@ -193,3 +195,14 @@ python scripts/reproduce_dirac_mixed_rta_v46.py --eta .065 --beta .125 --nr 96 -
 ```
 
 Original physical PHE, Fig2 normalization and source-specific RTA/bath remain OPEN; scientific status PARTIAL.
+
+### v47: Physically correct electric source and symmetric planar Hall tensor
+
+A centered finite difference of the complete Fermi matrix f(H_B) caught the wrong sign of d_y(kx/r) in the old v46 source. Both xy and yx are now computed, including both EB orderings, and independently reproduced by an entire **finite-B Liouvillian** solve. At eta=.065, beta=1/8, frozen-target xy is **−0.042199786819**, yx **−0.038976453956**, symmetric part **−0.040588120388**; old v46 xy **+0.033775006344** is invalid. At eta=.002, temperature=.03, the signed eta*symmetric responses agree with literal main Eq.(11) to about 5e-5 relative at five tilt values from beta=.025 to .6. Earlier v46 frozen JSON is marked RETRACTED and retained only for archive. See [v47](docs/ORIGINAL_PHE_SYMMETRIC_SOURCE_CORRECTION_V47.md).
+
+```bash
+python -m unittest tests.test_dirac_mixed_rta_v46 tests.test_dirac_source_tensor_v47 -v
+python scripts/reproduce_dirac_source_tensor_v47.py --beta .125 --eta .002 --temperature .03
+```
+
+This is acceptance of an **independently constructed frozen-target model RTA**, **not** confirmation of the author's original Supplemental Material collision prescription or the absolute published Fig.2(b) SI scale. Overall scientific status PARTIAL.
