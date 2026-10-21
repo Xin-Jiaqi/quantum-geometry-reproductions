@@ -201,3 +201,8 @@ Separate finite OBC **QWZ H built from identical Fourier hoppings to v59 periodi
 - [PR #42](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/42) **squash merged**, commit `7561ae5889df7ea4bc79607e9cb937b8d517e0f9`.
 - Final PR-head [Actions run 39608922287](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39608922287): **587/587 PASS** in **139.587 s**, completed/success, head `562892ccdd992b3aa839be6289f7a66afdc42882`.
 - **Post-merge main** [Actions run 39609404675](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39609404675): **587/587 PASS** in **67.937 s**, completed/success, tested merge commit `7561ae5889df7ea4bc79607e9cb937b8d517e0f9`. New v61 science gates **28**, v60–v61 combined local standalone **49/49**. Scientific scope VERIFIED named methods, CONDITIONAL coherent QWZ charge Hall plateau, UNRESOLVED complete intrinsic orbital EB. Source-paper audit remains **PARTIAL**. This is a release-status-only update, not a change in physics code.
+
+
+## v62 — charge Kubo versus geometry-dependent local NEGF (2026-10-21)
+
+Code: `papers/xiang-2026-quantum-geometric-map/src/qgmap/qwz_charge_kubo_v62.py` and `qwz_spatial_v62.py`. 30 independent new science gates; v60–v62 standalone 79/79 local PASS. Physical result: periodic intrinsic σxy(μ,T) agrees between analytic Pauli and velocity-Kubo, while narrow physical strip leads reveal local probe-current redistribution and metallic failure of `Rxy≈1/σxy`. **VERIFIED** named mathematics; **CONDITIONAL** coherent finite-device plateau; **UNRESOLVED** general Kubo/NEGF matching and source-paper mixed orbital EB. Xiang source audit **PARTIAL**. This entry intentionally does not claim GitHub CI pass until logs are inspected.
