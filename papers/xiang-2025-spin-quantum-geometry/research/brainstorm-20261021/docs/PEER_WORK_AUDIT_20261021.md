@@ -1,0 +1,82 @@
+# Spin QG × magnetic stacking: peer-work audit (2026-10-21)
+
+**Nature:** independent proposal/prior-art assessment, not a reproduction of Xiang–Jin–Wang (PRL 135, 146303, 2025), not a priority or publishability certification.  
+**Scope and source method:** journal landing pages, publisher abstracts, available original-text pages and selected open-access full texts, checked on 2026-10-21. DOI/publishing information is confirmed where linked. For many papers, the exact supplemental equations were **not** checked; distinguish abstract-level overlap from proven equation-level equivalence. Research notes and our numerical examples are **independent model results**, not original-author results.
+
+## 1. How to judge novelty (three different steps)
+
+1. **Idea:** formulate a specific *operator, external field, physical configuration, physical observable*, not just a name such as hidden spin quantum geometry.
+2. **Test:** enforce full magnetic symmetry, genuine structural registry and Bloch orbital embedding, degeneracy-covariant spectral projectors, and continuity/contact terms; run controls that eliminate familiar mechanisms.
+3. **Peer work:** compare *exact response rank, operator definition, order in E/B, metallic/insulating limit, frequency, scattering protocol and symmetry* to the closest published work. Shared vocabulary is not enough to establish redundancy; conversely nonzero model numbers are not evidence of originality.
+
+Separate three kinds of statement throughout:
+
+- **Already established:** explicit result or claim supported by the linked paper.
+- **Our deduction:** inferred overlap / methodological warning; subject to direct equation-by-equation inspection.
+- **Not yet established:** remaining hypothesis, physical material realization or observable.
+
+## 2. Direct competitors, ordered by scientific relevance
+
+| ID | Work and confirmed source | What the paper establishes, at supported source level | Overlap / scientific gate for our ideas |
+| --- | --- | --- | --- |
+| P01 | **Xiang, Jin, Wang**, *Spin Transport Revealed by Spin Quantum Geometry*, PRL **135**, 146303 (2025), [DOI](https://doi.org/10.1103/14mp-263q) | Spin/Zeeman QGT formulations of spin current and spin magnetization, including AC displacement spin Hall, nonlinear Drude spin current and magnetization; original paper is the **baseline**, not our own idea. | Re-expressing an existing conductivity with a layer projector or calling a spectral product a metric does **not** alone produce a new mechanism. Compare exact full response and source SM terms. |
+| P02 | **Zheng, Zhai, Xiao, Yao**, *Interlayer Electric Multipoles Induced by In-Plane Field from Quantum Geometric Origins*, Nano Lett. **24**, 8017 (2024), [DOI](https://doi.org/10.1021/acs.nanolett.4c01657), [preprint](https://arxiv.org/abs/2311.11710) | In-plane-field-induced interlayer multipoles; first-/second-order signals from extended-space Berry curvature / quantum metric, with interlayer translation tuning. | **B high overlap:** sliding-coordinate geometry and response enhancement are already explicit. Spin conversion must give a distinct, measurable prediction. |
+| P03 | *Sliding Ferroelectricity Engineered Coupling between Spin Hall Effect and Layertronics in 2D Lattice*, J. Phys. Chem. Lett. **15**, 6699 (2024), [DOI](https://doi.org/10.1021/acs.jpclett.4c01479) | Layer spin Hall, layer-locked Berry curvature and sliding-ferroelectric modulation established using symmetry and low-energy modeling. | **B/D high overlap:** FE-switchable spin Hall/locking is not new; compare parity and material/operator details. |
+| P04 | **Zhou et al.**, *Layer Edelstein Effect*, PRL **137**, 076401 (2026), [DOI](https://doi.org/10.1103/qhvs-pfkq) | Layer-opposite current-induced spin magnetization and external gate control; stacked-group symmetry classification and model/DFT. | **A/C/D high overlap:** layer-resolved Edelstein and switchable spin accumulation already done. Our project must not rebrand LEE. |
+| P05 | **Li et al.**, *Prediction of a layer nonlinear Hall effect in bilayer nonmagnetic or antiferromagnetic systems*, PRB **114**, L111410 (2026), [DOI](https://doi.org/10.1103/2gyh-y52n) | Layer-odd nonlinear Hall at second/third order, hidden cancellation, out-of-plane gate unveiling; BCD/QMD/inverse-mass mechanisms and all-80-layer-group classification. | **A very high overlap:** hidden second/third order layer-Hall idea and elementary stacking selection rules are occupied. A must predict a *distinct spin observable* with boundary/torque consistency. |
+| P06 | **Chen et al.**, *Nonlinear layer Hall effect and detection of the hidden Berry curvature dipole in PT-symmetric antiferromagnetic insulators*, PRB **114**, L171110 (2026), [DOI](https://doi.org/10.1103/k5f2-w2z7) | Hidden BCD, PT AFM nonlinear layer Hall and gate parity; distinguishes BCD and QMD signals. | **A and PT hidden-geometry high overlap:** hidden BCD alone is not novel; gate parity must not be presented as original. |
+| P07 | **Jiang et al.**, *Tunable quantum metric driven nonlinear valley Hall effect in the PT-symmetric sliding antiferroelectric MoS2*, PRB **113**, 235116 (2026), [DOI](https://doi.org/10.1103/p9sb-k9fj) | PT-symmetric sliding antiferroelectric setting with tunable quantum-metric nonlinear valley Hall response. | **B high overlap:** sliding + PT + quantum metric is an established combination, not a claim of priority. Compare response operator/rank and metric convention. |
+| P08 | **Wang et al.**, *Layer Hall and layer spin Hall effects in two-dimensional altermagnets induced by spin-layer coupling*, PRB **112**, 134421 (2025), [DOI](https://doi.org/10.1103/643d-wkc1) | Layer-locked spin Berry curvature and layer spin Hall in monolayer altermagnets. | **PT staggered test / B overlap:** a layer-odd spin geometry kernel is not inherently a new observable; note the paper's material is *monolayer with internal layers*, not our bilayer toy. |
+| P09 | **Tang, Zhang, Cheng**, *Néel spin-orbit torque in antiferromagnetic quantum spin and anomalous Hall insulators*, Nat. Commun. **16**, 7790 (2025), [DOI](https://doi.org/10.1038/s41467-025-63171-1), [full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC12370977/) | In a collinear AFM extended Kane–Mele model, staggered Edelstein in an insulator, adiabatic-current NSOT and microwave magnetic resonance. | **C high overlap:** an insulating AC staggered torque is not new by itself. Compare electron/boundary/magnetic dynamics and collision protocol. |
+| P10 | **Jia, Xiang, Qiao, Wang**, *Nonlinear Magnetoelectric Edelstein Effect*, PRL **136**, 226302 (2026), [DOI](https://doi.org/10.1103/r3x2-kb93) | Intrinsic/extrinsic nonlinear EB spin magnetization from spin-space Berry-curvature/metric dipoles; intrinsic NSOT survives in insulators. | **C high overlap:** nonlinear spin geometric torque in a PT AFM is already proposed. Also the independent source-level SM debate in our separate NMEE reproduction is **not** peer novelty evidence. |
+| P11 | **Sun et al.**, *Quantum Geometric Engineering of Dual Hall Effects in 2D Antiferromagnetic Bilayers via Interlayer Magnetic Coupling*, Adv. Sci. **12**, e05860 (2025), [DOI](https://doi.org/10.1002/advs.202505860), [full text](https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202505860) | CoPSe3 bilayers: AFM vs altermagnetic interlayer coupling reconfigures Berry/metric mechanisms and first/second-order Hall responses. Includes Hao Jin/Jian Wang. | **B/C/D very relevant:** magnetic stacking control of quantum geometric transport cannot be asserted as new. Our mechanism must go beyond a response already reweighted by magnetic order. |
+| P12 | **Zhu et al.**, *Sliding Ferroelectric Control of Unconventional Magnetism in Stacked Bilayers*, PRL **135**, 056801 (2025), [DOI](https://doi.org/10.1103/dmzg-ck2t) | Structural connection operators and sliding FE joint switching of spin polarization/AHE; 80 layer groups, magnetic materials. | **D high overlap:** applying an existing connection operator to a familiar response is an extension, not necessarily an independent theorem. |
+| P13 | **Du, Zeng, Zhao**, *Stacking theory for bilayer two-dimensional magnets*, PRB **113**, 214455 (2026), [DOI](https://doi.org/10.1103/g471-xrkl) | Spin-layer-group description, full 448 collinear spin layer groups and general stacking theory for bilayer magnets. | **D very high overlap:** avoid claiming the first general magnetic-stacking group classification; require an actual new observable or constraint. |
+| P14 | **Chen et al.**, *Layer Hall effect induced by hidden Berry curvature in antiferromagnetic insulators*, Natl Sci Rev (2022/2024 online record), [open access](https://pmc.ncbi.nlm.nih.gov/articles/PMC10804226/) | Layer-opposite hidden Berry curvature in PT AFMs, layer Hall; explicit global-vs-local symmetry mechanism. | **A/B:** hidden local Berry geometry with total cancellation is already known. Need show a new operational measurement or response relation. |
+| P15 | **Gao et al.**, *Layer Hall effect in a 2D topological axion antiferromagnet*, Nature **595**, 521 (2021), [DOI](https://doi.org/10.1038/s41586-021-03679-w) | Experimentally observes gate-controlled layer Hall in MnBi2Te4. | Layer readout is not automatically novel; relate theoretical predictions to a concrete probe. |
+| P16 | **Wu et al.**, *Sliding ferroelectricity tunable conventional and anomalous spin Hall effects in bilayer 1T'-WTe2*, [arXiv:2606.22015](https://arxiv.org/abs/2606.22015) (2026; **preprint**, publishing status unverified here) | Predicts FE-controlled magnitude/sign of spin Hall with 1T'-WTe2 DFT. | **B near-direct competitor:** FE-reversible SHE is heavily occupied even for a specific material. Do not mislabel this preprint as a published peer-reviewed paper. |
+| P17 | **Shi, Zhang, Xiao, Niu**, *Proper Definition of Spin Current in Spin-Orbit Coupled Systems*, PRL **96**, 076604 (2006), [DOI](https://doi.org/10.1103/PhysRevLett.96.076604), [full text](https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevLett.96.076604/fulltext) | Conventional anticommutator spin current differs from conserved/transport current by spin-torque dipole; equilibrium/insulating behavior and boundary accumulation require care. | **All A/B/C, hard conceptual gate:** a nonzero conventional spin-current kernel does not automatically establish a transported or boundary-detectable spin signal. |
+
+**Corrections against premature earlier brainstorming assertions:**
+
+- A nonzero `Re Tr(P_- J_stag P_+ v_x)/Delta^2` in a PT model is merely a **spectral interband product**, not proof of a positive-definite quantum metric, a DC conductivity or a new spin Hall effect.
+- `PT` and `U(2)` projector consistency are necessary mathematical checks, not originality checks.
+- A `C_{2z}`-related registry `delta <-> -delta` is **not** automatically a ferroelectric switch (out-of-plane polarization is unchanged under `C_{2z}`).
+- A complex/intralayer hopping coefficient inserted as `gamma(delta)` is not a microscopic derivation from real layer registry. If nonzero response survives `t_perp = 0`, the claimed *interlayer* mechanism is not supported.
+- In a true insulator, occupation-derivative/Drude terms vanish at zero temperature even if interband kernels stay nonzero; finite T in-gap activated tails are **not** an intrinsic insulator Drude response.
+- Novel Bianchi identities or magnetic point-group Neumann constraints alone are typically identities/applications of pre-existing geometry/symmetry.
+
+## 3. Cross-paper classification of the remaining credible space
+
+| Proposed research question | Already covered by peers | Still not demonstrated in our work | Present status |
+| --- | --- | --- | --- |
+| A. Finite-q/boundary accumulation due to hidden nonlinear *spin* responses | Nonlinear layer Hall, hidden BCD, conventional/proper spin current, LEE | Full layer-resolved continuity + edge geometry + distinguishable measurable spin density | **Possible follow-on, not established** |
+| B. Registry-dependent *interlayer-irreducible* spin geometry in PT AFM | Extended-space geometric multipoles, layer-spin Hall, sliding quantum metric, AFM bilayer geom. | Microscopic stacking-controlled spinful hoppings, proper contact/torque, t_perp->0 control, truly independent transport | **Top exploratory gate, substantial competing work** |
+| C. AC spin transfer to collective magnet order | Insulating NSOT, NMEE, ordinary mixed Berry torque | Causal distinction from NSOT and local exchange; dynamical susceptibility/damping, measurable amplitude | **Original C2 hypothesis NO-GO; possible narrow extensions** |
+| D. BSF magnetic connection controls layer-staggered non-Abelian response | Magnetic stacking theory, spin-layer-group catalog, connection operators | Physical stacking-generated paired states and projector-resolved *full* response, new relation unaccounted by trivial symmetry | **Methodologically useful; novelty uncertain** |
+
+## 4. Scientific tests needed before any novelty claim
+
+**Gate G1, physical geometry and structure:** construct `t_{alpha beta}(R+delta)` from explicit real-space bonds and *orbital embedding*; verify periodic/Bloch sewing and pair-related configuration `H(k,-delta)=U_g H(g^{-1}k,delta)U_g^{-1}`. Test whether connection reverses a physical ferroelectric polarization; do not assume so.
+
+**Gate G2, PT degenerate electronic structure:** use rank-2 spectral projectors and explicitly check invariance under arbitrary `U(2)` rotations of each doublet. Track that PT is a *physical* magnetic symmetry with the correct representation in an embedded Bloch basis.
+
+**Gate G3, physical spin observable:** define the layer projectors `P_T,P_B`, density `S_T-S_B`, conventional layer spin-current operator, interlayer and local spin torque. Verify `dot S_- = T_inter + T_local`. For finite-q/edge transport include spin-flow divergence and torque-dipole issues; avoid identifying any single coefficient with measured spin current without a boundary or probe calculation.
+
+**Gate G4, contribution and no-go controls:** compare full `t_perp=0` limit, real-only versus spinful/complex tunneling, `delta=0,+delta,-delta`, magnetic order reversal, frequency/disorder/temperature, insulator and metal. Split intrinsic full response from ordinary Fermi-surface relaxation if claimed; no silent insertion of an `alpha(delta)`/ `gamma(delta)` parameter without its actual origin.
+
+**Gate G5, head-to-head novelty:** reproduce closest published *equation-level* definitions (P02/P03/P05/P06/P08/P09/P10/P11/P12/P13/P17). If no independent operator-measurement relation remains after those comparisons, archive as a useful negative result.
+
+## 5. Research priority and practical next action
+
+Keep **B+D** as an integrated *test*, not a claimed new effect. Start with simple 2D square-lattice pair under `C_{2z}`, replacing guessed interlayer phases by distance-dependent real-space hoppings. Derive magnetic symmetry and a layer-staggered response, run `t_perp = 0` and insulator checks. If a response appears only by inserting a registry-dependent *intralayer* odd-dispersion term, label it an **artificial model channel**, and do not promote it as an interlayer geometric discovery.
+
+The precise first-round numerical test and its limitations are documented separately in [STACKING_REGISTRY_GATE1_20261021.md](STACKING_REGISTRY_GATE1_20261021.md) with a script. Its switch operation is **not** shown to be ferroelectric, and the quantity is a **diagonal RTA Fermi-surface coefficient**, not the complete Xiang spin QGT intrinsic/AC result.
+
+## 6. Evidence and update policy
+
+- Linked publisher articles: title, year, DOI and publisher abstract verified as of 2026-10-21.
+- Open full-text sources P09, P11, P14 and P17 used where available; they do not replace full supplemental equation audits.
+- P16 is preprint only in this audit.
+- A *lack* of a matching title in this search is not evidence of originality. This is targeted peer-work landscape review, not a completed exhaustive systematic literature review.
+- **Update each candidate with** original operator and response formula, explicit competing equation number, quantitative control, code/test path, and a verdict among `SUPPORTED`, `NOT YET ESTABLISHED`, `OVERLAPS`, or `NO-GO`.
