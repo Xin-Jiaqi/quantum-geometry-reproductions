@@ -66,3 +66,16 @@ This matrix applies only to the code in this GitHub repository. The original v30
 | Full Wannier embedding or total orbital E×B magnetotransport | **UNRESOLVED** | Position dipoles, current/contact terms, collision physics not yet certified |
 
 15 new independent physics tests; original-paper scientific status **PARTIAL**.
+
+
+## v56: complete finite-open-model mixed EB versus conditional transport physics
+
+| Independent acceptance gate | Result |
+| --- | --- |
+| Finite Peierls H(B), real-space P and current operator J=i[H,P], full f(H_B) preparation | **VERIFIED named finite-model operators** |
+| Complete analytic d_B sigma, including current contact, Fréchet equilibrium matrix derivative and Liouvillian term | **VERIFIED numerically** versus independently evaluated 5-point full finite-B differences (error around 1e-13) |
+| Magnetic gauge covariance, Onsager reciprocity, ac reality, q/B inversion, origin change and zero static equilibrium current | **VERIFIED in specified finite open graph** |
+| Mixed ac EB response with scalar gamma relaxation toward field-equilibrated f(H_B) | **CONDITIONAL bath-dependent physics** |
+| Actual intrinsic infinite-system orbital MNHE and conserving scatterer/current contact theory | **UNRESOLVED** |
+
+New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang original source paper scientific state remains PARTIAL.
