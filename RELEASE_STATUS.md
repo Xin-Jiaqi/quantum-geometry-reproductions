@@ -194,3 +194,10 @@ Separate finite OBC **QWZ H built from identical Fourier hoppings to v59 periodi
 - **Scope:** exact QWZ Fourier model across periodic, finite open and matching four principal-layer electrodes; zero-T four-terminal Hall resistance with a measurable-current guard. 28 new independent scientific acceptance cases. Frozen JSON and [science report](papers/xiang-2026-quantum-geometric-map/docs/SAME_QWZ_FOUR_TERMINAL_BULK_EDGE_V61.md).
 - **Scientific status:** VERIFIED named tight-binding/Caroli/S-matrix gates; CONDITIONAL clean finite-coherent charge Hall plateau; UNRESOLVED general thermodynamic/Kubo equivalence and original intrinsic orbital mixed E/B. Original source paper **PARTIAL**.
 - **PR #42 scientific regression:** [GitHub Actions run 39608398942](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39608398942) completed/success; actual full log **587/587 PASS** in 104.620 s, including 28 new v61 tests (previous baseline 559). Final amended documentation-commit head must also receive successful PR CI before merge.
+
+
+### v61 final release certification
+
+- [PR #42](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/42) **squash merged**, commit `7561ae5889df7ea4bc79607e9cb937b8d517e0f9`.
+- Final PR-head [Actions run 39608922287](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39608922287): **587/587 PASS** in **139.587 s**, completed/success, head `562892ccdd992b3aa839be6289f7a66afdc42882`.
+- **Post-merge main** [Actions run 39609404675](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39609404675): **587/587 PASS** in **67.937 s**, completed/success, tested merge commit `7561ae5889df7ea4bc79607e9cb937b8d517e0f9`. New v61 science gates **28**, v60–v61 combined local standalone **49/49**. Scientific scope VERIFIED named methods, CONDITIONAL coherent QWZ charge Hall plateau, UNRESOLVED complete intrinsic orbital EB. Source-paper audit remains **PARTIAL**. This is a release-status-only update, not a change in physics code.
