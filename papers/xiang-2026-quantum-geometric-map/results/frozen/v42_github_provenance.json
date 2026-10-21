@@ -13,8 +13,8 @@
       "git_blob_sha": "7fae480fb0ad368a7fcd4764af712cca1a2354fc"
     },
     "tests/test_exact_streda_v42.py": {
-      "sha256": "39ee52382e71e18709c9552331fb1d148dbf89d06b9c907e62903a1fdde2a7b3",
-      "git_blob_sha": "03a9db72703cc0da95bf51a58173a32c4a801291"
+      "sha256": "05b4aa8ba85448bbf1461c7d58aa492a1d6c4c3af99ffd6f13fd3627d612095d",
+      "git_blob_sha": "08e2421b147701c8be166fa2735ef167ad4a832d"
     },
     "scripts/reproduce_exact_streda_v42.py": {
       "sha256": "9635b304a75fbd27f8ba1231a44ef6127a55b31529be10cba21aec727a534bdf",
