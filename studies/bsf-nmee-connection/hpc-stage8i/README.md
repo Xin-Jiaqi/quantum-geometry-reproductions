@@ -1,6 +1,6 @@
 # Stage 8i: two-job WSe2 spinor-SOC feasibility test
 
-**Ready for local DeepSeek harness execution, NOT YET submitted.** This stage is independent original BSF × NMEE research, NOT a Jia et al. PRL reproduction or a quantitative NMEE calculation.
+**Updated 2026-10-22: Two real Japan spinor-SOC VASP SCFs have been performed by the local DeepSeek harness, with usable sampled EIGENVAL data but MPI exit=255 and truncated PROCAR. [Stage8j independent corrective science review](STAGE8J_INDEPENDENT_VALLEY_SPIN_ERRATUM_20261022.md) finds misidentified Kprime and spin-splitting partners in the original report. Verified sampled positive gaps remain, but true non-Ising spin-mixing and static NMEE are NOT established. The original task files below remain useful as historical execution provenance.** This stage is independent original BSF × NMEE research, NOT a Jia et al. PRL reproduction or a quantitative NMEE calculation.
 
 **Direct harness entrypoint:** [DEEPSEEK_HARNESS_HANDOFF.md](DEEPSEEK_HARNESS_HANDOFF.md). Machine contract: [TASK_CONTRACT.json](TASK_CONTRACT.json).
 
@@ -13,3 +13,10 @@
 **Most important physics:** Stage9 exact spin-conservation null test means large Ising W SOC does not guarantee an in-plane transverse equilibrium/static NMEE. The two calculations ask whether a quantifiable microscopic spin-mixing channel is plausible enough to justify a later independent operator-complete Wannier test. Neither the static total response nor the hidden layer-staggered response has yet been calculated for real WSe2.
 
 No new job has been submitted from this repository update. The local harness execution report must retain provenance and distinguish real completed SCFs from mere input preparation.
+
+## External 2026-10-22 result and independent erratum
+
+- [Original sanitized SCF / sampled-gap audit](STAGE8I_AUDIT_RAW_20261022.json); [spinor texture evidence](STAGE8I_SPIN_TEXTURE_20261022.json) and [original valley diagnostic](STAGE8I_ISING_SPLIT_20261022.json) retained as historical outputs.
+- [Original DeepSeek scientific report with prominent independent erratum](STAGE8I_REVIEW_CONCLUSIONS_20261022.md).
+- [Stage8j independent reciprocal-space/spin-pair corrections](STAGE8J_INDEPENDENT_VALLEY_SPIN_ERRATUM_20261022.md), backed by [standard-library evidence rechecker](stage8j_evidence_check.py) and [4 regression tests](../tests/test_stage8j_valley_spin_erratum.py).
+- This correction is **analysis of already committed evidence, ZERO NEW VASP jobs**. Read existing real EIGENVAL at K and its true time-reversal partner, validate WAVECAR interpretation and nondegenerate off-axis spinor mixing before authorizing heavy operator-complete Wannier/NMEE work.
