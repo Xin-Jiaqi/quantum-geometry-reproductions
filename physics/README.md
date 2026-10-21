@@ -58,3 +58,18 @@ Coherent [two- and four-terminal wide-band lead solver](../papers/xiang-2026-qua
 | Fixed-density thermodynamic bulk orbital MNHE/PHE, general nonlocal/field-dependent lead self-energy, inelastic response | **UNRESOLVED** |
 
 The 1–4 ring scan is a sparse, changing-geometry *mesoscopic* sequence and **NOT a bulk size-scaling proof**. [Physical derivation](../papers/xiang-2026-quantum-geometric-map/docs/OPEN_LEADS_FOUR_TERMINAL_HALL_V57.md), [frozen output](../papers/xiang-2026-quantum-geometric-map/results/frozen/v57_open_lead_hall_validation.json). Original Xiang paper scientific audit remains PARTIAL.
+
+
+## v58: fixed-density planar coherent four-probe Hall & numerical-resonance audit
+
+[New physical capability](../papers/xiang-2026-quantum-geometric-map/src/qgmap/planar_hall_scaling_v58.py): genuine Nx×Ny nearest-neighbour square lattice **with fixed site density a^-2, local t, chemical potential and q B a²/hbar per plaquette**, a four-lead *multi-site* wideband self-energy and two explicit contact-scaling choices (per-site gamma or fixed sum per lead). Leads use disjoint centered contacts, full self-consistent Hall voltage probes, and a current-normalized four-probe Hall resistance Rxy=VH/I (h/q²).
+
+**Critical numerical requirement:** 80-point Gaussian energy integration may *fail for narrow coherent resonances*. The default reproducibility script therefore uses **adaptive Fermi-window quadrature split at finite-graph eigenenergies**, with convergence status and independent tighter tolerance. In the 5×5 reference, the unconverged 80-point Hall voltage 0.01452986 and slope -0.06136070 change to **0.01484164 and -0.06470123** after convergence. Fixed Gauss survives only as explicitly **uncertified**.
+
+| Scope | State |
+| --- | --- |
+| Physically specified multi-contact Caroli calculation, current/gauge/Onsager identities, analytic magnetic derivative and adaptive energy integration | **VERIFIED named finite-coherent-model algorithm** |
+| Actual device Hall voltage/resistance for selected contact pattern and Γ scaling | **CONDITIONAL** |
+| Bulk thermodynamic orbital MNHE/PHE, fixed electronic carrier density, microscopic disorder/dephasing and real material scattering | **UNRESOLVED** |
+
+Even the 5×5,7×5,7×7,9×5,9×9 fixed-site-density sequence is **not a demonstrated bulk-convergent limit**; the spinless model tests conventional Peierls Hall physics, *not* the disputed source-paper quantum geometry mechanism. [v58 science audit](../papers/xiang-2026-quantum-geometric-map/docs/FIXED_LATTICE_ADAPTIVE_HALL_SCALING_V58.md). Original paper reproduction PARTIAL.

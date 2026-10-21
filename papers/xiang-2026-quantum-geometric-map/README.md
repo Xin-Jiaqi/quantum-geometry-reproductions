@@ -306,3 +306,16 @@ The [new v57 open-lead physical solver](docs/OPEN_LEADS_FOUR_TERMINAL_HALL_V57.m
     python scripts/reproduce_lead_transport_v57.py
 
 For arbitrary explicit finite open graph NPZ, supply hoppings, positions, lead_sites. [physics registry](../../physics/README.md) distinguishes VERIFIED model algorithms, CONDITIONAL device predictions and UNRESOLVED bulk theory. Source original-paper scientific audit PARTIAL.
+
+
+### v58: real rectangular fixed-lattice site density and adaptive coherent Hall contacts
+
+A [new independent v58 calculation](docs/FIXED_LATTICE_ADAPTIVE_HALL_SCALING_V58.md) replaces the v57 sparse-rings sequence with Nx×Ny nearest-neighbour planar rectangular spinless lattices, identical lattice spacing, hoppings, chemical potential and *signed magnetic flux per plaquette*. Four genuine wideband leads can contact **multiple disjoint centered edge sites** with per-site gamma fixed or with total reservoir gamma fixed. Outputs include the self-consistent Hall voltage, the **current-normalized Hall resistance Rxy=VH/I**, complete magnetic derivatives, exact lead populations, and numerical energy-integration convergence diagnostics.
+
+**Important numerical correction:** Fixed 80-node Gauss energy integration fails for sharp coherent resonances (5×5 reference Hall 0.01452986, magnetic slope -0.06136070); **adaptive integrated** outputs are Hall **+0.01484164** and slope **-0.06470123**. Larger fixed-density 5×5 through 9×9 Hall voltages are not monotonic and strongly depend on contact coverage and gamma scaling; no bulk intrinsic material claim. A fixed lattice site density is NOT identical to fixed carrier density. [Three independent frozen contact/size datasets](results/frozen/v58_fixed_lattice_full_contact.json) and [physics registry](../../physics/README.md) retain the limitations.
+
+    python -m unittest tests.test_planar_hall_scaling_v58 -v
+    python scripts/reproduce_planar_hall_scaling_v58.py --sizes 5x5,7x5,7x7,9x5,9x9
+    python scripts/reproduce_planar_hall_scaling_v58.py --coverage .4 --sizes 5x5,7x7,9x9
+
+Finite coherent contact algorithms VERIFIED, device observables CONDITIONAL, bulk orbital MNHE UNRESOLVED, original Xiang source audit PARTIAL.
