@@ -1,0 +1,34 @@
+name: Physics interface handoff metadata v1
+on:
+  push:
+    paths:
+      - 'RESEARCH_HANDOFF.md'
+      - 'docs/PHYSICS_INTERFACE_SPEC.md'
+      - 'docs/CONCURRENT_RESEARCH_WORKFLOW.md'
+      - 'integration/physics_interface/**'
+      - '.github/workflows/physics-interface-handoff.yml'
+  pull_request:
+    paths:
+      - 'RESEARCH_HANDOFF.md'
+      - 'docs/PHYSICS_INTERFACE_SPEC.md'
+      - 'docs/CONCURRENT_RESEARCH_WORKFLOW.md'
+      - 'integration/physics_interface/**'
+      - '.github/workflows/physics-interface-handoff.yml'
+jobs:
+  validate-handoff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Validate manifest and new-chat handoff contracts
+        run: |
+          python -m unittest discover -s integration/physics_interface/tests -v
+          python -m integration.physics_interface.cli validate
+          python -m integration.physics_interface.cli list
+          python -m integration.physics_interface.cli plan xiang2025-spin-qgt spinqgt.finite_eta
