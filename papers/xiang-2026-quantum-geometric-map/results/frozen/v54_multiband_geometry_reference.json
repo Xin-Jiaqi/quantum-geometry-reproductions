@@ -1,0 +1,30 @@
+{
+  "version": "v54",
+  "status": "VERIFIED_NONDEGENERATE_FIXED_ORBITAL_BASIS",
+  "source": {
+    "type": "analytic_periodic_three_band_reference",
+    "N": 36
+  },
+  "band_count": 3,
+  "mesh_shape": [
+    36,
+    36
+  ],
+  "gap_min": 0.9543903120537602,
+  "berry_trace_max_abs": 1.5959455978986625e-16,
+  "metric_min_diag": 0.00008384255585788542,
+  "moment_curvature_sector": {
+    "full": -0.0007994510535567112,
+    "diagonal_m_eq_l": -0.0015421831498082172,
+    "cross_m_ne_l": 0.000742732096251506
+  },
+  "cross_to_full_magnitude": 0.9290526204789326,
+  "decomposition_status": "VERIFIED_PRODUCT_DECOMPOSITION_NOT_COMPLETE_RESPONSE",
+  "limitations": [
+    "Not the full intrinsic orbital MNHE or PHE",
+    "Requires analytic matched velocities and k-independent orbital basis",
+    "Pairwise band geometry invalid at degeneracy; non-Abelian projector not provided",
+    "Does not include magnetic positional-shift or all 3-band diagrams",
+    "Sector BZ mean requires uniformly sampled periodic mesh; no SI units"
+  ]
+}
