@@ -44,7 +44,7 @@ command -v mpirun || true
 
 ## 4. PBS 执行原则
 
-- 仅在 G0 成功后生成三组 B1 的 IN​CAR / KPOINTS / 作业脚本；确认 POSCAR 中物种顺序 **Ag → F** 与现场 POTCAR 顺序一致。
+- 仅在 G0 成功后生成三组 B1 的 INCAR / KPOINTS / 作业脚本；确认 POSCAR 中物种顺序 **Ag → F** 与现场 POTCAR 顺序一致。
 - 从站点查询到的 **PBS 资源格式**生成实际 `#PBS` 指令；**不得盲用 Slurm `sbatch`**。32 核/128 GB/24 h 只是历史先例，资源请求依当前队列与批准额度定。
 - 作业目录独立，保持每组 `POSCAR, INCAR, KPOINTS, POTCAR-checksum-record, PBS script`、提交 Job ID、运行 stdout/stderr、`OUTCAR/vasprun.xml` 的私有存档与 SHA256；不要把原始大文件上传公共仓库。
 - 对每组记录收敛性、初末结构、最短跨层原子距离、最大残余力、总能、Ag 局域磁矩、是否保持反平行 Néel 态、是否发生滑移以及失败原因。若磁序塌缩、SCF 不稳定或原子接触异常则 **STOP/REVIEW**。
