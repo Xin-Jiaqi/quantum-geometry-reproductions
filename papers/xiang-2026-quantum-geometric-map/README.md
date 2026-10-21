@@ -354,3 +354,8 @@ Same Fourier QWZ Hamiltonian now drives the periodic Berry/Fukui Chern oracle, a
 [v63 scientific report](docs/QWZ_NONINVASIVE_PROBE_LIMIT_V63.md) | [Frozen coupling/width/size evidence](results/frozen/v63_noninvasive_probe_limit.json) | [32 new independent gates](tests/test_qwz_probe_limit_v63.py).
 
 The new sweep rescales only top/bottom voltage-probe coupling amplitudes (C	o\lambda C), so their self-energy/broadening scale as (\lambda^2), while left/right drive contacts are fixed. For (L=7), drive/probe widths 3, (eta=10^{-4}), the maximum x-cut-current deviation shrinks from 0.974659 at (\lambda=1) to (7.58\times10^{-8}) at (\lambda=10^{-4}). The finite-device weak-probe Hall resistance approaches 1.00215746 (h/q^2), **not** asserted as exactly quantized; it remains size/position dependent. Full generic Kubo–NEGF limit and original orbital mixed (E/B) remain **UNRESOLVED**, source status **PARTIAL**.
+
+
+## v64: unperturbed two-drive virtual-voltage probe oracle
+
+[Scientific report](docs/QWZ_VIRTUAL_PROBE_ORDERED_LIMITS_V64.md) | [implementation](src/qgmap/qwz_virtual_probe_v64.py) | [26 gates](tests/test_qwz_virtual_probe_v64.py) | [frozen numeric output](results/frozen/v64_virtual_probe_ordered_limits.json). Rather than extrapolating a floating reading at vanishing coupling, construct the independent two-drive G0 and finite spectral weights of a proposed physical QWZ strip probe to obtain the **lambda→0+**, *not lambda=0*, voltage limit. Size/contact/eta dependence remains; original orbital mixed EB and true bulk dc limit **UNRESOLVED**, original paper **PARTIAL**.
