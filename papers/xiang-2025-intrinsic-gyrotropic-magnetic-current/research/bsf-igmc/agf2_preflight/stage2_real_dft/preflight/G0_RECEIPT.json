@@ -1,0 +1,45 @@
+{
+  "schema": "bsf_igmc_agf2_stage2_g0_receipt_v1",
+  "date_utc": "2026-10-21T03:30:00Z",
+  "status": "BLOCKED_PROTOCOL",
+  "status_meaning": "inputs are ready for human approval (the harness's PASS_INPUT_READY condition is met) but the protocol is NOT frozen: compute-budget approval pending, VASP executable version not execution-verified, IVDW D3 variant and remaining operator choices unconfirmed.",
+  "data_origin": "NOT_RUN",
+  "actual_jobs_submitted": 0,
+  "submitted_job_ids": [],
+  "physics_approved_by_user": false,
+  "qsub_executed": false,
+  "vasp_executed": false,
+  "potcar_uploaded_to_repo": false,
+  "potcar_lock_sha256": "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff",
+  "potcar_lock_status": "private reference hash of Ag||F (PBE.64 set: Ag 02Apr2005, F 08Apr2002); content not committed",
+  "site_g0": {
+    "site_verified": true,
+    "scheduler": "PBS / OpenPBS 2024.1.2 (qsub, qstat present)",
+    "queues": "CP_001 (1 node, <=56 ncpus, <=230gb, <=72h), P_030, CA_001; workq disabled",
+    "vasp_observed": ["vasp.6.4.3_cpu", "vasp.6.5.1_cpu", "vasp.6.6.0_cpu", "vasp.6.6.1_cpu", "gpu/wannier90 variants"],
+    "vasp_version_execution_verified": false,
+    "mpi_modules": ["openmpi 4.1.8", "oneapi 2023.2.0"],
+    "pbs_syntax_verified": "select=1:ncpus=32:mpiprocs=32:mem=120gb / walltime / -j oe (from existing user scripts)"
+  },
+  "inputs": {
+    "source": "stage2_geometry/candidates/B1_g2.6|g3.0|g3.4 (unrelaxed C2DB-derived; NOT author-relaxed)",
+    "physics": "0% strain, Type-I interlayer Neel OPPOSITE, collinear non-SOC, fixed-cell ion relaxation, sliding free",
+    "poscar_sha256": {
+      "B1_g2.6": "966174568594104ebf8faadfd02ce3025498bc7b5f890d4fab677d5d0a6439b2",
+      "B1_g3.0": "2d323c3fe2353ef984330b3b99fc24a75a85337883bbaf36d08b20ed45e6d60a",
+      "B1_g3.4": "04282d8a1756333aaa6d431ca049b801e53a70697a9afee53f5539fe56a0aa48"
+    },
+    "kmesh_candidate": "12x8x1 Gamma-centered (14x9x1 / 16x10x1 reserved for convergence)",
+    "magmom_seed": "-1 1 1 -1 0 0 0 0 0 0 0 0  (m=1.0 uB; Type-I top images flipped)",
+    "prepared_in_private_workdir": true,
+    "pbs_templates_unexecuted": true,
+    "incar_kpoints_pbs_hashes": "see INPUT_PROTOCOL_DRAFT.md section 2"
+  },
+  "blocked_reasons": [
+    "compute-budget approval from user: false (default per task)",
+    "VASP executable version not execution-verified (running VASP not permitted in G0)",
+    "IVDW DFT-D3 variant (zero vs BJ) unconfirmed",
+    "operator choices (ISMEAR/SIGMA/ISYM/LDIPOL/NCORE, PAW revision, VASP build) to be finalized with user"
+  ],
+  "claims_note": "No energy, band gap, magnetic moment or displacement-current value is claimed. verify_candidates.py (geometry/provenance only) passed; B1_g3.0 equals the Stage-1 frozen B1 geometry (max fractional residual 0.0)."
+}

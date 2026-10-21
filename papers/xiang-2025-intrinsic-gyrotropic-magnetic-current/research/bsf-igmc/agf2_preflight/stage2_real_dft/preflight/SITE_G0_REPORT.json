@@ -1,0 +1,68 @@
+{
+  "schema": "bsf_igmc_agf2_stage2_g0_site_report_v1",
+  "date_utc": "2026-10-21T03:30:00Z",
+  "data_origin": "NOT_RUN",
+  "actual_jobs_submitted": 0,
+  "compute_budget_approved_by_user": false,
+  "site": {
+    "id": "IMR-Tohoku-PBS",
+    "description": "Tohoku Univ. Institute for Materials Research supercomputer, accessed read-only through the researcher's existing private double-hop SSH setup (gateway then frontend node). Hostnames, usernames and account identifiers intentionally omitted from this public report.",
+    "scheduler": "PBS (OpenPBS), pbs_version 2024.1.2; qsub and qstat present; NOT Slurm.",
+    "login_node_verified": true,
+    "frontend_nodes": "round-robin among 3 frontend nodes; hostname verified on login"
+  },
+  "queues_observed": {
+    "note": "Queue metadata read via qstat -Q / qstat -Qf on 2026-10-21 (read-only).",
+    "CP_001": {"nodes_max": 1, "ncpus_max": 56, "mem_max": "230gb", "walltime_max": "72:00:00", "enabled": true, "occupancy_note": "heavily loaded at check time (~470 jobs)"},
+    "P_030":  {"nodes_max": 30, "ncpus_max": 3360, "mem_max": "13800gb", "walltime_max": "72:00:00", "enabled": true},
+    "CA_001": {"nodes_max": 1, "ncpus_max": 56, "mem_max": "460gb", "ngpus_max": 4, "walltime_max": "72:00:00", "enabled": true},
+    "workq":  {"enabled": false}
+  },
+  "node_spec": {
+    "observed": "compute nodes with 112 ncpus and 460gb memory per node",
+    "free_nodes_at_check": 17
+  },
+  "pbs_resource_syntax": {
+    "verified_from_existing_user_job_scripts": "#PBS -l select=1:ncpus=32:mpiprocs=32:mem=120gb  +  #PBS -l walltime=HH:MM:SS  +  #PBS -j oe",
+    "queue_directive": "#PBS -q CP_001"
+  },
+  "software": {
+    "vasp": {
+      "module_in_module_avail": false,
+      "observed_cpu_builds_in_shared_site_tree": ["vasp.6.4.3_cpu", "vasp.6.5.1_cpu", "vasp.6.6.0_cpu", "vasp.6.6.1_cpu"],
+      "observed_other_variants": ["gpu", "wannier90_cpu", "patch_cpu"],
+      "executable_path_pattern": "/work/app/VASP6/<build>/bin/vasp_std",
+      "version_verified_by_execution": false,
+      "version_source": "directory naming only (executing VASP is NOT permitted in G0)",
+      "candidate_for_pilot": "vasp.6.6.1_cpu/bin/vasp_std (TO CONFIRM with user)"
+    },
+    "mpi": {
+      "modules_available": ["openmpi 4.1.8", "oneapi 2023.2.0 (site loader pattern used by existing user VASP runs)", "intel", "hpc-sdk", "cuda"],
+      "site_run_pattern": "source site oneAPI loader; export OMP_NUM_THREADS=1; ulimit -s unlimited; mpirun -np N -ppn N -hostfile $PBS_NODEFILE <vasp_bin>"
+    }
+  },
+  "paw": {
+    "potcar_uploaded_to_repo": false,
+    "potcar_full_content_in_repo": false,
+    "checked_privately_on_site": true,
+    "candidate_set": "user private PBE.64 PAW set (346 element entries)",
+    "ag": {"titel": "PAW_PBE Ag 02Apr2005", "enmax_ev": 249.844, "sha256_decompressed": "d2e399fa2a358bf13ab57d58824fd42a4ef5f6695a3a1eeeacbf07fc02dc5b5b"},
+    "f":  {"titiel": "PAW_PBE F 08Apr2002", "enmax_ev": 400.000, "sha256_decompressed": "ec55d2d2ba9b66dab8054d479e8aa803f576915d541bf26f5d1ecce77f4e501c"},
+    "combined_ag_then_f_sha256": "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff",
+    "site_shared_alternate_set": {
+      "note": "older dataset revision also present in the shared site PAW store (potpaw_PBE)",
+      "ag": {"titiel": "PAW_PBE Ag 06Sep2000", "enmax_ev": 249.846, "sha256_decompressed": "a00b436855d565ff397db73486030fb330ec79794f762970acc1ef55fa50a932"},
+      "f":  {"titiel": "PAW_PBE F 08Apr2002", "enmax_ev": 400.000, "sha256_decompressed": "a1b2f3acf2cd7c7bf921113651b4d784ccf15c44faeadc4b2b35e4e123e4d49c"}
+    },
+    "element_order_for_run": "Ag then F (matches POSCAR species order)",
+    "dataset_revisions": "from file TITEL headers (read directly, not guessed); PAW dataset revision choice remains an operator choice to finalize with the user"
+  },
+  "approval_and_boundaries": {
+    "compute_budget_approved_by_user": false,
+    "queue_finalized_with_user": false,
+    "vasp_binary_finalized_with_user": false,
+    "qsub_submitted": false,
+    "boundary_note": "GitHub CI or geometry checks are NOT compute approval; no job may be submitted until the researcher approves concrete resource limits, queue, binary and PAW set."
+  },
+  "g0_verdict": "BLOCKED_PROTOCOL - site facts verified (PBS 2024.1.2, queues, VASP builds, private PAW hashes), but protocol not frozen: compute-budget approval pending; VASP executable version not execution-verified; IVDW D3 variant and other operator choices to be finalized; inputs are ready for human approval."
+}

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#PBS -N agf2_g1_b1g30
+#PBS -q CP_001
+#PBS -l select=1:ncpus=32:mpiprocs=32:mem=120gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+
+# TEMPLATE ONLY. Replace __SITE_MPI_LOADER__ and __VASP_BIN__ in a PRIVATE copy,
+# verify OpenMPI/Intel MPI compatibility and PAW checksum before qsub.
+set -euo pipefail
+cd "$PBS_O_WORKDIR"
+source "__SITE_MPI_LOADER__"
+export OMP_NUM_THREADS=1
+ulimit -s unlimited
+VASP_BIN="__VASP_BIN__"
+test -x "$VASP_BIN" || { echo "VASP binary not executable"; exit 20; }
+test -f POTCAR || { echo "POTCAR missing"; exit 21; }
+test "$(sha256sum POTCAR | awk '{print $1}')" = "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff" || { echo "POTCAR SHA mismatch"; exit 22; }
+# Use a site-tested MPI command; "-ppn" is not portable between MPI implementations.
+exec mpirun -np 32 --hostfile "$PBS_NODEFILE" "$VASP_BIN"
