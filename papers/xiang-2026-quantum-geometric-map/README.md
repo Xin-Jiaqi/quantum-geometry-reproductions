@@ -206,3 +206,16 @@ python scripts/reproduce_dirac_source_tensor_v47.py --beta .125 --eta .002 --tem
 ```
 
 This is acceptance of an **independently constructed frozen-target model RTA**, **not** confirmation of the author's original Supplemental Material collision prescription or the absolute published Fig.2(b) SI scale. Overall scientific status PARTIAL.
+
+### v48: Model PHE Eq.(11) survives eta, mu, temperature and UV tests
+
+For the corrected v47 *symmetric* spin PHE with **frozen-H0 scalar RTA**, `qgmap.phe_limit_audit_v48` sweeps η (.016→.001), electron/hole doping, two temperatures and multiple ultraviolet cutoffs. At beta=1/8, mu=.3, T=.03 the ratio `eta*PHE / signed main Eq11` decreases from 1.003215 to 1.000012885; a fit against eta² with the three smallest η points extrapolates to **1.0000002435** without any arbitrary factor or sign fit. The η-scaled antisymmetric remainder also tends to zero approximately as η². Across |mu|=.15,.3 and T=.02,.055 the response is odd under electron/hole reversal and follows the model's tanh finite-T smoothing; UV 1–4 has ratio spread below 3e-8. Ten model tests check all limits.
+
+**Critical source gate:** The author's Supplemental Material has **not** been retrieved via the available publisher/arXiv endpoints. v47–v48 reproduce the **main Eq.(11) model geometry**, *not an independently verified original SM relaxation operator*. The literal Eq.(8) sign branch and Fig.2(b) absolute ~2π ordinate issue remain OPEN. See [v48 provenance and limit audit](docs/ORIGINAL_PHE_LIMIT_SOURCE_GATE_V48.md).
+
+```bash
+python -m unittest tests.test_phe_limit_audit_v48 -v
+python scripts/reproduce_phe_limit_v48.py --mode all
+```
+
+Scientific state remains **PARTIAL**.
