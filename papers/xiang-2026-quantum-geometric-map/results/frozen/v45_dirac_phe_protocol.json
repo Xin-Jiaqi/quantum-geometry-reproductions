@@ -1,0 +1,31 @@
+{
+  "protocol": "fixed_tilt_uniform_Bx_RTA_phe_shift_vs_printed_Eq8_Eq11_v45",
+  "scientific_status": "PARTIAL",
+  "beta": 0.125,
+  "mu": 0.3,
+  "temp_model": 0.055,
+  "delta_model": 0.1,
+  "grid": 301,
+  "main_eq8_angular_coefficient_per_tau_gmuB": 0.0025064159066917175,
+  "paper_main_eq11_geometry": -0.002506415906691721,
+  "eq8_plus_eq11_sign_residual": -3.469446951953614e-18,
+  "drude_xy_plus_B_per_tau": 0,
+  "drude_xy_minus_B_per_tau": 3.749637032066546e-20,
+  "drude_xy_zero_B_per_tau": -1.3748669117577336e-19,
+  "finite_B_central_dsigma_d_delta_per_tau": -1.8748185160332729e-19,
+  "drude_derivative_split": {
+    "velocity_change": 0.004969025333534913,
+    "equilibrium_occupation_change": -0.004970128604699723,
+    "full_derivative": -0.000001103271164809594
+  },
+  "shift_matrix_residual_main": 0,
+  "shift_matrix_residual_sm": 0,
+  "distinct_protocols": [
+    "Paper Eq8 geometric mixed EB term is not automatically the same as the fully equilibrated static-B constant-tau Drude derivative.",
+    "Fixed-tilt unbounded Dirac Bx Zeeman coupling is a pure ky translation; complete equilibrium Drude coefficient vanishes.",
+    "Finite UV domain, B-dependent tilt and non-equilibrium field preparation require explicit choices.",
+    "Literal main Eq8 and Eq11 coefficient signs differ in their printed band/signed-field branches; no unproved correction.",
+    "Fig2(b) ~2pi ordinate discrepancy remains OPEN."
+  ],
+  "scientific_open": "Derive same preparation and relaxation protocol for full measured E_y B_x response; reconcile Fig2(b) units without fitted factors."
+}

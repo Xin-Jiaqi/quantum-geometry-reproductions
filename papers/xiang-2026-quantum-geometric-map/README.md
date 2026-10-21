@@ -171,3 +171,14 @@ python scripts/reproduce_scba_sea_v44.py --W .12 --mesh 35 --L 4 --seeds 24 --nt
 ```
 
 See [v44 scientific limits](docs/SCBA_SEA_V44.md). Remains `PARTIAL`: transverse electromagnetic Ward/contact, crossed disorder sectors, thermodynamic metallic dc order of limits and original paper nonlinear mixed EB are OPEN.
+
+### v45: Original symmetric spin PHE (distinct from QWZ linear Hall)
+
+The target Eq.(8)/Eq.(11) is **symmetric** in xy/yx, linear in tau, and formulated by the authors in **phenomenological RTA**. The v41-v44 QWZ *antisymmetric* linear Hall/Streda calculations are a useful **separate method extension**, not acceptance criteria for the original PHE. The `dirac_phe_protocol_v45` module independently verifies the printed Zeeman curvatures, main Eq.(8) angular integral and Eq.(11) signed coefficient; at beta=1/8, mu>0 these are +0.002506415907 and -0.002506415907, respectively, under the explicitly named normalized branches. The same fixed-tilt Dirac Hamiltonian with spin Bx is exactly related to zero B by **ky translation**, so the *fully equilibrated, full-plane static-B Drude protocol* has zero linear Bx response after velocity and occupation derivatives cancel. This **does not automatically refute** the published different Liouville/adiabatic RTA branch. Field preparation/collision and Fig2(b) normalization remain OPEN.
+
+```bash
+python -m unittest tests.test_dirac_phe_protocol_v45 -v
+python scripts/reproduce_dirac_phe_protocol_v45.py --beta .125 --mu .3 --temperature .055 --zeeman-shift .1
+```
+
+[Scientific scope](docs/ORIGINAL_PHE_PROTOCOL_V45.md), whole-paper PARTIAL.
