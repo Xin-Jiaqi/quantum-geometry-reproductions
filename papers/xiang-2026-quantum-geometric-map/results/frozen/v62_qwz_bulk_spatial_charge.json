@@ -1,0 +1,146 @@
+{
+  "version": "v62",
+  "scientific_status": "VERIFIED named methods; CONDITIONAL coherent charge contacts; original orbital E*B UNRESOLVED",
+  "temperature_scope": "device 0 K, bulk Kubo may have finite T; never equate unlike protocol",
+  "units": "Rxy h/q2; I under unit voltage in q2/h; local J normalized as q2/h",
+  "devices": {
+    "L5_w3_m-1_mu0": {
+      "IL_q2_over_h": 0.9993906694523326,
+      "Rxy_h_over_q2": 1.0000008835946086,
+      "ldos_center": 0.004140031719381209,
+      "ldos_edge_00": 0.3137190703273731,
+      "max_interior_divergence": 6.938893903907228e-17,
+      "spectral_sum_error": 6.225463540380545e-15,
+      "x_cut_currents": [
+        0.9993906694523329,
+        0.015039682102427895,
+        0.015039682102428068,
+        0.9993906694523332
+      ]
+    },
+    "L5_w3_m-1_mu1.5": {
+      "IL_q2_over_h": 1.5993993311519248,
+      "Rxy_h_over_q2": 0.010010521695852623,
+      "ldos_center": 0.5446145214022935,
+      "ldos_edge_00": 0.483131453179159,
+      "max_interior_divergence": 4.0245584642661925e-16,
+      "spectral_sum_error": 3.795759961118651e-14,
+      "x_cut_currents": [
+        1.599399331151924,
+        1.7845542854737686,
+        1.7845542854737673,
+        1.5993993311519237
+      ]
+    },
+    "L5_w5_m-1_mu0": {
+      "IL_q2_over_h": 0.9998890207012112,
+      "Rxy_h_over_q2": 0.9999999136441241,
+      "ldos_center": 0.0000014519200783762415,
+      "ldos_edge_00": 0.06755397144573001,
+      "max_interior_divergence": 1.691355389077387e-17,
+      "spectral_sum_error": 5.70447563527904e-15,
+      "x_cut_currents": [
+        0.02232778406960085,
+        0.004214318870875049,
+        0.004214318870874939,
+        0.02232778406960083
+      ]
+    },
+    "L7_w3_m+1_mu0": {
+      "IL_q2_over_h": 0.9975552616161795,
+      "Rxy_h_over_q2": -0.9999978305406079,
+      "ldos_center": 0.0006785628732021931,
+      "ldos_edge_00": 0.3609641610628694,
+      "max_interior_divergence": 6.591949208711867e-17,
+      "spectral_sum_error": 1.3090640840286898e-14,
+      "x_cut_currents": [
+        0.9975552616161801,
+        0.9975552616161801,
+        0.022895894320533426,
+        0.022895894320533624,
+        0.9975552616161796,
+        0.9975552616161802
+      ]
+    },
+    "L7_w3_m+3_mu0": {
+      "IL_q2_over_h": 3.537312010383592e-13,
+      "Rxy_h_over_q2": null,
+      "ldos_center": 1.412600770211226e-8,
+      "ldos_edge_00": 1.2232382795011114e-8,
+      "max_interior_divergence": 7.940933880509066e-23,
+      "spectral_sum_error": 3.854563760643573e-16,
+      "x_cut_currents": [
+        3.5373120105278063e-13,
+        3.5373120102134777e-13,
+        -9.784579011366215e-14,
+        -9.784579003673436e-14,
+        3.537312010461632e-13,
+        3.537312011222638e-13
+      ]
+    },
+    "L7_w3_m-1_mu0": {
+      "IL_q2_over_h": 0.9975552616161802,
+      "Rxy_h_over_q2": 0.9999978305406071,
+      "ldos_center": 0.0006785628732021851,
+      "ldos_edge_00": 0.3609641610628694,
+      "max_interior_divergence": 8.673617379884035e-17,
+      "spectral_sum_error": 1.4742903188563177e-14,
+      "x_cut_currents": [
+        0.9975552616161805,
+        0.9975552616161805,
+        0.02289589432053333,
+        0.022895894320533523,
+        0.9975552616161805,
+        0.9975552616161809
+      ]
+    },
+    "L7_w5_m-1_mu0": {
+      "IL_q2_over_h": 0.9999879091153702,
+      "Rxy_h_over_q2": 0.9999999993324602,
+      "ldos_center": 0.000008798096583883013,
+      "ldos_edge_00": 0.31390771058391936,
+      "max_interior_divergence": 1.8041124150158794e-16,
+      "spectral_sum_error": 1.3346609358968335e-14,
+      "x_cut_currents": [
+        0.99998790911537,
+        0.013638537175460692,
+        0.0018273356688364554,
+        0.0018273356688364062,
+        0.01363853717546069,
+        0.9999879091153705
+      ]
+    }
+  },
+  "bulk": {
+    "m+1_mu0_T0": {
+      "min_direct_gap": 1.9999999999999998,
+      "sigma_interband_q2_over_h": -1.000000001876821,
+      "sigma_pauli_q2_over_h": -1.000000001876821
+    },
+    "m+3_mu0_T0": {
+      "min_direct_gap": 2,
+      "sigma_interband_q2_over_h": 6.876752710774738e-10,
+      "sigma_pauli_q2_over_h": 6.876752776104219e-10
+    },
+    "m-1_mu0_T0": {
+      "min_direct_gap": 2.0000526469919873,
+      "sigma_interband_q2_over_h": 0.9999999981231791,
+      "sigma_pauli_q2_over_h": 0.9999999981231786
+    },
+    "m-1_mu0_T0.2": {
+      "min_direct_gap": 2.0000526469919873,
+      "sigma_interband_q2_over_h": 0.9892200796534198,
+      "sigma_pauli_q2_over_h": 0.9892200796534198
+    },
+    "m-1_mu0_T1": {
+      "min_direct_gap": 2.0000526469919873,
+      "sigma_interband_q2_over_h": 0.4619335085273608,
+      "sigma_pauli_q2_over_h": 0.4619335085273608
+    },
+    "m-1_mu1.5_T0": {
+      "min_direct_gap": 2.0000526469919873,
+      "sigma_interband_q2_over_h": -0.07741265747437683,
+      "sigma_pauli_q2_over_h": -0.07741265747437683
+    }
+  }
+}
