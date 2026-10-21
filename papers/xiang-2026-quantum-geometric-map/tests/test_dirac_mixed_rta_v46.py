@@ -37,7 +37,7 @@ class MixedPHEProtocolsV46(unittest.TestCase):
         r=unprepared_two_field(Spec(eta=.065,nr=96,nphi=128),step=3e-5)
         self.assertGreater(r['b_then_e'],.1)
         self.assertLess(r['e_then_b'],-.07)
-        self.assertGreater(r['total'],.03)
+        self.assertLess(r['total'],-.03)
         self.assertAlmostEqual(r['total'],r['b_then_e']+r['e_then_b'],delta=1e-12)
 
     def test_collision_target_changes_mixed_response(self):
@@ -45,24 +45,24 @@ class MixedPHEProtocolsV46(unittest.TestCase):
         a=decompose(s,h=3e-5)
         b=unprepared_two_field(s,step=3e-5)
         self.assertLess(abs(a['complete_split']),1e-7)
-        self.assertGreater(b['total'],.03)
+        self.assertLess(b['total'],-.03)
         self.assertAlmostEqual(b['e_then_b'],a['magnetic_commutator'],delta=3e-12)
 
-    def test_unprepared_small_tilt_Eq8_near_not_identical(self):
+    def test_corrected_source_unsym_xy_sign_not_phe_gate(self):
         s=Spec(eta=.001,nr=180,nphi=192,temperature=.03)
         x=unprepared_two_field(s,step=2e-5)
-        paper=-printed_eq11_geometry(s.beta)*np.tanh(s.mu/(2*s.temperature))
+        paper=printed_eq11_geometry(s.beta)*np.tanh(s.mu/(2*s.temperature))
         ratio=s.eta*x['total']/paper
         self.assertLess(abs(ratio-1),.02)
-        self.assertGreater(abs(ratio-1),.005)
+        self.assertLess(x['total'],0.)  # XY alone is NOT the PHE; v47 gates (XY+YX)/2
 
-    def test_small_eta_tau_scaling_not_equivalent_to_paper(self):
+    def test_corrected_unsym_xy_low_eta_scaling(self):
         coefficients=[]
         for eta in (.065,.02,.008):
             s=Spec(eta=eta,nr=96,nphi=128)
             coefficients.append(eta*unprepared_two_field(s,step=3e-5)['total'])
         self.assertTrue(coefficients[0]<coefficients[1]<coefficients[2])
-        self.assertGreater(coefficients[-1],.0024)
+        self.assertLess(coefficients[-1],-.0024)
 
     def test_full_tensor_channels_and_symmetric_dissipative_limit(self):
         a=audit(Spec(),h=3e-5)

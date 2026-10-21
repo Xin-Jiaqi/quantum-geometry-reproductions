@@ -53,7 +53,9 @@ def _blocks(spec,kx,ky,field):
     f=1/(1+np.exp(np.clip((en-spec.mu)/spec.temperature,-500,500)))
     fp=-f*(1-f)/spec.temperature
     df=np.stack((qy/rr,-qy/rr),axis=1)
-    dn=(-kx*kx/rr**3)[:,None,None]*SX+(kx*qy/rr**3)[:,None,None]*SY
+    # v47 correction: d(ky/r)/dky has opposite sign to d(kx/r)/dkx.
+    # Independently gated against centered finite differences of f(H_B).
+    dn=(-kx*kx/rr**3)[:,None,None]*SX-(kx*qy/rr**3)[:,None,None]*SY
     dpp=dn*.5
     rhoeq=f[:,0,None,None]*pp+f[:,1,None,None]*pm
     source=(fp[:,0]*df[:,0])[:,None,None]*pp+(fp[:,1]*df[:,1])[:,None,None]*pm+(f[:,0]-f[:,1])[:,None,None]*dpp

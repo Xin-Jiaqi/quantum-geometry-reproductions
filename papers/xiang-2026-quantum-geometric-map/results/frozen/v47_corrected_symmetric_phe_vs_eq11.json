@@ -1,0 +1,83 @@
+{
+  "protocol": "v47_corrected_frozen_H0_RTA_symmetric_PHE_Eq11",
+  "scientific_status": "PARTIAL",
+  "source_provenance": {
+    "paper_main": "Xiang et al PRB 113 L201406 (2026), main Eq (8),(10),(11), https://arxiv.org/pdf/2510.02661",
+    "supplemental": "NOT acquired this round; cannot claim source-specific collision operator matched"
+  },
+  "retracted_prior_v46": {
+    "former_xy_total": 0.03377500634446398,
+    "former_unprepared_E_then_B": -0.07627529759787072,
+    "reason": "wrong sign of derivative d_y(kx/r) in full equilibrium electric source; corrected sign is NEGATIVE",
+    "validity": "INVALID for independent PHE interpretation; original file retained only historical provenance"
+  },
+  "corrected_fixed_eta": {
+    "beta": 0.125,
+    "mu": 0.3,
+    "temperature": 0.055,
+    "eta": 0.065,
+    "nr": 96,
+    "nphi": 144,
+    "step": 0.00003,
+    "prepared_source": 0.15225009061958736,
+    "prepared_commutator": -0.15225009076144053,
+    "prepared_total": -1.4185316810078064e-10,
+    "frozen_xy": -0.04219978681910577,
+    "frozen_yx": -0.03897645395599125,
+    "frozen_symmetric": -0.04058812038754851,
+    "frozen_antisymmetric": -0.0016116664315572599,
+    "eta_times_symmetric": -0.0026382278251906536,
+    "eq11_at_finite_T": -0.0024850682257812075
+  },
+  "low_eta": {
+    "mu": 0.3,
+    "temperature": 0.03,
+    "eta": 0.002,
+    "nr": 160,
+    "nphi": 192,
+    "step": 0.00002,
+    "beta_rows": [
+      {
+        "beta": 0.025,
+        "eta_symmetric": -0.0004974952056721693,
+        "eta_antisymmetric": -1.2984990541364816e-8,
+        "eq11": -0.000497469510438172,
+        "ratio": 1.0000516518770661
+      },
+      {
+        "beta": 0.08,
+        "eta_symmetric": -0.0015966001067605083,
+        "eta_antisymmetric": -4.15517107936747e-8,
+        "eq11": -0.0015965178824556183,
+        "ratio": 1.0000515022761685
+      },
+      {
+        "beta": 0.125,
+        "eta_symmetric": -0.00250631680935793,
+        "eta_antisymmetric": -6.492407794356226e-8,
+        "eq11": -0.0025061883348112294,
+        "ratio": 1.0000512629258207
+      },
+      {
+        "beta": 0.3,
+        "eta_symmetric": -0.00625275309496998,
+        "eta_antisymmetric": -1.558068512759192e-7,
+        "eq11": -0.006252444776005071,
+        "ratio": 1.000049311745398
+      },
+      {
+        "beta": 0.6,
+        "eta_symmetric": -0.014735847276548596,
+        "eta_antisymmetric": -3.115307523220423e-7,
+        "eq11": -0.014735230787173672,
+        "ratio": 1.0000418377821039
+      }
+    ]
+  },
+  "warnings": [
+    "Eq11 numerical model RTA MATCH does NOT prove authors actual SM relaxation prescription",
+    "v45 independent direct printed Eq8 signed term remains opposite Eq11 under its named convention",
+    "Fig2(b) ~2pi absolute SI discrepancy remains OPEN",
+    "zero-field frozen collision target versus pre-equilibrated magnetic bath is a distinct physical preparation"
+  ]
+}

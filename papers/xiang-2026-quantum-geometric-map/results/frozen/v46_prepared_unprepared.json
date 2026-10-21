@@ -28,5 +28,8 @@
     "Two selected scalar RTA models are not claimed to be source author protocols",
     "B-prepared zero result assumes fixed tilt, continuum translation and equilibrium-following bath",
     "Original Fig2 ordinate factor and main Eq8 Eq11 sign remain open"
-  ]
+  ],
+  "RETRACTION_NOTICE_V47": "INVALID historical output: v46 wrong sign of d_y(kx/r); do not use numeric values or the v46 near-Eq8 conclusion; see v47_corrected_symmetric_phe_vs_eq11.json.",
+  "result_validity": "RETRACTED",
+  "retained_only_for_provenance": true
 }

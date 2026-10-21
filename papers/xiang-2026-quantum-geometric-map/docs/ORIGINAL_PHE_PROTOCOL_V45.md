@@ -60,3 +60,7 @@ python scripts/reproduce_dirac_phe_protocol_v45.py --beta .125 --mu .3 --tempera
 ~~~
 
 **PASS:** explicit original-PHE formula and model shift identities under stated conventions. **OPEN:** a fully prepared stationary RTA mixed EB Liouville response with the magnetic equilibrium source, order of limits and gauge/current contacts; Fig. 2(b) literal Eq.(11) SI ordinate remains about \`2π\` above publisher curve (v37) and is **not** fixed by v45. Source paper itself does not prove a microscopic bath theory. **Next v46** should construct the *same-protocol* complete length-gauge mixed-field current, compare equilibrated-B and adiabatic-B protocols, test k-shift Ward and the published Eq.(8) branch without fitted prefactors. Do not contact authors or modify other paper modules.
+
+## Follow-up v47 signed tensor reconciliation
+
+v47 corrected a later (v46) electric-source derivative error and demonstrated that the **symmetric** cross-conductivity in the explicitly declared frozen-H0 RTA tends to the signed **main Eq.(11)** coefficient throughout beta=.025–.6. This does not itself resolve the independently computed literal main Eq.(8) signed branch, which may involve further field/connection conventions; do not erase the prior v45 calculation. See [v47 correction](ORIGINAL_PHE_SYMMETRIC_SOURCE_CORRECTION_V47.md). Source SM collision formula remains independently unavailable.

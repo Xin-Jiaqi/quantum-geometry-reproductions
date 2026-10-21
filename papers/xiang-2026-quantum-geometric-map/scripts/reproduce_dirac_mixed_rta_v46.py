@@ -4,16 +4,13 @@ import argparse,json
 from pathlib import Path
 import numpy as np
 from qgmap.dirac_mixed_rta_v46 import Spec,audit,unprepared_two_field
-from qgmap.dirac_phe_protocol_v45 import printed_eq11_geometry
 
 def evaluate(spec=Spec(),h=3e-5,step=3e-5):
     out=audit(spec,h)
     other=unprepared_two_field(spec,step)
     out['unprepared_frozen_H0_collision_target']=other
-    out['unprepared_tau_linear_coefficient']=spec.eta*other['total']
-    out['printed_main_eq8_positive_geometry_reference']=-printed_eq11_geometry(spec.beta)*np.tanh(spec.mu/(2*spec.temperature))
-    out['relative_difference_unprepared_vs_eq8']=out['unprepared_tau_linear_coefficient']/out['printed_main_eq8_positive_geometry_reference']-1
-    out['important_note']='Formal Eq8 geometry is a separate reference; no author SM collision prescription matched.'
+    out['unsymmetrized_xy_eta_coefficient_NOT_PHE']=spec.eta*other['total']
+    out['important_note']='v47 corrected the equilibrium electric-source derivative. Old v46 frozen result/near-Eq8 comparison is REVOKED. Use the symmetric (xy+yx)/2 from v47 for the PHE. Author SM still unavailable.'
     return out
 
 def main():

@@ -37,5 +37,8 @@
       "ratio": 0.7644353660366089
     }
   ],
-  "note": "No fit or factor correction. The frozen collision target differs from the paper's formal Eq8 angular result."
+  "note": "No fit or factor correction. The frozen collision target differs from the paper's formal Eq8 angular result.",
+  "RETRACTION_NOTICE_V47": "INVALID historical beta scan due to wrong sign in electric-y source; no author Eq8 agreement established. Correct symmetric xy/yx beta scan frozen in v47.",
+  "result_validity": "RETRACTED",
+  "retained_only_for_provenance": true
 }
