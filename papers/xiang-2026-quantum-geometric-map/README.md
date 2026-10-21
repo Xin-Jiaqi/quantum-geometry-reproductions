@@ -279,3 +279,10 @@ python scripts/reproduce_orbital_geometry_v54.py --input-npz my_H_and_dHdk.npz -
 ```
 
 Scientific full paper **PARTIAL**; independently validated physical subroutines **VERIFIED** within declared scope.
+
+### v55: physically supplied orbital position and magnetic Peierls coupling
+
+The new [v55 module](docs/PHYSICAL_EMBEDDING_MAGNETIC_INTERFACE_V55.md) computes covariant energy velocity dH/dk-i[A,H] and nondegenerate Berry/metric/orbital-moment geometry for **a physically complete supplied projected orbital position connection**. Non-diagonal smooth k-dependent orbital basis mixing preserves all outputs only when A is transformed with H; ignoring it produces incorrect geometry. A distinct finite **open real-space graph** with explicit positions and straight Peierls paths gives H(B) and d_BH with independent Landau/symmetric gauge spectra and plaquette Wilson flux verification. Crucially the B-dependent gauge transformation of M_B needs d_B G terms: naive residual 0.522 vs full 2.8e-17. These are **VERIFIED bounded physical primitives**, NOT a complete E×B response or a general Wannier dipole model. Original PRB scientific status PARTIAL. [Capability registry](../../physics/README.md) and [frozen example](results/frozen/v55_embedding_magnetic_reference.json).
+
+    python -m unittest tests.test_embedding_magnetic_v55 -v
+    python scripts/reproduce_embedding_magnetic_v55.py --mode reference

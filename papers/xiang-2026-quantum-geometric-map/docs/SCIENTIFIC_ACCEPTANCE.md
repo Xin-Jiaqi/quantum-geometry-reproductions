@@ -55,3 +55,14 @@
 | Real Wannier materials | Requires consistent projected magnetic/position operators, Berry connection and validated response protocol | BLOCKED |
 
 This matrix applies only to the code in this GitHub repository. The original v30 research archive includes additional offline programs and results that are not represented by remote CI. In particular, a finite-eta resolvent Ward identity is not a proof of physical charge conservation at finite eta, and a symmetric spectral Kubo sector is not a complete Kubo–Středa calculation.
+
+## v55 physical capabilities, independent of source paper
+
+| Module | Acceptance | Physical gates |
+| --- | --- | --- |
+| k-dependent orbital basis/position connection and D_iH=d_iH-i[A_i,H] | **VERIFIED** for complete supplied projected A_i and nondegenerate finite bands | Non-diagonal W(k), independent transformed-H k derivative and geometry invariance; wrong no-A control |
+| Finite open graph Peierls H(B), d_BH | **VERIFIED** for explicit site coordinates, straight paths and signed q/hbar | Magnetic gauge spectra, Wilson flux, B finite differences, field reversal/origin shift |
+| B-dependent magnetic gauge transformation | **VERIFIED** | Full d_B G derivative: residual 2.8e-17 versus naive omission 0.522 |
+| Full Wannier embedding or total orbital E×B magnetotransport | **UNRESOLVED** | Position dipoles, current/contact terms, collision physics not yet certified |
+
+15 new independent physics tests; original-paper scientific status **PARTIAL**.

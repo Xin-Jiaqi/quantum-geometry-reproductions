@@ -1,0 +1,85 @@
+{
+  "version": "v55",
+  "scientific_status": "PARTIAL_FULL_MAGNETOTRANSPORT",
+  "capabilities": {
+    "orbital_connection": "VERIFIED_NONDEGENERATE_COMPLETE_FINITE_ORBITAL_CONNECTION",
+    "peierls_magnetic_vertex": "VERIFIED_FINITE_GRAPH_STRAIGHT_PEIERLS_MAGNETIC_VERTEX",
+    "full_orbital_EB_transport": "UNRESOLVED"
+  },
+  "reference_bloch": {
+    "input": "periodic v54 three-band Bloch H(k) and analytical dH/dk, explicit ideal point-orbital connection",
+    "minimum_direct_gap": 1.8146436539549304,
+    "energies": [
+      -1.3181196474726444,
+      0.588999037958529,
+      2.4036426919134595
+    ],
+    "curvature": [
+      0.023748584479709754,
+      -0.1556544666274207,
+      0.13190588214771093
+    ],
+    "moment_energy": [
+      -0.018643089407590775,
+      0.0888262369780283,
+      0.12388765517443787
+    ],
+    "metric_xy": [
+      0.02880471373278518,
+      0.0424036694486759,
+      0.017253875576670758
+    ]
+  },
+  "reference_graph": {
+    "nodes": 4,
+    "positions": [
+      [
+        0,
+        0
+      ],
+      [
+        1.25,
+        0
+      ],
+      [
+        1.25,
+        0.8
+      ],
+      [
+        0,
+        0.8
+      ]
+    ],
+    "Bz": 0.32,
+    "q_over_hbar": -0.87,
+    "flux_phase_expected": -0.2784,
+    "naive_B_vertex_under_gauge_max_error": 0.5219999999999999,
+    "correct_B_dependent_gauge_vertex_max_error": 2.7755575615628914e-17,
+    "verified_methods": [
+      "symmetric_and_landau_gauge_spectra",
+      "gauge_equivalent_Wilson_loop",
+      "finite_B_difference_magnetic_vertex",
+      "field_B_reversal",
+      "coordinate_origin_translation",
+      "B_dependent_gauge_contact"
+    ]
+  },
+  "test_count_added": 15,
+  "acceptance": {
+    "verified": [
+      "Covariant energy velocity D_iH=d_iH-i[A_i,H] under smooth orbital W(k)",
+      "Nondegenerate Bloch geometry given physically complete projected orbital A_i",
+      "Finite real-space graph Peierls H(B), d_BH and gauge-covariant magnetic vertex"
+    ],
+    "conditional": [
+      "Point orbital centers approximate projected position only for ideal point basis",
+      "Any mixed response requires specified collision, E drive, current and contact pieces"
+    ],
+    "unresolved": [
+      "Full intrinsic orbital magnetoelectric Hall/PHE",
+      "General Wannier position matrix from realistic materials",
+      "Non-Abelian degenerate subspaces",
+      "Ordinary primitive Bloch k-periodic response under finite homogeneous B"
+    ]
+  }
+}
