@@ -1,0 +1,92 @@
+{
+  "schema": "bsf_igmc_agf2_stage2_g1_input_fingerprints_v1",
+  "date_utc": "2026-10-21T04:15:00Z",
+  "authorization": {
+    "user_approved_one_shot": true,
+    "approved_object": "B1_g3.0 single-point VASP, 32 ranks / 120 GB / max 2 h",
+    "authorized_status": "AUTHORIZED_ONE_SHOT",
+    "note": "authorizes ONE formal PBS submission only; not the three relaxations, Type-II, SOC, Wannier, IGMC, or auto-retry"
+  },
+  "inputs": {
+    "poscar": {
+      "path": "stage2_geometry/candidates/B1_g3.0/POSCAR (GitHub main, frozen)",
+      "sha256": "2d323c3fe2353ef984330b3b99fc24a75a85337883bbaf36d08b20ed45e6d60a",
+      "formula": "Ag4F8 (12 atoms)",
+      "species_order": "Ag F",
+      "relaxed_by_authors": false,
+      "lattice_angstrom": {"a": 3.8270249700655650, "b": 5.8796657458083281, "c": 26.93854144},
+      "vacuum_angstrom": 20.0
+    },
+    "incar": {
+      "source": "one_shot_g1/INCAR.smoke (public, non-secret recommended minimal input)",
+      "sha256": "8ca091bbb4c59572b235fe201a71509c40d6ae84fba67b0f2bfbade34a025166",
+      "key_settings": {
+        "xc": "PBE (GGA=PE)",
+        "hubbard": "LDAUTYPE=2, LDAUL=2 -1, LDAUU=4 0, LDAUJ=0 0 (Dudarev U_eff=4 eV Ag-4d)",
+        "encut_ev": 500,
+        "ediff_ev": "1E-6",
+        "ispin": 2,
+        "magmom": "-1 1 1 -1 8*0  (Type-I interlayer Neel OPPOSITE; sign is relative spin order, not a SOC easy axis)",
+        "ivdw": 11,
+        "ivdw_note": "D3 zero damping (explicit operator choice, distinct from IVDW=12 D3(BJ); NOT claimed as original author private INCAR)",
+        "ismear": 0,
+        "sigma_ev": 0.05,
+        "ismear_note": "Gaussian smearing chosen because the band gap is unknown; NOT the earlier  ISMEAR=1/SIGMA=0.1 precedent, which is explicitly rejected",
+        "isym": 0,
+        "algo": "Normal",
+        "nelm": 120,
+        "istart": 0,
+        "icharg": 2,
+        "lreal": false,
+        "ncore": 4,
+        "ibron": -1,
+        "nsw": 0,
+        "ibron_note": "single point only; no structural relaxation",
+        "lsorbit": false,
+        "lnoncollinear": false,
+        "ldipol": false,
+        "lorbit": 11,
+        "lwave": false,
+        "lcharg": false
+      }
+    },
+    "kpoints": {
+      "source": "one_shot_g1/KPOINTS.smoke",
+      "sha256": "4ab9ad06699176341f30e79f18b822be389d066f64e0295ce368e74b8b99420a",
+      "mesh": "12 8 1 Gamma-centered",
+      "note": "cheap SCF diagnostic only; NOT k-converged production"
+    },
+    "potcar": {
+      "uploaded_to_repo": false,
+      "assembled_on_cluster_privately": true,
+      "element_order": "Ag then F",
+      "concatenated_sha256": "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff",
+      "titel_first_element": "PAW_PBE Ag 02Apr2005",
+      "note": "version facts read from TITEL/ENMAX headers (Ag ENMAX 249.844, F 400.000); POTCAR content never uploaded"
+    }
+  },
+  "site": {
+    "scheduler": "PBS (OpenPBS), server cmspbs1",
+    "queue": "CP_001",
+    "queue_limits_verified": {"ncpus_max": 56, "mem_max": "230gb", "nodes_max": 1, "walltime_max": "72:00:00"},
+    "requested": {"ncpus": 32, "mem_gb": 120, "walltime": "02:00:00", "mpiprocs": 32},
+    "requested_core_hours": 64,
+    "billing_note": "CP_001 accepts partial-node requests (resources_max.ncpus=56 < 112-core nodes), so the job is accounted by requested CPUs; 64 requested core-hours is within the user-approved limit. No whole-node charge model observed on CP_001."
+  },
+  "executables_verified": {
+    "vasp_bin": "/work/app/VASP6/vasp.6.4.3_wannier90_cpu/bin/vasp_std",
+    "vasp_choice_note": "vasp.6.6.1_cpu / 6.6.0_cpu / 6.5.1_cpu builds are NOT accessible to this account (group permission denied); the user-proven vasp.6.4.3_wannier90_cpu build (group vasp6grp) was selected; exact VASP version string confirmed from the real OUTCAR after the run",
+    "mpi": "Intel MPI Library 2021.10.0 (oneapi/2023.2.0 site loader)",
+    "mpi_launch": "mpirun -np 32 -ppn 32 -hostfile $PBS_NODEFILE (site-proven pattern used by existing VASP jobs on this site)",
+    "ldd_after_loader": "0 unresolved dependencies",
+    "vasp_executed_before_submit": false
+  },
+  "job": {
+    "job_id": "490620.cmspbs1",
+    "submitted_utc": "2026-10-21T04:14:00Z",
+    "name": "agf2_g1_b1g30",
+    "status_at_submit": "Q",
+    "submission_count": 1,
+    "auto_retry": false
+  }
+}

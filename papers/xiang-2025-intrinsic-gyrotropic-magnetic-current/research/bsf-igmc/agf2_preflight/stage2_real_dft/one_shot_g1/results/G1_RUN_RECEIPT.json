@@ -1,0 +1,42 @@
+{
+ "schema": "bsf_igmc_agf2_stage2_g1_run_receipt_v1",
+ "date_utc": "2026-10-21T04:05:00Z",
+ "status": "QUEUED",
+ "status_meaning": "job submitted exactly once; still queued (not started) at receipt time; no completion claimed. Per the G1 task instruction, a QUEUED auditable receipt is delivered and no further active polling is performed.",
+ "authorization": "AUTHORIZED_ONE_SHOT",
+ "data_origin": "VASP_RUN (real site job)",
+ "job": {
+  "job_id": "490620.cmspbs1",
+  "server": "cmspbs1",
+  "name": "agf2_g1_b1g30",
+  "queue": "CP_001",
+  "requested": {
+   "ncpus": 32,
+   "mpiprocs": 32,
+   "mem": "120gb",
+   "walltime": "02:00:00"
+  },
+  "state": "Q",
+  "queue_comment": "Not Running: Insufficient amount of resource: Qlist",
+  "submission_count": 1,
+  "auto_retry": false,
+  "queued_note": "CP_001 heavily loaded: 394 queued / 49 running at check; PBS comment: Not Running: Insufficient amount of resource: Qlist"
+ },
+ "preflight": {
+  "poscar_sha256_matched": true,
+  "incar_sha256_matched": true,
+  "kpoints_sha256_matched": true,
+  "potcar_concatenated_sha256_matched": true,
+  "potcar_element_order": "Ag F",
+  "vasp_bin": "/work/app/VASP6/vasp.6.4.3_wannier90_cpu/bin/vasp_std",
+  "vasp_bin_note": "6.6.1/6.6.0/6.5.1 cpu builds not accessible to this account; 6.4.3_wannier90_cpu (group vasp6grp) selected; exact version string read from OUTCAR after run",
+  "mpi": "Intel MPI 2021.10.0 (oneapi/2023.2.0 site loader); ldd after loader: 0 unresolved",
+  "queue_limits_within_approved": true
+ },
+ "scf_audit": null,
+ "scf_audit_note": "not available; job has not started. The SCF audit plan is in G1_SCF_AUDIT.md; real values (EDIFF reached, VASP version from OUTCAR, local Ag moments, total magnetization, TOTEN, preliminary occupancy/gap, error/interruption) will be appended when the job completes.",
+ "blocked_or_pending": [
+  "job queued but not started at receipt time; CP_001 heavily loaded (394 queued / 49 running)"
+ ],
+ "claims_note": "No physics conclusion claimed. No retry, no scope expansion, no additional submission."
+}
