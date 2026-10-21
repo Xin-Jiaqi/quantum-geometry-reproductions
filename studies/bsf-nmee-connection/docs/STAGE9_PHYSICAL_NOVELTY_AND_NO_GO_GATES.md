@@ -71,3 +71,30 @@ Therefore the novelty **cannot** be merely '3R stacking breaks inversion', 'AB/B
 Do **not** automatically prioritize 12 more z-only slide jobs, CI-NEB, broad material screening, or deep Wannier convergence merely because the pipeline runs. We have structure/symmetry feasibility and a first real energy profile, but not a response magnitude or direct link to measured Edelstein spin accumulation. **The decisive question is whether real WSe2 generates a finite, converged, layer-resolved equilibrium static cross response with nontrivial origin that was not already established by FE-controlled Rashba studies.**
 
 **Scientific status:** mechanism hypotheses physically consistent, WSe2 structural calculations reported but raw symmetry check pending, novelty conditional on future quantitative evidence, and no actual real-material NMEE yet.
+
+
+## VI. An experimentally discriminating ANGULAR selection rule at polar C3v AB/BA
+
+At fixed AB or BA, \(C_{3v}\) admits two geometrically different in-plane spin-electric responses:
+
+**Ordinary current-driven LEE/Edelstein** (axial spin, polar E) is a rank-2 *axial/polar* tensor. Rotation by 120 degrees allows \(\alpha=aI+b\varepsilon\); a vertical mirror transforms an axial spin differently from a polar E and forces \(a=0\). Consequently
+\[
+ \boxed{\delta\mathbf S_{\parallel}^{\rm ordinary}\propto
+ \hat{\mathbf z}\times \mathbf E_{\parallel}}
+ \quad\text{(transverse to E; measured in NONEQUILIBRIUM current transport)}.
+\]
+
+**Our spin-only equilibrium/static response conditional on nonzero Bz** has TWO axial indices, \(S_i,B_z\), and one polar E index. For \(M_{ij}=\Gamma_{iz;j}^{\rm stat}\), C3 allows \(M=aI+b\varepsilon\) while the same vertical mirror forces \(b=0\):
+\[
+ \boxed{\delta\mathbf S_{\parallel}^{\rm static}
+ = \gamma_{\rm AB/BA}\, B_z\,\mathbf E_{\parallel}}
+ \quad\text{(LONGITUDINAL to E; odd in Bz).}
+\]
+For physical magnetic *magnetization* a spin-only Bx source maps to a real Bx only after checking g factors and orbital field couplings; the corresponding thermodynamic spin-sector invariant is an in-plane electric field modulation of \(\mathbf B_\parallel\)-\(B_z\) magnetic susceptibility:
+\[
+ F_{\rm mix}^{\rm spin}\sim -\Lambda \,
+ (\mathbf E_\parallel\!\cdot\!\mathbf B_\parallel) B_z.
+\]
+The layer-exchanging domain map constrains \(\gamma_{\rm AB}=-\gamma_{\rm BA}\) for the total response if all symmetry assumptions hold. The **angular longitudinal versus transverse contrast, odd-in-Bz character, and equilibrium versus transport context** are more falsifiable than simply reporting a sign flip in an FE material. Do not claim an experimental realization or a nonzero \(\gamma\) before the WSe2 spinor-SOC full-BZ response is computed and spin-conservation no-go is overcome.
+
+This symmetry contrast is itself a conventional group-theory consequence, NOT necessarily a new universal theorem. Its role here is to sharpen the material prediction and experimental interpretation of a future *quantitatively established* response.
