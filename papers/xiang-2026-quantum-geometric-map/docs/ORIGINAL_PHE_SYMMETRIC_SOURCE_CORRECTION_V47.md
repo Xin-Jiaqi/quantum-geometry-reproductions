@@ -21,7 +21,7 @@ Its **electric-y derivative** includes
 \]
 The previously published v46 function `_blocks` erroneously had **plus** instead of the boxed **minus**. The earlier tests checked magnetic translation of the *same wrong expression*, not an independently differentiated source, so all **343/343 software tests passing did not establish this physical derivative**. v47 fixes v46 **in place**, adds an independent centered matrix difference of the complete f(H_B), and re-tests every published model method.
 
-Consequently, old frozen `results/frozen/v46_prepared_unprepared.json` and `v46_tau_coefficient_beta_scan.json` are **REVOKED AS PHYSICAL NUMBERS** and retained solely as historical records; v46's reported unprepared `xy=+0.033775006344` and positive Eq.(8) comparison are invalid. The corrected `xy=-0.042199786819` at the same beta=.125, mu=.3, T=.055, eta=.065, nr=96, nphi=144. The prepared-source/commutator cancellation still holds after recomputation, but their individual magnitudes double: **+0.152250090620** and **−0.152250090761**, sum **−1.42e-10**.
+Consequently, old frozen `results/frozen/v46_prepared_unprepared.json` and `v46_beta_tau_scan.json` are **REVOKED AS PHYSICAL NUMBERS** and retained solely as historical records; v46's reported unprepared `xy=+0.033775006344` and positive Eq.(8) comparison are invalid. The corrected `xy=-0.042199786819` at the same beta=.125, mu=.3, T=.055, eta=.065, nr=96, nphi=144. The prepared-source/commutator cancellation still holds after recomputation, but their individual magnitudes double: **+0.152250090620** and **−0.152250090761**, sum **−1.42e-10**.
 
 ## 2. Recover the **correct PHE symmetry** before comparing to the paper
 
