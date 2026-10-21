@@ -1,6 +1,6 @@
-# Stage 8g: automatic first DFT pilot, not yet submitted
+# Stage 8g: autonomous Japan PBS WSe2 pilot, real-run report and independent raw-output science gate
 
-**Handoff status: SOFTWARE-TESTED / HPC-UNVERIFIED / NO JOB SUBMITTED HERE.**
+**Updated 2026-10-21:** The user's local DeepSeek harness **reports three actual completed, converged Japan IMR PBS VASP pilot jobs**, not jobs executed by ChatGPT. Numeric input/output summaries: [real run report JSON](RESULTS_HARNESS_REPORTED_20261021.json) and [Stage8h scientific review](STAGE8H_SCIENCE_REVIEW_20261021.md). ChatGPT has **not independently opened the remote raw OUTCAR/CONTCAR**: status is `HARNESS_REPORTED_CONVERGED_REVIEWED__RAW_RECHECK_PENDING`. New [read-only zero-job audit](review_phase1.py) and [Stage8h autonomous task](STAGE8H_READONLY_TASK.json) target this gap. No new PBS jobs are authorized by the review.
 
 The research repository itself now contains every NON-SECRET input needed for a local DeepSeek agent to perform the first computational structural gate: original BiDB 2685 WSe2 source structure; deterministic 15-configuration input builder; one dry-run/submit-on-PBS utility; cryptographic input locks, bounded three-job pilot; a scientific output checker; machine-readable TASK_CONTRACT.json and a full DEEPSEEK_HARNESS_HANDOFF.md. No ZIP extraction or repeated user copy/paste is required.
 
