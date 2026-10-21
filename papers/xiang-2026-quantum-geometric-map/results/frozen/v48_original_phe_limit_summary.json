@@ -1,0 +1,116 @@
+{
+  "protocol": "v48_frozen_H0_RTA_original_PHE_source_and_limit_summary",
+  "scientific_status": "PARTIAL",
+  "source": {
+    "main": "https://arxiv.org/pdf/2510.02661 (v2, seven pages; main Eq2–11; RTA closing remarks)",
+    "supplemental": "NOT RETRIEVED; do not claim original author relaxation prescription verified"
+  },
+  "model": {
+    "beta": 0.125,
+    "mu": 0.3,
+    "T": 0.03,
+    "radial_mesh": 140,
+    "angular_mesh": 160,
+    "UV": 2.5,
+    "source": "corrected v47 full Fermi matrix",
+    "symmetric": "(xy+yx)/2",
+    "RTA": "frozen H0 collision target"
+  },
+  "eta_rows": [
+    {
+      "eta": 0.016,
+      "ratio_to_signed_Eq11": 1.0032150358158418,
+      "eta_antisymmetric": -0.000004097268959462719
+    },
+    {
+      "eta": 0.008,
+      "ratio_to_signed_Eq11": 1.0008104802567257,
+      "eta_antisymmetric": -0.000001028253814250535
+    },
+    {
+      "eta": 0.004,
+      "ratio_to_signed_Eq11": 1.0002038834346352,
+      "eta_antisymmetric": -2.5835030124166105e-7
+    },
+    {
+      "eta": 0.002,
+      "ratio_to_signed_Eq11": 1.0000512677157813,
+      "eta_antisymmetric": -6.491316473611342e-8
+    },
+    {
+      "eta": 0.001,
+      "ratio_to_signed_Eq11": 1.0000128853204728,
+      "eta_antisymmetric": -1.6331088884768974e-8
+    }
+  ],
+  "eta_squared_extrapolation": [
+    {
+      "last_n": 3,
+      "intercept": 1.0000002434991
+    },
+    {
+      "last_n": 4,
+      "intercept": 1.0000007042473562
+    },
+    {
+      "last_n": 5,
+      "intercept": 1.0000025998172297
+    }
+  ],
+  "mu_temperature_parity": [
+    {
+      "mu_abs": 0.3,
+      "T": 0.02,
+      "ratio": 1.0000463804536013,
+      "mu_odd_residual": "below 1e-10"
+    },
+    {
+      "mu_abs": 0.3,
+      "T": 0.055,
+      "ratio": 1.0001017152450198,
+      "mu_odd_residual": "below 1e-10"
+    },
+    {
+      "mu_abs": 0.15,
+      "T": 0.02,
+      "ratio": 1.0002512873795804,
+      "mu_odd_residual": "below 1e-10"
+    },
+    {
+      "mu_abs": 0.15,
+      "T": 0.055,
+      "ratio": 1.0006881304798305,
+      "mu_odd_residual": "below 1e-10"
+    }
+  ],
+  "cutoff_ratios": [
+    {
+      "cutoff": 1,
+      "ratio": 1.0000512795979013
+    },
+    {
+      "cutoff": 1.5,
+      "ratio": 1.0000512617833528
+    },
+    {
+      "cutoff": 2.5,
+      "ratio": 1.0000512677157813
+    },
+    {
+      "cutoff": 4,
+      "ratio": 1.0000512889369038
+    }
+  ],
+  "local_test_count": 10,
+  "sha256_local": {
+    "source": "c8750513a9e828b1fa1a8b78d0ec73f1e48c670d9b0c1feb0e053a3e00237408",
+    "test": "476dd2a83ac313d2905e12214da0a971511cd8655dfd728ecfc81cb4152f40cd",
+    "cli": "eda9319e3e899ef9b342cfed551562923271e6a86b6943a07dfb969c2d274f24"
+  },
+  "scientific_limits": [
+    "Not author-SM certified",
+    "No fitted 2pi/SI factor",
+    "Eq8/11 literal sign and Fig2 ordinate OPEN",
+    "Original multiband orbital physics OPEN"
+  ]
+}
