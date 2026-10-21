@@ -1,0 +1,32 @@
+{
+  "protocol": "pre_equilibrated_scalar_rta_stationary_E_linear_B_derivative",
+  "scientific_status": "PARTIAL",
+  "beta": 0.125,
+  "mu": 0.3,
+  "temperature": 0.055,
+  "eta": 0.065,
+  "cutoff": 2.5,
+  "nr": 96,
+  "nphi": 144,
+  "h": 0.00003,
+  "source_prepare": 0.07627529805526292,
+  "magnetic_commutator": -0.07627529759787072,
+  "complete_split": 4.57392207442453e-10,
+  "full_finite_difference": -6.370661851241681e-11,
+  "decomposition_residual": 5.210988259548698e-10,
+  "unprepared_frozen_H0_collision_target": {
+    "b_then_e": 0.11005030394233474,
+    "e_then_b": -0.07627529759787072,
+    "total": 0.03377500634446398
+  },
+  "unprepared_tau_linear_coefficient": 0.0021953754123901588,
+  "printed_main_eq8_positive_geometry_reference": 0.0024850682257812075,
+  "relative_difference_unprepared_vs_eq8": -0.11657338433836395,
+  "independent_source": "arXiv 2510.02661v2 main Eq8 Eq10 Eq11; author's exact SM RTA collision prescription NOT checked",
+  "limits": [
+    "Paper symmetric spin PHE original result not reproduced by identity of coefficients",
+    "Two selected scalar RTA models are not claimed to be source author protocols",
+    "B-prepared zero result assumes fixed tilt, continuum translation and equilibrium-following bath",
+    "Original Fig2 ordinate factor and main Eq8 Eq11 sign remain open"
+  ]
+}

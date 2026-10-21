@@ -182,3 +182,14 @@ python scripts/reproduce_dirac_phe_protocol_v45.py --beta .125 --mu .3 --tempera
 ```
 
 [Scientific scope](docs/ORIGINAL_PHE_PROTOCOL_V45.md), whole-paper PARTIAL.
+
+### v46: Same Hamiltonian, different magnetic preparation in the original PHE
+
+`qgmap.dirac_mixed_rta_v46` independently calculates the **full E-linear, B-derivative density matrix** of the same fixed-tilt Dirac Hamiltonian under two explicitly different scalar RTA collision targets. If the bath targets the B-equilibrated `f(H_B)`, the complete field response obeys the exact ky-translation identity and source-preparation (+0.07627530) cancels the magnetic commutator (-0.07627530) for beta=1/8, eta=.065. If the collision target remains **frozen at f(H0)**, both B-then-E and E-then-B orderings instead yield total +0.03377501 under the same model conditions. Its low-eta tau-linear coefficient is **near but not equal to** the formal original Eq.(8), and deviates further at larger tilt. Neither selected collision target is yet identified with the full author Supplemental Material RTA. See [v46 detailed method](docs/ORIGINAL_PHE_MIXED_RTA_V46.md).
+
+```bash
+python -m unittest tests.test_dirac_mixed_rta_v46 -v
+python scripts/reproduce_dirac_mixed_rta_v46.py --eta .065 --beta .125 --nr 96 --nphi 144 --h .00003
+```
+
+Original physical PHE, Fig2 normalization and source-specific RTA/bath remain OPEN; scientific status PARTIAL.
