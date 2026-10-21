@@ -1,0 +1,113 @@
+{
+  "task": "STAGE8I_AUTONOMOUS_2_SOC_SCF_PREFLIGHT",
+  "mode": "AUTHORIZE_MAX_TWO_NEW_SCF_JOBS_IF_ALL_PROVENANCE_SITE_AND_LICENSE_GATES_PASS",
+  "repo": "Xin-Jiaqi/quantum-geometry-reproductions",
+  "branch": "research/bsf-nmee-stage7-sw-gate-20261020",
+  "external_executor": "user's local DeepSeek harness via already authorized Japan IMR SSH/PBS",
+  "user_should_not_need_to": "copy terminal commands, manually download/upload 6-atom geometry, assemble POTCAR, manually submit or monitor PBS, parse outputs",
+  "real_geometry_sources": [
+    {
+      "name": "soc_AB_s0.00",
+      "old_job": "path_A_s0.00",
+      "contcar_sha256": "60ee4c590324dea8b7e3fa99780dc496717f12bc29f3a4f7deffe423d3e57992"
+    },
+    {
+      "name": "soc_GLIDE_s0.50",
+      "old_job": "path_A_s0.50",
+      "contcar_sha256": "fe5eb6f6071f6a8f9a1dd76d4603b1dad694f1fbaf5d854bb49107ce79b9fb5b"
+    }
+  ],
+  "remote_source_hint": "/work/sunq/xjq/runs-stage8g-20261020",
+  "site": "Japan Tohoku IMR PBS Pro, site/queues/authorization MUST be rechecked",
+  "wsl": "harness host only; no known VASP/scheduler",
+  "physics": "nonmagnetic spinor-SOC WSe2 AB/mid singlepoint electronic preflight only; 2D sampled gap and spin-mixing diagnostics, not NMEE response",
+  "input_parameters": {
+    "XC": "PBE",
+    "D3_BJ": "IVDW=12",
+    "ENCUT_eV": 520,
+    "mesh": "Gamma 21x21x1",
+    "NBANDS_initial": 96,
+    "LSORBIT": true,
+    "LNONCOLLINEAR": true,
+    "ISPIN2": false,
+    "NSW": 0,
+    "ISYM": 0,
+    "LORBIT": 11
+  },
+  "pseudopotential_sha256": "7ef8b236d47cb52384021b0d5255b9dd2cd6fb636f1b7e0a093eff353b3a2a5c",
+  "source_stage8h_evidence": "../hpc-stage8g/STAGE8H_AUDIT_RAW_20261021.json",
+  "scripts": {
+    "prepare": "prepare_soc.py",
+    "onsite": "onsite_soc.py",
+    "gap_readout": "eigenval_gate.py"
+  },
+  "approval_scope": {
+    "max_jobs": 2,
+    "new_NEB_jobs": 0,
+    "new_NMEE_jobs": 0,
+    "new_Wannier_jobs": 0,
+    "new_nonSOC_convergence_jobs": 0,
+    "new_slide_jobs": 0
+  },
+  "steps": [
+    "read task and code",
+    "verify source CONTCAR SHA and real point group",
+    "discover actual VASP noncollinear binary (normally vasp_ncl), PBS, license/PAW, authorization",
+    "create fresh new remote work dir without modifying Stage8g/h",
+    "prepare exactly two SOC SCF inputs from raw Stage8h CONTCARs",
+    "dry-run with valid onsite local site config and licensed POTCAR",
+    "submit at most two PBS jobs, record IDs idempotently",
+    "monitor, recover genuine EIGENVAL/OUTCAR/PROCAR and perform defensible physical interpretation",
+    "update study-only GitHub evidence and return concise Chinese results"
+  ],
+  "stop_conditions": [
+    "unauthenticated CONTCAR SHA",
+    "no authorized VASP SOC binary",
+    "no PBS access or license",
+    "wrong WSe2 pseudopotentials",
+    "unvalidated input format or wrong symmetry",
+    "failed dry-run",
+    "old/possibly submitted PBS job uncertainty",
+    "requests for more than two jobs"
+  ],
+  "scientific_interpretation_limits": [
+    "21x21 is sampled grid, not rigorous continuum full-BZ gap",
+    "PROCAR diagonal spin expectations alone do not prove zero/nonzero off-diagonal interband spin Kubo vertices",
+    "nonmagnetic spinor-SOC SCF does not establish real static Gamma or its relationship to driven DC",
+    "spin-orbit Ising splitting strength is not sufficient for transverse response",
+    "glide null is geometry symmetry theorem, not a finite staggered-layer NMEE calculation"
+  ],
+  "private_data_do_not_commit": [
+    "POTCAR",
+    "SSH secrets",
+    "site.json",
+    "WAVECAR",
+    "CHGCAR",
+    "PROCAR",
+    "OUTCAR",
+    "EIGENVAL",
+    "OSZICAR",
+    "raw private VASP logs",
+    "PBS state file"
+  ],
+  "result_fields": [
+    "status",
+    "git_sha",
+    "remote_workdir",
+    "vasp_binary",
+    "pbs_ids",
+    "input_sha256",
+    "potcar_sha256",
+    "SCF_convergence_by_job",
+    "sampled_indirect_gap_eV",
+    "sampled_min_direct_gap_eV",
+    "VBM_CBM_k",
+    "spin_texture_diagnostics",
+    "off_diagonal_spin_matrix_elements_proven",
+    "residual_uncertainty",
+    "recommended_next_physics_gate",
+    "static_NMEE_NOT_RUN"
+  ],
+  "paper_reproduction": "FROZEN; independent study under studies/bsf-nmee-connection only",
+  "pull_request": "keep Draft PR #3"
+}
