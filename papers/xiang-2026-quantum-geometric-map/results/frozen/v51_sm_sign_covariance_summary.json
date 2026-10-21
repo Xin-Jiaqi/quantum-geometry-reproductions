@@ -1,0 +1,105 @@
+{
+  "protocol": "v51_exact_spin_basis_covariance_and_SM20_31_relative_sign",
+  "scientific_status": "PARTIAL",
+  "beta": 0.125,
+  "mu": 0.3,
+  "temperature": 0.03,
+  "response_units": "per E times Bbar, tau=e=hbar=vF=gmuB=1; for physical B multiply both sources by -1",
+  "table": {
+    "main_spin_x": {
+      "xy": {
+        "eq20_per_Bbar": 0.0025061878624091675,
+        "printed_eq31_per_Bbar": -0.0025061878624091675
+      },
+      "yx": {
+        "eq20_per_Bbar": 0.0025061393574469576,
+        "printed_eq31_per_Bbar": -0.0025061393574469584
+      },
+      "sym_eq20": 0.0025061636099280625,
+      "sym_printed_eq31": -0.002506163609928063
+    },
+    "main_negative_spin_x": {
+      "xy": {
+        "eq20_per_Bbar": -0.0025061878624091675,
+        "printed_eq31_per_Bbar": 0.0025061878624091675
+      },
+      "yx": {
+        "eq20_per_Bbar": -0.0025061393574469576,
+        "printed_eq31_per_Bbar": 0.0025061393574469584
+      },
+      "sym_eq20": -0.0025061636099280625,
+      "sym_printed_eq31": 0.002506163609928063
+    },
+    "sm_spin_x": {
+      "xy": {
+        "eq20_per_Bbar": -0.0025061878624091675,
+        "printed_eq31_per_Bbar": 0.0025061878624091675
+      },
+      "yx": {
+        "eq20_per_Bbar": -0.0025061393574469576,
+        "printed_eq31_per_Bbar": 0.0025061393574469584
+      },
+      "sym_eq20": -0.0025061636099280625,
+      "sym_printed_eq31": 0.002506163609928063
+    },
+    "sm_negative_spin_x": {
+      "xy": {
+        "eq20_per_Bbar": 0.0025061878624091675,
+        "printed_eq31_per_Bbar": -0.0025061878624091675
+      },
+      "yx": {
+        "eq20_per_Bbar": 0.0025061393574469576,
+        "printed_eq31_per_Bbar": -0.0025061393574469584
+      },
+      "sym_eq20": 0.0025061636099280625,
+      "sym_printed_eq31": -0.002506163609928063
+    }
+  },
+  "basis_covariance_residuals": {
+    "main_spin_x_vs_sm_negative_spin_x": {
+      "sym_eq20": 0,
+      "sym_printed_eq31": 0
+    },
+    "main_negative_spin_x_vs_sm_spin_x": {
+      "sym_eq20": 0,
+      "sym_printed_eq31": 0
+    }
+  },
+  "local_point": {
+    "xy": {
+      "j20_per_Bbar": -0.04912417149080093,
+      "Z_df": -0.04912417149080092,
+      "printed_eq31_per_Bbar": 0.04912417149080092,
+      "direct_minus_Z": -6.938893903907228e-18,
+      "eq20_plus_printed_eq31": -6.938893903907228e-18
+    },
+    "yx": {
+      "j20_per_Bbar": 0.029896633749857328,
+      "Z_df": 0.02989663374985733,
+      "printed_eq31_per_Bbar": -0.02989663374985733,
+      "direct_minus_Z": -3.469446951953614e-18,
+      "eq20_plus_printed_eq31": -3.469446951953614e-18
+    }
+  },
+  "SM_Eq33_spin_expectation_finite_difference": {
+    "x": {
+      "maximum_residual": 7.377332078561949e-11
+    },
+    "y": {
+      "maximum_residual": 4.611411252852804e-11
+    }
+  },
+  "source_files": {
+    "main_sha256": "b87e0970f25dd45c5048f8cbbb8691b53ea215040935e9b21a4cde80c69b2730",
+    "sm_sha256": "9b0b8603d13962e100cc059bf4d96b91aa37062360d13decd1cb2eda495332c4",
+    "main_bytes_checked": true,
+    "sm_bytes_checked": true
+  },
+  "interpretation": "The full sigma_z conjugation maps main H,+sigma_x to SM H,-sigma_x without changing physical results. No basis transformation removes Eq20 vs printed Eq31 relative sign. Algebra audit, not transport acceptance.",
+  "original_paper_acceptance": "PARTIAL",
+  "outstanding": [
+    "Eq20->Eq31 relative signed source formula OPEN",
+    "Fig2b physical SI normalization ~2pi pending original printed-axis audit",
+    "Orbital multiband/three-band and physical steady state bath OPEN"
+  ]
+}
