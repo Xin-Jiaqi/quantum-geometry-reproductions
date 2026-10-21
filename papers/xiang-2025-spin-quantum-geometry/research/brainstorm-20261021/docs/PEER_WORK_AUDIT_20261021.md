@@ -80,3 +80,8 @@ The precise first-round numerical test and its limitations are documented separa
 - P16 is preprint only in this audit.
 - A *lack* of a matching title in this search is not evidence of originality. This is targeted peer-work landscape review, not a completed exhaustive systematic literature review.
 - **Update each candidate with** original operator and response formula, explicit competing equation number, quantitative control, code/test path, and a verdict among `SUPPORTED`, `NOT YET ESTABLISHED`, `OVERLAPS`, or `NO-GO`.
+
+
+### 2026-10-21 Gate 1b amendment: limited four-band operator basis
+
+For the specific one-orbital-per-layer model with `PT=tau_x(i sigma_y)K`, exhaustive 16-matrix enumeration yields only `I, tau_x, tau_y, tau_z sigma_{x,y,z}` as PT-even. Therefore **PT-even direct interlayer spinful hopping cannot be added in this same four-band representation**, even if it looks microscopically appealing. An eight-band model with actual orbital parity/transformations, or a justified departure from PT, must precede the next spinful-hopping test. [Run the check](../scripts/pt_operator_basis_gate.py). The result is mathematically exact **within this representation**, not a new published physics claim.
