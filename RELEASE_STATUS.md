@@ -224,3 +224,8 @@ New module `papers/xiang-2026-quantum-geometric-map/src/qgmap/qwz_probe_limit_v6
 - Final PR-head [Actions run 39623472753](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39623472753): **649/649 PASS** in 67.916 s, completed/success; log explicitly retains `overall scientific status: PARTIAL`.
 - Post-merge main [Actions run 39623762787](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39623762787): **649/649 PASS** in 116.753 s, completed/success, verifying the merged code commit.
 - The later Handoff/release-status commits are documentation-only; no physics source or test code changed after the tested merge commit.
+
+
+## v64 — exact virtual-probe limit at fixed L and eta (2026-10-22)
+
+Independent v64 QWZ two-drive G0 oracle computes lambda→0+ probe spectral potential without attaching voltage probe selfenergies, and demonstrates O(lambda²) approach of full four-probe Hall/contact current. Fixed-width size L=5/7/9/11 remains finite-size dependent; sensor position controls and metallic/trivial failure guards are included. **VERIFIED named mathematics**, **CONDITIONAL mesoscopic reading**, **UNRESOLVED bulk dc and original orbital mixed E/B**; Xiang scientific audit **PARTIAL**. 26 new independent local tests, 137 standalone v60–v64 total. Pending real final PR and post-merge remote CI log verification; do not treat this note as a completed release.
