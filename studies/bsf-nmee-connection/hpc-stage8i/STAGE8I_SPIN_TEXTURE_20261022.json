@@ -1,0 +1,1051 @@
+{
+ "scope": "Stage8i spin texture from noncollinear WAVECAR (pymatgen ncl parse), plane-wave (pseudized) coefficients",
+ "method": "<Sx>=Re(2<u|d>)/n, <Sy>=Im(2<u|d>)/n, <Sz>=(<u|u>-<d|d>)/n per spinor band; band energies assigned from EIGENVAL (pymatgen band_energy read unreliable for this VASP 6.4.3 ncl file; raw values kept in energy_crosscheck)",
+ "caveat": "plane-wave part only; PAW augmentation and gauge dependent; NOT interband off-diagonal spin matrix elements (Stage7j gate not run)",
+ "jobs": {
+  "soc_AB_s0.00": {
+   "header": {
+    "vasp_type": "ncl",
+    "nk": 441,
+    "nb": 96,
+    "encut": 520.0,
+    "efermi": 0.12127325783894563
+   },
+   "caveat": "plane-wave pseudized part only; PAW augmentation/gauge-dependent proxy; not interband off-diagonal spin matrix elements",
+   "per_k": {
+    "Gamma": {
+     "k_index": 0,
+     "k": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dist": 0.0,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -0.14483
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -0.14483
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -3.23955,
+       "EIGENVAL_eV": 2.21185
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 2.21185
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -0.84754,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.08493,
+       "Sy": 0.44473,
+       "Sz": -0.08818,
+       "norm": 0.8965
+      },
+      {
+       "band": 34,
+       "energy_eV": -0.84754,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.08493,
+       "Sy": -0.44473,
+       "Sz": 0.08818,
+       "norm": 0.8965
+      },
+      {
+       "band": 35,
+       "energy_eV": -0.14483,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.18142,
+       "Sy": 0.44062,
+       "Sz": 0.08005,
+       "norm": 0.9366
+      },
+      {
+       "band": 36,
+       "energy_eV": -0.14483,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.18142,
+       "Sy": -0.44062,
+       "Sz": -0.08005,
+       "norm": 0.9366
+      },
+      {
+       "band": 37,
+       "energy_eV": 2.21185,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.001,
+       "Sy": 0.00119,
+       "Sz": 0.43589,
+       "norm": 0.9672
+      },
+      {
+       "band": 38,
+       "energy_eV": 2.21185,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.001,
+       "Sy": -0.00119,
+       "Sz": -0.43589,
+       "norm": 0.9672
+      },
+      {
+       "band": 39,
+       "energy_eV": 2.31921,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.00193,
+       "Sy": 0.0004,
+       "Sz": 0.36648,
+       "norm": 0.9705
+      },
+      {
+       "band": 40,
+       "energy_eV": 2.31921,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.00193,
+       "Sy": -0.0004,
+       "Sz": -0.36648,
+       "norm": 0.9705
+      }
+     ]
+    },
+    "K": {
+     "k_index": 439,
+     "k": [
+      0.3333333333333357,
+      0.3333333333333357,
+      0.0
+     ],
+     "dist": 2.4424906541753444e-15,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -0.26407
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -0.17653
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -5.7637,
+       "EIGENVAL_eV": 0.97614
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 1.01018
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -0.73138,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": 0.0,
+       "Sz": 0.48406,
+       "norm": 0.8663
+      },
+      {
+       "band": 34,
+       "energy_eV": -0.6444,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": 0.48484,
+       "norm": 0.8677
+      },
+      {
+       "band": 35,
+       "energy_eV": -0.26407,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": -0.49961,
+       "norm": 0.8844
+      },
+      {
+       "band": 36,
+       "energy_eV": -0.17653,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": -0.49788,
+       "norm": 0.885
+      },
+      {
+       "band": 37,
+       "energy_eV": 0.97614,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": 0.44412,
+       "norm": 0.8264
+      },
+      {
+       "band": 38,
+       "energy_eV": 1.01018,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": -0.48295,
+       "norm": 0.8264
+      },
+      {
+       "band": 39,
+       "energy_eV": 1.04674,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.0,
+       "Sy": 0.0,
+       "Sz": 0.44598,
+       "norm": 0.8264
+      },
+      {
+       "band": 40,
+       "energy_eV": 1.07998,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.0,
+       "Sy": -0.0,
+       "Sz": -0.4833,
+       "norm": 0.8264
+      }
+     ]
+    },
+    "Kp": {
+     "k_index": 41,
+     "k": [
+      -0.3333333333333357,
+      0.3333333333333357,
+      0.0
+     ],
+     "dist": 2.4424906541753444e-15,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -1.48347
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -1.47563
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -5.18127,
+       "EIGENVAL_eV": 1.4497
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 1.46186
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -1.57774,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0576,
+       "Sy": 0.09977,
+       "Sz": 0.0,
+       "norm": 0.9473
+      },
+      {
+       "band": 34,
+       "energy_eV": -1.56617,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.00803,
+       "Sy": -0.01391,
+       "Sz": -0.0,
+       "norm": 0.9617
+      },
+      {
+       "band": 35,
+       "energy_eV": -1.48347,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.0839,
+       "Sy": -0.14532,
+       "Sz": 0.0,
+       "norm": 0.9481
+      },
+      {
+       "band": 36,
+       "energy_eV": -1.47563,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.04446,
+       "Sy": 0.077,
+       "Sz": -0.0,
+       "norm": 0.9583
+      },
+      {
+       "band": 37,
+       "energy_eV": 1.4497,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.17841,
+       "Sy": 0.30901,
+       "Sz": 0.0,
+       "norm": 0.8699
+      },
+      {
+       "band": 38,
+       "energy_eV": 1.46186,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.16103,
+       "Sy": -0.27891,
+       "Sz": -0.0,
+       "norm": 0.8697
+      },
+      {
+       "band": 39,
+       "energy_eV": 1.64729,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.12442,
+       "Sy": -0.21551,
+       "Sz": 0.0,
+       "norm": 0.855
+      },
+      {
+       "band": 40,
+       "energy_eV": 1.6567,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.09585,
+       "Sy": 0.16601,
+       "Sz": -0.0,
+       "norm": 0.8566
+      }
+     ]
+    },
+    "M": {
+     "k_index": 55,
+     "k": [
+      0.4761904761904746,
+      -3.8116041741701527e-19,
+      0.0
+     ],
+     "dist": 0.02380952380952539,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -1.24879
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -1.2385
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -5.63136,
+       "EIGENVAL_eV": 1.71158
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 1.71206
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -1.34086,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.01618,
+       "Sy": -0.02802,
+       "Sz": -0.0,
+       "norm": 1.0026
+      },
+      {
+       "band": 34,
+       "energy_eV": -1.33078,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.02867,
+       "Sy": 0.04965,
+       "Sz": 0.0,
+       "norm": 1.0011
+      },
+      {
+       "band": 35,
+       "energy_eV": -1.24879,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.09435,
+       "Sy": -0.16343,
+       "Sz": -0.0,
+       "norm": 1.0287
+      },
+      {
+       "band": 36,
+       "energy_eV": -1.2385,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.08241,
+       "Sy": 0.14273,
+       "Sz": 0.0,
+       "norm": 1.0271
+      },
+      {
+       "band": 37,
+       "energy_eV": 1.71158,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.15531,
+       "Sy": 0.269,
+       "Sz": 0.0,
+       "norm": 0.7694
+      },
+      {
+       "band": 38,
+       "energy_eV": 1.71206,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.15564,
+       "Sy": -0.26958,
+       "Sz": -0.0,
+       "norm": 0.7694
+      },
+      {
+       "band": 39,
+       "energy_eV": 1.78366,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.15117,
+       "Sy": 0.26184,
+       "Sz": 0.0,
+       "norm": 0.7709
+      },
+      {
+       "band": 40,
+       "energy_eV": 1.78691,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.15815,
+       "Sy": -0.27392,
+       "Sz": -0.0,
+       "norm": 0.7697
+      }
+     ]
+    },
+    "Lambda": {
+     "k_index": 259,
+     "k": [
+      0.1428571428571459,
+      0.14285714285714593,
+      0.0
+     ],
+     "dist": 0.023809523809520727,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -1.13515
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -1.0639
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -4.73757,
+       "EIGENVAL_eV": 1.13759
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 1.19886
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -1.31153,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.07075,
+       "Sy": -0.04085,
+       "Sz": 0.37314,
+       "norm": 0.9225
+      },
+      {
+       "band": 34,
+       "energy_eV": -1.25734,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.04301,
+       "Sy": 0.02483,
+       "Sz": 0.2492,
+       "norm": 0.9038
+      },
+      {
+       "band": 35,
+       "energy_eV": -1.13515,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.02908,
+       "Sy": -0.01679,
+       "Sz": -0.37415,
+       "norm": 0.9025
+      },
+      {
+       "band": 36,
+       "energy_eV": -1.0639,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.03254,
+       "Sy": 0.01879,
+       "Sz": -0.47659,
+       "norm": 0.9031
+      },
+      {
+       "band": 37,
+       "energy_eV": 1.13759,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.00844,
+       "Sy": -0.00487,
+       "Sz": -0.47661,
+       "norm": 0.9423
+      },
+      {
+       "band": 38,
+       "energy_eV": 1.19886,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.00557,
+       "Sy": 0.00322,
+       "Sz": 0.49014,
+       "norm": 0.9324
+      },
+      {
+       "band": 39,
+       "energy_eV": 1.42086,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.01623,
+       "Sy": 0.00937,
+       "Sz": -0.44787,
+       "norm": 0.9281
+      },
+      {
+       "band": 40,
+       "energy_eV": 1.58205,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.00067,
+       "Sy": 0.00039,
+       "Sz": 0.4734,
+       "norm": 0.9215
+      }
+     ]
+    }
+   }
+  },
+  "soc_GLIDE_s0.50": {
+   "header": {
+    "vasp_type": "ncl",
+    "nk": 441,
+    "nb": 96,
+    "encut": 520.0,
+    "efermi": 0.007763518444734031
+   },
+   "caveat": "plane-wave pseudized part only; PAW augmentation/gauge-dependent proxy; not interband off-diagonal spin matrix elements",
+   "per_k": {
+    "Gamma": {
+     "k_index": 0,
+     "k": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dist": 0.0,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -0.22921
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -0.22921
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -3.19318,
+       "EIGENVAL_eV": 2.24071
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 2.24071
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -0.84753,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.05825,
+       "Sy": -0.4241,
+       "Sz": 0.16156,
+       "norm": 0.897
+      },
+      {
+       "band": 34,
+       "energy_eV": -0.84753,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.05825,
+       "Sy": 0.4241,
+       "Sz": -0.16156,
+       "norm": 0.897
+      },
+      {
+       "band": 35,
+       "energy_eV": -0.22921,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.03588,
+       "Sy": -0.45967,
+       "Sz": 0.13463,
+       "norm": 0.9258
+      },
+      {
+       "band": 36,
+       "energy_eV": -0.22921,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.03588,
+       "Sy": 0.45967,
+       "Sz": -0.13463,
+       "norm": 0.9258
+      },
+      {
+       "band": 37,
+       "energy_eV": 2.24071,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.03346,
+       "Sy": 0.12294,
+       "Sz": 0.3015,
+       "norm": 0.9684
+      },
+      {
+       "band": 38,
+       "energy_eV": 2.24071,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.03346,
+       "Sy": -0.12294,
+       "Sz": -0.3015,
+       "norm": 0.9684
+      },
+      {
+       "band": 39,
+       "energy_eV": 2.29072,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.0098,
+       "Sy": -0.06117,
+       "Sz": 0.41309,
+       "norm": 0.9696
+      },
+      {
+       "band": 40,
+       "energy_eV": 2.29072,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.0098,
+       "Sy": 0.06117,
+       "Sz": -0.41309,
+       "norm": 0.9696
+      }
+     ]
+    },
+    "K": {
+     "k_index": 439,
+     "k": [
+      0.3333333333333357,
+      0.3333333333333357,
+      0.0
+     ],
+     "dist": 2.4424906541753444e-15,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -0.23776
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -0.20245
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -5.75645,
+       "EIGENVAL_eV": 1.00992
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 1.01862
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -0.69874,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": 0.48238,
+       "norm": 0.8671
+      },
+      {
+       "band": 34,
+       "energy_eV": -0.67584,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": 0.48593,
+       "norm": 0.8665
+      },
+      {
+       "band": 35,
+       "energy_eV": -0.23776,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": -0.49872,
+       "norm": 0.8846
+      },
+      {
+       "band": 36,
+       "energy_eV": -0.20245,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": -0.49886,
+       "norm": 0.8843
+      },
+      {
+       "band": 37,
+       "energy_eV": 1.00992,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": 0.43789,
+       "norm": 0.8265
+      },
+      {
+       "band": 38,
+       "energy_eV": 1.01862,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": 0.44894,
+       "norm": 0.826
+      },
+      {
+       "band": 39,
+       "energy_eV": 1.04565,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": -0.48124,
+       "norm": 0.8263
+      },
+      {
+       "band": 40,
+       "energy_eV": 1.0513,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": -0.48189,
+       "norm": 0.8265
+      }
+     ]
+    },
+    "Kp": {
+     "k_index": 41,
+     "k": [
+      -0.3333333333333357,
+      0.3333333333333357,
+      0.0
+     ],
+     "dist": 2.4424906541753444e-15,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -1.44686
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -1.44686
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -5.19986,
+       "EIGENVAL_eV": 1.43279
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 1.43279
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -1.55072,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.00296,
+       "Sy": -0.00608,
+       "Sz": 0.00547,
+       "norm": 0.9608
+      },
+      {
+       "band": 34,
+       "energy_eV": -1.55072,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.00296,
+       "Sy": 0.00608,
+       "Sz": -0.00547,
+       "norm": 0.9608
+      },
+      {
+       "band": 35,
+       "energy_eV": -1.44686,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.12282,
+       "Sy": -0.20219,
+       "Sz": 0.00759,
+       "norm": 0.9583
+      },
+      {
+       "band": 36,
+       "energy_eV": -1.44686,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.12282,
+       "Sy": 0.20219,
+       "Sz": -0.00759,
+       "norm": 0.9583
+      },
+      {
+       "band": 37,
+       "energy_eV": 1.43279,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.20693,
+       "Sy": 0.3408,
+       "Sz": 0.03745,
+       "norm": 0.8718
+      },
+      {
+       "band": 38,
+       "energy_eV": 1.43279,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.20693,
+       "Sy": -0.3408,
+       "Sz": -0.03745,
+       "norm": 0.8718
+      },
+      {
+       "band": 39,
+       "energy_eV": 1.63689,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.10129,
+       "Sy": -0.17523,
+       "Sz": 0.00075,
+       "norm": 0.8559
+      },
+      {
+       "band": 40,
+       "energy_eV": 1.63689,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.10129,
+       "Sy": 0.17523,
+       "Sz": -0.00075,
+       "norm": 0.8559
+      }
+     ]
+    },
+    "M": {
+     "k_index": 55,
+     "k": [
+      0.4761904761904746,
+      -3.8116041741701527e-19,
+      0.0
+     ],
+     "dist": 0.02380952380952539,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -1.26512
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -1.24448
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -5.54185,
+       "EIGENVAL_eV": 1.74368
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 1.74954
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -1.34578,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.0,
+       "Sy": -0.0,
+       "Sz": -0.43292,
+       "norm": 1.0276
+      },
+      {
+       "band": 34,
+       "energy_eV": -1.33309,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": 0.0,
+       "Sz": 0.43397,
+       "norm": 1.0185
+      },
+      {
+       "band": 35,
+       "energy_eV": -1.26512,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.0,
+       "Sy": -0.0,
+       "Sz": 0.46126,
+       "norm": 1.0199
+      },
+      {
+       "band": 36,
+       "energy_eV": -1.24448,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": 0.0,
+       "Sz": -0.46243,
+       "norm": 1.0146
+      },
+      {
+       "band": 37,
+       "energy_eV": 1.74368,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -2e-05,
+       "Sy": -2e-05,
+       "Sz": 0.3925,
+       "norm": 0.771
+      },
+      {
+       "band": 38,
+       "energy_eV": 1.74954,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 3e-05,
+       "Sy": 4e-05,
+       "Sz": -0.42892,
+       "norm": 0.7697
+      },
+      {
+       "band": 39,
+       "energy_eV": 1.75501,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -2e-05,
+       "Sy": -2e-05,
+       "Sz": -0.39138,
+       "norm": 0.7693
+      },
+      {
+       "band": 40,
+       "energy_eV": 1.75775,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.0,
+       "Sy": 0.0,
+       "Sz": 0.4282,
+       "norm": 0.7686
+      }
+     ]
+    },
+    "Lambda": {
+     "k_index": 259,
+     "k": [
+      0.1428571428571459,
+      0.14285714285714593,
+      0.0
+     ],
+     "dist": 0.023809523809520727,
+     "note": "band energies taken from EIGENVAL (pymatgen band_energy read unreliable for this ncl file)",
+     "energy_crosscheck": {
+      "band35": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": -1.1227
+      },
+      "band36": {
+       "WAVECAR_raw_eV": 1.0,
+       "EIGENVAL_eV": -1.10632
+      },
+      "band37": {
+       "WAVECAR_raw_eV": -4.726,
+       "EIGENVAL_eV": 1.16702
+      },
+      "band38": {
+       "WAVECAR_raw_eV": 0.0,
+       "EIGENVAL_eV": 1.22083
+      }
+     },
+     "bands_near_gap": [
+      {
+       "band": 33,
+       "energy_eV": -1.31218,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": 0.40998,
+       "norm": 0.9002
+      },
+      {
+       "band": 34,
+       "energy_eV": -1.26932,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": 0.31206,
+       "norm": 0.9092
+      },
+      {
+       "band": 35,
+       "energy_eV": -1.1227,
+       "occ_EIGENVAL": 1.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": -0.46674,
+       "norm": 0.8887
+      },
+      {
+       "band": 36,
+       "energy_eV": -1.10632,
+       "occ_EIGENVAL": 1.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": -0.47527,
+       "norm": 0.8992
+      },
+      {
+       "band": 37,
+       "energy_eV": 1.16702,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": -0.47666,
+       "norm": 0.9464
+      },
+      {
+       "band": 38,
+       "energy_eV": 1.22083,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": 0.48785,
+       "norm": 0.9359
+      },
+      {
+       "band": 39,
+       "energy_eV": 1.40302,
+       "occ_EIGENVAL": 0.0,
+       "Sx": 0.0,
+       "Sy": -0.0,
+       "Sz": -0.44716,
+       "norm": 0.927
+      },
+      {
+       "band": 40,
+       "energy_eV": 1.57418,
+       "occ_EIGENVAL": 0.0,
+       "Sx": -0.0,
+       "Sy": 0.0,
+       "Sz": 0.47814,
+       "norm": 0.921
+      }
+     ]
+    }
+   }
+  }
+ }
+}
