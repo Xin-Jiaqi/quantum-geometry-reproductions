@@ -1,0 +1,68 @@
+{
+  "version": "v60",
+  "status": "VERIFIED_SPECIFIED_MATRIX_LEADS_AND_SAME_QWZ_TOPOLOGY_ONLY_NOT_BULK_ORBITAL_EB",
+  "lead_model": {
+    "type": "semiinfinite_two_orbital_general_principal_layer",
+    "retarded_eta": 0.003,
+    "spinless_coherent_finite_device": true,
+    "hall_ratio": -0.0680077538749482,
+    "d_hall_d_B": -0.15990871963649705,
+    "longitudinal_conductance_q2_per_h": 0.5285663187319317,
+    "quadrature_error": 9.574786431467757e-9,
+    "quadrature_evaluations": 273,
+    "lead_current_residual": 3.3306690738754696e-16,
+    "magnetic_gauge_translated_graph_T_residual": 2.3525625891807067e-13,
+    "magnetic_gauge_translated_graph_dT_residual": 8.569256415569271e-13,
+    "scalar_lead_eta_001_hall": -0.06612327420998397,
+    "scope": "H00,H01 B-independent; fully matrix C(B) gauge derivative; finite eta>0; no bulk convergence claim"
+  },
+  "qwz_same_Hamiltonian": {
+    "mass": -1,
+    "periodic_wilson_chern": 1,
+    "center_marker_by_L": [
+      {
+        "L": 5,
+        "center": 0.9853702447201401,
+        "interior_mean": 0.958326820004957
+      },
+      {
+        "L": 7,
+        "center": 0.9965903116119836,
+        "interior_mean": 0.9771231290622204
+      },
+      {
+        "L": 9,
+        "center": 0.9991748286932817,
+        "interior_mean": 0.9962285947401162
+      },
+      {
+        "L": 11,
+        "center": 0.9997967373082488,
+        "interior_mean": 0.9973113071792458
+      }
+    ],
+    "finite_total_marker": "zero within floating-point tolerance due to edge compensation",
+    "further_phase_controls": {
+      "mass_plus_1": -1,
+      "mass_minus_3": 0,
+      "mass_plus_3": 0
+    },
+    "scope": "same-H occupied-projector topology only; not device-voltage vs periodic electrical conductance"
+  },
+  "tests_local": 21,
+  "certification": {
+    "verified": [
+      "principal-layer retarded g with regulator",
+      "general matrix Caroli/contacts derivative",
+      "same-H QWZ finite projector vs periodic Chern"
+    ],
+    "conditional": [
+      "finite device four-terminal voltage with explicit lead geometry"
+    ],
+    "unresolved": [
+      "same-H transport thermodynamic limit",
+      "actual B-dependent lead principal-layer couplings",
+      "original bulk orbital mixed EB response"
+    ]
+  }
+}

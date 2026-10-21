@@ -87,3 +87,12 @@ v59 adds exact causal semi-infinite 1D tight-binding chain surface g(E) and disp
 | General realistic Wannier electrode, inelastic scattering, full original orbital EB bulk MNHE/PHE | UNRESOLVED |
 
 The optional *B-odd scalar* lead onsite shift is an explicitly prescribed magnetogating sensitivity input, **not** a microscopic time-reversal-compatible orbital lead. Do not equate finite-device voltage and periodic bulk Chern conductivity. [v59 details](../papers/xiang-2026-quantum-geometric-map/docs/INDEPENDENT_LEAD_SELFENERGY_PERIODIC_KUBO_V59.md). Original paper PARTIAL.
+
+
+## v60: true matrix principal-layer selfenergies and same-H topology
+
+The general n-orbital semi-infinite block-lead retarded Green equation now has an accelerated decimation solver, independently checked by direct **160-layer sparse resolvent inversion**, scalar retarded limits, causal matrix spectral density and lead-orbital unitary covariance. Full **non-diagonal** Caroli Gamma_a and magnetic device-frame contact derivatives (including d_B C and d_B Sigma) are supported for finite 2/4-terminal devices. In a translated four-site graph, omitting d_B C breaks magnetic gauge covariance. **VERIFIED** here means correct operator mathematics for specified B-independent principal layer matrices and retarded eta>0; finite-device Hall voltage is **CONDITIONAL**.
+
+A different same-Hamiltonian test uses identical real-space Fourier hoppings and periodic Bloch QWZ H(k). The **finite open projector's center Chern marker** converges to the **periodic Wilson Chern**, while the finite total marker trace vanishes due to edge cancellation. **VERIFIED geometry/topology only.** This does **NOT** prove a finite Hall voltage equals bulk Kubo charge conductivity or the original source-paper orbital mixed EB.
+
+[Methods and limitations](../papers/xiang-2026-quantum-geometric-map/docs/GENERAL_MATRIX_LEADS_SAME_H_QWZ_V60.md). Original paper science PARTIAL; real Wannier magnetic lead H00(B),H01(B), same-H transport thermodynamic limit and intrinsic orbital EB remain UNRESOLVED.
