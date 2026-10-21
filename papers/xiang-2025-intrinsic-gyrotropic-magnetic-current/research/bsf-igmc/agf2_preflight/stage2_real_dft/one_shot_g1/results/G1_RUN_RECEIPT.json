@@ -42,5 +42,11 @@
   "reported_receipt_timestamp_utc": "2026-10-21T04:05:00Z",
   "timestamp_integrity": "UNVERIFIED_CONTRADICTION: reported receipt timestamp 2026-10-21T04:05:00Z precedes G1_INPUT_FINGERPRINTS.json job.submitted_utc 2026-10-21T04:14:00Z; actual Q snapshot time must be reconciled with PBS accounting before claiming an as-of time.",
   "real_vasp_execution_evidence_available": false,
-  "independent_review_note": "User-supplied site submission and queue observations are documented; GitHub reviewer has no SSH/PBS access and cannot independently confirm live job state. No OUTCAR or numerical results existed at this review."
+  "independent_review_note": "User-supplied site submission and queue observations are documented; GitHub reviewer has no SSH/PBS access and cannot independently confirm live job state. No OUTCAR or numerical results existed at this review.",
+  "local_wsl_diagnostic": {
+    "exists": true,
+    "file": "G1_LOCAL_WSL_DIAGNOSTIC.json",
+    "summary": "user-requested local WSL run of the identical single point (private VASP 6.6.0 build, OpenMPI 4.1.6, 8 ranks): SCF converged to EDIFF; TOTEN -35.17579601 eV/12-atom; Ag moments +-0.567 uB preserving the Type-I interlayer Neel OPPOSITE seed; net mag 0; preliminary gap ~1.49 eV (12x8x1 NOT k-converged). NOT the approved PBS execution; PBS job 490620.cmspbs1 remains queued with no OUTCAR.",
+    "receipt_facts_unaffected": "this pointer does not modify any queued-only PBS receipt fact above; PBS audit stays pending"
+  }
 }
