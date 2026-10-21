@@ -66,9 +66,9 @@ The dimensionless low-eta coefficient eta*total is positive and near the formal 
 
 ### Reproduce
 
-\`\`\`bash
+```bash
 python -m unittest tests.test_dirac_mixed_rta_v46 -v
 python scripts/reproduce_dirac_mixed_rta_v46.py --eta .065 --beta .125 --nr 96 --nphi 144 --h 0.00003
-\`\`\`
+```
 
 **Next v47:** verify the *actual* author supplemental collision/resolvent source (do not infer it from general physics or an unrelated RTA), run it unchanged as third protocol against these two limits, then re-evaluate printed Eq.11 and Fig.2(b) without fitting factors.
