@@ -296,3 +296,13 @@ A [new v56 physics module](docs/INDEPENDENT_FINITE_GRAPH_MIXED_EB_V56.md) now co
     python scripts/reproduce_finite_graph_eb_v56.py
 
 The original PRB source reconstruction and disputed signs remain PARTIAL; independently verified finite-model mathematics and model-conditional transport are tracked separately in [physics registry](../../physics/README.md).
+
+
+### v57: actual coherent four-terminal leads and Hall voltage, no scalar-gamma substitute
+
+The [new v57 open-lead physical solver](docs/OPEN_LEADS_FOUR_TERMINAL_HALL_V57.md) attaches **two or four independent ideal wideband leads** to v55 Peierls graph nodes and solves finite-temperature Caroli transmission and full magnetic derivative, Landauer–Büttiker lead currents, and **self-consistent floating top/bottom voltage probes**. For a symmetric four-site diamond device (B=.31,mu=.15,T=.16,local Gamma=.55,q/hbar=-.87), physical finite-device Hall voltage ratio V_H/bias **-0.06642265873**, analytic d_B Hall **-0.16198498942**, longitudinal two-lead effective conductance **.51928029946 (q²/h)**. Independent Caroli trace/optical theorem, Onsager, B-reversed two-terminal evenness and four-terminal odd Hall, two magnetic gauges, exact current conservation, and 5-point complete field derivatives pass. Contact Γ and temperature **change the result**; sparse ring-size scans oscillate and **must not be described as thermodynamic bulk scaling**. This model is coherent wideband finite-device physics; it does not claim intrinsic bulk orbital MNHE. [Frozen data](results/frozen/v57_open_lead_hall_validation.json).
+
+    python -m unittest tests.test_lead_transport_v57 -v
+    python scripts/reproduce_lead_transport_v57.py
+
+For arbitrary explicit finite open graph NPZ, supply hoppings, positions, lead_sites. [physics registry](../../physics/README.md) distinguishes VERIFIED model algorithms, CONDITIONAL device predictions and UNRESOLVED bulk theory. Source original-paper scientific audit PARTIAL.
