@@ -160,3 +160,14 @@ python scripts/reproduce_scba_surface_v43.py --W .12 --seeds 24
 ```
 
 **This is NOT a full conserving disorder-averaged Středa I+II, thermodynamic DC Hall, or original nonlinear EB PHE. Status remains PARTIAL.**
+
+### v44: Energy-dependent RR density Ward and provisional noncrossing Hall sea
+
+The standalone `qgmap.scba_sea_v44` integrates a **candidate Středa II sea** from self-consistent Sigma(E) and the same-W RR density vertex at every real-energy node, then reports the **provisional** sum with v43's one-leg RA I(a) surface. It independently validates `dG/dE` and `dSigma/dE` by finite differences, the W=0 Bloch two-pole analytic formula, cutoff/quadrature convergence, and v42 exact finite-disorder **full I+II**. At W=.03,.12 with mu=1.1, eta=.12 the candidate totals are respectively -0.376124 and -0.456059 e²/h, versus exact 24-seed L4 results -0.389852±.021380 and -0.483690±.027788. A numerical match within finite seed SEM **is not a conserving transport proof**.
+
+```bash
+python -m unittest tests.test_scba_sea_v44 -v
+python scripts/reproduce_scba_sea_v44.py --W .12 --mesh 35 --L 4 --seeds 24 --ntheta 7 --lower -12 --quadrature 420
+```
+
+See [v44 scientific limits](docs/SCBA_SEA_V44.md). Remains `PARTIAL`: transverse electromagnetic Ward/contact, crossed disorder sectors, thermodynamic metallic dc order of limits and original paper nonlinear mixed EB are OPEN.
