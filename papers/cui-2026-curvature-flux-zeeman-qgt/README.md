@@ -29,3 +29,10 @@ python scripts/demo_causal.py --kmesh 48
 ~~~
 
 **Not full Eq.(19) KME or a real-material transport package.** The v2 suite covers 21 geometry and 18 new response tests; actual CI status must be checked separately. Intraband/collision/magnetization contacts, real Wannier spin and position, and SI conversion stay open.
+
+
+## v3: Appendix C conventional physical-spin current (2026-10-22)
+
+A deliberately bounded [spin_current.py](src/flux_lab/spin_current.py) implementation adds clean intrinsic Eq.(127)/(128), the complete physical-spin velocity derivative and Fermi surface / Fermi sea identity. It requires the explicit Hessian of the Hamiltonian for general periodic models, rather than silently discarding the Eq.(132) spin-current vertex as in the special linear-H limit of Eq.(133).
+
+Details and actual numerical values: [APPENDIX_C_ACCEPTANCE.md](APPENDIX_C_ACCEPTANCE.md), with a synthetic fixed-basis four-band benchmark and frozen 64×64 BZ results. **17 new independent tests, 56 total.** The current operator is conventional and generally NOT conserved under spin-orbit torque. This does not establish an experimental spin Hall conductivity, real-material position/spin operators, or the full Eq.(134) in arbitrary systems.

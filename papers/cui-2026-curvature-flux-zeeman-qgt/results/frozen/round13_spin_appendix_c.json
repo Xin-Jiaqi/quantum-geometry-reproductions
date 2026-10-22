@@ -1,0 +1,20 @@
+{
+  "title": "Cui Appendix C conventional real-spin current, synthetic four-band BZ",
+  "reference": "Round4 independently reproduced",
+  "params": {
+    "mesh": 64,
+    "mu": 0.15,
+    "temperature": 0.18,
+    "spin": "I_tau tensor sigma_z",
+    "tau": 1,
+    "normalization": "BZ average"
+  },
+  "N64_spin_xz_E_x": {
+    "direct_fermi_surface": 0.009212602562535185,
+    "full_fermi_sea": 0.009212602562535092,
+    "geometry_only": 0.01833282148550087,
+    "missing_hessian": -0.00912021892296578
+  },
+  "local_intrinsic_yx_z": 0.37196319310188974,
+  "scope": "nondegenerate fixed-basis conventional spin current only"
+}
