@@ -1,0 +1,122 @@
+{
+  "stage": "8k",
+  "date": "2026-10-22",
+  "source_commit": "6ffef840ca5ca5045e9073dbf781c20164b1a071",
+  "source": "committed Stage8i pseudized spinor WAVECAR-derived JSON, NOT original WAVECAR bytes",
+  "quality": "NONDEGENERATE_SPIN_PROXY_PRESCREEN_ONLY__PHYSICAL_PAW_AND_READER_NOT_VALIDATED",
+  "new_VASP_jobs": 0,
+  "scan": {
+    "min_gap_to_visible_adjacent_band_meV": 5,
+    "minimum_transverse_spin_proxy": 0.025,
+    "archived_samples_processed": 80,
+    "total_ab_nondegenerate_proxy_candidates": 15,
+    "total_glide_nondegenerate_proxy_candidates": 0
+  },
+  "priority_examples": [
+    {
+      "job": "soc_AB_s0.00",
+      "location": "GAMMA_M_NEAR_M__NOT_EXACT_M",
+      "k": [
+        0.47619048,
+        0,
+        0
+      ],
+      "band": 35,
+      "energy_eV": -1.24879,
+      "S_perp_pseudized": 0.18871,
+      "Sz_pseudized": 0,
+      "spinor_norm_reported": 1.0287,
+      "adjacent_gap_meV": 10.29,
+      "candidate": true
+    },
+    {
+      "job": "soc_AB_s0.00",
+      "location": "GAMMA_K_INTERIOR__NOT_TRUE_BAND_EDGE",
+      "k": [
+        0.14285714,
+        0.14285714,
+        0
+      ],
+      "band": 35,
+      "energy_eV": -1.13515,
+      "S_perp_pseudized": 0.033579,
+      "Sz_pseudized": -0.37415,
+      "spinor_norm_reported": 0.9025,
+      "adjacent_gap_meV": 71.25,
+      "candidate": true
+    },
+    {
+      "job": "soc_AB_s0.00",
+      "location": "GAMMA_M_TWO_THIRDS__NOT_K_PRIME",
+      "k": [
+        -0.33333333,
+        0.33333333,
+        0
+      ],
+      "band": 35,
+      "energy_eV": -1.48347,
+      "S_perp_pseudized": 0.167801,
+      "Sz_pseudized": 0,
+      "spinor_norm_reported": 0.9481,
+      "adjacent_gap_meV": 7.84,
+      "candidate": true
+    },
+    {
+      "job": "soc_GLIDE_s0.50",
+      "location": "GAMMA_M_NEAR_M__NOT_EXACT_M",
+      "k": [
+        0.47619048,
+        0,
+        0
+      ],
+      "band": 35,
+      "energy_eV": -1.26512,
+      "S_perp_pseudized": 0,
+      "Sz_pseudized": 0.46126,
+      "spinor_norm_reported": 1.0199,
+      "adjacent_gap_meV": 20.64,
+      "candidate": false
+    },
+    {
+      "job": "soc_GLIDE_s0.50",
+      "location": "GAMMA_K_INTERIOR__NOT_TRUE_BAND_EDGE",
+      "k": [
+        0.14285714,
+        0.14285714,
+        0
+      ],
+      "band": 35,
+      "energy_eV": -1.1227,
+      "S_perp_pseudized": 0,
+      "Sz_pseudized": -0.46674,
+      "spinor_norm_reported": 0.8887,
+      "adjacent_gap_meV": 16.38,
+      "candidate": false
+    },
+    {
+      "job": "soc_GLIDE_s0.50",
+      "location": "GAMMA_M_TWO_THIRDS__NOT_K_PRIME",
+      "k": [
+        -0.33333333,
+        0.33333333,
+        0
+      ],
+      "band": 35,
+      "energy_eV": -1.44686,
+      "S_perp_pseudized": 0.23657,
+      "Sz_pseudized": 0.00759,
+      "spinor_norm_reported": 0.9583,
+      "adjacent_gap_meV": 0,
+      "candidate": false
+    }
+  ],
+  "notable_comparison": "Same-k and same numbered band 35, AB near M: |S_perp|≈0.1887 and adjacent spacing 10.29 meV; glide near M |S_perp|=0 with finite band spacing ~20.64 meV. This is a spinor parsing diagnostic, not a physical layer response or matched orbital band.",
+  "scientific_risk": [
+    "No reliable raw WAVECAR record/energy parsing demonstrated",
+    "Plane-wave pseudized spin lacks PAW augmentation",
+    "Band index does not establish same orbital branch across AB/glide",
+    "At glide former false Kp Γ-M 2/3 band 35/36 degenerate (gauge trap)",
+    "No cross-gap <c|Sx|v> or velocity vertex, full BZ static NMEE uncomputed"
+  ],
+  "required_followup": "Only read-only reparse actual HPC WAVECAR/EIGENVAL and PAW-aware validate nondegenerate spinor; no new qsub."
+}
