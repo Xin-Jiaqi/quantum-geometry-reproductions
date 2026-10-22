@@ -251,3 +251,16 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Original Xiang bulk intrinsic orbital mixed E/B | Source equation sign/factor/three-band issues, real Wannier magnetic embedding and physical bulk orbital-current correspondence remain open | **UNRESOLVED; source PARTIAL** |
 
 45 v69 physics gates plus one quick frozen-data regeneration gate. The high-resolution L=1000 point is independently regenerated in the main v69 test class. See [v69 report](FINITE_LEAD_LEHMANN_ORACLE_V69.md).
+
+
+## v70: multi-frequency ordered finite-lead/continuum benchmark
+
+| Gate | Acceptance | Scientific state |
+| --- | --- | --- |
+| Same finite-device observable at ω=.20/.29/.40 | Independent full-Hermitian eigenstate Lehmann versus two-energy semi-infinite-reservoir Keldysh, shared electric-current contact and device-only projected current | **VERIFIED specified model** |
+| Joint length and η path | L250→350 (η=.02)→500 (η=.01)→1000 (η=.005); all three production errors smaller than low-L errors | **IMPROVING; NONZERO DISCREPANCY** |
+| Nonmonotonic finite-spectrum negative control | At ω=.20, error rises 7.77e-4→7.93e-4 for L250→350 | **VERIFIED no pointwise monotonic guarantee** |
+| Far-end boundary-cap sensitivity | ω=.29, L500 η=.01, cap 0→±1.1 changes complex response ≈2.18e-5 | **VERIFIED finite-size artifact, not universal independence** |
+| Bulk orbital current / original Xiang PRB | Current defined as device-only i[H−EP_b,P_a], no general bulk q→0 mapping, full Wannier B embedding or closure of printed source sign/factor/three-band sectors | **UNRESOLVED; source PARTIAL** |
+
+35 new v70 numerical checks. See [multi-frequency report](MULTIFREQUENCY_ORDERED_LIMITS_V70.md).
