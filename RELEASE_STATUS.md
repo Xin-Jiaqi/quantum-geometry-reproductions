@@ -242,3 +242,12 @@ Independent v64 QWZ two-drive G0 oracle computes lambda→0+ probe spectral pote
 ## v65 | static finite projected orbital position and mixed-field Maxwell (2026-10-22)
 
 40 new source-independent science acceptance gates target off-diagonal position dipoles, B-dependent magnetic/position contacts, exact finite-temperature grand-canonical and canonical mixed Maxwell oracles (three independent full rediagonalization/chemical-potential refit routes), origin-shift Ward controls and real-spinless time reversal. Named finite-static equilibrium identities VERIFIED; Peierls/projected model CONDITIONAL; full driven orbital E/B transport, field-complete real Wannier projection and conserving Kubo-Streda UNRESOLVED. Xiang source manuscript **PARTIAL**. Baseline v64 remote 675 tests; expected v65 full CI at least 715 if no other changes, but **do not record CI success until actual final-head Actions logs confirm it**.
+
+
+### v65 exact finite equilibrium orbital-position Maxwell release certification
+
+- [PR #46](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/46) **squash merged** as `29bfa754efcbe1ac572150eeabe22d98b783f000`; final PR HEAD `b7255129d3fa696717a25a9e9defe22eed03589d`.
+- Final PR-head [Actions 39699074532](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39699074532): **716/716 PASS**, `Ran 716 tests in 67.822s`, completed/success, including independent v65 frozen-data regeneration.
+- Independent post-merge **main** [Actions 39699366319](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39699366319): **716/716 PASS**, `Ran 716 tests in 70.373s`, completed/success at merged commit `29bfa754efcbe1ac572150eeabe22d98b783f000`.
+- Independent v60-v65 local science baseline 178/178 including 40 new v65 physics tests plus one frozen-provenance test. Standalone SHA256 certifies that independent archive only; exact byte-identical equivalence with remote GitHub source is **not** asserted.
+- **VERIFIED** named finite-static grand-canonical/canonical Maxwell and supplied projected position-magnetic contacts; **CONDITIONAL** physical Peierls+dipole model; **UNRESOLVED** driven orbital mixed E/B, conserving Kubo-Streda and real Wannier magnetic embedding. Original Xiang PRB paper remains **PARTIAL**. This root-only release-documentation change does not modify the tested physics code.
