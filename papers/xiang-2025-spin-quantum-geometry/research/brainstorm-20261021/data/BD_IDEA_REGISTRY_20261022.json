@@ -230,6 +230,33 @@
       "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
       "historical_code_preserved": true,
       "material_claim_verified": false
+    },
+    {
+      "id": "BD25",
+      "claim": "Relative registry derivative of current-induced layer-odd out-of-plane spin in a mirror-exchanging bilayer has a nontrivial and nonzero measurable coefficient",
+      "status": "BLOCKED_NOVELTY",
+      "reason": "C3+mx+mz group algebra allows one ux*jy-uy*jx invariant but coefficient not computed and 2026 Layer Edelstein PRL is a close framework; must inspect SM and define fixed-current Kubo protocol.",
+      "source": "docs/BD_CORE_PROBLEM_REFERENCE_ROLES_AND_SMALL_SEED_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
     }
-  ]
+  ],
+  "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
+  "literature_role_policy": {
+    "CONFIRMED_DIRECT": "Same asserted physical observable, source/drive, response regime and crucial conclusion, supported by source-level paper comparison; only that overlapping claim is pre-empted",
+    "POTENTIAL_DIRECT": "Same or nearby operator/drive; supplemental formula and boundary/transport conditions need checking before declaring priority overlap",
+    "INTRODUCTION_CONTEXT": "Establishes field/method/material motivation but not an equivalent result for the exact candidate claim",
+    "IRRELEVANT_TO_CLAIM": "Topical overlap insufficient for citation in this specific paper"
+  },
+  "small_seed_current": {
+    "idea_id": "BD25",
+    "observable": "current-induced nonequilibrium layer-odd axial Sz",
+    "source": "in-plane charge current j; fixed-j and fixed-E protocols must be distinguished",
+    "geometry": "idealized C3z, vertical mx, layer-swapping horizontal mz (NOT yet real material)",
+    "parameter": "relative in-plane layer slide u",
+    "symmetry_result": "Sz_top-Sz_bottom = gamma*(ux*jy-uy*jx)+O(|u|^2*j) by group representation, gamma UNKNOWN",
+    "evidence": "synthetic SVD basis and layer exchange parity have been run locally; no nonzero Kubo or direct novelty result",
+    "next_minimum": "physically consistent small SOC model and one chi(u) curve; check original 2026 LEE PRL SM for same derivative",
+    "compute_authorized": false
+  }
 }
