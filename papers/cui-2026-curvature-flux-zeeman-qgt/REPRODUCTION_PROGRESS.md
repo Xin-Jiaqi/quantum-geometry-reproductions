@@ -9,7 +9,7 @@ not that a real experimental observable or a disputed source claim is resolved.
 | --- | --- | --- |
 | **1. Paper reproduction** | Eqs.(2)–(15) two-/multi-band Zeeman QGT, local Dirac flux and Wilson loop; Eq.(16) restricted clean interband causal response, fourfold sector expansion; local GHE/KME reciprocity; Appendix C conventional spin current, Hessian and Eq.(27) spin vorticity; 31-group local antiunitary Kubo covariance | Entire source Fig set and Table I six convention-sensitive entries not certified; full Eq.(19) material-normalized KME, genuine many-band degeneracies, contacts, collisions, SI response |
 | **2. Physics capabilities** | Reusable nondegenerate Zeeman QGT; spectral Kubo plus independent Liouville; conventional spin-current derivative; finite-frequency antiunitary selection; static Jahn rank projector and all 31 local synthetic microscopic constraints | Conserving metallic electric drive in general Bloch/Wannier gauge, non-Abelian bands, full spin-torque and material-operator interfaces |
-| **3. GitHub integration** | Merged PRs #47/#49/#52/#55/#57 plus physics-registry PRs #48/#50/#53/#56/#59; published source+tests+limited scientific-acceptance docs; new Round16 branch/PR with 18 additional tests | Round16 must pass remote CI and be merged; remaining offline Round9–11 research protocols deliberately not upstreamed as production |
+| **3. GitHub integration** | Merged PRs #47/#49/#52/#55/#57 plus physics-registry PRs #48/#50/#53/#56/#59; published source+tests+limited scientific-acceptance docs; Round16 PR #60 merged with 18 additional tests and acceptance documentation | Round16 PR #60 **merged**, double-version CI **118/118 PASS**; remaining offline Round9–11 research protocols deliberately not upstreamed as production |
 
 ## Verifiable scope counters
 
@@ -17,7 +17,7 @@ not that a real experimental observable or a disputed source claim is resolved.
 - 62/62 **even/odd in-plane Jahn candidate tensor-space rank comparisons** (new).
 - 7 representative groups independently tested via 16x16 orbital Liouville in Round16.
 - 5 representative square-compatible groups with 8x8 BZ selection checks; C3/C6 hexagonal BZ **not validated**.
-- Local tests: 100 previous + 18 new = 118; CI count should be updated *only after viewing actual GitHub Actions logs*.
+- Local tests: 100 previous + 18 new = 118; GitHub Actions run 39722106861: Python 3.11 and 3.12 jobs both success; actual logs each show Ran 118 tests.
 - Full-paper acceptance still **PARTIAL**, irrespective of these counters.
 
 ## Real-material data gate
