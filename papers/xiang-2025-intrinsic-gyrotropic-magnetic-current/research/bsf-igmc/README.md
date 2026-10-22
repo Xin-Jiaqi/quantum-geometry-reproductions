@@ -2,7 +2,7 @@
 
 **Independent follow-up study; NOT the Xiang et al. (2025) paper reproduction.**
 
-Scientific status: **MODEL-LEVEL RESULT VERIFIED / FERROELECTRICITY UNPROVEN / REAL-MATERIAL BLOCKED**.
+Scientific status: **MODEL-LEVEL RESULT VERIFIED / REAL-MATERIAL B1 NON-SOC SCREENING PASS / SOC-IGMC RESPONSE UNCOMPUTED / FERROELECTRICITY AND MATERIAL RESPONSE UNPROVEN**.
 
 The existing reproduction under `../../` remains immutable. The present study asks whether sliding-modulated real-space interlayer hopping, **without inserting any phenomenological odd-in-sliding onsite polarization term**, can generate a nonzero insulating Zeeman-geometry displacement response, with different transformation laws under a unitary and an antiunitary stacking connector.
 
@@ -72,4 +72,11 @@ OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
 
 ## Stage 4: first real-material candidate, AgF₂ (source-grounded preflight)
 
-See [`agf2_preflight/`](agf2_preflight/) for the independent AgF₂ Type-I/strained Type-II magnetic-connector tensor predictions, the published BSF structural evidence and the **fail-closed DFT input gate**. This follow-up does **not** modify or promote the eight-band model's artificial energy surface to a ferroelectric double well, and no AgF₂ DFT/IGMC values have been computed.
+See [`agf2_preflight/`](agf2_preflight/) for the independent AgF₂ Type-I/strained Type-II magnetic-connector tensor predictions, the published BSF structural evidence and the **fail-closed DFT input gate**. This follow-up does **not** modify or promote the eight-band model's artificial energy surface to a ferroelectric double well. A C2DB-derived AgF₂ B1 candidate has now passed a **non-SOC, low-cost structural/magnetic screen** in PR #38; no SOC-on material response or AgF₂ IGMC amplitude has been computed.
+
+
+## Stage 5: real-material B1 screen and next gate (2026-10-22)
+
+The single authorized WSL screening run is documented in [PR #38](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/38): 11/11 electronic steps converged, VASP reached the screening force criterion at 0.0782 eV/Å, the Type-I Ag moment signs and a preliminary 1.3875 eV gap were retained, and the nearest interlayer F–F distance remained 3.002 Å. This is a **screening candidate**, not a verified local minimum, magnetic ground state or FE double well.
+
+The next task is only a **proposed** one-point SOC-on static screen, specified in [B1_SOC_STATIC_SCREENING_TASK_20261022.md](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_SOC_STATIC_SCREENING_TASK_20261022.md); it has not run and requires explicit authorization. The corrected channel-resolved response and literature gates are documented in [the tensor erratum](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_IGMC_TENSOR_ERRATUM_20261022.md) and [the novelty/story assessment](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_BSF_IGMC_NOVELTY_STORY_GATE_20261022.md).
