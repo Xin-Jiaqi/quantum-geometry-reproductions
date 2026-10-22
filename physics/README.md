@@ -120,3 +120,8 @@ The [v63 report](../papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINVASIVE
 ## v64: exact virtual-limit sensor algebra and finite-coherent caveat
 
 [QWZ two-terminal virtual-probe report](../papers/xiang-2026-quantum-geometric-map/docs/QWZ_VIRTUAL_PROBE_ORDERED_LIMITS_V64.md). New **VERIFIED** model-level primitive: lambda→0+ floating voltage from proposed probe-resolved Caroli spectral weights, using only the two-driver retarded resolvent, independently converged against finite-lambda probe physics with O(lambda²) error. Sensor position can change the limiting Hall reading; size 5–11 at fixed contact width is not a thermodynamic limit. **CONDITIONAL** finite coherent Hall, **UNRESOLVED** original Xiang orbital mixed EB, source audit **PARTIAL**.
+
+
+## v65: static orbital position-contact Maxwell identity
+
+Named finite thermodynamic primitive [v65](../papers/xiang-2026-quantum-geometric-map/docs/STATIC_ORBITAL_EB_MAXWELL_V65.md): **VERIFIED** fully supplied projected finite-orbital position P with offdiagonal dipoles, complete B-dependent frame derivative d_B P and magnetic vertex d_B H, exact static mixed grand-canonical and fixed-N Helmholtz Maxwell identities, numerical E/B derivatives and number-conserving origin test. Four-site Peierls physics and supplied D remain **CONDITIONAL**. Driven bulk orbital magnetotransport and conserving Kubo-Streda are **UNRESOLVED**; Xiang PRB manuscript still **PARTIAL**.
