@@ -47,4 +47,12 @@ Percentages above are subjective project planning estimates. Do not equate code/
 - results/frozen/v69_finite_lead_lehmann.json
 - docs/FINITE_LEAD_LEHMANN_ORACLE_V69.md
 
-After PR creation, record exact final PR HEAD, PR CI run, merge SHA and independent post-merge main CI. Update the final archive from the exact tested sources; compare local Git blob SHAs against remote file blob SHAs before claiming byte identity. Original paper status stays **PARTIAL** unless the unresolved scientific gates are genuinely closed.
+## GitHub release verification (2026-10-22)
+
+- [PR #62](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/62) merged by squash; final PR HEAD `40c752f36b2cbfcd86105592a9e4f3a42a8dcdeb`; merge commit `be8bb8344b0c1149b7f2a9944c88202ba19f649e`.
+- Final PR-head [Actions 39722605718](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39722605718): **890/890 PASS**, `Ran 890 tests in 89.488s`, completed/success; overall source-paper status **PARTIAL**.
+- Independent post-merge main [Actions 39722881262](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39722881262): **890/890 PASS**, `Ran 890 tests in 87.704s`, completed/success on exact merge commit `be8bb8344b0c1149b7f2a9944c88202ba19f649e`.
+- Clean-extraction archive: 83 SHA256 entries, all matched; v69 module/tests **46/46 PASS** after fresh extraction. v60-v68 baseline **306/306 PASS** in bounded module batches; cumulative local result **352/352**.
+- Archive is an independently tested standalone snapshot. Exact byte identity with every remote Git blob is not asserted unless each blob hash is explicitly matched.
+
+Original paper status remains **PARTIAL** until source-equation sign/factor/three-band questions, full magnetic Wannier embedding and bulk orbital-current correspondence are resolved.
