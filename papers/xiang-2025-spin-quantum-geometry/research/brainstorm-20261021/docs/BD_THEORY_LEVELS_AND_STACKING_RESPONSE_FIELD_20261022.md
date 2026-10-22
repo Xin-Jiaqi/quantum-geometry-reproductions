@@ -145,3 +145,17 @@ These precedents also set a higher bar for BD27. We must **not** claim to invent
 | Pang & He, [*Generalized Neumann's Principle*, PRL 135, 116402 (2025)](https://doi.org/10.1103/trhd-kxm1) | Unifies fractional-quantum and conventional ferroelectric polarization; identifies symmetry-allowed FQFE cases over 32 crystallographic point groups. | **FOUNDATIONAL / NEAREST PRIOR ART** for broad symmetry-principle claims. Do not claim a new general Neumann principle; exact implications for a dissipative/current-driven response must be demonstrated, not assumed. |
 
 The 2026 LEE paper is stronger prior art than a mere Introduction reference for the general *phenomenon* and its static stacking symmetry criterion. That still does not automatically establish the continuous-registry derivative theorem; the distinction must be resolved at equation/table level, not by either broad dismissal or broad novelty assertion.
+
+
+## 10. Update: the S2 seed has an independent cross-family and layer-parity result
+
+A substantive follow-up now exists in [**BD27/BD28 six/four forced zeros, operator parity and torus index report**](BD27_REGISTRY_TORUS_ZERO_INDEX_GATE_20261022.md). This is **not** merely a new stacking example: its mathematical input is the **same current, same out-of-plane axial spin, and controlled variation of (a) the lattice symmetry family and (b) the layer-even/odd representation**.
+
+- Hex \(C_3+m_v+m_z\), layer-odd \(S_-^z\): G/A/B/C/M/N **six** symmetry-forced registry zeros, generic first-order response near G; if the first-order coefficient is nonzero, local index **+1**.
+- Hex, layer-even \(S_+^z\): G/M/N **three** symmetry-forced zeros, generic first allowed order **quadratic** near G; if the coefficient is nonzero, local winding **−2**.
+- Square \(C_4+m_v+m_z\), layer-odd \(S_-^z\): **four** symmetry-forced zeros.
+- Square, layer-even \(S_+^z\): **zero identically at every relative translation** under the simultaneous \(C_{2z}=C_{4z}^2\) and horizontal layer-swap assumptions, consistent with the classic centrosymmetry/pure-sliding no-go.
+
+These are not empirical effect magnitudes: local Fourier fields and independently generated rational torus symmetry-fixed points were tested, **not real spin-response Kubo**. The index budget follows standard Poincaré–Hopf, and the point locations come from established BSF configuration symmetry; the **possible research contribution** is a response-operator-specific *global* classification and a measurable microscopic demonstration, not claiming to invent the ingredients. The 2026 LEE paper's accessible main text explicitly treats uniform response-tensor point-group restrictions at fixed stackings; **complete SM continuous-registry response/index equivalence has not yet been audited**.
+
+This is exactly the kind of **small result → understand mechanism → generalize only if valuable** trajectory the user requested. It remains labelled **OPEN_HYPOTHESIS** for novelty, while the conditional group results are **METHOD_PASS**.
