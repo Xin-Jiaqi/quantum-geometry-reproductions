@@ -435,7 +435,8 @@
         "microscopic_spin_response": "NOT_TESTED",
         "new_general_theory": "NOT_ESTABLISHED",
         "comparison_with_original_2026_LEE_SM": "PENDING",
-        "model_real_geometry_toy": "Pd2Te2 BiDB id980 Te-p-only (unfitted) SOC current-spin response has odd +1/even -2 contour winding (12x12 and 16x16 angular scan) and differing global special-registry zeros; material and general novelty unverified."
+        "model_real_geometry_toy": "Pd2Te2 BiDB id980 Te-p-only (unfitted) SOC current-spin response has odd +1/even -2 contour winding (12x12 and 16x16 angular scan) and differing global special-registry zeros; material and general novelty unverified.",
+        "winding_continuity_correction": "Old hard-cutoff contour is not a certified continuous-field topological invariant. Mod-six group constraint independently proven. Layer-even detailed real-model vortex transitions remain numerically unsettled; see BD30."
       },
       "next_small_step": "Audit LEE SM for actual continuous δ field selection; then one physically derived spinful bilayer hopping Hamiltonian and paired fixed-current F_+(δ)/F_-(δ) response maps. No DFT."
     },
@@ -445,7 +446,7 @@
       "status": "OPEN_HYPOTHESIS",
       "scope_level": "S2",
       "contribution_type": "symmetry classification/theorem + material/model validation",
-      "status_detail": "TOY_MODEL_NONZERO_PASS_FOR_LAYER_ODD; SIX_REGISTRY_ZERO_PATTERN_REPRODUCED; LOCAL_INDEX_ODD_PLUS1_EVEN_MINUS2_CONDITIONAL; FINITE_RADIUS_EVEN_WINDING_PARAMETER_DEPENDENT (+4 at mu1.5/lambda0.72/r0.125); LEE_COMPANION_SLIDING-REE_MANUSCRIPT_DIRECT_COMPETITOR_UNREVIEWED; ACTUAL_MATERIAL_AND_NOVELTY_UNVERIFIED",
+      "status_detail": "FIXED_U_TOY_NONZERO_PASS; HARD_CUTOFF_INVALIDATES_GLOBAL_CONTINUITY; WEAK_EVEN_WINDING_NEAR_MU1_31_K_MESH_UNSTABLE; MATERIAL_MODEL_UNFITTED; NOVELTY_UNRESOLVED",
       "source": "docs/BD29_BIDB_DB_DIRECT_SCREEN_20261022.md",
       "candidate_ranking": [
         {
@@ -633,6 +634,14 @@
           "correction": "finite-radius even winding is not universal: at r=0.125A, mu=1.5eV, SOC=0.72eV, index +4 at nk=8 and 12. At r=.02-.05A tested parameters give local index -2, conditional on nonzero leading coefficient and contour nonvanishing.",
           "odd_winding": "remains +1 across nine (mu,SOC) combinations at radius .125A in nk8 test",
           "interpretation": "Do not claim universal global even -2; extra zeros cross finite contour as parameters vary."
+        },
+        "critical_numerical_correction": {
+          "date": "2026-10-22",
+          "hard_cutoff": "7.2 A abruptly drops 4 bonds when ux passes approximately 0.106 A, from 74 to 70 bonds; original contour 'winding topology' not certified for a continuous field",
+          "correction": "research-branch model now has --smooth-cutoff-start 6.5 (C2 quintic taper) retaining historical hard mode separately",
+          "recomputed_model": "at mu 1.31 toy units, smooth nk10/r0.125 layer-even discrete winding +4 but smooth nk12/r0.125 (12 and 24 angles) yields -2; weak-even root positions shift with mesh and k-offset; unverified microscopic topological transition",
+          "robust_results": "fixed-u nonzero odd Sz and SOC-off/interlayer-off controls; group w mod6 mathematical congruence",
+          "report": "docs/BD30_MOD6_WINDING_AND_CUTOFF_AUDIT_20261022.md"
         }
       },
       "prior_art_gate": {
@@ -662,6 +671,19 @@
         "global_zero_rule": "at each registry u*, intersect Fix(D_pm(g)) across actual Seitz stabilizer; zero forced iff common fixed subspace is {0}",
         "competitor": "submitted same-group sliding-REE companion manuscript remains unreviewed; novelty unresolved"
       }
+    },
+    {
+      "id": "BD30",
+      "claim": "For a real nonzero current-to-layer-odd/even axial Sz response on a C3 plus layer-swapping-mirror invariant registry loop, allowed winding integers obey w_-=1 (mod 6), w_+=4 (mod 6). Symmetry-allowed even polynomial beta*conj(z)^2+c*z^4 admits six symmetry-related +1 response zeros.",
+      "status": "SYMMETRY_THEOREM_PASS__MICROSCOPIC_TRANSITION_NOT_VALIDATED",
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem + computational response test",
+      "reason": "The congruence follows rigorously from C3 phase covariance w=1 mod3 and layer exchange odd/even parity; mathematical polynomial six-satellite demonstration passed. This is standard equivariant topology and not automatically a novel general law. Actual Pd2Te2 BiDB-geometry Te-p toy weak-even channel has hard 7.2A bond cutoff discontinuity, substantial mesh sensitivity near mu=1.31eV; no robust six-satellite microresponse or material prediction. LEE original SM equation-level novelty overlap not verified.",
+      "source": "docs/BD30_MOD6_WINDING_AND_CUTOFF_AUDIT_20261022.md",
+      "exact_math_tests": "stacking_z6_winding_gate.py, PASS -5/+1 layer odd, -2/+4 layer even, six index +1 roots",
+      "historical_code_preserved": true,
+      "model_root_claim_verified": false,
+      "compute_authorized": false
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
