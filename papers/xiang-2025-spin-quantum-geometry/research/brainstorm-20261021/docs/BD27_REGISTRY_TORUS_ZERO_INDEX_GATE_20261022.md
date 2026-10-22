@@ -107,3 +107,60 @@ This gives a **small but genuine family-level contrast in a fixed, common physic
 For a rotation represented by an integer lattice automorphism \(R\), the number of isolated fixed points on \(\mathbb T^2\), when \(\det(I-R)\neq0\), is \(|\det(I-R)|\). This known torus-map fact yields **3 for \(C_3\)** and **2 for \(C_4\)**; layer exchange inversion \(-I\) gives **4**. Combining sets requires avoiding overlap: hexagonal \(C_3\cap(-I)\) shares G so union \(3+4-1=6\); square \(C_4\) fixed set is contained in the \(-I\) fixed set, so union \(4\). This abstract calculation is stronger and cheaper than enumerating a random K-matrix at every stacking.
 
 **Next research fork:** test the same source/output for a symmetry class without full layer exchange, or for a site-resolved spin tensor whose covariance is matrix-valued. Look for a relation not already implied by local point-group selection. Do **not** expand all 80 layer groups unless a source-backed current/spin response remains nonzero and yields a distinct measurable prediction.
+
+
+## 8. A sharper physical selector: layer-even versus layer-odd spin responses
+
+The geometry of the registry torus is fixed, but the **measured operator representation** changes the global response field itself. Keep the **same driving current** \(\mathbf j_\parallel\) and switch only the readout:
+\[
+S_-^z=S_T^z-S_B^z,\qquad S_+^z=S_T^z+S_B^z.
+\]
+Both are axial \(z\) under spatial point operations. Under **horizontal layer swap**, \(S_-^z\) is odd and \(S_+^z\) is even. Thus
+\[
+\mathbf F_-(-\delta)=-\mathbf F_-(\delta),\qquad
+\mathbf F_+(-\delta)=+\mathbf F_+(\delta),
+\]
+although both satisfy the \(C_3\) vector covariance and the vertical-mirror axial condition.
+
+### Hexagonal reference stacking G: different leading order **and vortex index**
+
+For small physical Cartesian relative displacement \(u=u_x+iu_y\) near G, the first nonzero *symmetry-allowed* terms have the complex form
+\[
+F_{-,x}+iF_{-,y}=i\gamma\,u+O(|u|^3),\qquad
+F_{+,x}+iF_{+,y}=\beta\,\bar u^2+O(|u|^4)
+\]
+for **real** \(\gamma,\beta\) in a symmetry-adapted mirror basis. The \(C_3\) and vertical-mirror representation fixes these leading tensor structures up to coefficients; the layer parity fixes the odd/even order. If the coefficients are nonzero, \(\mathbf F_-\) has local winding **+1**, whereas \(\mathbf F_+\) has winding **−2** around G. If a leading coefficient vanishes microscopically, the next allowed order must be analyzed and the quoted winding is not automatic.
+
+The even channel is forced to vanish at the **three \(C_3\)-fixed registries** G/M/N but is **not forced to vanish** merely by layer swap at A/B/C. The odd channel has all six G/A/B/C/M/N forced zeros. Both channels have an index sum of zero on a smooth torus, but their allowed local index patterns differ.
+
+A second independent synthetic Fourier witness for the even channel is
+\[
+\Phi_+(x,y)=\sin2\pi x-\sin2\pi y-\sin2\pi(x-y),\qquad
+\mathbf F_+=J\nabla_{\rm cart}\Phi_+.
+\]
+It is \(C_3\)-covariant, vertical-mirror axial, and **even** under \(\delta\to-\delta\), and its only symmetry-fixed zeros are G/M/N. Around G the Jacobian vanishes (quadratic leading response), and an explicit small contour has winding **−2**; M/N have simple zeros of index **+1** each. Verified for its first harmonic and a symmetry-preserving 0.05 second harmonic in [\`registry_layer_even_spin_gate.py\`](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/blob/research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/registry_layer_even_spin_gate.py).
+
+### Square C4 family: the layer-even response is globally **forbidden**
+
+There is an even sharper cross-family no-go. In a square homobilayer family with both \(C_{4z}\) and the stated horizontal layer swap \(m_z\), the rotation \(C_{2z}=C_{4z}^2\) maps \(\delta\to-\delta\). Since \(S_+^z\) is a proper-rotation invariant axial \(z\) and \(\mathbf j_\parallel\to-\mathbf j_\parallel\),
+\[
+C_{2z}:\quad\mathbf F_+(-\delta)=-\mathbf F_+(\delta).
+\]
+But the layer exchange \(m_z\) gives \(\mathbf F_+(-\delta)=+\mathbf F_+(\delta)\). Combining them,
+\[
+\boxed{\mathbf F_+(\delta)\equiv0\quad\text{for every registry }\delta.}
+\]
+This is an **all-registry** selection rule, unlike six/four isolated symmetry-fixed zero locations. Physically it is consistent with the known BSF no-go: a pure lateral translation cannot break the inversion of a centrosymmetric single-layer family. It is **not** a new magnetic symmetry discovery. However, the response-specific comparison between layer-even and layer-odd channels gives a much better small benchmark for a possible general response-field classification.
+
+The [\`layer_parity_activation_gate.py\`](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/blob/research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/layer_parity_activation_gate.py) checks hexagonal first-order odd / second-order even polynomial covariance and the square \(C_{2z}\) versus \(m_z\) no-go. **All scripts were run locally**, but no actual electronic response coefficient or experimentally resolved spin texture has been calculated.
+
+### Minimal class comparison (conditional)
+
+| Lattice family, stated symmetries | \(S_-^z\leftarrow\mathbf j_\parallel\) | \(S_+^z\leftarrow\mathbf j_\parallel\) |
+|---|---|---|
+| Hexagonal, \(C_3,m_v,m_z\) | Six forced zeros; generic order 1 at G; index +1 if nonzero | Three forced zeros; generic order 2 at G; index −2 if nonzero |
+| Square, \(C_4,m_v,m_z\) | Four forced zeros; linear term allowed at G | Identically zero at **all** registries via \(C_{2z}\) and \(m_z\) |
+
+This is a **conditional symmetry table for two clearly defined idealized families**, not a survey of every hexagonal/square layer group. For a real material one must independently confirm that the operations genuinely map its orbitals, layers, magnetic order and current/measurement protocol. More complex source/output tensors and antiunitary operations can change the table.
+
+**Scientific question sharpened:** can the operator-dependent *activation order, zeros and allowed winding indices* be organized as a systematic response classification over the 80 stacking families, and is there a rigorous, measurable prediction beyond the 2023 BSF + 2026 LEE symmetry frameworks? The group-theoretic constraints above are **correct as consequences of assumed symmetry**, but novelty remains **OPEN** and microscopic response remains **UNVERIFIED**.
