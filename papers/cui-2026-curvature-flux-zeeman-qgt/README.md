@@ -78,3 +78,8 @@ demonstration. 18 new unit tests bring the limited paper package to 118.
 - Round 17 acceptance: ROUND17_NONABELIAN_HEX_BZ.md; progress ledger: REPRODUCTION_PROGRESS.md; audit script: scripts/audit_round17.py.
 
 19 new tests bring this isolated package to **137 tests**. Python 3.11 and 3.12 both pass after correcting a mirror-asymmetric quadrature rule. Near-degenerate cluster flattening is explicit; the implementation is not a conserving metallic or SI transport theory. Full-paper status remains **PARTIAL**.
+
+
+## v8: reciprocal primitive cell cross-check (Round19)
+
+[primitive_bz.py](src/flux_lab/primitive_bz.py) integrates the same periodic model on a reciprocal parallelogram using independent Gauss-Legendre and shifted midpoint schemes, without projection of the result. Compare full complex even/odd tensors to the D6-symmetrized hexagonal Wigner-Seitz calculation. [Scope](ROUND19_PRIMITIVE_BZ_CROSSCHECK.md) and [audit](scripts/audit_round19.py). Eight new tests target **145 total**; numerical convergence remains **UNRESOLVED**.

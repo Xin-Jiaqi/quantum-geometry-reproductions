@@ -71,3 +71,14 @@ generality, and true-paper observables do not share a defensible denominator.
 - First Wigner-Seitz hexagon area \(2\sqrt3\pi^2=34.1893125466\); order-4 rule uses 192 weighted nodes, weight sum 1.0000000000000002.
 - Order-3 integrated even/odd projector residuals: group \(6\), \(2.17\times10^{-18}\) and \(4.34\times10^{-19}\); group \(6m'm'\), \(2.43\times10^{-18}\) and \(5.96\times10^{-20}\).
 - These are synthetic model values and symmetry checks, not a converged material prediction. The full paper remains **PARTIAL**.
+
+
+## Round19: independent primitive-cell BZ cross-check
+
+| Workstream | Current gate |
+| --- | --- |
+| Paper reproduction | Same clean cluster-interband 4-band model integrated over hexagonal Wigner-Seitz and reciprocal primitive fundamental domains; exact continuum equality, finite-order convergence not assumed. Whole-paper PARTIAL. |
+| Physics capabilities | Independent reciprocal primitive-cell Gauss and shifted midpoint quadratures, full complex even/odd tensor comparison without projecting away numerical errors. |
+| GitHub | Round19 standalone method, 8 tests, full audit script and acceptance report on an independent PR; 145-test CI target, not a claimed PASS until remote runs finish. |
+
+Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and ~3.9% for group 6m'm' in even response; projector residuals close to machine precision do NOT establish convergence. Next priority: primitive/hex domain numerical agreement, spectral-gap and temperature sensitivity. No additional VASP work at this gate.

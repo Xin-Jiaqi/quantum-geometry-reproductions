@@ -29,3 +29,5 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Run reproducible Round17 physics audit
         run: python scripts/audit_round17.py
+      - name: Compare independent reciprocal primitive-cell methods (Round19)
+        run: python scripts/audit_round19.py
