@@ -110,3 +110,10 @@ The user raised DFT cost/uncertainty of a real domain. [**G3 ROI and scientific 
 
 
 **Latest low-cost test:** [AA MoS\(_2\) registry geometry gate](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/blob/research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/aa_mos2_registry_geometry_gate.py) passed locally: 450 interlayer pair/translation checks under \(m_z\) and \(\mathbf u\to-\mathbf u\), max distance mismatch \(1.776\times10^{-15}\) Å; S–S interface spacing 3.6763 Å matches the source SK model. **Geometry only**. Next gate is the actual orbital Slater–Koster matrix covariance including orbital parity/rotation; still no SOC/Kubo or production compute.
+
+
+## 2026-10-22: abstraction-level correction and general-theory hypothesis
+
+User's key correction: a specific sliding-ferroelectricity example does not automatically pre-empt a general bilayer-stacking theory; a specific ferroic phase does not automatically pre-empt a general symmetry principle. Prior art must be matched to the **scope of the exact proposition**, not merely the phenomenon. See [scope-aware literature policy and candidate theory](../docs/BD_THEORY_LEVELS_AND_STACKING_RESPONSE_FIELD_20261022.md). All 27 registry entries now carry working scope-level and contribution-type labels.
+
+**BD27 (OPEN_HYPOTHESIS, S2–S3):** symmetry-covariant layer-resolved response field over the stacking-registry torus. For a layer-odd \(S_z\) driven by in-plane current, a layer-swapping horizontal-mirror Seitz operation gives \(\chi(-\delta)=-\chi(\delta)\); candidate consequence: zeros at symmetry-fixed registries \(2\delta\in\Lambda\) and forbidden even Taylor orders. This is ordinary covariance unless it yields a nontrivial global result not already in prior literature. Next: verify actual Seitz operations, compare exact scope with LEE SM and stacking-configuration theories. No DFT/HPC authorized.
