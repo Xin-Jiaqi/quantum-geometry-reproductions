@@ -141,3 +141,12 @@ User's key correction: a specific sliding-ferroelectricity example does not auto
 **Prior-art policy preserved:** BiDB's already-published stacking-dependent magnetic states are direct prior art for those specific states, not automatic pre-emption of a general response-field theory. LEE 2026 is direct for generic nonmagnetic bilayer layer-Edelstein effects; its exact SM overlap with continuous-registry operator-resolved zero/index rules remains pending.
 
 **Current blocker:** exact BiDB UIDs/CIF/property rows for VTeS and AgVP2Se6 not yet extracted; Janus layer orientation and magnetic ground state must be verified before applying any symmetry rule. No DFT/WSL/Slurm/Japan HPC has been started or authorized. Idea registry now has 29 entries (BD29 OPEN_HYPOTHESIS).
+
+
+## 2026-10-22 DIRECT BiDB database access resolved; first theory demonstrator Pd2Te2
+
+The user uploaded the actual BiDB ASE/SQLite dataset. **[Direct DB screen, real symmetry site match and final priority](../docs/BD29_BIDB_DB_DIRECT_SCREEN_20261022.md)** replaces the earlier paper-only shortlist. 11,184 records pass SQLite quick_check. The physical BD27 six-hex-registry response theory requires a *real horizontal layer swapping mirror*, not merely a high-symmetry monolayer.
+
+**Pd2Te2 id 980** (8 atoms, nonmagnetic+metallic in BiDB, Stable p-6m2 D3h) passes C3z, vertical mirror and the actual top/bottom pure mz site permutation from source atomic coordinates; **Pd2Se2 id 975** passes the same and is the primary control. WSe2 id2684/2685, VTeS id8055 and VSeTe id7964 **fail the pure mz geometry gate** despite other interesting SOC/magnetic characteristics; magnetic VSeTe remains a second-stage extension. Pd2Te2 parent monolayer is +0.134 eV/atom above hull, so not a validated experimental synthesis target.
+
+A ready-to-run *read-only* [BiDB geometry gate](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/blob/research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/bidb_geometry_layer_swap_gate.py) is archived (data not uploaded). Next microscopic task: source-supported Pd/Te orbital SOC Hamiltonian and properly defined current-induced layer-odd/even Sz response; verify covariance first, calculate actual nonzero response second, then compare exact 2026 LEE SM. This is **not** a claim of novelty or new compute authorization. R1 CLOSED, R2-P0 remains READ_ONLY, zero new VASP/Slurm/WSL/Japan jobs.
