@@ -214,3 +214,10 @@ New direct competitors include the [2026 complete spin-layer-group corepresentat
 - **Sharper same-system readout contrast:** hex layer-odd \(S_-^z\) has first **linear** slide response \(F_-\sim i\gamma u\) (winding +1 if nonzero), while layer-even \(S_+^z\) has first **quadratic** \(F_+\sim\beta\bar u^2\) (winding −2 if nonzero). A separate symmetry-consistent even Fourier field passes +1/+1/−2 index budget. Square \(C_{2z}\) vs horizontal layer swap forces **all-registry layer-even \(S_+^z\) current response identically zero** (known centrosymmetric-selection consequence).
 
 These are **conditional, standard symmetry/topological deductions**, NOT a new microscopic spin mechanism, completed 80/528 sweep or novelty proof. The actual current-driven electronic coefficients remain uncalculated. The literature-overlap test with the original 2026 LEE SM remains open. Registry [now 28 ideas](data/BD_IDEA_REGISTRY_20261022.json), with BD27 and BD28 still OPEN_HYPOTHESIS; no new DFT/HPC.
+
+
+## 2026-10-22 BD29: C2DB/BiDB material scouting
+
+[**Ranked candidate screen and next gates**](docs/BD29_C2DB_BIDB_MATERIAL_SCREEN_20261022.md) uses the official [C2DB](https://www.2dhub.org/c2db/c2db.html) and [BiDB](https://bidb.fysik.dtu.dk/) documentation and published studies. First candidate to inspect: **Janus VTeS homobilayer**, because BiDB reports metallic stacking-dependent magnetism and a ferrimagnetic stacking associated with Janus-dipole-driven charge transfer. Second: **AgVP2Se6**, a polar magnetic semiconductor with reported stacking-related FM/AFM states, but its C2DB spin-spiral study flags possible DMI-driven noncollinear order. **CrI3** is a strong SOC benchmark but a crowded prior-art target; **MnPS3** is a symmetry/insulator control; MoSSe/MoTe2/WTe2 are published LEE baselines, not primary novelty targets.
+
+**Important evidence status:** published source-level candidate screen only. Exact BiDB UID/CIF/property rows for VTeS and AgVP2Se6 have not been extracted. No magnetic layer group or current-induced response has been calculated; no DFT/HPC is authorized. BD29 is OPEN_HYPOTHESIS and the registry now has 29 entries.
