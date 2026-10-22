@@ -38,3 +38,13 @@ Four stages L=250(.02),350(.02),500(.01),1000(.005). At ω=.20 error *increases*
 4. **Numerical limit error bar**: multiple η(L) trajectories at three ω values, end caps and finite-size-spectral drift; only then consider controlled extrapolation.
 
 v70 code `scripts/reproduce_v70_ordered_limits.py`, tests `tests/test_ordered_limits_v70.py` and `tests/test_ordered_limits_v70_frozen.py`, frozen file `results/frozen/v70_ordered_limits.json`; science report `docs/MULTIFREQUENCY_ORDERED_LIMITS_V70.md`. PR/CI SHA should be appended only after actual check.
+
+
+## Certified GitHub v70 release | 2026-10-22
+
+- [PR #72](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/72), final PR source HEAD `8ba6a5543109c8eba9062efe90e13bff2dbe42db`, **squash merged** commit `e91023968e5606a7d065b7cebcfcc9ec2cbfb0fd`.
+- [PR-head Actions 39747133852](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39747133852): **926/926 PASS**, 172.849 s, scientific state **PARTIAL**.
+- [Same HEAD push Actions 39747125305](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39747125305): **926/926 PASS**, 98.994 s, scientific state **PARTIAL**.
+- [Independent post-merge main Actions 39747781270](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39747781270): **926/926 PASS**, 97.271 s on the exact merge SHA, scientific state **PARTIAL**.
+- The first PR HEAD exposed incorrect frozen entries for omega=.40 at L250/350 and incorrect mixed magnetic derivatives for omega=.20/.40. These were replaced by independently recomputed numerical values, **not** by relaxing test thresholds. All three final-HEAD CI runs independently passed.
+- Fresh standalone numerical snapshot (not an asserted byte-identical copy of GitHub v70 code) has 88/88 SHA256 checks and 10/10 selected rerun tests. The GitHub repo is the authoritative complete 36-new-test v70 release. Engineering evidence **does not** promote original source paper beyond **PARTIAL**.
