@@ -56,3 +56,17 @@ Verified for the stated nondegenerate fixed-basis spin × orbital **synthetic mo
 Eq.(27), for a smooth nondegenerate fixed-basis Hamiltonian with *physical spin* operator independent of k, is VERIFIED through spectral pair summation, direct finite-k eigenstate curl and exact Hessian-aware derivative. The explicit Hessian cancels in the antisymmetric curl, not in the full symmetric lattice RTA. Local vorticity does not establish macroscopic transport.
 
 The 31 2D magnetic-point-group generators and 124 static real Jahn-character tensor candidate subspaces are CHECKED via independent group closure, Reynolds projector and direct nullspace. Their use for a complex finite-frequency antiunitary conductivity remains **CONDITIONAL**; original Table I is not declared fully resolved. See [ROUND14_VORTICITY_AND_MAGNETIC_SYMMETRY.md](ROUND14_VORTICITY_AND_MAGNETIC_SYMMETRY.md). 24 new tests; 80 total on this paper package.
+
+
+## v5 · three microscopic antiunitary examples, not all magnetic groups
+
+The 1', C2zT, and m_xT true-spin toy Hamiltonians obey exact
+antiunitary k/velocity/spin, band-resolved Zeeman QGT, full complex-frequency
+GHE/KME interband Kubo and independent N² Liouville constraints; the same
+result survives separate physical spin × orbital coupling. Exact reversal
+takes z to -z (advanced at eta>0). Opposite-real-frequency **retarded**
+substitution demonstrably fails. A 16² BZ exercise includes symmetry-forbidden
+zeros and permitted responses, not converged material numbers.
+20 additional tests / 100 total. The other magnetic groups, SI observable
+KME, dissipative collisions and actual Wannier spin operators remain
+unverified. [Scope](ROUND15_ANTIUNITARY_MICROSCOPIC.md).
