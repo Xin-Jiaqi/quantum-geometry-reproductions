@@ -237,3 +237,17 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Full original Xiang bulk intrinsic orbital mixed E/B | Device-only field, boundary response, finite arbitrary off-diagonal projected dipoles, no real-material magnetic Wannier, no bulk thermodynamic normalization or original SM Eq49/52 three-band closure | **UNRESOLVED; source paper PARTIAL** |
 
 40 v68 independent physics tests + 1 frozen-data reprovenance gate, total standalone v60–v68 306 PASS. See [v68 physics report](FINITE_FREQUENCY_SAME_DEVICE_KELDYSH_EB_V68.md).
+
+
+## v69: finite-lead Lehmann independent oracle
+
+| Gate | Evidence | Status |
+| --- | --- | --- |
+| Full device+two-lead Hermitian Hamiltonian | Direct eigendecomposition; no surface self-energy/Keldysh integral in the response | **VERIFIED finite model** |
+| Same v68 device polarization-current observable | Identical embedded J0 and noncommuting electric contact JE=-i[Pb,Pa]; device-local field only | **VERIFIED observable matching at finite-device protocol level** |
+| Finite closed-system Ward | (omega+i eta)rhoE-[H,rhoE]+[Pb,rho0]=0, residual 7.8e-17; induced device charge exactly balanced by explicit lead charge | **VERIFIED finite Hamiltonian** |
+| Static equilibrium response | Lehmann Frechet including diagonal -f'Pnn agrees with full finite-E rediagonalization to 4.2e-13 | **VERIFIED isothermal finite system** |
+| Ordered finite lead/broadening limit | (L,eta)=(250,.02),(350,.02),(500,.01),(1000,.005) discrepancy to v68 falls 9.27e-4 -> 2.12e-4 | **IMPROVING, NOT YET CONVERGED** |
+| Original Xiang bulk intrinsic orbital mixed E/B | Source equation sign/factor/three-band issues, real Wannier magnetic embedding and physical bulk orbital-current correspondence remain open | **UNRESOLVED; source PARTIAL** |
+
+45 v69 physics gates plus one quick frozen-data regeneration gate. The high-resolution L=1000 point is independently regenerated in the main v69 test class. See [v69 report](FINITE_LEAD_LEHMANN_ORACLE_V69.md).

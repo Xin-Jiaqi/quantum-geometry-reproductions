@@ -1,0 +1,140 @@
+{
+  "version": "v69",
+  "model": "closed finite Hermitian four-orbital Peierls device plus two finite tight-binding leads; eigenstate-pair Lehmann sum; no self-energy integral",
+  "scientific_status": "VERIFIED finite-system Lehmann and isothermal identities; CONDITIONAL finite-length eta regularization; original Xiang bulk orbital EB remains PARTIAL",
+  "parameters": {
+    "charge_over_hbar": -0.84,
+    "field": 0.23,
+    "lead_hopping": 1.1,
+    "lead_onsite": 0,
+    "mu": 0.13,
+    "omega": 0.29,
+    "temperature": 0.37
+  },
+  "limit_protocol": "Jointly increase finite lead length L and decrease retarded response broadening eta; eta is a spectral resolution, not a phenomenological reservoir bath.",
+  "keldysh_reference": {
+    "mixed_dB_sigma_device": {
+      "imag": -0.004146290848383346,
+      "real": 0.007070053900131344
+    },
+    "nodes_per_interval": 640,
+    "sigma_device": {
+      "imag": -0.001194257399094567,
+      "real": -0.005292649615898412
+    }
+  },
+  "quick": {
+    "closed_system_ward": {
+      "charge_partition_error": 0,
+      "device_charge_response": {
+        "imag": -0.36436108226672215,
+        "real": -0.21344285739934127
+      },
+      "lead_charge_response": {
+        "imag": 0.36436108226672215,
+        "real": 0.21344285739934127
+      },
+      "total_charge_response": {
+        "imag": 0,
+        "real": 0
+      },
+      "ward_error": 7.769132128678417e-17
+    },
+    "frames_length60_eta003": {
+      "landau_y": {
+        "sigma_device": {
+          "imag": -0.0009054876201384603,
+          "real": -0.005495067280182994
+        },
+        "sigma_electric_contact": {
+          "imag": -2.3957224167372792e-18,
+          "real": -0.05123325654134861
+        },
+        "sigma_noncontact": {
+          "imag": -0.0009054876201384579,
+          "real": 0.045738189261165615
+        }
+      },
+      "orbital": {
+        "sigma_device": {
+          "imag": -0.0009054876201384728,
+          "real": -0.00549506728018323
+        },
+        "sigma_electric_contact": {
+          "imag": -9.578099970298547e-19,
+          "real": -0.05123325654134864
+        },
+        "sigma_noncontact": {
+          "imag": -0.0009054876201384718,
+          "real": 0.04573818926116541
+        }
+      },
+      "symmetric": {
+        "sigma_device": {
+          "imag": -0.0009054876201385783,
+          "real": -0.00549506728018305
+        },
+        "sigma_electric_contact": {
+          "imag": 4.531232694284873e-18,
+          "real": -0.051233256541348624
+        },
+        "sigma_noncontact": {
+          "imag": -0.0009054876201385828,
+          "real": 0.045738189261165574
+        }
+      }
+    },
+    "length_broadening_sequence": [
+      {
+        "absolute_error_to_keldysh": 0.0009268813608335034,
+        "eta": 0.02,
+        "length": 250,
+        "sigma_device": {
+          "imag": -0.0016411765579674663,
+          "real": -0.004480632176127007
+        }
+      },
+      {
+        "absolute_error_to_keldysh": 0.0008622366586536008,
+        "eta": 0.02,
+        "length": 350,
+        "sigma_device": {
+          "imag": -0.0015675821914261962,
+          "real": -0.004515423358649809
+        }
+      },
+      {
+        "absolute_error_to_keldysh": 0.0003015654788788097,
+        "eta": 0.01,
+        "length": 500,
+        "sigma_device": {
+          "imag": -0.0013918807416056173,
+          "real": -0.005064862977690272
+        }
+      }
+    ],
+    "static_abs_error": 4.1695468116785025e-13,
+    "static_full_E_finite_difference": {
+      "imag": 3.3711629619214253e-13,
+      "real": 0.002996376693709113
+    },
+    "static_isothermal_sigma": {
+      "imag": 1.1252982786922042e-17,
+      "real": 0.002996376693954493
+    }
+  },
+  "production": {
+    "absolute_error_to_keldysh": 0.0002123336769883288,
+    "eta": 0.005,
+    "five_point_B_derivative_length350_eta002": {
+      "imag": -0.004280408212469397,
+      "real": 0.007025618379405175
+    },
+    "interpretation": "Long finite-lead Lehmann benchmark; residual difference is finite-L/eta error and is not declared zero.",
+    "length": 1000,
+    "sigma_device": {
+      "imag": -0.0013736548306045593,
+      "real": -0.00517906197594141
+    }
+  }
+}
