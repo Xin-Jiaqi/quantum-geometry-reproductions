@@ -116,3 +116,13 @@ This is the single GitHub link to pass to the already-running local DeepSeek har
 - **Critical physical correction:** Gate4/5 synthetic AFM is *A-type layer-staggered* \`m tau_z sigma_z\`; **real MnPS3 has two opposite-spin Mn honeycomb sublattices within each layer**, so layer-odd spin is not the physical L2 Néel operator. Define source-mapped four-Mn sublattice projectors and \`F_theta=-dH_ex/dtheta\` before promoting any predicted layer torque to a magnetic-order response.
 - **Competition tightened:** 2025 *Nature Communications* layer-dependent vdW SOT; 2026 *Nature Communications* **20 Oct** THz-driven MnPS3 phonon/symmetry response; 2026 *Nature* **21 Oct** sublattice/octupole spin-transfer-torque switching in an AFM tunnel junction. Interlayer/local torque compensation, THz dynamics and spin-current imbalance are **not unoccupied general mechanisms**.
 - [Zero-compute read-only MnPS3 L2 site/mode contract and R1 SCF diagnostic plan](tasks/BD-MNPS3-R2P0-SITE-OPERATORS-DRAFT.md), **DRAFT ONLY**, not a job command. **R1 remains CLOSED**, and no R2 computing or restarts are approved/submitted.
+
+
+## R2-P0 approved read-only review (2026-10-22)
+
+The user approved **proceeding with read-only scientific analysis** of existing R1 evidence, **NOT new VASP/Slurm/WSL/Japan/para computation**. The stable [CURRENT task pointer](tasks/CURRENT.md) now links the [actionable R2-P0 instructions](tasks/BD-MNPS3-L2-R2P0-READONLY.md). The **local DeepSeek harness has not yet provided an execution receipt**.
+
+- [Publisher-verified four-paper 2025–26 competitor/novelty review](docs/BD_PEER_UPDATE_20261022_SOT_THz_OCTUPOLE.md): layer SOT in A-type FCGT; THz phonon-driven MnPS3 symmetry; coherent FePS3 magnetization; octupolar PtMn3 spin-torque tunnel junction.
+- [Four Mn site-projector algebra, source-hash gating and spin-space vs axial-spin checks](scripts/mnps3_l2_site_operator_gate.py): synthetic self-test performed; **no source-correct four-Mn map has yet been returned**, and the simple matrix representation is **not** accepted SOC magnetic group or PAW/Wannier spin vertex.
+- [Gate 6 physics analysis](docs/BD_GATE6_EXCHANGE_SOC_MAGNETIC_TEXTURE_AUDIT_20261022.md) remains model-only; unlike that *layer-A-type* model, actual MnPS3 has intralayer honeycomb Néel sublattices. The R2-P0 task is to recover R1 private plus/minus mapping, define correct \`F_theta=-dH_ex/dtheta\`, screen symmetry components and propose controlled SCF stabilization **without executing it**.
+- **R1_CLOSED remains immutable:** two real jobs ended at 2-hour scheduler TIMEOUT in the first SCF, neither electronically converged, no accepted magnetic moment/FE or response output.
