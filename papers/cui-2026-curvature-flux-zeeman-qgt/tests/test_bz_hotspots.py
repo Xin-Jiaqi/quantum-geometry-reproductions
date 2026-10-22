@@ -61,6 +61,15 @@ class BZHotspots(unittest.TestCase):
         self.assertAlmostEqual(d["selected_cancellation"],1.,places=14)
         self.assertAlmostEqual(d["top_share"],.5,places=14)
 
+    def test_symmetry_equivalent_component_ties_are_deterministic(self):
+        # Anti-symmetric xy and yx have equal physical magnitudes. A rounding
+        # perturbation cannot switch which tensor component gets diagnosed.
+        X=np.zeros((4,2,3),complex)
+        X[:,0,1]=1.-5e-13
+        X[:,1,0]=-1.
+        d=field_diagnostics(X,np.ones(4)/4)
+        self.assertEqual(d["component"],(0,1))
+
     def test_weighted_abs_triangle_inequality_all_tensor_components(self):
         H,V,S=hexagonal_symmetrized_model(K,"6")
         f=np.stack([local_transition_diagnostic(H,V,S)["even"]]*7)
