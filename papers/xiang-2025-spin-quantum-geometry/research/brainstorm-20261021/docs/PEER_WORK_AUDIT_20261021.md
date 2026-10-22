@@ -216,3 +216,21 @@ The goal now is **scientifically distinct, mode-resolved FE-stack-dependent elec
 **Additional NO-GOs:** A response with only two field inputs always has \(\mathrm{rank}K\le2\); increasing allowed coefficient dimension does **not** create additional independently excitable normal modes. For **real, static, orthonormally weighted C3-equivariant** \(K\), \(K^TK=\lambda I_2\) forbids linear polarization-direction dependence of the total local response norm; complex AC \(K^\dagger K=aI+b\,iJ\) may allow algebraic circular-helicity asymmetry but does **not** prove optical absorption. A genuine parent symmetry operation preserves site stabilizer conjugacy and orbit multiplicity, so the 3d ↔ (1a+1b+1c) toy **cannot be sold as an ordinary exact ±FE symmetry-partner switching**.
 
 **Verdict:** attractive high-value unit/negative-test for all-layer-group site-mode tools, but nothing yet publishable as **new** hidden spin physics. Mandatory next discriminator: true FE magnetic domain graph + source-backed site orbits/mode force + actual physical Kubo or magnon response, beyond 2018–2026 multipoles/hidden SOT/optical spin literature.
+
+
+## 2026-10-22 物理淘汰机制新增直接文献（源、算符、壁动力学同量对比）
+
+**科研总登记：[20 条主张 JSON](../data/BD_IDEA_REGISTRY_20261022.json)、[8 道 Kill Gates](BD_IDEA_ELIMINATION_GATES_20261022.md)、[G3 真 FE 壁和磁性模式候选](BD_G3_NEXT_HYPOTHESIS_20261022.md)。** 新文章来自出版社文章/摘要核对。对预设“普适”主张有直接先例不等于论文所有 SM 细节已完成对比。
+
+- [González-Hernández et al., *Non-relativistic torque and Edelstein effect in non-collinear magnets*, Nat. Commun. **15**, 7663 (2024)](https://doi.org/10.1038/s41467-024-51565-6). **最强直接重叠：** 局域磁子格投影的 Edelstein/交换力矩、非相对论自旋群、绝缘体，明确指出局域 torque 选择定则与总体 spin texture 不同。禁止将「local site spin→Néel torque」一般机制作为原创。
+- [*Local Magnetoelectric Effects as Predictors of Surface Magnetic Order*, PRX **15**, 021094 (2025)](https://doi.org/10.1103/7brd-lynv). 以 local ME/multipoles 预测表面 magnetic ordering，宏观禁戒和局域/边界允许的通用边界先例。
+- [Venderbos et al., *Topological spin multipolization and linear magnetoelectric coupling in two-dimensional antiferromagnets*, PRB **114**, 154414 (2026)](https://doi.org/10.1103/6gzb-4kwm). 2D AFM spin multipolization 的拓扑磁电机制，限制泛泛的 topology+spin ME 声明。
+- [Agarwal et al., *Shift photocurrent vortices from topological polarization textures*, npj 2D Mater. Appl. **9**, 43 (2025)](https://doi.org/10.1038/s41699-025-00552-6). polar moiré merons 产生 shift-current vortices、非阿贝尔 Berry、TB+DFT。**BD08 的同机制先例**。
+- [Su & Lin, *Topological sliding moiré heterostructure*, PRB **101**, 041113(R) (2020)](https://doi.org/10.1103/PhysRevB.101.041113). sliding synthetic dimensional Chern pumping。**BD09 的同机制先例**。
+- [Shen et al., *Magnetoelectric Torque in Polar Magnetic Bilayers*, PRL **136**, 016702 (2026)](https://doi.org/10.1103/l5fd-kpn5). 纯电驱动 polar magnetic bilayer force，SOC 不是必要条件。普通 pure-E torque 已有；区别若有必须是不同可测机制。
+- [Ke et al., *Superlubric Motion of Wavelike Domain Walls in Sliding Ferroelectrics*, PRL **135**, 046201 (2025)](https://doi.org/10.1103/jhlq-2dd7) 和 [*Domain-Wall-Mediated Interfacial Ferroelectric Switching*, Nano Lett. **26**, 1043 (2026)](https://doi.org/10.1021/acs.nanolett.5c05482). **端点静态 Seitz 连接不等于实际 FE 动力学过程**；畴壁种类/迁移已有完整研究。
+- [Skogvoll et al., *Local indirect magnetoelectric coupling at twin walls in CaMnO₃*, PRB **113**, 224102 (2026)](https://doi.org/10.1103/6y99-279q). 局域壁磁化与磁电效应对中心对称母相已给出先例。
+- [Li et al., *Ferroelectric switching of the anomalous Hall effect in two-dimensional multiferroics: Symmetry criteria and material validation*, PRB **113**, 195431 (2026)](https://doi.org/10.1103/82nf-jh6z). 磁序不变的 FE↔AHE magnetic-space-group 标准，禁止泛泛宣称首次找到 FE-switchable AHE 规则。
+- [Lu et al., *Nonvolatile electrical control of spin splitting via altermagnets with sliding ferroelectricity*, PRB **114**, 094423 (2026)](https://doi.org/10.1103/fvdw-j1mc) 和 [Pan et al., *Multistate manipulation of charge-spin conversion*, PRB **114**, 115135 (2026)](https://doi.org/10.1103/np2g-86h3). 更加直接的 spin-layer/SOC/FE 调控先例。
+
+**科学状态:** G3 真 FE 移动壁 × magnetic-site mode 力矩是 **OPEN_HYPOTHESIS** 而非已找到新理论；只有材料/结构壁证据、源-观测算符、磁序、同量公式、反事实与读出全部通过，才可能提升为物理候选。R1 CLOSED，无新算力授权。
