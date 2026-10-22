@@ -116,3 +116,14 @@ Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and
 | **3. GitHub and CI** | PR #69 **merged** (main squash commit b60956d18596a1b99bcb7cd885ac6273c2b20444); both Python 3.11 and 3.12 **159/159 PASS** with full Round20 audit (GitHub Actions run 39746316981). Scientific audit and frozen data are on main; central Physics Registry updated via companion documentation PR. |
 
 **Important:** Group 6 yy even cancellation 98.575% (hex order5), compared with group 6m'm' xy 21.12%; neither physical net has been demonstrated fully converged. Group 6 active-transition detuning min ~4.44 while min sampled intercluster gap ~0.011; 'active' uses a threshold only in diagnostic reports. Next test high-order adaptive sampling focused on cancellation error bars and true global gap extrema, before material computation.
+
+
+## Round21 — thermal band-pair partition supplementary acceptance
+
+| Workstream | Current status |
+|---|---|
+| Paper reproduction | Existing clean interband Kubo response further decomposed by exact cross-mu versus same-side transitions; whole original paper remains PARTIAL, BZ convergence UNVERIFIED. |
+| Physics capability | New occupation_partition.py partitions every directed intercluster term while preserving arbitrarily small occupation differences; fixed-H thermal scans and independent prior Kubo are the validation gates. Prior bz_hotspots.py remains authoritative for spatial hotspots. |
+| GitHub | Round21 PR #74: 8 new tests (159 prior → **167 total**); Python 3.11 and 3.12 both **PASS**, plus reproducible audit in Actions run 39748027692. Frozen synthetic JSON in results/frozen/round21_fermi_sector_audit.json. |
+
+The model group-6 hexagon-order8 allowed xx has cancellation factor ~8265, with cross-mu net -2.007e-7 and same-side net 6.025e-7, adding to total 4.018e-7. Thermal factor scans at fixed Hamiltonian give strong same-side response variation, but none of these are converged real-material observables. Next physics gate: analytic interband cancellation sum rule and consistent BZ convergence tests.

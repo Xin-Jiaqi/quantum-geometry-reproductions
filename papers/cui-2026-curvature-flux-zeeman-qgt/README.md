@@ -102,4 +102,4 @@ near small-gap resonances. The integration uses existing hexagonal and
 primitive BZ nodes, not a new symmetry-projected quadrature. See
 [Round21 scientific acceptance](ROUND21_OCCUPATION_PARTITION.md) and
 [reproducible sector audit](scripts/audit_occupation_partition.py).
-Eight new tests; total target 167. BZ convergence remains UNRESOLVED.
+Eight new tests; actual CI **167/167 PASS** on Python 3.11/3.12 (Actions run 39748027692). Frozen data: results/frozen/round21_fermi_sector_audit.json. BZ convergence remains UNRESOLVED.
