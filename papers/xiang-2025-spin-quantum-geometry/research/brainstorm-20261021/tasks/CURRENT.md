@@ -99,3 +99,8 @@ The user raised DFT cost/uncertainty of a real domain. [**G3 ROI and scientific 
 **New completed non-DFT test:** a three-generator ideal bilayer (C3z, vertical mx, horizontal layer-swapping mz) admits precisely one \`relative-slide u × in-plane current j → layer-odd Sz\` FIRST-order invariant, while forbidding its zero-slide term; 4×4 constraint SVD checked. This is **not** a new physical mechanism; gamma coefficient unknown. Test scripts archived in [group-theory PR #32](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/pull/32).
 
 **Next scientific step (not a compute task):** inspect the original LEE source SM equation-by-equation for same \`d(chi_S,j)/du\`, then calculate a single controlled \`chi(u)\` curve in a symmetry-compatible SOC/transport model. No DFT/HPC/Slurm authorized. MnPS3 R1 CLOSED, separate R2-P0 still READ-ONLY, not auto-dispatched.
+
+
+## 2026-10-22 BD25 exact model test and next evidence gate
+
+[Source-model audit and dimensionless Boltzmann baseline](../docs/BD25_LEE_MODEL_AUDIT_20261022.md): the published LEE Eq. (3) has no \(S_z\) texture, hence \(\chi_{S_-^z,j_y}=0\) identically in its band-diagonal Boltzmann regime; scalar registry-dependent \(t_\perp\) or \(\Delta\) cannot test the earlier proposed slide derivative. This narrows the problem rather than invalidating the symmetry result. BD25 now has status BLOCKED_EVIDENCE: it needs a source-backed spinful model with both \(S_z\) matrix elements and microscopic \(\partial_u H\). Do not add a free spinful hopping merely to force nonzero \(\gamma\). Original LEE PRL is the closest framework; its SM still needs equation-level overlap review. No DFT/Slurm/WSL/Japan task.
