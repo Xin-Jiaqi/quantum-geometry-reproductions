@@ -95,3 +95,8 @@ The new cluster module is **VERIFIED for the declared clean interband cluster-fl
 The new hexagonal module is **VERIFIED for synthetic periodic models and symmetry checks**: triangular reciprocal periodicity, Cartesian velocity conversion, actual first Wigner-Seitz hexagon (area \(2\sqrt3\pi^2\)), fully D6-symmetric quadrature, local complex-frequency Kubo covariance and integrated even/odd tensor projection for selected groups. BZ order-3 output is not convergence evidence.
 
 **137/137 tests pass** in Python 3.11 and 3.12. Real Wannier spin/position, collision/contact terms, non-Abelian metallic KME, converged observable, source Table I and SI response remain **UNRESOLVED/PARTIAL**. See ROUND17_NONABELIAN_HEX_BZ.md.
+
+
+## v9 · Round20: k-space cancellation and occupied-transition diagnostics
+
+VERIFIED for the bounded clean cluster-interband synthetic model: independent analytic even/odd band-pair formula, agreement with the previous causal Kubo at single k and throughout both BZ domains, weighted absolute-local integrals, selected-component cancellation, sampled gaps and diagnostic occupancy/resonance distances. The nonphysical response-truncation threshold error and symmetry-component floating tie were caught and repaired. In group 6 the specified yy even component cancels by ~98.6% at hexagonal order5; group 6m'm' xy cancels by ~21.1%. These are **illustrative finite-grid** results, not a universal symmetry theorem nor a converged material susceptibility. 159/159 tests PASS in Python 3.11/3.12; full paper PARTIAL. [Acceptance and limits](ROUND20_HOTSPOTS_AND_CANCELLATION.md).

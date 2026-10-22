@@ -105,3 +105,14 @@ Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and
 - Source PR #67 merged; main squash commit `34ef72a469e61d7dc8efcccc737cb86d745e0834`.
 - Final head before squash `bd82b5a6103b729f7d8242df1d870d0943182efe`; Actions 39743169120 successfully ran **145 tests and Round19 independent primitive-cell audit** in both Python 3.11 and Python 3.12.
 - Central Physics Registry explicitly labels the primitive-cell method VERIFIED but the numerical BZ tensor convergence UNRESOLVED. Full paper remains PARTIAL.
+
+
+## Round 20: spectral k-hotspot and cancellation diagnosis (2026-10-22)
+
+| Workstream | Accepted method / remaining gate |
+| --- | --- |
+| **1. Paper reproduction** | Exact algebraic interband even/odd pair decomposition and finite-grid BZ cancellation studied independently. This explains potential sensitivity of tiny net values to discretization; full source Table I, Eq.(19) material normalization and full paper still PARTIAL. |
+| **2. Physics capabilities** | Added k-resolved gap, active-occupation detuning, weighted hotspot concentration, complex integral absolute magnitude, cancellation ratio, and fixed-observable cross-domain comparisons. Diagnostic thresholds never truncate physical terms. 14 new tests, 159 total. |
+| **3. GitHub and CI** | PR #69 branch passes Python 3.11/3.12 with 159/159 tests, audit script executed; frozen numerical JSON and scientific acceptance in Round20 release. Final merge status recorded separately after GitHub confirmation. |
+
+**Important:** Group 6 yy even cancellation 98.575% (hex order5), compared with group 6m'm' xy 21.12%; neither physical net has been demonstrated fully converged. Group 6 active-transition detuning min ~4.44 while min sampled intercluster gap ~0.011; 'active' uses a threshold only in diagnostic reports. Next test high-order adaptive sampling focused on cancellation error bars and true global gap extrema, before material computation.

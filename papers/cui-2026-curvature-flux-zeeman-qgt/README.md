@@ -83,3 +83,8 @@ demonstration. 18 new unit tests bring the limited paper package to 118.
 ## v8: reciprocal primitive cell cross-check (Round19)
 
 [primitive_bz.py](src/flux_lab/primitive_bz.py) integrates the same periodic model on a reciprocal parallelogram using independent Gauss-Legendre and shifted midpoint schemes, without projection of the result. Compare full complex even/odd tensors to the D6-symmetrized hexagonal Wigner-Seitz calculation. [Scope](ROUND19_PRIMITIVE_BZ_CROSSCHECK.md) and [audit](scripts/audit_round19.py). Eight new tests bring the isolated suite to **145/145 PASS on Python 3.11 and 3.12** (Actions 39742758842), with reproducible audit results in results/frozen/round19_primitive_bz_audit.json. Numerical BZ convergence remains **UNRESOLVED**.
+
+
+## v9: Round20 k-resolved gap and hotspot diagnostics
+
+[bz_hotspots.py](src/flux_lab/bz_hotspots.py) independently evaluates the even/odd complex interband pair response and diagnoses band gaps, occupation contrasts, weighted k hotspots, and the cancellation of local contributions in the BZ integral. **14 new tests; 159 total PASS** in Python 3.11/3.12. [Scientific scope](ROUND20_HOTSPOTS_AND_CANCELLATION.md), [frozen audit](results/frozen/round20_khotspot_cancellation.json), [audit script](scripts/audit_round20.py). These model-method tests do **not** show the net BZ response is numerically converged.
