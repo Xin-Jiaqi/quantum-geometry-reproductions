@@ -1,3 +1,5 @@
+**User-prioritized follow-on:** once the zero-job band correction and crossgap pseudo-spin screen finish, continue to [Stage8m: rough real-WSe2 static-response pilot](STAGE8M_DEEPSEEK_ROUGH_DFT_RESPONSE_PILOT.md). That task allows at most two *post-processing-only* runs from the existing WAVECARs to generate MMN/SPN/EIG and a coarse Bloch-space Wilson estimate; it does not authorize new SCF/NEB/k-mesh calculations. The purpose is to decide quickly whether the material idea has a stable signal worth a layer-odd operator study.
+
 # Stage8l | DeepSeek harness 单文件自主交接（仅使用已有 WAVECAR，零 PBS 作业）
 
 **研究分支：** research/bsf-nmee-stage7-sw-gate-20261020，仓库 Xin-Jiaqi/quantum-geometry-reproductions。
