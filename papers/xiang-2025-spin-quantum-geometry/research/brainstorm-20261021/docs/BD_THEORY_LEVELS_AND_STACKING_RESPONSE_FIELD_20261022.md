@@ -103,3 +103,24 @@ For every future idea, record separately:
 - evidence status (symmetry allowed, model nonzero, material validated, or experimentally measurable).
 
 Do not mark a direction as NO-GO because a related example exists. Mark NO_GO_CLAIM only when the registered proposition itself is pre-empted or disproved. A failed model test should be MODEL_NO_GO for that model, not for the whole physical direction.
+
+
+## 6. A concrete global consequence worth testing: symmetry-enforced zeros on the registry torus
+
+This is a more useful first target than merely restating the local tensor-product rule.
+
+For two identical layers, the relative in-plane registry lives on the configuration-space torus
+\[
+\mathcal T=\mathbb R^2/\Lambda,
+\]
+where \(\Lambda\) is the in-plane Bravais lattice. If the horizontal mirror exchanges the two layers, its action is \(\boldsymbol\delta\mapsto-\boldsymbol\delta\) modulo \(\Lambda\).
+
+For the layer-odd out-of-plane axial spin \(S_-^z=S_T^z-S_B^z\), the ordinary axial-spin factor under \(m_z\) is \(+1\), but the layer permutation contributes \(-1\). An in-plane polar current is \(m_z\)-even. Therefore the response must satisfy
+\[
+\chi_{S_-^z,\mathbf j_\parallel}(-\boldsymbol\delta)
+=-\chi_{S_-^z,\mathbf j_\parallel}(\boldsymbol\delta).
+\]
+
+Any registry fixed by this involution, \(\boldsymbol\delta_*=-\boldsymbol\delta_*\pmod\Lambda\), obeys \(2\boldsymbol\delta_*\in\Lambda\). In a primitive 2D Bravais cell there are four such points: \(0\), \(\mathbf a_1/2\), \(\mathbf a_2/2\), and \((\mathbf a_1+\mathbf a_2)/2\). **If each point really preserves the layer-swapping mirror in the chosen structure and the response protocol respects the stated symmetry, the layer-odd \(S_z\) current response is symmetry-forced to vanish at each point.** Around each fixed point, the response is odd in local displacement, so every even Taylor order vanishes; the little group at that particular registry may forbid additional odd orders.
+
+This is a candidate general-theory corollary: it predicts a *set* of response zeros across the registry torus, not just a zero at one reference stacking. It is still an elementary consequence of covariance, and it may already be known in related configuration-space work. Its value depends on whether the multi-registry result, correct layer permutation, and response-specific zero set are absent from the closest prior theory. First validate the symmetry of each registry, then compare the result with the LEE supplemental material and stacking-ferroelectricity configuration-space literature.
