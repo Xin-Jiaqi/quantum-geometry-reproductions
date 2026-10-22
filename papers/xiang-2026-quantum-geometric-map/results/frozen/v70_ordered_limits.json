@@ -1,0 +1,179 @@
+{
+  "version": "v70",
+  "model": "same device polarization-current observable; explicit finite tight-binding leads; independent full-Hamiltonian Lehmann response",
+  "scientific_status": "VERIFIED finite-L Lehmann/Ward identities; CONDITIONAL joint L/eta sequence; continuum discrepancy remains finite and original Xiang source remains PARTIAL",
+  "frequencies": [
+    0.2,
+    0.29,
+    0.4
+  ],
+  "keldysh_reference": {
+    "0.20": {
+      "mixed_dB_sigma_device": {
+        "imag": 0.001347914592305371,
+        "real": -0.002934223825273885
+      },
+      "sigma_device": {
+        "imag": 0.0017566200873536525,
+        "real": -0.0027055407171655485
+      }
+    },
+    "0.29": {
+      "mixed_dB_sigma_device": {
+        "imag": -0.004146290848383346,
+        "real": 0.007070053900131344
+      },
+      "sigma_device": {
+        "imag": -0.001194257399094567,
+        "real": -0.005292649615898412
+      }
+    },
+    "0.40": {
+      "mixed_dB_sigma_device": {
+        "imag": -0.005990459447683793,
+        "real": -0.0064301010585719
+      },
+      "sigma_device": {
+        "imag": -0.005990459447683793,
+        "real": -0.0064301010585719
+      }
+    }
+  },
+  "quick_sequence": {
+    "0.20": [
+      {
+        "length": 250,
+        "eta": 0.02,
+        "sigma_device": {
+          "real": -0.0022767443915971616,
+          "imag": 0.0011081867417492412
+        },
+        "absolute_error": 0.0007773879935480609
+      },
+      {
+        "length": 350,
+        "eta": 0.02,
+        "sigma_device": {
+          "real": -0.002272187134129522,
+          "imag": 0.0010922649355341557
+        },
+        "absolute_error": 0.0007931980179496599
+      }
+    ],
+    "0.29": [
+      {
+        "length": 250,
+        "eta": 0.02,
+        "sigma_device": {
+          "real": -0.004480632176127007,
+          "imag": -0.0016411765579674663
+        },
+        "absolute_error": 0.0009268813608335034
+      },
+      {
+        "length": 350,
+        "eta": 0.02,
+        "sigma_device": {
+          "real": -0.004515423358649809,
+          "imag": -0.0015675821914261962
+        },
+        "absolute_error": 0.0008622366586536008
+      }
+    ],
+    "0.40": [
+      {
+        "length": 250,
+        "eta": 0.02,
+        "sigma_device": {
+          "real": -0.005442130710628829,
+          "imag": -0.005973829456182133
+        },
+        "absolute_error": 0.0010600489469965277
+      },
+      {
+        "length": 350,
+        "eta": 0.02,
+        "sigma_device": {
+          "real": -0.005566301428908829,
+          "imag": -0.005995179926847944
+        },
+        "absolute_error": 0.0009084362483050725
+      }
+    ]
+  },
+  "limit_path": {
+    "medium": {
+      "length": 500,
+      "eta": 0.01
+    },
+    "production": {
+      "length": 1000,
+      "eta": 0.005
+    },
+    "warning": "L and eta must be varied jointly; intermediate errors need not decrease monotonically at every L due discrete finite-size resonances.",
+    "eta_role": "eta is a spectral resolution for discrete transitions, not a phenomenological reservoir relaxation rate."
+  },
+  "medium_sequence": {
+    "0.20": {
+      "sigma_device": {
+        "real": -0.002467235153016903,
+        "imag": 0.001347510113849542
+      },
+      "absolute_error": 0.0004734559243738937
+    },
+    "0.29": {
+      "sigma_device": {
+        "real": -0.005064862977690272,
+        "imag": -0.0013918807416056173
+      },
+      "absolute_error": 0.0003015654788788097
+    },
+    "0.40": {
+      "sigma_device": {
+        "real": -0.0060700388228413366,
+        "imag": -0.006209125199078113
+      },
+      "absolute_error": 0.0004212593044697069
+    }
+  },
+  "production_sequence": {
+    "0.20": {
+      "sigma_device": {
+        "real": -0.0026752518093849237,
+        "imag": 0.0016367953251996414
+      },
+      "absolute_error": 0.0001235936550143595,
+      "relative_error": 0.0383
+    },
+    "0.29": {
+      "sigma_device": {
+        "real": -0.00517906197594141,
+        "imag": -0.0013736548306045593
+      },
+      "absolute_error": 0.0002123336769883288,
+      "relative_error": 0.0391
+    },
+    "0.40": {
+      "sigma_device": {
+        "real": -0.006278299918765634,
+        "imag": -0.006127153776014811
+      },
+      "absolute_error": 0.00020427657004918473,
+      "relative_error": 0.0232
+    }
+  },
+  "end_cap_control_L500_eta001_omega029": {
+    "-1.1": {
+      "real": -0.005063752494299363,
+      "imag": -0.0013701060501129256
+    },
+    "0.0": {
+      "real": -0.005064862977690272,
+      "imag": -0.0013918807416056173
+    },
+    "+1.1": {
+      "real": -0.005063752505808983,
+      "imag": -0.001370106057410099
+    }
+  }
+}
