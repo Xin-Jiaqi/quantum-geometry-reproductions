@@ -83,3 +83,10 @@ The previously approved **MnPS3 R2-P0 remains a separate READ-ONLY private evide
 **G3 next hypothesis, not yet an ACTIVE compute task:** [real sliding FE domain-wall / magnetic-site mode force, specific closest peer checks](../docs/BD_G3_NEXT_HYPOTHESIS_20261022.md). Distinguish **real FE wall dynamics** from endpoint Seitz connection, ordinary local SOT/multipoles and electric bilayer torque. No real source-backed magnetic FE wall or material Kubo has been accepted; status is OPEN_HYPOTHESIS / BLOCKED_EVIDENCE, not reported discovery.
 
 **Compute control unchanged:** R1 CLOSED; R2-P0 remains independently approved READ-ONLY; no Slurm, WSL, para, Japan or new VASP task is authorized by this addition. Reading this note does not dispatch a local DeepSeek task.
+
+
+## 2026-10-22 G3 cost decision — no wall DFT; method-only registry gradient
+
+The user raised DFT cost/uncertainty of a real domain. [**G3 ROI and scientific preemption report**](../docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md): full magnetic FE-wall DFT/torque is **DEFERRED**; even the two primitive MnPS3 R1 SCFs reached walltime without convergence. Existing FE wall Edelstein, magnetic sliding bilayer spin/orbital Edelstein, phonon-driven Edelstein and actual sliding-mode coherent dynamics block broad novelty. [24-claim idea registry](../data/BD_IDEA_REGISTRY_20261022.json) updated.
+
+**New zero-DFT method prototype** in [group toolkit Draft PR #32](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/pull/32): registry-gradient \`Hom_H(U⊗E,O)\` vs clamped \`Hom_H(E,O)\` with explicit site/relative-layer representation warning. **Scientific next gate, not a compute authorization:** verify \`U\` for two source-backed BSF cases, one with and one without layer exchange; test physical response novelty before sample SCF. The old MnPS3 R2-P0 is independently READ_ONLY and R1 remains CLOSED. No Slurm, VASP, WSL, Japan or additional billing authorized.
