@@ -247,6 +247,16 @@
         "novelty": "UNRESOLVED"
       },
       "compute_authorized": false
+    },
+    {
+      "id": "BD26",
+      "claim": "Generic statement that interlayer sliding can tune a current-induced Edelstein spin response is new",
+      "status": "NO_GO_CLAIM",
+      "reason": "PRB 114, 125129 (2026) reports stacking-tunable Edelstein response in a 2D in-plane ferromagnetic semiconductor; Dong et al. pss RRL 2024 report current-induced spin/orbital polarization tuned by sliding in magnetic CrI3 bilayer. This rejects only the generic claim. The specific nonmagnetic layer-odd Sz derivative remains distinct in observable/material but requires a source-backed SOC+registry model and exact LEE-SM comparison.",
+      "source": "docs/BD25_LEE_MODEL_AUDIT_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false,
+      "literature_role_for_BD25": "INTRODUCTION_STRONG_NEIGHBOR_NOT_CONFIRMED_DIRECT"
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
