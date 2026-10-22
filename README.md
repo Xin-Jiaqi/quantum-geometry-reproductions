@@ -211,3 +211,7 @@ New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINV
 ### v70: multi-frequency finite-lead/continuum ordered-limit audit
 
 [v70 science and project progress](papers/xiang-2026-quantum-geometric-map/docs/MULTIFREQUENCY_ORDERED_LIMITS_V70.md). Three matching device-current observables at ω=0.20/0.29/0.40 show independently evaluated Hermitian finite-lead Lehmann results approaching elastic semi-infinite Keldysh benchmarks along a prescribed joint (L,η) sequence. L=1000/η=.005 residuals are **3.83%, 3.91%, 2.32%**, not zero; intermediate finite-size changes can be nonmonotonic. Includes long-lead boundary-cap control. **No original Xiang PRB bulk transport reproduction** is claimed, source status **PARTIAL**.
+
+### v71: source-observable and finite-lead current-contact no-go
+
+[Bounded v71 scientific report](papers/xiang-2026-quantum-geometric-map/docs/SOURCE_OBSERVABLE_BOUNDARY_AND_WANNIER_GATE_V71.md). The internally defined v68–v70 finite-device polarization current omits the lead-contact part of the **full** Heisenberg current of the same device-supported bounded polarization. Under finite-system isothermal equilibrium the device E derivative +.002996376694233 is exactly offset by contact −.002996376694233, whereas the complete bounded-polarization current E derivative vanishes. Source SM Eq20→31 signed spin contraction and helicity covariance independently rechecked, without author corrections. **This is NOT full transport, not a material Wannier model, not original PRB complete; Xiang source PARTIAL.**

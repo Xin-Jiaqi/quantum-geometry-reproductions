@@ -1,0 +1,113 @@
+{
+  "version": "v71",
+  "model_status": "VERIFIED finite full/device/contact and literal source-index algebra; Xiang bulk article PARTIAL",
+  "source_sm_sha256": "9b0b8603d13962e100cc059bf4d96b91aa37062360d13decd1cb2eda495332c4",
+  "source_helicity": {
+    "hamiltonian_equivalence_error": 0,
+    "holding_spin_fixed_error": 2.8284271247461903,
+    "source_status": "MAIN_SM_HELICITY_SIGN_WITH_PHYSICAL_SPIN_FIXED_OPEN",
+    "transformed_spin_error": 0
+  },
+  "literal_sm_sign": {
+    "algebra_residual": 1.1102230246251565e-16,
+    "direct_eq20": {
+      "real": -0.2039672645266738,
+      "imag": 0
+    },
+    "inferred_Z": {
+      "real": -0.20396726452667369,
+      "imag": 0
+    },
+    "printed_eq31": {
+      "real": 0.20396726452667369,
+      "imag": 0
+    },
+    "sign_discrepancy": {
+      "real": -0.4079345290533475,
+      "imag": 0
+    }
+  },
+  "frame_current_responses": {
+    "symmetric": {
+      "dynamic_contact": {
+        "real": 0.035445444106773444,
+        "imag": -0.01057845705355926
+      },
+      "dynamic_device": {
+        "real": -0.00531064413434898,
+        "imag": -0.007389851856802975
+      },
+      "dynamic_full": {
+        "real": 0.030134799972424464,
+        "imag": -0.017968308910362236
+      },
+      "dynamic_ward_residual": 6.245004513516506e-17,
+      "static_isothermal_contact": {
+        "real": -0.0029963766942326924,
+        "imag": 0
+      },
+      "static_isothermal_device": {
+        "real": 0.0029963766942326525,
+        "imag": -2.4111432334549312e-17
+      },
+      "static_isothermal_full": {
+        "real": -3.9898639947466563e-17,
+        "imag": -2.4111432334549312e-17
+      }
+    },
+    "landau_y": {
+      "dynamic_contact": {
+        "real": 0.035445444106773485,
+        "imag": -0.010578457053559129
+      },
+      "dynamic_device": {
+        "real": -0.005310644134349139,
+        "imag": -0.007389851856803057
+      },
+      "dynamic_full": {
+        "real": 0.030134799972424346,
+        "imag": -0.017968308910362184
+      },
+      "dynamic_ward_residual": 4.96749206466014e-17,
+      "static_isothermal_contact": {
+        "real": -0.002996376694232715,
+        "imag": 6.938893903907228e-18
+      },
+      "static_isothermal_device": {
+        "real": 0.0029963766942326248,
+        "imag": 5.297210304158168e-18
+      },
+      "static_isothermal_full": {
+        "real": -9.020562075079397e-17,
+        "imag": 1.2236104208065397e-17
+      }
+    },
+    "orbital": {
+      "dynamic_contact": {
+        "real": 0.035445444106773624,
+        "imag": -0.010578457053559191
+      },
+      "dynamic_device": {
+        "real": -0.005310644134348945,
+        "imag": -0.007389851856803009
+      },
+      "dynamic_full": {
+        "real": 0.03013479997242468,
+        "imag": -0.0179683089103622
+      },
+      "dynamic_ward_residual": 8.333897564733124e-17,
+      "static_isothermal_contact": {
+        "real": -0.002996376694232696,
+        "imag": 0
+      },
+      "static_isothermal_device": {
+        "real": 0.0029963766942327774,
+        "imag": 4.082642411463896e-18
+      },
+      "static_isothermal_full": {
+        "real": 8.153200337090993e-17,
+        "imag": 4.082642411463896e-18
+      }
+    }
+  }
+}
