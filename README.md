@@ -183,3 +183,8 @@ New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINV
 ### v64: independent virtual-voltage probe in QWZ
 
 [Independent v64 weak-probe physical test](papers/xiang-2026-quantum-geometric-map/docs/QWZ_VIRTUAL_PROBE_ORDERED_LIMITS_V64.md) builds the two-terminal QWZ Green function with **no voltage-probe selfenergy**, then determines the positive-infinitesimal-coupling floating-voltage limit from hypothetical lead spectral weights. Finite-lambda deviations are quadratic. Probe position/size and regulator restrictions remain visible, so no bulk Kubo–NEGF equivalence or original orbital E×B is claimed. Xiang paper **PARTIAL**.
+
+
+### v65: fully specified projected finite-orbital position, static Maxwell E/B
+
+[Independent physical acceptance](papers/xiang-2026-quantum-geometric-map/docs/STATIC_ORBITAL_EB_MAXWELL_V65.md): finite Peierls orbital B plus **supplied offdiagonal projected position dipoles** yields a static E/B mixed grand-potential derivative. A B-dependent frame changes the density contribution and position contact separately, while their sum is invariant. Canonical fixed-N corrections distinguish origin artifacts at fixed chemical potential. This is **not** transport or Xiang orbital mixed E/B proof, which remains PARTIAL.
