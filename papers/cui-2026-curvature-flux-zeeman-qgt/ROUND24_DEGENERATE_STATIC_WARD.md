@@ -90,3 +90,33 @@ essential negative oracle for subsequent non-equilibrium calculations.
     python scripts/audit_degenerate_static_ward.py
 
 The original research paper's completion status remains **PARTIAL**.
+
+
+## Independent CI correction and frozen reference
+
+The first CI run correctly **FAILED** five novel tests because the
+eigenspace operator contractions used incorrect indices instead of
+U^dagger V U and U^dagger S U. The bug broke unitary covariance,
+energy-shift invariance and both independent physical-difference
+oracles. It was corrected without changing the prior 188 tests.
+
+After that correction, Actions run 39779559489: Python 3.11 and 3.12
+both ran **202/202 tests PASS** and the full scripted audit. The
+executed 3.12 audit is frozen in
+results/frozen/round24_degenerate_static_ward_audit.json and an
+additional regression test compares its full static 2-by-3 response at
+three k points, targeting 203 tests on the final source.
+
+For k=(0,0) with two exact Kramers doublets, mu=0.15,
+T=0.22, kappa=0.7, natural units:
+
+- spectral projector vs band-pair Fréchet: 7.02081e-18;
+- independent finite uniform B derivative: 1.17030e-11;
+- independent k derivative of spin density: 5.47129e-11;
+- maximum intracluster static response component: 7.33779e-3;
+- maximum complete static component: 1.39812e-1.
+
+The nonzero intracluster contribution is a true degenerate-subspace
+Fermi derivative, not a phenomenological eta/tau relaxation.
+All frozen numbers are model-specific. Neither a degenerate finite-
+frequency KME nor any real-material observable is established.

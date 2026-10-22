@@ -150,6 +150,6 @@ nondegenerate formula, this method does not reject a Kramers doublet.
 
 [Scientific scope](ROUND24_DEGENERATE_STATIC_WARD.md) ·
 [executable audit](scripts/audit_degenerate_static_ward.py).
-14 new tests target **202 paper-specific tests** on the isolated Cui
+15 new tests (including frozen-audit regression) target **203 paper-specific tests** on the isolated Cui
 package; require actual Python 3.11/3.12 CI before promoting to VERIFIED.
 Not dynamic metallic KME; original full paper **PARTIAL**.

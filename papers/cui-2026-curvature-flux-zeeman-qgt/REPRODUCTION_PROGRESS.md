@@ -183,7 +183,7 @@ collision/contact terms remain outstanding.
 | --- | --- |
 | Paper | Exact Kramers-degenerate **equilibrium static** no-current Ward as an independent negative control; whole paper PARTIAL. |
 | Physics | Fréchet Fermi divided difference, spectral projector / within-doublet gauge invariance, local field and momentum derivative oracles, smooth near-degenerate limit. |
-| GitHub | Isolated Round24 code + 14 tests, static audit and scope report; target 202/202, to be certified by both Python 3.11 and 3.12 CI before merging. |
+| GitHub | Isolated Round24 code + 15 tests (including frozen regression), static audit and scope report; target 203/203, to be certified by both Python 3.11 and 3.12 CI before merging. |
 
 The earlier Round23 static formula deliberately rejected degeneracies;
 Round24 will extend the equilibrium method without calling any
