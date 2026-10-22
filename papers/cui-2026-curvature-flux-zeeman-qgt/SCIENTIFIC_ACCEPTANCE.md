@@ -86,3 +86,12 @@ branch under antiunitary is full -z, NOT fixed positive eta at -omega.
 non-Abelian degenerate bands, hexagonal crystal BZ, physical scattering,
 real Wannier spin/position and SI response remain PARTIAL or blocked.
 [Scope](ROUND16_ALL31_MICROSCOPIC.md).
+
+
+## v7 · Round 17: non-Abelian clusters and first hexagonal BZ
+
+The new cluster module is **VERIFIED for the declared clean interband cluster-flat protocol**: exact Kramers doublets, global basis covariance, arbitrary within-cluster gauge rotations, projector QGT trace/eigenvalue invariance, independent orbital Liouville, and TRIM even/odd frequency checks. Near-degenerate clusters are flattened to their mean energy; do not generalize this to intraband metallic response.
+
+The new hexagonal module is **VERIFIED for synthetic periodic models and symmetry checks**: triangular reciprocal periodicity, Cartesian velocity conversion, actual first Wigner-Seitz hexagon (area \(2\sqrt3\pi^2\)), fully D6-symmetric quadrature, local complex-frequency Kubo covariance and integrated even/odd tensor projection for selected groups. BZ order-3 output is not convergence evidence.
+
+**137/137 tests pass** in Python 3.11 and 3.12. Real Wannier spin/position, collision/contact terms, non-Abelian metallic KME, converged observable, source Table I and SI response remain **UNRESOLVED/PARTIAL**. See ROUND17_NONABELIAN_HEX_BZ.md.
