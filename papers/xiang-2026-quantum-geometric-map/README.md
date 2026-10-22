@@ -359,3 +359,8 @@ The new sweep rescales only top/bottom voltage-probe coupling amplitudes (C	o\la
 ## v64: unperturbed two-drive virtual-voltage probe oracle
 
 [Scientific report](docs/QWZ_VIRTUAL_PROBE_ORDERED_LIMITS_V64.md) | [implementation](src/qgmap/qwz_virtual_probe_v64.py) | [26 gates](tests/test_qwz_virtual_probe_v64.py) | [frozen numeric output](results/frozen/v64_virtual_probe_ordered_limits.json). Rather than extrapolating a floating reading at vanishing coupling, construct the independent two-drive G0 and finite spectral weights of a proposed physical QWZ strip probe to obtain the **lambda→0+**, *not lambda=0*, voltage limit. Size/contact/eta dependence remains; original orbital mixed EB and true bulk dc limit **UNRESOLVED**, original paper **PARTIAL**.
+
+
+## v65: off-diagonal projected orbital position and static Maxwell benchmark
+
+[Methods](docs/STATIC_ORBITAL_EB_MAXWELL_V65.md) | [module](src/qgmap/equilibrium_orbital_eb_v65.py) | [40 tests](tests/test_equilibrium_orbital_eb_v65.py) | [frozen evidence](results/frozen/v65_static_equilibrium_orbital_eb.json). The complete **STATIC** mixed electric/magnetic grand-potential derivative uses a supplied finite projected position matrix including off-diagonal orbital dipoles and its B-dependent position-contact term. Grand-canonical and canonical/fixed-N ensembles differ; the latter restores invariance under adding an identity to polarization. Independent full free-energy and chemical-potential-refitted finite differences verify three representations. **This is NOT source-paper dynamic orbital EB conductivity, which remains UNRESOLVED; source audit PARTIAL.**
