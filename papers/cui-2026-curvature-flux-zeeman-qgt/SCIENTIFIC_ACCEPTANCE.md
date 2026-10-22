@@ -70,3 +70,19 @@ zeros and permitted responses, not converged material numbers.
 20 additional tests / 100 total. The other magnetic groups, SI observable
 KME, dissipative collisions and actual Wannier spin operators remain
 unverified. [Scope](ROUND15_ANTIUNITARY_MICROSCOPIC.md).
+
+
+## v6: all-31 local generator-to-microscopic bridge
+
+31/31 2D MPG projective real-spin generator checks plus generic-point
+4-band Kubo χ_JB, α_ME symmetry covariance, 62/62 even/odd in-plane
+candidate-rank comparisons, seven independent orbital-basis Liouville
+cross-checks and five selected square BZ acceptance models. Crucial:
+the catalog real-space R is distinct from **Q=(-1)^anti R** for Bloch
+momentum; the pure TR gray group must invert k. Clean interband analytic
+branch under antiunitary is full -z, NOT fixed positive eta at -omega.
+
+18 new tests / 118 total. Full Table I, source Eq.(19) measurable KME,
+non-Abelian degenerate bands, hexagonal crystal BZ, physical scattering,
+real Wannier spin/position and SI response remain PARTIAL or blocked.
+[Scope](ROUND16_ALL31_MICROSCOPIC.md).
