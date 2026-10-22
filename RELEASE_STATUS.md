@@ -328,3 +328,11 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - 35 new v70 science gates and one quick three-frequency frozen-regeneration gate; cumulative integrated full QGMap test count **926**. First-head incorrect frozen omega=.40 L250/350 and omega=.20/.40 mixed derivative entries were corrected from independent calculations; tolerances unchanged.
 - L1000 eta=.005 3-frequency continuum differences remain **3.83%, 3.91%, 2.32%**; no exact thermodynamic bulk limit. **VERIFIED** finite-device multi-frequency Lehmann/Keldysh comparator; **CONDITIONAL** size/regulator sequence and supplied orbital positions; **UNRESOLVED** complete original Xiang bulk orbital mixed E/B. Article original-paper **PARTIAL**.
 - Separate numerical handoff snapshot is **88/88 SHA256 + 10/10 selected standalone tests**, not claimed byte-identical to the entire GitHub PR. These final documentation changes contain no tested physics source changes.
+
+### v71 | finite-lead current-contact source-observable bridge (2026-10-22; awaiting CI)
+
+- 42 new source-independent physical gates + 1 frozen-data regeneration. Independent local v71: **43/43 PASS**. Current model derives the **full** finite-lead bounded-polarization current, retaining the device/lead contact missing from v68–v70's intentionally internal-device observable.
+- Static isothermal full current E derivative **zero** at finite closed-system equilibrium, while separately Jdevice +0.002996376694233 and Jcontact −0.002996376694233. Finite-frequency full Lehmann Ward verified with three magnetic/orbital frames and independent full-E rediagonalization.
+- Literal original SM Eq20/31 spin-index signs and main/SM Eq10/62 helicities audited separately; no silent author corrections. Presence-only spin/complete-orbital-Wannier input contract explicitly refuses missing fields and never certifies full paper.
+- **VERIFIED** bounded finite-current identities, **CONDITIONAL** model and explicit sourced-index conventions, **UNRESOLVED** actual bulk PHE/orbital MNHE and full magnetic Wannier projection. Source Xiang PRB **PARTIAL**.
+- Final PR source SHA, actual remote core regression, merge and independently tested main SHA **must** be recorded after verification; no provisional pass claimed.
