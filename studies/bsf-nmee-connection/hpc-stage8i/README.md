@@ -14,6 +14,12 @@
 
 No new job has been submitted from this repository update. The local harness execution report must retain provenance and distinguish real completed SCFs from mere input preparation.
 
+## Stage8k isolated-band spinor prescreen (zero jobs)
+
+- [Stage8k physics review](STAGE8K_NONDEGENERATE_SPIN_SCIENCE_REVIEW.md) and [frozen candidate JSON](STAGE8K_NONDEGENERATE_SPIN_CANDIDATES_20261022.json) identify three nondegenerate AB spinor pseudo-spin targets from already-archived data; the midpoint contrast is **not yet physical** without PAW operator/validated WAVECAR parser.
+- [Zero-job local DeepSeek self-contained assignment](STAGE8K_DEEPSEEK_READONLY_HANDOFF.md), [candidate selector](stage8k_existing_spin_prescreen.py) and [offline regression](../tests/test_stage8k_nondegenerate_spin_prescreen.py).
+- No additional VASP, Wannier, spinor Kubo or actual static NMEE has been run by this Stage8k addition.
+
 ## External 2026-10-22 result and independent erratum
 
 - [Original sanitized SCF / sampled-gap audit](STAGE8I_AUDIT_RAW_20261022.json); [spinor texture evidence](STAGE8I_SPIN_TEXTURE_20261022.json) and [original valley diagnostic](STAGE8I_ISING_SPLIT_20261022.json) retained as historical outputs.
