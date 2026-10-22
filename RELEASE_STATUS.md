@@ -318,3 +318,13 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - L1000 η=.005 residuals remain **1.236e-4 (3.83%)**, **2.123e-4 (3.91%)**, **2.043e-4 (2.32%)**. The ω=.20 L250→350 error increases (nonmonotonic). A distal boundary-cap change affects finite L500 readings ≈2.18e-5.
 - 35 new v70 numerical acceptance gates, reference local three-frequency full-eigensystem calculations completed; final full integrated remote GitHub CI, exact PR and merge SHA required before release is certified.
 - **VERIFIED** specified finite-device two-implementation comparison; **CONDITIONAL** L/η continuum limit and ideal-device model; **UNRESOLVED** real magnetic Wannier embedding, original bulk orbital current and paper sign/factor/three-band source defects; Xiang PRB overall **PARTIAL**.
+
+
+### v70 final release certification | 2026-10-22
+
+- [PR #72](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/72), final v70 HEAD `8ba6a5543109c8eba9062efe90e13bff2dbe42db`, **squash merged** as `e91023968e5606a7d065b7cebcfcc9ec2cbfb0fd`.
+- Final PR-head [Actions 39747133852](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39747133852): **926/926 PASS**, 172.849 s; same commit push [Actions 39747125305](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39747125305): **926/926 PASS**, 98.994 s.
+- Independent post-merge main [Actions 39747781270](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39747781270): **926/926 PASS**, 97.271 s on exactly `e91023968e5606a7d065b7cebcfcc9ec2cbfb0fd`.
+- 35 new v70 science gates and one quick three-frequency frozen-regeneration gate; cumulative integrated full QGMap test count **926**. First-head incorrect frozen omega=.40 L250/350 and omega=.20/.40 mixed derivative entries were corrected from independent calculations; tolerances unchanged.
+- L1000 eta=.005 3-frequency continuum differences remain **3.83%, 3.91%, 2.32%**; no exact thermodynamic bulk limit. **VERIFIED** finite-device multi-frequency Lehmann/Keldysh comparator; **CONDITIONAL** size/regulator sequence and supplied orbital positions; **UNRESOLVED** complete original Xiang bulk orbital mixed E/B. Article original-paper **PARTIAL**.
+- Separate numerical handoff snapshot is **88/88 SHA256 + 10/10 selected standalone tests**, not claimed byte-identical to the entire GitHub PR. These final documentation changes contain no tested physics source changes.
