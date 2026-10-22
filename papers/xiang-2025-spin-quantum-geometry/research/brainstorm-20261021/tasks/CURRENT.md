@@ -120,3 +120,15 @@ User's key correction: a specific sliding-ferroelectricity example does not auto
 
 
 **Prior-art check for BD27:** [Ji et al., PRL 130, 146801 (2023)](https://doi.org/10.1103/PhysRevLett.130.146801) explicitly generalize earlier sliding-ferroelectric examples into an 80-layer-group BSF theory; [Pang & He, PRL 135, 116402 (2025)](https://doi.org/10.1103/trhd-kxm1) generalize FQFE and conventional ferroelectricity under a generalized Neumann principle. These are the right examples of different abstraction levels. They also mean BD27 must not claim a new general Neumann principle or generic stacking-space symmetry classification. Its only plausible opening is a nontrivial theorem for a specified driven layer-resolved response field that is not already implied by BSF, LEE, or the generalized-Neumann framework.
+
+
+## 2026-10-22 BD27/BD28: tested general response-field seed, zero DFT
+
+**[Complete mathematics/physics gate](../docs/BD27_REGISTRY_TORUS_ZERO_INDEX_GATE_20261022.md)** now derives and numerically tests a cross-family operator-dependent response field on the stacking-registry torus:
+- Hexagonal \(C_3+m_v+m_z\): **six** symmetry-forced zeros G/A/B/C/M/N for \(\mathbf j_\parallel\to S_-^z\), vs only **three** \(C_3\)-forced zeros for \(S_+^z\). Near G, lowest allowed \(S_-^z\) term is **linear**, index +1 if nonzero; \(S_+^z\) is **quadratic**, index −2 if nonzero.
+- Square \(C_4+m_v+m_z\): **four** symmetry-forced layer-odd zeros, while the **layer-even** \(S_+^z\) current response is globally zero for all registry positions via \(C_{2z}\) and horizontal layer-swap symmetry.
+- Independent Fourier witnesses and exact rational \((I-R)\delta\in\Lambda\) fixed-point code passed locally on the [group-toolkit Draft PR #32](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/pull/32); vortex charge budgets match torus Euler number 0.
+
+**Crucial evidence status:** textbook covariance / Poincaré–Hopf and specific high-symmetry BSF points are already known; this is a **candidate for an S2 operator-resolved global selection classification**, not a newly claimed theorem, real Kubo result or experimental prediction. LEE SM comparison remains open. Same-observable direct competitor determination must happen at the precise theorem/response level, not by the existence of sliding-FE examples or different shift-current vortices. Registry now [28 claim entries](../data/BD_IDEA_REGISTRY_20261022.json).
+
+**Next high-value action:** compare the 2026 LEE SM on the exact \(S_\pm^z\), current protocol and global registry fields, then derive a second source-compatible real layer/site response; only after a microscopic nonzero coefficient is shown consider a wider 80 LG theory. R1 CLOSED, R2-P0 read-only, **no Slurm/DFT/WSL/Japan authorization**.
