@@ -154,8 +154,18 @@ class Stage8kRawWavecarTests(unittest.TestCase):
 
 
     def test_kramers_gauge_warning(self):
-        """Degenerate pair: individual spin expectations are not physical unless gauged."""
-        assert True  # documented: single-eigenvector spin of a degenerate pair is gauge-dependent
+        """Degenerate spin-conserving H can have gauge-dependent in-plane spin."""
+        up=np.array([1.0+0j])
+        down=np.array([0.0+0j])
+        sx0,sy0,sz0,_=spin_expected(up,down)
+        sx1,sy1,sz1,_=spin_expected(up/np.sqrt(2),np.ones(1)/np.sqrt(2))
+        self.assertAlmostEqual(sz0,0.5)
+        self.assertAlmostEqual(sx0,0.0)
+        self.assertAlmostEqual(sx1,0.5)
+        self.assertAlmostEqual(sz1,0.0)
+        # The parent spin-conserving H=epsilon*I commutes with Sz.
+        h=np.eye(2)*2.5; sigmaz=np.diag([1,-1])
+        self.assertTrue(np.allclose(h@sigmaz-sigmaz@h,0))
 
 
     def test_find_kindex_mod1(self):
@@ -167,19 +177,12 @@ class Stage8kRawWavecarTests(unittest.TestCase):
 
     def test_failure_branches(self):
         with tempfile.TemporaryDirectory() as td:
-            p = os.path.join(td, "WAVECAR")
-            write_synthetic_wavecar(p, rtag=99999)
-            try:
+            p=os.path.join(td,"WAVECAR")
+            write_synthetic_wavecar(p,rtag=99999)
+            with self.assertRaisesRegex(ValueError,"rtag"):
                 read_header(p)
-                raise AssertionError("expected rtag rejection")
-            except (ValueError, AssertionError):
-                pass
-            try:
-                read_header(os.path.join(td, "missing"))
-                raise AssertionError("expected FileNotFoundError")
-            except FileNotFoundError:
-                pass
-
+            with self.assertRaises(FileNotFoundError):
+                read_header(os.path.join(td,"missing"))
 
     def test_evidence_json_when_present(self):
         ev = HERE.parent / "hpc-stage8i" / "STAGE8K_INDEPENDENT_SPIN_EVIDENCE_20261022.json"
