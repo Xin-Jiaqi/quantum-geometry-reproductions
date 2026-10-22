@@ -80,13 +80,6 @@ class DegenerateStaticWard(unittest.TestCase):
         r=random_unitary(2,30);s=random_unitary(2,31)
         W=np.zeros((4,4),complex);W[:2,:2]=r;W[2:,2:]=s
         U1=U@W
-        def diagonal_only(X):
-            v=np.einsum("in,ajk,kn->ain",X.conj(),self.V,X,optimize=True)
-            ss=np.einsum("in,bjk,kn->bin",X.conj(),self.S,X,optimize=True)
-            occ=-(1/(4*PARAMS["temperature"]*np.cosh((e-PARAMS["mu"])/(2*PARAMS["temperature"]))**2))
-            return -PARAMS["kappa"]*np.einsum("an,bn,n->ab",
-                       np.diagonal(v,axis1=-2,axis2=-1),
-                       np.diagonal(ss,axis1=-2,axis2=-1),occ)
         # Explicit manual diagonal-only expectation, no arbitrarily assigned
         # orbital axes allowed as a physical degenerate-sector response.
         def naive(X):
@@ -146,5 +139,19 @@ class DegenerateStaticWard(unittest.TestCase):
             degenerate_static_ward(self.H+1j*np.eye(4),self.V,self.S)
         with self.assertRaises(ValueError):
             degenerate_static_ward(self.H,self.V,self.S,degeneracy_tolerance=-1)
+
+    def test_round24_frozen_audit_static_kramers_and_generic_points(self):
+        import json
+        from pathlib import Path
+        root=Path(__file__).resolve().parents[1]
+        ref=json.loads((root/"results/frozen/round24_degenerate_static_ward_audit.json").read_text())
+        self.assertEqual(ref["schema"],"cui-round24-degenerate-static-ward-v1")
+        for case in ref["results"]:
+            k=np.array(case["k"])
+            H,V,S=kramers_periodic_model(k)
+            actual=degenerate_static_ward(H,V,S,**PARAMS)
+            frozen=np.array(case["full"]["real"])+1j*np.array(case["full"]["imag"])
+            np.testing.assert_allclose(actual["full_static"],frozen,atol=2e-12,rtol=0)
+            self.assertEqual(actual["cluster_dimensions"],case["cluster_dimensions"])
 
 if __name__=="__main__":unittest.main()
