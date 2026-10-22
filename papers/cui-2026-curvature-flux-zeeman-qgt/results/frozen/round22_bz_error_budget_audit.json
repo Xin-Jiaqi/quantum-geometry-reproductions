@@ -1,0 +1,185 @@
+{
+  "schema": "cui-flux-round22-cancellation-conditioned-bz-uncertainty-v1",
+  "type": "Synthetic four-band periodic spin x orbital model, Round22 error-budget diagnostic",
+  "numerical_convergence": "UNVERIFIED",
+  "mathematical_result": "Conditional: if integral |delta F| <= eps integral |F|, relative net error <= eps / retention",
+  "empirical_result": "Finite-sampling spread is NOT a rigorous or statistical confidence interval",
+  "method": "Cartesian fixed component, four independent shifted midpoint meshes at two resolutions, primitive Gauss and D6 hexagon Gauss",
+  "groups": {
+    "6": {
+      "observed_component": [
+        1,
+        1
+      ],
+      "symmetry_allowed": true,
+      "sampling_orders": {
+        "coarse_order": 6,
+        "fine_order": 9,
+        "hex_order": 5,
+        "gauss_order": 9
+      },
+      "num_shifted_midpoint_grids": 4,
+      "shifted_midpoint_coarse": [
+        [
+          -0.000006969874311125716,
+          -1.0717153196890174e-7
+        ],
+        [
+          -0.0000013766623444213697,
+          2.5780911827979884e-7
+        ],
+        [
+          -9.168872344790206e-7,
+          4.772808037528866e-7
+        ],
+        [
+          -0.000005491115143519033,
+          2.5140141611038654e-7
+        ]
+      ],
+      "shifted_midpoint_fine": [
+        [
+          6.808672681947578e-7,
+          -6.587319146740594e-8
+        ],
+        [
+          5.880104124046439e-7,
+          -2.8493420190377393e-7
+        ],
+        [
+          4.559704210945114e-7,
+          -1.2821940744016415e-7
+        ],
+        [
+          5.224633939167988e-7,
+          -2.1314901233836157e-7
+        ]
+      ],
+      "finite_hex_value": [
+        0.00004962367663688655,
+        6.893411391978653e-8
+      ],
+      "finite_primitive_gauss": [
+        0.000005641650136988686,
+        -1.7059371495214017e-8
+      ],
+      "fine_midpoint_mean": [
+        5.61827873902678e-7,
+        -1.730439532874264e-7
+      ],
+      "within_fine_shift_absolute_spread": 2.3792881700338137e-7,
+      "mean_midpoint_refinement_change": 0.000004268580852412421,
+      "across_finest_methods_spread": 0.000049062445489670725,
+      "empirical_absolute_disagreement": 0.000049062445489670725,
+      "empirical_relative_disagreement_to_finite_hex": 0.9886893006893948,
+      "hex_projector_residual": 6.168323909723594e-19,
+      "primitive_gauss_projector_residual": 5.771139201387146e-7,
+      "convergence_status": "UNVERIFIED",
+      "mathematical_condition_from_prior_round20": {
+        "sample_order": 5,
+        "observed_retention": 0.014248470102074959,
+        "required_for_1_percent_relative_net": {
+          "retention": 0.014248470102074959,
+          "condition_amplification": 70.18297352881228,
+          "desired_relative_net_error": 0.01,
+          "required_relative_l1_integrand_accuracy": 0.0001424847010207496,
+          "certified": false,
+          "meaning": "conditional mathematical inequality only"
+        }
+      }
+    },
+    "6m'm'": {
+      "observed_component": [
+        0,
+        1
+      ],
+      "symmetry_allowed": true,
+      "sampling_orders": {
+        "coarse_order": 6,
+        "fine_order": 9,
+        "hex_order": 5,
+        "gauss_order": 9
+      },
+      "num_shifted_midpoint_grids": 4,
+      "shifted_midpoint_coarse": [
+        [
+          1.9109557776278586e-9,
+          2.3769511192956584e-7
+        ],
+        [
+          3.154328845478622e-7,
+          6.958740989757333e-7
+        ],
+        [
+          4.143076633483446e-7,
+          8.04123727315021e-7
+        ],
+        [
+          -2.320347197427675e-7,
+          4.2400217948976493e-7
+        ]
+      ],
+      "shifted_midpoint_fine": [
+        [
+          2.114712607483826e-7,
+          9.311826404959679e-7
+        ],
+        [
+          1.589478527619815e-7,
+          5.810741701877198e-7
+        ],
+        [
+          1.253243503382916e-7,
+          4.959257663515204e-7
+        ],
+        [
+          1.5936883887878615e-7,
+          6.415608036829135e-7
+        ]
+      ],
+      "finite_hex_value": [
+        4.965672033072614e-7,
+        6.773167104963556e-7
+      ],
+      "finite_primitive_gauss": [
+        3.088059143918503e-7,
+        3.7316050689459223e-7
+      ],
+      "fine_midpoint_mean": [
+        1.6377807568186047e-7,
+        6.624358451795304e-7
+      ],
+      "within_fine_shift_absolute_spread": 4.4370016527290094e-7,
+      "mean_midpoint_refinement_change": 1.2805515496040065e-7,
+      "across_finest_methods_spread": 3.574427196133862e-7,
+      "empirical_absolute_disagreement": 4.4370016527290094e-7,
+      "empirical_relative_disagreement_to_finite_hex": 0.5283129836418896,
+      "hex_projector_residual": 8.837908168108418e-19,
+      "primitive_gauss_projector_residual": 1.3379292437961957e-7,
+      "convergence_status": "UNVERIFIED",
+      "mathematical_condition_from_prior_round20": {
+        "sample_order": 5,
+        "observed_retention": 0.7887923373050834,
+        "required_for_1_percent_relative_net": {
+          "retention": 0.7887923373050834,
+          "condition_amplification": 1.2677607941990279,
+          "desired_relative_net_error": 0.01,
+          "required_relative_l1_integrand_accuracy": 0.007887923373050833,
+          "certified": false,
+          "meaning": "conditional mathematical inequality only"
+        }
+      }
+    }
+  },
+  "negative_control": "Periodic Fourier aliasing at n=grid size defeats an unshifted midpoint rule and is checked by unit tests",
+  "full_paper": "PARTIAL",
+  "ci_provenance": {
+    "preliminary_isolated_branch_run": 39748473393,
+    "preliminary_prior_round20_suite": "170/170 PASS (159 baseline+11)",
+    "integrated_round21_occupation_partition_baseline": "167/167 PASS as of Round21 PR #74",
+    "integrated_round22_ci": "Actions run 39749647668, Python 3.11 and 3.12 both 178/178 PASS, including Round21 occupation-sector regression and Round22 audit",
+    "remark": "The numeric data are a finite-grid synthetic model audit, NOT a numerical error bound",
+    "integrated_head_first_success": "801186a715fdcb9f004d9ae8171e4974f04130a0"
+  },
+  "acceptance": "Convergence UNVERIFIED, multi-grid disagreement not a rigorous upper bound; whole paper PARTIAL"
+}
