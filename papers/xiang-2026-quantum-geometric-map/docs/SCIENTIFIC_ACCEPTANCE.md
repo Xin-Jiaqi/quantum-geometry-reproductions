@@ -186,3 +186,16 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Thermodynamic bulk electrical transport and Xiang orbital E/B | **UNRESOLVED** | No controlled L→∞/eta→0 or contact-fraction family, nor orbital position operators, full conserving mixed-field response |
 
 26 new independent local v64 tests, 137 total v60–v64 standalone. [Details](QWZ_VIRTUAL_PROBE_ORDERED_LIMITS_V64.md). Original-paper source audit remains **PARTIAL**.
+
+
+## v65 | Static projected-orbital E/B Maxwell response, NOT original transport
+
+| Mathematical / physical scope | Gate | Status |
+|---|---|---|
+| Supplied non-diagonal finite Wannier-projected P = q diag(position)+D | Independent Peierls H(B), full P_B and d_B P_B, degenerate Fermi matrix Fréchet; B-dependent symmetric/Landau and noncommuting orbital representations | **VERIFIED named finite static model** |
+| Complete fixed-mu equilibrium mixed grand-potential derivative | 3 independent fully rediagonalized finite-difference Maxwell routes; omitting position magnetic contact fails gauge covariance | **VERIFIED equilibrium thermodynamics** |
+| Fixed-N Helmholtz response and particle conservation | mu_B Ward, numerical chemical potential refit at every perturbed E/B, 3 independent canonical derivatives, P+cI origin negative control | **VERIFIED static canonical sector** |
+| Microscopic orbital Peierls coupling / position dipoles | Finite four-orbital graph, supplied D, no real material / no complete field-dependent Wannier embedding | **CONDITIONAL physical approximation** |
+| Original Xiang nonlinear orbital E*B transport, conserving Kubo-Streda, bath and thermodynamic limit | NOT calculated by equilibrium Maxwell derivative; SM Eq49/52 and sign/3-band issues remain | **UNRESOLVED; source paper PARTIAL** |
+
+40 new independently checked v65 physics tests; stand-alone v60-v65 baseline 177 tests. [Scientific details](STATIC_ORBITAL_EB_MAXWELL_V65.md).
