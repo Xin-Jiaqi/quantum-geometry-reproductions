@@ -378,7 +378,36 @@
           "overlap": "Generalized symmetry principle for polarization, FQFE and conventional ferroelectricity across 32 point groups",
           "gap_to_check": "Do not claim a new general Neumann principle; establish a response-specific result beyond polarization classification"
         }
-      ]
+      ],
+      "test_result": {
+        "symmetry_and_torus_fixed_points": "METHOD_PASS",
+        "hex_layer_odd_Sz_current": "six symmetry-fixed zero registries G/A/B/C/M/N, Fourier witness index +,+,+,-,-,-",
+        "square_layer_odd_Sz_current": "four symmetry-fixed zero registries, witness index +,+,-,-",
+        "rational_fixedpoint_solver": "PASS C3=3 C4=2 layer_swap=4",
+        "microscopic_Kubo_nonzero": "NOT_TESTED",
+        "exact_2026_LEE_SM_overlap": "NOT_FULLY_AUDITED",
+        "topological_novelty": "NOT_ESTABLISHED",
+        "no_DFT_or_HPC": true
+      },
+      "model_audit": "docs/BD27_REGISTRY_TORUS_ZERO_INDEX_GATE_20261022.md"
+    },
+    {
+      "id": "BD28",
+      "claim": "Layer parity universally distinguishes leading registry activation orders and winding indices of current-induced axial Sz in ideal hexagonal stacking families; the square C4+layer-swap family forbids layer-even Sz response at every registry",
+      "status": "OPEN_HYPOTHESIS",
+      "reason": "In stated unitary hexagonal family, C3+vertical mirror+horizontal layer swap allow linear F_-(u)=gamma J u (index +1 if nonzero) but only quadratic F_+(u)=beta (ux²-uy²,-2uxuy) (index -2 if nonzero). In C4 family C2z and mz force F_+≡0 globally. Pure group-theoretic consequences pass synthetic tests; whether a classification/prediction adds novelty beyond BSF, LEE and Neumann is open; actual physical gamma/beta not computed.",
+      "source": "docs/BD27_REGISTRY_TORUS_ZERO_INDEX_GATE_20261022.md",
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem",
+      "status_detail": "THEORY_TEST_PASS; MICROSCOPIC_RESPONSE_UNKNOWN; NOVELTY_UNRESOLVED",
+      "specific_equations": [
+        "F_-(u)=gamma (-uy,ux)+O(u³)",
+        "F_+(u)=beta (ux²-uy²,-2uxuy)+O(u⁴)",
+        "C4+mz implies F_+ identically zero for square family"
+      ],
+      "historical_code_preserved": true,
+      "material_claim_verified": false,
+      "compute_authorized": false
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
