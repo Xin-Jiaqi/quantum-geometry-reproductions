@@ -208,3 +208,26 @@ def finite_difference_mixed(spec=ReservoirSpec(),frame='symmetric',K=None,
     offsets=(-2,-1,1,2);weights=(1,-8,8,-1)
     return sum(wb*we*f(db*step,de*step) for db,wb in zip(offsets,weights)
                for de,we in zip(offsets,weights))/(144*step*step)
+
+
+def magnetic_ward(s):
+    """Differentiated optical theorem and two-channel scattering-unitarity Ward.
+
+    B-dependent contact wave-amplitudes, not merely device d_B H, are needed.
+    The same verified derivative yields Caroli d_B T and on-shell S d_B S.
+    """
+    g=s['g'];gamma=-2*g.imag
+    if gamma<=0:raise ValueError('open lead channel required')
+    W=np.stack(s['vectors'],axis=1)*np.sqrt(gamma)
+    WB=np.stack(s['vectorB'],axis=1)*np.sqrt(gamma)
+    G=s['Gr']; GB=s['GrB'];A=s['Ga']; AB=s['GaB']
+    S=np.eye(2,dtype=complex)-1j*W.conj().T@G@W
+    SB=-1j*(WB.conj().T@G@W+W.conj().T@GB@W+W.conj().T@G@WB)
+    scattering_ward=SB.conj().T@S+S.conj().T@SB
+    gam=sum(s['Gamma']);gamB=sum(s['GammaB'])
+    optical_B=1j*(GB-AB)-(GB@gam@A+G@gamB@A+G@gam@AB)
+    spectral_db_s=2*float(np.real(S[1,0].conj()*SB[1,0]))
+    return {'unitarity_derivative_error':float(np.linalg.norm(scattering_ward)),
+            'optical_derivative_error':float(np.linalg.norm(optical_B)),
+            'dB_T_from_scattering_amplitude':spectral_db_s,
+            'dB_T_from_Caroli':conductance_B(s)}
