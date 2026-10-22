@@ -79,7 +79,7 @@ generality, and true-paper observables do not share a defensible denominator.
 | --- | --- |
 | Paper reproduction | Same clean cluster-interband 4-band model integrated over hexagonal Wigner-Seitz and reciprocal primitive fundamental domains; exact continuum equality, finite-order convergence not assumed. Whole-paper PARTIAL. |
 | Physics capabilities | Independent reciprocal primitive-cell Gauss and shifted midpoint quadratures, full complex even/odd tensor comparison without projecting away numerical errors. |
-| GitHub | Round19 standalone method, 8 tests, full audit script and acceptance report on an independent PR; **145/145 PASS** for Python 3.11 and 3.12, with Round19 audit success (Actions run 39742758842). |
+| GitHub | Round19 PR #67 **merged into main**; independent primitive method, 8 tests, full audit and frozen reference data. Python 3.11/3.12 **145/145 PASS** with successful final audit in Actions run 39743169120. |
 
 Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and ~3.9% for group 6m'm' in even response; projector residuals close to machine precision do NOT establish convergence. Next priority: primitive/hex domain numerical agreement, spectral-gap and temperature sensitivity. No additional VASP work at this gate.
 
@@ -98,3 +98,10 @@ Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and
   The BZ tensor remains numerically UNCONVERGED and full paper PARTIAL.
 - Next: k-resolved resonant/near-degenerate/occupation diagnostics and
   a higher-order independent method comparison, before material DFT.
+
+
+### Round19 GitHub handoff finalized (2026-10-22)
+
+- Source PR #67 merged; main squash commit `34ef72a469e61d7dc8efcccc737cb86d745e0834`.
+- Final head before squash `bd82b5a6103b729f7d8242df1d870d0943182efe`; Actions 39743169120 successfully ran **145 tests and Round19 independent primitive-cell audit** in both Python 3.11 and Python 3.12.
+- Central Physics Registry explicitly labels the primitive-cell method VERIFIED but the numerical BZ tensor convergence UNRESOLVED. Full paper remains PARTIAL.
