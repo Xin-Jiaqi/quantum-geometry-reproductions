@@ -36,3 +36,17 @@ python scripts/demo_causal.py --kmesh 48
 A deliberately bounded [spin_current.py](src/flux_lab/spin_current.py) implementation adds clean intrinsic Eq.(127)/(128), the complete physical-spin velocity derivative and Fermi surface / Fermi sea identity. It requires the explicit Hessian of the Hamiltonian for general periodic models, rather than silently discarding the Eq.(132) spin-current vertex as in the special linear-H limit of Eq.(133).
 
 Details and actual numerical values: [APPENDIX_C_ACCEPTANCE.md](APPENDIX_C_ACCEPTANCE.md), with a synthetic fixed-basis four-band benchmark and frozen 64×64 BZ results. **17 new independent tests, 56 total.** The current operator is conventional and generally NOT conserved under spin-orbit torque. This does not establish an experimental spin Hall conductivity, real-material position/spin operators, or the full Eq.(134) in arbitrary systems.
+
+
+## v4: spin-vorticity Eq.(27) and magnetic-group screening (2026-10-22)
+
+[spin_vorticity.py](src/flux_lab/spin_vorticity.py) validates the energy-weighted anomalous spin curvature against **half the curl of the band spin-current expectation** by spectral sums, independent eigenstate finite differences and the exact Hessian-aware derivative. The mixed Hessian cancels in the curl but not in the symmetric RTA response. Full-zone integrals of this local curl can still cancel in a periodic band.
+
+[magnetic_symmetry.py](src/flux_lab/magnetic_symmetry.py) supplies 31 2D magnetic point groups and **124 conditional Jahn-character real-coefficient tensor projections** independently checked by Reynolds averaging and nullspace. This is NOT a claim that all 31 finite-frequency antiunitary Kubo responses or original Table I are fully validated. See [ROUND14_VORTICITY_AND_MAGNETIC_SYMMETRY.md](ROUND14_VORTICITY_AND_MAGNETIC_SYMMETRY.md) for conventions, six recorded conditional source-table differences, attribution and exclusions.
+
+~~~bash
+python -m unittest discover -s tests -v
+python scripts/demo_vorticity_mpg.py
+~~~
+
+**80 total tests** (56 preceding + 24 new). Original full-paper reproduction remains **PARTIAL**.

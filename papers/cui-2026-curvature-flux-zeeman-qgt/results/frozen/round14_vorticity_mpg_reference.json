@@ -1,0 +1,124 @@
+{
+  "version": "round14-v1",
+  "source": "Cui 2026 v3 Eqs.(20)-(28); pinned toolkit generator snapshot",
+  "scope": "model-only nondegenerate spin vorticity; conditional 2D MPG candidate Neumann rules",
+  "local_spin_vorticity": {
+    "+0.31_-0.22": {
+      "point": [
+        0.31,
+        -0.22
+      ],
+      "band_omega_bar_A_z": [
+        0.0061224117358505276,
+        -0.0061224117358505935,
+        -0.0061224117358505414,
+        0.006122411735850479
+      ],
+      "band_half_curl_full_derivative": [
+        0.006122411735850526,
+        -0.0061224117358505935,
+        -0.0061224117358505414,
+        0.006122411735850477
+      ],
+      "band_half_curl_finite_difference": [
+        0.006122411731063203,
+        -0.006122411735573484,
+        -0.006122411734185706,
+        0.006122411739042931
+      ],
+      "max_spectral_fd_residual": 4.7873241829088364e-12,
+      "max_hessian_antisym_residual": 0,
+      "max_hessian_symmetric_nonzero": 0.1766604381013871
+    },
+    "-0.48_+0.27": {
+      "point": [
+        -0.48,
+        0.27
+      ],
+      "band_omega_bar_A_z": [
+        0.011660808911969946,
+        -0.011660808911969954,
+        -0.01166080891196995,
+        0.011660808911969927
+      ],
+      "band_half_curl_full_derivative": [
+        0.011660808911969942,
+        -0.011660808911969954,
+        -0.011660808911969947,
+        0.011660808911969932
+      ],
+      "band_half_curl_finite_difference": [
+        0.01166080891221166,
+        -0.011660808916374997,
+        -0.011660808917068886,
+        0.011660808909089158
+      ],
+      "max_spectral_fd_residual": 5.09893689770724e-12,
+      "max_hessian_antisym_residual": 0,
+      "max_hessian_symmetric_nonzero": 0.22234709115372364
+    },
+    "+0.63_+0.11": {
+      "point": [
+        0.63,
+        0.11
+      ],
+      "band_omega_bar_A_z": [
+        0.017509759165056076,
+        -0.017509759165056083,
+        -0.01750975916505605,
+        0.01750975916505607
+      ],
+      "band_half_curl_full_derivative": [
+        0.017509759165056076,
+        -0.017509759165056083,
+        -0.01750975916505605,
+        0.017509759165056073
+      ],
+      "band_half_curl_finite_difference": [
+        0.017509759154057947,
+        -0.01750975916758879,
+        -0.01750975916012948,
+        0.01750975916463976
+      ],
+      "max_spectral_fd_residual": 1.0998129490458197e-11,
+      "max_hessian_antisym_residual": 0,
+      "max_hessian_symmetric_nonzero": 0.2610138353816358
+    }
+  },
+  "periodic_torus_24x24_band_average": [
+    -9.00866596790907e-19,
+    -1.6503966403390456e-18,
+    2.06751330947583e-18,
+    1.0375212456146008e-18
+  ],
+  "magnetic_group_count": 31,
+  "projected_candidate_spaces": 124,
+  "source_table_conditional_mismatches": [
+    {
+      "group": "2'",
+      "channel": "gN"
+    },
+    {
+      "group": "2'",
+      "channel": "omegaA"
+    },
+    {
+      "group": "m'",
+      "channel": "gN"
+    },
+    {
+      "group": "m'",
+      "channel": "omegaA"
+    },
+    {
+      "group": "m'm2'",
+      "channel": "gN"
+    },
+    {
+      "group": "m'm2'",
+      "channel": "omegaA"
+    }
+  ],
+  "source_table_mismatch_count": 6,
+  "warning": "Jahn-character projection alone does not establish finite-frequency antiunitary Kubo response"
+}
