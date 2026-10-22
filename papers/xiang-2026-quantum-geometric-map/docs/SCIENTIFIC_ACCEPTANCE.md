@@ -264,3 +264,16 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Bulk orbital current / original Xiang PRB | Current defined as device-only i[H−EP_b,P_a], no general bulk q→0 mapping, full Wannier B embedding or closure of printed source sign/factor/three-band sectors | **UNRESOLVED; source PARTIAL** |
 
 35 new v70 numerical checks. See [multi-frequency report](MULTIFREQUENCY_ORDERED_LIMITS_V70.md).
+
+## v71: current-observable identity and literal source branch
+
+| Scientific target | Evidence | Status |
+| --- | --- | --- |
+| Device current vs full device-supported polarization derivative | Exact Jfull = Jdevice + i[Hcontact,Pdevice], nonzero contact; independently decomposed optical Lehmann susceptibility and Ward | **VERIFIED finite bounded operator** |
+| Finite equilibrium isothermal E derivative | Jdevice +0.002996376694233, lead-contact −0.002996376694233, Jfull=0; independent finite-E/B rediagonalization and 3 B-dependent frames | **VERIFIED finite-equilibrium contact cancellation; NOT biased DC transport** |
+| Printed SM Eq20/31 spin PHE signs | Direct interband velocity contraction equals inferred +tau sum Z df, while literal printed Eq31 has opposite sign, independent Hermitian/U1/band relabel controls | **VERIFIED literal source-index discrepancy; author intent OPEN** |
+| Main Eq10 vs SM Eq62 spin helicity | H transforms with sigma_z only if physical Zeeman sigma_x also changes sign | **VERIFIED conditional basis covariance; original printed branch OPEN** |
+| PHE/MNHE capability inputs | Separate spin Zeeman versus orbital Wannier moment/full positional shift; missing inputs rejected, presence alone never establishes reproduced physics | **VERIFIED input inventory only, source response UNRESOLVED** |
+| Original paper bulk orbital tensor and Fig2 SI | Finite device is not bulk; Eq49/52 factor issue, m!=ell three-band omissions and full magnetic Wannier embedding still missing | **UNRESOLVED; original paper PARTIAL** |
+
+42 v71 named physical checks plus one frozen numerical regeneration gate; exact PR-head and postmerge CI require independent verification. [v71 details](SOURCE_OBSERVABLE_BOUNDARY_AND_WANNIER_GATE_V71.md).
