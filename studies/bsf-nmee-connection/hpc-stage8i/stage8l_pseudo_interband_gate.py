@@ -169,7 +169,7 @@ if __name__=="__main__":
     a=p.parse_args()
     dest=Path(a.out)
     if dest.exists():raise FileExistsError("Cannot overwrite existing output: "+str(dest))
-    report=screen(a.wavecar,a.eigenval,a.expected_wavecar_sha256,a.expected_eigenval_sha256)
+    report=screen(a.wavecar,a.eigenval,expected_wavecar_sha256=a.expected_wavecar_sha256,expected_eigenval_sha256=a.expected_eigenval_sha256)
     dest.write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps({"status":report["status"],"k_points":list(report["k_points"]),
           "input_sha256":report["input_sha256"],"new_PBS_jobs":0},indent=2))
