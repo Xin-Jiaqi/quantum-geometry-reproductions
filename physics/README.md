@@ -131,3 +131,8 @@ Named finite thermodynamic primitive [v65](../papers/xiang-2026-quantum-geometri
 ## v66: dynamic projected position and electric-current-contact gate
 
 [Finite AC seven-contact orbital E/B](../papers/xiang-2026-quantum-geometric-map/docs/DYNAMIC_ORBITAL_EB_SEVEN_CONTACT_V66.md). **VERIFIED** specified finite projected P_x,P_y, full B-dependent position and current contacts (including noncommuting electric -i[Pb,Pa]), independent spectral Kubo-like and finite-B derivatives, equilibrium static current cancellation, plus separate finite-E dense superoperator DC oracle. The physical finite-graph scalar gamma relaxation remains **CONDITIONAL** and cannot be described as a conserving microscopic bath or full Kubo-Streda. Real Wannier magnetic embedding and original source paper orbital magnetotransport remain **UNRESOLVED**; Xiang scientific status **PARTIAL**.
+
+
+## v67: two microscopic semi-infinite leads and differentiated Ward
+
+[Conserving elastic reservoir benchmark](../papers/xiang-2026-quantum-geometric-map/docs/CONSERVING_RESERVOIR_WARD_V67.md). **VERIFIED** exact energy-dependent tight-binding lead surface Green functions; elastic noninteracting on-shell S†S=I and its magnetic derivative; optical theorem, differentiated Caroli/transmission and local physical-site charge continuity with B-dependent site projectors. Finite E_gate/B derivatives include Peierls vertex, B-dependent projected position and contact Sigma/Gamma. This is **CONDITIONAL** coherent finite-device transport with device-only static gate, **NOT** a same-observable v66 or original Xiang orbital Hall Keldysh oracle. Original paper remains **PARTIAL**.
