@@ -37,3 +37,5 @@ jobs:
         run: python scripts/audit_occupation_partition.py
       - name: Audit cancellation-conditioned BZ error budget (Round22)
         run: python scripts/audit_round22.py
+      - name: Verify equilibrium no-current static Zeeman Ward (Round23)
+        run: python scripts/audit_equilibrium_ward.py

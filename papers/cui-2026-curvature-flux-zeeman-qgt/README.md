@@ -117,3 +117,20 @@ bound**, and Fourier aliasing has a negative control.
 [frozen data](results/frozen/round22_bz_error_budget_audit.json).
 **178/178 PASS** on both Python versions, Round21 occupation
 partition retained; complete-paper status **PARTIAL**.
+
+
+## Round 23: equilibrium static Zeeman-current Ward control
+
+[Equilibrium Ward kernel](src/flux_lab/equilibrium_ward.py) resolves the
+difference between the earlier clean interband Zeeman current response
+and the **complete finite-temperature equilibrium static response**:
+the diagonal Fermi-occupation derivative is required. In a fixed Bloch
+basis with k-independent physical spin, their sum is
+minus kappa times the momentum derivative of the equilibrium spin density.
+The continuum BZ integral vanishes by periodicity (no uniform equilibrium
+bulk charge current). Independent finite-B and finite-k differences test
+the identity. See [Round23 acceptance](ROUND23_EQUILIBRIUM_STATIC_WARD.md)
+and [audit](scripts/audit_equilibrium_ward.py).
+
+This does not certify dynamic metallic KME, scattering, gauge contacts,
+degenerate bands or source-paper completeness. **188/188 tests passed** on Python 3.11 and 3.12 (Actions run 39756688525). Frozen executed audit: [Round23 JSON](results/frozen/round23_equilibrium_ward_audit.json).
