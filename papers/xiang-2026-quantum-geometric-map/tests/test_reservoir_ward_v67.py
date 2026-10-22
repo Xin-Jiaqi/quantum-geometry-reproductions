@@ -212,3 +212,26 @@ class ReservoirWardV67(unittest.TestCase):
         self.assertNotAlmostEqual(conductance_EB(self.base),-.006402948002937392)
 
 if __name__=='__main__':unittest.main()
+
+class MagneticDifferentiatedWardV67(unittest.TestCase):
+    def test_42_scattering_unitarity_first_magnetic_ward(self):
+        from qgmap.reservoir_ward_v67 import magnetic_ward
+        for frame in ('symmetric','landau_y','orbital'):
+            self.assertLess(magnetic_ward(reference(frame))['unitarity_derivative_error'],1e-11)
+
+    def test_43_Green_optical_magnetic_ward(self):
+        from qgmap.reservoir_ward_v67 import magnetic_ward
+        for frame in ('symmetric','landau_y','orbital'):
+            self.assertLess(magnetic_ward(reference(frame))['optical_derivative_error'],1e-11)
+
+    def test_44_caroli_vs_independent_derivative_scattering_amplitude(self):
+        from qgmap.reservoir_ward_v67 import magnetic_ward
+        for frame in ('symmetric','landau_y','orbital'):
+            d=magnetic_ward(reference(frame))
+            self.assertLess(abs(d['dB_T_from_Caroli']-d['dB_T_from_scattering_amplitude']),1e-11)
+
+    def test_45_differentiated_optical_contact_negative_control(self):
+        from qgmap.reservoir_ward_v67 import magnetic_ward
+        m=magnetic_ward(reference('orbital'))
+        self.assertGreater(abs(m['dB_T_from_scattering_amplitude']-
+                               conductance_B(reference('orbital'),omit_contact_B=True)),.01)
