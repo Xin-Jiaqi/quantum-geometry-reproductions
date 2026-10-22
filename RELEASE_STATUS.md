@@ -310,3 +310,11 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - v69 adds 45 science tests plus one frozen numeric gate. Local v60-v68 baseline 306/306 and v69 46/46 pass in bounded batches; cumulative local 352/352. Fresh extraction verified 83 SHA256 entries.
 - **VERIFIED** finite closed-Hamiltonian Lehmann/Ward and static isothermal identities; **CONDITIONAL** finite L/eta and device-local field. Long-lead response differs from v68 continuum by 2.123e-4 absolute; ordered-limit convergence is improving but not exact.
 - Source paper stays **PARTIAL**; source SM sign/factor/three-band, complete magnetic Wannier embedding and bulk orbital-current correspondence remain unresolved. No local archive byte-identity claim is made for remote Git blobs without exact hash match.
+
+
+### v70: three-frequency finite-lead Lehmann/Keldysh ordered-limit audit (2026-10-22, CI pending)
+
+- v69 explicit-Hermitian-device-plus-two-leads Lehmann vs v68 semi-infinite-reservoir Keldysh now checked at three frequencies ω=.20,.29,.40 and joint spectral resolution η=.02→.01→.005 as L250→350→500→1000.
+- L1000 η=.005 residuals remain **1.236e-4 (3.83%)**, **2.123e-4 (3.91%)**, **2.043e-4 (2.32%)**. The ω=.20 L250→350 error increases (nonmonotonic). A distal boundary-cap change affects finite L500 readings ≈2.18e-5.
+- 35 new v70 numerical acceptance gates, reference local three-frequency full-eigensystem calculations completed; final full integrated remote GitHub CI, exact PR and merge SHA required before release is certified.
+- **VERIFIED** specified finite-device two-implementation comparison; **CONDITIONAL** L/η continuum limit and ideal-device model; **UNRESOLVED** real magnetic Wannier embedding, original bulk orbital current and paper sign/factor/three-band source defects; Xiang PRB overall **PARTIAL**.
