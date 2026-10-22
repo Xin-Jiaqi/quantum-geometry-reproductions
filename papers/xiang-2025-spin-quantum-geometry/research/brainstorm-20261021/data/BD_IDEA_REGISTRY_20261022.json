@@ -234,11 +234,19 @@
     {
       "id": "BD25",
       "claim": "Relative registry derivative of current-induced layer-odd out-of-plane spin in a mirror-exchanging bilayer has a nontrivial and nonzero measurable coefficient",
-      "status": "BLOCKED_NOVELTY",
-      "reason": "C3+mx+mz group algebra allows one ux*jy-uy*jx invariant but coefficient not computed and 2026 Layer Edelstein PRL is a close framework; must inspect SM and define fixed-current Kubo protocol.",
+      "status": "BLOCKED_EVIDENCE",
+      "reason": "The symmetry invariant is allowed in the idealized C3z+mx+mz family, but the published LEE Eq.(3) k.p model has an exactly in-plane spin-helicity structure and gives <tau_z sigma_z>=0 for every k, Delta and scalar t_perp. The proposed S_-^z slide derivative therefore cannot be tested in Eq.(3) by changing scalar parameters. Need a source-backed model with both spin-z matrix elements and microscopic registry-dependent H(u); original 2026 LEE SM equation-level overlap remains to be checked.",
       "source": "docs/BD_CORE_PROBLEM_REFERENCE_ROLES_AND_SMALL_SEED_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "model_audit": "docs/BD25_LEE_MODEL_AUDIT_20261022.md",
+      "test_result": {
+        "baseline_parity_checks": "PASS",
+        "target_response_in_published_eq3": "EXACT_ZERO",
+        "material_response": "NOT_COMPUTED",
+        "novelty": "UNRESOLVED"
+      },
+      "compute_authorized": false
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
