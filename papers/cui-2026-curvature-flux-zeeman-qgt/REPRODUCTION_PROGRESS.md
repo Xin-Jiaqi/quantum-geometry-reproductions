@@ -183,9 +183,20 @@ collision/contact terms remain outstanding.
 | --- | --- |
 | Paper | Exact Kramers-degenerate **equilibrium static** no-current Ward as an independent negative control; whole paper PARTIAL. |
 | Physics | Fréchet Fermi divided difference, spectral projector / within-doublet gauge invariance, local field and momentum derivative oracles, smooth near-degenerate limit. |
-| GitHub | Isolated Round24 code + 15 tests (including frozen regression), static audit and scope report; target 203/203, to be certified by both Python 3.11 and 3.12 CI before merging. |
+| GitHub | Round24 PR #83 **merged**: 15 new tests, frozen numerical reference, static audit and scope report. GitHub Actions 39780389586: **203/203 PASS** independently on Python 3.11 and 3.12, including the executable audit. |
 
 The earlier Round23 static formula deliberately rejected degeneracies;
 Round24 will extend the equilibrium method without calling any
 finite-frequency metallic response complete. The original 188 verified
 paper-specific tests remain unmodified.
+
+
+### Round24 actual independent acceptance (2026-10-22)
+
+- Stage PR #83 merged to main at commit 5d8c7814f9b5834131ccf10d62f282182e340ef6.
+- Fixed 4-band spin × orbital Kramers toy model at k=(0,0), mu=0.15, T=0.22, kappa=0.7 (natural units): two exact doublets [2,2].
+- Full static field response and independent spectral projector contraction residual <= 7.02081e-18; independent finite B difference <= 1.17030e-11; independent finite k spin-density gradient <= 5.47129e-11.
+- Max intracluster static response component 0.00733779; max full response 0.139812. f'[E] explicitly includes n != m within an exact Kramers cluster; a diagonal-only population derivative is basis-dependent and fails its negative-control test.
+- Initial CI failed five tests due an incorrect U†VU / U†SU Einstein-contraction index ordering; the implementation was corrected, and the final code passed **203/203** on both Python 3.11/3.12 with a frozen-data regression. The error is part of the visible audit history, not erased.
+- Repository file: results/frozen/round24_degenerate_static_ward_audit.json. The analytic whole-BZ equilibrium current vanishes on a periodic torus; this is NOT a demonstration of dissipative finite-frequency KME or an experimental material response.
+- Full author paper **PARTIAL**. Remaining: dynamic metallic charge conservation, electromagnetic contacts, Wannier physical spin+position in the same gauge, source Eq.(19), real material SI and Table I reconciliation.
