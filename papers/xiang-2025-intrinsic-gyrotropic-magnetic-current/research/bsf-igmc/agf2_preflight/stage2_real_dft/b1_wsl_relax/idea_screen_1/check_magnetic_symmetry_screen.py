@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""Read-only Ag4F8 screen-stage symmetry and tensor sign audit (stdlib).
+"""Read-only Ag4F8 structural glide, conditional magnetic pairing and IGMC tensor audit.
 
 Usage: python check_magnetic_symmetry_screen.py POSCAR.screen_last_complete
-No VASP, POTCAR, external package, network or write operation is required.
-Uses the prior, explicit collinear spin-axis-x assumption. Magnetic unitary
-and antiunitary connector classification is conditional on that assumption.
+Python standard library only; no VASP, POTCAR, network or file writes.
+
+Assumptions:
+- orthorhombic frozen cell and Ag4 F8 POSCAR order;
+- collinear site signs [-,+,+,-] are seeded along physical x;
+- m_x glide is {m_x|(1/2,1/2,0)} in the supplied POSCAR origin;
+- channel-resolved C/D symmetry protocol from the repository's tensor_symmetry.py.
+This is a symmetry audit, not a response calculation or proof of the SOC easy axis.
 """
 import math
 import sys
@@ -44,11 +49,11 @@ def nearest_image(v, L):
     return (v + L/2) % L - L/2
 
 def distance(a, b, cell):
-    dr = [nearest_image(a[j] - b[j], cell[j]) if j<2 else a[j]-b[j] for j in range(3)]
+    dr = [nearest_image(a[j] - b[j], cell[j]) if j < 2 else a[j] - b[j] for j in range(3)]
     return math.sqrt(sum(x*x for x in dr))
 
 def find_mx_glide(cell, pos):
-    a, b, c = cell
+    a, b, _ = cell
     mapping = []
     used = set()
     for i, p in enumerate(pos):
@@ -60,53 +65,52 @@ def find_mx_glide(cell, pos):
         used.add(j)
         mapping.append((i+1, j+1, d))
         if i < 4 and SIGNS[j] != -SIGNS[i]:
-            raise AssertionError("m_x' does not map seed spins antiunitarily")
+            raise AssertionError("m_x' does not map the collinear seed spins")
     return mapping
 
-def transform_sign(R, anti, i, j):
-    det = math.prod(R)
-    return ((-1 if anti else 1) * det * R[i] * R[j])
+def transform_sign(diagonal_R, antiunitary, i, j, channel):
+    """Sign for a polar-current / axial-field rank-2 tensor."""
+    det = math.prod(diagonal_R)
+    eta_T = -1 if (antiunitary and channel == "D") else 1
+    return eta_T * det * diagonal_R[i] * diagonal_R[j]
 
-def tensor_audit():
-    allowed = []
-    forbidden = []
-    rows = []
-    for i in range(3):
-        for j in range(3):
-            name = "alpha_" + AXES[i] + AXES[j]
-            same = transform_sign(R_MX, True, i, j)
-            sign1 = transform_sign(R_MZ, False, i, j)
-            sign2 = transform_sign(R_MZ, True, i, j)
-            rows.append((name, "allowed" if same==1 else "forbidden",
-                         "even" if sign1==1 else "odd",
-                         "even" if sign2==1 else "odd"))
-            (allowed if same==1 else forbidden).append(name)
-    assert set(allowed)=={"alpha_xx","alpha_yy","alpha_zz","alpha_yz","alpha_zy"}
-    assert rows[0]==("alpha_xx","allowed","odd","even")
-    assert rows[4]==("alpha_yy","allowed","odd","even")
-    return rows
+def allowed_components(R, antiunitary, channel):
+    return [AXES[i] + AXES[j] for i in range(3) for j in range(3)
+            if transform_sign(R, antiunitary, i, j, channel) == 1]
+
+def connector_parity(R, antiunitary, channel, i, j):
+    return "same" if transform_sign(R, antiunitary, i, j, channel) == 1 else "reverse"
 
 def main():
-    if len(sys.argv)!=2:
+    if len(sys.argv) != 2:
         raise SystemExit("usage: python check_magnetic_symmetry_screen.py POSCAR")
-    cell,pos=read_poscar(sys.argv[1])
-    mapping=find_mx_glide(cell,pos)
-    maxerr=max(d for _,_,d in mapping)
-    print("AgF2 B1 frozen screening snapshot: 12/12 m_x glide site mapping")
+    cell, pos = read_poscar(sys.argv[1])
+    mapping = find_mx_glide(cell, pos)
+    maxerr = max(d for _, _, d in mapping)
+    print("AgF2 B1 screening snapshot: 12/12 m_x glide site mapping")
     print("operation: (x,y,z) -> (-x + a/2, y + b/2, z)")
     print("max site residual: %.8f A" % maxerr)
-    for i,j,d in mapping:
-        print("  %02d -> %02d   mismatch %.7g A" % (i,j,d))
-    print("Ag x-axis signs assumed:",SIGNS)
-    print("Ag magnetic m_x' sign check: PASS")
-    print("alpha=P_polar/B_axial, m_x' internal constraint and domain parity:")
-    for name,allowed,typeI,typeII in tensor_audit():
-        print("  %-10s %-10s  B2/B1 Type-I m_z: %-4s | Type-II m_z': %s" %
-              (name,allowed,typeI,typeII))
-    print("Pz(B2)=-Pz(B1) for either m_z or m_z' *if a physical domain mapping applies*")
-    print("AHE_z parity: m_z even, m_z' odd (allowedness != nonzero).")
-    print("All tensor rules are symmetry-only. B2 not relaxed or calculated.")
-    if maxerr>1e-2:
+    for i, j, d in mapping:
+        print("  %02d -> %02d   mismatch %.7g A" % (i, j, d))
+    print("Ag seed signs along assumed physical x:", SIGNS)
+    print("Ag magnetic m_x' pairing check: PASS")
+    print("Conditional internal MPG: m_x' = {E,m_x'}; SOC easy axis is NOT established")
+    print("Allowed single-state IGMC components under channel-resolved protocol:")
+    print("  C (Zeeman-Berry-curvature / conduction):", ", ".join(allowed_components(R_MX, True, "C")))
+    print("  D (Zeeman-metric / displacement):", ", ".join(allowed_components(R_MX, True, "D")))
+    print("  Static alpha=P/B has the D-like time parity, not the full IGMC tensor.")
+    print("B1 -> B2 connector parity (source-defined):")
+    print("  component   Type-I m_z C   Type-II m_z' C   Type-I m_z D   Type-II m_z' D")
+    for name in ("xy", "yx", "xz", "zx", "xx", "yy", "zz", "yz", "zy"):
+        i, j = AXES.index(name[0]), AXES.index(name[1])
+        c1 = connector_parity(R_MZ, False, "C", i, j)
+        c2 = connector_parity(R_MZ, True, "C", i, j)
+        d1 = connector_parity(R_MZ, False, "D", i, j)
+        d2 = connector_parity(R_MZ, True, "D", i, j)
+        print("  %-10s %-15s %-16s %-15s %s" % (name, c1, c2, d1, d2))
+    print("Pz reverses for both structural partners. AHE sigma_xy: Type-I same; Type-II reverses.")
+    print("These are symmetry-only predictions; actual SOC MPG and response amplitudes are uncomputed.")
+    if maxerr > 1e-2:
         raise AssertionError("screen structure no longer matches m_x glide within 0.01 A")
 
 if __name__ == "__main__":
