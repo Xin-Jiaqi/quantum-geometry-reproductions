@@ -1,0 +1,333 @@
+{
+  "stage": "8l",
+  "date": "2026-10-22",
+  "headline": "OFF_BY_ONE_EVIDENCE_LABEL_ERROR_CONFIRMED; corrected ledger preserves all numerical evidence and defers raw on-site band-resolved confirmation",
+  "original_artifacts_unchanged": [
+    "STAGE8K_INDEPENDENT_SPIN_EVIDENCE_20261022.json",
+    "STAGE8I_SPIN_TEXTURE_20261022.json"
+  ],
+  "ledger_check": {
+    "stage": "8l",
+    "scientific_status": "OFF_BY_ONE_EVIDENCE_LABEL_ERROR_CONFIRMED__RAW_RECHECK_TARGETED",
+    "new_vasp_jobs": 0,
+    "raw_wavecar_examined_by_this_check": false,
+    "archived_artifacts_unchanged": true,
+    "unexpected_band35_label_issues": [
+      {
+        "job": "soc_AB_s0.00",
+        "place": "GAMMA_M_2_3__OLD_FALSE_Kp",
+        "issue": "E_band35_eV and S_grouped store BAND36 data",
+        "saved_E_eV": -1.475629,
+        "real_band35_E_eV": -1.48347,
+        "real_band36_E_eV": -1.47563,
+        "independent_saved_S_grouped_corresponds_to_band": 36,
+        "saved_S_perp": 0.088912
+      },
+      {
+        "job": "soc_AB_s0.00",
+        "place": "GAMMA_M_NEAR_M",
+        "issue": "E_band35_eV and S_grouped store BAND36 data",
+        "saved_E_eV": -1.238504,
+        "real_band35_E_eV": -1.24879,
+        "real_band36_E_eV": -1.2385,
+        "independent_saved_S_grouped_corresponds_to_band": 36,
+        "saved_S_perp": 0.16481
+      },
+      {
+        "job": "soc_AB_s0.00",
+        "place": "GAMMA_K_INTERIOR",
+        "issue": "E_band35_eV and S_grouped store BAND36 data",
+        "saved_E_eV": -1.063901,
+        "real_band35_E_eV": -1.13515,
+        "real_band36_E_eV": -1.0639,
+        "independent_saved_S_grouped_corresponds_to_band": 36,
+        "saved_S_perp": 0.037573
+      },
+      {
+        "job": "soc_AB_s0.00",
+        "place": "TRUE_K",
+        "issue": "E_band35_eV and S_grouped store BAND36 data",
+        "saved_E_eV": -0.176531,
+        "real_band35_E_eV": -0.26407,
+        "real_band36_E_eV": -0.17653,
+        "independent_saved_S_grouped_corresponds_to_band": 36,
+        "saved_S_perp": 0.0
+      },
+      {
+        "job": "soc_GLIDE_s0.50",
+        "place": "GAMMA_M_NEAR_M",
+        "issue": "E_band35_eV and S_grouped store BAND36 data",
+        "saved_E_eV": -1.244483,
+        "real_band35_E_eV": -1.26512,
+        "real_band36_E_eV": -1.24448,
+        "independent_saved_S_grouped_corresponds_to_band": 36,
+        "saved_S_perp": 0.0
+      },
+      {
+        "job": "soc_GLIDE_s0.50",
+        "place": "GAMMA_K_INTERIOR",
+        "issue": "E_band35_eV and S_grouped store BAND36 data",
+        "saved_E_eV": -1.106324,
+        "real_band35_E_eV": -1.1227,
+        "real_band36_E_eV": -1.10632,
+        "independent_saved_S_grouped_corresponds_to_band": 36,
+        "saved_S_perp": 1e-06
+      },
+      {
+        "job": "soc_GLIDE_s0.50",
+        "place": "TRUE_K",
+        "issue": "E_band35_eV and S_grouped store BAND36 data",
+        "saved_E_eV": -0.20245,
+        "real_band35_E_eV": -0.23776,
+        "real_band36_E_eV": -0.20245,
+        "independent_saved_S_grouped_corresponds_to_band": 36,
+        "saved_S_perp": 0.0
+      }
+    ],
+    "all_records": [
+      {
+        "job": "soc_AB_s0.00",
+        "location": "GAMMA_M_2_3__OLD_FALSE_Kp",
+        "legacy_E_band35_eV": -1.48347,
+        "legacy_E_band36_eV": -1.47563,
+        "new_archived_field_E_band35_eV": -1.475629,
+        "new_field_matches_actual_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false,
+        "new_spin_matches_legacy_band36": true
+      },
+      {
+        "job": "soc_AB_s0.00",
+        "location": "GAMMA_M_NEAR_M",
+        "legacy_E_band35_eV": -1.24879,
+        "legacy_E_band36_eV": -1.2385,
+        "new_archived_field_E_band35_eV": -1.238504,
+        "new_field_matches_actual_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false,
+        "new_spin_matches_legacy_band36": true
+      },
+      {
+        "job": "soc_AB_s0.00",
+        "location": "GAMMA_K_INTERIOR",
+        "legacy_E_band35_eV": -1.13515,
+        "legacy_E_band36_eV": -1.0639,
+        "new_archived_field_E_band35_eV": -1.063901,
+        "new_field_matches_actual_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false,
+        "new_spin_matches_legacy_band36": true
+      },
+      {
+        "job": "soc_AB_s0.00",
+        "location": "TRUE_K",
+        "legacy_E_band35_eV": -0.26407,
+        "legacy_E_band36_eV": -0.17653,
+        "new_archived_field_E_band35_eV": -0.176531,
+        "new_field_matches_actual_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false,
+        "new_spin_matches_legacy_band36": true
+      },
+      {
+        "job": "soc_GLIDE_s0.50",
+        "location": "GAMMA_M_2_3__OLD_FALSE_Kp",
+        "legacy_E_band35_eV": -1.44686,
+        "legacy_E_band36_eV": -1.44686,
+        "new_archived_field_E_band35_eV": -1.446857,
+        "new_field_matches_actual_band36": false,
+        "degenerate_energy_only_cannot_disambiguate": true,
+        "new_spin_matches_legacy_band36": true
+      },
+      {
+        "job": "soc_GLIDE_s0.50",
+        "location": "GAMMA_M_NEAR_M",
+        "legacy_E_band35_eV": -1.26512,
+        "legacy_E_band36_eV": -1.24448,
+        "new_archived_field_E_band35_eV": -1.244483,
+        "new_field_matches_actual_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false,
+        "new_spin_matches_legacy_band36": true
+      },
+      {
+        "job": "soc_GLIDE_s0.50",
+        "location": "GAMMA_K_INTERIOR",
+        "legacy_E_band35_eV": -1.1227,
+        "legacy_E_band36_eV": -1.10632,
+        "new_archived_field_E_band35_eV": -1.106324,
+        "new_field_matches_actual_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false,
+        "new_spin_matches_legacy_band36": true
+      },
+      {
+        "job": "soc_GLIDE_s0.50",
+        "location": "TRUE_K",
+        "legacy_E_band35_eV": -0.23776,
+        "legacy_E_band36_eV": -0.20245,
+        "new_archived_field_E_band35_eV": -0.20245,
+        "new_field_matches_actual_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false,
+        "new_spin_matches_legacy_band36": true
+      }
+    ],
+    "physics": "The new independently saved spinor evidence confirms nonzero pseudo transverse spin in actual BAND36 at the AB three nondegenerate candidates, whereas its prose review describes BAND35. Both candidates may be nondegenerate; reconcile against onsite raw WAVECAR using explicit zero-based indices before quoting band-resolved spin.",
+    "PAW_physical_spin": "NOT_QUANTITATIVELY_VALIDATED",
+    "Kubo_static_NMEE": "NOT_COMPUTED"
+  },
+  "corrected_key_results_band36_1based": {
+    "soc_AB_s0.00": {
+      "GAMMA_M_2_3__OLD_FALSE_Kp": {
+        "gap_band35_meV": 7.84,
+        "S_grouped": [
+          0.044456,
+          0.077,
+          -0.0
+        ],
+        "S_interleaved": [
+          -0.033473,
+          -0.034478,
+          0.016549
+        ],
+        "norm": 0.958338,
+        "phase_invariance_pass": true,
+        "E_actual_band_1based_eV": -1.475629,
+        "label_erratum": "field stores BAND36 (1-based) data; original Stage8k field name E_band35_eV was off-by-one",
+        "matches_legacy_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false
+      },
+      "GAMMA_M_NEAR_M": {
+        "gap_band35_meV": 10.285,
+        "S_grouped": [
+          -0.082405,
+          0.14273,
+          0.0
+        ],
+        "S_interleaved": [
+          0.047778,
+          -0.004563,
+          0.006134
+        ],
+        "norm": 1.027088,
+        "phase_invariance_pass": true,
+        "E_actual_band_1based_eV": -1.238504,
+        "label_erratum": "field stores BAND36 (1-based) data; original Stage8k field name E_band35_eV was off-by-one",
+        "matches_legacy_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false
+      },
+      "GAMMA_K_INTERIOR": {
+        "gap_band35_meV": 71.252,
+        "S_grouped": [
+          -0.032539,
+          0.018786,
+          -0.47659
+        ],
+        "S_interleaved": [
+          -0.038187,
+          -0.009474,
+          0.293681
+        ],
+        "norm": 0.903104,
+        "phase_invariance_pass": true,
+        "E_actual_band_1based_eV": -1.063901,
+        "label_erratum": "field stores BAND36 (1-based) data; original Stage8k field name E_band35_eV was off-by-one",
+        "matches_legacy_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false
+      },
+      "TRUE_K": {
+        "gap_band35_meV": 87.543,
+        "S_grouped": [
+          -0.0,
+          0.0,
+          -0.497881
+        ],
+        "S_interleaved": [
+          0.00964,
+          -0.139296,
+          -0.007119
+        ],
+        "norm": 0.88499,
+        "phase_invariance_pass": true,
+        "E_actual_band_1based_eV": -0.176531,
+        "label_erratum": "field stores BAND36 (1-based) data; original Stage8k field name E_band35_eV was off-by-one",
+        "matches_legacy_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false
+      }
+    },
+    "soc_GLIDE_s0.50": {
+      "GAMMA_M_2_3__OLD_FALSE_Kp": {
+        "gap_band35_meV": 0.0,
+        "S_grouped": [
+          0.122815,
+          0.202194,
+          -0.007595
+        ],
+        "S_interleaved": [
+          0.003102,
+          -0.030754,
+          0.00966
+        ],
+        "norm": 0.958297,
+        "phase_invariance_pass": true,
+        "E_actual_band_1based_eV": -1.446857,
+        "label_erratum": "field stores BAND36 (1-based) data; original Stage8k field name E_band35_eV was off-by-one",
+        "matches_legacy_band36": false,
+        "degenerate_energy_only_cannot_disambiguate": true
+      },
+      "GAMMA_M_NEAR_M": {
+        "gap_band35_meV": 20.635,
+        "S_grouped": [
+          0.0,
+          0.0,
+          -0.462427
+        ],
+        "S_interleaved": [
+          0.022616,
+          0.003289,
+          0.18838
+        ],
+        "norm": 1.014644,
+        "phase_invariance_pass": true,
+        "E_actual_band_1based_eV": -1.244483,
+        "label_erratum": "field stores BAND36 (1-based) data; original Stage8k field name E_band35_eV was off-by-one",
+        "matches_legacy_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false
+      },
+      "GAMMA_K_INTERIOR": {
+        "gap_band35_meV": 16.375,
+        "S_grouped": [
+          -1e-06,
+          0.0,
+          -0.475266
+        ],
+        "S_interleaved": [
+          -0.016238,
+          0.002066,
+          0.299219
+        ],
+        "norm": 0.899213,
+        "phase_invariance_pass": true,
+        "E_actual_band_1based_eV": -1.106324,
+        "label_erratum": "field stores BAND36 (1-based) data; original Stage8k field name E_band35_eV was off-by-one",
+        "matches_legacy_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false
+      },
+      "TRUE_K": {
+        "gap_band35_meV": 35.311,
+        "S_grouped": [
+          -0.0,
+          0.0,
+          -0.498856
+        ],
+        "S_interleaved": [
+          0.009369,
+          -0.014832,
+          -0.006066
+        ],
+        "norm": 0.884258,
+        "phase_invariance_pass": true,
+        "E_actual_band_1based_eV": -0.20245,
+        "label_erratum": "field stores BAND36 (1-based) data; original Stage8k field name E_band35_eV was off-by-one",
+        "matches_legacy_band36": true,
+        "degenerate_energy_only_cannot_disambiguate": false
+      }
+    }
+  },
+  "physics": "AB three nondegenerate candidates show nonzero pseudo transverse spin in actual BAND36; prose previously described band35. Degenerate glide samples are not single-band matched.",
+  "new_vasp_jobs": 0
+}
