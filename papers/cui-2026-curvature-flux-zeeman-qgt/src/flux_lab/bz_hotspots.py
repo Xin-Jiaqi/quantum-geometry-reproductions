@@ -88,11 +88,11 @@ def field_diagnostics(values,weights,*,component=None,top_fraction=.05):
     net=np.einsum("n,nab->ab",w,val,optimize=True)
     l1=np.einsum("n,nab->ab",w,np.abs(val),optimize=True)
     if component is None:
-        ab=np.unravel_index(np.argmax(abs(net)),net.shape)
+        ab=tuple(int(x) for x in np.unravel_index(np.argmax(abs(net)),net.shape))
     else:
         if len(component)!=2 or component[0] not in (0,1) or component[1] not in (0,1,2):
             raise ValueError("component must be (a=0/1,b=0/1/2)")
-        ab=tuple(component)
+        ab=tuple(int(x) for x in component)
     contribution=w*np.abs(val[:,ab[0],ab[1]])
     order=np.argsort(contribution)[::-1]
     n_top=max(1,int(np.ceil(top_fraction*len(w))))
