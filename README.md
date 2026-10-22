@@ -188,3 +188,7 @@ New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINV
 ### v65: fully specified projected finite-orbital position, static Maxwell E/B
 
 [Independent physical acceptance](papers/xiang-2026-quantum-geometric-map/docs/STATIC_ORBITAL_EB_MAXWELL_V65.md): finite Peierls orbital B plus **supplied offdiagonal projected position dipoles** yields a static E/B mixed grand-potential derivative. A B-dependent frame changes the density contribution and position contact separately, while their sum is invariant. Canonical fixed-N corrections distinguish origin artifacts at fixed chemical potential. This is **not** transport or Xiang orbital mixed E/B proof, which remains PARTIAL.
+
+### v66: finite dynamic orbital mixed E/B with seven contacts
+
+[Source-independent v66 report](papers/xiang-2026-quantum-geometric-map/docs/DYNAMIC_ORBITAL_EB_SEVEN_CONTACT_V66.md): magnetic derivative of finite-frequency E response with explicitly supplied offdiagonal projected positions and noncommuting electric current contact, checked in multiple B-dependent gauges and by independent finite-E DC superoperator. **VERIFIED** mathematical specified-model response; **CONDITIONAL** scalar-gamma bath; **UNRESOLVED** full microscopic conserving orbital magnetotransport and original Xiang paper **PARTIAL**.
