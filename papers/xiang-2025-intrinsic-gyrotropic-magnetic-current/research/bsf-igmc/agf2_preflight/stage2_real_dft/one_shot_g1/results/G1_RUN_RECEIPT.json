@@ -1,0 +1,52 @@
+{
+  "schema": "bsf_igmc_agf2_stage2_g1_run_receipt_v1",
+  "date_utc": null,
+  "status": "QUEUED",
+  "status_meaning": "job submitted exactly once; still queued (not started) at receipt time; no completion claimed. Per the G1 task instruction, a QUEUED auditable receipt is delivered and no further active polling is performed.",
+  "authorization": "AUTHORIZED_ONE_SHOT",
+  "data_origin": "PBS_SUBMITTED_NOT_STARTED",
+  "job": {
+    "job_id": "490620.cmspbs1",
+    "server": "cmspbs1",
+    "name": "agf2_g1_b1g30",
+    "queue": "CP_001",
+    "requested": {
+      "ncpus": 32,
+      "mpiprocs": 32,
+      "mem": "120gb",
+      "walltime": "02:00:00"
+    },
+    "state": "Q",
+    "queue_comment": "Not Running: Insufficient amount of resource: Qlist",
+    "submission_count": 1,
+    "auto_retry": false,
+    "queued_note": "CP_001 heavily loaded: 394 queued / 49 running at check; PBS comment: Not Running: Insufficient amount of resource: Qlist"
+  },
+  "preflight": {
+    "poscar_sha256_matched": true,
+    "incar_sha256_matched": true,
+    "kpoints_sha256_matched": true,
+    "potcar_concatenated_sha256_matched": true,
+    "potcar_element_order": "Ag F",
+    "vasp_bin": "/work/app/VASP6/vasp.6.4.3_wannier90_cpu/bin/vasp_std",
+    "vasp_bin_note": "6.6.1/6.6.0/6.5.1 cpu builds not accessible to this account; 6.4.3_wannier90_cpu (group vasp6grp) selected; exact version string read from OUTCAR after run",
+    "mpi": "Intel MPI 2021.10.0 (oneapi/2023.2.0 site loader); ldd after loader: 0 unresolved",
+    "queue_limits_within_approved": true
+  },
+  "scf_audit": null,
+  "scf_audit_note": "not available; job has not started. The SCF audit plan is in G1_SCF_AUDIT.md; real values (EDIFF reached, VASP version from OUTCAR, local Ag moments, total magnetization, TOTEN, preliminary occupancy/gap, error/interruption) will be appended when the job completes.",
+  "blocked_or_pending": [
+    "job queued but not started at receipt time; CP_001 heavily loaded (394 queued / 49 running)"
+  ],
+  "claims_note": "No physics conclusion claimed. No retry, no scope expansion, no additional submission.",
+  "reported_receipt_timestamp_utc": "2026-10-21T04:05:00Z",
+  "timestamp_integrity": "UNVERIFIED_CONTRADICTION: reported receipt timestamp 2026-10-21T04:05:00Z precedes G1_INPUT_FINGERPRINTS.json job.submitted_utc 2026-10-21T04:14:00Z; actual Q snapshot time must be reconciled with PBS accounting before claiming an as-of time.",
+  "real_vasp_execution_evidence_available": false,
+  "independent_review_note": "User-supplied site submission and queue observations are documented; GitHub reviewer has no SSH/PBS access and cannot independently confirm live job state. No OUTCAR or numerical results existed at this review.",
+  "local_wsl_diagnostic": {
+    "exists": true,
+    "file": "G1_LOCAL_WSL_DIAGNOSTIC.json",
+    "summary": "user-requested local WSL run of the identical single point (private VASP 6.6.0 build, OpenMPI 4.1.6, 8 ranks): SCF converged to EDIFF; TOTEN -35.17579601 eV/12-atom; Ag moments +-0.567 uB preserving the Type-I interlayer Neel OPPOSITE seed; net mag 0; preliminary gap ~1.49 eV (12x8x1 NOT k-converged). NOT the approved PBS execution; PBS job 490620.cmspbs1 remains queued with no OUTCAR.",
+    "receipt_facts_unaffected": "this pointer does not modify any queued-only PBS receipt fact above; PBS audit stays pending"
+  }
+}
