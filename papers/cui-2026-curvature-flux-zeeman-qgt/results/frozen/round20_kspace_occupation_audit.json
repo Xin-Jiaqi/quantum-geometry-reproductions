@@ -1,0 +1,569 @@
+{
+  "schema": "cui-flux-round20-kspace-hotspots-v1",
+  "status": "model-only diagnostic; BZ convergence UNVERIFIED, full paper PARTIAL",
+  "model": "synthetic triangular-periodic four-band orbital x physical spin",
+  "main": [
+    {
+      "group": "6",
+      "order": 8,
+      "method": "hexagon",
+      "nodes": 768,
+      "bz_area": 34.18931254658433,
+      "weight_sum": 1,
+      "parameters": {
+        "mu": 0.13,
+        "temperature": 0.17,
+        "frequency": [
+          0.071,
+          0.004
+        ],
+        "resonance_eta_multiples": 2,
+        "small_gap_threshold": 0.02
+      },
+      "min_intercluster_gap": 0.010604734375065483,
+      "min_pole_distance": 0.004000688209211151,
+      "max_resonant_occupation_difference": 0.0000011727953078198411,
+      "resonant_transition_visits": 264,
+      "max_total_partition_residual": 3.245365593107716e-19,
+      "components": {
+        "00": {
+          "net": [
+            4.0175709683893454e-7,
+            2.475013118128477e-9
+          ],
+          "net_abs": 4.017647203904095e-7,
+          "absolute_integral": 0.003320679088797396,
+          "cancellation_ratio": 8265.233158278732,
+          "cross_mu_net": [
+            -2.0070351296176472e-7,
+            3.539161093960137e-10
+          ],
+          "same_side_net": [
+            6.024606098006794e-7,
+            2.1210970087313347e-9
+          ],
+          "cross_mu_absolute_integral": 0.0033205580393464904,
+          "same_side_absolute_integral": 0.0000011866185932888715,
+          "near_resonant_absolute_integral": 4.624697400457601e-7,
+          "small_gap_absolute_integral": 5.437981457684369e-10,
+          "top_nodes": [
+            {
+              "k": [
+                -1.3137754582094874,
+                0.10208039879153291
+              ],
+              "quadrature_weight": 0.003127718363408361,
+              "weighted_abs_kernel": 0.00003199224404358785,
+              "min_gap": 0.15295421519562868,
+              "min_pole_distance": 0.08205177260931915
+            },
+            {
+              "k": [
+                1.3137754582094878,
+                -0.10208039879153225
+              ],
+              "quadrature_weight": 0.003127718363408361,
+              "weighted_abs_kernel": 0.00003199224404358785,
+              "min_gap": 0.15295421519562957,
+              "min_pole_distance": 0.08205177260932003
+            },
+            {
+              "k": [
+                -0.988916079540406,
+                -0.2021447507339345
+              ],
+              "quadrature_weight": 0.0026112454291924154,
+              "weighted_abs_kernel": 0.00003155770184519102,
+              "min_gap": 0.18200312575656818,
+              "min_pole_distance": 0.11107517241818035
+            },
+            {
+              "k": [
+                0.988916079540406,
+                0.20214475073393492
+              ],
+              "quadrature_weight": 0.0026112454291924154,
+              "weighted_abs_kernel": 0.00003155770184519099,
+              "min_gap": 0.18200312575656863,
+              "min_pole_distance": 0.1110751724181808
+            },
+            {
+              "k": [
+                -1.3137754582094878,
+                -0.10208039879153225
+              ],
+              "quadrature_weight": 0.003127718363408361,
+              "weighted_abs_kernel": 0.000031080307954217744,
+              "min_gap": 0.15108682082811464,
+              "min_pole_distance": 0.08018665020035778
+            }
+          ]
+        },
+        "01": {
+          "net": [
+            4.112676227136544e-7,
+            2.8746428572326966e-8
+          ],
+          "net_abs": 4.1227104512469056e-7,
+          "absolute_integral": 0.0027116919399801133,
+          "cancellation_ratio": 6577.449403850244,
+          "cross_mu_net": [
+            9.861131133617867e-8,
+            1.3281195953060095e-10
+          ],
+          "same_side_net": [
+            3.126563113774449e-7,
+            2.8613616612796005e-8
+          ],
+          "cross_mu_absolute_integral": 0.0027118464800355026,
+          "same_side_absolute_integral": 0.0000010407098657163586,
+          "near_resonant_absolute_integral": 4.027271073149789e-7,
+          "small_gap_absolute_integral": 3.898887896297167e-10,
+          "top_nodes": [
+            {
+              "k": [
+                -1.8278171953803057,
+                -1.9158797630257496
+              ],
+              "quadrature_weight": 0.0031277183634083627,
+              "weighted_abs_kernel": 0.000021262252949957998,
+              "min_gap": 0.13219021339791848,
+              "min_pole_distance": 0.06132081388633718
+            },
+            {
+              "k": [
+                1.8278171953803053,
+                1.915879763025751
+              ],
+              "quadrature_weight": 0.003127718363408361,
+              "weighted_abs_kernel": 0.000021262252949957862,
+              "min_gap": 0.13219021339791936,
+              "min_pole_distance": 0.06132081388633807
+            },
+            {
+              "k": [
+                -0.6695205291474634,
+                0.7553540717259368
+              ],
+              "quadrature_weight": 0.0026112454291924154,
+              "weighted_abs_kernel": 0.000020301692078533053,
+              "min_gap": 0.18200312575656907,
+              "min_pole_distance": 0.11107517241818124
+            },
+            {
+              "k": [
+                0.6695205291474636,
+                -0.7553540717259364
+              ],
+              "quadrature_weight": 0.0026112454291924163,
+              "weighted_abs_kernel": 0.000020301692078533026,
+              "min_gap": 0.18200312575656863,
+              "min_pole_distance": 0.1110751724181808
+            },
+            {
+              "k": [
+                2.1526765740493867,
+                2.1034374127491198
+              ],
+              "quadrature_weight": 0.002217183646802031,
+              "weighted_abs_kernel": 0.000018116568126598294,
+              "min_gap": 0.14709261614821179,
+              "min_pole_distance": 0.07619767865413685
+            }
+          ]
+        }
+      },
+      "status": "diagnostic only; no finite-order BZ convergence claim"
+    },
+    {
+      "group": "6m'm'",
+      "order": 8,
+      "method": "hexagon",
+      "nodes": 768,
+      "bz_area": 34.18931254658433,
+      "weight_sum": 1,
+      "parameters": {
+        "mu": 0.13,
+        "temperature": 0.17,
+        "frequency": [
+          0.071,
+          0.004
+        ],
+        "resonance_eta_multiples": 2,
+        "small_gap_threshold": 0.02
+      },
+      "min_intercluster_gap": 0.008249200773938536,
+      "min_pole_distance": 0.004280909204739594,
+      "max_resonant_occupation_difference": 0.0000011481614704640615,
+      "resonant_transition_visits": 672,
+      "max_total_partition_residual": 4.0267313506517047e-19,
+      "components": {
+        "00": {
+          "net": [
+            1.3998173556897465e-19,
+            -1.9364777617215965e-20
+          ],
+          "net_abs": 1.4131482903455875e-19,
+          "absolute_integral": 6.755207641147806e-7,
+          "cancellation_ratio": 4780253910575.662,
+          "cross_mu_net": [
+            1.44907529116115e-19,
+            -1.6351658243527918e-20
+          ],
+          "same_side_net": [
+            -1.0810591165682961e-21,
+            -3.3708373047397097e-21
+          ],
+          "cross_mu_absolute_integral": 8.104057070486946e-10,
+          "same_side_absolute_integral": 6.750320754197453e-7,
+          "near_resonant_absolute_integral": 4.33448058112421e-7,
+          "small_gap_absolute_integral": 7.001161839463665e-10,
+          "top_nodes": [
+            {
+              "k": [
+                -1.4716497436527818,
+                -0.6314283506462997
+              ],
+              "quadrature_weight": 0.0019885152427593787,
+              "weighted_abs_kernel": 7.003170775757441e-9,
+              "min_gap": 0.0725251831428495,
+              "min_pole_distance": 0.0042809092047405425
+            },
+            {
+              "k": [
+                1.4716497436527818,
+                -0.6314283506462997
+              ],
+              "quadrature_weight": 0.0019885152427593787,
+              "weighted_abs_kernel": 7.003170775745179e-9,
+              "min_gap": 0.0725251831428495,
+              "min_pole_distance": 0.0042809092047405425
+            },
+            {
+              "k": [
+                1.4716497436527811,
+                0.6314283506463008
+              ],
+              "quadrature_weight": 0.0019885152427593787,
+              "weighted_abs_kernel": 7.0031707757443486e-9,
+              "min_gap": 0.07252518314284861,
+              "min_pole_distance": 0.004280909204740227
+            },
+            {
+              "k": [
+                -1.4716497436527811,
+                0.6314283506463008
+              ],
+              "quadrature_weight": 0.0019885152427593787,
+              "weighted_abs_kernel": 7.0031707757357045e-9,
+              "min_gap": 0.07252518314284728,
+              "min_pole_distance": 0.0042809092047397515
+            },
+            {
+              "k": [
+                0.31939555039294293,
+                -3.1118847407980734
+              ],
+              "quadrature_weight": 0.001851065214542807,
+              "weighted_abs_kernel": 6.193152825522396e-9,
+              "min_gap": 0.06683505142556978,
+              "min_pole_distance": 0.005774668529676588
+            }
+          ]
+        },
+        "01": {
+          "net": [
+            3.9801076362311827e-7,
+            4.848696898970985e-7
+          ],
+          "net_abs": 6.273046980062927e-7,
+          "absolute_integral": 9.348695123352673e-7,
+          "cancellation_ratio": 1.4902957291830918,
+          "cross_mu_net": [
+            8.000510086469152e-10,
+            1.9340599272895098e-14
+          ],
+          "same_side_net": [
+            3.9721071261448056e-7,
+            4.848696705564978e-7
+          ],
+          "cross_mu_absolute_integral": 1.0196449588729217e-9,
+          "same_side_absolute_integral": 9.341742930939316e-7,
+          "near_resonant_absolute_integral": 6.10408223302599e-7,
+          "small_gap_absolute_integral": 9.178977941824085e-10,
+          "top_nodes": [
+            {
+              "k": [
+                0.3193955503929425,
+                2.6700999060085637
+              ],
+              "quadrature_weight": 0.0026112454291924154,
+              "weighted_abs_kernel": 1.365342758778022e-8,
+              "min_gap": 0.0753597163915094,
+              "min_pole_distance": 0.0059166820950931455
+            },
+            {
+              "k": [
+                -0.3193955503929428,
+                -2.6700999060085637
+              ],
+              "quadrature_weight": 0.0026112454291924154,
+              "weighted_abs_kernel": 1.365342758777629e-8,
+              "min_gap": 0.07535971639151073,
+              "min_pole_distance": 0.005916682095094127
+            },
+            {
+              "k": [
+                -0.3193955503929425,
+                2.6700999060085637
+              ],
+              "quadrature_weight": 0.0026112454291924154,
+              "weighted_abs_kernel": 1.3653427587772868e-8,
+              "min_gap": 0.0753597163915094,
+              "min_pole_distance": 0.0059166820950931455
+            },
+            {
+              "k": [
+                0.3193955503929428,
+                -2.6700999060085637
+              ],
+              "quadrature_weight": 0.0026112454291924154,
+              "weighted_abs_kernel": 1.3653427587767139e-8,
+              "min_gap": 0.07535971639150896,
+              "min_pole_distance": 0.0059166820950928185
+            },
+            {
+              "k": [
+                -2.8546690143767566,
+                1.2793377099030359
+              ],
+              "quadrature_weight": 0.001851065214542807,
+              "weighted_abs_kernel": 1.0166533022148609e-8,
+              "min_gap": 0.06683505142557156,
+              "min_pole_distance": 0.005774668529675627
+            }
+          ]
+        }
+      },
+      "status": "diagnostic only; no finite-order BZ convergence claim"
+    },
+    {
+      "group": "6",
+      "order": 12,
+      "method": "gauss",
+      "nodes": 144,
+      "bz_area": 34.18931254658433,
+      "weight_sum": 0.9999999999999998,
+      "parameters": {
+        "mu": 0.13,
+        "temperature": 0.17,
+        "frequency": [
+          0.071,
+          0.004
+        ],
+        "resonance_eta_multiples": 2,
+        "small_gap_threshold": 0.02
+      },
+      "min_intercluster_gap": 0.004818534347746262,
+      "min_pole_distance": 0.004006891999900078,
+      "max_resonant_occupation_difference": 0.0000010672333798520226,
+      "resonant_transition_visits": 84,
+      "max_total_partition_residual": 1.8520560214880092e-19,
+      "components": {
+        "00": {
+          "net": [
+            2.2569156567103053e-7,
+            3.547745026152982e-7
+          ],
+          "net_abs": 4.204778597274455e-7,
+          "absolute_integral": 0.003346990330037715,
+          "cancellation_ratio": 7959.96805208065,
+          "cross_mu_net": [
+            -2.191297970133896e-8,
+            3.609810583538387e-10
+          ],
+          "same_side_net": [
+            2.476045453723663e-7,
+            3.5441352155693806e-7
+          ],
+          "cross_mu_absolute_integral": 0.003347029876432341,
+          "same_side_absolute_integral": 0.00000136860307941003,
+          "near_resonant_absolute_integral": 7.198904018120388e-7,
+          "small_gap_absolute_integral": 1.280593966401714e-9,
+          "top_nodes": [
+            {
+              "k": [
+                -0.1967161780818201,
+                0.34072241510847956
+              ],
+              "quadrature_weight": 0.015518562609386445,
+              "weighted_abs_kernel": 0.00018729916308594827,
+              "min_gap": 0.11325848204237676,
+              "min_pole_distance": 0.04244737099663393
+            },
+            {
+              "k": [
+                0.1967161780818201,
+                -0.34072241510847956
+              ],
+              "quadrature_weight": 0.015518562609386445,
+              "weighted_abs_kernel": 0.00018729916308594778,
+              "min_gap": 0.11325848204237676,
+              "min_pole_distance": 0.04244737099663393
+            },
+            {
+              "k": [
+                0.9588605569297841,
+                -0.34072241510847956
+              ],
+              "quadrature_weight": 0.014543493924502259,
+              "weighted_abs_kernel": 0.00014848130042435776,
+              "min_gap": 0.18089319833854756,
+              "min_pole_distance": 0.10996597219629058
+            },
+            {
+              "k": [
+                -0.9588605569297841,
+                0.34072241510847956
+              ],
+              "quadrature_weight": 0.014543493924502259,
+              "weighted_abs_kernel": 0.0001484813004243576,
+              "min_gap": 0.18089319833854667,
+              "min_pole_distance": 0.10996597219628969
+            },
+            {
+              "k": [
+                -1.3522929130934243,
+                -0.34072241510847956
+              ],
+              "quadrature_weight": 0.014543493924502259,
+              "weighted_abs_kernel": 0.0001016245245094321,
+              "min_gap": 0.1287432998616551,
+              "min_pole_distance": 0.05788167826620977
+            }
+          ]
+        },
+        "01": {
+          "net": [
+            1.4399470940407401e-7,
+            3.5943184793739973e-7
+          ],
+          "net_abs": 3.872024401370138e-7,
+          "absolute_integral": 0.0028545973230828096,
+          "cancellation_ratio": 7372.363981158523,
+          "cross_mu_net": [
+            3.082820912633918e-8,
+            1.2970835866608732e-10
+          ],
+          "same_side_net": [
+            1.1316650027765153e-7,
+            3.593021395787274e-7
+          ],
+          "cross_mu_absolute_integral": 0.002853871522809827,
+          "same_side_absolute_integral": 0.0000016842804867071483,
+          "near_resonant_absolute_integral": 0.0000010907133398338347,
+          "small_gap_absolute_integral": 6.733639696193628e-10,
+          "top_nodes": [
+            {
+              "k": [
+                0.9588605569297841,
+                -0.34072241510847956
+              ],
+              "quadrature_weight": 0.014543493924502259,
+              "weighted_abs_kernel": 0.00008333351361883408,
+              "min_gap": 0.18089319833854756,
+              "min_pole_distance": 0.10996597219629058
+            },
+            {
+              "k": [
+                -0.9588605569297841,
+                0.34072241510847956
+              ],
+              "quadrature_weight": 0.014543493924502259,
+              "weighted_abs_kernel": 0.00008333351361883362,
+              "min_gap": 0.18089319833854667,
+              "min_pole_distance": 0.10996597219628969
+            },
+            {
+              "k": [
+                -2.078133620265716,
+                -1.5979153981326122
+              ],
+              "quadrature_weight": 0.011859519451884726,
+              "weighted_abs_kernel": 0.00007935922844919116,
+              "min_gap": 0.1504278598188229,
+              "min_pole_distance": 0.07952851636613487
+            },
+            {
+              "k": [
+                2.078133620265716,
+                1.5979153981326122
+              ],
+              "quadrature_weight": 0.011859519451884726,
+              "weighted_abs_kernel": 0.00007935922844919107,
+              "min_gap": 0.1504278598188229,
+              "min_pole_distance": 0.07952851636613487
+            },
+            {
+              "k": [
+                0.5777883675058021,
+                -1.0007588085423278
+              ],
+              "quadrature_weight": 0.013629691154778715,
+              "weighted_abs_kernel": 0.00007779602541206595,
+              "min_gap": 0.1755066081482033,
+              "min_pole_distance": 0.10458313031575461
+            }
+          ]
+        }
+      },
+      "status": "diagnostic only; no finite-order BZ convergence claim"
+    }
+  ],
+  "temperature_point_scan": [
+    {
+      "temperature": 0.08,
+      "point_even_xx": [
+        -0.0020467689536693735,
+        -4.8870128294674704e-8
+      ],
+      "point_same_mu_side_xx": [
+        1.1129612439923986e-13,
+        2.479961333190114e-15
+      ],
+      "min_intercluster_gap": 0.17474288932364512
+    },
+    {
+      "temperature": 0.17,
+      "point_even_xx": [
+        -0.0020466183507570823,
+        -4.55025451087759e-8
+      ],
+      "point_same_mu_side_xx": [
+        1.5041693162149174e-7,
+        3.367581241939155e-9
+      ],
+      "min_intercluster_gap": 0.17474288932364512
+    },
+    {
+      "temperature": 0.25,
+      "point_even_xx": [
+        -0.0020407055072768085,
+        8.448977253962389e-8
+      ],
+      "point_same_mu_side_xx": [
+        0.000005919999611903137,
+        1.3335647980622932e-7
+      ],
+      "min_intercluster_gap": 0.17474288932364512
+    }
+  ],
+  "important": "Forbidden tensor entries and absolute kernel are NOT converged observables; occupation labels overlap with resonance labels.",
+  "source": {
+    "github_repo": "Xin-Jiaqi/quantum-geometry-reproductions",
+    "ci_run": 39746294291,
+    "python": "3.12",
+    "head": "12e595cf99d585a2a90019ecb8f3743c4444e31c",
+    "note": "Raw synthetic diagnostic from actual successful GitHub Actions log; not exact material / convergence reference"
+  }
+}

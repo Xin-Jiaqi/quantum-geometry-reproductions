@@ -113,6 +113,14 @@ Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and
 | --- | --- |
 | Paper reproduction | Pair-resolved clean interband response, temperature/occupation and k-space cancellation diagnostics of the paper-inspired synthetic model. Original paper still PARTIAL; no converged material KME. |
 | Physics capabilities | New bounded occupation partition, resonance/gap subset analysis, k-hotspot and absolute-vs-net cancellation metrics, with independent reconstruction against existing Kubo. |
-| GitHub | Round20 branch adds 10 new regression tests (155 target), an audit script, and scientific findings. Count actual PASS only after dual-version CI. |
+| GitHub | Round20 PR #71 has 10 new tests, full audit and scoped acceptance. GitHub Actions run 39746294291: Python 3.11 and 3.12 both **155/155 PASS**, and the audit produced frozen JSON. Merge status is verified separately. |
 
 Key preliminary independent observation: group 6 hexagon-order12 net even xx ~4.85e-7 but weighted absolute kernel ~3.36e-3, cancellation factor ~6921. In this finite sample, cross-mu absolute integrand dominates (~3.36e-3) yet integrated cross-mu net ~3.77e-9, while same-side thermal transitions give ~4.82e-7 net. Group 6m'm' allowed xy has only ~1.44 cancellation ratio. These are not converged material quantities.
+
+
+### Round20 actual CI model findings
+
+- Group 6 hexagon order8 even xx: net 4.01757e-7+2.47501e-9i; absolute kernel 3.32068e-3; cancellation ratio **8265**. Cross-mu and same-side partition exactly reconstructs every Kubo point.
+- Group 6m'm' hexagon order8 allowed xy: net 3.98011e-7+4.84870e-7i; cancellation ratio **1.49**, demonstrating sharply different cancellation mechanisms.
+- At fixed k, temperature alone changes same-side response dramatically while intercluster gaps stay invariant; near-resonant pairs have Fermi differences ~1e-6.
+- The diagnostic method is VERIFIED on toy models; BZ convergence and real-material response are still **UNCONVERGED/PARTIAL**. Frozen CI JSON: results/frozen/round20_kspace_occupation_audit.json.

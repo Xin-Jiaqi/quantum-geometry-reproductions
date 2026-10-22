@@ -74,3 +74,42 @@ Open: true high-accuracy BZ convergence, an analytic occupied/full-band
 sum rule, non-Abelian intraband metallic KME, collisions and gauge contacts,
 validated Wannier physical-spin operators and source Table I/author Eq.(19)
 normalization. No SI or real material result is asserted.
+
+
+## Round20 actual remote acceptance and frozen model evidence
+
+GitHub Actions run 39746294291 completed successfully for Python 3.11 and
+3.12; each independently ran **155/155 tests** and executed the full
+diagnostic audit. The original 145 tests remain in place. The actual JSON
+audit has been frozen at results/frozen/round20_kspace_occupation_audit.json.
+
+**Group 6, hexagon order8 (768 nodes), xx even:**
+net 4.01757097e-7 + 2.47501312e-9 i; absolute k-kernel average
+3.32067909e-3; cancellation ratio **8265.23**.
+cross-mu net -2.00703513e-7+3.53916e-10 i; same-side net
+6.02460610e-7+2.12110e-9 i. The net cross and same-side contributions
+are individually sensitive to quadrature order; their partition
+remains algebraically exact at each k.
+
+**Group 6m'm', hexagon order8 (768 nodes), allowed xy even:**
+net 3.98010764e-7+4.84869690e-7 i; absolute k kernel
+9.34869512e-7; cancellation ratio **1.4903**.
+cross-mu net ~8.00051e-10; same-side net
+3.97210713e-7+4.84869671e-7 i.
+
+At a fixed k=(0.5145,-1.0456), changing only T from 0.08 to 0.25
+changes the same-side even xx contribution from ~1.11e-13 to
+~5.92e-6, while the minimum inter-cluster gap remains 0.1747428893.
+This directly isolates the role of Fermi occupations at a fixed Hamiltonian
+and fixed driving frequency in this toy model.
+
+The maximum occupation difference of sampled near-pole pairs is
+~1.17e-6 (group 6 order8), despite potentially small denominators.
+The near-resonance contribution is diagnostic and overlaps the cross/same
+partition: it must not be added on top of the two complete sectors.
+
+**Physical acceptance:** the reproducible diagnostic and Kubo
+partition are VERIFIED for the stated synthetic model; the actual BZ
+response remains **UNCONVERGED**, original paper **PARTIAL**. A next
+round should seek an analytic sum-rule controlling the cross-mu
+cancellation and confirm temperature effects with *converged* integrals.

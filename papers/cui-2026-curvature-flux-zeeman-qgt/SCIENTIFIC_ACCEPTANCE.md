@@ -100,3 +100,6 @@ The new hexagonal module is **VERIFIED for synthetic periodic models and symmetr
 ## Round20: slow-convergence mechanism diagnostics (bounded)
 
 Pair-resolved synthetic clean-cluster response is separated exactly into cross-mu and same-side energy-transition tensors and checked pointwise against existing Kubo for both complex frequency branches. Overlapping near-pole/small-gap subsets track denominator and Fermi factors but are not additive channels. Weighted magnitude, signed net and cancellation metrics are computed *before* any magnetic tensor projection. In the group-6 hexagonal order-12 model, cancellation ratio in allowed even xx is ~6921, whereas group 6m'm' allowed even xy is ~1.44. Strong near-pole conditions may carry Fermi differences ~1e-6. These are explanatory model diagnostics, not finite-order physical-convergence claims. See ROUND20_HOTSPOTS_OCCUPATIONS.md.
+
+
+Round20 CI-confirmed model subterm: 155/155 tests pass on Python 3.11 and 3.12 (Actions run 39746294291), and full audit JSON is frozen. Sixfold order8 even xx k-integrand absolute-to-net cancellation ratio ~8265; anti-mirror 6m'm' allowed xy ratio ~1.49. Pointwise near-pole occupation differences ~1e-6; fixed-k thermal scan isolates same-side occupation changes. No BZ convergence or real-material KME claim.

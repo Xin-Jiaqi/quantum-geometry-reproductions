@@ -16,6 +16,9 @@ from .causal_response import _fermi
 from .hexagonal_bz import hexagonal_bz_quadrature,hexagonal_symmetrized_model
 from .primitive_bz import primitive_cell_quadrature
 from .group_microscopic import build_group
+from .core import PAULI
+
+_PHYSICAL_SPIN=np.stack([np.kron(np.eye(2),s) for s in PAULI])
 
 def pair_resolved(H,V,spin,*,mu=.13,temperature=.17,z=.071+.004j,
                   kappa=1.,gap_tolerance=1e-9,resonance_widths=2.,
@@ -107,8 +110,7 @@ def weighted_k_audit(group,*,order=8,method="hexagon",components=((0,0),(0,1)),
     sampled=[]
     for point,weight in zip(pts,w):
         H,V=hexagonal_symmetrized_model(point,ops)[:2]
-        d=pair_resolved(H,V,np.stack([np.kron(np.eye(2),s)
-                 for s in __import__("flux_lab.core",fromlist=["PAULI"]).PAULI]),
+        d=pair_resolved(H,V,_PHYSICAL_SPIN,
                  mu=mu,temperature=temperature,z=z,
                  resonance_widths=resonance_widths,
                  small_gap_threshold=small_gap_threshold)
