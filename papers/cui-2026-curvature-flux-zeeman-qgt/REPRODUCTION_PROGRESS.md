@@ -127,3 +127,10 @@ Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and
 | GitHub | Round21 PR #74: 8 new tests (159 prior → **167 total**); Python 3.11 and 3.12 both **PASS**, plus reproducible audit in Actions run 39748027692. Frozen synthetic JSON in results/frozen/round21_fermi_sector_audit.json. |
 
 The model group-6 hexagon-order8 allowed xx has cancellation factor ~8265, with cross-mu net -2.007e-7 and same-side net 6.025e-7, adding to total 4.018e-7. Thermal factor scans at fixed Hamiltonian give strong same-side response variation, but none of these are converged real-material observables. Next physics gate: analytic interband cancellation sum rule and consistent BZ convergence tests.
+
+
+### Round21 GitHub final status
+
+- PR #74 merged (squash commit b17f043972425804ceb680fd5a5839b67808e392).
+- Final double-version GitHub Actions 39748495850: Python 3.11 and 3.12 each ran **167 tests PASS**, including the reproducible occupation-sector audit.
+- Physics Registry lists this as a VERIFIED bounded model method, NOT a converged BZ response or real material KME. The previously merged Round20 bz_hotspots code remains the separate authoritative spatial hotspot tool.
