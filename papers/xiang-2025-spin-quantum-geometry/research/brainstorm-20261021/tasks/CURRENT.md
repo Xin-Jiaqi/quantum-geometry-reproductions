@@ -60,3 +60,10 @@ The user requested a **high-value general layer-group/representation theory rese
 **Next scientific G1:** find one source-compatible **magnetic-site mode representation** and a FE switching operation **not** conjugating the FULL SOC magnetic Hamiltonian, alongside an exactly conjugate negative-control pair. Compare stabilizer \`Hom_H(E,mode)\` dimensions and physical mode mapping before any 80/528 table or DFT. If every apparent bright/dark case is just rotated drive axes, call NO-GO. See new 2026 spin-layer-group / magnon / FE prior-art constraints in the cumulative peer report.
 
 The previously approved **MnPS3 R2-P0 remains a separate READ-ONLY private evidence task**, not confirmed received; it can supply actual ordered sites but is **not a dependency for starting abstract group analysis**. **R1 CLOSED, no R2 compute/spending permissions or Slurm/WSL/Japan re-submission.**
+
+
+## 2026-10-22 science-review follow-up; unchanged compute permissions
+
+[**Full original-paper / brainstorm / peer-work audit**](../docs/BD_CROSS_PROJECT_DEEP_AUDIT_20261022.md) supersedes overly optimistic interpretation of Gate1–6 and PR #32. The established **antiunitary finite-frequency Onsager reciprocity involves exchanged operators**, unlike the previously tested **unitary static covariance**. This mathematical correction has been tested in a standalone two-/four-band Lehmann [group-toolkit Draft PR #32](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/pull/32).
+
+**Research priority next:** G2 representative site-/magnetic-mode representations and honest unitary/antiunitary/nonconjugate domain gate; optional moire local-response texture is a separate research hypothesis. **No new MnPS3, WSL, para or Japan jobs permitted.** MnPS3 R1 remains CLOSED and source-real R2-P0 remains **APPROVED READ-ONLY / execution not confirmed**.
