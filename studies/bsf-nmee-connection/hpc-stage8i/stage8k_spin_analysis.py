@@ -10,7 +10,8 @@ Reports pseudo-wavefunction spin (PAW augmentation NOT reconstructible from WAVE
 PROCAR truncated -> BLOCKED_PAW_SPIN_OPERATOR is a possible hard-stop label).
 """
 import json, sys, numpy as np
-sys.path.insert(0, "/work/sunq/xjq/stage8i-work/tools")
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from stage8k_independent_reader import (read_header, kpoint_meta, band_coeffs,
                                        split_spinor, spin_expected, find_kindex)
 
@@ -63,6 +64,8 @@ def analyze(path_w, path_e, label):
         entry = {"k_index": ki, "WAVECAR_k": [float(x) for x in wk],
                  "EIGENVAL_k": kpts[ki], "dist": round(float(dist), 6),
                  "nplane": nplane,
+                 "is_exact_requested_k_on_mesh": bool(dist < 1e-5),
+                 "k_label_warning": ("nearest grid point, NOT the exact requested high-symmetry coordinate" if dist >= 1e-5 else None),
                  "max_enocc_energy_dev_eV": round(float(np.max(np.abs(dE))), 6),
                  "energy_crosscheck": {},
                  "bands_near_gap": []}
