@@ -444,8 +444,8 @@
       "status": "OPEN_HYPOTHESIS",
       "scope_level": "S2",
       "contribution_type": "symmetry classification/theorem + material/model validation",
-      "status_detail": "LITERATURE_SCREEN_PASS; DATABASE_RECORD_GATE_PENDING; MAGNETIC_SPACE_GROUP_UNVERIFIED; MICROSCOPIC_RESPONSE_UNTESTED; NOVELTY_UNRESOLVED",
-      "source": "docs/BD29_C2DB_BIDB_MATERIAL_SCREEN_20261022.md",
+      "status_detail": "DATABASE_RECORD_GATE_PASS; STRUCTURAL_C3_MV_MZ_PASS_FOR_PD2TE2_AND_PD2SE2; MAGNETIC_MSG_AND_ORBITAL_SOC_HAMILTONIAN_PENDING; KUBO_UNTESTED; NOVELTY_UNRESOLVED",
+      "source": "docs/BD29_BIDB_DB_DIRECT_SCREEN_20261022.md",
       "candidate_ranking": [
         {
           "material": "VTeS Janus homobilayer",
@@ -498,9 +498,57 @@
           "generic magnetic vdW materials"
         ]
       },
-      "smallest_falsifying_test": "Retrieve exact BiDB VTeS and AgVP2Se6 UIDs/CIFs and property rows; validate magnetic ground state and actual layer orientation; derive the exact magnetic layer group before any response calculation.",
+      "smallest_falsifying_test": "Using user-supplied Pd2Te2 id980 structure, build spinful orbital-SOC Hamiltonian with correct real site permutation (including mz layer swap). Verify covariance and physically meaningful current-induced S_minus_z and S_plus_z susceptibilities for +/- registry perturbations, and compare same-level 2026 LEE SM. No DFT/HPC yet.",
       "compute_authorized": false,
-      "no_dft_or_hpc": true
+      "no_dft_or_hpc": true,
+      "reason": "The complete 48 MB BiDB SQLite has been integrity-checked and queried by exact normalized elemental species. A new, better theory demonstrator was found: nonmagnetic metallic 8-atom Pd2Te2 id980, Stable p-6m2, verified C3/mv/pure layer-exchanging mz by 8/8 atom matching. Pd2Se2 id975 is a close negative/control. VSeTe rather than VTeS is first magnetic extension; original screening was superseded. No microscopic spin-current coefficient or material realizability has been demonstrated; Pd2Te2 monolayer has ehull=0.134 eV/atom.",
+      "first_theory_material": {
+        "material": "Pd2Te2 bilayer",
+        "bidb_id": 980,
+        "uid": "Pd2Te2-51a4897edf43-2--1_0_0_-1--0.67_-0.33",
+        "layer_group": "p-6m2",
+        "centrosymmetric": false,
+        "magnetic_flag": false,
+        "gap_pbe_eV": 0,
+        "natoms": 8,
+        "slide_stability": "Stable",
+        "binding_energy_gs_meV_A2": 47.12462909226657,
+        "monolayer_ehull_eV_atom": 0.13369350559265802,
+        "actual_site_symmetry": {
+          "C3z": {
+            "matched": "8/8",
+            "maximum_error_angstrom": 0.001291
+          },
+          "vertical_mirror": {
+            "matched": "8/8",
+            "maximum_error_angstrom": 0.000566
+          },
+          "horizontal_layer_swapping_mirror": {
+            "matched": "8/8",
+            "maximum_error_angstrom": 0.00039,
+            "permutation_zero_based": [
+              5,
+              4,
+              7,
+              6,
+              1,
+              0,
+              3,
+              2
+            ]
+          }
+        },
+        "caveats": [
+          "structural symmetry only; not SOC/orbital/Kubo",
+          "nonmagnetic and metallic based on BiDB flags, not independent experimental verification",
+          "parent monolayer ehull 0.134 eV/atom; no assertion of easy synthesis"
+        ]
+      },
+      "magnetic_extension": {
+        "first": "VSeTe: 8 Stable six-atom bilayers, FM between layers, p-3m1/p3m1 structures, none of tested structures shares pure mz",
+        "second": "VTeS: 2 Stable six-atom FM, metallic p3m1 bilayers; no pure mz",
+        "third": "AgVP2Se6: 17 Stable 20-atom bilayers (14 interlayer FM, 3 AFM), gap ~1.08-1.22eV"
+      }
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
@@ -567,15 +615,20 @@
   },
   "material_screen": {
     "date": "2026-10-22",
-    "databases": [
-      "C2DB",
-      "BiDB"
-    ],
-    "data_status": "Published database docs and paper-level claims checked; exact BiDB record UID/CIF rows not extracted yet.",
-    "first_candidate": "VTeS Janus homobilayer",
-    "second_candidate": "AgVP2Se6",
-    "control": "CrI3 bilayer",
-    "novelty_rule": "Specific stacking-dependent magnetic state is direct prior art for that magnetic state, not automatic pre-emption of a higher-level response-field theory. Match the exact observable, protocol and abstraction level.",
-    "next_action": "Obtain exact structure/property records, then magnetic layer-group gate; no DFT/HPC until approved."
+    "source_sha256": "afe1fe7711189be5b0e189b0c101d6488a7578f4f9ba4e1bb0164534f4255984",
+    "source_file": "user-supplied local BiDB ASE SQLite; raw source not in GitHub",
+    "db_systems": 11184,
+    "db_monolayers": 992,
+    "db_bilayers": 10192,
+    "db_slide_stability_Stable": 2736,
+    "database_integrity": "PRAGMA quick_check = ok",
+    "match_method": "species exact atomic ratios normalized by gcd; bilayer and slide_stability Stable filters",
+    "chosen_main": "Pd2Te2 id980 p-6m2 nonmagnetic metal 8 atoms; structural C3 mv mz site mapping verified",
+    "chosen_control": "Pd2Se2 id975",
+    "magnetic_extension": "VSeTe, then VTeS",
+    "remaining_blocker": "spinful orbital/SOC Hamiltonian and current-spin Kubo; no extra user files needed",
+    "report": "docs/BD29_BIDB_DB_DIRECT_SCREEN_20261022.md",
+    "novelty_rule": "A prior material effect never by itself invalidates a later theory at S2/S3; exact general proposition must be compared",
+    "no_new_compute_authorized": true
   }
 }
