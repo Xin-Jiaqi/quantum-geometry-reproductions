@@ -77,8 +77,8 @@ def degenerate_static_ward(H,V,S,*,mu=0.,temperature=.2,kappa=1.,
     if not np.isfinite(degeneracy_tolerance) or degeneracy_tolerance<=0:
         raise ValueError("positive finite degeneracy tolerance required")
     e,U=np.linalg.eigh(H)
-    v=np.einsum("in,amn,mj->aij",U.conj(),V,U,optimize=True)
-    s=np.einsum("in,bnm,mj->bij",U.conj(),S,U,optimize=True)
+    v=np.einsum("mi,amn,nj->aij",U.conj(),V,U,optimize=True)
+    s=np.einsum("mi,bmn,nj->bij",U.conj(),S,U,optimize=True)
     dd=fermi_divided_difference(e,mu=mu,temperature=temperature)
     scale=max(1.,float(np.max(np.abs(e))))
     mask=np.abs(e[:,None]-e[None,:]) <= degeneracy_tolerance*scale
