@@ -336,3 +336,14 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - Literal original SM Eq20/31 spin-index signs and main/SM Eq10/62 helicities audited separately; no silent author corrections. Presence-only spin/complete-orbital-Wannier input contract explicitly refuses missing fields and never certifies full paper.
 - **VERIFIED** bounded finite-current identities, **CONDITIONAL** model and explicit sourced-index conventions, **UNRESOLVED** actual bulk PHE/orbital MNHE and full magnetic Wannier projection. Source Xiang PRB **PARTIAL**.
 - Final PR source SHA, actual remote core regression, merge and independently tested main SHA **must** be recorded after verification; no provisional pass claimed.
+
+
+## v71 final GitHub release certification (2026-10-22)
+
+- [PR #79](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/79) **squash merged** as `e946d841cdb32c849a66f401a853767895f0e9b7`; final PR HEAD `7d8540be79fec5f3995d47f81c07475b4e6265e4`.
+- Final PR-head [Actions 39757723955](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39757723955): **969/969 PASS**, `Ran 969 tests in 154.511s`, completed/success, original source scientific status explicitly `PARTIAL`.
+- Independent merged **main** [Actions 39758266016](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39758266016): **969/969 PASS**, `Ran 969 tests in 198.909s`, completed/success on exact merge SHA `e946d841cdb32c849a66f401a853767895f0e9b7`, original source `PARTIAL`.
+- 42 v71 scientific checks plus 1 independently reconstructed frozen-value gate; independent local and fresh-extracted **43/43 PASS**. Earlier v60–v68 standalone baseline **306/306 PASS** in a bounded batch and v70 independent standalone 10/10 PASS. A single local all-versions combined run exceeded its execution cap, so **do not claim local 100% suite PASS**; GitHub complete 969/969 core suite is the release authority.
+- Standalone archive (after certification regeneration): 96 files, 95/95 SHA256 verified; v71 physical source/test/reproduce/frozen-test Git blob SHA matched independently tested local versions; GitHub frozen JSON has same numeric values but different ordering/serialization.
+- **VERIFIED** bounded finite closed-system J_full=J_dev+J_contact, isothermal cancellation and optical polarization Ward, plus source-authentic SM Eq20/31 signed index contraction and main/SM spin helicity. **CONDITIONAL** finite supplied Peierls/position system. **UNRESOLVED** physical bulk PHE/orbital MNHE response map, full magnetic Wannier embedding, original source orbital factor/3band and SI concerns; original Xiang PRB remains **PARTIAL**.
+- Final release-documentation-only commits after merged CI modify no source code or tests.
