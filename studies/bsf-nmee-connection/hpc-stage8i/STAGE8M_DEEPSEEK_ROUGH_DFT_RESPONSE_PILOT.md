@@ -70,7 +70,7 @@ Stage8i 原 INCAR 已使用 `SAXIS=0 0 1`、`NBANDS=96`、`LORBIT=11`、`ISYM=0`
 4. 对每个 B 值先算 \(\mathcal F_{\lambda_x k_x}\) 和 \(\mathcal F_{\lambda_y k_y}\) 的 plaquette phase，再用 \(B=\pm0.125,\pm0.25\) T 的中心差分估 \(\partial_B\mathcal F\)。源步长先试 \(\delta\lambda=0.05,0.10,0.20\) meV；所有 λ/B corners 都检查 36/37 gap 仍开、occupied projector dimension=36。必须报告 source-step stability 与 gap guards，不挑能产生漂亮信号的步长。
 5. 用原 21×21×1 完整 BZ 先得到 **coarse DFT response estimate**，以实际 POSCAR 晶格把 fractional reciprocal derivatives 转换为 Cartesian \(k_x,k_y\)，再按二维 reciprocal-cell area 计算 BZ 权重。利用现有 96-band 矩阵做 nested remote-band-window check（occupied 36 固定，空带截断分别到 48/64/80/96）；Stage7g 已显示远带可强烈抵消，若结果随 band cutoff 明显变化则不得称稳健。报告全部 2×2 tensor entries、C3v isotropy/off-diagonal symmetry residual、有限差分符号、原始离散 BZ 求和与归一化约定。绝不能把 21×21 当作 k-mesh convergence 或发表级数值。
 6. Glide midpoint total static response 是精确几何对称性 null test；数值总响应应接近零。定义 ratio = abs(Gamma_glide_total) / max(abs(Gamma_AB_total), noise_floor)，报告是否与数值噪声相容。不要从总自旋 `SPN` 推导 layer-odd response。
-7. 在没有可靠 PAW operator convention、完整 BZ mesh convergence 或同一物理 Hilbert-space basis links 前，数值状态只能叫 `COARSE_BLOCH_SPACE_STATIC_RESPONSE_ESTIMATE`。它是判断 idea 是否有意思的早期证据，不是 production prediction。
+7. 在没有可靠 PAW operator convention、完整 BZ mesh convergence 或同一物理 Hilbert-space basis links 前，数值状态只能叫 `COARSE_BLOCH_SPACE_STATIC_RESPONSE_ESTIMATE`。它是判断 idea 是否有意思的早期证据，不是 production prediction。 该估计是在固定零场 Kohn–Sham Hamiltonian中加入 spin-only 源的 frozen-KS 响应，不包含外场诱导的自洽电荷/交换关联重整化，也不含 orbital magnetic coupling。
 
 ### 不要为了“非零”而放松科学门槛
 
