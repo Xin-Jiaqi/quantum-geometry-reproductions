@@ -177,8 +177,9 @@
     "preliminary_isolated_branch_run": 39748473393,
     "preliminary_prior_round20_suite": "170/170 PASS (159 baseline+11)",
     "integrated_round21_occupation_partition_baseline": "167/167 PASS as of Round21 PR #74",
-    "integrated_round22_ci": "PENDING",
-    "remark": "The numeric data are a finite-grid synthetic model audit, NOT a numerical error bound"
+    "integrated_round22_ci": "Actions run 39749647668, Python 3.11 and 3.12 both 178/178 PASS, including Round21 occupation-sector regression and Round22 audit",
+    "remark": "The numeric data are a finite-grid synthetic model audit, NOT a numerical error bound",
+    "integrated_head_first_success": "801186a715fdcb9f004d9ae8171e4974f04130a0"
   },
   "acceptance": "Convergence UNVERIFIED, multi-grid disagreement not a rigorous upper bound; whole paper PARTIAL"
 }

@@ -106,3 +106,12 @@ grids, not for the continuum limit.
 
 The integrated Round22 suite target is **178 tests** on Python 3.11
 and 3.12; record final CI results only after observing them.
+
+
+## Integrated acceptance after main's Round21 occupation partition
+
+After rebasing onto the already-merged Round21 Fermi-sector decomposition,
+GitHub Actions **39749647668** ran **178/178 tests successfully** in both
+Python 3.11 and Python 3.12, and executed the Round21 and Round22 reproducible
+audits. This confirms software/method compatibility with both independent
+physics modules. It **does not** certify converged BZ tensor amplitudes.
