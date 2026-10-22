@@ -11,6 +11,8 @@ The coordinates were independently parsed from two publicly committed files:
 
 The accompanying pure-stdlib [coordinate audit script](audit_agf2_b1_positions.py) implements x/y minimum-image displacement and distance without wrapping through z vacuum. Fixed atom order from the C2DB-derived B1 construction: top Ag ions 1–2; bottom Ag ions 3–4; top F ions 5–8; bottom F ions 9–12; inner F top 5/8; inner F bottom 9/12. These are 1-based indices.
 
+Independent SHA256 checks of the exact POSCAR bytes: initial = 2d323c3fe2353ef984330b3b99fc24a75a85337883bbaf36d08b20ed45e6d60a; step 15 = d49c82807fc2309575e5d3757904ab78caab348aef10e895ac2327a904ac2d68. Both match the recorded file hashes.
+
 **This verifies internal geometrical consistency of the uploaded POSCARs only.** It does not independently verify private OUTCAR ionic-step provenance, forces or total energy. Those remain reported by the WSL runner.
 
 ## 2. Independent coordinate-derived quantities
