@@ -194,6 +194,42 @@
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
       "material_claim_verified": false
+    },
+    {
+      "id": "BD21",
+      "claim": "generic ferroelectric wall SOC Edelstein is a novel effect",
+      "status": "NO_GO_CLAIM",
+      "reason": "Nasir/Atkinson PRB 113 035425 (2026) already studies conducting FE-wall Ising/Rashba spin texture and Edelstein (different material)",
+      "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD22",
+      "claim": "magnetic sliding FE induced spin/orbital current polarization is unexplored",
+      "status": "NO_GO_CLAIM",
+      "reason": "Dong et al pss RRL 2024 bilayer CrI3 current-induced spin and orbital polarization vs FE registry",
+      "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD23",
+      "claim": "slow sliding phonon controlling spin Edelstein is itself new",
+      "status": "NO_GO_CLAIM",
+      "reason": "Yarmohammadi et al PRB 113 184403 (2026) phonon control of Rashba altermagnetic Edelstein; Nature Physics 2026 coherent sliding motion",
+      "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD24",
+      "claim": "site- and layer-covariant registry-gradient response has a not-yet-known measurable selection",
+      "status": "BLOCKED_NOVELTY",
+      "reason": "Ordinary Hom(U tensor E,O) is standard tensor product; need actual layer-exchanging Seitz operation, peer equation, causal response and a distinct observable",
+      "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
     }
   ]
 }
