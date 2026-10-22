@@ -197,3 +197,7 @@ New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINV
 ### v67: independent conserving elastic two-lead scattering oracle
 
 [Physical v67 acceptance](papers/xiang-2026-quantum-geometric-map/docs/CONSERVING_RESERVOIR_WARD_V67.md): genuine semi-infinite tight-binding electrode surface selfenergies, independent S-matrix unitarity/Caroli optical and magnetic Ward, frame-covariant contact derivatives and E_gate/B differentiated two-terminal transport. **Different observable from homogeneous electric-field-driven orbital Hall**. Original Xiang PRB scientific audit **PARTIAL**.
+
+### v68: exact two-energy Keldysh Ward for same projected device-current operator
+
+[Source-independent scientific acceptance](papers/xiang-2026-quantum-geometric-map/docs/FINITE_FREQUENCY_SAME_DEVICE_KELDYSH_EB_V68.md). Real energy-dependent semi-infinite-lead Keldysh replaces scalar-gamma relaxation at the SAME projected-device current J(E)=i[H-E Pb,Pa], fully including magnetic/position/lead contact derivatives and microscopic finite-frequency charge injection Ward. Independent five-point B derivatives, resonance convergence and nonlinear finite-E static oracle are checked. **This is not macroscopic bulk orbital Hall or Xiang original PRB source reproduction**, which remains **PARTIAL**.

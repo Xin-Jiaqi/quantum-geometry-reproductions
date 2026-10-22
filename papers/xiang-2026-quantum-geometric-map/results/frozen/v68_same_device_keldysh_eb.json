@@ -1,0 +1,252 @@
+{
+  "convergence": {
+    "384": {
+      "mixed_dB_sigma": {
+        "imag": -0.004146307455417287,
+        "real": 0.007070051286472194
+      },
+      "sigma": {
+        "imag": -0.0011942572347715709,
+        "real": -0.005292648246012201
+      }
+    },
+    "512": {
+      "mixed_dB_sigma": {
+        "imag": -0.004146290781041619,
+        "real": 0.007070053909392061
+      },
+      "sigma": {
+        "imag": -0.0011942574278701046,
+        "real": -0.005292649615324767
+      }
+    },
+    "64": {
+      "mixed_dB_sigma": {
+        "imag": -0.0051257336190457855,
+        "real": 0.011487079500331232
+      },
+      "sigma": {
+        "imag": 0.004059349085700315,
+        "real": -0.004375148732332128
+      }
+    },
+    "640": {
+      "mixed_dB_sigma": {
+        "imag": -0.004146290848383346,
+        "real": 0.007070053900131344
+      },
+      "sigma": {
+        "imag": -0.001194257399094567,
+        "real": -0.005292649615898412
+      }
+    }
+  },
+  "frames": {
+    "landau_y": {
+      "electric_current_contact": {
+        "imag": -1.3877787807814457e-17,
+        "real": -0.05123325653857502
+      },
+      "five_point_independent_dB": {
+        "imag": -0.004146290854001658,
+        "real": 0.007070053897200584
+      },
+      "global_number_injection_error": 5.868038888095013e-11,
+      "lead_collision_norm": 0.10547491463706085,
+      "microscopic_ward_error": 9.017958121763474e-11,
+      "mixed_components": {
+        "electric_contact_density": {
+          "imag": 8.673617379884035e-19,
+          "real": -0.019195546632543872
+        },
+        "electric_contact_magnetic": {
+          "imag": 5.637851296924623e-18,
+          "real": -0.021739376105775775
+        },
+        "magnetic_current": {
+          "imag": 0.011135314488419194,
+          "real": 0.03952845406894179
+        },
+        "magnetic_density": {
+          "imag": -0.015281605336802631,
+          "real": 0.008476522569509384
+        }
+      },
+      "mixed_dB_sigma_device": {
+        "imag": -0.004146290848383431,
+        "real": 0.007070053900131525
+      },
+      "sigma_device": {
+        "imag": -0.0011942573990948238,
+        "real": -0.005292649615898509
+      },
+      "uncontacted_site_ward_abs": 1.0090718951411431e-11
+    },
+    "orbital": {
+      "electric_current_contact": {
+        "imag": 6.938893903907228e-18,
+        "real": -0.05123325653857497
+      },
+      "five_point_independent_dB": {
+        "imag": -0.004146290854067347,
+        "real": 0.007070053897217122
+      },
+      "global_number_injection_error": 5.867974911545601e-11,
+      "lead_collision_norm": 0.10547491463706073,
+      "microscopic_ward_error": 9.01798602184546e-11,
+      "mixed_components": {
+        "electric_contact_density": {
+          "imag": -4.336808689942018e-18,
+          "real": -0.10933103627314061
+        },
+        "electric_contact_magnetic": {
+          "imag": 1.0408340855860843e-17,
+          "real": 0.06839611353482085
+        },
+        "magnetic_current": {
+          "imag": -0.1457942000435077,
+          "real": 0.0088604839153964
+        },
+        "magnetic_density": {
+          "imag": 0.14164790919512413,
+          "real": 0.039144492723054355
+        }
+      },
+      "mixed_dB_sigma_device": {
+        "imag": -0.0041462908483835765,
+        "real": 0.00707005390013099
+      },
+      "sigma_device": {
+        "imag": -0.001194257399094567,
+        "real": -0.00529264961589878
+      },
+      "uncontacted_site_ward_abs": 1.0090955026848904e-11
+    },
+    "symmetric": {
+      "electric_current_contact": {
+        "imag": 6.938893903907228e-18,
+        "real": -0.05123325653857494
+      },
+      "five_point_independent_dB": {
+        "imag": -0.004146290854061622,
+        "real": 0.007070053897214462
+      },
+      "global_number_injection_error": 5.868054141361253e-11,
+      "lead_collision_norm": 0.10547491463706087,
+      "microscopic_ward_error": 9.018004862848332e-11,
+      "mixed_components": {
+        "electric_contact_density": {
+          "imag": -6.288372600415926e-18,
+          "real": -0.04093492273831961
+        },
+        "electric_contact_magnetic": {
+          "imag": 0.0,
+          "real": 0.0
+        },
+        "magnetic_current": {
+          "imag": -0.057447587408459524,
+          "real": -0.03251003989758156
+        },
+        "magnetic_density": {
+          "imag": 0.053301296560076185,
+          "real": 0.08051501653603252
+        }
+      },
+      "mixed_dB_sigma_device": {
+        "imag": -0.004146290848383346,
+        "real": 0.007070053900131344
+      },
+      "sigma_device": {
+        "imag": -0.001194257399094567,
+        "real": -0.005292649615898412
+      },
+      "uncontacted_site_ward_abs": 1.0090937097349273e-11
+    }
+  },
+  "negative_controls": {
+    "omit_electric_current_contact": {
+      "imag": -0.001194257399094574,
+      "real": 0.04594060692267653
+    },
+    "omit_lead_B": {
+      "imag": 0.0019471926037526897,
+      "real": 0.013037149462739733
+    },
+    "omit_position_B": {
+      "imag": 0.001457077977604605,
+      "real": -0.0475160127155691
+    },
+    "v66_same_operator_but_scalar_gamma_bath": {
+      "imag": -0.015989993886819445,
+      "real": -0.0002810991670626692
+    }
+  },
+  "parameters": {
+    "B": 0.23,
+    "lead_hopping": 1.1,
+    "mu": 0.13,
+    "nodes_per_interval": 640,
+    "omega": 0.29,
+    "q_over_hbar": -0.84,
+    "temperature": 0.37
+  },
+  "protocol": "device-only AC length-gauge perturbation -E Pb, microscopic two semiinfinite elastic leads held in fixed Fermi equilibrium",
+  "science": "VERIFIED finite frequency Keldysh Dyson Ward and finite-model differentiation; CONDITIONAL finite device and field localization; UNRESOLVED Xiang full bulk orbital E/B and real Wannier embedding",
+  "static_independent": {
+    "landau_y": {
+      "analytic_dB_dE_current": {
+        "imag": 4.683753385137379e-17,
+        "real": 0.0019013505313133228
+      },
+      "analytic_dE_current": {
+        "imag": -5.204170427930421e-17,
+        "real": 0.002996376698760732
+      },
+      "finite_gate_dE_current": {
+        "imag": -6.938893903907228e-15,
+        "real": 0.002996376431672193
+      },
+      "finite_gate_mixed_dB_dE_current": {
+        "imag": 7.806255641895632e-12,
+        "real": 0.00190134418018989
+      }
+    },
+    "orbital": {
+      "analytic_dB_dE_current": {
+        "imag": 1.9949319973733282e-16,
+        "real": 0.0019013505313135587
+      },
+      "analytic_dE_current": {
+        "imag": 3.8163916471489756e-17,
+        "real": 0.002996376698760489
+      },
+      "finite_gate_dE_current": {
+        "imag": 0.0,
+        "real": 0.0029963764315264763
+      },
+      "finite_gate_mixed_dB_dE_current": {
+        "imag": 6.071532165918825e-12,
+        "real": 0.0019013441923329544
+      }
+    },
+    "symmetric": {
+      "analytic_dB_dE_current": {
+        "imag": -1.6588293239028218e-16,
+        "real": 0.0019013505313133228
+      },
+      "analytic_dE_current": {
+        "imag": -6.938893903907228e-17,
+        "real": 0.0029963766987601836
+      },
+      "finite_gate_dE_current": {
+        "imag": -4.163336342344337e-14,
+        "real": 0.0029963764314909144
+      },
+      "finite_gate_mixed_dB_dE_current": {
+        "imag": 2.3418766925686896e-11,
+        "real": 0.001901344187128784
+      }
+    }
+  },
+  "version": "v68"
+}
