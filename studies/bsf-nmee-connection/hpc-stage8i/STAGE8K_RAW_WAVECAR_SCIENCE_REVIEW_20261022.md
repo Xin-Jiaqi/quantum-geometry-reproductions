@@ -1,3 +1,5 @@
+> **后续独立 Stage8l 勘误（2026-10-22）：** 本 Stage8k 报告保存原始 DeepSeek 交付文本，但其新机器证据 JSON 中标为 E_band35_eV / S_grouped 的数据，在七个非简并位置实际上对应 band36（band35/36 导出编号错位）。该问题不直接否定 nondegenerate pseudo transverse spin 及严格 Sz 守恒 no-go 的否定性线索，但“原始机器证据独立证明了 band35 三点”的结论需要纠正。详见 [Stage8l 数值交叉检验及低成本下一门槛](STAGE8L_EVIDENCE_RECONCILIATION_AND_EFFICIENT_NEXT_GATE.md)。**历史数据不覆盖。**
+
 # Stage8k 原始 WAVECAR 独立核验：非简并态自旋非守恒结论（2026-10-22）
 
 > 依据 `STAGE8K_DEEPSEEK_READONLY_HANDOFF.md` 的只读独立核验要求。本报告仅基于远端
