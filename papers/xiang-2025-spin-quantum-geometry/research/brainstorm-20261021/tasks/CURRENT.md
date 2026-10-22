@@ -173,3 +173,8 @@ A ready-to-run *read-only* [BiDB geometry gate](https://github.com/Xin-Jiaqi/gro
 2. The exact toy code has been independently rerun against local BiDB. The layer-even winding −2 holds on a small contour near G in tested parameters, but **not universally on the radius 0.125 Å contour**: at \(\mu=1.5\) eV, SOC=0.72 eV it changes to +4, reproduced on 8×8 and 12×12 meshes. [Parameter scan](../data/BD30_PD2TE2_CONTOUR_PARAMETER_SCAN_20261022.csv).
 
 Current scientifically defensible claim: the same unfitted source-geometry toy exhibits operator-dependent special-registry zeros, robust nonzero layer-odd response, and a **conditional local** +1/−2 index split near G when leading coefficients are nonzero. No claim of universal global winding, real Pd2Te2 material response, or novelty until the sliding-REE companion and a gauge-covariant transport formulation are checked. R1 MnPS3 CLOSED; R2-P0 READ_ONLY; no new DFT/Slurm/WSL/Japan compute.
+
+
+## 2026-10-22 BD31: local response-field symmetry derivation
+
+[**Conditional local equivariant-index rule**](../docs/BD31_LOCAL_EQUIVARIANT_RESPONSE_FIELD_RULE_20261022.md): with \(C_{3z}\), vertical \(m_x\), horizontal layer-swapping \(m_z\), and fixed-current \(S_z\) response, \(F_-=i\gamma z+O(|z|^3)\) and \(F_+=\beta\bar z^2+O(|z|^4)\). If the leading coefficients are nonzero, the local indices are +1 and −2. This derives from ordinary equivariance and is not a novel math theorem; the useful extension would be operator-resolved registry stabilizer classification plus material-grounded response. Symmetry-forced zero at a registry is detected by the common fixed subspace of the response representation for that registry's exact Seitz stabilizer. No DFT/HPC.
