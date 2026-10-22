@@ -158,6 +158,42 @@
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
       "material_claim_verified": false
+    },
+    {
+      "id": "BD17",
+      "claim": "Uniform rigid-layer sliding as generic true FE switching mechanism",
+      "status": "NO_GO_CLAIM",
+      "reason": "PRL 135 046201 (2025) emphasizes wavelike domain-wall motion and invalidity of generic coherent rigid switching",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD18",
+      "claim": "Pure-E magnetoelectric torque in polar magnetic bilayers is newly discovered",
+      "status": "NO_GO_CLAIM",
+      "reason": "PRL 136 016702 (2026) demonstrates electric-field magnetic torque without SOC",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD19",
+      "claim": "FE switchable AHE at fixed magnetism admits no general symmetry criterion yet",
+      "status": "NO_GO_CLAIM",
+      "reason": "PRB 113 195431 (2026) gives FE-switchable AHE magnetic-space-group criteria",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD20",
+      "claim": "FE domain-wall magnetic-mode force differs from all known local torque and boundary magnetoelectric mechanisms",
+      "status": "OPEN_HYPOTHESIS",
+      "reason": "Needs source-backed wall profile, real magnetic site modes, physical time protocol and same-observable PRL/PRX competitor test",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
     }
   ]
 }
