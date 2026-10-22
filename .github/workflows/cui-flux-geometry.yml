@@ -33,3 +33,5 @@ jobs:
         run: python scripts/audit_round19.py
       - name: Diagnose k-space gap and cancellation (Round20)
         run: python scripts/audit_round20.py
+      - name: Verify occupancy sector partition of Kubo response (Round21)
+        run: python scripts/audit_occupation_partition.py

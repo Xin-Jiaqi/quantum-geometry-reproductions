@@ -1,0 +1,245 @@
+{
+  "schema": "cui-flux-round21-thermal-pair-sector-v1",
+  "status": "pair decomposition VERIFIED on models; BZ convergence UNRESOLVED",
+  "target": "supplement bz_hotspots with across-mu versus same-side thermal occupations",
+  "rows": [
+    {
+      "group": "6",
+      "order": 8,
+      "domain": "hexagon",
+      "method": "gauss",
+      "component": [
+        0,
+        0
+      ],
+      "nodes": 768,
+      "bz_area": 34.18931254658433,
+      "params": {
+        "mu": 0.13,
+        "temperature": 0.17,
+        "z": [
+          0.071,
+          0.004
+        ]
+      },
+      "sectors": {
+        "total": {
+          "net": [
+            4.0175709683893454e-7,
+            2.475013118128477e-9
+          ],
+          "net_abs": 4.017647203904095e-7,
+          "weighted_absolute": 0.003320679088797396
+        },
+        "cross_mu": {
+          "net": [
+            -2.0070351296176472e-7,
+            3.539161093960137e-10
+          ],
+          "net_abs": 2.0070382500541876e-7,
+          "weighted_absolute": 0.0033205580393464904
+        },
+        "same_side": {
+          "net": [
+            6.024606098006794e-7,
+            2.1210970087313347e-9
+          ],
+          "net_abs": 6.02464343686767e-7,
+          "weighted_absolute": 0.0000011866185932888715
+        },
+        "near_resonant": {
+          "net": [
+            5.9403737846477895e-8,
+            -3.610424501766006e-8
+          ],
+          "net_abs": 6.95148946516378e-8,
+          "weighted_absolute": 4.624697400457601e-7
+        },
+        "small_gap": {
+          "net": [
+            3.078120415165618e-10,
+            -3.5181768310558875e-11
+          ],
+          "net_abs": 3.098160901632635e-10,
+          "weighted_absolute": 5.437981457684369e-10
+        }
+      },
+      "cancellation_ratio": 8265.233158278732,
+      "minimum_sampled_intercluster_gap": 0.010604734375065483,
+      "max_df_of_near_pole_pairs": 0.0000011727953078198411,
+      "near_pole_pair_visits": 264,
+      "complete_partition_residual": 3.245365593107716e-19,
+      "scope": "thermal band-pair sector diagnostic only; no BZ convergence claim"
+    },
+    {
+      "group": "6m'm'",
+      "order": 8,
+      "domain": "hexagon",
+      "method": "gauss",
+      "component": [
+        0,
+        1
+      ],
+      "nodes": 768,
+      "bz_area": 34.18931254658433,
+      "params": {
+        "mu": 0.13,
+        "temperature": 0.17,
+        "z": [
+          0.071,
+          0.004
+        ]
+      },
+      "sectors": {
+        "total": {
+          "net": [
+            3.9801076362311827e-7,
+            4.848696898970985e-7
+          ],
+          "net_abs": 6.273046980062927e-7,
+          "weighted_absolute": 9.348695123352673e-7
+        },
+        "cross_mu": {
+          "net": [
+            8.000510086469152e-10,
+            1.9340599272895098e-14
+          ],
+          "net_abs": 8.00051008880687e-10,
+          "weighted_absolute": 1.0196449588729217e-9
+        },
+        "same_side": {
+          "net": [
+            3.9721071261448056e-7,
+            4.848696705564978e-7
+          ],
+          "net_abs": 6.267973736713246e-7,
+          "weighted_absolute": 9.341742930939316e-7
+        },
+        "near_resonant": {
+          "net": [
+            2.2627842442797262e-7,
+            4.0877523092248245e-7
+          ],
+          "net_abs": 4.67224908130265e-7,
+          "weighted_absolute": 6.10408223302599e-7
+        },
+        "small_gap": {
+          "net": [
+            4.126752259364727e-10,
+            -4.7684395383387403e-11
+          ],
+          "net_abs": 4.1542104383961827e-10,
+          "weighted_absolute": 9.178977941824085e-10
+        }
+      },
+      "cancellation_ratio": 1.4902957291830918,
+      "minimum_sampled_intercluster_gap": 0.008249200773938536,
+      "max_df_of_near_pole_pairs": 0.0000011481614704640615,
+      "near_pole_pair_visits": 672,
+      "complete_partition_residual": 4.0267313506517047e-19,
+      "scope": "thermal band-pair sector diagnostic only; no BZ convergence claim"
+    },
+    {
+      "group": "6",
+      "order": 12,
+      "domain": "primitive",
+      "method": "gauss",
+      "component": [
+        0,
+        0
+      ],
+      "nodes": 144,
+      "bz_area": 34.18931254658433,
+      "params": {
+        "mu": 0.13,
+        "temperature": 0.17,
+        "z": [
+          0.071,
+          0.004
+        ]
+      },
+      "sectors": {
+        "total": {
+          "net": [
+            2.2569156567103053e-7,
+            3.547745026152982e-7
+          ],
+          "net_abs": 4.204778597274455e-7,
+          "weighted_absolute": 0.003346990330037715
+        },
+        "cross_mu": {
+          "net": [
+            -2.191297970133896e-8,
+            3.609810583538387e-10
+          ],
+          "net_abs": 2.191595279050819e-8,
+          "weighted_absolute": 0.003347029876432341
+        },
+        "same_side": {
+          "net": [
+            2.476045453723663e-7,
+            3.5441352155693806e-7
+          ],
+          "net_abs": 4.323389355025134e-7,
+          "weighted_absolute": 0.00000136860307941003
+        },
+        "near_resonant": {
+          "net": [
+            -2.1799541889650144e-7,
+            3.00756690570773e-7
+          ],
+          "net_abs": 3.7145200172154794e-7,
+          "weighted_absolute": 7.198904018120388e-7
+        },
+        "small_gap": {
+          "net": [
+            1.2717970266688129e-9,
+            -1.4984338205874916e-10
+          ],
+          "net_abs": 1.280593891985448e-9,
+          "weighted_absolute": 1.280593966401714e-9
+        }
+      },
+      "cancellation_ratio": 7959.96805208065,
+      "minimum_sampled_intercluster_gap": 0.004818534347746262,
+      "max_df_of_near_pole_pairs": 0.0000010672333798520226,
+      "near_pole_pair_visits": 84,
+      "complete_partition_residual": 1.8520560214880092e-19,
+      "scope": "thermal band-pair sector diagnostic only; no BZ convergence claim"
+    }
+  ],
+  "fixed_k_temperature_scan": [
+    {
+      "temperature": 0.08,
+      "same_side_xx": [
+        1.1129612439923986e-13,
+        2.479961333190114e-15
+      ],
+      "min_intercluster_gap": 0.17474288932364512
+    },
+    {
+      "temperature": 0.17,
+      "same_side_xx": [
+        1.5041693162149174e-7,
+        3.367581241939155e-9
+      ],
+      "min_intercluster_gap": 0.17474288932364512
+    },
+    {
+      "temperature": 0.25,
+      "same_side_xx": [
+        0.000005919999611903137,
+        1.3335647980622932e-7
+      ],
+      "min_intercluster_gap": 0.17474288932364512
+    }
+  ],
+  "no_double_count": "resonance and small-gap subsets overlap and are not independent response channels",
+  "source": {
+    "run_id": 39748027692,
+    "python": "3.12",
+    "source_commit": "ca09791dbe4099afa37bd13d39aa400d717292ba",
+    "type": "actual successful GitHub Actions stdout",
+    "scope": "synthetic model diagnostic, not real material or converged response"
+  }
+}
