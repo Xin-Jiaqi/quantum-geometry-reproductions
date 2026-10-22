@@ -167,3 +167,11 @@ resolution, while an independently sampled spectral derivative may have
 nonzero finite-grid integration error. Neither calculation is a finite-
 frequency metallic transport response. True Wannier embedding and
 collision/contact terms remain outstanding.
+
+
+### Round23 actual equilibrium static Ward acceptance
+
+- Dual-version Actions 39756688525: Python 3.11/3.12 both **188/188 PASS**, including finite-B/finite-k independent Ward audit.
+- Fixed-k maximum discrepancies: analytic full static vs finite B = **7.88e-11**, vs finite-k spin-density gradient = **1.25e-10**.
+- Primitive midpoint n=4,8,12 maximum sampled full static BZ response residuals: **1.1573e-2**, **7.0627e-5**, **8.6852e-7**; periodic discrete spin-density derivative telescopes below **8e-18**.
+- Model method VERIFIED in fixed-basis, spin-k-independent clean static protocol; whole original paper **PARTIAL**, dynamic metallic KME unresolved. Frozen output in results/frozen/round23_equilibrium_ward_audit.json.

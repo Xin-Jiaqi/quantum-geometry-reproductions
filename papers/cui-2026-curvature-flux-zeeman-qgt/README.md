@@ -133,5 +133,4 @@ the identity. See [Round23 acceptance](ROUND23_EQUILIBRIUM_STATIC_WARD.md)
 and [audit](scripts/audit_equilibrium_ward.py).
 
 This does not certify dynamic metallic KME, scattering, gauge contacts,
-degenerate bands or source-paper completeness. New tests are gated by
-Python 3.11/3.12 CI before merge.
+degenerate bands or source-paper completeness. **188/188 tests passed** on Python 3.11 and 3.12 (Actions run 39756688525). Frozen executed audit: [Round23 JSON](results/frozen/round23_equilibrium_ward_audit.json).

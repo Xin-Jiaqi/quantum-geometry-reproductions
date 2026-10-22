@@ -68,3 +68,41 @@ The equilibrium no-current theorem places a strong negative control
 on any static B-induced current in a periodic bulk crystal.
 It does not prohibit finite-frequency response, non-equilibrium transport,
 edge currents, magnetization circulating currents, or spin currents.
+
+
+## Actual dual-version CI and frozen static equilibrium data
+
+GitHub Actions run **39756688525**, Python 3.11 and Python 3.12, both
+executed **188/188 tests, PASS** and the independent static audit.
+Python 3.12's raw JSON is frozen at
+results/frozen/round23_equilibrium_ward_audit.json.
+
+At k=(0.47,-0.31) in the full four-band physical-spin/orbital synthetic
+model with mu=2.3, T=0.3 (natural units):
+
+- Max residual, full analytic static susceptibility vs independent
+  finite uniform Zeeman field derivative: **7.880842838e-11**.
+- Max residual, analytic static susceptibility vs independent finite
+  momentum derivative of equilibrium spin density: **1.253953885e-10**.
+- Interband and occupation-derivative terms are both substantial; for
+  component (a=y,b=x), interband = +0.0140794943 and occupation
+  derivative = +0.2260539938, giving full +0.2401334881.
+  Thus static band-only Kubo would miss the dominant diagonal term.
+
+| Primitive midpoint k mesh | Max full static spectral BZ mean | Exact discrete periodic telescope |
+|---|---:|---:|
+| 4 x 4 | 1.157326428e-2 | 4.337e-19 |
+| 8 x 8 | 7.062745359e-5 | 2.602e-18 |
+| 12 x 12 | 8.685197330e-7 | 7.999e-18 |
+
+The spectral integral approaches the exact periodic no-current identity
+as the mesh is refined. This finite sequence is a convergence *illustration*,
+not a rigorous error bound. The exactly vanishing discrete telescope is a
+separate (and mathematically exact) finite-grid summation-by-parts oracle:
+it must NOT be substituted as a value of the spectral Kubo quadrature.
+
+**Physical conclusion:** a uniform static B perturbation cannot produce
+an equilibrium bulk charge current on the complete periodic BZ under the
+stated assumptions. An apparent nonzero small static interband value is
+not automatically an equilibrium magnetoelectric transport effect.
+The dynamic and dissipative KME remain open.
