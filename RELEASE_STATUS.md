@@ -347,3 +347,10 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - Standalone archive (after certification regeneration): 96 files, 95/95 SHA256 verified; v71 physical source/test/reproduce/frozen-test Git blob SHA matched independently tested local versions; GitHub frozen JSON has same numeric values but different ordering/serialization.
 - **VERIFIED** bounded finite closed-system J_full=J_dev+J_contact, isothermal cancellation and optical polarization Ward, plus source-authentic SM Eq20/31 signed index contraction and main/SM spin helicity. **CONDITIONAL** finite supplied Peierls/position system. **UNRESOLVED** physical bulk PHE/orbital MNHE response map, full magnetic Wannier embedding, original source orbital factor/3band and SI concerns; original Xiang PRB remains **PARTIAL**.
 - Final release-documentation-only commits after merged CI modify no source code or tests.
+
+### v72 | periodic finite-q spin Zeeman scalar-source Ward (2026-10-22, pending remote CI)
+
+- Named finite-q Bloch method: spin Zeeman B sigma_x (NOT orbital Peierls), scalar phi_q density drive, E_y=-i q phi_q, exact longitudinal charge Ward by lattice H(k+q)-H(k) current, momentum-dependent gauge-overlap density vertex. Declared transverse midpoint current is not yet a fully magnetization-subtracted transport operator.
+- Analytic Fermi Fréchet + differentiated Liouville magnetic derivative independently checked against 5-point B finite difference and dense per-k Sylvester vs eigenpair spectral current, all in original/momentum-dependent frames.
+- New 37 physics tests and one independent frozen provenance test: local **38/38 PASS**. Original source paper **PARTIAL**; SM selected tau pole and E/B orderings, literal Eq20/31 signs, original orbital Eq49/52 factors and three-band terms, full magnetic Wannier embedding, dc/finite-q limit, SI Fig2 remain unresolved.
+- No PR-head or merged-main remote success should be recorded until final actual GitHub Actions logs are checked. This entry is provisional, scoped to named finite-q model only.

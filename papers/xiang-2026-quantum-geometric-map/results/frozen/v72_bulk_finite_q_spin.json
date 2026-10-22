@@ -1,0 +1,63 @@
+{
+  "version": "v72",
+  "source_status": "PARTIAL",
+  "scope": "finite-q periodic Bloch spin Zeeman scalar-potential susceptibility; NOT source-selected tau pole or orbital magnetotransport",
+  "inputs": {
+    "alpha": 0.13,
+    "beta": 0.24,
+    "eta": 0.045,
+    "field": 0.11,
+    "mass": 0.32,
+    "mu": 0.32,
+    "n": 24,
+    "omega": 0.27,
+    "orbital_gauge": 0,
+    "q_steps": 1,
+    "temperature": 0.12,
+    "wilson": 0.35
+  },
+  "rho": {
+    "real": 0.006620730104593917,
+    "imag": -0.008283390133626502
+  },
+  "jy": {
+    "real": 0.00825192794534323,
+    "imag": -0.007404839628042581
+  },
+  "jx_per_E": {
+    "real": 0.006895888683487931,
+    "imag": 0.0031287537300871094
+  },
+  "dB_jx_per_E": {
+    "real": -0.005924308951739088,
+    "imag": -0.007974278348437747
+  },
+  "dB_jx_per_E_five_point": {
+    "real": -0.005924308951785484,
+    "imag": -0.007974278348236389
+  },
+  "independent_dense_jx_per_E": {
+    "real": 0.006895888683487933,
+    "imag": 0.0031287537300871008
+  },
+  "density_ward": {
+    "real": 0,
+    "imag": -2.168404344971006e-19
+  },
+  "magnetic_ward": {
+    "real": 3.469446951953614e-18,
+    "imag": 4.336808689942018e-19
+  },
+  "gauged_jx_per_E": {
+    "real": 0.00689588868348794,
+    "imag": 0.0031287537300871172
+  },
+  "wrong_density_vertex_ward_defect": {
+    "real": -0.0001288583883291253,
+    "imag": -0.0008143437018158304
+  },
+  "wrong_endpoint_velocity_ward_defect": {
+    "real": 0.000012353120822562996,
+    "imag": -0.00001108503118335373
+  }
+}
