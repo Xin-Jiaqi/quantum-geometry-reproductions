@@ -407,7 +407,36 @@
       ],
       "historical_code_preserved": true,
       "material_claim_verified": false,
-      "compute_authorized": false
+      "compute_authorized": false,
+      "closest_prior_roles": [
+        {
+          "doi": "10.1103/PhysRevLett.130.146801",
+          "role": "DIRECT_FOR_REGISTRY_GEOMETRY_NOT_RESPONSE_INDEX",
+          "scope": "BSF points G/A/B/C/M/N and stacking group actions"
+        },
+        {
+          "doi": "10.1103/qhvs-pfkq",
+          "role": "DIRECT_FOR_LEE_STATIC_TYPE_I_II_POTENTIAL_OVERLAP_FOR_RESPONSE_FIELD",
+          "scope": "80-layer-group LEE and current-spin tensors; SM continuous-registry/winding coverage not audited"
+        },
+        {
+          "doi": "10.1038/s41699-025-00552-6",
+          "role": "INTRODUCTION_NEAREST_TEXTURE_NOT_SAME_OBSERVABLE",
+          "scope": "optical shift-current vortices in moire polarization textures"
+        }
+      ],
+      "test_result": {
+        "hex_layer_odd": "linear onset, six symmetry-forced zeros, positive one index at G if nonzero first derivative; witness indices +1 G/M/N, -1 A/B/C",
+        "hex_layer_even": "quadratic onset, three C3-forced zeros, index -2 at G if nonzero quadratic; witness indices -2 G, +1 M/N",
+        "square_layer_odd": "four symmetry-forced zeros; Fourier witness +1,+1,-1,-1",
+        "square_layer_even": "identically zero across all registries if full family has C4 and horizontal layer swapping mirror",
+        "exact_fixedpoints": "fractions-based 2D torus solver PASSED",
+        "explicit_fourier_witnesses": "PASSED; second harmonic perturbation 0.05 PASSED",
+        "microscopic_spin_response": "NOT_TESTED",
+        "new_general_theory": "NOT_ESTABLISHED",
+        "comparison_with_original_2026_LEE_SM": "PENDING"
+      },
+      "next_small_step": "Audit LEE SM for actual continuous δ field selection; then one physically derived spinful bilayer hopping Hamiltonian and paired fixed-current F_+(δ)/F_-(δ) response maps. No DFT."
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
@@ -468,6 +497,8 @@
     "closest_prior": "2026 Layer Edelstein Effect PRL and its SM (equation-level comparison pending); stacking-ferroelectricity/configuration-space theories are foundational prior art, not automatic pre-emption.",
     "smallest_falsifying_test": "Verify the actual layer-swapping Seitz symmetry at each registry, derive the operator/source signs, and compare the exact zero-set/activation-order claim against the 2026 LEE SM and configuration-space stacking literature.",
     "compute_authorized": false,
-    "first_concrete_corollary": "For a layer-odd S_z response driven by in-plane current, a layer-swapping horizontal-mirror Seitz operation maps registry δ to -δ and gives χ(-δ)=-χ(δ). At registry fixed points δ≡-δ mod Λ (four points on a primitive 2D torus if all corresponding Seitz symmetries exist), χ is symmetry-forced zero. This is an analytical candidate, not yet checked against all relevant prior literature or a microscopic Hamiltonian."
+    "first_concrete_corollary": "For a layer-odd S_z response driven by in-plane current, a layer-swapping horizontal-mirror Seitz operation maps registry δ to -δ and gives χ(-δ)=-χ(δ). At registry fixed points δ≡-δ mod Λ (four points on a primitive 2D torus if all corresponding Seitz symmetries exist), χ is symmetry-forced zero. This is an analytical candidate, not yet checked against all relevant prior literature or a microscopic Hamiltonian.",
+    "current_methods_link": "docs/BD27_REGISTRY_TORUS_ZERO_INDEX_GATE_20261022.md",
+    "operator_parity_cross_family": "BD28, confirmed group algebra only; Kubo and novelty open"
   }
 }
