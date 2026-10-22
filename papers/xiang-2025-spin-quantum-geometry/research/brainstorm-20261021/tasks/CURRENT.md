@@ -46,3 +46,8 @@ Do not upload private POTCAR, system paths, large complete matrix data, private 
 > 读取本 CURRENT.md 中已批准的 R2-P0 READ-ONLY 任务。自动检查现有 R1 私有 MnPS3 L2 +/− 原始位点、磁序和日志；运行已归档的四站点算符代数测试和 SOC 对称性审核，生成私有验收及公开脱敏摘要。不要让我搬运材料；不得调用 VASP、sbatch 或重新启动任何 R1 作业。若必须依赖缺失的结构证据，明确标记 BLOCKED，而不是猜测。
 
 **Research source of truth:** private R1 \`result.json\` for historical job completion and nonconvergence; R2-P0 output **not yet received**. No claim of material magnetic response or new effect.
+
+
+## Scientific priority note (2026-10-22)
+
+[**High-return physics ideas, peer work and falsification/kill gates**](../docs/BD_IDEA_SEARCH_DECISION_20261022.md): Prioritize an experimentally distinguishable **ferroelectric path-dependent AFM normal-mode drive** in a source-valid MnPS3 L2 site basis. The read-only active R2-P0 should report \`FE state/path × real Neel mode × symmetry-allowed E field × closest SOT precedent\`; it may assess a **second path at source/group-algebra level only**. No new DFT, Wannier, NEB, job-array or Slurm task is permitted by this note. If all relations reduce to existing tensor/normal-mode selection rules, **close this idea as NO-GO** without a speculative materials calculation.
