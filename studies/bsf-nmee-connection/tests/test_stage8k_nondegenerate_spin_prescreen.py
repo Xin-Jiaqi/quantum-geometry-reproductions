@@ -50,6 +50,22 @@ class NondegenerateSpinEvidenceTests(unittest.TestCase):
         self.assertLess(comparison[0]["midpoint_perp_spin_proxy"],1e-4)
         self.assertTrue(comparison[0]["cross_stack_same_band_index_is_not_proven_same_orbital"])
 
+    def test_derived_report_matches_source_and_uses_only_80_sampled_states(self):
+        import json
+        path=mod.HERE/"STAGE8K_NONDEGENERATE_SPIN_CANDIDATES_20261022.json"
+        derived=json.loads(path.read_text())
+        self.assertEqual(derived["scan"]["archived_samples_processed"],80)
+        self.assertEqual(self.out["sampled_states_count"],80)
+        self.assertEqual(derived["scan"]["total_ab_nondegenerate_proxy_candidates"],
+                         sum(x["job"]=="soc_AB_s0.00" for x in
+                             self.out["positive_proxy_candidates"]))
+        self.assertEqual(derived["scan"]["total_glide_nondegenerate_proxy_candidates"],
+                         sum(x["job"]=="soc_GLIDE_s0.50" for x in
+                             self.out["positive_proxy_candidates"]))
+        self.assertEqual(derived["scan"]["total_glide_nondegenerate_proxy_candidates"],0)
+        self.assertTrue(any(x["location"]=="GAMMA_K_INTERIOR__NOT_TRUE_BAND_EDGE"
+                            for x in derived["priority_examples"]))
+
     def test_no_new_hpc_jobs_and_no_claim_of_material_gamma(self):
         self.assertEqual(self.out["max_additional_PBS_jobs"],0)
         self.assertEqual(self.out["static_material_NMEE"],"NOT_COMPUTED")
