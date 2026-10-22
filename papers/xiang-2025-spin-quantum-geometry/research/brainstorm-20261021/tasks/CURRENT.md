@@ -132,3 +132,12 @@ User's key correction: a specific sliding-ferroelectricity example does not auto
 **Crucial evidence status:** textbook covariance / Poincaré–Hopf and specific high-symmetry BSF points are already known; this is a **candidate for an S2 operator-resolved global selection classification**, not a newly claimed theorem, real Kubo result or experimental prediction. LEE SM comparison remains open. Same-observable direct competitor determination must happen at the precise theorem/response level, not by the existence of sliding-FE examples or different shift-current vortices. Registry now [28 claim entries](../data/BD_IDEA_REGISTRY_20261022.json).
 
 **Next high-value action:** compare the 2026 LEE SM on the exact \(S_\pm^z\), current protocol and global registry fields, then derive a second source-compatible real layer/site response; only after a microscopic nonzero coefficient is shown consider a wider 80 LG theory. R1 CLOSED, R2-P0 read-only, **no Slurm/DFT/WSL/Japan authorization**.
+
+
+## 2026-10-22 BD29: C2DB/BiDB candidate screen
+
+**[Ranked C2DB/BiDB screen](../docs/BD29_C2DB_BIDB_MATERIAL_SCREEN_20261022.md)** identifies **VTeS Janus homobilayer** as the first record to inspect (BiDB reports metallic, stacking-dependent magnetism and a ferrimagnetic stacking linked to charge transfer), **AgVP2Se6** as a polar magnetic follow-up (but C2DB spin-spiral screening predicts DMI-driven noncollinear order may compete with FM), **CrI3** as an SOC benchmark only because of extensive layer-spin texture/SOT prior art, **MnPS3** as a magnetic-insulator symmetry control, and MoSSe/MoTe2/WTe2 only as published LEE baselines.
+
+**Prior-art policy preserved:** BiDB's already-published stacking-dependent magnetic states are direct prior art for those specific states, not automatic pre-emption of a general response-field theory. LEE 2026 is direct for generic nonmagnetic bilayer layer-Edelstein effects; its exact SM overlap with continuous-registry operator-resolved zero/index rules remains pending.
+
+**Current blocker:** exact BiDB UIDs/CIF/property rows for VTeS and AgVP2Se6 not yet extracted; Janus layer orientation and magnetic ground state must be verified before applying any symmetry rule. No DFT/WSL/Slurm/Japan HPC has been started or authorized. Idea registry now has 29 entries (BD29 OPEN_HYPOTHESIS).
