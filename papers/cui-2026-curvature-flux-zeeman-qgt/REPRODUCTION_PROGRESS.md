@@ -152,3 +152,18 @@ The model group-6 hexagon-order8 allowed xx has cancellation factor ~8265, with 
 - These numbers are **empirical finite-grid disagreements**, neither rigorous bounds on the unknown exact BZ integral nor probabilistic confidence intervals.
 - The Round21 occupation-sector tool and Round22 error-budget tool are complementary: thermal sector decomposition does not in itself establish quadrature convergence.
 - Next physical milestone: controlled band/occupation-sector-resolved adaptive quadrature, treating cancellation before asserting small nonzero responses. No new VASP run is required at this point.
+
+
+## Round23: equilibrium no-current Ward (under dual-version CI review)
+
+| Stream | New bounded gate |
+| --- | --- |
+| Paper | The original source is still PARTIAL. Independent equilibrium Ward provides a necessary static-limit negative control, not a new claim of source Eq.(19) reproduction. |
+| Physics | Explicit intraband Fermi-derivative + interband static Kubo = minus kappa momentum derivative of equilibrium spin density in fixed-orbital k-independent-spin basis. The BZ integral vanishes for a complete periodic equilibrium crystal. |
+| GitHub | New equilibrium_ward.py, 10 tests, analytic scope note and finite-B/finite-k audit in an isolated PR; accepted count requires real remote CI results. |
+
+A discrete periodic spin-density gradient telescopes to zero at every grid
+resolution, while an independently sampled spectral derivative may have
+nonzero finite-grid integration error. Neither calculation is a finite-
+frequency metallic transport response. True Wannier embedding and
+collision/contact terms remain outstanding.
