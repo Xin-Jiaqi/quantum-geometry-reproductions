@@ -134,3 +134,22 @@ and [audit](scripts/audit_equilibrium_ward.py).
 
 This does not certify dynamic metallic KME, scattering, gauge contacts,
 degenerate bands or source-paper completeness. **188/188 tests passed** on Python 3.11 and 3.12 (Actions run 39756688525). Frozen executed audit: [Round23 JSON](results/frozen/round23_equilibrium_ward_audit.json).
+
+
+## Round24: exact Kramers-degenerate equilibrium static Ward identity
+
+[degenerate_static_ward.py](src/flux_lab/degenerate_static_ward.py)
+extends Round23's static Zeeman–current Ward identity to **exact
+degeneracies** without choosing an arbitrary single-band gauge. The
+Fermi-matrix divided difference takes the regular limit f'(eps) on a
+degenerate cluster, including n != m entries *inside* the cluster.
+A separately contracted spectral-projector oracle, finite uniform
+Zeeman field, finite momentum gradient, and within-Kramers U(2) basis
+controls verify this equilibrium-static relation. Unlike the earlier
+nondegenerate formula, this method does not reject a Kramers doublet.
+
+[Scientific scope](ROUND24_DEGENERATE_STATIC_WARD.md) ·
+[executable audit](scripts/audit_degenerate_static_ward.py).
+15 new tests (including frozen-audit regression) target **203 paper-specific tests** on the isolated Cui
+package; require actual Python 3.11/3.12 CI before promoting to VERIFIED.
+Not dynamic metallic KME; original full paper **PARTIAL**.
