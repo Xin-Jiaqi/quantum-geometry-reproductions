@@ -1,0 +1,126 @@
+{
+  "schema": "stage23-supplementary-evidence/v1",
+  "generated_by": "stage23 runner (DeepSeek Harness local execution)",
+  "note": "Supplementary evidence collected by the Stage 23 runner beyond the kit-generated audit JSON. Nothing here upgrades interface-test passes into physical FDR conclusions.",
+  "kit_script_fix": {
+    "file": "stage23_local_runtime_audit.py (extracted kit copy, not a science repository)",
+    "issue": "inspect/plan commands passed a spurious literal argument 'nlo-response' to `python -c`, so argparse rejected it as an invalid subcommand (real exit 2 with 'invalid choice').",
+    "fix": "Removed the spurious 'nlo-response' token; the command is now `python -c \"from nlo_response.cli import main; raise SystemExit(main())\" inspect|plan ...`.",
+    "permission_basis": "DEEPSEEK_EXECUTION_PROMPT.md part 4 rule 3: may fix the Stage 23 kit script itself; science repositories were not modified."
+  },
+  "haldane_mapping": {
+    "status": "PASS_SYNTHETIC_HAMILTONIAN_MAPPING",
+    "checks_total": 11,
+    "checks_passed": 11,
+    "sample_count": 128,
+    "max_H_matrix_residual_eV": 9.036560719766055e-16,
+    "max_band_eigenvalue_residual_eV": 1.7763568394002505e-15,
+    "max_dH_residual_eV_A": 9.992020309120961e-16,
+    "max_d2H_residual_eV_A2": 8.882156799609321e-16,
+    "max_HR_serialization_residual_eV": 0.0,
+    "minimum_sampled_direct_gap_eV": 1.3722717813075924,
+    "interpretation": "Exact synthetic two-band Haldane -> HR -> Fourier mapping verified independently; not an ab-initio material result."
+  },
+  "nlo_kernel_validation": {
+    "status": "FAIL_NLO_KERNEL_MAPPING",
+    "checks_total": 8,
+    "checks_passed": 7,
+    "failed_check": "POSCAR_point_group_is_C3",
+    "observed_point_group": "-6",
+    "spglib_version": "2.5.0",
+    "metrics": {
+      "sample_count": 64,
+      "max_H_matrix_residual_eV": 1.0190492755571723e-15,
+      "max_band_eigenvalue_residual_eV": 1.3322676295501878e-15,
+      "max_Hermiticity_residual_eV": 6.905610201999729e-17,
+      "max_dH_residual_eV_A": 8.771042695661587e-13,
+      "max_d2H_residual_eV_A2": 1.6184831253694038e-12,
+      "max_raw_HR_pairing_residual_eV": 0.0,
+      "max_paired_HR_residual_eV": 0.0,
+      "minimum_sampled_direct_gap_eV": 1.2907948186254747,
+      "nlo_tensor_component_count": 8
+    },
+    "interpretation": "NLO HR reader and position-dressed Fourier kernel reproduce the source Hamiltonian to <=1.6e-12 eV/A^2 on 64 sampled k points, but the synthetic marker POSCAR resolves to point group '-6' (not the intended C3='3') under the local spglib. Per STAGE23_HAMILTONIAN_MAPPING.md the plan must be treated as blocked until the symmetry fixture is corrected."
+  },
+  "nlo_inspect": {
+    "status": "PASS",
+    "exit_code": 0,
+    "hashes_verified": true,
+    "dimensionality": 2,
+    "point_group": "-6",
+    "num_wann": 2,
+    "nocc_model": 1,
+    "allowed_nonzero_components": 8,
+    "independent_representatives": ["xxx", "xyx"]
+  },
+  "nlo_plan": {
+    "status": "PASS",
+    "exit_code": 0,
+    "response_type": "shift_current",
+    "nk": [3, 3, 1],
+    "tensor_components": 8,
+    "no_mat": true,
+    "position_matrix_mode": "diagonal_tba",
+    "interpretation": "Plan materialization is pipeline plumbing only; no spectrum was computed and no NLO response `run` was executed."
+  },
+  "nlo_unittest": {"total": 31, "passed": 31, "failed": 0, "skipped": 0, "errors": 0, "duration_s": 1.052},
+  "group_theory_unittest": {
+    "total": 243,
+    "passed": 235,
+    "failed": 8,
+    "skipped": 0,
+    "errors": 0,
+    "duration_s": 136.288,
+    "failure_details": [
+      "test_response_screening.ResponseSymmetryScreeningTests.test_all_registry_rows_are_reported_in_standard_order",
+      "test_structure_responses.StructureResponseAnalysisTests.test_all_seven_crystal_system_fixtures_match_expected_dimensions (7 fixture subtests: sio2_triclinic, sio2_monoclinic, bates3_orthorhombic, mno2_tetragonal, rucl3_trigonal, aucn_hexagonal, cssnbr3_cubic)"
+    ],
+    "failure_kind": "AssertionError: response tensor shape convention mismatch, e.g. (1,3,3,1) vs expected (3,3,1); 4-tuple vs 3-tuple dimensions",
+    "interpretation": "Real failures in the repository's working tree (which already carried 16 pre-existing uncommitted changes before this audit). Not caused by Stage 23; not modified by Stage 23."
+  },
+  "group_theory_database_validate": {"status": "PASS", "exit_code": 0, "errors_reported": "()", "duration_s": 0.606},
+  "qgr_physics_interface_registry_tests": {
+    "kit_target_path": "integration/physics_interface/tests",
+    "kit_result_in_user_checkout": {"status": "FAIL", "exit_code": 1, "reason": "ImportError: Start directory is not importable: 'integration/physics_interface/tests' (path absent from the checked-out branch research/bsf-nmee-stage7-sw-gate-20261020; it exists only on remote branch integration/physics-capabilities-handoff-v1)"},
+    "supplementary_run": {
+      "where": "separate temporary clone at branch integration/physics-capabilities-handoff-v1 (commit 73e068631b825ad075ad5068048f3285e01f02d0)",
+      "command": "python3 -m unittest discover -s integration/physics_interface/tests -v",
+      "total": 12,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "duration_s": 0.004,
+      "why_separate_clone": "Running the registry tests requires a checkout containing the integration branch; this was done in a disposable clone so the user's working checkout was never modified."
+    }
+  },
+  "qgr_current_checkout_physics_tests": {
+    "test_physical_model.py": {"total": 1, "passed": 0, "skipped": 1, "exit_code": 0, "skip_reason": "Requires actual upstream group-theory toolkit (point_group_operations unavailable in installed group-theory-operations-toolkit 0.17.0; tests demand 0.18.0)"},
+    "test_real_toolkit.py": {"total": 4, "passed": 0, "skipped": 4, "exit_code": 0, "skip_reason": "Install group-theory-operations-toolkit v0.18.0"},
+    "interpretation": "The QGR physics-interface tests present in the current checkout are gated on a newer upstream toolkit version and were skipped; no dependency was installed and no repository file was changed."
+  },
+  "fdr_stage22": {"status": "SKIPPED_NO_FDR_ZIP", "detail": "fdr_reproduction_stage22.zip was not found anywhere on this machine (searched Downloads, Desktop, Documents, home tree). Stage 22 FDR regression could not be run."},
+  "repository_integrity": {
+    "nlo": {"path": "<git-checkouts>/nlo-response-workflow", "head_before": "dc9eec064c68e103eb974af7bc79eea482c05dfb", "head_after": "dc9eec064c68e103eb974af7bc79eea482c05dfb", "branch": "codex/research-sync-20261019", "dirty_before": 0, "dirty_after": 0, "unchanged": true},
+    "group_theory": {"path": "<git-checkouts>/group-theory-operations-toolkit", "head_before": "9da48f1c89bff61d39066f032eda729f94193301", "head_after": "9da48f1c89bff61d39066f032eda729f94193301", "branch": "main", "dirty_before": 16, "dirty_after": 16, "unchanged": true},
+    "qgr": {"path": "<workspace>/quantum-geometry-reproductions", "head_before": "682a1591854a1bc38f4102ae5b0f056fc84b364c", "head_after": "682a1591854a1bc38f4102ae5b0f056fc84b364c", "branch": "research/bsf-nmee-stage7-sw-gate-20261020", "dirty_before": 3, "dirty_after": 3, "unchanged": true, "untracked_note": "3 pre-existing untracked research files (stage8i ledger, stage8m_plaq.py, test_stage8m_plaq.py); none created by Stage 23"}
+  },
+  "environment": {
+    "os": "Darwin 27.0.0 arm64",
+    "python": "3.12.4",
+    "numpy": "1.26.4",
+    "scipy": "1.14.0",
+    "spglib": "2.5.0",
+    "ase": "3.23.0",
+    "materials_structure_core": "0.0.2",
+    "group_theory_operations_installed_pip": "0.17.0",
+    "pytest": "9.1.1"
+  },
+  "scientific_boundary": [
+    "Interface/pipeline passes do NOT establish equality of the FDR and NLO response formulas.",
+    "No absolute SI normalization, tensor ordering, 2D sheet normalization, broadening, or frequency-integration convention was verified.",
+    "The main-text Eq. (9) vs SM Eq. (75) sign discrepancy remains unresolved.",
+    "No DFT/W90Flow Wannierization was certified; the Haldane fixture is synthetic.",
+    "The C3 symmetry intent of the marker POSCAR is NOT realized under spglib 2.5.0 (observed -6); the NLO plan gate is blocked until the fixture is corrected."
+  ]
+}

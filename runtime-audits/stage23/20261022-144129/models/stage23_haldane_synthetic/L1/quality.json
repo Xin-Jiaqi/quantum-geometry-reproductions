@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "num_wann": 2,
+  "nocc_model": 1,
+  "soc": false,
+  "synthetic_model": true,
+  "quality_scope": "exact_Hamiltonian_Fourier_mapping_only",
+  "not_ab_initio": true,
+  "note": "passed=true satisfies the NLO manifest gate for this test fixture only; this is not a W90Flow/DFT quality certification."
+}

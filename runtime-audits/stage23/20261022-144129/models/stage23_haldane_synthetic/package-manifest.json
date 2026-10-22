@@ -1,0 +1,23 @@
+{
+  "rank": 1,
+  "candidate": "stage23-synthetic-haldane-tight-binding",
+  "projection": "two-orbital-Haldane-exact-Fourier-map",
+  "num_wann": 2,
+  "nocc_model": 1,
+  "physics": {
+    "soc": false,
+    "dimensionality": 2,
+    "model_type": "synthetic_haldane_tight_binding"
+  },
+  "structures": {
+    "L1": {
+      "files": {
+        "POSCAR": "3be5d48b15bd73f758ae5acbcabbee311abdab17c6161bbc4794698b0b875b2c",
+        "wannier90_hr.dat": "3fd3982f707ab1fc6e908fccf20762d672032d3ff85cc31fb7206b6e3e31c046",
+        "wannier90-wcenter.dat": "cff014d550894feda6e1f9d8e2c46c2228e220e9862752a7dc6a2a7bece31787",
+        "quality.json": "975b49a318c2edfa2f6ca95d46375f2c1e4fcab848b2bcb89d6a75946b567225"
+      }
+    }
+  },
+  "stage23_scientific_scope": "synthetic model integration test only; not a material prediction"
+}

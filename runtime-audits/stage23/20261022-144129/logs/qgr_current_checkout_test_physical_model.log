@@ -1,0 +1,6 @@
+test_connection_predicts_independently_calculated_8band_response (__main__.PhysicalHamiltonianCovarianceTests.test_connection_predicts_independently_calculated_8band_response) ... skipped 'Requires actual upstream group-theory toolkit'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK (skipped=1)

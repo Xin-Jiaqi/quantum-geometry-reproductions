@@ -1,0 +1,189 @@
+{
+  "schema": "stage23-haldane-wannier-map/v1",
+  "created_at_utc": "2026-10-22T06:36:42.555357+00:00",
+  "status": "FAIL",
+  "scientific_scope": "exact synthetic two-band tight-binding mapping only; not ab-initio reproduction and not SI FDR normalization",
+  "parameters": {
+    "M_eV": 0.4,
+    "phi_rad": 1.5707963267948966,
+    "t1_eV": 1.0,
+    "t2_eV": 0.2,
+    "length_scale_A": 1.0,
+    "vacuum_A": 20.0
+  },
+  "geometry": {
+    "NN_cartesian_A": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -0.5,
+        0.8660254037844386
+      ],
+      [
+        -0.5,
+        -0.8660254037844386
+      ]
+    ],
+    "NNN_cartesian_A": [
+      [
+        1.5,
+        0.8660254037844386
+      ],
+      [
+        -1.5,
+        0.8660254037844386
+      ],
+      [
+        0.0,
+        -1.7320508075688772
+      ]
+    ],
+    "a1_A": [
+      1.5,
+      0.8660254037844386
+    ],
+    "a2_A": [
+      1.5,
+      -0.8660254037844386
+    ],
+    "B1_per_A": [
+      2.0943951023931953,
+      3.6275987284684357
+    ],
+    "B2_per_A": [
+      2.0943951023931953,
+      -3.6275987284684357
+    ],
+    "tau_A_cartesian_A": [
+      0.0,
+      0.0
+    ],
+    "tau_B_cartesian_A": [
+      1.0,
+      0.0
+    ],
+    "tau_B_fractional": [
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "representation": {
+    "num_wann": 2,
+    "R_vector_count": 7,
+    "R_vectors": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0
+      ]
+    ],
+    "all_R_degeneracies": 1,
+    "Fourier_convention": "H(k)=sum_R H(R) exp(+i 2 pi k_frac dot R)",
+    "cell_gauge_relation": "H_cell=U^dagger H_source U; U=diag(1, exp(-i k dot delta1))",
+    "position_embedding": "Wannier-center difference wc_B-wc_A=delta1 restores physical NN bond vectors in dH/dk"
+  },
+  "checks": {
+    "all_R_vectors_have_minus_R_partners": true,
+    "serialized_HR_roundtrip_matches_model": true,
+    "HR_degeneracies_are_all_one": true,
+    "real_space_Hermiticity": true,
+    "Hamiltonian_cell_gauge_residual": true,
+    "band_eigenvalue_residual": true,
+    "k_space_Hermiticity": true,
+    "position_dressed_first_derivative_residual": true,
+    "position_dressed_second_derivative_residual": true,
+    "C3_marker_orbit_closed": true,
+    "gap_open_on_random_sample": true
+  },
+  "metrics": {
+    "sample_count": 128,
+    "max_H_matrix_residual_eV": 9.036560719766055e-16,
+    "max_band_eigenvalue_residual_eV": 1.7763568394002505e-15,
+    "max_Hermiticity_residual_eV": 0.0,
+    "max_dH_residual_eV_A": 9.992020309120961e-16,
+    "max_d2H_residual_eV_A2": 8.882156799609321e-16,
+    "max_real_space_Hermiticity_residual_eV": 0.0,
+    "max_HR_serialization_residual_eV": 0.0,
+    "C3_marker_orbit_residual_fractional": 0.0,
+    "minimum_sampled_direct_gap_eV": 1.3722717813075924,
+    "tolerance": 2e-10
+  },
+  "package": {
+    "path": "<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic",
+    "manifest_sha256": "76c4723aa1f673650dac51964a8c1066e5d578e4c88f98463d23bf3e41d1ac1a",
+    "POSCAR_sha256": "3be5d48b15bd73f758ae5acbcabbee311abdab17c6161bbc4794698b0b875b2c",
+    "hr_sha256": "3fd3982f707ab1fc6e908fccf20762d672032d3ff85cc31fb7206b6e3e31c046",
+    "wcenter_sha256": "cff014d550894feda6e1f9d8e2c46c2228e220e9862752a7dc6a2a7bece31787"
+  },
+  "checks_summary": "The Haldane source-gauge Hamiltonian and its first/second k derivatives match the generated HR representation after the explicit cell-gauge transform and Wannier-center embedding.",
+  "limitations": [
+    "C atoms in POSCAR are a synthetic C3 marker orbit, not physical atoms or active orbitals; the POSCAR is symmetry metadata for this effective model only.",
+    "quality.json passed=true denotes this exact synthetic mapping check only, not an ab-initio/W90Flow quality certification.",
+    "Numerical energy values are labeled eV and length values Å to exercise the NLO parser; this does not by itself establish absolute SI response conversion from the FDR's hbar=q=t1=1 convention.",
+    "The current NLO workflow's response kernel is diagonal-TBA; only Hamiltonian and position-dressed derivatives are checked here, not equivalence of the FDR and NLO response formulas."
+  ],
+  "nlo_kernel_validation": {
+    "status": "FAIL_NLO_KERNEL_MAPPING",
+    "checks": {
+      "NLO_HR_reader_reconstructs_H": true,
+      "NLO_eigenvalues_match_source_model": true,
+      "NLO_H_is_Hermitian": true,
+      "NLO_position_dressed_first_derivative_matches": true,
+      "NLO_position_dressed_second_derivative_matches": true,
+      "raw_HR_is_Hermitian_paired": true,
+      "direct_gap_remains_open_on_sample": true,
+      "POSCAR_point_group_is_C3": false
+    },
+    "metrics": {
+      "sample_count": 64,
+      "max_H_matrix_residual_eV": 1.0190492755571723e-15,
+      "max_band_eigenvalue_residual_eV": 1.3322676295501878e-15,
+      "max_Hermiticity_residual_eV": 6.905610201999729e-17,
+      "max_dH_residual_eV_A": 8.771042695661587e-13,
+      "max_d2H_residual_eV_A2": 1.6184831253694038e-12,
+      "max_raw_HR_pairing_residual_eV": 0.0,
+      "max_paired_HR_residual_eV": 0.0,
+      "minimum_sampled_direct_gap_eV": 1.2907948186254747,
+      "nlo_point_group": "-6",
+      "nlo_tensor_component_count": 8
+    },
+    "interpretation": "Actual NLO reader/Fourier kernel was exercised without running a response calculation.",
+    "limitations": [
+      "The point-group check depends on local spglib version and synthetic marker POSCAR.",
+      "No shift-current spectrum or FDR response comparison was run."
+    ]
+  },
+  "mapping_status": "PASS_SYNTHETIC_HAMILTONIAN_MAPPING"
+}
