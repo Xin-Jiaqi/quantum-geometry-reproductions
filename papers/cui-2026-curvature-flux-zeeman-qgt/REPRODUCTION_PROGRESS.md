@@ -79,6 +79,22 @@ generality, and true-paper observables do not share a defensible denominator.
 | --- | --- |
 | Paper reproduction | Same clean cluster-interband 4-band model integrated over hexagonal Wigner-Seitz and reciprocal primitive fundamental domains; exact continuum equality, finite-order convergence not assumed. Whole-paper PARTIAL. |
 | Physics capabilities | Independent reciprocal primitive-cell Gauss and shifted midpoint quadratures, full complex even/odd tensor comparison without projecting away numerical errors. |
-| GitHub | Round19 standalone method, 8 tests, full audit script and acceptance report on an independent PR; 145-test CI target, not a claimed PASS until remote runs finish. |
+| GitHub | Round19 standalone method, 8 tests, full audit script and acceptance report on an independent PR; **145/145 PASS** for Python 3.11 and 3.12, with Round19 audit success (Actions run 39742758842). |
 
 Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and ~3.9% for group 6m'm' in even response; projector residuals close to machine precision do NOT establish convergence. Next priority: primitive/hex domain numerical agreement, spectral-gap and temperature sensitivity. No additional VASP work at this gate.
+
+
+### Round19 independent audit result (2026-10-22)
+
+- Frozen raw comparison: results/frozen/round19_primitive_bz_audit.json.
+- Group 6: hex12 even max 4.85529e-7, primitive Gauss20 5.14225e-7,
+  primitive midpoint32 5.47477e-7, but max full-tensor
+  Gauss20-minus-hex12 is 2.78444e-7 (57% relative to the comparator).
+- The unprojected primitive grid has symmetry residuals of 1.25e-7
+  (Gauss20 group6) and 1.34e-8 (midpoint32 group6), versus ~1e-18
+  in the symmetry-enforced hex quadrature. This diagnoses numerical
+  integration, not fundamental symmetry breaking.
+- CI only certifies the *independent integration method and fixed tests*.
+  The BZ tensor remains numerically UNCONVERGED and full paper PARTIAL.
+- Next: k-resolved resonant/near-degenerate/occupation diagnostics and
+  a higher-order independent method comparison, before material DFT.
