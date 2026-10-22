@@ -4,7 +4,7 @@ from dataclasses import replace
 from pathlib import Path
 from qgmap.reservoir_ward_v67 import (ReservoirSpec,chain_surface,reference,
     scattering,conductance,conductance_B,conductance_E,conductance_EB,
-    finite_difference,finite_difference_mixed,local_polarization_bias)
+    finite_difference,finite_difference_mixed,local_polarization_bias,magnetic_ward)
 
 
 def create():
@@ -26,6 +26,7 @@ def create():
             'fd16_dB_dE_gate':finite_difference_mixed(s,frame=frame),
             'scattering_unitarity_residual':ward['unitarity_error'],
             'S_L_to_R_probability':ward['cross_probability'],
+            'magnetic_scattering_Ward':magnetic_ward(op),
             'optical_spectral_identity_residual':op['spectral_identity_error'],
             'uncontacted_orbital_continuity_residual':inner['uncontacted_site3_continuity'],
             'uncontacted_orbital_continuity_B_residual':inner['uncontacted_site3_continuity_B'],
