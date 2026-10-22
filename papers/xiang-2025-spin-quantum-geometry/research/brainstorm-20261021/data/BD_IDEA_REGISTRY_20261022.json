@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "last_review_date": "2026-10-22",
+  "purpose": "claim-level negative results preserved, NOT a novelty certificate",
+  "state_definitions": [
+    "NO_GO_CLAIM",
+    "BLOCKED_EVIDENCE",
+    "BLOCKED_NOVELTY",
+    "OPEN_HYPOTHESIS",
+    "METHOD_PASS",
+    "MODEL_PASS",
+    "PHYSICS_CANDIDATE",
+    "MATERIAL_ACCEPTED"
+  ],
+  "r1": "CLOSED_NOT_NUMERIC_CONVERGED",
+  "no_new_compute_authorized": true,
+  "entries": [
+    {
+      "id": "BD01",
+      "claim": "PT 4-band bare spinful interlayer hopping",
+      "status": "NO_GO_CLAIM",
+      "reason": "PT representation forbids selected spinful interlayer terms",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD02",
+      "claim": "Gate 5-6 torque cancellation as novel spin QG",
+      "status": "NO_GO_CLAIM",
+      "reason": "Ward/exchange torque known; retain MODEL_PASS",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD03",
+      "claim": "C3-stable polar AB/BA: linear Ex/Ey to bulk Sz",
+      "status": "NO_GO_CLAIM",
+      "reason": "C3 prohibits axial z from in-plane uniform polar drive",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD04",
+      "claim": "unitary full-domain partner creates independent response rank",
+      "status": "NO_GO_CLAIM",
+      "reason": "conjugate representations preserve rank and singular values",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD05",
+      "claim": "antiunitary finite-frequency same-forward parity",
+      "status": "NO_GO_CLAIM",
+      "reason": "Onsager swaps source/measurement operators",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD06",
+      "claim": "Wyckoff 3d versus three special sites are ±FE symmetry partners",
+      "status": "NO_GO_CLAIM",
+      "reason": "strict parent maps conjugate stabilizers; no FE doublet",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD07",
+      "claim": "generic hidden/local spin multipole new effect",
+      "status": "NO_GO_CLAIM",
+      "reason": "2018-2026 multipole/local response precedents",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD08",
+      "claim": "moire polarization induces shift-current vortices new effect",
+      "status": "NO_GO_CLAIM",
+      "reason": "npj 2D Mater Appl 2025 Agarwal et al same observable",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD09",
+      "claim": "sliding synthetic-dimension topology charge pump new",
+      "status": "NO_GO_CLAIM",
+      "reason": "PRB 101 041113(R) and related 2020 pump works",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD10",
+      "claim": "80 LG/528 MLG allowed tensor catalog is original",
+      "status": "NO_GO_CLAIM",
+      "reason": "2025 PRL 80 and 2026 SLG theory plus MPG/SOT",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD11",
+      "claim": "R1 MnPS3 material FE or torque verified",
+      "status": "BLOCKED_EVIDENCE",
+      "reason": "two 2h Slurm timeouts; 0 ionic steps; SCF never converged",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD12",
+      "claim": "true FE site-mode SOC causal nonconjugacy yields distinct measurable signal",
+      "status": "OPEN_HYPOTHESIS",
+      "reason": "requires true source-based FE pair and physical response/same-observable peer audit",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD13",
+      "claim": "zone-edge nonsymmorphic magnetic mode directly excited by uniform E",
+      "status": "BLOCKED_EVIDENCE",
+      "reason": "q mismatch; needs justified source of momentum",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD14",
+      "claim": "new generic moire optical response vortex field",
+      "status": "BLOCKED_NOVELTY",
+      "reason": "overlap with 2025 shift-current vortices and polar meron experiments",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD15",
+      "claim": "site-projected nonrelativistic/local torque as new concept",
+      "status": "NO_GO_CLAIM",
+      "reason": "Nature Commun 2024 local Edelstein torque, PRX 2025 local ME surface",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    },
+    {
+      "id": "BD16",
+      "claim": "topological spin multipolization in 2D AFM as a new general ME",
+      "status": "NO_GO_CLAIM",
+      "reason": "PRB 114 154414 (2026) already connects topology and spin ME multipolization",
+      "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false
+    }
+  ]
+}
