@@ -1,3 +1,5 @@
+> **CLOSED / HISTORICAL ONLY — 2026-10-22:** This R1 task was actually executed and its two authorized jobs ended at the two-hour TIMEOUT without SCF convergence. The user accepted the nonconverged result as the R1 endpoint and did **not** approve a restart. **DO NOT EXECUTE OR RE-SUBMIT THIS PRESCRIPTION.** The original instructions below are preserved as a historical snapshot, including their former "NOT YET SUBMITTED" status at authorship. Current status: [CURRENT.md](CURRENT.md) and [public scientific closeout](../docs/BD_MNPS3_R1_CLOSEOUT_20261022.md). A new R2 ID plus explicit approval is required for any further calculation.
+
 # DeepSeek Harness execution: MnPS3 L2 polar pair, R1
 
 **Version:** 2026-10-21-R1 | **Status:** READY FOR LOCAL AGENT INTAKE, **NOT YET RECEIVED OR SUBMITTED**.  
