@@ -91,3 +91,8 @@ Layer-odd changes about 0.08% between 16×16 and 24×24. The small layer-even nu
 **Next high-value test:** using the same data, improve the layer-even near-G convergence (including careful degeneracy handling) and verify the full hex-registry F±(δ) pattern with a source-validated spinful Pd-d + Te-p Hamiltonian if publicly available. Independently inspect the complete 2026 LEE PRL SM for continuous-registry zero/index predictions; this is the **direct general-theory scope check**. Do not undertake DFT/HPC unless a more specific, high-value test survives these gates.
 
 **Code:** [BiDB local-only geometry/SOC/Boltzmann full symmetry script](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/blob/research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/pd2te2_te_p_soc_boltzmann_gate.py), plus [BD29 database record gate](BD29_BIDB_DB_DIRECT_SCREEN_20261022.md). The raw user database stays private.
+
+
+## Interlayer hopping off negative control
+
+The local 24-band implementation was re-evaluated after deleting every Te p-p bond between the upper and lower layers, retaining atomic SOC and intralayer hopping. At ux=+0.10 Angstrom, the current-induced layer-odd Sz/jy coefficient falls from -0.006582671 (8x8) to 4.21e-16, and from -0.006524787 (12x12) to 1.07e-16. The layer-even spin signal also falls below 1e-15. Hence the model's nonzero response requires both atomic SOC and interlayer hybridization. This is a model-level control, not an original physical mechanism. The research-branch code now includes an explicit decoupled-layer test.
