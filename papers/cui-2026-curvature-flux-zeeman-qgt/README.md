@@ -55,3 +55,17 @@ python scripts/demo_vorticity_mpg.py
 ## v5: microscopic antiunitary response selection (2026-10-22)
 
 [antiunitary_response.py](src/flux_lab/antiunitary_response.py) supplies exact H/velocity/true-spin transforms, Zeeman QGT pair identities, and nondegenerate frequency-domain interband Kubo/Liouville for TR (1'), C2zT (2'), and mxT (m'). It includes four-band spin x orbital coupling controls. Crucially the complex-frequency identity connects z to **-z**, not -omega+i eta at finite causal broadening. A clean paired BZ verifies forbidden and permitted odd/even channels. [Scientific details](ROUND15_ANTIUNITARY_MICROSCOPIC.md). **100 tests** (20 new); no full 31-group dynamical proof or real material observable.
+
+
+## v6: full 31-group local microscopic bridge and progress dashboard
+
+[Group-to-Kubo bridge](src/flux_lab/group_microscopic.py) connects the
+generator-based 31 magnetic point groups to a 4-band orbital x physical-spin
+Bloch model, explicit projective spinor representations, proper real-space
+versus momentum-space antiunitary maps, full complex-frequency local Kubo,
+and 62 even/odd tensor rank cross-checks with the existing Jahn projector.
+
+[Round16 scientific acceptance](ROUND16_ALL31_MICROSCOPIC.md) | [Three-track
+progress ledger](REPRODUCTION_PROGRESS.md). The 31 checks are local generic-k
+synthetic models, NOT a 31-material or complete finite-frequency bulk-KME
+demonstration. 18 new unit tests bring the limited paper package to 118.
