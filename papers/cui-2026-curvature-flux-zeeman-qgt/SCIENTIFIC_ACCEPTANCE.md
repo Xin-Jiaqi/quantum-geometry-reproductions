@@ -95,3 +95,8 @@ The new cluster module is **VERIFIED for the declared clean interband cluster-fl
 The new hexagonal module is **VERIFIED for synthetic periodic models and symmetry checks**: triangular reciprocal periodicity, Cartesian velocity conversion, actual first Wigner-Seitz hexagon (area \(2\sqrt3\pi^2\)), fully D6-symmetric quadrature, local complex-frequency Kubo covariance and integrated even/odd tensor projection for selected groups. BZ order-3 output is not convergence evidence.
 
 **137/137 tests pass** in Python 3.11 and 3.12. Real Wannier spin/position, collision/contact terms, non-Abelian metallic KME, converged observable, source Table I and SI response remain **UNRESOLVED/PARTIAL**. See ROUND17_NONABELIAN_HEX_BZ.md.
+
+
+## Round20: slow-convergence mechanism diagnostics (bounded)
+
+Pair-resolved synthetic clean-cluster response is separated exactly into cross-mu and same-side energy-transition tensors and checked pointwise against existing Kubo for both complex frequency branches. Overlapping near-pole/small-gap subsets track denominator and Fermi factors but are not additive channels. Weighted magnitude, signed net and cancellation metrics are computed *before* any magnetic tensor projection. In the group-6 hexagonal order-12 model, cancellation ratio in allowed even xx is ~6921, whereas group 6m'm' allowed even xy is ~1.44. Strong near-pole conditions may carry Fermi differences ~1e-6. These are explanatory model diagnostics, not finite-order physical-convergence claims. See ROUND20_HOTSPOTS_OCCUPATIONS.md.

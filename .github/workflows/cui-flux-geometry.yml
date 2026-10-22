@@ -31,3 +31,5 @@ jobs:
         run: python scripts/audit_round17.py
       - name: Compare independent reciprocal primitive-cell methods (Round19)
         run: python scripts/audit_round19.py
+      - name: Audit k-space hotspots and thermal band occupations (Round20)
+        run: python scripts/audit_round20.py

@@ -105,3 +105,14 @@ Round18 demonstrated order20-to-order24 relative differences ~6% for group 6 and
 - Source PR #67 merged; main squash commit `34ef72a469e61d7dc8efcccc737cb86d745e0834`.
 - Final head before squash `bd82b5a6103b729f7d8242df1d870d0943182efe`; Actions 39743169120 successfully ran **145 tests and Round19 independent primitive-cell audit** in both Python 3.11 and Python 3.12.
 - Central Physics Registry explicitly labels the primitive-cell method VERIFIED but the numerical BZ tensor convergence UNRESOLVED. Full paper remains PARTIAL.
+
+
+## Round20 — microscopic origin of slow convergence
+
+| Workstream | Current scope |
+| --- | --- |
+| Paper reproduction | Pair-resolved clean interband response, temperature/occupation and k-space cancellation diagnostics of the paper-inspired synthetic model. Original paper still PARTIAL; no converged material KME. |
+| Physics capabilities | New bounded occupation partition, resonance/gap subset analysis, k-hotspot and absolute-vs-net cancellation metrics, with independent reconstruction against existing Kubo. |
+| GitHub | Round20 branch adds 10 new regression tests (155 target), an audit script, and scientific findings. Count actual PASS only after dual-version CI. |
+
+Key preliminary independent observation: group 6 hexagon-order12 net even xx ~4.85e-7 but weighted absolute kernel ~3.36e-3, cancellation factor ~6921. In this finite sample, cross-mu absolute integrand dominates (~3.36e-3) yet integrated cross-mu net ~3.77e-9, while same-side thermal transitions give ~4.82e-7 net. Group 6m'm' allowed xy has only ~1.44 cancellation ratio. These are not converged material quantities.

@@ -83,3 +83,8 @@ demonstration. 18 new unit tests bring the limited paper package to 118.
 ## v8: reciprocal primitive cell cross-check (Round19)
 
 [primitive_bz.py](src/flux_lab/primitive_bz.py) integrates the same periodic model on a reciprocal parallelogram using independent Gauss-Legendre and shifted midpoint schemes, without projection of the result. Compare full complex even/odd tensors to the D6-symmetrized hexagonal Wigner-Seitz calculation. [Scope](ROUND19_PRIMITIVE_BZ_CROSSCHECK.md) and [audit](scripts/audit_round19.py). Eight new tests bring the isolated suite to **145/145 PASS on Python 3.11 and 3.12** (Actions 39742758842), with reproducible audit results in results/frozen/round19_primitive_bz_audit.json. Numerical BZ convergence remains **UNRESOLVED**.
+
+
+## Round20: k-resolved occupation and cancellation diagnostics
+
+The new [hotspot_diagnostics.py](src/flux_lab/hotspot_diagnostics.py) partitions each **clean inter-cluster Kubo transition** into cross-chemical-potential and same-side bands, with overlapping frequency-resonance and small-gap diagnostics. It reports the signed net response, weighted absolute integrand, cancellation ratio, occupation differences, and weighted hotspot coordinates. No symmetry projection is used to conceal quadrature error. See [Round20 scientific acceptance](ROUND20_HOTSPOTS_OCCUPATIONS.md) and [runnable audit](scripts/audit_round20.py). The response BZ convergence and full paper remain PARTIAL.
