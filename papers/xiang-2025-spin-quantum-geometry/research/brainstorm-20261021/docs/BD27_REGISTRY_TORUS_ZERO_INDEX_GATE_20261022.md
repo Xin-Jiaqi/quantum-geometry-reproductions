@@ -89,3 +89,21 @@ This is S2-level methodology if it yields a reproducible classification that is 
 **Priority of the next tests:** (i) Compare with the 2026 LEE Supplemental Material's complete 80-LG response tables and the 2023 BSF Fig. 2(b)/Table S7; (ii) derive the general fixed-locus and index classification for **one** alternative layer group with a *different* symmetry orbit, not a blind 80-LG scan; (iii) separately complete the source-backed MoS\(_2\) orbital SK + SOC model to test if \(S_-^z\) can be actually nonzero in a fixed-\(j\) Boltzmann/Kubo calculation. Reject apparent “new vortices” if they merely restate the published polarization or shift-current textures.
 
 **Science status:** G3 symmetry/test **PASS**; six forced zero locations and the conditional index budget **DERIVED**; microscopic nonzero current-induced spin response and general novelty **UNPROVEN**; **NO new DFT/HPC jobs**.
+
+
+## 7. Cross-family control: square registry space has **four**, not six, forced zeros
+
+To avoid merely reverse-engineering the hexagonal BSF figure, we independently tested an **ideal square homobilayer family** with \(C_{4z}\), a vertical mirror and a horizontal layer swap. Use unit square registry coordinates \((x,y)\), \(\mathbf F(C_4\delta)=C_4\mathbf F(\delta)\), \(\mathbf F(m_v\delta)=-m_v\mathbf F(\delta)\), \(\mathbf F(-\delta)=-\mathbf F(\delta)\). A \(C_4\) operation fixes two locations, \((0,0)\) and \((1/2,1/2)\), already in the four layer-swap fixed points \((0,0),(1/2,0),(0,1/2),(1/2,1/2)\). **Thus four symmetry-forced zero locations** (rather than the six distinct hexagonal union).
+
+A separate minimal Fourier witness,
+\[
+\Phi_\square(x,y)=\cos 2\pi x+\cos 2\pi y,\qquad
+\mathbf F_\square=J\nabla\Phi_\square,
+\]
+passes independent \(C_4\)/mirror/layer-swap/periodicity checks in [\`stacking_square_response_torus_gate.py\`](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/blob/research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/stacking_square_response_torus_gate.py). Its indices are \(+1\) at \((0,0)\), \((1/2,1/2)\), and \(-1\) at \((1/2,0),(0,1/2)\), totaling zero. A small second harmonic \(0.05\) preserves the checks; **still a synthetic field, not measured magnetism or Kubo**.
+
+This gives a **small but genuine family-level contrast in a fixed, common physical observable**: 6 symmetry-enforced registry zeros for the chosen hexagonal class, versus 4 for the chosen square class. The integers are consequences of crystallographic fixed-point orbits and **are not newly discovered topology**. They are a useful starting benchmark for an S2 systematic theory, but the paper-level contribution must go beyond counting already-listed BSF high-symmetry registries (for example, a demonstrably independent response-specific index/activation prediction and a microscopic nonzero spin texture).
+
+For a rotation represented by an integer lattice automorphism \(R\), the number of isolated fixed points on \(\mathbb T^2\), when \(\det(I-R)\neq0\), is \(|\det(I-R)|\). This known torus-map fact yields **3 for \(C_3\)** and **2 for \(C_4\)**; layer exchange inversion \(-I\) gives **4**. Combining sets requires avoiding overlap: hexagonal \(C_3\cap(-I)\) shares G so union \(3+4-1=6\); square \(C_4\) fixed set is contained in the \(-I\) fixed set, so union \(4\). This abstract calculation is stronger and cheaper than enumerating a random K-matrix at every stacking.
+
+**Next research fork:** test the same source/output for a symmetry class without full layer exchange, or for a site-resolved spin tensor whose covariance is matrix-valued. Look for a relation not already implied by local point-group selection. Do **not** expand all 80 layer groups unless a source-backed current/spin response remains nonzero and yields a distinct measurable prediction.
