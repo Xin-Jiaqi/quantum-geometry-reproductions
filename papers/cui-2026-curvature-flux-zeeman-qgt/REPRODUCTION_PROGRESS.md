@@ -175,3 +175,17 @@ collision/contact terms remain outstanding.
 - Fixed-k maximum discrepancies: analytic full static vs finite B = **7.88e-11**, vs finite-k spin-density gradient = **1.25e-10**.
 - Primitive midpoint n=4,8,12 maximum sampled full static BZ response residuals: **1.1573e-2**, **7.0627e-5**, **8.6852e-7**; periodic discrete spin-density derivative telescopes below **8e-18**.
 - Model method VERIFIED in fixed-basis, spin-k-independent clean static protocol; whole original paper **PARTIAL**, dynamic metallic KME unresolved. Frozen output in results/frozen/round23_equilibrium_ward_audit.json.
+
+
+## Round24: degenerate finite-temperature equilibrium Ward
+
+| Stream | Method gate |
+| --- | --- |
+| Paper | Exact Kramers-degenerate **equilibrium static** no-current Ward as an independent negative control; whole paper PARTIAL. |
+| Physics | Fréchet Fermi divided difference, spectral projector / within-doublet gauge invariance, local field and momentum derivative oracles, smooth near-degenerate limit. |
+| GitHub | Isolated Round24 code + 14 tests, static audit and scope report; target 202/202, to be certified by both Python 3.11 and 3.12 CI before merging. |
+
+The earlier Round23 static formula deliberately rejected degeneracies;
+Round24 will extend the equilibrium method without calling any
+finite-frequency metallic response complete. The original 188 verified
+paper-specific tests remain unmodified.

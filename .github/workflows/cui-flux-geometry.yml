@@ -39,3 +39,5 @@ jobs:
         run: python scripts/audit_round22.py
       - name: Verify equilibrium no-current static Zeeman Ward (Round23)
         run: python scripts/audit_equilibrium_ward.py
+      - name: Audit exact Kramers-degenerate equilibrium static Ward (Round24)
+        run: python scripts/audit_degenerate_static_ward.py
