@@ -257,14 +257,27 @@
       "historical_code_preserved": true,
       "material_claim_verified": false,
       "literature_role_for_BD25": "INTRODUCTION_STRONG_NEIGHBOR_NOT_CONFIRMED_DIRECT"
+    },
+    {
+      "id": "BD27",
+      "claim": "A general symmetry-covariant theory of layer-resolved response fields over stacking configuration space yields nontrivial global registry constraints beyond local Neumann selection rules",
+      "status": "OPEN_HYPOTHESIS",
+      "reason": "Potential S2-S3 generalization; the bare covariance and Hom-space formula are standard and not novelty. Needs exact comparison with LEE SM and a nontrivial enforced zero/sign/leading-order result.",
+      "source": "docs/BD_THEORY_LEVELS_AND_STACKING_RESPONSE_FIELD_20261022.md",
+      "historical_code_preserved": true,
+      "material_claim_verified": false,
+      "scope_level": "S2_to_S3",
+      "contribution_type": "symmetry classification/theorem",
+      "compute_authorized": false
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
   "literature_role_policy": {
-    "CONFIRMED_DIRECT": "Same asserted physical observable, source/drive, response regime and crucial conclusion, supported by source-level paper comparison; only that overlapping claim is pre-empted",
-    "POTENTIAL_DIRECT": "Same or nearby operator/drive; supplemental formula and boundary/transport conditions need checking before declaring priority overlap",
-    "INTRODUCTION_CONTEXT": "Establishes field/method/material motivation but not an equivalent result for the exact candidate claim",
-    "IRRELEVANT_TO_CLAIM": "Topical overlap insufficient for citation in this specific paper"
+    "CONFIRMED_DIRECT": "A source-level comparison shows the exact registered proposition is established at the same scope, or a broader prior theorem logically implies it",
+    "FOUNDATIONAL_NEAREST_PRIOR_ART": "A prior framework or lower-level example informs the proposed generalization but does not itself establish the exact proposition",
+    "INTRODUCTION_CONTEXT": "Motivates the topic/material/method/experiment but does not imply the exact claim",
+    "POTENTIAL_OVERLAP": "Could overlap; inspect equations, assumptions, scope and counterexamples before classification",
+    "UNRELATED_TO_CLAIM": "Only topical/keyword overlap"
   },
   "small_seed_current": {
     "idea_id": "BD25",
@@ -275,6 +288,46 @@
     "symmetry_result": "Sz_top-Sz_bottom = gamma*(ux*jy-uy*jx)+O(|u|^2*j) by group representation, gamma UNKNOWN",
     "evidence": "synthetic SVD basis and layer exchange parity have been run locally; no nonzero Kubo or direct novelty result",
     "next_minimum": "physically consistent small SOC model and one chi(u) curve; check original 2026 LEE PRL SM for same derivative",
+    "compute_authorized": false
+  },
+  "claim_scope_policy": {
+    "scope_levels": {
+      "S0": "specific realization: material + stacking + observable + drive/protocol",
+      "S1": "microscopic mechanism in a defined regime",
+      "S2": "classification for a family of stackings/groups/responses",
+      "S3": "general theorem or principle covering a broad family"
+    },
+    "contribution_types": [
+      "phenomenon/material prediction",
+      "microscopic mechanism",
+      "symmetry classification/theorem",
+      "computational method/database/algorithm",
+      "experimental protocol/device"
+    ],
+    "direct_preemption_rule": "Prior work pre-empts only the registered proposition if it establishes the same proposition at the same abstraction level or a more general result demonstrably implies it. A lower-level example does not by itself pre-empt a higher-level theory; a general theorem does not by itself pre-empt a distinct material-specific prediction.",
+    "failed_model_rule": "A result that vanishes in one Hamiltonian is MODEL_NO_GO for that model/observable/protocol, not a direction-wide NO_GO.",
+    "required_fields": [
+      "claim",
+      "scope_level",
+      "contribution_type",
+      "closest_prior_source",
+      "exact_overlap",
+      "not_established_by_prior_work",
+      "smallest_falsifying_test",
+      "evidence_status"
+    ]
+  },
+  "theory_direction": {
+    "idea_id": "BD27",
+    "title": "Symmetry-covariant response field over stacking configuration space",
+    "status": "OPEN_HYPOTHESIS",
+    "scope_level": "S2_to_S3_if_nontrivial_global_constraints_are_found",
+    "contribution_type": "symmetry classification/theorem",
+    "claim": "For a fixed drive, observable and causal response protocol, classify the lowest symmetry-allowed registry-derivative order and any globally enforced zeros/sign/parity relations of layer-resolved response fields across symmetry-related stacking registries, including actual layer permutations and antiunitary operations.",
+    "baseline_not_novel": "The covariance equation K(g·δ,ω)=D_O(g)K(δ,ω)D_J(g)^-1 and local Hom_H(Sym^n U*⊗V_J,V_O) constraint are standard; they alone are not a new theorem.",
+    "possible_contribution": "A nontrivial globally constrained response texture or a validated general classification that is not already implied by the 2026 LEE 80-layer-group static stacking table or other published work.",
+    "closest_prior": "2026 Layer Edelstein Effect PRL and its SM (equation-level comparison pending); stacking-ferroelectricity/configuration-space theories are foundational prior art, not automatic pre-emption.",
+    "smallest_falsifying_test": "Audit LEE SM scope, then derive response-field covariance for one layer-swapping symmetry orbit and one explicit response; test whether any result goes beyond ordinary tensor-product selection.",
     "compute_authorized": false
   }
 }
