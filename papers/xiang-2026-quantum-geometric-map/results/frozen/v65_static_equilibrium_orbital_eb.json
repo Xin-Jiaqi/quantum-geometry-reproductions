@@ -1,0 +1,121 @@
+{
+  "finite_difference": {
+    "landau_y": {
+      "canonical_electric_of_magnetic": 0.03877719143362847,
+      "canonical_free_energy": 0.03877719133448131,
+      "canonical_magnetic_of_electric": 0.03877719132276229,
+      "electric_of_magnetic": 0.02802662321379698,
+      "free_energy": 0.028026633791533584,
+      "magnetic_of_electric": 0.028026623846433285
+    },
+    "orbital": {
+      "canonical_electric_of_magnetic": 0.03877719143313118,
+      "canonical_free_energy": 0.0387771876337379,
+      "canonical_magnetic_of_electric": 0.03877719132165207,
+      "electric_of_magnetic": 0.028026623213996474,
+      "free_energy": 0.028026614362630653,
+      "magnetic_of_electric": 0.028026623845878174
+    },
+    "symmetric": {
+      "canonical_electric_of_magnetic": 0.03877719143344921,
+      "canonical_free_energy": 0.03877719010090017,
+      "canonical_magnetic_of_electric": 0.03877719132220718,
+      "electric_of_magnetic": 0.02802662321379698,
+      "free_energy": 0.028026636567091145,
+      "magnetic_of_electric": 0.028026623845600618
+    }
+  },
+  "frames": {
+    "landau_y": {
+      "fixed_N": {
+        "dN_dB_at_mu": -0.023649825193342675,
+        "dN_dmu": 1.1862129421779055,
+        "fixed_N_fermi_term": 0.009103810777144571,
+        "mixed_d2F_dEdB_fixed_N": 0.03877719176006174,
+        "mu_B_fixed_N": 0.019937251021659927,
+        "particle_number_derivative_residual": 2.726492492441482e-17,
+        "position_contact_dP_dB": 0.029673380982917167,
+        "reference_N": 2.1522033625797614,
+        "status": "VERIFIED_STATIC_CANONICAL_MAXWELL_NOT_TRANSPORT"
+      },
+      "fixed_mu": {
+        "dF_dB": -0.022782865251361615,
+        "dF_dE": 0.7245625621432074,
+        "fermi_density_derivative": -0.00164675706304438,
+        "frame": "landau_y",
+        "mixed_d2F_dEdB": 0.028026623919872786,
+        "position_contact_dP_dB": 0.029673380982917167,
+        "status": "VERIFIED_STATIC_FINITE_EQUILIBRIUM_MAXWELL_NOT_DRIVEN_ORBITAL_EB"
+      }
+    },
+    "orbital": {
+      "fixed_N": {
+        "dN_dB_at_mu": -0.023649825193342782,
+        "dN_dmu": 1.186212942177906,
+        "fixed_N_fermi_term": 0.05656727826847055,
+        "mixed_d2F_dEdB_fixed_N": 0.03877719176006172,
+        "mu_B_fixed_N": 0.01993725102166001,
+        "particle_number_derivative_residual": 3.639646762032371e-17,
+        "position_contact_dP_dB": -0.017790086508408832,
+        "reference_N": 2.152203362579761,
+        "status": "VERIFIED_STATIC_CANONICAL_MAXWELL_NOT_TRANSPORT"
+      },
+      "fixed_mu": {
+        "dF_dB": -0.02278286525136162,
+        "dF_dE": 0.7245625621432072,
+        "fermi_density_derivative": 0.04581671042828155,
+        "frame": "orbital",
+        "mixed_d2F_dEdB": 0.02802662391987272,
+        "position_contact_dP_dB": -0.017790086508408832,
+        "status": "VERIFIED_STATIC_FINITE_EQUILIBRIUM_MAXWELL_NOT_DRIVEN_ORBITAL_EB"
+      }
+    },
+    "symmetric": {
+      "fixed_N": {
+        "dN_dB_at_mu": -0.02364982519334289,
+        "dN_dmu": 1.1862129421779057,
+        "fixed_N_fermi_term": 0.03877719176006167,
+        "mixed_d2F_dEdB_fixed_N": 0.03877719176006167,
+        "mu_B_fixed_N": 0.019937251021660104,
+        "particle_number_derivative_residual": 1.9973294376461324e-17,
+        "position_contact_dP_dB": -0.0,
+        "reference_N": 2.152203362579761,
+        "status": "VERIFIED_STATIC_CANONICAL_MAXWELL_NOT_TRANSPORT"
+      },
+      "fixed_mu": {
+        "dF_dB": -0.022782865251361493,
+        "dF_dE": 0.7245625621432072,
+        "fermi_density_derivative": 0.028026623919872623,
+        "frame": "symmetric",
+        "mixed_d2F_dEdB": 0.028026623919872623,
+        "position_contact_dP_dB": -0.0,
+        "status": "VERIFIED_STATIC_FINITE_EQUILIBRIUM_MAXWELL_NOT_DRIVEN_ORBITAL_EB"
+      }
+    }
+  },
+  "origin_control": {
+    "0": {
+      "fixed_N": 0.03877719176006167,
+      "fixed_mu": 0.028026623919872623
+    },
+    "2": {
+      "fixed_N": 0.03877719176006171,
+      "fixed_mu": 0.07532627430655839
+    }
+  },
+  "parameters": {
+    "B": 0.23,
+    "charge_over_hbar": -0.84,
+    "mu": 0.13,
+    "temperature": 0.37
+  },
+  "protocol": "STATIC equilibrium Grand Omega and canonical Helmholtz at finite T, not dynamical Hall/DC transport",
+  "scientific_status": "VERIFIED finite equilibrium Maxwell and supplied position-contact algebra; original driven orbital EB UNRESOLVED / source PARTIAL",
+  "time_reversal_control": {
+    "-0.23": -0.002694162056198403,
+    "0.0": -0.0,
+    "0.23": 0.002694162056198403
+  },
+  "units": "dimensionless finite 4-orbital model; hbar=1; beta temperature energy, signed q/hbar explicitly set",
+  "version": "v65"
+}
