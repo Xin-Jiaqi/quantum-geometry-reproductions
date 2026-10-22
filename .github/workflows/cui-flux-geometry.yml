@@ -35,3 +35,5 @@ jobs:
         run: python scripts/audit_round20.py
       - name: Verify occupancy sector partition of Kubo response (Round21)
         run: python scripts/audit_occupation_partition.py
+      - name: Audit cancellation-conditioned BZ error budget (Round22)
+        run: python scripts/audit_round22.py
