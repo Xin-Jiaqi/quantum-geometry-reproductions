@@ -20,6 +20,16 @@ class BZHotspots(unittest.TestCase):
                 np.testing.assert_allclose(d["even"],(p+m)/2,atol=3e-13,rtol=1e-12)
                 np.testing.assert_allclose(d["odd"],(p-m)/2,atol=3e-13,rtol=1e-12)
 
+    def test_occupation_reporting_threshold_does_not_truncate_response(self):
+        H,V,S=hexagonal_symmetrized_model(K,"6")
+        a=local_transition_diagnostic(H,V,S,occupation_cutoff=0.)
+        b=local_transition_diagnostic(H,V,S,occupation_cutoff=2.)
+        for name in ("even","odd"):
+            np.testing.assert_allclose(a[name],b[name],atol=1e-14,rtol=1e-13)
+        self.assertGreater(a["active_transition_count"],0)
+        self.assertEqual(b["active_transition_count"],0)
+        self.assertIsNone(b["closest_active_resonance_distance"])
+
     def test_energy_origin_plus_mu_shift_is_invariant(self):
         H,V,S=hexagonal_symmetrized_model(K,"6")
         d=local_transition_diagnostic(H,V,S,mu=.13)
