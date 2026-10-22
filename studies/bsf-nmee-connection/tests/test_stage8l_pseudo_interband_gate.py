@@ -59,6 +59,38 @@ class Stage8lPseudoInterbandTests(unittest.TestCase):
             self.assertTrue(all(x["occupied_band_1based"]<=36
                                 and x["empty_band_1based"]>=37 for x in p["pairs"]))
             self.assertGreater(p["pseudo_crossgap_transverse_spin_block_frobenius_norm"],0)
+    def test_sha_mismatch_fails_before_reading_wavecar(self):
+        with patch.object(m,"sha256_file",side_effect=["a"*64,"b"*64]), \
+             patch.object(m,"read_header") as rh:
+            with self.assertRaisesRegex(ValueError,"WAVECAR SHA256 mismatch"):
+                m.screen("WAVECAR","EIGENVAL",expected_wavecar_sha256="c"*64)
+            rh.assert_not_called()
+    def test_occupancy_mismatch_fails_closed(self):
+        coords=list(m.TARGETS.values());kpts=np.array(coords,float)
+        energies=[[[(i-37)*.25, 1 if i<36 else 0] for i in range(50)] for _ in range(4)]
+        energies[0][32][1]=0.0  # one supposed occupied state is actually empty
+        def km(w,h,index):
+            arr=np.zeros((50,3));arr[:,0]=[v[0] for v in energies[index]]
+            return 2,kpts[index],arr
+        with patch.object(m,"read_header",return_value={"nk":4,"nb":50}), \
+             patch.object(m,"sha256_file",side_effect=["a"*64,"b"*64]), \
+             patch.object(m,"parse_eigenval",return_value=(kpts.tolist(),energies,{"nelect":36,"nk":4,"nb":50})), \
+             patch.object(m,"kpoint_meta",side_effect=km):
+            with self.assertRaisesRegex(ValueError,"not fully insulating"):
+                m.screen("WAVECAR","EIGENVAL")
+    def test_wavecar_k_mismatch_fails_closed(self):
+        coords=list(m.TARGETS.values());kpts=np.array(coords,float)
+        energies=[[[(i-37)*.25, 1 if i<36 else 0] for i in range(50)] for _ in range(4)]
+        def km(w,h,index):
+            arr=np.zeros((50,3));arr[:,0]=[v[0] for v in energies[index]]
+            bad=kpts[index].copy();bad[0]+=0.01
+            return 2,bad,arr
+        with patch.object(m,"read_header",return_value={"nk":4,"nb":50}), \
+             patch.object(m,"sha256_file",side_effect=["a"*64,"b"*64]), \
+             patch.object(m,"parse_eigenval",return_value=(kpts.tolist(),energies,{"nelect":36,"nk":4,"nb":50})), \
+             patch.object(m,"kpoint_meta",side_effect=km):
+            with self.assertRaisesRegex(ValueError,"k-coordinate mismatch"):
+                m.screen("WAVECAR","EIGENVAL")
     def test_bad_pseudo_norm_is_fail_closed(self):
         zero=np.array([0j])
         with self.assertRaisesRegex(ValueError,"norm"):
