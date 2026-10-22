@@ -17,6 +17,12 @@
       "fd5_dB_conductance": -0.1804875433954652,
       "fd5_dE_gate_conductance": -0.5570897653252767,
       "internal_Pa_current_under_reservoir_bias": -0.3656101427468954,
+      "magnetic_scattering_Ward": {
+        "dB_T_from_Caroli": -0.1804875433988441,
+        "dB_T_from_scattering_amplitude": -0.18048754339884554,
+        "optical_derivative_error": 7.69725717805852e-15,
+        "unitarity_derivative_error": 2.3259818463142076e-15
+      },
       "optical_spectral_identity_residual": 4.662730184152815e-15,
       "scattering_unitarity_residual": 1.0538657132350528e-15,
       "uncontacted_orbital_continuity_B_residual": 1.7435926163665743e-16,
@@ -33,6 +39,12 @@
       "fd5_dB_conductance": -0.18048754339731557,
       "fd5_dE_gate_conductance": -0.5570897653304577,
       "internal_Pa_current_under_reservoir_bias": -0.36561014274689574,
+      "magnetic_scattering_Ward": {
+        "dB_T_from_Caroli": -0.1804875433988426,
+        "dB_T_from_scattering_amplitude": -0.1804875433988442,
+        "optical_derivative_error": 4.114009279434725e-15,
+        "unitarity_derivative_error": 1.485828983043444e-15
+      },
       "optical_spectral_identity_residual": 1.6433809401933558e-15,
       "scattering_unitarity_residual": 5.580595853764916e-16,
       "uncontacted_orbital_continuity_B_residual": 1.33391680546284e-16,
@@ -49,6 +61,12 @@
       "fd5_dB_conductance": -0.18048754339639037,
       "fd5_dE_gate_conductance": -0.557089765319448,
       "internal_Pa_current_under_reservoir_bias": -0.3656101427468952,
+      "magnetic_scattering_Ward": {
+        "dB_T_from_Caroli": -0.180487543398844,
+        "dB_T_from_scattering_amplitude": -0.1804875433988442,
+        "optical_derivative_error": 3.467114699701666e-15,
+        "unitarity_derivative_error": 9.653369066246034e-16
+      },
       "optical_spectral_identity_residual": 1.7348344947267834e-15,
       "scattering_unitarity_residual": 8.105479193277633e-16,
       "uncontacted_orbital_continuity_B_residual": 4.443059973708341e-16,
