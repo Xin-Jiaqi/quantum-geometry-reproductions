@@ -46,7 +46,8 @@ class Stage8lPseudoInterbandTests(unittest.TestCase):
             data=np.array([1+0j,0j],dtype=np.complex64) if b0<36 else np.array([0j,1+0j],dtype=np.complex64)
             return data,2
         with patch.object(m,"read_header",return_value={"nk":4,"nb":50}), \
-             patch.object(m,"parse_eigenval",return_value=(kpts.tolist(),energies)), \
+             patch.object(m,"sha256_file",side_effect=["a"*64,"b"*64]), \
+             patch.object(m,"parse_eigenval",return_value=(kpts.tolist(),energies,{"nelect":36,"nk":4,"nb":50})), \
              patch.object(m,"kpoint_meta",side_effect=km), \
              patch.object(m,"band_coeffs",side_effect=coeff):
             ans=m.screen("WAVECAR","EIGENVAL")
