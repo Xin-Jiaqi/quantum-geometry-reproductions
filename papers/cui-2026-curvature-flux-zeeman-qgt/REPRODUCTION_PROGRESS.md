@@ -40,3 +40,26 @@ simple-SOC control run is the next option if verified spin matrices remain absen
 
 No global completion percentage is stated because test count, physics
 generality, and true-paper observables do not share a defensible denominator.
+
+
+## Round 17 — non-Abelian clusters + hexagonal first BZ
+
+| Workstream | Round 17 update |
+|---|---|
+| **1. Paper reproduction** | Added exact Kramers-cluster clean interband response and first Wigner-Seitz hexagon integration in periodic triangular coordinates. Still PARTIAL: full source Table I, converged material response, intraband/contacts/collisions and SI KME. |
+| **2. Physics capabilities** | Added projector Zeeman-QGT block, cluster-pair Kubo, independent cluster Liouville, D6-symmetric hexagonal quadrature, and Cartesian-velocity conversion. Near-degenerate groups are flattened to their mean energy. |
+| **3. GitHub integration** | PR #63 contains two modules, 19 tests, an audit script, scientific acceptance and a CI audit step. Unit tests on the current code pass **137/137** in Python 3.11 and 3.12; final workflow with the audit step is being checked before merge. |
+
+### Round 17 measurable gates
+
+- 9 non-Abelian tests: Kramers doublets, global/unitary subspace gauge, projector QGT invariants, Kubo/Liouville equality and TRIM frequency parity.
+- 10 hexagonal BZ tests: lattice automorphism, reciprocal periodicity, exact hexagon area, D6 weighted-node symmetry, local Kubo covariance and selected integrated tensor projectors.
+- First CI caught a genuine quadrature defect: C6 rotation symmetry alone did not enforce mirror symmetry. The fixed rule averages with a mirror image; forbidden integrated tensor components now pass.
+- Package count: **137 tests** (118 prior + 19 new); full paper remains **PARTIAL**.
+
+### Updated next milestones
+
+1. Increase hexagonal BZ quadrature order and demonstrate numerical convergence of allowed response components (still synthetic).
+2. Extend cluster response to the general non-Abelian/intraband metallic and conserving-collision regime; the present cluster-flat interband protocol is not that theory.
+3. Validate same-gauge Wannier Hamiltonian, physical spin and position operators for a material.
+4. Resolve the six conditional source Table I differences and complete material-normalized Eq.(19)/SI checks.

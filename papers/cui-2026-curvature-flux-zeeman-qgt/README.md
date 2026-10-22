@@ -69,3 +69,12 @@ and 62 even/odd tensor rank cross-checks with the existing Jahn projector.
 progress ledger](REPRODUCTION_PROGRESS.md). The 31 checks are local generic-k
 synthetic models, NOT a 31-material or complete finite-frequency bulk-KME
 demonstration. 18 new unit tests bring the limited paper package to 118.
+
+
+## v7: non-Abelian clusters and first hexagonal BZ (Round 17)
+
+- nonabelian_response.py: projector-resolved Zeeman-QGT blocks, cluster-pair interband Kubo and independent Liouville for exact/near degeneracies.
+- hexagonal_bz.py: triangular reciprocal periodic model, Cartesian velocities, first Wigner-Seitz hexagon, D6-symmetrized quadrature.
+- Round 17 acceptance: ROUND17_NONABELIAN_HEX_BZ.md; progress ledger: REPRODUCTION_PROGRESS.md; audit script: scripts/audit_round17.py.
+
+19 new tests bring this isolated package to **137 tests**. Python 3.11 and 3.12 both pass after correcting a mirror-asymmetric quadrature rule. Near-degenerate cluster flattening is explicit; the implementation is not a conserving metallic or SI transport theory. Full-paper status remains **PARTIAL**.
