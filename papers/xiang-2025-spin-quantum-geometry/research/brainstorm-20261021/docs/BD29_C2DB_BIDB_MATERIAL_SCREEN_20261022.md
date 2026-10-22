@@ -1,3 +1,5 @@
+> **2026-10-22 direct-data correction: THIS EARLIER LITERATURE-ONLY SCREEN IS SUPERSEDED.** The user supplied the full BiDB ASE/SQLite database; complete record-level filtering and a real three-operation Seitz check changed the first-choice theory demonstrator to **Pd2Te2 id 980**, with **Pd2Se2 id 975** as a close control. Both are nonmagnetic, metallic, eight-atom, Stable p-6m2 (D3h) bilayers with a directly verified *horizontal layer-swapping mirror*, matching BD27 ideal assumptions. VSeTe is the preferred *magnetic* extension; VTeS has only two Stable entries and neither has pure mz. The precise results, UID, caveats and next experiment are in [the direct database report](BD29_BIDB_DB_DIRECT_SCREEN_20261022.md). No extra files or CIF export are requested from the user; the earlier lack-of-record-access paragraph below is **historical only**.
+
 # BD29 | C2DB / BiDB scouting for a source-backed layer-response material
 
 **Date:** 2026-10-22  
