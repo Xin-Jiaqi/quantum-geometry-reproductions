@@ -63,3 +63,19 @@
 (1) 从既有 BSF/stacking catalog 取源可信 ±P 伴侣，保持**同一个物理位点、算符和磁序约定**；(2) 完整幺正/反幺正的等价对照必须分别过群变换与 Onsager；(3) 真正候选仅是结构相关但完整 SOC/magnetic 不相关的对照，或磁性稳定子/站点模不同的状态；(4) 先给可测预测与同算符前人区别，才准许新材料任务。
 
 本文件是**故事与科学机制版本控制**，不是科研结论的美化工具。R1 CLOSED；R2-P0 仍为只读状态，无新计算授权。
+
+
+## 增补：更严格的“真实切换机制 + 真实局域磁序”文献关口
+
+本协议的[机器可读登记簿](../data/BD_IDEA_REGISTRY_20261022.json)现为**20 条具体主张**。此外必须纳入以下强相关先例：
+
+- **BD15 / local magnetic torque**：[González-Hernández et al., *Non-relativistic torque and Edelstein effect in non-collinear magnets*, *Nat. Commun.* **15**, 7663 (2024)](https://doi.org/10.1038/s41467-024-51565-6) 已论证子晶格投影的局域 Edelstein 与磁序力矩、绝缘体响应；不能把 G2 位点响应本身称为新物理。
+- **BD16 / topology-induced spin multipolization**：[Venderbos et al., *Topological spin multipolization and linear magnetoelectric coupling in two-dimensional antiferromagnets*, *PRB* **114**, 154414 (2026)](https://doi.org/10.1103/6gzb-4kwm)，已有二维拓扑量子磁电/自旋多极化理论；不能只改名叫拓扑局域磁电。
+- **BD17 / actual FE switching**：[Ke, Liu & Liu, *Superlubric Motion of Wavelike Domain Walls in Sliding Ferroelectrics*, *PRL* **135**, 046201 (2025)](https://doi.org/10.1103/jhlq-2dd7)：真正翻转常经畴壁，而非均匀刚体滑移；且 [*Domain-Wall-Mediated Interfacial Ferroelectric Switching*, *Nano Lett.* **26**, 1043 (2026)](https://doi.org/10.1021/acs.nanolett.5c05482) 已分析不同壁种的移动/稳定性。不要把连接算符自动解释成动力学轨迹。
+- **BD18 / pure-electric torque**：[Shen et al., *Magnetoelectric Torque in Polar Magnetic Bilayers*, *PRL* **136**, 016702 (2026)](https://doi.org/10.1103/l5fd-kpn5) 已提出纯电场驱动、不必 SOC 的极性双层力矩/磁矩切换；普通 polar bilayer E→torque 不是新机制。
+- **BD19 / FE AHE criterion**：[Li et al., *Ferroelectric switching of the anomalous Hall effect in two-dimensional multiferroics*, *PRB* **113**, 195431 (2026)](https://doi.org/10.1103/82nf-jh6z) 已给出磁序不变时 FE 反转 AHE 的 MSG 判据。
+- **BD20 / 真正需要验证的候选**：真实 FE 畴壁上**磁性位点投影的动态交换力**是否存在端点/普通壁对称性不预言的响应。此项目前只能算 OPEN_HYPOTHESIS，必须比对 2025 [*PRX* **15**, 021094](https://doi.org/10.1103/7brd-lynv) 的局域磁电/表面磁序，2024 Nat Commun local torque，2026 PRL polar bilayer torque，以及 2025–26 畴壁动力学。壁处可允许响应本身是普通对称性降低，不算创新。
+
+**值得进一步提炼的故事（不是已发现的效应）：** 既有 FE 端点连接理论不能自动代替**实际移动畴壁的磁性位点重排与因果响应**。若发现同一 FE 双态在两种真实可行壁路径下，有不同的、可观测的磁性模式广义力谱，而且差异不能归结为畴壁取向、已知多极矩、传统 NSOT 或运动学相位延迟，才值得发展普适层群理论。当前尚无源验证磁性 FE 壁，也没有物理响应 Kubo/LLG 结果。
+
+**操作原则：** 下轮 G3 先做有源结构的真 FE 畴/壁连接和既有同行方程比对；没有这些证据，结果标 BLOCKED 而非启动 DFT。R1 CLOSED，零新计算授权。
