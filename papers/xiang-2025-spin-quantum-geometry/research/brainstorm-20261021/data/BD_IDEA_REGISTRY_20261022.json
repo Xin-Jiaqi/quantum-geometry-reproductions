@@ -437,6 +437,70 @@
         "comparison_with_original_2026_LEE_SM": "PENDING"
       },
       "next_small_step": "Audit LEE SM for actual continuous δ field selection; then one physically derived spinful bilayer hopping Hamiltonian and paired fixed-current F_+(δ)/F_-(δ) response maps. No DFT."
+    },
+    {
+      "id": "BD29",
+      "claim": "A source-validated magnetic Janus homobilayer (first candidate VTeS) can provide a compact microscopic test of an operator-resolved, registry-dependent current-induced layer-spin response field, with magnetic/Janus layer symmetry producing selection rules beyond a fixed-registry nonmagnetic LEE classification.",
+      "status": "OPEN_HYPOTHESIS",
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem + material/model validation",
+      "status_detail": "LITERATURE_SCREEN_PASS; DATABASE_RECORD_GATE_PENDING; MAGNETIC_SPACE_GROUP_UNVERIFIED; MICROSCOPIC_RESPONSE_UNTESTED; NOVELTY_UNRESOLVED",
+      "source": "docs/BD29_C2DB_BIDB_MATERIAL_SCREEN_20261022.md",
+      "candidate_ranking": [
+        {
+          "material": "VTeS Janus homobilayer",
+          "priority": "A first to inspect",
+          "source": "Pakdel et al., Nat Commun 15, 932 (2024), DOI 10.1038/s41467-024-45003-w",
+          "source_supported_facts": "BiDB paper reports metallic stacking-dependent magnetic bilayers and a ferrimagnetic stacking associated with Janus-dipole-driven charge transfer.",
+          "not_yet_verified": "exact UID/CIF, stable registry, unit-cell atom count, spin-spiral ground state, layer orientation, magnetic layer group."
+        },
+        {
+          "material": "AgVP2Se6",
+          "priority": "B+ polar magnetic benchmark",
+          "source": "Pakdel et al. 2024 BiDB; Sodequist & Olsen, npj Comput Mater 10, 170 (2024), DOI 10.1038/s41524-024-01318-2; Peng et al., Adv Funct Mater (2020), DOI 10.1002/adfm.201910036",
+          "source_supported_facts": "stacking-related FM/AFM states in BiDB; experimental vdW ferromagnetic semiconductor; C2DB spin-spiral work predicts DMI may favor a chiral spiral.",
+          "risk": "low symmetry and magnetic-ground-state competition."
+        },
+        {
+          "material": "CrI3 bilayer",
+          "priority": "B benchmark only",
+          "source": "Rashba spin-layer locking (J Phys Chem Solids 2022) and TMD/CrI3 current-induced SOT PRB 114, 045422 (2026), DOI 10.1103/llyn-hs8b",
+          "source_supported_facts": "magnetic bilayer, strong SOC, existing layer-resolved spin texture and SOT literature.",
+          "risk": "crowded exact material-specific prior art."
+        },
+        {
+          "material": "MnPS3",
+          "priority": "B- symmetry/insulator control",
+          "source": "experimental AFM layered insulator literature",
+          "risk": "weaker SOC, larger AFM cell, uncertain response magnitude."
+        },
+        {
+          "material": "MoSSe/MoTe2/WTe2 bilayers",
+          "priority": "published baseline only",
+          "source": "LEE PRL 137, 076401 (2026), DOI 10.1103/qhvs-pfkq",
+          "risk": "direct overlap for generic layer Edelstein/current-induced layer-spin effect."
+        }
+      ],
+      "literature_roles": {
+        "direct_or_potential_direct": [
+          "LEE 2026 for nonmagnetic bilayer current-induced layer spin and static stacking tensor criteria",
+          "CrI3 spin-layer texture and TMD/CrI3 SOT for their exact observables",
+          "BiDB 2024 for stacking-dependent magnetic state in VTeS/AgVP2Se6, but not current-induced spin-response field"
+        ],
+        "foundational_nearest_prior": [
+          "C2DB spin-spiral ground-state screening 2024",
+          "BiDB high-throughput stacking and registry-dependent properties 2024",
+          "2026 trigonal monolayer spin-charge-conversion screening"
+        ],
+        "introduction_context": [
+          "general sliding ferroelectricity",
+          "optical shift-current vortices for different drive/output",
+          "generic magnetic vdW materials"
+        ]
+      },
+      "smallest_falsifying_test": "Retrieve exact BiDB VTeS and AgVP2Se6 UIDs/CIFs and property rows; validate magnetic ground state and actual layer orientation; derive the exact magnetic layer group before any response calculation.",
+      "compute_authorized": false,
+      "no_dft_or_hpc": true
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
@@ -500,5 +564,18 @@
     "first_concrete_corollary": "For a layer-odd S_z response driven by in-plane current, a layer-swapping horizontal-mirror Seitz operation maps registry δ to -δ and gives χ(-δ)=-χ(δ). At registry fixed points δ≡-δ mod Λ (four points on a primitive 2D torus if all corresponding Seitz symmetries exist), χ is symmetry-forced zero. This is an analytical candidate, not yet checked against all relevant prior literature or a microscopic Hamiltonian.",
     "current_methods_link": "docs/BD27_REGISTRY_TORUS_ZERO_INDEX_GATE_20261022.md",
     "operator_parity_cross_family": "BD28, confirmed group algebra only; Kubo and novelty open"
+  },
+  "material_screen": {
+    "date": "2026-10-22",
+    "databases": [
+      "C2DB",
+      "BiDB"
+    ],
+    "data_status": "Published database docs and paper-level claims checked; exact BiDB record UID/CIF rows not extracted yet.",
+    "first_candidate": "VTeS Janus homobilayer",
+    "second_candidate": "AgVP2Se6",
+    "control": "CrI3 bilayer",
+    "novelty_rule": "Specific stacking-dependent magnetic state is direct prior art for that magnetic state, not automatic pre-emption of a higher-level response-field theory. Match the exact observable, protocol and abstraction level.",
+    "next_action": "Obtain exact structure/property records, then magnetic layer-group gate; no DFT/HPC until approved."
   }
 }
