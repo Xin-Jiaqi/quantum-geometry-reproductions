@@ -7,7 +7,7 @@ Layout (verified against file size 4,899,393,312 B and EIGENVAL):
   k-records (97*114528 B each):
      header recl8 (114528 B): nplane(1) + k(3) + enocc[nb][e,0,occ] + pad
      96 band records (114528 B each): nplane complex64 coeffs + (recl8-nplane) f64 pad
-  ncl spinor: 14294 complex64 per band = 7147 G x [up,dn] interleaved (4 float32 per G)
+  ncl spinor: 14294 complex64 per band = 7147 G values for up, followed by 7147 for down (GROUPED, not interleaved)
 Provides: header, kpoint finder, enocc energies vs EIGENVAL, and spinor spin
 expectations under BOTH interleaved and grouped channel layouts.
 """
@@ -23,6 +23,12 @@ def read_header(path):
     with open(path, "rb") as f:
         head = f.read(24)
         recl, spin, rtag = np.frombuffer(head, dtype=np.float64)
+        if not np.isfinite(recl) or recl<=0 or abs(recl/8-round(recl/8))>1e-8:
+            raise ValueError("Invalid WAVECAR record length")
+        if int(rtag)!=45200:
+            raise ValueError("Unsupported WAVECAR rtag: expected 45200 (complex64 coefficients)")
+        if int(spin)!=1:
+            raise ValueError("Expected one noncollinear spinor channel in WAVECAR header")
         recl8 = int(recl / 8)
         f.seek(recl8 * 8)
         rec2 = np.frombuffer(f.read(recl8 * 8), dtype=np.float64)
@@ -54,6 +60,8 @@ def band_coeffs(path, header, kidx, band):
     """Read nplane complex64 coefficients for one band (seek only)."""
     off = header["k0_off"] + kidx * header["kp_bytes"] + header["hdr_bytes"] + band * header["hdr_bytes"]
     nplane, _, _ = kpoint_meta(path, header, kidx)
+    if nplane<=0 or nplane%2 or nplane*8>header["hdr_bytes"]:
+        raise ValueError("Invalid spinor waveplane count or record overflow")
     with open(path, "rb") as f:
         f.seek(off)
         coeffs = np.frombuffer(f.read(nplane * 8), dtype=np.complex64)
