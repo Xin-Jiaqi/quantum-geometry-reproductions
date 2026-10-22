@@ -292,3 +292,13 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - Independent v60–v68 standalone **306/306 PASS** on fresh ZIP extraction, numerical freeze re-generated **byte-identically** locally; 75-entry SHA256 stand-alone manifest. All seven newly committed source, test, script, frozen, and scientific/handoff files have remote Git blob SHA identical to tested local files.
 - **VERIFIED** full noninteracting two-energy lesser-reservoir response for specified finite-device projected-current operator, independent lead charge Dyson Ward including finite-frequency contact injection, full magnetic vertex/position/lead derivatives, and three-frame/finite-field negative controls. **CONDITIONAL** device-only electric drive, finite open graph, supplied projected orbital dipoles and elastic reservoirs. **UNRESOLVED** original macroscopic intrinsic orbital mixed E/B transport, bulk limit and complete magnetic Wannier embedding. Xiang PRB original paper **PARTIAL**.
 - This root release documentation update changes **no tested physics source or test files**.
+
+
+### v69 independent finite-lead Lehmann oracle (2026-10-22; PR and CI pending)
+
+- New module diagonalizes the full finite Hermitian four-orbital device plus two explicit finite tight-binding leads and evaluates a Lehmann eigenstate-pair sum, independent of the v68 semi-infinite surface-self-energy Keldysh integral.
+- 45 new physical gates + one frozen numeric regeneration gate. v60-v68 local baseline 306/306 and v69 module 46/46 pass in separate test batches; cumulative local test count **352/352**. High-resolution L=1000, eta=.005 production run is part of the v69 main test class.
+- v68 continuum reference sigma=-0.005292649615898-0.001194257399095i. v69 L=1000, eta=.005 gives -0.005179061975941-0.001373654830605i, absolute difference 2.123e-4 (~4% magnitude); ordered L/eta sequence improves monotonically but is **not exact convergence**.
+- Finite-system Lehmann Ward residual 7.8e-17, device/lead induced charge cancellation, static isothermal Frechet vs full E re-diagonalization error 4.2e-13, three-frame covariance and finite-B derivative are checked.
+- **VERIFIED** finite-Hamiltonian identities; **CONDITIONAL** finite L/eta, device-local electric field, supplied projected positions and ideal elastic leads; **UNRESOLVED** original Xiang bulk orbital E/B, complete magnetic Wannier embedding and source SM sign/factor/three-band issues. Original paper stays **PARTIAL**.
+- Final PR HEAD, PR CI, merge SHA and post-merge main CI must be added after remote verification. This entry is on the v69 topic branch; it is not yet a release certification.
