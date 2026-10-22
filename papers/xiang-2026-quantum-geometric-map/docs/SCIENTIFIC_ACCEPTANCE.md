@@ -224,3 +224,16 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Original homogeneous electric-field-driven Xiang orbital mixed E/B | Landauer gate derivative is a **DIFFERENT observable**; no same-observable Keldysh/SCBA or field-complete Wannier | **UNRESOLVED; original source PARTIAL** |
 
 v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local PASS**. [Detailed v67 report](CONSERVING_RESERVOIR_WARD_V67.md).
+
+## v68: same finite device polarization-current operator, microscopic elastic-lead Keldysh AC E/B
+
+| Named claim | Independent gate | Status |
+| --- | --- | --- |
+| Finite-frequency, device-local E, real energy-dependent semi-infinite reservoir lesser Keldysh | Physical lead band surface branches, positive/complete spectral weight, 512-to-640 resonance-resolved energy integration, exact two-time lesser Dyson identity and projected J(E)=i[H-E Pb,Pa] | **VERIFIED bounded noninteracting finite-model identity** |
+| Same *device current operator* as v66, different bath | Both models use supplied Pa,Pb and explicit electric current vertex -i[Pb,Pa]; v68 bath from semi-infinite noninteracting leads, v66 scalar gamma; their numerical susceptibilities differ | **VERIFIED comparison; NOT bulk equivalent** |
+| Microscopic lead charge Ward at finite omega | Construct lead collision from independently evaluated two-energy Sigma-r/a and Sigma-less, not from residual; full matrix continuity residual ~9e-11, uncontacted site ~1e-11; global lead injection balances device charge accumulation | **VERIFIED current/charge continuity, specified model** |
+| Magnetic orbital and lead contact completeness | Full dB H,Pa,Pb,Sigma,Gamma and both energies; three B-dependent frames agree; analytic vs independent five-point full B numerical derivative ~1e-11 | **VERIFIED named finite operator derivative** |
+| Strict DC alternative finite-E/B oracle | Recompute full equilibrium lead lesser density with H-E Pb and J(E) at each gate, compare 3-frame finite E derivatives and four-corner mixed E/B to omega=0 Keldysh | **VERIFIED same physical elastic-lead bath, independent full-field computation** |
+| Full original Xiang bulk intrinsic orbital mixed E/B | Device-only field, boundary response, finite arbitrary off-diagonal projected dipoles, no real-material magnetic Wannier, no bulk thermodynamic normalization or original SM Eq49/52 three-band closure | **UNRESOLVED; source paper PARTIAL** |
+
+40 v68 independent physics tests + 1 frozen-data reprovenance gate, total standalone v60–v68 306 PASS. See [v68 physics report](FINITE_FREQUENCY_SAME_DEVICE_KELDYSH_EB_V68.md).
