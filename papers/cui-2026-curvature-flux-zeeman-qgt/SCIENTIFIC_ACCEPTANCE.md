@@ -100,3 +100,17 @@ The new hexagonal module is **VERIFIED for synthetic periodic models and symmetr
 ## v9 · Round20: k-space cancellation and occupied-transition diagnostics
 
 VERIFIED for the bounded clean cluster-interband synthetic model: independent analytic even/odd band-pair formula, agreement with the previous causal Kubo at single k and throughout both BZ domains, weighted absolute-local integrals, selected-component cancellation, sampled gaps and diagnostic occupancy/resonance distances. The nonphysical response-truncation threshold error and symmetry-component floating tie were caught and repaired. In group 6 the specified yy even component cancels by ~98.6% at hexagonal order5; group 6m'm' xy cancels by ~21.1%. These are **illustrative finite-grid** results, not a universal symmetry theorem nor a converged material susceptibility. 159/159 tests PASS in Python 3.11/3.12; full paper PARTIAL. [Acceptance and limits](ROUND20_HOTSPOTS_AND_CANCELLATION.md).
+
+
+## Round22: empirical grid disagreement is NOT certified integration accuracy
+
+The mathematical conditional inequality \`|δI|/|I|<=eps/r\`, given
+\`∫|δF|<=eps ∫|F|\`, is verified, as are four-shift midpoint/primitive
+Gauss/hexagonal Gauss comparisons and an exact Fourier aliasing
+negative control for the synthetic clean cluster-interband model.
+The measured finite-grid discrepancies (~98.87% of hex5 for group6 even yy,
+~52.83% for group6m'm' even xy) are empirical disagreements, NOT
+strict errors against the unknown continuum value. Both Python
+3.11 and 3.12 passed **178/178** tests (Actions 39750100446).
+Numerical BZ convergence remains **UNVERIFIED** and the original paper
+**PARTIAL**. [Complete bounded protocol](ROUND22_ERROR_BUDGET_AND_ALIASING.md).
