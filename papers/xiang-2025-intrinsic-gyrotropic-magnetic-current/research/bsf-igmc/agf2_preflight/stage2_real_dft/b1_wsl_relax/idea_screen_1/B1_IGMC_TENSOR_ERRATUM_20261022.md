@@ -79,7 +79,7 @@ The following remain open:
 
 - Xiang et al., *Intrinsic Gyrotropic Magnetic Current from Zeeman Quantum Geometry*, PRL 134, 116301 (2025), https://doi.org/10.1103/PhysRevLett.134.116301
 - Zhu et al., *Sliding Ferroelectric Control of Unconventional Magnetism in Stacked Bilayers*, PRL 135, 056801 (2025), https://doi.org/10.1103/dmzg-ck2t
-- Project's channel-resolved implementation: ../../../../../../../../src/igmc_lab/tensor_symmetry.py
+- Project's channel-resolved implementation: https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/blob/main/papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/src/igmc_lab/tensor_symmetry.py
 - Related orbital channel: Ghorai et al., *Intrinsic Gyrotropic Magnetic Current of Orbital Origin*, PRB accepted 2 September 2026, https://doi.org/10.1103/xr5v-gkv5
 
 **No VASP, PBS, or Wannier calculation was run by this erratum.**
