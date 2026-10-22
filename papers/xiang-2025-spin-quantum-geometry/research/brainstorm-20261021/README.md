@@ -202,3 +202,15 @@ New direct competitors include the [2026 complete spin-layer-group corepresentat
 
 
 **Source-checked precedents:** [Ji et al., PRL 130, 146801 (2023), General Theory for Bilayer Stacking Ferroelectricity](https://doi.org/10.1103/PhysRevLett.130.146801) explicitly generalizes earlier sliding-ferroelectric examples to all 80 layer groups. [Pang & He, PRL 135, 116402 (2025), Generalized Neumann's Principle](https://doi.org/10.1103/trhd-kxm1) generalizes FQFE and conventional ferroelectricity over 32 point groups. These support the scope distinction and also raise BD27's novelty bar: our candidate must be a response-specific, nontrivial global constraint, not a renamed general Neumann principle.
+
+
+## 2026-10-22 BD27/BD28: From examples to a general theory of registry-space response zeros and indices
+
+[**Theory/model report: symmetry-forced zeros, response operator parity and torus winding constraints**](docs/BD27_REGISTRY_TORUS_ZERO_INDEX_GATE_20261022.md). This is the first **cross-family** candidate driven by the user's important distinction: a single known material effect does not pre-empt an S2–S3 general theory. The direct prior frameworks are [2023 BSF](https://doi.org/10.1103/PhysRevLett.130.146801) for six hexagonal G/A/B/C/M/N registry points and [2026 LEE](https://doi.org/10.1103/qhvs-pfkq) for layer-resolved current-induced spin/80-LG selection. The 2025 [shift-photocurrent vortices](https://doi.org/10.1038/s41699-025-00552-6) work has a different drive/output; **Introduction/nearest texture precedent**, not proof that the new exact spin response is pre-empted.
+
+**Locally executed group tests**, in [protected-branch Draft PR #32](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/pull/32):
+- Hex \(C_3+m_v+m_z\): real \(\mathbf j_\parallel\to S_-^z\) response **six symmetry-forced zero locations G/A/B/C/M/N**; explicit Fourier witness simple-zero indices \(+1,+1,+1,-1,-1,-1\), sum 0.
+- Square \(C_4+m_v+m_z\): **four** forced zero locations; witness indices \(+1,+1,-1,-1\), sum 0. Exact rational fixed-point solver confirms \(|\det(I-C_3)|=3\), \(C_4=2\), layer inversion \(=4\), unions 6 vs 4.
+- **Sharper same-system readout contrast:** hex layer-odd \(S_-^z\) has first **linear** slide response \(F_-\sim i\gamma u\) (winding +1 if nonzero), while layer-even \(S_+^z\) has first **quadratic** \(F_+\sim\beta\bar u^2\) (winding −2 if nonzero). A separate symmetry-consistent even Fourier field passes +1/+1/−2 index budget. Square \(C_{2z}\) vs horizontal layer swap forces **all-registry layer-even \(S_+^z\) current response identically zero** (known centrosymmetric-selection consequence).
+
+These are **conditional, standard symmetry/topological deductions**, NOT a new microscopic spin mechanism, completed 80/528 sweep or novelty proof. The actual current-driven electronic coefficients remain uncalculated. The literature-overlap test with the original 2026 LEE SM remains open. Registry [now 28 ideas](data/BD_IDEA_REGISTRY_20261022.json), with BD27 and BD28 still OPEN_HYPOTHESIS; no new DFT/HPC.
