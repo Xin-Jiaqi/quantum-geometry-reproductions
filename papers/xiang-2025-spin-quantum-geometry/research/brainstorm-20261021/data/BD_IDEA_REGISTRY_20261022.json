@@ -434,7 +434,8 @@
         "explicit_fourier_witnesses": "PASSED; second harmonic perturbation 0.05 PASSED",
         "microscopic_spin_response": "NOT_TESTED",
         "new_general_theory": "NOT_ESTABLISHED",
-        "comparison_with_original_2026_LEE_SM": "PENDING"
+        "comparison_with_original_2026_LEE_SM": "PENDING",
+        "model_real_geometry_toy": "Pd2Te2 BiDB id980 Te-p-only (unfitted) SOC current-spin response has odd +1/even -2 contour winding (12x12 and 16x16 angular scan) and differing global special-registry zeros; material and general novelty unverified."
       },
       "next_small_step": "Audit LEE SM for actual continuous δ field selection; then one physically derived spinful bilayer hopping Hamiltonian and paired fixed-current F_+(δ)/F_-(δ) response maps. No DFT."
     },
@@ -501,7 +502,7 @@
       "smallest_falsifying_test": "Reproduce the actual public GitHub model script locally, check lattice symmetrization; independently derive/fit Pd-d + Te-p hopping+SOC source and verify BZ mesh/gauge & full current-response; inspect 2026 LEE SM exact operator-resolved continuous-registry consequences before calling a new theorem. No DFT/HPC permission.",
       "compute_authorized": false,
       "no_dft_or_hpc": true,
-      "reason": "BiDB id980 passes true C3/mv/mz site mapping and a new 24-band Te-p-only, geometry-based p-p SK+atomic SOC Boltzmann model yields NONZERO current-driven layer-odd out-of-plane Sz on sliding. Full H spatial and TR covariance errors <=6e-16; fixed-current chi_Sminus,jy(+0.1A)=-0.006506 at Nk24 model units, reversing under slide, vanishing with SOC off. Parameters are NOT fit, Pd d orbitals omitted, and the much smaller layer-even response is not well converged; this does not establish a real material prediction or independent originality. Direct LEE SM equation audit remains pending.",
+      "reason": "BiDB id980 passes true C3/mv/mz site mapping and a new 24-band Te-p-only, geometry-based p-p SK+atomic SOC Boltzmann model yields NONZERO current-driven layer-odd out-of-plane Sz on sliding. Full H spatial and TR covariance errors <=6e-16; fixed-current chi_Sminus,jy(+0.1A)=-0.006506 at Nk24 model units, reversing under slide, vanishing with SOC off. Parameters are NOT fit, Pd d orbitals omitted, and the much smaller layer-even response is not well converged; this does not establish a real material prediction or independent originality. Direct LEE SM equation audit remains pending. Global source-geometry model scan additionally reproduces six layer-odd forced zeros and three layer-even forced zeros, with C3-related nonzero layer-even vectors at A/B/C. A real-BiDB-geometry toy response contour of radius 0.125 Angstrom independently has layer-odd winding +1 and layer-even winding -2 at 12x12 and 16x16 grids; full material and novelty certification remain OPEN.",
       "first_theory_material": {
         "material": "Pd2Te2 bilayer",
         "bidb_id": 980,
@@ -592,7 +593,41 @@
         "layer_even_parity_under_u": "chi_plus(-u)=chi_plus(+u), errors <1e-14; amplitude more mesh-sensitive",
         "soc_off": "both spin channels numerically zero",
         "actual_material_prediction": false,
-        "novelty_established": false
+        "novelty_established": false,
+        "global_registry_test": {
+          "source": "data/BD29_PD2TE2_REGISTRY_6_POINTS_20261022.csv",
+          "k_mesh": "16x16 shifted and sixfold C3v orbit",
+          "rigid_registry": "G,A,B,C,M,N fractional points, not proven stable stacking minima",
+          "odd_response": "norm below 2.40e-16 at all six; symmetry-forced zeros reproduced",
+          "even_response": "norm below 1e-15 at G,M,N; nonzero at A,B,C with equal norm ~0.00606649 toy units",
+          "even_vectors": {
+            "A": [
+              -0.006066491,
+              0
+            ],
+            "B": [
+              0.003033245,
+              -0.005253735
+            ],
+            "C": [
+              0.003033245,
+              0.005253735
+            ]
+          },
+          "interpretation": "same toy H and same current drive, different layer parity gives distinct global zero set"
+        },
+        "contour_winding": {
+          "source": "data/BD29_PD2TE2_CIRCLE_WINDING_20261022.csv",
+          "registry_center": "G",
+          "radius_angstrom": 0.125,
+          "angular_samples": 12,
+          "layer_odd_index": 1,
+          "layer_even_index": -2,
+          "kmesh12": "odd min norm 0.0081026; even min norm 5.27e-5",
+          "kmesh16": "odd min norm 0.00808505; even min norm 8.0542e-5",
+          "kmesh20": "0 and 30 degree magnitudes nonzero; full contour 20x20 not run",
+          "claim_limits": "No source-fitted Pd bands, no experimental response, beta amplitude not quantitatively converged; topology conditional on nonzero contour and fixed protocol."
+        }
       }
     }
   ],
@@ -656,7 +691,8 @@
     "compute_authorized": false,
     "first_concrete_corollary": "For a layer-odd S_z response driven by in-plane current, a layer-swapping horizontal-mirror Seitz operation maps registry δ to -δ and gives χ(-δ)=-χ(δ). At registry fixed points δ≡-δ mod Λ (four points on a primitive 2D torus if all corresponding Seitz symmetries exist), χ is symmetry-forced zero. This is an analytical candidate, not yet checked against all relevant prior literature or a microscopic Hamiltonian.",
     "current_methods_link": "docs/BD27_REGISTRY_TORUS_ZERO_INDEX_GATE_20261022.md",
-    "operator_parity_cross_family": "BD28, confirmed group algebra only; Kubo and novelty open"
+    "operator_parity_cross_family": "BD28, confirmed group algebra only; Kubo and novelty open",
+    "model_response_nonzero": "Pd2Te2 BiDB-id980 Te-p-only 24-band geometry-dependent SK+SOC toy, fixed-current Boltzmann, special-registry zeros and operator parity winding +1 vs -2. Unfitted, no real material prediction."
   },
   "material_screen": {
     "date": "2026-10-22",
