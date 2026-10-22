@@ -444,7 +444,7 @@
       "status": "OPEN_HYPOTHESIS",
       "scope_level": "S2",
       "contribution_type": "symmetry classification/theorem + material/model validation",
-      "status_detail": "DATABASE_RECORD_GATE_PASS; STRUCTURAL_C3_MV_MZ_PASS_FOR_PD2TE2_AND_PD2SE2; MAGNETIC_MSG_AND_ORBITAL_SOC_HAMILTONIAN_PENDING; KUBO_UNTESTED; NOVELTY_UNRESOLVED",
+      "status_detail": "TOY_MODEL_NONZERO_PASS_FOR_LAYER_ODD; COMPLETE_ORBITAL_SOC_AND_TR_SYMMETRY_AUDIT_PASS; FIXED_CURRENT_BOLTZMANN_PARITY_PASS; LAYER_ODD_MESH_CONVERGING; LAYER_EVEN_NOT_QUANTITATIVELY_CONVERGED; ACTUAL_MATERIAL_AND_NOVELTY_UNVERIFIED",
       "source": "docs/BD29_BIDB_DB_DIRECT_SCREEN_20261022.md",
       "candidate_ranking": [
         {
@@ -498,10 +498,10 @@
           "generic magnetic vdW materials"
         ]
       },
-      "smallest_falsifying_test": "Using user-supplied Pd2Te2 id980 structure, build spinful orbital-SOC Hamiltonian with correct real site permutation (including mz layer swap). Verify covariance and physically meaningful current-induced S_minus_z and S_plus_z susceptibilities for +/- registry perturbations, and compare same-level 2026 LEE SM. No DFT/HPC yet.",
+      "smallest_falsifying_test": "Reproduce the actual public GitHub model script locally, check lattice symmetrization; independently derive/fit Pd-d + Te-p hopping+SOC source and verify BZ mesh/gauge & full current-response; inspect 2026 LEE SM exact operator-resolved continuous-registry consequences before calling a new theorem. No DFT/HPC permission.",
       "compute_authorized": false,
       "no_dft_or_hpc": true,
-      "reason": "The complete 48 MB BiDB SQLite has been integrity-checked and queried by exact normalized elemental species. A new, better theory demonstrator was found: nonmagnetic metallic 8-atom Pd2Te2 id980, Stable p-6m2, verified C3/mv/pure layer-exchanging mz by 8/8 atom matching. Pd2Se2 id975 is a close negative/control. VSeTe rather than VTeS is first magnetic extension; original screening was superseded. No microscopic spin-current coefficient or material realizability has been demonstrated; Pd2Te2 monolayer has ehull=0.134 eV/atom.",
+      "reason": "BiDB id980 passes true C3/mv/mz site mapping and a new 24-band Te-p-only, geometry-based p-p SK+atomic SOC Boltzmann model yields NONZERO current-driven layer-odd out-of-plane Sz on sliding. Full H spatial and TR covariance errors <=6e-16; fixed-current chi_Sminus,jy(+0.1A)=-0.006506 at Nk24 model units, reversing under slide, vanishing with SOC off. Parameters are NOT fit, Pd d orbitals omitted, and the much smaller layer-even response is not well converged; this does not establish a real material prediction or independent originality. Direct LEE SM equation audit remains pending.",
       "first_theory_material": {
         "material": "Pd2Te2 bilayer",
         "bidb_id": 980,
@@ -548,6 +548,51 @@
         "first": "VSeTe: 8 Stable six-atom bilayers, FM between layers, p-3m1/p3m1 structures, none of tested structures shares pure mz",
         "second": "VTeS: 2 Stable six-atom FM, metallic p3m1 bilayers; no pure mz",
         "third": "AgVP2Se6: 17 Stable 20-atom bilayers (14 interlayer FM, 3 AFM), gap ~1.08-1.22eV"
+      },
+      "micro_model": {
+        "report": "docs/BD29_PD2TE2_TEP_SOC_MICROSCOPIC_RESPONSE_20261022.md",
+        "data": "data/BD29_PD2TE2_TEP_SOC_BOLTZMANN_20261022.csv",
+        "script": "Xin-Jiaqi/group-theory-operations-toolkit research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/pd2te2_te_p_soc_boltzmann_gate.py",
+        "source_structure": "BiDB id 980 Pd2Te2; real source sites; projected exact hex lattice deviation 0.002997 Angstrom; Pd d orbitals omitted",
+        "bands": 24,
+        "orbital_basis": "4 Te sites x 3 p x 2 spins",
+        "interlayer_hopping": "geometry-derived Slater-Koster p-p sigma/pi, scalar exp decay; all chosen values not material fitted",
+        "atomic_soc": "lambda L dot S at each Te; illustrative 0.48 eV",
+        "transport": "intraband constant-lifetime Boltzmann at fixed current using full 2x2 transport matrix, arbitrary normalized units",
+        "numeric_parameters": {
+          "ppsigma": 1,
+          "pppi": -0.23,
+          "decay_angstrom": 0.8,
+          "dref_angstrom": 3,
+          "cutoff_angstrom": 7.2,
+          "mu_eV": 1.5,
+          "T_eV": 0.13,
+          "soc_eV": 0.48
+        },
+        "symmetry_max_errors": {
+          "C3": 5.510060153776344e-16,
+          "mx": 1.583170018214027e-16,
+          "mz": 0,
+          "time_reversal_H": 0,
+          "time_reversal_velocities": 0
+        },
+        "layer_odd_at_ux_plus_0_1": {
+          "nk12": -0.006524786667901852,
+          "nk16": -0.00651131401579597,
+          "nk20": -0.006507385842779724,
+          "nk24": -0.006506043381258991
+        },
+        "layer_even_at_ux_plus_0_1": {
+          "nk12": -0.00008576951592456872,
+          "nk16": -0.00010197491668626212,
+          "nk20": -0.00011339527587272608,
+          "nk24": -0.00012010834217875543
+        },
+        "layer_odd_sign_under_u": "chi_minus(-u)=-chi_minus(+u), errors <1e-14",
+        "layer_even_parity_under_u": "chi_plus(-u)=chi_plus(+u), errors <1e-14; amplitude more mesh-sensitive",
+        "soc_off": "both spin channels numerically zero",
+        "actual_material_prediction": false,
+        "novelty_established": false
       }
     }
   ],
@@ -626,9 +671,10 @@
     "chosen_main": "Pd2Te2 id980 p-6m2 nonmagnetic metal 8 atoms; structural C3 mv mz site mapping verified",
     "chosen_control": "Pd2Se2 id975",
     "magnetic_extension": "VSeTe, then VTeS",
-    "remaining_blocker": "spinful orbital/SOC Hamiltonian and current-spin Kubo; no extra user files needed",
+    "remaining_blocker": "realistic source-fitted Pd/Te full orbital-SOC model and original LEE SM continuous-registry overlap; complete database access is RESOLVED",
     "report": "docs/BD29_BIDB_DB_DIRECT_SCREEN_20261022.md",
     "novelty_rule": "A prior material effect never by itself invalidates a later theory at S2/S3; exact general proposition must be compared",
-    "no_new_compute_authorized": true
+    "no_new_compute_authorized": true,
+    "model_toy_pass": "2026-10-22 Te-p-only SK SOC 24-band Boltzmann demonstrates symmetry-allowed nonzero current-driven layer-odd Sz, not actual Pd2Te2 material prediction"
   }
 }
