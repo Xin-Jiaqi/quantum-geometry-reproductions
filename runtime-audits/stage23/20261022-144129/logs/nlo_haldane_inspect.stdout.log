@@ -1,0 +1,69 @@
+{
+  "package": "<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic",
+  "structure": "L1",
+  "num_wann": 2,
+  "nocc_model": 1,
+  "dimensionality": 2,
+  "dimensionality_source": "package-manifest.json physics.dimensionality",
+  "default_kmesh": [
+    71,
+    71,
+    1
+  ],
+  "soc": false,
+  "soc_source": "package-manifest.json physics.soc",
+  "input_integrity": {
+    "hashes_verified": true,
+    "package_manifest_sha256": "76c4723aa1f673650dac51964a8c1066e5d578e4c88f98463d23bf3e41d1ac1a",
+    "required_files_sha256": {
+      "POSCAR": "3be5d48b15bd73f758ae5acbcabbee311abdab17c6161bbc4794698b0b875b2c",
+      "wannier90_hr.dat": "3fd3982f707ab1fc6e908fccf20762d672032d3ff85cc31fb7206b6e3e31c046",
+      "wannier90-wcenter.dat": "cff014d550894feda6e1f9d8e2c46c2228e220e9862752a7dc6a2a7bece31787",
+      "quality.json": "975b49a318c2edfa2f6ca95d46375f2c1e4fcab848b2bcb89d6a75946b567225"
+    }
+  },
+  "symmetry": {
+    "point_group": "-6",
+    "symmetry_tolerance_A": 0.01,
+    "symmetry_operations": 6,
+    "dimensionality": 2,
+    "tensor_rank": 3,
+    "intrinsic_last_index_symmetry": true,
+    "independent_count": 2,
+    "independent_representatives": [
+      "xxx",
+      "xyx"
+    ],
+    "allowed_nonzero_components": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "forbidden_zero_components": [
+      "xxz",
+      "xyz",
+      "xzx",
+      "xzy",
+      "xzz",
+      "yxz",
+      "yyz",
+      "yzx",
+      "yzy",
+      "yzz",
+      "zxx",
+      "zxy",
+      "zxz",
+      "zyx",
+      "zyy",
+      "zyz",
+      "zzx",
+      "zzy",
+      "zzz"
+    ]
+  }
+}

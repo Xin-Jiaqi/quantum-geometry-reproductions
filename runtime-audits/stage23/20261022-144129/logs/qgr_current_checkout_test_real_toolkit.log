@@ -1,0 +1,9 @@
+test_bn_partner_mirror_z (__main__.ActualToolkitTests.test_bn_partner_mirror_z) ... skipped 'Install group-theory-operations-toolkit v0.18.0'
+test_fractional_cartesian_distinction (__main__.ActualToolkitTests.test_fractional_cartesian_distinction) ... skipped 'Install group-theory-operations-toolkit v0.18.0'
+test_identity_and_expected_target_rejection (__main__.ActualToolkitTests.test_identity_and_expected_target_rejection) ... skipped 'Install group-theory-operations-toolkit v0.18.0'
+test_partner_mirror_involution (__main__.ActualToolkitTests.test_partner_mirror_involution) ... skipped 'Install group-theory-operations-toolkit v0.18.0'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK (skipped=4)
