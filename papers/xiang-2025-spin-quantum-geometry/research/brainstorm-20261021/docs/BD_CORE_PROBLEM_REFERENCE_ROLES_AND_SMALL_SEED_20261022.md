@@ -73,3 +73,15 @@ S_-^z(\mathbf u=0,\mathbf j_\parallel)=0,\qquad
 ## 五、科研管理上的明确纠偏
 
 Idea Registry 中 \`NO_GO_CLAIM\` 只否定**那一个宽泛具体 claim 的新颖性或正确性**，不是研究方向 NO_GO；含 \`BLOCKED_NOVELTY\` 也不等于“做不得”。“Intro/Background”“Potential Direct”“Confirmed Direct”根据驱动与观测协议重分类；只有文献**已经真正给出目标物理结果**，才能将该物理新意标明确 NO_GO。**把负结果留下来是为了防止自我重复，而不是阻止形成新的问题。**
+
+
+## 六、从用户已读的 LEE 文献得到一个更具体的低成本结构锚点
+
+这次还重查了用户随项目提供的 \`Layer Edelstein Effect.md\` 精读笔记中第 **18–20 节**。该笔记明确记录：
+- Janus **MoSSe 单层**：\(C_{3v}\)；允许面内 ordinary Edelstein；
+- 以相对取向算符 **\(O=m_z\)** 堆叠成的 MoSSe 双层：最终为 **\(D_{3h}\) 且 Type-I LEE**（这是**从已有精读笔记转述**，尚未提取原文 SM 的具体 source POSCAR/对应层映射）；
+- 对比 **MoTe₂ \(D_{3h}\)** 的 Type-II LEE：该论文已证明 **施加垂直 \(E_z\)** 可降到 \(C_{3v}\) 并激活面内 Edelstein，而我们此处问题是**面内相对滑移 \(u\)** 激活 layer-odd **out-of-plane** \(S_-^z\)。两者不能未经公式核对就认为相同，也不能轻率说互不相关。
+
+这使小种子有一个**文献同源的可能结构族**：先看作者已有 **MoSSe, \(O=m_z,D_{3h}\)** 的最小 bilayer 和 layer pseudospin/spin operators，检查是否真实保留 \(\{m_z,m_x,C_{3z}\}\) 并有定义良好的 \(\boldsymbol\delta\) 形变。**第一张响应曲线未必需要新材料，甚至可能直接通过原文 \(k\cdot p\) 补一项源合理的 \(\boldsymbol u\) 耦合得到。** 但是原文模型是否包含可以唯一导出的滑移顶点仍未查验；不允许为得到 \(\gamma\) 而凭空选择耦合项。且作者是否已在 SM 的 stacking 枚举中给出同一 \(\gamma\)，需要逐式比较。
+
+**进一步明确科学门槛：** \(D_{3h}\) 仅允许该 bilinear \(\gamma\)，不保证自旋轨道耦合模型给非零系数；即使非零，也不自动创造一个区别于 Zhou et al. PRL 的机制。按真实 \(\gamma=0\) 或 \(\gamma\neq0\) 结果推进 idea，别预设最终故事。
