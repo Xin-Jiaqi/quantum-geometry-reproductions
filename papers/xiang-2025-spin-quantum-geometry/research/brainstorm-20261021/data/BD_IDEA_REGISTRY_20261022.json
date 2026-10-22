@@ -22,7 +22,10 @@
       "reason": "PT representation forbids selected spinful interlayer terms",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD02",
@@ -31,7 +34,10 @@
       "reason": "Ward/exchange torque known; retain MODEL_PASS",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD03",
@@ -40,7 +46,10 @@
       "reason": "C3 prohibits axial z from in-plane uniform polar drive",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD04",
@@ -49,7 +58,10 @@
       "reason": "conjugate representations preserve rank and singular values",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD05",
@@ -58,7 +70,10 @@
       "reason": "Onsager swaps source/measurement operators",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD06",
@@ -67,7 +82,10 @@
       "reason": "strict parent maps conjugate stabilizers; no FE doublet",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD07",
@@ -76,7 +94,10 @@
       "reason": "2018-2026 multipole/local response precedents",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD08",
@@ -85,7 +106,10 @@
       "reason": "npj 2D Mater Appl 2025 Agarwal et al same observable",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD09",
@@ -94,7 +118,10 @@
       "reason": "PRB 101 041113(R) and related 2020 pump works",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD10",
@@ -103,7 +130,10 @@
       "reason": "2025 PRL 80 and 2026 SLG theory plus MPG/SOT",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD11",
@@ -112,7 +142,10 @@
       "reason": "two 2h Slurm timeouts; 0 ionic steps; SCF never converged",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S0",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD12",
@@ -121,7 +154,10 @@
       "reason": "requires true source-based FE pair and physical response/same-observable peer audit",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD13",
@@ -130,7 +166,10 @@
       "reason": "q mismatch; needs justified source of momentum",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD14",
@@ -139,7 +178,10 @@
       "reason": "overlap with 2025 shift-current vortices and polar meron experiments",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD15",
@@ -148,7 +190,10 @@
       "reason": "Nature Commun 2024 local Edelstein torque, PRX 2025 local ME surface",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD16",
@@ -157,7 +202,10 @@
       "reason": "PRB 114 154414 (2026) already connects topology and spin ME multipolization",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S3",
+      "contribution_type": "symmetry classification/theorem",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD17",
@@ -166,7 +214,10 @@
       "reason": "PRL 135 046201 (2025) emphasizes wavelike domain-wall motion and invalidity of generic coherent rigid switching",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD18",
@@ -175,7 +226,10 @@
       "reason": "PRL 136 016702 (2026) demonstrates electric-field magnetic torque without SOC",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD19",
@@ -184,7 +238,10 @@
       "reason": "PRB 113 195431 (2026) gives FE-switchable AHE magnetic-space-group criteria",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD20",
@@ -193,7 +250,10 @@
       "reason": "Needs source-backed wall profile, real magnetic site modes, physical time protocol and same-observable PRL/PRX competitor test",
       "source": "docs/BD_IDEA_ELIMINATION_GATES_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD21",
@@ -202,7 +262,10 @@
       "reason": "Nasir/Atkinson PRB 113 035425 (2026) already studies conducting FE-wall Ising/Rashba spin texture and Edelstein (different material)",
       "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD22",
@@ -211,7 +274,10 @@
       "reason": "Dong et al pss RRL 2024 bilayer CrI3 current-induced spin and orbital polarization vs FE registry",
       "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD23",
@@ -220,7 +286,10 @@
       "reason": "Yarmohammadi et al PRB 113 184403 (2026) phonon control of Rashba altermagnetic Edelstein; Nature Physics 2026 coherent sliding motion",
       "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S1",
+      "contribution_type": "microscopic mechanism",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD24",
@@ -229,7 +298,10 @@
       "reason": "Ordinary Hom(U tensor E,O) is standard tensor product; need actual layer-exchanging Seitz operation, peer equation, causal response and a distinct observable",
       "source": "docs/BD_G3_DOMAIN_DFT_COST_AND_REGISTRY_GRADIENT_20261022.md",
       "historical_code_preserved": true,
-      "material_claim_verified": false
+      "material_claim_verified": false,
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD25",
@@ -246,7 +318,10 @@
         "material_response": "NOT_COMPUTED",
         "novelty": "UNRESOLVED"
       },
-      "compute_authorized": false
+      "compute_authorized": false,
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD26",
@@ -256,19 +331,25 @@
       "source": "docs/BD25_LEE_MODEL_AUDIT_20261022.md",
       "historical_code_preserved": true,
       "material_claim_verified": false,
-      "literature_role_for_BD25": "INTRODUCTION_STRONG_NEIGHBOR_NOT_CONFIRMED_DIRECT"
+      "literature_role_for_BD25": "INTRODUCTION_STRONG_NEIGHBOR_NOT_CONFIRMED_DIRECT",
+      "scope_level": "S1",
+      "contribution_type": "phenomenon/material prediction",
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes."
     },
     {
       "id": "BD27",
-      "claim": "A general symmetry-covariant theory of layer-resolved response fields over stacking configuration space yields nontrivial global registry constraints beyond local Neumann selection rules",
+      "claim": "A general symmetry-covariant theory of layer-resolved response fields over stacking configuration space yields nontrivial global registry constraints, including enforced response zeros and leading activation orders, beyond local Neumann selection rules",
       "status": "OPEN_HYPOTHESIS",
-      "reason": "Potential S2-S3 generalization; the bare covariance and Hom-space formula are standard and not novelty. Needs exact comparison with LEE SM and a nontrivial enforced zero/sign/leading-order result.",
+      "reason": "Candidate S2-S3 generalization. The bare covariance and Hom-space formula are standard, not novelty. A concrete candidate corollary is an oddness relation under a layer-swapping Seitz operation, enforcing zeros at registry-space fixed points (2δ in the Bravais lattice) and forbidding even Taylor orders. Must verify each Seitz operation, audit LEE SM/configuration-space literature, and find a nontrivial consequence beyond standard covariance.",
       "source": "docs/BD_THEORY_LEVELS_AND_STACKING_RESPONSE_FIELD_20261022.md",
       "historical_code_preserved": true,
       "material_claim_verified": false,
       "scope_level": "S2_to_S3",
       "contribution_type": "symmetry classification/theorem",
-      "compute_authorized": false
+      "compute_authorized": false,
+      "scope_assignment_note": "Retrospective working classification from the registered claim wording; refine if the exact proposition changes.",
+      "first_worked_consequence": "For a layer-odd S_z response driven by in-plane current, a layer-swapping horizontal-mirror Seitz operation maps registry δ to -δ and gives χ(-δ)=-χ(δ). At registry fixed points δ≡-δ mod Λ (four points on a primitive 2D torus if all corresponding Seitz symmetries exist), χ is symmetry-forced zero. This is an analytical candidate, not yet checked against all relevant prior literature or a microscopic Hamiltonian.",
+      "smallest_falsifying_test": "Verify the actual layer-swapping Seitz symmetry at each registry, derive the operator/source signs, and compare the exact zero-set/activation-order claim against the 2026 LEE SM and configuration-space stacking literature."
     }
   ],
   "novelty_decision_scope": "Every NO_GO_CLAIM applies ONLY to the precisely recorded general claim, never the entire research direction. Literature role (direct vs introduction) is relative to a specified source/observable/protocol claim and cannot be assigned globally by keyword similarity.",
@@ -325,9 +406,10 @@
     "contribution_type": "symmetry classification/theorem",
     "claim": "For a fixed drive, observable and causal response protocol, classify the lowest symmetry-allowed registry-derivative order and any globally enforced zeros/sign/parity relations of layer-resolved response fields across symmetry-related stacking registries, including actual layer permutations and antiunitary operations.",
     "baseline_not_novel": "The covariance equation K(g·δ,ω)=D_O(g)K(δ,ω)D_J(g)^-1 and local Hom_H(Sym^n U*⊗V_J,V_O) constraint are standard; they alone are not a new theorem.",
-    "possible_contribution": "A nontrivial globally constrained response texture or a validated general classification that is not already implied by the 2026 LEE 80-layer-group static stacking table or other published work.",
+    "possible_contribution": "A nontrivial globally constrained response texture, symmetry-enforced registry zero set, or validated general classification not already implied by the 2026 LEE 80-layer-group static stacking table or other published work.",
     "closest_prior": "2026 Layer Edelstein Effect PRL and its SM (equation-level comparison pending); stacking-ferroelectricity/configuration-space theories are foundational prior art, not automatic pre-emption.",
-    "smallest_falsifying_test": "Audit LEE SM scope, then derive response-field covariance for one layer-swapping symmetry orbit and one explicit response; test whether any result goes beyond ordinary tensor-product selection.",
-    "compute_authorized": false
+    "smallest_falsifying_test": "Verify the actual layer-swapping Seitz symmetry at each registry, derive the operator/source signs, and compare the exact zero-set/activation-order claim against the 2026 LEE SM and configuration-space stacking literature.",
+    "compute_authorized": false,
+    "first_concrete_corollary": "For a layer-odd S_z response driven by in-plane current, a layer-swapping horizontal-mirror Seitz operation maps registry δ to -δ and gives χ(-δ)=-χ(δ). At registry fixed points δ≡-δ mod Λ (four points on a primitive 2D torus if all corresponding Seitz symmetries exist), χ is symmetry-forced zero. This is an analytical candidate, not yet checked against all relevant prior literature or a microscopic Hamiltonian."
   }
 }
