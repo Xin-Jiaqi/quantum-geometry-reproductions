@@ -79,3 +79,12 @@ A plausible next model is **aligned bilayer MoS\(_2\) in the high-symmetry AA re
 - The 2020 SK model alone is not enough: its published implementation does not establish the desired spin response. Before any full \(k\)-mesh, first verify (i) the AA coordinate-level \(m_z\), (ii) the spinful SOC Hamiltonian, (iii) the finite-difference derivative of the **actual** interlayer hopping under \(u\), and (iv) that the model gives the correct spin-split monolayer/bilayer bands.
 
 **Proposed next action:** build only the real-space hopping/structure unit test for two unrelaxed aligned layers at \(u=0,\pm\delta\), and confirm the layer-swap covariance \(H(u)=U_{m_z}H(-u)U_{m_z}^{-1}\). No spin-response integration until this passes. This is a source-backed path to \(\partial_uH\), unlike adding a free \(\tau_z\sigma_z(\mathbf u\times\mathbf k)_z\) term. It remains a moderate implementation task and has **not** been coded or run yet.
+
+
+### 5.1 Geometry gate now implemented and run
+
+The next tiny gate has been completed in [\`aa_mos2_registry_geometry_gate.py\`](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/blob/research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/aa_mos2_registry_geometry_gate.py), using the source geometry above: two unrelaxed aligned AA layers, Mo–Mo separation \(6.80\) Å, lattice constant \(3.18\) Å, S height \(\pm0.49115a\), and the explicit internal S-upper/S-lower swap under \(m_z\).
+
+**Local test result:** 450 atom-pair/lattice-translation comparisons for two nonzero displacements passed \(d_{ab}(\mathbf u)=d_{\bar b,\bar a}(-\mathbf u)\), with maximum absolute distance mismatch \(1.776\times10^{-15}\) Å. The interfacial S–S plane spacing is \(3.6763\) Å, consistent with the source model's tabulated \(3.676\) Å. The initial test exposed a code bug in the species-label assertion (the two chalcogen planes are the same chemical species); this was corrected before the passing run.
+
+This is only the **geometric covariance prerequisite**. It does not prove the electronic hopping matrix covariance, because orbital parity/rotation matrices and the Slater–Koster angular factors have not yet been implemented. Next step: implement one spin-independent SK hopping block and verify the full matrix relation \(H(\mathbf u)=U_{m_z}H(-\mathbf u)U_{m_z}^{-1}\) before adding SOC or calculating response.
