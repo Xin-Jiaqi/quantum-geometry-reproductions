@@ -92,3 +92,14 @@
 - 不要反过来把已发表的**同一核心效应**重命名成新机制。仍须诚实进行文献比对，但不能无限扩大泛泛文献搜索来替代自己的第一次实质计算。
 
 新的 [\`BD25\` 小种子](../data/BD_IDEA_REGISTRY_20261022.json) 仅是一个对称性验证：理想 \(C_{3z}+m_x+m_z\) 的电流诱导层反向 \(S^z\) 在高对称零滑移时禁戒、一阶 \(u_xj_y-u_yj_x\) 被允许。**非平衡 Kubo 系数未算，真实结构未证，LEE PRL 最接近，原创性未知。** 下一个物理结果应是一条明确定义的 \(\chi(u)\) 曲线，而不是新的 528 群分类表。
+
+
+## 2026-10-22 correction: prior art must be compared at the same abstraction level
+
+The user emphasized that a concrete sliding-ferroelectricity realization does not by itself pre-empt a later general theory of bilayer stacking ferroelectricity, and a concrete ferroic phase does not by itself pre-empt a general Neumann-principle result. This is now a required gate, not a stylistic preference.
+
+Use the two-axis framework in [BD_THEORY_LEVELS_AND_STACKING_RESPONSE_FIELD_20261022.md](BD_THEORY_LEVELS_AND_STACKING_RESPONSE_FIELD_20261022.md): scope S0 realization / S1 mechanism / S2 family classification / S3 general principle, and contribution type. **A paper pre-empts only the exact proposition at the same scope or a broader proposition that logically implies it.** Shared phenomenon and related materials may be essential Introduction or foundational context while still motivating a new higher-level theory.
+
+For a candidate general theory, identify what is actually new beyond the examples: a theorem, complete class-wide conditions, globally enforced zeros/relations, a counterexample, or a prediction unavailable from individual cases. The ordinary covariance equation and tensor-product Neumann selection alone are standard and cannot be sold as a new principle.
+
+A model-specific exact zero is tagged as a limitation of that Hamiltonian/protocol, not as a direction-wide NO_GO. The idea registry now includes scope and contribution type for all 27 historical/current claims; legacy assignments are working labels and should be revised if the proposition changes.
