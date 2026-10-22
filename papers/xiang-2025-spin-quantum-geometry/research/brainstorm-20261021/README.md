@@ -192,3 +192,10 @@ New direct competitors include the [2026 complete spin-layer-group corepresentat
 
 
 **Source-backed next model candidate:** the [BD25 model audit](docs/BD25_LEE_MODEL_AUDIT_20261022.md) now identifies the 2020 MoS\(_2\) Slater–Koster tight-binding model as a possible source for registry-dependent interlayer hopping, with a separately sourced SOC extension. It has **not** been implemented; next is only a two-layer \(u=0,\pm\delta\) Hamiltonian covariance test. The generic claim “sliding tunes Edelstein response” is pre-empted by PRB 114, 125129 (2026) and magnetic CrI\(_3\) sliding work, but the narrower nonmagnetic layer-odd \(S_z\) derivative is not yet shown to be identical. Registry updated to 26 claim-specific entries.
+
+
+## 2026-10-22 research correction: examples do not pre-empt a general theory
+
+[**Abstraction-level prior-art policy and a candidate stacking-response-field theory**](docs/BD_THEORY_LEVELS_AND_STACKING_RESPONSE_FIELD_20261022.md). Prior work is assessed along two axes: scope (S0 realization, S1 mechanism, S2 family classification, S3 general principle) and contribution type. A concrete sliding-ferroelectricity or specific ferroic-order paper can be foundational evidence for a later general theory without pre-empting it; only an exact proposition at the same scope or a broader theorem that implies it pre-empts the general claim.
+
+**New S2–S3 hypothesis BD27:** treat a specified layer-resolved response as a field over the stacking-registry torus. Under a layer-swapping horizontal-mirror Seitz operation, a layer-odd \(S_z\) response to in-plane current obeys \(\chi(-\delta)=-\chi(\delta)\). Candidate corollary: response zeros at fixed registries \(2\delta\in\Lambda\) and no even local Taylor orders. This follows from standard covariance and is **not yet a novel theorem**; exact LEE SM / configuration-space prior-art comparison and verification of each actual Seitz operation are required. The [27-entry registry](data/BD_IDEA_REGISTRY_20261022.json) now records scope level and contribution type.
