@@ -164,3 +164,21 @@ The [\`layer_parity_activation_gate.py\`](https://github.com/Xin-Jiaqi/group-the
 This is a **conditional symmetry table for two clearly defined idealized families**, not a survey of every hexagonal/square layer group. For a real material one must independently confirm that the operations genuinely map its orbitals, layers, magnetic order and current/measurement protocol. More complex source/output tensors and antiunitary operations can change the table.
 
 **Scientific question sharpened:** can the operator-dependent *activation order, zeros and allowed winding indices* be organized as a systematic response classification over the 80 stacking families, and is there a rigorous, measurable prediction beyond the 2023 BSF + 2026 LEE symmetry frameworks? The group-theoretic constraints above are **correct as consequences of assumed symmetry**, but novelty remains **OPEN** and microscopic response remains **UNVERIFIED**.
+
+
+## 9. Source-level conceptual distinction from the 2026 LEE main text
+
+The accessible [LEE arXiv main text, around Eqs. (1)–(4), bilayer symmetry rules, and Table I](https://arxiv.org/html/2607.17209) explicitly states that **for the allowed components of a uniform tensor in one fixed bilayer**, a layer-group operation \((R|\tau)\) imposes the same tensor constraint as its point operation \((R|0)\); its 80-LG classification uses stacking cosets to determine each bilayer point group. Its realistic examples emphasize electric-field-controlled layer spin and Type-I/Type-II mechanisms. The LEE SM's Sec. III and stacking tables are referenced there, but **they have NOT yet been verified equation-by-equation for a continuous registry-field or a zero/index classification**.
+
+A possible conceptual distinction is therefore **one more variable, not one more effect name**:
+
+\[
+\text{one fixed registry:}\quad H_\delta\ \curvearrowright\ K(\delta)
+\quad\text{vs}\quad
+\text{whole registry family:}\quad G\ \curvearrowright\
+\{K(\delta)\}_{\delta\in\mathcal T^2}.
+\]
+
+A fractional translation may be irrelevant to a **uniform tensor's allowed component at a specified \(\delta\)** while remaining essential to the **mapping \(\delta\mapsto g\delta\)**, the fixed-point orbits, and the order/topology of an entire response field. This distinction is **mathematically standard in equivariant theory** and cannot yet be claimed as absent from BSF or LEE Supplemental Material. But it is a more precise target for a general paper than “the first stacking-tunable Edelstein effect,” which is already occupied.
+
+**Next physics figure to seek:** paired maps \(\mathbf F_-(\delta)\) and \(\mathbf F_+(\delta)\) in one source-validated bilayer Hamiltonian, with symmetry-enforced zero markers, winding indices and experimental current-to-spin readout. Real \(\gamma,\beta\), fixed-current conversion, and material validity must be computed; an arbitrary Fourier witness does not count.
