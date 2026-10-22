@@ -199,3 +199,15 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Original Xiang nonlinear orbital E*B transport, conserving Kubo-Streda, bath and thermodynamic limit | NOT calculated by equilibrium Maxwell derivative; SM Eq49/52 and sign/3-band issues remain | **UNRESOLVED; source paper PARTIAL** |
 
 40 new independently checked v65 physics tests; stand-alone v60-v65 baseline 177 tests. [Scientific details](STATIC_ORBITAL_EB_MAXWELL_V65.md).
+
+## v66: projected orbital mixed E/B at finite frequency, conditional gamma bath
+
+| Mathematical/physical sector | Independent science evidence | Status |
+| --- | --- | --- |
+| Full projected positions Pa(B), Pb(B) and explicit electric current contact -i[Pb,Pa] | Supplied noncommuting orbital dipoles, fixed B Peierls finite graph, electric perturbation H-E Pb; omissions fail static gamma→0 equilibrium current | **VERIFIED named finite projection** |
+| Complete analytic magnetic derivative of AC response | Seven named terms: magnetic current H, current dPa, drive dPb, equilibrium Fermi, magnetic Liouvillian, electric-current contact dB, electric-current contact rhoB | **VERIFIED symbolic/matrix finite-model identities** |
+| Magnetic/orbital frame covariance | Symmetric, Landau and noncommuting U(B)=exp(iBK) give identical complete complex response; 5-point full B differences error ~1e-12; independent interband eigenbasis response | **VERIFIED specified AC model** |
+| Independent finite E+B dc superoperator current | Dense nonlinear finite-E Liouvillian solved directly, 4-corner mixed E/B finite differences, 3 frames agree with analytic omega=0 gamma model to <2e-9; spinless TR reciprocity | **VERIFIED same phenomenological model, NOT conserving microscopic oracle** |
+| Original full Xiang orbital E/B transport | No conserving bath, complete Kubo-Streda, infinite-system limit, realistic magnetic Wannier embedding or source-equation resolution | **UNRESOLVED; paper audit PARTIAL** |
+
+40 new v66 science gates plus one numerical frozen-regeneration test (total standalone v60-v66 219). See [scientific v66 report](DYNAMIC_ORBITAL_EB_SEVEN_CONTACT_V66.md). The frozen GitHub JSON is acceptance-compared *numerically* across supported Python/JSON serializers; no unverified byte-identical claim.
