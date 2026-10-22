@@ -96,3 +96,23 @@ Layer-odd changes about 0.08% between 16×16 and 24×24. The small layer-even nu
 ## Interlayer hopping off negative control
 
 The local 24-band implementation was re-evaluated after deleting every Te p-p bond between the upper and lower layers, retaining atomic SOC and intralayer hopping. At ux=+0.10 Angstrom, the current-induced layer-odd Sz/jy coefficient falls from -0.006582671 (8x8) to 4.21e-16, and from -0.006524787 (12x12) to 1.07e-16. The layer-even spin signal also falls below 1e-15. Hence the model's nonzero response requires both atomic SOC and interlayer hybridization. This is a model-level control, not an original physical mechanism. The research-branch code now includes an explicit decoupled-layer test.
+
+
+## Six source-geometry registry sites: a global operator-parity model test
+
+The same 24-band Te-p-only SOC Hamiltonian was evaluated at the six fractional registries G=(0,0), A=(1/2,0), B=(0,1/2), C=(1/2,1/2), M=(1/3,2/3), N=(2/3,1/3), with the *same* fixed-current Boltzmann protocol, k-grid 16×16, mu=1.5 eV and SOC=0.48 eV (all toy parameters). These are **rigid-shift locations**, NOT six validated stable material structures.
+
+| Point | Layer-odd Sz response norm | Layer-even Sz/current vector (model units) |
+|---|---:|---:|
+| G | 1.36e-17 | (0, 0) |
+| A | 7.10e-17 | (-0.006066491, 0) |
+| B | 2.40e-16 | (+0.003033245, -0.005253735) |
+| C | 1.67e-16 | (+0.003033245, +0.005253735) |
+| M | 8.02e-17 | (0, 0) |
+| N | 4.90e-17 | (0, 0) |
+
+Thus **all six expected layer-odd zeros** are explicitly reproduced by one spinful Hamiltonian, and the **layer-even channel is zero at G/M/N but nonzero at A/B/C**. The three nonzero even response vectors have equal magnitude 0.00606649 and are related by 120-degree rotation. This is much more informative than one isolated stack's tensor table: changing only the layer-parity of the output operator changes the zero set across the *same configuration space*. Note that A/B/C even response is much larger than the weak even response near G, whose numerical coefficient is not fully converged.
+
+[Six computed points CSV](../data/BD29_PD2TE2_REGISTRY_6_POINTS_20261022.csv). This is a **conditional symmetry prediction realized in an unfitted structural toy**, not a new topological theorem, ab initio material signal, demonstrated ferroelectric switching, or six experimental measurements.
+
+**Immediate theoretical discriminator:** derive the minimal symmetry information needed to predict these *two distinct global zero sets* without numerically generating all six rigid structures, then check whether the 2026 LEE Supplemental Material and 2023 BSF theory already contain the operator-resolved response-field rule. A single example in another observable does not by itself pre-empt an S2/S3 generalization, but an existing theorem that entails precisely these signs and zeros would.
