@@ -255,3 +255,8 @@ A genuine **computed microscopic response** contour of radius 0.125 Angstrom aro
 The source-geometry Te-p toy script was independently rerun against the full user-supplied BiDB. Six registry zero patterns and the baseline contour result reproduce. However, a new stress test shows the **finite-radius layer-even winding is parameter-dependent**: at \(r=0.125\) Å, \(\mu=1.5\) eV, \(\lambda_{\rm SOC}=0.72\) eV, its index changes to +4 (Nk=8 and 12), while smaller \(r=0.02\)–0.05 Å scans retain the conditional local −2 index. Do not claim a universal global −2. [Raw parameter scan](data/BD30_PD2TE2_CONTOUR_PARAMETER_SCAN_20261022.csv). The layer-odd +1 remains stable in the nine tested \(\mu,\lambda\) pairs.
 
 **Next:** obtain the submitted sliding-REE companion; formalize only a conditional local operator-parity index theorem; then replace band-diagonal Boltzmann with a gauge-covariant response and source-grounded Pd-d + Te-p Hamiltonian. No DFT/HPC authorized.
+
+
+## 2026-10-22 BD31: conditional local equivariant rule (not a new theorem by itself)
+
+[**BD31 local response-field derivation**](docs/BD31_LOCAL_EQUIVARIANT_RESPONSE_FIELD_RULE_20261022.md) formalizes the \(D_{3h}\)-type local laws with \(z=u_x+i u_y\): \(F_-(z)=i\gamma z+O(|z|^3)\) and \(F_+(z)=\beta\bar z^2+O(|z|^4)\). If \(\gamma,\beta\ne0\), local indices are +1 and −2. Symmetry permits but does not force those coefficients to be nonzero; finite-radius winding can differ if extra zeros are enclosed. The same note gives a general stabilizer fixed-subspace test for forced zeros at G/A/B/C/M/N. This is a useful formal statement but not novelty by itself; the same-group submitted sliding-REE companion must be checked before claiming a continuous-registry theory.
