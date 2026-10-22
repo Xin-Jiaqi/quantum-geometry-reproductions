@@ -116,3 +116,24 @@ Thus **all six expected layer-odd zeros** are explicitly reproduced by one spinf
 [Six computed points CSV](../data/BD29_PD2TE2_REGISTRY_6_POINTS_20261022.csv). This is a **conditional symmetry prediction realized in an unfitted structural toy**, not a new topological theorem, ab initio material signal, demonstrated ferroelectric switching, or six experimental measurements.
 
 **Immediate theoretical discriminator:** derive the minimal symmetry information needed to predict these *two distinct global zero sets* without numerically generating all six rigid structures, then check whether the 2026 LEE Supplemental Material and 2023 BSF theory already contain the operator-resolved response-field rule. A single example in another observable does not by itself pre-empt an S2/S3 generalization, but an existing theorem that entails precisely these signs and zeros would.
+
+
+## Microscopic response contour winding, not merely a Fourier witness
+
+The same **geometry-derived 24-band SK plus atomic SOC Boltzmann model**, fixed-current protocol and chemical potential was evaluated on a closed path around the high-symmetry G registry:
+\[
+\mathbf u(\theta)=0.125\,\mathrm{\AA}\,(\cos\theta,\sin\theta),\quad 0\le\theta<2\pi.
+\]
+With full sixfold C3v-orbit k quadrature, the planar current-response vector's phase \(\arg(\chi_{\pm,j_x}+i\chi_{\pm,j_y})\) winds, in the locally run model, by
+\[
+w_- = +1,\qquad w_+ = -2.
+\]
+
+**Independent calculation details:**
+- 12×12 grid and 12 angular steps (30 degrees) give odd \(+1\), even \(-2\). Smallest sampled response norms are **0.0081026** (odd) and **5.27e−5** (even) in arbitrary normalized toy units.
+- A repeated scan on 16×16 with the same 12 angular steps gives the same **+1 and −2 integer indices**. Minimum sampled norms are **0.00808505** (odd) and **8.0542e−5** (even). All 12 computed angles are archived; the final 360-degree point is an exact periodic repeat of 0 degrees.
+- Representative 20×20 angle 0 and 30 degree checks preserve nonzero magnitudes of the weaker even channel (at 30 degrees approximately 9.47e−5 versus 8.05e−5 at 16×16), although the even coefficient is **not quantitatively k-converged**.
+
+[Computed 12-angle contour vectors](../data/BD29_PD2TE2_CIRCLE_WINDING_20261022.csv) support direct recalculation of the winding; the vectors are rounded for archival readability, not simulated Fourier data.
+
+**Interpretation:** The group-predicted index split for layer-odd versus layer-even Sz/current is now realized not only in an artificial Fourier witness but also in a real-BiDB-geometry-based spinful hopping Hamiltonian, with nonzero current response and a consistent control protocol. This is a **microscopic model validation** of an operator-dependent stacking response topology. It is **not** a statement that actual Pd2Te2 has either winding index experimentally: Pd-d bands were entirely omitted, parameters/µ were illustrative, and no physically calibrated lifetime/doping/strain path is known. It is also **not yet an original general theorem**: the exact abstract spin response-field zero/index claim still needs a scope-matched comparison with 2026 LEE Supplemental Material and the 2023 BSF stacking theory. The index is only topologically stable so long as the response remains nonzero along the chosen loop and the assumed continuous-band Boltzmann limit is valid.
