@@ -38,3 +38,14 @@ GitHub reproducibility engineering ~90–95% (v71 PR, main CI and portable archi
 Paths: src/qgmap/source_observable_bridge_v71.py, tests/test_source_observable_bridge_v71.py, tests/test_source_observable_bridge_v71_frozen.py, scripts/reproduce_v71.py, results/frozen/v71_source_observable_bridge.json, docs/SOURCE_OBSERVABLE_BOUNDARY_AND_WANNIER_GATE_V71.md. Frozen source PDF original hashes are pinned in v49; copyrighted PDFs are not redistributed.
 
 **GitHub release proof:** append exact PR number, final HEAD, PR CI, merge SHA and post-merge main CI after verified; do not invent results.
+
+
+## v71 final GitHub release certification (2026-10-22)
+
+- [PR #79](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/79) **squash merged** as `e946d841cdb32c849a66f401a853767895f0e9b7`; final PR HEAD `7d8540be79fec5f3995d47f81c07475b4e6265e4`.
+- Final PR-head [Actions 39757723955](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39757723955): **969/969 PASS**, `Ran 969 tests in 154.511s`, completed/success, original source scientific status explicitly `PARTIAL`.
+- Independent merged **main** [Actions 39758266016](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39758266016): **969/969 PASS**, `Ran 969 tests in 198.909s`, completed/success on exact merge SHA `e946d841cdb32c849a66f401a853767895f0e9b7`, original source `PARTIAL`.
+- 42 v71 scientific checks plus 1 independently reconstructed frozen-value gate; independent local and fresh-extracted **43/43 PASS**. Earlier v60–v68 standalone baseline **306/306 PASS** in a bounded batch and v70 independent standalone 10/10 PASS. A single local all-versions combined run exceeded its execution cap, so **do not claim local 100% suite PASS**; GitHub complete 969/969 core suite is the release authority.
+- Standalone archive (after certification regeneration): 96 files, 95/95 SHA256 verified; v71 physical source/test/reproduce/frozen-test Git blob SHA matched independently tested local versions; GitHub frozen JSON has same numeric values but different ordering/serialization.
+- **VERIFIED** bounded finite closed-system J_full=J_dev+J_contact, isothermal cancellation and optical polarization Ward, plus source-authentic SM Eq20/31 signed index contraction and main/SM spin helicity. **CONDITIONAL** finite supplied Peierls/position system. **UNRESOLVED** physical bulk PHE/orbital MNHE response map, full magnetic Wannier embedding, original source orbital factor/3band and SI concerns; original Xiang PRB remains **PARTIAL**.
+- Final release-documentation-only commits after merged CI modify no source code or tests.
