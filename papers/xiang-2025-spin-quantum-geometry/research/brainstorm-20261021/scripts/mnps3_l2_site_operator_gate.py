@@ -43,6 +43,12 @@ def _validate(data, require_source=True):
             ids.append(site["id"])
         if len(set(ids))!=4 or sorted(s["layer"] for s in sites)!=["B","B","T","T"]:
             raise ValueError(label+" duplicated IDs or non-two-plus-two layer counts")
+        for layer in ("T","B"):
+            local=[site for site in sites if site["layer"]==layer]
+            if sorted(s["sublattice"] for s in local)!=["A","B"]:
+                raise ValueError(label+" requires A/B Mn labels in each honeycomb layer")
+            if sum(s["eta"] for s in local)!=0:
+                raise ValueError(label+" requires the source-claimed intralayer Neel ordering")
     for i,j in enumerate(mapping):
         a,b=plus[i],minus[j]
         if a["layer"] == b["layer"]:
