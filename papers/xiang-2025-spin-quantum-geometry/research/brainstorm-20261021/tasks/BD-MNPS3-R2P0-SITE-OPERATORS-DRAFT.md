@@ -1,3 +1,5 @@
+> **SUPERSEDED AS A PLAN (2026-10-22):** User approved the read-only science review. The executable instruction is now [BD-MNPS3-L2-R2P0-READONLY.md](BD-MNPS3-L2-R2P0-READONLY.md), indexed from [CURRENT.md](CURRENT.md). **Zero compute submission authority.** This older draft is preserved as history.
+
 # DRAFT R2-P0 | MnPS3 L2 site-resolved Néel operator and SCF failure audit
 
 **Prepared:** 2026-10-22. **Status: READ-ONLY SCIENTIFIC PLAN / NO DFT SUBMISSION PERMITTED.**  
