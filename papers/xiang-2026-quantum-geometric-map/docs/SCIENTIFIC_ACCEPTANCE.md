@@ -289,3 +289,16 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Original source spin PHE and orbital MNHE | Selected eta_a adiabatic pole, both E/B orderings, q/omega/eta to dc, magnetic moment and intercell Wannier position, transport-magnetization subtraction and SM disputed equations not implemented | **UNRESOLVED; original source PARTIAL** |
 
 37 independently motivated physics checks plus one frozen numeric provenance gate. [Full report](BULK_FINITE_Q_SPIN_ZEEMAN_V72.md).
+
+
+## v73: two-color spin finite-q Ward vs static-equilibrated B distinction
+
+| Gate | Evidence | Scope |
+| --- | --- | --- |
+| Both E/B time orderings, two complex input poles | Explicit BE and EB Liouvillian paths at finite q; omegaSigma+i etaSigma output; spectral pair-sum vs independent 4x4 Sylvester | **VERIFIED stated spin finite-q model** |
+| Magnetic/electric charge Ward + orbital frame | Periodic exact q-longitudinal current and k→k+q density overlap; source-integrated cancellation; nontrivial k-dependent gauge | **VERIFIED stated model** |
+| Equilibrated static B versus collisionless dynamic omegaB=0 | Without diagonal f'Z_nn, mismatch to independently analytic v72 dB ~0.03154; with separated static population, errors 2.25e-4→2.25e-6 as etaB 1e-3→1e-5 | **VERIFIED distinct protocols; not source bath** |
+| Source Eq15 selected electric etaE pole | Finite q scalar-potential eta scan does not establish homogeneous selected tau coefficient | **UNRESOLVED** |
+| Original spin PHE / orbital MNHE, physical SI | Source Eq20/31 spin index/helicity, orbital Eq49/52 and 3-band, full Wannier B shift, magnetization/transport and Fig2 | **UNRESOLVED; original source PARTIAL** |
+
+45 physical gates and independent full frozen-numeric regeneration gate. See [v73 report](TWO_COLOR_FINITE_Q_SPIN_PREPARATION_V73.md).
