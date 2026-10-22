@@ -8,7 +8,7 @@ import numpy as np
 from flux_lab.hexagonal_bz import hexagonal_bz_response
 from flux_lab.group_microscopic import project_frequency_tensor
 
-ORDERS=(2,3,4,5,6,8,10,12,16)
+ORDERS=(2,3,4,5,6,8,10,12,16,20,24)
 GROUPS=("6","6m'm'")
 
 def maxabs(x):
@@ -33,8 +33,8 @@ def run():
                 "nodes":len(d["weights"]),
                 "max_even":maxabs(d["even"]),
                 "max_odd":maxabs(d["odd"]),
-                "even_delta_vs_order16":maxabs(d["even"]-ref["even"]),
-                "odd_delta_vs_order16":maxabs(d["odd"]-ref["odd"]),
+                "even_delta_vs_order24":maxabs(d["even"]-ref["even"]),
+                "odd_delta_vs_order24":maxabs(d["odd"]-ref["odd"]),
                 "even_projector_residual":maxabs(d["even"]-project_frequency_tensor(group,d["even"],"even")),
                 "odd_projector_residual":maxabs(d["odd"]-project_frequency_tensor(group,d["odd"],"odd")),
                 "even":serial_matrix(d["even"]),
@@ -42,11 +42,11 @@ def run():
             })
         output[group]=rows
     return {
-        "schema":"cui-flux-round18-hexagonal-bz-convergence-v2",
+        "schema":"cui-flux-round18-hexagonal-bz-convergence-v3",
         "model":"synthetic periodic triangular reciprocal model",
         "frequency":[.071,.004],
         "orders":list(ORDERS),
-        "interpretation":"order-16 is a numerical reference only; no real-material or SI claim",
+        "interpretation":"order-24 is a numerical reference only; no real-material or SI claim",
         "groups":output
     }
 
