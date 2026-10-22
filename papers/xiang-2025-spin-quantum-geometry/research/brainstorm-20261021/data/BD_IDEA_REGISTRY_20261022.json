@@ -502,7 +502,7 @@
       "smallest_falsifying_test": "Reproduce the actual public GitHub model script locally, check lattice symmetrization; independently derive/fit Pd-d + Te-p hopping+SOC source and verify BZ mesh/gauge & full current-response; inspect 2026 LEE SM exact operator-resolved continuous-registry consequences before calling a new theorem. No DFT/HPC permission.",
       "compute_authorized": false,
       "no_dft_or_hpc": true,
-      "reason": "BiDB id980 passes true C3/mv/mz site mapping and a new 24-band Te-p-only, geometry-based p-p SK+atomic SOC Boltzmann model yields NONZERO current-driven layer-odd out-of-plane Sz on sliding. Full H spatial and TR covariance errors <=6e-16; fixed-current chi_Sminus,jy(+0.1A)=-0.006506 at Nk24 model units, reversing under slide, vanishing with SOC off. Parameters are NOT fit, Pd d orbitals omitted, and the much smaller layer-even response is not well converged; this does not establish a real material prediction or independent originality. Direct LEE SM equation audit remains pending. Global source-geometry model scan additionally reproduces six layer-odd forced zeros and three layer-even forced zeros, with C3-related nonzero layer-even vectors at A/B/C. A real-BiDB-geometry toy response contour of radius 0.125 Angstrom independently has layer-odd winding +1 and layer-even winding -2 at 12x12 and 16x16 grids; full material and novelty certification remain OPEN. Independent rerun of GitHub script against the user BiDB confirms baseline response and contour. New stress test downgrades finite-radius even winding: at r=.125A, mu=1.5eV, SOC=.72eV, layer-even winding is +4 (nk8 and nk12), while at r=.02-.05A it is -2 for tested SOC values. Thus only a conditional local index -2 may be hypothesized; no universal global winding. Direct prior-art gate: published LEE covers 80-LG stacking/tensor rules, and its same-group sliding-REE companion manuscript is labelled submitted but not publicly retrieved.",
+      "reason": "BiDB id980 passes true C3/mv/mz site mapping and a new 24-band Te-p-only, geometry-based p-p SK+atomic SOC Boltzmann model yields NONZERO current-driven layer-odd out-of-plane Sz on sliding. Full H spatial and TR covariance errors <=6e-16; fixed-current chi_Sminus,jy(+0.1A)=-0.006506 at Nk24 model units, reversing under slide, vanishing with SOC off. Parameters are NOT fit, Pd d orbitals omitted, and the much smaller layer-even response is not well converged; this does not establish a real material prediction or independent originality. Direct LEE SM equation audit remains pending. Global source-geometry model scan additionally reproduces six layer-odd forced zeros and three layer-even forced zeros, with C3-related nonzero layer-even vectors at A/B/C. A real-BiDB-geometry toy response contour of radius 0.125 Angstrom independently has layer-odd winding +1 and layer-even winding -2 at 12x12 and 16x16 grids; full material and novelty certification remain OPEN. Independent rerun of GitHub script against the user BiDB confirms baseline response and contour. New stress test downgrades finite-radius even winding: at r=.125A, mu=1.5eV, SOC=.72eV, layer-even winding is +4 (nk8 and nk12), while at r=.02-.05A it is -2 for tested SOC values. Thus only a conditional local index -2 may be hypothesized; no universal global winding. Direct prior-art gate: published LEE covers 80-LG stacking/tensor rules, and its same-group sliding-REE companion manuscript is labelled submitted but not publicly retrieved. Formal local equivariant expansion has been recorded: F_-=i gamma z+O(|z|^3) (conditional local +1) and F_+=beta conjugate(z)^2+O(|z|^4) (conditional local -2), assuming C3v plus layer-swapping mz and fixed-current response. Symmetry does not force leading coefficients nonzero. Finite-radius even winding is parameter-dependent. Direct LEE companion prior art remains unresolved.",
       "first_theory_material": {
         "material": "Pd2Te2 bilayer",
         "bidb_id": 980,
@@ -639,6 +639,28 @@
         "direct_prior": "2026 LEE paper directly covers generic nonmagnetic bilayer layer-spin response, axial tensor Neumann rules, and all 80 layer-group stacking routes.",
         "potential_direct_competitor": "Control of the Rashba-Edelstein effect via sliding ferroelectricity in bilayer systems (same-group reference 105, labelled submitted in arXiv LEE paper). Public full text not located; sliding-dependent novelty unresolved.",
         "candidate_gap": "operator-resolved global response-field zero sets/local equivariant indices over continuous registry space; must be compared against submitted companion."
+      },
+      "local_equivariant_rule": {
+        "report": "docs/BD31_LOCAL_EQUIVARIANT_RESPONSE_FIELD_RULE_20261022.md",
+        "assumptions": [
+          "smooth fixed-current response vector field over relative registry u",
+          "C3z, vertical mx, horizontal layer-swapping mz at reference registry",
+          "nonmagnetic time-reversal-invariant toy; response output S_z"
+        ],
+        "definition": "F_pm=chi_pm,x+i chi_pm,y; z=u_x+i u_y",
+        "laws": {
+          "C3": "F(omega z)=omega F(z)",
+          "vertical_mirror": "F(-conj(z))=conj(F(z))",
+          "layer_odd": "F_-(-z)=-F_-(z)",
+          "layer_even": "F_+(-z)=+F_+(z)"
+        },
+        "leading_terms": {
+          "layer_odd": "F_-=i gamma z + O(|z|^3), gamma real; if gamma !=0 local index +1",
+          "layer_even": "F_+=beta conjugate(z)^2 + O(|z|^4), beta real; if beta !=0 local index -2"
+        },
+        "caveat": "symmetry allows but does not force gamma/beta nonzero; finite radius winding can differ if additional zeros enclosed; ordinary equivariant index itself is not new",
+        "global_zero_rule": "at each registry u*, intersect Fix(D_pm(g)) across actual Seitz stabilizer; zero forced iff common fixed subspace is {0}",
+        "competitor": "submitted same-group sliding-REE companion manuscript remains unreviewed; novelty unresolved"
       }
     }
   ],
