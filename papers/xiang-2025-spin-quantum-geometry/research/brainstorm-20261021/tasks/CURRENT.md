@@ -1,7 +1,7 @@
 # CURRENT TASK | B+D real-material research
 
 **Last updated:** 2026-10-22.  
-**Current execution status:** **NO ACTIVE COMPUTE TASK; R1 CLOSED BY USER**. No R2 jobs authorized, no auto-retry, no active submission requested here.
+**Active science-review task:** **R2-P0 READ-ONLY APPROVED / NOT CONFIRMED STARTED BY LOCAL HARNESS**. **Compute execution:** NO ACTIVE JOBS. R1 remains CLOSED; no R2 VASP/WSL/para/Japan submission authorized.
 
 ## Most recent task: MnPS3 L2 polar-pair R1 — CLOSED
 
@@ -33,8 +33,16 @@ The former single-link \`CURRENT.md\` URL still works, but it is a **state point
 Do not upload private POTCAR, system paths, large complete matrix data, private unpublished structures or raw complete job logs to this public repository.
 
 
-## Read-only follow-on prepared (not active computing)
+## Approved zero-compute next task: MnPS3 R2-P0
 
-[**R2-P0 site- and mode-resolved magnetic operator audit — DRAFT, zero compute**](BD-MNPS3-R2P0-SITE-OPERATORS-DRAFT.md) is now available to the local DeepSeek harness **if the user explicitly asks it to perform the review**. It requires reading existing private R1 source/site mapping, distinguishing honeycomb Mn Néel from toy layer-odd spin, testing the actual SOC magnetic tensor and planning one-variable-at-a-time SCF stabilization **without any new Slurm/WSL/Japan compute job**.
+**Versioned, actionable task:** [BD-MNPS3-L2-R2P0-READONLY.md](BD-MNPS3-L2-R2P0-READONLY.md). The user has explicitly approved this **read-only analysis** in conversation. It asks the local DeepSeek harness to autonomously inspect **existing private R1 four-Mn site/moment mapping and frozen SCF failure evidence**, run [four-site operator tests](../scripts/mnps3_l2_site_operator_gate.py), distinguish the author's **nonrelativistic [E||MzMy]** from any physical **SOC magnetic symmetry**, define a source-correct Néel-mode generalized force, and return a PRIVATE audit with a sanitized status and **proposed** one-variable SCF stabilization pilots.
 
-**R1 remains CLOSED**, with no new authorization to submit or restart jobs. Do not reinterpret this note as a launch signal.
+**New 2025–2026 papers, reviewed:** [Guo vdW SOT, Haque MnPS3 THz, Ilyas FePS3 THz, Kang octupolar AFM tunnel torque](../docs/BD_PEER_UPDATE_20261022_SOT_THz_OCTUPOLE.md), now integrated into the cumulative peer audit.
+
+**Authorizations:** Scientific read-only review YES. **New calculation/spending/Slurm/WSL/Japan/para jobs NO.** R1's two TIMEOUTs are final; any future R2 compute would need a **separate task and user authorization**. A GitHub document does **not** itself start the remote local harness: no R2-P0 execution receipt or private site-map acceptance has been received as of this public entry.
+
+### Local harness single-link instruction
+
+> 读取本 CURRENT.md 中已批准的 R2-P0 READ-ONLY 任务。自动检查现有 R1 私有 MnPS3 L2 +/− 原始位点、磁序和日志；运行已归档的四站点算符代数测试和 SOC 对称性审核，生成私有验收及公开脱敏摘要。不要让我搬运材料；不得调用 VASP、sbatch 或重新启动任何 R1 作业。若必须依赖缺失的结构证据，明确标记 BLOCKED，而不是猜测。
+
+**Research source of truth:** private R1 \`result.json\` for historical job completion and nonconvergence; R2-P0 output **not yet received**. No claim of material magnetic response or new effect.
