@@ -1,5 +1,11 @@
 # Independent A/B/C/D brainstorming (2026-10-21)
 
+## R1 real-material terminal status (2026-10-22)
+
+**R1 CLOSED BY USER; no active B+D material jobs or authorized restart.** The published MnPS3 L2 path-1 geometry/magnetic mapping preflight passed, but **both real paired Slurm relaxations reached two-hour TIMEOUT in their first electronic SCF**; no ionic relaxation, converged energies, FE property, layer spin or torque have been obtained. `RUN_FINISHED=true` means only that the scheduled jobs have ended, while `NUMERIC_CONVERGED=false` and `FE_VERIFIED=false`. The user explicitly accepted this failed numerical result as the R1 endpoint. **Do not auto-resubmit from a cached historical command.**
+
+[Sanitized scientific closeout](docs/BD_MNPS3_R1_CLOSEOUT_20261022.md) · [Live task pointer: CLOSED / no active job](tasks/CURRENT.md) · [Historical R1 instruction, do not execute](tasks/BD-MNPS3-L2-P1-EXECUTE-R1.md). Private signed run evidence remains in the user's private research archive. Any R2 restart requires its own approved task and convergence-control plan.
+
 **RESEARCH EXPLORATION ONLY — NOT Xiang–Jin–Wang PRL 135, 146303 (2025) reproduction.**
 This folder archives user/assistant explorations motivated by that paper. The original `paper_models.py`, `methods/`, `tests/`, frozen outputs and scientific acceptance state remain unchanged.
 
