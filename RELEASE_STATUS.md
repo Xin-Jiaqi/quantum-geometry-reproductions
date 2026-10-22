@@ -294,7 +294,7 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - This root release documentation update changes **no tested physics source or test files**.
 
 
-### v69 independent finite-lead Lehmann oracle (2026-10-22; PR and CI pending)
+### v69 independent finite-lead Lehmann oracle (2026-10-22; merged and CI certified)
 
 - New module diagonalizes the full finite Hermitian four-orbital device plus two explicit finite tight-binding leads and evaluates a Lehmann eigenstate-pair sum, independent of the v68 semi-infinite surface-self-energy Keldysh integral.
 - 45 new physical gates + one frozen numeric regeneration gate. v60-v68 local baseline 306/306 and v69 module 46/46 pass in separate test batches; cumulative local test count **352/352**. High-resolution L=1000, eta=.005 production run is part of the v69 main test class.
@@ -302,3 +302,11 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - Finite-system Lehmann Ward residual 7.8e-17, device/lead induced charge cancellation, static isothermal Frechet vs full E re-diagonalization error 4.2e-13, three-frame covariance and finite-B derivative are checked.
 - **VERIFIED** finite-Hamiltonian identities; **CONDITIONAL** finite L/eta, device-local electric field, supplied projected positions and ideal elastic leads; **UNRESOLVED** original Xiang bulk orbital E/B, complete magnetic Wannier embedding and source SM sign/factor/three-band issues. Original paper stays **PARTIAL**.
 - Final PR HEAD, PR CI, merge SHA and post-merge main CI must be added after remote verification. This entry is on the v69 topic branch; it is not yet a release certification.
+
+
+- [PR #62](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/62) **squash merged** as `be8bb8344b0c1149b7f2a9944c88202ba19f649e`; final PR HEAD `40c752f36b2cbfcd86105592a9e4f3a42a8dcdeb`.
+- Final PR [Actions 39722605718](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39722605718): **890/890 PASS**, 89.488 s; overall source-paper status explicitly **PARTIAL**.
+- Independent post-merge main [Actions 39722881262](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39722881262): **890/890 PASS**, 87.704 s on the exact merge commit.
+- v69 adds 45 science tests plus one frozen numeric gate. Local v60-v68 baseline 306/306 and v69 46/46 pass in bounded batches; cumulative local 352/352. Fresh extraction verified 83 SHA256 entries.
+- **VERIFIED** finite closed-Hamiltonian Lehmann/Ward and static isothermal identities; **CONDITIONAL** finite L/eta and device-local field. Long-lead response differs from v68 continuum by 2.123e-4 absolute; ordered-limit convergence is improving but not exact.
+- Source paper stays **PARTIAL**; source SM sign/factor/three-band, complete magnetic Wannier embedding and bulk orbital-current correspondence remain unresolved. No local archive byte-identity claim is made for remote Git blobs without exact hash match.
