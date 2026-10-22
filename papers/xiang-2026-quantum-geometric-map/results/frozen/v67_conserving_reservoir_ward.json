@@ -1,0 +1,105 @@
+{
+  "energy_scan": {
+    "-0.7": 0.26602689846891103,
+    "0.0": 0.8668639388993713,
+    "0.13": 0.9006260865577836,
+    "0.7": 0.0471366626301887
+  },
+  "frames": {
+    "landau_y": {
+      "S_L_to_R_probability": 0.900626086557785,
+      "conductance_q2_over_h": 0.9006260865577856,
+      "dB_conductance": -0.1804875433988441,
+      "dB_dE_gate_conductance": 0.8840574786955107,
+      "dB_internal_Pa_current_under_bias": 0.0905355114804447,
+      "dE_gate_conductance": -0.557089765325715,
+      "fd16_dB_dE_gate": 0.8840574785055512,
+      "fd5_dB_conductance": -0.1804875433954652,
+      "fd5_dE_gate_conductance": -0.5570897653252767,
+      "internal_Pa_current_under_reservoir_bias": -0.3656101427468954,
+      "magnetic_scattering_Ward": {
+        "dB_T_from_Caroli": -0.1804875433988441,
+        "dB_T_from_scattering_amplitude": -0.18048754339884554,
+        "optical_derivative_error": 7.69725717805852e-15,
+        "unitarity_derivative_error": 2.3259818463142076e-15
+      },
+      "optical_spectral_identity_residual": 4.662730184152815e-15,
+      "scattering_unitarity_residual": 1.0538657132350528e-15,
+      "uncontacted_orbital_continuity_B_residual": 1.7435926163665743e-16,
+      "uncontacted_orbital_continuity_residual": 1.5612511283791264e-16
+    },
+    "orbital": {
+      "S_L_to_R_probability": 0.9006260865577843,
+      "conductance_q2_over_h": 0.9006260865577849,
+      "dB_conductance": -0.1804875433988426,
+      "dB_dE_gate_conductance": 0.8840574786955064,
+      "dB_internal_Pa_current_under_bias": 0.09053551148044403,
+      "dE_gate_conductance": -0.5570897653257145,
+      "fd16_dB_dE_gate": 0.8840574783006611,
+      "fd5_dB_conductance": -0.18048754339731557,
+      "fd5_dE_gate_conductance": -0.5570897653304577,
+      "internal_Pa_current_under_reservoir_bias": -0.36561014274689574,
+      "magnetic_scattering_Ward": {
+        "dB_T_from_Caroli": -0.1804875433988426,
+        "dB_T_from_scattering_amplitude": -0.1804875433988442,
+        "optical_derivative_error": 4.114009279434725e-15,
+        "unitarity_derivative_error": 1.485828983043444e-15
+      },
+      "optical_spectral_identity_residual": 1.6433809401933558e-15,
+      "scattering_unitarity_residual": 5.580595853764916e-16,
+      "uncontacted_orbital_continuity_B_residual": 1.33391680546284e-16,
+      "uncontacted_orbital_continuity_residual": 7.744598498748323e-17
+    },
+    "symmetric": {
+      "S_L_to_R_probability": 0.9006260865577845,
+      "conductance_q2_over_h": 0.9006260865577836,
+      "dB_conductance": -0.180487543398844,
+      "dB_dE_gate_conductance": 0.8840574786955058,
+      "dB_internal_Pa_current_under_bias": 0.09053551148044336,
+      "dE_gate_conductance": -0.5570897653257123,
+      "fd16_dB_dE_gate": 0.8840574784517747,
+      "fd5_dB_conductance": -0.18048754339639037,
+      "fd5_dE_gate_conductance": -0.557089765319448,
+      "internal_Pa_current_under_reservoir_bias": -0.3656101427468952,
+      "magnetic_scattering_Ward": {
+        "dB_T_from_Caroli": -0.180487543398844,
+        "dB_T_from_scattering_amplitude": -0.1804875433988442,
+        "optical_derivative_error": 3.467114699701666e-15,
+        "unitarity_derivative_error": 9.653369066246034e-16
+      },
+      "optical_spectral_identity_residual": 1.7348344947267834e-15,
+      "scattering_unitarity_residual": 8.105479193277633e-16,
+      "uncontacted_orbital_continuity_B_residual": 4.443059973708341e-16,
+      "uncontacted_orbital_continuity_residual": 5.815852873680767e-17
+    }
+  },
+  "limits": "one energy mu inside both single-channel lead bands, zero-T differential voltage, 4-site finite device; fixed coherent E/B gates; no disorder/inelastic collisions",
+  "negative_controls": {
+    "landau_y": {
+      "T_if_device_rotated_but_lead_couplings_held_fixed": 0.9005985912140952,
+      "dB_T_if_contact_sigma_B_omitted": -0.18058264960121367,
+      "dB_dE_T_if_contact_sigma_B_omitted": 0.8753243742507881,
+      "dB_dE_T_if_dB_Pdrive_omitted": 0.9031106128754138
+    },
+    "orbital": {
+      "T_if_device_rotated_but_lead_couplings_held_fixed": 0.8931705419469275,
+      "dB_T_if_contact_sigma_B_omitted": -0.1966120429950715,
+      "dB_dE_T_if_contact_sigma_B_omitted": 0.6143790095791904,
+      "dB_dE_T_if_dB_Pdrive_omitted": 0.7842957827508897
+    }
+  },
+  "observable": "T(mu,E_gate,B), differential linear-reservoir-bias two-terminal conductance; NOT v66 bulk sigma_xy or homogeneous E-driven orbital EB",
+  "parameters": {
+    "charge_over_hbar": -0.84,
+    "electric_gate": 0.04,
+    "field": 0.23,
+    "lead_hopping": 1.1,
+    "lead_onsite": 0.0,
+    "lead_regulator": 1e-10,
+    "mu": 0.13
+  },
+  "status": "VERIFIED noninteracting elastic two-reservoir Ward identities; CONDITIONAL finite open Peierls gate transport; Xiang original EB PARTIAL",
+  "surface_g_imag": -0.9075023686293154,
+  "surface_g_real": 0.05371900826201676,
+  "version": "v67"
+}

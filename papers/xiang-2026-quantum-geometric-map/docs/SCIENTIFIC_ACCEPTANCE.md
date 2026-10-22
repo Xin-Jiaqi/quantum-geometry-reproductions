@@ -211,3 +211,16 @@ New independent tests 19/19 local PASS; GitHub CI required before merge. Xiang o
 | Original full Xiang orbital E/B transport | No conserving bath, complete Kubo-Streda, infinite-system limit, realistic magnetic Wannier embedding or source-equation resolution | **UNRESOLVED; paper audit PARTIAL** |
 
 40 new v66 science gates plus one numerical frozen-regeneration test (total standalone v60-v66 219). See [scientific v66 report](DYNAMIC_ORBITAL_EB_SEVEN_CONTACT_V66.md). The frozen GitHub JSON is acceptance-compared *numerically* across supported Python/JSON serializers; no unverified byte-identical claim.
+
+
+## v67: physically independent elastic reservoir Ward benchmark, NOT original orbital Hall
+
+| Target | Evidence | Acceptance |
+| --- | --- | --- |
+| Genuine microscopic semi-infinite, noninteracting tight-binding leads | Retarded surface Dyson root, energy-dependent exact selfenergies, 2-channel Caroli and independent S†S=I | **VERIFIED specified conserving elastic scattering** |
+| Magnetic current/contact Ward and gauge covariance | Both Sigma_B/Gamma_B, two-channel d_B(S†S)=0, d_B optical spectral identity, d_B T from scattering amplitudes vs Caroli, uncontacted local Q(B) continuity | **VERIFIED finite-model scattering and magnetic connections** |
+| Electrostatic E gate, projected orbital B, reservoir voltage | Full d_B H, d_B P_b, 8 mixed differentiated Caroli terms and independent 16-corner d_B d_E gate finite differences, 3 frames | **VERIFIED named gate/bias model, CONDITIONAL physical embedding** |
+| Wrong contact transformation or omitted d_B coupling | Deliberate gauge-breaking negative controls, origin shift corrected only by moving lead onsite and chemical potential | **NEGATIVE tests passed** |
+| Original homogeneous electric-field-driven Xiang orbital mixed E/B | Landauer gate derivative is a **DIFFERENT observable**; no same-observable Keldysh/SCBA or field-complete Wannier | **UNRESOLVED; original source PARTIAL** |
+
+v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local PASS**. [Detailed v67 report](CONSERVING_RESERVOIR_WARD_V67.md).

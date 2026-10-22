@@ -192,3 +192,8 @@ New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINV
 ### v66: finite dynamic orbital mixed E/B with seven contacts
 
 [Source-independent v66 report](papers/xiang-2026-quantum-geometric-map/docs/DYNAMIC_ORBITAL_EB_SEVEN_CONTACT_V66.md): magnetic derivative of finite-frequency E response with explicitly supplied offdiagonal projected positions and noncommuting electric current contact, checked in multiple B-dependent gauges and by independent finite-E DC superoperator. **VERIFIED** mathematical specified-model response; **CONDITIONAL** scalar-gamma bath; **UNRESOLVED** full microscopic conserving orbital magnetotransport and original Xiang paper **PARTIAL**.
+
+
+### v67: independent conserving elastic two-lead scattering oracle
+
+[Physical v67 acceptance](papers/xiang-2026-quantum-geometric-map/docs/CONSERVING_RESERVOIR_WARD_V67.md): genuine semi-infinite tight-binding electrode surface selfenergies, independent S-matrix unitarity/Caroli optical and magnetic Ward, frame-covariant contact derivatives and E_gate/B differentiated two-terminal transport. **Different observable from homogeneous electric-field-driven orbital Hall**. Original Xiang PRB scientific audit **PARTIAL**.
