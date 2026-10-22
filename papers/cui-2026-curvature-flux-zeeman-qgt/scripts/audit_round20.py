@@ -11,6 +11,10 @@ import numpy as np
 from flux_lab.bz_hotspots import bz_hotspot_audit
 
 GROUPS=("6","6m'm'")
+# Fixed Cartesian observables: C6 diagonal yy; C6 antiunitary xy.
+# Avoid sampling-dependent or machine-dependent auto argmax among symmetry
+# equivalent tensor components when interpreting cancellation/hotspots.
+COMPONENTS={"6":(1,1),"6m'm'":(0,1)}
 
 def compact(d):
     A=d["even"];B=d["odd"]
@@ -36,8 +40,9 @@ def run(*,deep=False):
     group_rows={}
     for group in GROUPS:
         hex_order=6 if deep else 5
-        anchor=bz_hotspot_audit(group,domain="hexagon",order=hex_order,hotspot_count=6)
-        component=anchor["component"]
+        component=COMPONENTS[group]
+        anchor=bz_hotspot_audit(group,domain="hexagon",order=hex_order,
+                                component=component,hotspot_count=6)
         other_hex=bz_hotspot_audit(group,domain="hexagon",order=4 if deep else 3,
                                     component=component,hotspot_count=6)
         prim_gauss=bz_hotspot_audit(group,domain="primitive",method="gauss",
