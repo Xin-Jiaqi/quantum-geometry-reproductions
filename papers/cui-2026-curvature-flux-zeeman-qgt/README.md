@@ -16,3 +16,16 @@ python -m unittest discover -s tests -v
 For user-supplied Wannier data, `wannier90_hr.dat` and centers alone are insufficient: `spin` must be the three *physical* Pauli matrices projected into **the same gauge** as H, and `velocity` must use a declared position connection when the basis is k-dependent. A `.spn` in the original Bloch gauge is NOT directly interchangeable. The public API refuses missing operators and unresolved degeneracies; it does not infer Pauli spin matrices from the Wannier orbital count.
 
 No publisher PDF, personal archive, restricted VASP files, raw AutoWann matrices or private user notes are distributed. CI PASS validates the named methods only. Future paper response branches require separate protocol-specific verification and versioned numerical baselines.
+
+
+## v2: finite-frequency causal *interband* response (2026-10-22)
+
+The separately verified [causal_response.py](src/flux_lab/causal_response.py) computes magnetic-field-induced current, electric-field-induced spin magnetization in a declared model normalization, causal Liouville/Kubo and static-subtracted interband reciprocity. It also independently evaluates the **four** gN, gA, ΩN and ΩA contributions to the source Eq.(16) to second order. Source Fourier omega and Liouville drive frequency have opposite signs: **omega_source=-omega_drive**. Full scope, results and open physics are in [CAUSAL_RESPONSE_ACCEPTANCE.md](CAUSAL_RESPONSE_ACCEPTANCE.md).
+
+~~~bash
+python -m pip install -e .
+python -m unittest discover -s tests -v
+python scripts/demo_causal.py --kmesh 48
+~~~
+
+**Not full Eq.(19) KME or a real-material transport package.** The v2 suite covers 21 geometry and 18 new response tests; actual CI status must be checked separately. Intraband/collision/magnetization contacts, real Wannier spin and position, and SI conversion stay open.

@@ -1,0 +1,13 @@
+{
+  "model": "4-band orbital times physical Pauli spin; fixed common basis",
+  "mu": 2.3,
+  "temperature": 0.025,
+  "kappa": 1,
+  "kx": 0.37,
+  "ky": -0.29,
+  "omega_drive": 0.035,
+  "delta_chi_yz_real": 0.0002776323787547,
+  "delta_chi_yz_imag": -0.0310000213902597,
+  "static_kme_zy": -0.8848667795532296,
+  "units": "natural, interband-only"
+}
