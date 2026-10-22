@@ -88,3 +88,18 @@ demonstration. 18 new unit tests bring the limited paper package to 118.
 ## v9: Round20 k-resolved gap and hotspot diagnostics
 
 [bz_hotspots.py](src/flux_lab/bz_hotspots.py) independently evaluates the even/odd complex interband pair response and diagnoses band gaps, occupation contrasts, weighted k hotspots, and the cancellation of local contributions in the BZ integral. **14 new tests; 159 total PASS** in Python 3.11/3.12. [Scientific scope](ROUND20_HOTSPOTS_AND_CANCELLATION.md), [frozen audit](results/frozen/round20_khotspot_cancellation.json), [audit script](scripts/audit_round20.py). These model-method tests do **not** show the net BZ response is numerically converged.
+
+
+## Round 21: Fermi occupation-sector decomposition
+
+The accepted Round20 bz_hotspots.py stays the authoritative k-space
+hotspot/cancellation tool. The separate
+[occupation_partition.py](src/flux_lab/occupation_partition.py) resolves
+clean directed interband Kubo terms into disjoint **cross-mu** and
+**same-side** energy pairs, checks their exact reconstruction of the
+complex-frequency response, and tracks tiny thermal occupations even
+near small-gap resonances. The integration uses existing hexagonal and
+primitive BZ nodes, not a new symmetry-projected quadrature. See
+[Round21 scientific acceptance](ROUND21_OCCUPATION_PARTITION.md) and
+[reproducible sector audit](scripts/audit_occupation_partition.py).
+Eight new tests; total target 167. BZ convergence remains UNRESOLVED.
