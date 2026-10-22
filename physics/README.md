@@ -127,3 +127,7 @@ The [v63 report](../papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINVASIVE
 ## v65: static orbital position-contact Maxwell identity
 
 Named finite thermodynamic primitive [v65](../papers/xiang-2026-quantum-geometric-map/docs/STATIC_ORBITAL_EB_MAXWELL_V65.md): **VERIFIED** fully supplied projected finite-orbital position P with offdiagonal dipoles, complete B-dependent frame derivative d_B P and magnetic vertex d_B H, exact static mixed grand-canonical and fixed-N Helmholtz Maxwell identities, numerical E/B derivatives and number-conserving origin test. Four-site Peierls physics and supplied D remain **CONDITIONAL**. Driven bulk orbital magnetotransport and conserving Kubo-Streda are **UNRESOLVED**; Xiang PRB manuscript still **PARTIAL**.
+
+## v66: dynamic projected position and electric-current-contact gate
+
+[Finite AC seven-contact orbital E/B](../papers/xiang-2026-quantum-geometric-map/docs/DYNAMIC_ORBITAL_EB_SEVEN_CONTACT_V66.md). **VERIFIED** specified finite projected P_x,P_y, full B-dependent position and current contacts (including noncommuting electric -i[Pb,Pa]), independent spectral Kubo-like and finite-B derivatives, equilibrium static current cancellation, plus separate finite-E dense superoperator DC oracle. The physical finite-graph scalar gamma relaxation remains **CONDITIONAL** and cannot be described as a conserving microscopic bath or full Kubo-Streda. Real Wannier magnetic embedding and original source paper orbital magnetotransport remain **UNRESOLVED**; Xiang scientific status **PARTIAL**.

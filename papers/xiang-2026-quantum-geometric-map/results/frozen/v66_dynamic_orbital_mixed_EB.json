@@ -1,0 +1,209 @@
+{
+  "DC_non_equilibrium_oracle": {
+    "landau_y": {
+      "absolute_error": 1.6339441119561659e-9,
+      "analytical": {
+        "imag": 5.681219383824043e-17,
+        "real": -0.0006473523399702849
+      },
+      "independent_finite_E_B_superoperator": {
+        "imag": 0,
+        "real": -0.000647350706026173
+      }
+    },
+    "orbital": {
+      "absolute_error": 1.1249934937948008e-9,
+      "analytical": {
+        "imag": -1.734723475976807e-17,
+        "real": -0.000647352339970042
+      },
+      "independent_finite_E_B_superoperator": {
+        "imag": 3.469446951953614e-10,
+        "real": -0.0006473512698113026
+      }
+    },
+    "symmetric": {
+      "absolute_error": 1.412419246900815e-9,
+      "analytical": {
+        "imag": -9.86623976961809e-18,
+        "real": -0.0006473523399703196
+      },
+      "independent_finite_E_B_superoperator": {
+        "imag": 1.3010426069826053e-9,
+        "real": -0.0006473517902283454
+      }
+    }
+  },
+  "frames": {
+    "landau_y": {
+      "analytic_vs_FD_error": 9.659960512570272e-13,
+      "components": {
+        "current_magnetic_H": {
+          "imag": -0.004465209225605256,
+          "real": 0.007270837026348382
+        },
+        "current_position_dPa": {
+          "imag": 0.002116597675197791,
+          "real": 0.0252608929491348
+        },
+        "electric_current_contact_dB": {
+          "imag": 7.806255641895632e-18,
+          "real": -0.022509736730707157
+        },
+        "electric_current_contact_rhoB": {
+          "imag": 5.204170427930421e-18,
+          "real": -0.020920428212954964
+        },
+        "liouvillian_magnetic": {
+          "imag": 0.008360574729019632,
+          "real": -0.08145026581852872
+        },
+        "source_fermi_density": {
+          "imag": -0.0029146632916388637,
+          "real": 0.08860764210471173
+        },
+        "source_position_dPb": {
+          "imag": 0.0014058886927354516,
+          "real": -0.0026618893209414095
+        }
+      },
+      "five_point_B_derivative": {
+        "imag": 0.004503188579561718,
+        "real": -0.006402948003892081
+      },
+      "mixed_derivative": {
+        "imag": 0.004503188579708768,
+        "real": -0.006402948002937343
+      },
+      "sigma": {
+        "imag": -0.015989993886819532,
+        "real": -0.0002810991670624957
+      },
+      "spectral_independent_sigma": {
+        "imag": -0.015989993886819483,
+        "real": -0.0002810991670624957
+      }
+    },
+    "orbital": {
+      "analytic_vs_FD_error": 1.0188653467640947e-12,
+      "components": {
+        "current_magnetic_H": {
+          "imag": -0.02018734840534871,
+          "real": 0.13499369896138777
+        },
+        "current_position_dPa": {
+          "imag": -0.010194171840566948,
+          "real": -0.01576526332443898
+        },
+        "electric_current_contact_dB": {
+          "imag": 9.540979117872439e-18,
+          "real": 0.06583244396434193
+        },
+        "electric_current_contact_rhoB": {
+          "imag": 8.673617379884035e-18,
+          "real": -0.10926260890800402
+        },
+        "liouvillian_magnetic": {
+          "imag": 0.029583760973883703,
+          "real": -0.16522689497998672
+        },
+        "source_fermi_density": {
+          "imag": 0.00038481805710924646,
+          "real": 0.1278595572430793
+        },
+        "source_position_dPb": {
+          "imag": 0.004916129794631463,
+          "real": -0.04483388095931638
+        }
+      },
+      "five_point_B_derivative": {
+        "imag": 0.004503188580536055,
+        "real": -0.006402948002342395
+      },
+      "mixed_derivative": {
+        "imag": 0.004503188579708773,
+        "real": -0.006402948002937114
+      },
+      "sigma": {
+        "imag": -0.015989993886819393,
+        "real": -0.000281099167062579
+      },
+      "spectral_independent_sigma": {
+        "imag": -0.01598999388681943,
+        "real": -0.00028109916706255816
+      }
+    },
+    "symmetric": {
+      "analytic_vs_FD_error": 7.571411192601216e-13,
+      "components": {
+        "current_magnetic_H": {
+          "imag": -0.025943398456868542,
+          "real": -0.036864634663678515
+        },
+        "current_position_dPa": {
+          "imag": 0,
+          "real": 0
+        },
+        "electric_current_contact_dB": {
+          "imag": 0,
+          "real": 0
+        },
+        "electric_current_contact_rhoB": {
+          "imag": 4.445228907190568e-18,
+          "real": -0.043430164943662065
+        },
+        "liouvillian_magnetic": {
+          "imag": 0.032713045328120416,
+          "real": 0.004641953012561845
+        },
+        "source_fermi_density": {
+          "imag": -0.0022664582915431636,
+          "real": 0.06924989859184134
+        },
+        "source_position_dPb": {
+          "imag": 0,
+          "real": 0
+        }
+      },
+      "five_point_B_derivative": {
+        "imag": 0.004503188580307649,
+        "real": -0.006402948003400576
+      },
+      "mixed_derivative": {
+        "imag": 0.004503188579708714,
+        "real": -0.006402948002937392
+      },
+      "sigma": {
+        "imag": -0.015989993886819445,
+        "real": -0.0002810991670626692
+      },
+      "spectral_independent_sigma": {
+        "imag": -0.01598999388681941,
+        "real": -0.0002810991670625998
+      }
+    }
+  },
+  "model": "explicit finite four-orbital Peierls and supplied noncommuting projected P_x/P_y",
+  "parameters": {
+    "charge_over_hbar": -0.84,
+    "field": 0.23,
+    "gamma": 0.071,
+    "mu": 0.13,
+    "omega": 0.29,
+    "temperature": 0.37
+  },
+  "scientific_status": "VERIFIED seven-contact finite-model derivative; CONDITIONAL scalar gamma bath; original Xiang orbital EB UNRESOLVED, source PARTIAL",
+  "static_contact_control": {
+    "gamma": 0.000001,
+    "with_E_current_contact": {
+      "imag": 6.938893903907228e-18,
+      "real": 3.8525688243751244e-8
+    },
+    "without_E_current_contact": {
+      "imag": -6.938893903907228e-18,
+      "real": 0.056759550636632336
+    }
+  },
+  "units": "dimensionless hbar=1; complex finite-frequency linear-E response and derivative B",
+  "version": "v66"
+}
