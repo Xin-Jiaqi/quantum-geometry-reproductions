@@ -382,3 +382,8 @@ The new sweep rescales only top/bottom voltage-probe coupling amplitudes (C	o\la
 ## v69: independent finite-Hamiltonian Lehmann oracle
 
 [Scientific report](docs/FINITE_LEAD_LEHMANN_ORACLE_V69.md) · [source](src/qgmap/finite_lead_lehmann_v69.py) · [45 physical gates](tests/test_finite_lead_lehmann_v69.py) · [frozen evidence](results/frozen/v69_finite_lead_lehmann.json) · [handoff to v70](docs/HANDOFF_V69_TO_V70.md). The entire four-orbital device plus two finite chains is diagonalized; the response is evaluated from an eigenstate-pair Lehmann sum, not by reusing the v68 Keldysh integral. At L=1000, eta=.005 the same-device AC response is within 2.12e-4 absolute of v68 continuum; the residual is explicit and **not declared zero**. The finite-system Ward and static isothermal derivative are independently checked. The source-paper bulk response remains **PARTIAL**.
+
+
+## v70: multiple frequencies, joint finite-electrode L/η and end-cap check
+
+[Scientific report and progress assessment](docs/MULTIFREQUENCY_ORDERED_LIMITS_V70.md) | [reproduce](scripts/reproduce_v70_ordered_limits.py) | [35 new tests](tests/test_ordered_limits_v70.py) | [frozen evidence](results/frozen/v70_ordered_limits.json). Independent v69 full-Hamiltonian Lehmann approaches v68 exact two-energy semi-infinite-lead Keldysh at ω=.20/.29/.40 but is still **3.83%/3.91%/2.32%** different at L=1000 and η=.005. A small-L nonmonotonic negative control and finite far-end boundary-cap sensitivity are explicitly tested. Only the finite **device projected polarization-current** is matched. Original bulk orbital mixed E/B remains **PARTIAL**.
