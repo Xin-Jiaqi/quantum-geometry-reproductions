@@ -277,3 +277,15 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Original paper bulk orbital tensor and Fig2 SI | Finite device is not bulk; Eq49/52 factor issue, m!=ell three-band omissions and full magnetic Wannier embedding still missing | **UNRESOLVED; original paper PARTIAL** |
 
 42 v71 named physical checks plus one frozen numerical regeneration gate; exact PR-head and postmerge CI require independent verification. [v71 details](SOURCE_OBSERVABLE_BOUNDARY_AND_WANNIER_GATE_V71.md).
+
+## v72: periodic finite-q spin Zeeman charge-Ward method, NOT source dc transport
+
+| Gate | Method | Status |
+| --- | --- | --- |
+| Periodic finite-q scalar source and k-dependent frame | Full density U(k+q)†U(k), longitudinal J=[H(k+q)-H(k)]/q; commensurate BZ global occupation cancellation | **VERIFIED finite-q lattice model** |
+| Exact longitudinal charge and magnetic derivative Ward | (omega+i eta)chi_density-q chi_Jy=0 and dB identity (residual O(1e-18)) | **VERIFIED defined finite-q current** |
+| Mixed spin Zeeman transverse response | H(k,B)=H0(k)+B sigma_x; 4x4 orbital Sylvester independently matches eigenstate sum, analytic Fermi-Fréchet+Liouvillian dB matches 5-point full B difference | **VERIFIED declared finite-q model** |
+| Gauge/vertex negative controls | Replacing U+†U- by I violates Ward ~8.24e-4; endpoint-averaged vy instead of divided-difference fails ~1.66e-5 | **REJECT incorrect finite-q Ward methods** |
+| Original source spin PHE and orbital MNHE | Selected eta_a adiabatic pole, both E/B orderings, q/omega/eta to dc, magnetic moment and intercell Wannier position, transport-magnetization subtraction and SM disputed equations not implemented | **UNRESOLVED; original source PARTIAL** |
+
+37 independently motivated physics checks plus one frozen numeric provenance gate. [Full report](BULK_FINITE_Q_SPIN_ZEEMAN_V72.md).
