@@ -107,3 +107,6 @@ The user raised DFT cost/uncertainty of a real domain. [**G3 ROI and scientific 
 
 
 **Model search update (22 Oct):** the [BD25 model audit](../docs/BD25_LEE_MODEL_AUDIT_20261022.md) found a possible source-backed route: 11-orbital MoS\(_2\) Slater–Koster bilayer TB with registry-dependent S–S/Mo–S/Mo–Mo hopping (PRB 102, 081103(R), 2020) plus a separately sourced SOC extension. Not implemented yet. Next gate is only the \(u=0,\pm\delta\) real-space hopping/Seitz covariance test, not Kubo/DFT. PRB 114, 125129 (2026) and CrI\(_3\) 2024 pre-empt generic sliding-tunable Edelstein novelty but are strong-neighbor/Introduction context for the narrower nonmagnetic \(S_-^z\) derivative. Registry now has 26 claims.
+
+
+**Latest low-cost test:** [AA MoS\(_2\) registry geometry gate](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/blob/research/fe-domain-mode-addressability-20261022/research/fe_domain_mode_addressability_20261022/aa_mos2_registry_geometry_gate.py) passed locally: 450 interlayer pair/translation checks under \(m_z\) and \(\mathbf u\to-\mathbf u\), max distance mismatch \(1.776\times10^{-15}\) Å; S–S interface spacing 3.6763 Å matches the source SK model. **Geometry only**. Next gate is the actual orbital Slater–Koster matrix covariance including orbital parity/rotation; still no SOC/Kubo or production compute.
