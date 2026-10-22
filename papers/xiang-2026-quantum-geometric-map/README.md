@@ -395,3 +395,8 @@ The new sweep rescales only top/bottom voltage-probe coupling amplitudes (C	o\la
 ## v72: periodic finite-q spin Zeeman source response
 
 [Science report](docs/BULK_FINITE_Q_SPIN_ZEEMAN_V72.md) | [37 science tests](tests/test_bulk_finite_q_spin_v72.py) | [frozen re-generation](tests/test_bulk_finite_q_spin_v72_frozen.py) | [handoff](docs/HANDOFF_V72_TO_V73.md). Periodic finite-q scalar potential with explicit **spin Zeeman B*sigma_x**, exact lattice current difference quotient, charge and mixed B Ward, full k-dependent frame vertices, independent eigenpair/Liouville and analytic/5point B derivative. Missing density vertex or naive velocity intentionally FAIL charge Ward. **No original author selected electric tau-pole, orbital magnetic shift or bulk dc tensor has been reproduced; paper status PARTIAL.**
+
+
+## v73: two-color finite-q spin source and magnetic population-preparation gate
+
+[Science](docs/TWO_COLOR_FINITE_Q_SPIN_PREPARATION_V73.md) | [source](src/qgmap/two_color_finite_q_spin_v73.py) | [45 physics tests](tests/test_two_color_finite_q_spin_v73.py) | [independent frozen validation](tests/test_two_color_finite_q_spin_v73_frozen.py) | [handoff v74](docs/HANDOFF_V73_TO_V74.md). Two independent input complex poles and BOTH E→B/B→E source orderings, exact charge Ward and gauge covariance. At N=24, omegaE=.27,omegaB=.12 finite-q spin model the full dimensionless chi(Jx,rho,B)/(-iq) = -.042008922436-.009686339341i. A separately marked equilibrated **static B** occupation diagonal is essential for the correct static-field derivative limit; collisionless zero-frequency B is not equilibrated. Original SM Eq15 selected electric adiabatic pole, exact bulk transport and orbital Wannier response remain **UNRESOLVED; paper PARTIAL**.

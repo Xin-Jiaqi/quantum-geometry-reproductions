@@ -1,0 +1,200 @@
+{
+  "version": "v73",
+  "source_status": "PARTIAL",
+  "physical_scope": "periodic finite-q scalar-potential/spin-Zeeman two-color; NOT original adiabatic selected tau-pole",
+  "parameters": {
+    "n": 24,
+    "q_steps": 1,
+    "omega_e": 0.27,
+    "omega_b": 0.12,
+    "eta_e": 0.045,
+    "eta_b": 0.03,
+    "B0": 0.11,
+    "mu": 0.32,
+    "temperature": 0.12,
+    "beta": 0.24,
+    "alpha": 0.13,
+    "mass": 0.32,
+    "wilson": 0.35,
+    "orbital_gauge": 0
+  },
+  "frequency_sum": {
+    "real": 0.39,
+    "imag": 0.075
+  },
+  "ward_residual": {
+    "real": 9.095251558072843e-19,
+    "imag": 3.4046018741027015e-20
+  },
+  "dense_total_E_transverse": {
+    "real": -0.042008922436228675,
+    "imag": -0.00968633934100667
+  },
+  "gauged_total_E_transverse": {
+    "real": -0.04200892243622872,
+    "imag": -0.009686339341006656
+  },
+  "two_color": {
+    "b_then_e": {
+      "density": {
+        "real": -0.001979366918326482,
+        "imag": 0.0003759797105688498
+      },
+      "longitudinal": {
+        "real": -0.0030563538867167334,
+        "imag": -0.000006953537087836139
+      },
+      "normalized_E_transverse": {
+        "real": 0.0012082609562558142,
+        "imag": 0.009325386044950316
+      },
+      "transverse": {
+        "real": 0.002441380357558724,
+        "imag": -0.000316321978649387
+      }
+    },
+    "e_then_b": {
+      "density": {
+        "real": -0.01112370533147423,
+        "imag": 0.012983383557031089
+      },
+      "longitudinal": {
+        "real": -0.020290340977143963,
+        "imag": 0.01615451328185
+      },
+      "normalized_E_transverse": {
+        "real": -0.043217183392484496,
+        "imag": -0.019011725385956996
+      },
+      "transverse": {
+        "real": -0.004977258067049089,
+        "imag": 0.011314232154556007
+      }
+    },
+    "total": {
+      "density": {
+        "real": -0.013103072249800713,
+        "imag": 0.013359363267599941
+      },
+      "longitudinal": {
+        "real": -0.023346694863860692,
+        "imag": 0.016147559744762167
+      },
+      "normalized_E_transverse": {
+        "real": -0.04200892243622867,
+        "imag": -0.009686339341006673
+      },
+      "transverse": {
+        "real": -0.0025358777094903633,
+        "imag": 0.010997910175906617
+      }
+    }
+  },
+  "static_B_preparation": {
+    "0.001": {
+      "collisionless": {
+        "real": -0.03311624202183212,
+        "imag": -0.024259790884163888
+      },
+      "collisionless_error": 0.03169572751396806,
+      "exact_prepared_dB": {
+        "real": -0.005924308951739088,
+        "imag": -0.007974278348437747
+      },
+      "missing_population_signal": {
+        "real": 0.027086897423254267,
+        "imag": 0.01608659097895606
+      },
+      "prepared_error": 0.00022494948956303275,
+      "source_limit_status": "FINITE_Q_PREPARED_B_LIMIT_NOT_SELECTED_TAU_POLE",
+      "with_population": {
+        "real": -0.00602934459857785,
+        "imag": -0.008173199905207826
+      }
+    },
+    "0.0001": {
+      "collisionless": {
+        "real": -0.032916037890579196,
+        "imag": -0.024319201964836543
+      },
+      "collisionless_error": 0.031554872193271986,
+      "exact_prepared_dB": {
+        "real": -0.005924308951739088,
+        "imag": -0.007974278348437747
+      },
+      "missing_population_signal": {
+        "real": 0.026981337844532355,
+        "imag": 0.016324951789721265
+      },
+      "prepared_error": 0.00002251330055211838,
+      "source_limit_status": "FINITE_Q_PREPARED_B_LIMIT_NOT_SELECTED_TAU_POLE",
+      "with_population": {
+        "real": -0.005934700046046841,
+        "imag": -0.00799425017511528
+      }
+    },
+    "1e-05": {
+      "collisionless": {
+        "real": -0.03289580898224193,
+        "imag": -0.02432508677150982
+      },
+      "collisionless_error": 0.0315406206340874,
+      "exact_prepared_dB": {
+        "real": -0.005924308951739088,
+        "imag": -0.007974278348437747
+      },
+      "missing_population_signal": {
+        "real": 0.02697046206423318,
+        "imag": 0.01634881045404596
+      },
+      "prepared_error": 0.0000022515004344385725,
+      "source_limit_status": "FINITE_Q_PREPARED_B_LIMIT_NOT_SELECTED_TAU_POLE",
+      "with_population": {
+        "real": -0.005925346918008754,
+        "imag": -0.007976276317463862
+      }
+    }
+  },
+  "finite_q_zero_frequency_regulator_scan": {
+    "0.1": {
+      "value": {
+        "real": -0.01576697887296119,
+        "imag": 0.031134078372740875
+      },
+      "eta_e_times_value": {
+        "real": -0.0015766978872961191,
+        "imag": 0.0031134078372740876
+      }
+    },
+    "0.05": {
+      "value": {
+        "real": -0.026994707067340414,
+        "imag": 0.02725046502751432
+      },
+      "eta_e_times_value": {
+        "real": -0.0013497353533670209,
+        "imag": 0.001362523251375716
+      }
+    },
+    "0.025": {
+      "value": {
+        "real": -0.04068984579696865,
+        "imag": 0.018587269139877002
+      },
+      "eta_e_times_value": {
+        "real": -0.0010172461449242164,
+        "imag": 0.0004646817284969251
+      }
+    },
+    "0.0125": {
+      "value": {
+        "real": -0.05546851969160766,
+        "imag": 0.01336471069120041
+      },
+      "eta_e_times_value": {
+        "real": -0.0006933564961450958,
+        "imag": 0.00016705888364000512
+      }
+    }
+  }
+}

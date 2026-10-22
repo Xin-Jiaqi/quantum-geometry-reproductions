@@ -219,3 +219,8 @@ New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINV
 ### v72: bulk-periodic finite-q spin Zeeman charge Ward, not source PHE dc
 
 [Source-scoped v72 report](papers/xiang-2026-quantum-geometric-map/docs/BULK_FINITE_Q_SPIN_ZEEMAN_V72.md): replace bounded finite device polarization with periodic 2D Bloch scalar-potential density response at finite q and independent spin Zeeman source. Commensurate lattice longitudinal divided-difference current satisfies exact charge Ward; momentum-dependent Bloch frame requires density vertex U(k+q)†U(k). Independent spectral versus dense Liouville and analytic B versus 5-point magnetic difference agree. Mixed transverse finite-q model coefficient = −0.005924308951739−0.007974278348438i in stated arbitrary units. This is **not** the original source two-color selected-tau dc PHE or full orbital MNHE. Original paper **PARTIAL**.
+
+
+### v73: independent two-color finite-q spin-Zeeman Liouville and static B preparation
+
+[Detailed source-qualified v73 science](papers/xiang-2026-quantum-geometric-map/docs/TWO_COLOR_FINITE_Q_SPIN_PREPARATION_V73.md). Both magnetic-then-electric and electric-then-magnetic insertions with separate omegaE+i etaE / omegaB+i etaB poles, exact finite-q charge Ward and two numerically independent spectral/Sylvester implementations. Collisionless static omegaB→0 lacks diagonal Fermi population derivative; separate **explicitly labeled equilibrated-static-B protocol** restores the v72 analytic magnetic derivative as etaB→0. Original paper's **selected etaE tau pole, full homogeneous spin PHE and orbital MNHE are NOT reproduced**. Source status **PARTIAL**.

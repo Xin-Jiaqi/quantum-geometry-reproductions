@@ -364,3 +364,11 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - **VERIFIED** named finite-q longitudinal charge and dB Ward, spectral eigenbasis vs independent dense orbital Sylvester, analytic Fermi-Fréchet dB vs five-point magnetic finite difference, full momentum-dependent frame overlap.
 - **CONDITIONAL** finite-q chosen transverse midpoint vertex and scalar-potential E normalization; not the author's two-field eta_a/eta_b adiabatic tau pole or bulk PHE, no complete orbital magnetic Wannier embedding. **UNRESOLVED** source SM Eq20/31 spin index sign, main/SM helicity, orbital Eq49/52 factor and omitted 3-band terms, transport-vs-magnetization current, SI Fig2. Original article **PARTIAL**.
 - A separate N=24,32,48,64 (q=2pi/N) diagnostic changes both q and BZ sampling and exhibits non-monotonic real mixed transverse response; it is not a source-identical q→0 extrapolation. Documentation-only changes after tested merge commit alter no physics source/tests.
+
+
+### v73 | two-color finite-q spin field-order Ward and equilibrated magnetic population (2026-10-22; CI pending)
+
+- Two separately regulated external sources and full BE/EB Liouvillian orderings in periodic Bloch finite q; exact charge Ward, independently computed spectral vs dense Sylvester and smooth k-dependent frame covariance.
+- A physical preparation distinction is explicitly exposed: collisionless retarded omegaB=0 contains NO diagonal f'(E)Z_nn; equilibrated static B Fréchet population restores independent v72 magnetic derivative as etaB→0, while omission yields a nonzero ~0.03154 model error. It is NOT author Eq15's selected tau pole.
+- 45 v73 physics tests plus one independent frozen numeric regeneration, **local 46/46 PASS**. Full remote GitHub CI, PR HEAD, merge SHA and post-merge main must be checked independently before release certification.
+- **VERIFIED** named two-color finite-q model method; **CONDITIONAL** toy spin lattice, prepared-B assumption and chosen transverse midpoint current; **UNRESOLVED** author-selected electric tau pole, full original bulk spin PHE, physical Wannier orbital MNHE and source SM signs/factors/SI. Original paper **PARTIAL**.
