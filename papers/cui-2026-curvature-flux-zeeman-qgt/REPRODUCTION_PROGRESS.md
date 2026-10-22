@@ -30,13 +30,10 @@ simple-SOC control run is the next option if verified spin matrices remain absen
 
 ## Next independent milestones
 
-1. A crystallographically valid hexagonal reciprocal-space BZ for C3/C6
-   with an explicitly periodic Hamiltonian and band symmetry checks.
-2. Non-Abelian/Kramers-safe response, including TRIM and PT partners.
-3. Integrate conserved finite-q longitudinal electric and gauge-covariant
-   position-operator protocols from the earlier local Round9–11 research.
-4. Reproduce a **material-specific** response using same-gauge HR, spin
-   and position matrices; only then attempt macroscopic SI KME claims.
+1. Demonstrate BZ convergence of symmetry-allowed response components across quadrature orders on the synthetic hexagonal model.
+2. Extend cluster response to general non-Abelian/intraband metallic and conserving-collision regimes; the current cluster-flat interband protocol is not that theory.
+3. Integrate conserved finite-q longitudinal electric and gauge-covariant position-operator protocols from the earlier local Round9–11 research.
+4. Validate same-gauge Wannier Hamiltonian, physical spin and position matrices for a material; only then attempt macroscopic SI KME claims.
 
 No global completion percentage is stated because test count, physics
 generality, and true-paper observables do not share a defensible denominator.
@@ -48,7 +45,7 @@ generality, and true-paper observables do not share a defensible denominator.
 |---|---|
 | **1. Paper reproduction** | Added exact Kramers-cluster clean interband response and first Wigner-Seitz hexagon integration in periodic triangular coordinates. Still PARTIAL: full source Table I, converged material response, intraband/contacts/collisions and SI KME. |
 | **2. Physics capabilities** | Added projector Zeeman-QGT block, cluster-pair Kubo, independent cluster Liouville, D6-symmetric hexagonal quadrature, and Cartesian-velocity conversion. Near-degenerate groups are flattened to their mean energy. |
-| **3. GitHub integration** | PR #63 contains two modules, 19 tests, an audit script, scientific acceptance and a CI audit step. Unit tests on the current code pass **137/137** in Python 3.11 and 3.12; final workflow with the audit step is being checked before merge. |
+| **3. GitHub integration** | PR #63 is **merged**. Two modules, 19 tests, a reproducible audit script, scientific acceptance and the CI audit step are on main. Python 3.11 and 3.12 both report **137/137 PASS**, and the audit script ran successfully (Actions run 39730445788). |
 
 ### Round 17 measurable gates
 
@@ -63,3 +60,14 @@ generality, and true-paper observables do not share a defensible denominator.
 2. Extend cluster response to the general non-Abelian/intraband metallic and conserving-collision regime; the present cluster-flat interband protocol is not that theory.
 3. Validate same-gauge Wannier Hamiltonian, physical spin and position operators for a material.
 4. Resolve the six conditional source Table I differences and complete material-normalized Eq.(19)/SI checks.
+
+
+## Round 17 final CI and physics audit (2026-10-22)
+
+- GitHub PR #63 merged; main commit 2083a063bda0f030dd357b553c86fd6265ca97c7.
+- Actions run 39730445788: Python 3.11 and 3.12 both passed 137 tests and ran scripts/audit_round17.py.
+- Non-Abelian doublets: cluster dimensions [2, 2]; spectral cluster Kubo vs independent orbital Liouville maximum residual \(1.92\times10^{-16}\); maximum trace magnitude of the selected Zeeman-QGT block 0.09184 (synthetic natural units).
+- Hexagonal local covariance maximum across H, Cartesian velocity, Kubo and ME tensors: \(4.46\times10^{-16}\) for the four tested groups \(6,6mm,6m'm',3m'\).
+- First Wigner-Seitz hexagon area \(2\sqrt3\pi^2=34.1893125466\); order-4 rule uses 192 weighted nodes, weight sum 1.0000000000000002.
+- Order-3 integrated even/odd projector residuals: group \(6\), \(2.17\times10^{-18}\) and \(4.34\times10^{-19}\); group \(6m'm'\), \(2.43\times10^{-18}\) and \(5.96\times10^{-20}\).
+- These are synthetic model values and symmetry checks, not a converged material prediction. The full paper remains **PARTIAL**.
