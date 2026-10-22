@@ -50,3 +50,8 @@ python scripts/demo_vorticity_mpg.py
 ~~~
 
 **80 total tests** (56 preceding + 24 new). Original full-paper reproduction remains **PARTIAL**.
+
+
+## v5: microscopic antiunitary response selection (2026-10-22)
+
+[antiunitary_response.py](src/flux_lab/antiunitary_response.py) supplies exact H/velocity/true-spin transforms, Zeeman QGT pair identities, and nondegenerate frequency-domain interband Kubo/Liouville for TR (1'), C2zT (2'), and mxT (m'). It includes four-band spin x orbital coupling controls. Crucially the complex-frequency identity connects z to **-z**, not -omega+i eta at finite causal broadening. A clean paired BZ verifies forbidden and permitted odd/even channels. [Scientific details](ROUND15_ANTIUNITARY_MICROSCOPIC.md). **100 tests** (20 new); no full 31-group dynamical proof or real material observable.

@@ -1,0 +1,35 @@
+{
+  "schema": "round15-microscopic-small-v1",
+  "point": [
+    0.43,
+    -0.38
+  ],
+  "drive": [
+    0.07,
+    0.014
+  ],
+  "models": {
+    "TR": {
+      "qgt_pair_max_residual": 2.7755575615628914e-16,
+      "BZ16": {
+        "max_odd": 2.42434975903054e-18,
+        "max_even": 0.014797655905231593
+      }
+    },
+    "C2zT": {
+      "qgt_pair_max_residual": 5.9330705022734665e-18,
+      "BZ16": {
+        "max_odd": 0.0010525870045030152,
+        "max_even": 0.012439145129931628
+      }
+    },
+    "mxT": {
+      "qgt_pair_max_residual": 0,
+      "BZ16": {
+        "max_odd": 0.0015066864025707971,
+        "max_even": 0.012325799884875156
+      }
+    }
+  },
+  "note": "Frozen scalars from independent full Round15 local audit. Full 16x16/24x24 matrices retained in local research checkpoint. No materials or SI."
+}
