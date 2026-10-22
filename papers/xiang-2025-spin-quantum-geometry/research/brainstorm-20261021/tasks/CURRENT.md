@@ -31,3 +31,10 @@ The former single-link \`CURRENT.md\` URL still works, but it is a **state point
 - [Scientific literature review](../docs/PEER_WORK_AUDIT_20261021.md)
 
 Do not upload private POTCAR, system paths, large complete matrix data, private unpublished structures or raw complete job logs to this public repository.
+
+
+## Read-only follow-on prepared (not active computing)
+
+[**R2-P0 site- and mode-resolved magnetic operator audit — DRAFT, zero compute**](BD-MNPS3-R2P0-SITE-OPERATORS-DRAFT.md) is now available to the local DeepSeek harness **if the user explicitly asks it to perform the review**. It requires reading existing private R1 source/site mapping, distinguishing honeycomb Mn Néel from toy layer-odd spin, testing the actual SOC magnetic tensor and planning one-variable-at-a-time SCF stabilization **without any new Slurm/WSL/Japan compute job**.
+
+**R1 remains CLOSED**, with no new authorization to submit or restart jobs. Do not reinterpret this note as a launch signal.
