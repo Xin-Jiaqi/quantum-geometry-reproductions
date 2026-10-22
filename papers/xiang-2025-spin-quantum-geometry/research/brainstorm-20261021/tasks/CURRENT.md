@@ -51,3 +51,12 @@ Do not upload private POTCAR, system paths, large complete matrix data, private 
 ## Scientific priority note (2026-10-22)
 
 [**High-return physics ideas, peer work and falsification/kill gates**](../docs/BD_IDEA_SEARCH_DECISION_20261022.md): Prioritize an experimentally distinguishable **ferroelectric path-dependent AFM normal-mode drive** in a source-valid MnPS3 L2 site basis. The read-only active R2-P0 should report \`FE state/path × real Neel mode × symmetry-allowed E field × closest SOT precedent\`; it may assess a **second path at source/group-algebra level only**. No new DFT, Wannier, NEB, job-array or Slurm task is permitted by this note. If all relations reduce to existing tensor/normal-mode selection rules, **close this idea as NO-GO** without a speculative materials calculation.
+
+
+## Physics focus pivot: group-wide symmetry, not more MnPS3 DFT (2026-10-22)
+
+The user requested a **high-value general layer-group/representation theory research pivot**. Source: [full physics/novelty/implementation decision memo](../docs/BD_GROUP_THEORY_80_528_PIVOT_20261022.md); group-toolkit protected-main [Draft PR #32](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit/pull/32). Current proved algebraic negative control: exact UNITARY full magnetic partner domains **cannot generate a new independent mode-driving channel** merely by FE domain reorientation. This is useful standard equivariance, not independently novel.
+
+**Next scientific G1:** find one source-compatible **magnetic-site mode representation** and a FE switching operation **not** conjugating the FULL SOC magnetic Hamiltonian, alongside an exactly conjugate negative-control pair. Compare stabilizer \`Hom_H(E,mode)\` dimensions and physical mode mapping before any 80/528 table or DFT. If every apparent bright/dark case is just rotated drive axes, call NO-GO. See new 2026 spin-layer-group / magnon / FE prior-art constraints in the cumulative peer report.
+
+The previously approved **MnPS3 R2-P0 remains a separate READ-ONLY private evidence task**, not confirmed received; it can supply actual ordered sites but is **not a dependency for starting abstract group analysis**. **R1 CLOSED, no R2 compute/spending permissions or Slurm/WSL/Japan re-submission.**
