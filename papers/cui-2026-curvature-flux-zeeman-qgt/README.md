@@ -103,3 +103,17 @@ primitive BZ nodes, not a new symmetry-projected quadrature. See
 [Round21 scientific acceptance](ROUND21_OCCUPATION_PARTITION.md) and
 [reproducible sector audit](scripts/audit_occupation_partition.py).
 Eight new tests; actual CI **167/167 PASS** on Python 3.11/3.12 (Actions run 39748027692). Frozen data: results/frozen/round21_fermi_sector_audit.json. BZ convergence remains UNRESOLVED.
+
+
+## Round22: cancellation-conditioned numerical accuracy and aliasing controls
+
+A new [BZ error-budget method](src/flux_lab/bz_error_budget.py) quantifies the
+**conditional** amplification of local weighted-L1 integrand error by strong
+response cancellation and compares fixed complex response components across
+independent primitive-cell midpoint/Gauss and first-hexagon BZ sampling.
+The empirical multi-grid spread is explicitly **not a strict quadrature error
+bound**, and Fourier aliasing has a negative control.
+[Scientific acceptance](ROUND22_ERROR_BUDGET_AND_ALIASING.md) |
+[frozen data](results/frozen/round22_bz_error_budget_audit.json).
+**178/178 PASS** on both Python versions, Round21 occupation
+partition retained; complete-paper status **PARTIAL**.

@@ -134,3 +134,21 @@ The model group-6 hexagon-order8 allowed xx has cancellation factor ~8265, with 
 - PR #74 merged (squash commit b17f043972425804ceb680fd5a5839b67808e392).
 - Final double-version GitHub Actions 39748495850: Python 3.11 and 3.12 each ran **167 tests PASS**, including the reproducible occupation-sector audit.
 - Physics Registry lists this as a VERIFIED bounded model method, NOT a converged BZ response or real material KME. The previously merged Round20 bz_hotspots code remains the separate authoritative spatial hotspot tool.
+
+
+## Round22 final checkpoint — cancellation-conditioned BZ error budget
+
+| Workstream | Verified today | Open gate |
+| --- | --- | --- |
+| **1. Source-paper reproduction** | Conditional net-error amplification identity for a fixed complex response component and model-level multi-method discrepancy validation | True absolute/relative BZ integration error, original material-specific Eq.(19), full Table I and SI KME; entire Cui paper still **PARTIAL** |
+| **2. Reusable physics** | Bounded \`bz_error_budget.py\` method: four shifted midpoint meshes at coarse and fine resolution, primitive Gauss, independent hexagon Gauss, complex drift, aliasing negative control | Rigorous/adaptive integration bounds, real Wannier spin and position operators, conserving collision model |
+| **3. GitHub** | **Round22 PR #75 merged** at \`db0e10d9a5921027f0b95c16c9d1ff4a3e58d9bf\`. Prior Round21 occupation-sector PR #74 remains intact. Final Actions run **39750100446**, Python 3.11 and 3.12 both **178/178 PASS**, including all paper-specific audits | Numerical convergence certification deliberately absent |
+
+### Quantified finite-mesh evidence
+
+- Previous Round20 group 6 even yy *finite-grid* retention: 0.01424847. Under the unverified weighted-L1 perturbation premise, obtaining ≤1% relative net error requires ≤0.014248% local weighted-L1 error.
+- Group 6m'm' even xy retention: 0.788792, giving a corresponding ≤0.788792% conditional local accuracy target.
+- Four shifted 9×9 midpoint grids for group 6 have maximum complex spread 2.37929e-7; cross-method discrepancy relative to finite hex5 is ~98.87%. Group 6m'm' xy corresponding shift spread 4.43700e-7, relative disagreement ~52.83%.
+- These numbers are **empirical finite-grid disagreements**, neither rigorous bounds on the unknown exact BZ integral nor probabilistic confidence intervals.
+- The Round21 occupation-sector tool and Round22 error-budget tool are complementary: thermal sector decomposition does not in itself establish quadrature convergence.
+- Next physical milestone: controlled band/occupation-sector-resolved adaptive quadrature, treating cancellation before asserting small nonzero responses. No new VASP run is required at this point.
