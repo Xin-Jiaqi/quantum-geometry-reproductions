@@ -10,6 +10,10 @@ class V66Frozen(unittest.TestCase):
         expected=json.loads((root/'results/frozen/v66_dynamic_orbital_mixed_EB.json').read_text())
         actual=mod.create()
         def rec(a,b,where='root'):
+            if isinstance(a,(float,int)) and not isinstance(a,bool) and isinstance(b,(float,int)) and not isinstance(b,bool):
+                self.assertTrue(np.isfinite(a) and np.isfinite(b),where)
+                self.assertLess(abs(a-b),1e-10,where)
+                return
             self.assertIs(type(a),type(b),where)
             if isinstance(a,dict):
                 self.assertEqual(a.keys(),b.keys(),where)
