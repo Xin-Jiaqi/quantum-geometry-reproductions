@@ -46,13 +46,18 @@ def local_transition_diagnostic(H,V,spin,*,mu=.13,temperature=.17,z=.071+.004j,
             if labels[n]==labels[m]:continue
             de=float(e[m]-e[n]);gaps.append(abs(de))
             df=float(f[n]-f[m]);occ.append(abs(df))
-            if abs(df)<=occupation_cutoff:continue
-            active.append(abs(abs(de)-abs(z.real)))
+            # The cutoff applies ONLY to resonance/active-pair reporting.
+            # Dropping tiny occupations from the response itself is unsafe:
+            # the physically integrated tensor can be smaller than each term.
+            if abs(df)>occupation_cutoff:
+                active.append(abs(abs(de)-abs(z.real)))
+                transitions+=1
+            if df==0.:
+                continue
             denom=z*z-de*de
             if abs(denom)<1e-12:raise ValueError("on-shell pole; use nonzero eta")
             amp=(-kappa*df)*np.outer(D["v"][:,n,m],D["s"][:,m,n])/denom
             even+=amp*de;odd+=amp*z
-            transitions+=1
     if not gaps:raise ValueError("Only one cluster: no interband transitions")
     return dict(even=even,odd=odd,
                 min_intercluster_gap=float(min(gaps)),
