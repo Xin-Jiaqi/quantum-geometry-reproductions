@@ -292,3 +292,7 @@ Dual Python 3.11/3.12 **291/291 PASS** in first CI run 39899779828, including al
 | **3. GitHub & audit** | Isolated source, added tests, executable independent Round31 audit, frozen model output after first remote run, Registry and 3.11/3.12 Cui workflow audit. | Previous Round17–30 frozen outputs never rewritten; parallel BZ convergence PR #65 untouched. Final counts/CI/merge require logs on exact SHA. |
 
 [Complete Round31 derivation and scoped claims](ROUND31_BOSONIC_DAVIES_DYNAMIC_WARD.md).
+
+### Round31 remote baseline (first clean dual CI)
+
+After fixing an incorrect oscillator field alias that multiplied the independent correlation test by four, the first corrected GitHub-hosted [Round31 run 39904654968](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39904654968) passed **308/308** on both Python 3.11 and 3.12 and all past audit steps. Frozen first-run metrics show oscillator thermal KMS ~2.2e-16, Fock grand KMS 3.5e-18, local bath charge source 0.406784, finite-z full pure-gauge current 5.9e-17, missing dynamic gauge bath vertex 0.010774, source-complete finite-z magnetic Ward 1.5e-17 and omitted magnetic collision vertex 0.015032. One additional strict frozen-data regression yields expected **309** final tests, to be checked on exact final HEAD. No promotion of source Cui **PARTIAL**.

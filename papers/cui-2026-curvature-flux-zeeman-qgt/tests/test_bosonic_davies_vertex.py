@@ -168,4 +168,39 @@ class OhmicBosonicFockWard(unittest.TestCase):
         with self.assertRaises(ValueError):linear_response(d,mode="gauge",z=.4)
         with self.assertRaises(ValueError):linear_response(d,mode="bad")
 
+    def test_round31_frozen_dual_version_numeric_gate(self):
+        import json
+        from pathlib import Path
+        ref=json.loads((Path(__file__).resolve().parents[1]/
+            "results/frozen/round31_bosonic_davies_dynamic_ward.json").read_text())
+        self.assertEqual(ref["schema"],"cui-round31-bosonic-correlation-davies-finite-z-fock-ward-v1")
+        self.assertEqual(ref["paper_status"],"PARTIAL")
+        d,b,rho=sample()
+        X=np.zeros((16,16),complex);X[3,3]=1
+        balance=local_charge_balance(d,X,b["jumps"])
+        r=linear_response(d,mode="gauge",beta=BETA,mu=MU,g2=G2,cutoff=CUTOFF)
+        wrong=linear_response(d,mode="gauge",beta=BETA,mu=MU,g2=G2,
+                              cutoff=CUTOFF,include_bath_contact=False)
+        exact=1j*(d["gauge"]@rho-rho@d["gauge"])
+        weights=np.exp(-BETA*(b["energies"]-MU*b["numbers"]))
+        weights/=weights.sum()
+        actual={
+          "interacting_Fock_rate_KMS_residual_max":float(np.max(abs(
+            b["rates"]*weights[None,:]-b["rates"].T*weights[:,None]))),
+          "interacting_Fock_thermal_stationarity_max":float(np.max(abs(
+            dissipator(rho,b["jumps"])))),
+          "local_bath_charge_source_abs_max":float(np.max(abs(balance["bath_source"]))),
+          "wrong_omitted_bath_source_local_ward_max":float(np.max(abs(
+            balance["density_rate"]+np.array([balance["current"],-balance["current"]])))),
+          "gauge_finite_z_liouville_vs_exact_rotated_density_max":float(np.max(abs(
+            r["dr"]-exact))),
+          "gauge_finite_z_complete_physical_current_abs":float(abs(r["current"])),
+          "wrong_missing_bath_vertex_dynamic_density_matrix_max":float(np.max(abs(
+            wrong["dr"]-exact))),
+        }
+        self.assertEqual(ref["bohr_transition_jump_count"],b["transition_count"])
+        self.assertTrue(ref["collective_zero_frequency_jump_active"])
+        for key,val in actual.items():
+            self.assertAlmostEqual(val,ref[key],delta=2e-8,msg=key)
+
 if __name__=="__main__":unittest.main()

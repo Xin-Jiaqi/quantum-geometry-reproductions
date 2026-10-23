@@ -101,3 +101,17 @@ python -m pip install -e .
 python -m unittest discover -s tests -v
 python scripts/audit_bosonic_davies_dynamic_ward.py
 ~~~
+
+## Independently measured first remote CI and frozen numerical acceptance
+
+The corrected oscillator-annihilation operator was independently verified after the first CI revealed a **fourfold correlation-normalization bug** (displacement was accidentally counted twice). The correction was to the **operator implementation**, not to any numeric threshold. First clean PR-run [GitHub Actions 39904654968](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39904654968) passed **308/308 in Python 3.11 and 3.12**, including all past Round17–30 audits and Round31's standalone script. New mandatory [frozen Round31 JSON](results/frozen/round31_bosonic_davies_dynamic_ward.json) and one regression test increase final expected count to **309** and require an independent dual-interpreter re-run on the exact final HEAD.
+
+At beta=0.83, mu=0.16, Ohmic g2=0.045 and omega_c=2.4, **finite synthetic natural units**:
+
+- **48-level oscillator:** direct bath time-correlation vs independent thermal Bose spectral weights error **2.22e-16**; oscillator KMS ratio **2.22e-16**; continuum boson absorption/emission KMS ratio **1.11e-16**.
+- Interacting Fock: **54** nonzero Bohr transitions plus **one collective zero-frequency dephasing jump**; grand KMS rate error **3.47e-18**, interacting grand-Gibbs bath stationarity **2.67e-17**.
+- Globally number-conserving but **local** bath site charge source **0.40678398**; correctly source-inclusive continuity zero, while intentionally missing the source creates **0.40678398** spurious Ward residual.
+- Gauge-covariant static jump rotation error **8.33e-17**, stale jump error **0.0194598**, independent bath contact finite difference error **4.29e-13**.
+- Full **finite-z** U(1) response vs the exact interacting-Fock pure-gauge rotation error **1.07e-16**; pure-gauge charge density **1.38e-16** and physical bond current including Peierls contact **5.89e-17**. Missing dynamic bath contact creates erroneous density-matrix response **0.0107735**.
+- Finite-z real-physical-spin Zeeman response density matrix max **0.0518029**, source-inclusive local Ward **1.50e-17**; leaving out **B-dependent bath** vertex changes response by **0.0150318**. Independent static magnetic differentiated thermal stationarity residual **1.02e-10**.
+- All results are for a specified continuum Ohmic **model**, not measured or ab-initio electron–phonon couplings, physical metallic KME, or source Eq.(19). Source-paper status **PARTIAL**.

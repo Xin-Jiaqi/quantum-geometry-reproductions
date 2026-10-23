@@ -102,10 +102,9 @@ for key in ('local_bath_charge_source_abs_max','wrong_omitted_bath_source_local_
 assert report['collective_zero_frequency_jump_active']
 assert report['number_sector_sizes']==[1,4,6,4,1]
 reference=ROOT/'results/frozen/round31_bosonic_davies_dynamic_ward.json'
-if reference.exists():
-    expected=json.loads(reference.read_text())
-    assert report['schema']==expected['schema'] and expected['paper_status']=='PARTIAL'
-    for key,value in report.items():
-        if isinstance(value,float):
-            assert abs(value-expected[key])<2e-8,(key,value,expected[key])
+expected=json.loads(reference.read_text())
+assert report['schema']==expected['schema'] and expected['paper_status']=='PARTIAL'
+for key,value in report.items():
+    if isinstance(value,float):
+        assert abs(value-expected[key])<2e-8,(key,value,expected[key])
 print(json.dumps(report,indent=2))
