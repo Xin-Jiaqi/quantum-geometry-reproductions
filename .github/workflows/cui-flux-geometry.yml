@@ -47,3 +47,5 @@ jobs:
         run: python scripts/audit_wannier_operator_contract.py
       - name: Audit longitudinal finite-q charge gauge Ward (Round27)
         run: python scripts/audit_finite_q_gauge_ward.py
+      - name: Audit locally conserving charge collision and Zeeman gauge (Round28)
+        run: python scripts/audit_conserving_collision.py
