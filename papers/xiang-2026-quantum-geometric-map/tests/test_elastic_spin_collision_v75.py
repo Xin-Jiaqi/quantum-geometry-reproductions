@@ -4,7 +4,7 @@ from dataclasses import replace
 import numpy as np
 from qgmap.elastic_spin_collision_v75 import (
  Spec,collision_data,steady,eig_physics,sign_invariance,
- independent_weighted_spectral,time_domain_independent)
+ independent_weighted_spectral,time_domain_independent,transport_mode_closure)
 from qgmap.selected_electric_pole_v74 import Spec as PS, literal_eq20,printed_eq31
 
 class ElasticSpinCollisionV75(unittest.TestCase):
@@ -135,5 +135,26 @@ class ElasticSpinCollisionV75(unittest.TestCase):
  def test_46_overlap_strength_changes_transport(self):
   s0=replace(self.tilt,spin_overlap=0.)
   self.assertGreater(abs(steady(s0)['tau_current']-self.ss['tilt']['tau_current']),8.)
+
+ def test_47_exact_single_mode_if_untilted(self):
+  x=transport_mode_closure(self.chiral)
+  self.assertTrue(x['mode_is_exact'])
+  self.assertLess(x['eigenmode_defect'],1e-13)
+  self.assertAlmostEqual(x['rayleigh_rate'].real,self.chiral.gamma/2,places=12)
+ def test_48_tilt_breaks_single_mode_eigenclosure(self):
+  x=transport_mode_closure(self.tilt)
+  self.assertFalse(x['mode_is_exact'])
+  self.assertGreater(x['eigenmode_defect'],.004)
+ def test_49_stronger_tilt_increases_mode_mixing(self):
+  a=transport_mode_closure(self.tilt)
+  b=transport_mode_closure(self.strong)
+  self.assertGreater(b['eigenmode_defect'],a['eigenmode_defect']*3.)
+ def test_50_current_projection_tau_differs_from_rayleigh_inverse(self):
+  x=transport_mode_closure(self.tilt)
+  self.assertGreater(abs(x['current_weighted_tau']-1/x['rayleigh_rate']),.1)
+ def test_51_scalar_overlap_unltilted_mode_gamma(self):
+  x=transport_mode_closure(self.scalar)
+  self.assertTrue(x['mode_is_exact'])
+  self.assertAlmostEqual(x['rayleigh_rate'].real,self.scalar.gamma,places=12)
 
 if __name__=='__main__':unittest.main()
