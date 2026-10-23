@@ -128,3 +128,23 @@ def time_domain_independent(s=Spec(n=24),duration=200.):
     P=np.outer(np.ones(s.n),w)
     finite=np.linalg.solve(L+P,(np.eye(s.n)-expm(-L*duration))@v)
     return {'distribution':finite,'weighted_number':float(np.real(np.dot(w,finite)))}
+
+
+def transport_mode_closure(s=Spec()):
+    """Exact criterion for replacing the electric intraband pole by one tau.
+
+    Scalar tau works on a named electric mode iff L v = lambda v on the
+    conserved-density-orthogonal subspace. The defect quantitatively tests
+    this criterion; a fitted current tau_eff is weaker than mode closure.
+    """
+    d=collision_data(s);w=d['weights'];L=d['L']
+    v=d['vy']-np.dot(w,d['vy'])
+    Lv=L@v
+    p=lambda a,b:np.dot(w,np.conj(a)*b)
+    norm=float(np.real(p(v,v)))
+    lam=complex(p(v,Lv)/norm)
+    defect=float(np.sqrt(np.real(p(Lv-lam*v,Lv-lam*v))/norm))
+    return {'rayleigh_rate':lam,'eigenmode_defect':defect,
+            'mode_is_exact':defect<1e-12,
+            'current_weighted_tau':steady(s)['tau_current'],
+            'status':'ELECTRIC_INTRABAND_COLLISION_MODE_ONLY_NOT_FULL_EB'}
