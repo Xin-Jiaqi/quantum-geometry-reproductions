@@ -67,11 +67,10 @@ assert report["physical_spin_kinetic_response_blocked"]
 assert report["wsvec_dependent_input_rejected"]
 assert not report["authentic_material_input_found"] and report["original_paper_status"]=="PARTIAL"
 ref=ROOT/"results/frozen/round33_native_wannier90_hr_r_audit.json"
-if ref.exists():
-    target=json.loads(ref.read_text())
-    for k,value in report.items():
-        if isinstance(value,float):
-            assert abs(value-target[k])<2e-11,(k,value,target[k])
-        else:
-            assert value==target[k],(k,value,target[k])
+target=json.loads(ref.read_text())
+for k,value in report.items():
+    if isinstance(value,float):
+        assert abs(value-target[k])<2e-11,(k,value,target[k])
+    else:
+        assert value==target[k],(k,value,target[k])
 print(json.dumps(report,indent=2))

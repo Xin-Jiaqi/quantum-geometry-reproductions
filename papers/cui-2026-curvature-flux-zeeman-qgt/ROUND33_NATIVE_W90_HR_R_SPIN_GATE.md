@@ -53,3 +53,16 @@ python scripts/audit_native_wannier90_hr_r.py
 ~~~
 
 The original Cui paper remains **PARTIAL** irrespective of synthetic test count.
+
+## Remote first-run evidence, exact fixture numbers, and frozen acceptance
+
+Initial GitHub PR CI [39911971914](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39911971914) independently passed **344/344** Cui isolated tests and all existing Round17–32 plus new Round33 audits in **Python 3.11 and 3.12**. New frozen JSON [round33_native_wannier90_hr_r_audit.json](results/frozen/round33_native_wannier90_hr_r_audit.json) records actual Python 3.11 remote output before it was added as a regression. The final commit must pass **345/345** and all audits in both interpreters before merging.
+
+Native **generated-format** 2-band, three-R tests show:
+- Wigner–Seitz weights exactly **[2,1,2]** and native hr and r weighted reconstructions **0**.
+- Independently analytical complex H(q) Fourier error **1.5515838458e-17 eV**, all Cartesian position Fourier error **0**, k-space H Hermiticity error **1.55e-17 eV**, and onsite centers matching raw r **0 Å**.
+- **Deliberately omit the hr-only degeneracy weight:** H(k) differs by **0.1059858083 eV**, proving nontrivial scientific importance.
+- Already-expanded write_ndegen_applied control: residual **0**; unsupported unexpanded wsvec case rejected.
+- Recorded invariants \`authentic_material_input_found=false\`, \`wannier_physical_spin_provenance_authenticated=false\`, \`spn_bloch_to_wannier_gauge_implemented=false\`, \`kme_real_material_ready=false\`, original paper **PARTIAL**.
+
+This stage parses bona fide **text grammar**, not bona fide first-principles materials source content.

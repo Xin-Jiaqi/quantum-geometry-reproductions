@@ -194,4 +194,31 @@ class NativeW90HREvidence(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"fractional 2D"):
                 x.fourier([float("nan"),.3])
 
+    def test_frozen_round33_first_remote_raw_file_format_numbers(self):
+        import json
+        raw=json.loads((Path(__file__).resolve().parents[1]/
+            "results/frozen/round33_native_wannier90_hr_r_audit.json").read_text())
+        self.assertEqual(raw["schema"],"cui-round33-w90-native-hr-r-degeneracy-spin-blocked-v1")
+        self.assertEqual(raw["original_paper_status"],"PARTIAL")
+        self.assertFalse(raw["authentic_material_input_found"])
+        self.assertFalse(raw["wannier_physical_spin_provenance_authenticated"])
+        self.assertFalse(raw["kme_real_material_ready"])
+        with tempfile.TemporaryDirectory() as td:
+            f=fixture(td);b=import_pair(f);H,A=b.fourier([.217,.13])
+            phase=np.exp(2j*np.pi*.217)
+            H_analytic=f["heff"][1]+phase*f["heff"][2]+phase.conjugate()*f["heff"][0]
+            Re=np.exp(2j*np.pi*(b.R[:,:2]@np.array([.17,0])))
+            missing=np.einsum("r,rij->ij",Re,f["hraw"])
+            corrected=b.fourier([.17,0])[0]
+            calculated={
+              "native_weighted_h_reconstruction_max":float(np.max(abs(b.h_r-f["heff"]))),
+              "native_weighted_r_reconstruction_max":float(np.max(abs(b.position_r-f["aeff"]))),
+              "analytic_complex_fourier_H_max":float(np.max(abs(H-H_analytic))),
+              "wrong_omitted_ws_degeneracy_H_max":float(np.max(abs(missing-corrected))),
+            }
+            for key,val in calculated.items():
+                self.assertAlmostEqual(val,raw[key],delta=2e-11,msg=key)
+            self.assertEqual(list(b.degeneracy),raw["wigner_seitz_degeneracy"])
+            self.assertFalse(b.physical_spin_available)
+
 if __name__=="__main__":unittest.main()

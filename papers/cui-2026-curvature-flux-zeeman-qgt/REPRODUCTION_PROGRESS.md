@@ -320,3 +320,7 @@ Initial GitHub-hosted Python 3.11/3.12 **326/326 PASS** and all Round17–32 aud
 | **3. GitHub** | Isolated parser/test/audit, exact CI/frozen synthetic file-format benchmark and Physics Registry entry. | All Round17–32 baselines and unrelated PRs untouched; final CI claims require real logs on exact SHA. |
 
 [Round33 native file contract and source provenance limitations](ROUND33_NATIVE_W90_HR_R_SPIN_GATE.md).
+
+### Round33 measured first real dual-CI and source-authenticity boundary
+
+First remote GitHub CI 39911971914 passed **344/344 in both Python 3.11/3.12**, including the native-format H/r audit and all Round17–32 steps. Weighted analytical H(q) residual **1.55e-17 eV**, r reconstruction and centers **0 Å**, omitted Wigner–Seitz degeneracy **0.1059858 eV** wrong result. A strict frozen numerical regression adds one test (expected final **345**). **Original Wannier90 first-principles files and genuine physical-spin Bloch→Wannier data were not found.** Parsing generated file-format fixtures never resolves Cui **PARTIAL**.
