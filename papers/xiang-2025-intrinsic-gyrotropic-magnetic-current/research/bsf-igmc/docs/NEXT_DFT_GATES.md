@@ -11,9 +11,9 @@ The project has moved beyond a purely blocked preflight: one C2DB-derived B1 can
 
 See PR #38 and the committed screening receipt. Do not rerun this gate.
 
-## Gate 1 — proposed, not executed: one SOC-on B1 static screen
+## Gate 1 — completed as a low-cost SOC-on B1 static screen
 
-Use the screened B1 coordinates, noncollinear VASP executable, declared x-axis Type-I MAGMOM seed, no ionic relaxation, and a single bounded local WSL run. Verify SCF, site-resolved spin/orbital moments, occupation gap and the actual magnetic symmetry. Full preflight, INCAR and output contract are in [B1_SOC_STATIC_SCREENING_TASK_20261022.md](../agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_SOC_STATIC_SCREENING_TASK_20261022.md). This requires explicit authorization; it is not a task execution record.
+Completed in commit fee4e62 with VASP vasp_ncl, 64 electronic iterations to EDIFF=1e-6, gap diagnostic 1.3616 eV, dominant Type-I spin pattern retained, Ag local PAW orbital Lz≈+0.070 μB. The moments are pairwise consistent with conditional m'_x at printed precision; full magnetic density and easy axis are unverified. The run **exceeded** its authorized 4h cap (4.658h); see the independent audit and original receipt. No additional compute is authorized. The original specification is [here](../agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_SOC_STATIC_SCREENING_TASK_20261022.md).
 
 ## Gate 2 — zero-DFT response-symmetry check
 
@@ -38,6 +38,6 @@ Only after a response signal survives should we invest in high-accuracy relaxati
 
 ## Current status
 
-**B1 non-SOC screening: PASS. SOC magnetic state: NOT TESTED. Channel-resolved real-material IGMC: NOT COMPUTED. B1/B2 local minima and material-specific switching barrier in this independent workflow: NOT VERIFIED.** Published AgF₂ BSF results remain literature evidence, not newly reproduced results.
+**B1 non-SOC screening: PASS. B1 SOC electronic screening: PASS with resource-cap violation. Conditional m'_x: site moments PASS at printed precision, full magnetic-group certification NOT DONE. Channel-resolved material IGMC: NOT COMPUTED. Independent B1/B2 local minima and barrier: NOT VERIFIED.** Published AgF₂ BSF results remain literature evidence, not newly reproduced results.
 
-The proposed next task is the single SOC static screen in PR #38; no VASP, PBS, Wannier or response run was started by this document.
+The proposed next step is only the [read-only SOC response-theory gate](../agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/soc_static_1/B1_SOC_RESPONSE_THEORY_READONLY_HARNESS_TASK_20261023.md), to reconcile source Eq.(14) and the matched spin/position operator chain before any new computational approval.
