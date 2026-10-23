@@ -315,3 +315,16 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Original published dc spin PHE and orbital MNHE | Eq31 sign, main/SM helicity, phenomenological tau collision mechanism, Fig2 SI and orbital multi-band Wannier sectors | **UNRESOLVED, paper PARTIAL** |
 
 45 new model physics gates + 1 independent frozen numeric regeneration; six full-repo v49/v50 source cross-oracles are skipped in portable v60+ handoff, not claimed local PASS. See [v74 report](SELECTED_ELECTRIC_POLE_SOURCE_AUDIT_V74.md).
+
+
+## v75: signed original source and explicit elastic Dirac collision
+
+| Goal | Independent evidence | Scientific state |
+| --- | --- | --- |
+| Literal Eq20 versus printed Eq31 sign | Under original common epsilon/v/Z conventions Eq20 gives +tau sum Z df, printed Eq31 -tau sum Z df; four-band random Hermitian and common spin/position flips, plus source v49/v50 bridge | **VERIFIED local formula incompatibility; author's intended final sign OPEN** |
+| Physically elastic tilted Dirac energy shell | r(e,theta)=e/(1+beta cos theta), DOS angular weights (1+beta cos theta)^-2, energy shell conserved | **VERIFIED model kinematics** |
+| Elastic short-range Born-style impurity collision | Nonnegative W_ij=gamma*w_j*(1+spin_overlap*cos delta), weighted detailed balance, particle number, unique zero mode and positive weighted spectrum; independent direct inverse, weighted eigenbasis and finite-time exponential evolution | **VERIFIED named kinetic toy** |
+| Distinguish transport versus quantum lifetimes | At beta=0 spin-overlap 1 gives gamma*tau_tr=2, gamma*tau_q=1 exactly; beta=.125 gamma*tau_eff=1.961508, beta=.5 gamma*tau_eff=1.492820 | **VERIFIED named single-band model, NOT author gamma or PHE tau** |
+| Original full mixed EB Liouville conserving collision | Must extend to both bands, energies, magnetic preparation, interband coherence and EB vertex; no real impurity constants or author relaxation mechanism given | **UNRESOLVED; whole source PARTIAL** |
+
+v75 local 46 named physical tests plus one independent frozen-data provenance test **47/47 PASS**; four original-source bridge tests require full v49/v50 GitHub history and **SKIP** in standalone snapshot, full remote CI required for release.
