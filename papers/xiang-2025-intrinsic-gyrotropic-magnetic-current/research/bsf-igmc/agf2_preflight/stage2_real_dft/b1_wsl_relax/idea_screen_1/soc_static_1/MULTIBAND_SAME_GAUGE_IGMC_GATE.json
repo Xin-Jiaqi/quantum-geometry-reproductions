@@ -492,40 +492,50 @@
         "row_min": 1.900634646044187,
         "row_max": 2.194188739752638,
         "branch_margin_rad": 0.9474039138371553,
-        "winding_wrapped_rad": -0.001744580967561138,
-        "winding_chern_like": false
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.001744580967561138,
+        "winding_max_local_step_rad": 0.022475942933048998,
+        "winding_jump_like": false
       },
       "-0.0001": {
         "max_adjacent_ky_jump": 0.022475783487714285,
         "row_min": 1.9006294847220015,
         "row_max": 2.19418154643906,
         "branch_margin_rad": 0.947411107150733,
-        "winding_wrapped_rad": -0.0017445754421792081,
-        "winding_chern_like": false
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.0017445754421792081,
+        "winding_max_local_step_rad": 0.022475783487714285,
+        "winding_jump_like": false
       },
       "0.0001": {
         "max_adjacent_ky_jump": 0.022476102365773354,
         "row_min": 1.900639806394365,
         "row_max": 2.194195931935692,
         "branch_margin_rad": 0.9473967216541013,
-        "winding_wrapped_rad": -0.0017445864926850518,
-        "winding_chern_like": false
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.0017445864926850518,
+        "winding_max_local_step_rad": 0.022476102365773354,
+        "winding_jump_like": false
       },
       "-0.001": {
         "max_adjacent_ky_jump": 0.022474347904918535,
         "row_min": 1.9005829887767518,
         "row_max": 2.194116755348586,
         "branch_margin_rad": 0.947475898241207,
-        "winding_wrapped_rad": -0.0017445257021595495,
-        "winding_chern_like": false
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.0017445257021595495,
+        "winding_max_local_step_rad": 0.022474347904918535,
+        "winding_jump_like": false
       },
       "0.001": {
         "max_adjacent_ky_jump": 0.02247753669999497,
         "row_min": 1.9006862061106569,
         "row_max": 2.194260611104233,
         "branch_margin_rad": 0.9473320424855602,
-        "winding_wrapped_rad": -0.0017446362073005872,
-        "winding_chern_like": false
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.0017446362073005872,
+        "winding_max_local_step_rad": 0.02247753669999497,
+        "winding_jump_like": false
       }
     },
     "finite_b_drift": {
@@ -535,15 +545,15 @@
       "0.001": 7.1871351595032e-05
     },
     "winding": {
-      "0.0": -0.001744580967561138,
-      "-0.0001": -0.0017445754421792081,
-      "0.0001": -0.0017445864926850518,
-      "-0.001": -0.0017445257021595495,
-      "0.001": -0.0017446362073005872
+      "0.0": 0,
+      "-0.0001": 0,
+      "0.0001": 0,
+      "-0.001": 0,
+      "0.001": 0
     },
     "sum_vs_total_consistency": null,
     "chern_winding_flagged": false,
-    "note": "row phases are smooth and away from the +/-pi branch cut; any Chern/winding case is flagged explicitly, not smoothed"
+    "note": "row phases are smooth and away from the +/-pi branch cut; nonzero integer winding (Chern-like) is flagged explicitly with its closure residual and never silently smoothed"
   },
   "liouville": {
     "N21": {
@@ -601,5 +611,5 @@
     "meaning": "corrected multiband low-omega Dxx result survives (direct +0.0342937 vs Wilson +0.0341517 at 41^2, 0.41%); gate PASS = allowed to develop a genuine source-authenticated H/S/A file importer; NOT material IGMC, NOT permission for costly DFT/Wannier",
     "survives_low_omega_Dxx": true
   },
-  "elapsed_sec": 175.9
+  "elapsed_sec": 236.5
 }

@@ -51,6 +51,7 @@ from wannier_operator_contract_pinned26 import (
     WannierOperatorBundle,
     UNITS,
 )
+from import_hsa_operator_bundle import wilson_winding_unwrapped
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
@@ -318,8 +319,12 @@ def wilson_branch_check(rows_by_b, det_phase_total_by_b=None):
     finite-b drift: RAW (unwrapped) |gamma(b)-gamma(0)| >= pi at any ky
     (wrapped differences are always <= pi by construction, so the raw drift
     is the branch-jump-in-b detector; row phases off the cut make it
-    meaningful). Reports winding per row set; |winding| >= pi is flagged
-    explicitly as a Chern/winding case (never silently smoothed).
+    meaningful). The winding is the integer 2pi winding of the unwrapped
+    Wilson flow over the periodic ky cycle (wilson_winding_unwrapped,
+    Phase C of the import round), with closure residual and a jump-like
+    flag for windings acquired in one local step (never silently smoothed).
+    The old abs(wrap(last-first)) >= pi predicate is unreachable (wrap lies
+    in [-pi, pi)) and is replaced by the unwrapped winding.
     """
     wrap = lambda x: (x + np.pi) % (2 * np.pi) - np.pi
     jumps, drift, margins, winding = {}, {}, {}, {}
@@ -327,12 +332,14 @@ def wilson_branch_check(rows_by_b, det_phase_total_by_b=None):
     for bf, r in rows_by_b.items():
         adj = float(np.max(np.abs(wrap(np.diff(r))))) if r.size > 1 else 0.0
         margin = float(np.min(np.minimum(np.abs(r - np.pi), np.abs(r + np.pi))))
-        wind = float(wrap(r[-1] - r[0]))
+        wind, wres, wmax, wjump = wilson_winding_unwrapped(r)
         jumps[str(bf)] = {"max_adjacent_ky_jump": adj,
                           "row_min": float(r.min()), "row_max": float(r.max()),
                           "branch_margin_rad": margin,
-                          "winding_wrapped_rad": wind,
-                          "winding_chern_like": bool(abs(wind) >= np.pi)}
+                          "winding_integer": wind,
+                          "winding_closure_residual_rad": wres,
+                          "winding_max_local_step_rad": wmax,
+                          "winding_jump_like": bool(wjump)}
         margins[str(bf)] = margin
         winding[str(bf)] = wind
         if adj >= np.pi:
@@ -357,11 +364,13 @@ def wilson_branch_check(rows_by_b, det_phase_total_by_b=None):
             if abs(res) > 1e-6:
                 raise RuntimeError(f"row-sum vs total det-W phase mismatch {res} "
                                    f"at b={bf} (branch inconsistency)")
+    chern = any(w != 0 for w in winding.values())
     return {"jumps": jumps, "finite_b_drift": drift, "winding": winding,
             "sum_vs_total_consistency": consistency,
-            "chern_winding_flagged": any(v >= np.pi for v in winding.values()),
+            "chern_winding_flagged": chern,
             "note": "row phases are smooth and away from the +/-pi branch cut; "
-                    "any Chern/winding case is flagged explicitly, not smoothed"}
+                    "nonzero integer winding (Chern-like) is flagged explicitly "
+                    "with its closure residual and never silently smoothed"}
 
 
 def embedded_wilson_det_phases(bundle, N, bfield):

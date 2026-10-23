@@ -73,7 +73,9 @@ def test_r3_wilson_branch_jump_rejected():
 
 def test_r4_finite_b_drift_flag():
     fake0 = np.zeros(3)
-    fakeb = np.full(3, 3.5)          # drift 2.78 rad >= pi, rows stay off the cut
+    fakeb = np.full(3, 3.5)          # RAW drift 3.5 rad > pi (wrapped ~2.78 rad
+                                     # < pi: the raw/unwrapped difference is the
+                                     # branch-jump-in-b detector); rows off cut
     try:
         G.wilson_branch_check({0.0: fake0, 1e-4: fakeb})
     except RuntimeError as e:
