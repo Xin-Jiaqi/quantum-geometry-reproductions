@@ -240,3 +240,13 @@ At fractional q=(.183,-.271), Wilson dH residual 1.51e-10 eV·Å; spin gradient 
 | **3. GitHub / CI** | Isolated Round27 source, 16 new tests, frozen numerical audit, scoped Physics Registry entry, new workflow step. **CI/merge acceptance determined from actual remote logs only.** | Unrelated open PR #65 untouched; old Round21/26 frozen code intact. |
 
 At q=(1,1) on the 3×3 torus, z_drive=.42+.09i: spectral vs Liouville 3.73e-15, charge 2.22e-15, contact-complete bond current 3.43e-15. Dropping the bond-current contact yields a spurious current **1.34659** and finite-q local continuity violation **3.59468**. These are natural-unit synthetic benchmarks, not SI observables.
+
+## Round28 | Charge-conserving linearized collision and Zeeman-response gauge guard
+
+| Progress line | Actual bounded new capability | Still unresolved |
+| --- | --- | --- |
+| **1. Original Cui paper** | Clean finite-q Ward upgraded to a *synthetic linearized* finite-gamma local continuity/gauge-covariance check, plus magnetic Pauli-Zeeman drive. **Whole original paper PARTIAL.** | Microscopic collision self-energy+Ward vertex, metallic transport/Drude, real material same-gauge spin and position, source Eq.(19) SI, Table I. |
+| **2. Physics capability** | Site-local projector Q conserves every charge density; external Peierls gauge covariant reference; independent orbital Liouville versus spectral fixed-point; naive RTA violates local continuity, omitted reference violates gauge covariance despite local conservation. | No autonomous CP thermal bath, detailed balance, real impurity/phonon kinetics, thermodynamic BZ convergence. |
+| **3. GitHub/CI** | Isolated Round28 tests, executable independent collision audit, frozen reference after dual CI, Physical Capability Registry and a new workflow step. PR/CI status must be verified on the exact tested SHA. | Round21/26/27 and parallel PR #65 untouched; paper never auto-upgraded by test count. |
+
+**Acceptance gate:** genuine remote Python 3.11/3.12 entire Cui suite, all Round17–28 scripts and fixed numerical negative-control benchmark. Scientific scope and derivation: [Round28](ROUND28_LOCAL_CONSERVING_COLLISION.md).
