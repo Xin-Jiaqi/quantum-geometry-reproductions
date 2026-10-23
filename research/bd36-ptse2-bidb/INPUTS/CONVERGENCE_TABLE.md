@@ -1,4 +1,4 @@
-# BD36 | 收敛表（CONVERGENCE_TABLE.md, rev R1.1）
+# BD36 | 收敛表（CONVERGENCE_TABLE.md, rev R1.2）
 
 > NOT_RUN — 收敛测试在作业授权后执行；本表定义测试矩阵与通过标准。所有能量为待测值。
 
@@ -18,7 +18,10 @@
 | 检验 | 标准 |
 |---|---|
 | k 列表一致性 | win `begin kpoints` 由 `make_win_kpoints.py` 从 IBZKPT/OUTCAR 生成；数量 == VASP 实际 k（ISYM=−1, 9×9×1 → 81）|
-| 接口输出 | `.eig/.amn/.mmn/.spn`（+UNK 如需）齐全；`read_spn.py` 维度 44×44×3（单层 22）、Hermite ≤1e-6、σ_z 迹检验 |
+| 接口输出 | `.eig/.amn/.mmn/.spn`（+UNK 如需）齐全；`read_spn.py` 按真实格式解析：
+  .spn 为 **Bloch 本征态基**（头 `nbnd nk`；2253 双层 nbnd=64, nk=81 → 数组 (81,64,64,3)），
+  经规范变换 S^W=U†S U 得 Wannier 基 (81,44,44,3)（单层 (81,22,22,3)）；
+  Hermite ≤1e-6、σ_z 迹检验（已知矩阵单元测试覆盖） |
 | 投影能带（froz 窗口内 WFs vs 原始带）| 插值误差 ≤ 5 meV（记录实测；若 >5 meV 换窗口/基组）|
 | hr.dat 厄米/平移 | R 与 −R 共轭、模平移一致性 |
 | .spn 规范 | 与 hr 同规范；层投影算符 P_layer S_z P_layer 的迹/归一 |

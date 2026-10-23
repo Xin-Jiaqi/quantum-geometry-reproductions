@@ -35,8 +35,10 @@ OUT = ROOT / "INPUTS"
 
 ENCUT = 500
 KGRID = "9 9 1"
-CAPS = {"cores": 28, "wall_h": 2, "job_core_h": 56, "round1_core_h": 500,
-        "conv_core_h": 28}
+CAPS = {"cores": 28, "wall_h": 2, "job_core_h": 56, "conv_core_h": 28,
+        "phase0_validation_core_h": 56,   # para step-0 in-place interface validation
+        "phase1_round1_core_h": 448,       # 3 structures x 2 jobs x 56 + 4 conv x 28
+        "total_core_h": 504}
 
 
 def sha(path):
@@ -80,6 +82,8 @@ LWAVE    = .FALSE.
 LCHARG   = .TRUE.
 LORBIT   = 11
 NCORE    = 4
+LASPH     = .TRUE.
+GGA_COMPAT = .FALSE.
 """
 
 INCAR_SOC = """# BD36 zero-field nonmagnetic SOC static (PBE+D3+LSORBIT)
@@ -104,6 +108,8 @@ LWAVE    = .TRUE.
 LCHARG   = .TRUE.
 LORBIT   = 11
 NCORE    = 4
+LASPH     = .TRUE.
+GGA_COMPAT = .FALSE.
 """
 
 INCAR_SOC_W90_VASP6 = """# BD36 SOC + VASP6 native W90 interface (IMR target)
@@ -133,6 +139,8 @@ LWAVE    = .TRUE.
 LCHARG   = .TRUE.
 LORBIT   = 11
 NCORE    = 4
+LASPH     = .TRUE.
+GGA_COMPAT = .FALSE.
 """
 
 INCAR_SOC_W90_VASP544 = """# BD36 SOC + VaspWannier(v5.4.4) W90 interface (para variant)
@@ -164,6 +172,8 @@ LWAVE    = .TRUE.
 LCHARG   = .TRUE.
 LORBIT   = 11
 NCORE    = 4
+LASPH     = .TRUE.
+GGA_COMPAT = .FALSE.
 """
 
 W90_WIN = """# BD36 {tag} wannier90.win (spinors; .spn via VASP LWRITE_SPN, NOT spin=true)
@@ -266,9 +276,12 @@ STRUCTURES = {
 
 
 def sd_flags(n, kind):
+    # VASP selective-dynamics semantics: T = coordinate FREE, F = coordinate
+    # FIXED. Bilayers: x,y FIXED (F F) + z FREE (T) -> "F F T", preserving the
+    # in-plane registry exactly. Monolayer: full relaxation "T T T".
     if kind == "monolayer":
         return ["T T T"] * n          # full relaxation (independent control)
-    return ["T F F"] * n              # registry-preserving: x,y frozen, z free
+    return ["F F T"] * n              # registry-preserving: x,y FIXED, z FREE
 
 
 def main():
@@ -314,12 +327,13 @@ def main():
         (d / "run_env.example.sh").write_text(RUN_ENV_EXAMPLE)
         (d / "README").write_text(
             f"BD36 {tag} ({phase}; {kind}). Inputs frozen, NOT_RUN.\n"
-            f"POSCAR_SD: {'monolayer full relax T T T' if kind == 'monolayer' else 'bilayer registry-preserving T F F (x,y frozen, z free)'}.\n"
+            f"POSCAR_SD selective-dynamics semantics (VASP): T = coordinate FREE, F = coordinate FIXED.\n"
+            f"POSCAR_SD: {'monolayer full relax T T T (all coordinates FREE, no fixed components)' if kind == 'monolayer' else 'bilayer registry-preserving F F T (x,y FIXED - in-plane registry exactly preserved; z FREE - interlayer relaxation only)'}.\n"
             f"wannier90.win: num_wann={num_wann} (Pt:d + Se:p x spinor), atoms_frac from THIS POSCAR "
             f"(slide-correct); kpoints block GENERATED post-SCF by make_win_kpoints.py.\n"
             f"Interface: LWANNIER90 + LWRITE_SPN (vasp6 or vasp544 variant); no spin=true, no embedded WANNIER90_WIN.\n"
             f"POTCAR absent (private; assembled at execution, SHA256 recorded locally).\n"
-            f"Caps: {CAPS['cores']} cores x {CAPS['wall_h']} h per job; round-1 total <= {CAPS['round1_core_h']} core-h.\n")
+            f"Caps: {CAPS['cores']} cores x {CAPS['wall_h']} h per job; phased: phase0 validation {CAPS['phase0_validation_core_h']}, phase1 round-1 {CAPS['phase1_round1_core_h']}, total {CAPS['total_core_h']} core-h.\n")
         manifest[tag] = {
             "poscar": posname, "poscar_sha256": sha(src), "phase": phase, "kind": kind,
             "num_wann": num_wann, "n_atoms": n,

@@ -1,9 +1,16 @@
 {
+  "budget_phases": {
+    "phase0_validation_core_h": 56,
+    "phase1_round1_core_h": 448,
+    "total_core_h": 504
+  },
   "caps": {
     "conv_core_h": 28,
     "cores": 28,
     "job_core_h": 56,
-    "round1_core_h": 500,
+    "phase0_validation_core_h": 56,
+    "phase1_round1_core_h": 448,
+    "total_core_h": 504,
     "wall_h": 2
   },
   "structures": {
@@ -11,6 +18,7 @@
       "PASS": "E POTCAR absent (private; assembled at execution)"
     },
     "2253_bilayer_baseline": {
+      "FAIL": "C INCAR_relax INCOMPATIBLE",
       "PASS": "E POTCAR absent (private; assembled at execution)"
     },
     "2253_generic_m008_m019": {

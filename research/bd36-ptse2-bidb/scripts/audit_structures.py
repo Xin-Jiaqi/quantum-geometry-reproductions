@@ -34,10 +34,13 @@ def parse_poscar(path):
     lat *= scale
     species = lines[5].split()
     counts = [int(x) for x in lines[6].split()]
-    assert lines[7].split()[0][0] in "DdKkCc", f"coord type line: {lines[7]}"
-    direct = lines[7].split()[0][0] in "DdKk"
+    sd = lines[7].strip().lower().startswith("selective")
+    coord_ln = lines[8] if sd else lines[7]  # real CONTCAR may carry
+    assert coord_ln.split()[0][0] in "DdKkCc", f"coord type line: {coord_ln}"
+    direct = coord_ln.split()[0][0] in "DdKk"
+    atom_start = 9 if sd else 8
     coords = []
-    for ln in lines[8:8 + sum(counts)]:
+    for ln in lines[atom_start:atom_start + sum(counts)]:
         coords.append([float(x) for x in ln.split()[:3]])
     coords = np.array(coords)
     if not direct:

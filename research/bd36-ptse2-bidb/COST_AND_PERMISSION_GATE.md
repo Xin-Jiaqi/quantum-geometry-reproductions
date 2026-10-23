@@ -1,6 +1,6 @@
-# BD36 | 计算资源与授权门（COST_AND_PERMISSION_GATE.md, rev R1.1）
+# BD36 | 计算资源与授权门（COST_AND_PERMISSION_GATE.md, rev R1.2）
 
-> 状态：**READ_ONLY**（2026-10-23, R1.1）。未获明确批准前，**禁止** qsub / sbatch /
+> 状态：**READ_ONLY**（2026-10-23, R1.2）。未获明确批准前，**禁止** qsub / sbatch /
 > VASP 生产作业 / 远端修改 / WSL·Slurm 新提交。授权范围仅限只读检查、输入生成、
 > 静态测试与本地非生产性验证（均已执行，见 LOGS/）。
 
@@ -14,21 +14,31 @@
 | xingyi（广州）| Slurm | — | — | — | — | 组配额 98.6% 满，不推荐 |
 
 **IMR 工具链核查结论（如实报告）**：本沙箱（两跳、密钥带口令、禁 pty）**无法实际登录 IMR**，
-因此 IMR 的 VASP 版本、Wannier90、POTCAR(Pt/Se) 均为**待确认**状态；LWRITE_SPN 支持按
-VASP 6.4.3+ 文档设计（用户审阅意见提示 6.4.3+ 含 LWRITE_SPN）。**授权申请中必须附带用户对
+因此 IMR 的 VASP 版本、Wannier90、POTCAR(Pt/Se) 均为**待确认**状态。**授权申请中必须附带用户对
 IMR 工具链的确认**（版本 ≥ 6.4.3、vasp_ncl、wannier90.x、POTCAR Pt/Se 路径）。
 
-**para 核查结论**：wannier90.x=3.0.0（`.spn` 由 VASP 写出，不依赖 w90 自身 spin 选项）；
+**R1.2 关键官方核实（VASP wiki, 2024-10 版）**：`LWRITE_SPN` **仅 VASP > 6.4.2 提供**
+（wiki 原文 "Available for VASP version > 6.4.2"，且仅支持默认 SAXIS=0 0 1）→
+**para 的 VASP 5.4.4 官方不支持 LWRITE_SPN**（其 VaspWannier 二进制含该关键字属自定义构建，
+输出正确性未验证）→ **para 第 0 步的裁决意义进一步上升**：通过则 para 可用；不通过则
+.spn 主路径只能是 **IMR（≥6.4.3）或 WSL（6.6.0）**。.spn 格式已按 wannierberri 生产解析器 +
+wannier90 `conv_write_spn` 源码确认：头 `nbnd nk`、每 k 点 3×nbnd(nbnd+1)/2 行 "re im"、
+**Bloch 本征态基**、压缩下三角（每三角元素 3 分量连续写）、对角虚部≈0；
+Wannier 基算符经规范变换 S^W=U† S U（`read_spn.py` R1.2 已按此重写并过已知矩阵单元测试）。
+
+**para 核查结论（R1.2 更新）**：wannier90.x=3.0.0（`.spn` 依赖 VASP 写出；官方文档该特性仅 >6.4.2，见上）；
 VaspWannier vasp_ncl 二进制含 LWRITE_SPN 等关键字（strings 实证），但 HgI2 L1 基准
 目录**无任何输出**（eig/amn/mmn/UNK/.spn 全无）→ **端到端从未验证**。因此 para 路径的
 生产前必须通过一个**就地接口验证作业**（见 §3 方案 A 的第 0 步）。
 
-## 2. 作业核时上限（R1.1 修正，INPUTS/caps.json）
+## 2. 作业核时上限（R1.2 分阶段修正，INPUTS/caps.json）
 
-- 单作业：**28 核 × ≤2 h（≤56 核时）**；
-- 收敛测试作业：**≤28 核时/个**；
-- **Round-1 总预算 ≤ 500 核时**（最小集 3×(relax+soc_w90) = 336 + 收敛 4×28 = 112 → 448 核时）；
-- 静态检查器 `static_check_inputs.py` 强制校验上述上限（0 FAIL 才可进入授权队列）。
+- 单作业：**28 核 × ≤2 h（≤56 核时）**；收敛测试作业：**≤28 核时/个**；
+- **Phase 0（para 第 0 步就地接口验证，1 作业）：56 核时**；
+- **Phase 1（Round-1 最小集）：448 核时** = 3 结构 × 2 作业 × 56 + 收敛 4 × 28；
+- **合计 504 核时**（= 56 + 448）。**R1.2 起不再使用“≤500”单一表述**——
+  504 > 500，任何文档/检查器出现 500 一律判 FAIL（反例测试覆盖）；
+- 静态检查器 `static_check_inputs.py` 强制校验分阶段上限（0 FAIL 才可进入授权队列）。
 
 ## 3. 首个可执行 SOC+Wannier+spin-matrix 作业方案（待单独授权）
 
@@ -51,9 +61,11 @@ VASP 6.6.0 vasp_ncl + LWRITE_SPN 原生路径；7GB 内存对 6 原子 SOC 小�
 
 1. **IMR 工具链确认**（版本 ≥ VASP 6.4.3 / vasp_ncl / wannier90.x / POTCAR Pt+Se 路径）——
    若确认则首选方案 B；
-2. 否则批准**方案 A（para）含第 0 步就地接口验证作业**（≤56 核时）；
+2. 否则批准**方案 A（para）含第 0 步就地接口验证作业**（Phase 0 = 56 核时，见
+   `PARA_STEP0_SCHEME.md` 独立方案）；
 3. **Round-1 作业范围**：2253 基准 + +(0.08,0.19) 滑移 + 2252 单层
-   （最小集 6 作业 + 收敛表，≤500 核时）；不动 2255/2254/反向滑移；
+   （最小集 6 作业 + 收敛表，Phase 1 = 448 核时；合计 56+448 = 504 核时，分阶段执行）；
+   不动 2255/2254/反向滑移；
 4. **费米能方案**：响应阶段电子/空穴参考掺杂取导电态（σ 非奇异才换算 χ^j）。
 
 未批准前：只读检查、输入生成、静态测试、本地干跑全部完成（本分支）；**零生产提交**。

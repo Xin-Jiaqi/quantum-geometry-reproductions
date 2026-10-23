@@ -18,3 +18,5 @@ LWAVE    = .FALSE.
 LCHARG   = .TRUE.
 LORBIT   = 11
 NCORE    = 4
+LASPH     = .TRUE.
+GGA_COMPAT = .FALSE.

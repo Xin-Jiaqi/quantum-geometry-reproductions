@@ -80,10 +80,13 @@ def bool_of(v):
 
 
 def main():
-    caps = load_caps()
+    inputs = INPUTS
+    if "--inputs" in sys.argv:
+        inputs = Path(sys.argv[sys.argv.index("--inputs") + 1])
+    caps = json.load(open(inputs / "caps.json"))
     report = {"caps": caps, "structures": {}}
     all_ok = True
-    for d in sorted(INPUTS.iterdir()):
+    for d in sorted(inputs.iterdir()):
         if not d.is_dir():
             continue
         tag = d.name
@@ -106,10 +109,20 @@ def main():
                 fail(f"A malformed SD flags at atoms {bad}")
             if n == 3 and all(f == ["T", "T", "T"] for f in flags):
                 ok("A monolayer: full relaxation (T T T)")
-            elif n == 6 and all(f == ["T", "F", "F"] for f in flags):
-                ok("A bilayer: registry-preserving (T F F)")
+            elif n == 6 and all(f == ["F", "F", "T"] for f in flags):
+                ok("A bilayer: registry-preserving F F T (x,y FIXED, z FREE; "
+                   "VASP T=free, F=fixed)")
             else:
-                fail("A SD flags do not match monolayer/bilayer policy")
+                fail("A SD flags do not match monolayer/bilayer policy "
+                     "(bilayer must be F F T: x,y FIXED, z FREE)")
+        # --- A2. semantics documented independently of the generator ---
+        readme = (d / "README").read_text(errors="replace") if (d / "README").exists() else ""
+        pol = "T T T" if n == 3 else "F F T"   # monolayer vs bilayer policy
+        if pol in readme and "free" in readme.lower() and "fixed" in readme.lower():
+            ok(f"A2 README states SD semantics (T=free, F=fixed; policy {pol})")
+        else:
+            fail(f"A2 README does not document SD semantics "
+                 f"(need '{pol}' + free/fixed wording)")
         # --- B. Wannier win ---
         if (d / "wannier90.win").exists():
             tags, block, text = parse_win(d / "wannier90.win")
@@ -169,7 +182,10 @@ def main():
             okc &= float(t.get("EDIFFG", 0)) <= -0.01
             okc &= str(t.get("IVDW", "")).isdigit() and int(t.get("IVDW", 0)) >= 10
             okc &= 400 <= float(t.get("ENCUT", 0)) <= 600
-            ok("C INCAR_relax compatible") if okc else fail("C INCAR_relax INCOMPATIBLE")
+            okc &= bool_of(t.get("LASPH", "F"))
+            okc &= t.get("GGA_COMPAT", "TRUE").strip(".") == "FALSE"
+            ok("C INCAR_relax compatible (incl. LASPH=.TRUE., GGA_COMPAT=.FALSE.)") \
+                if okc else fail("C INCAR_relax INCOMPATIBLE")
         for inc in ("INCAR_soc", "INCAR_soc_w90_vasp6", "INCAR_soc_w90_vasp544"):
             if not (d / inc).exists():
                 continue
@@ -179,6 +195,8 @@ def main():
             okc &= bool_of(t.get("LSORBIT", "F"))
             okc &= t.get("ISPIN", "0") == "2"
             okc &= t.get("SAXIS", "") == "0 0 1"
+            okc &= bool_of(t.get("LASPH", "F"))
+            okc &= t.get("GGA_COMPAT", "TRUE").strip(".") == "FALSE"
             mm = t.get("MAGMOM", "").split()
             okc &= len(mm) == 3 * n
             if "w90" in inc:
@@ -222,16 +240,25 @@ def main():
         print(f"== {tag}: {n_fail} FAIL / {len(checks) - n_fail} PASS")
         for status, msg in checks:
             print(f"   [{status}] {msg}")
-    # round-1 total budget (minimal set: relax + soc_w90 per structure, i.e.
-    # 2 jobs/structure x 56 core-h + convergence 4 x conv_core_h)
-    manifest = json.load(open(INPUTS / "manifest.json"))
-    round1 = [k for k, v in manifest.items()
-              if v["phase"] == "round1"]
-    total = len(round1) * 2 * 28 * 2 + 4 * caps["conv_core_h"]
-    if total <= caps["round1_core_h"]:
-        print(f"== ROUND-1 total {total} core-h <= cap {caps['round1_core_h']} PASS")
-    else:
-        print(f"== ROUND-1 total {total} core-h EXCEEDS cap {caps['round1_core_h']} FAIL")
+    # PHASED budget (R1.2): Phase 0 = para step-0 in-place interface validation
+    # (56); Phase 1 = Round-1 minimal set (relax+soc_w90 per structure:
+    # 2 jobs/structure x 56 + 4 convergence x conv_core_h); total = 504.
+    manifest = json.load(open(inputs / "manifest.json"))
+    round1 = [k for k, v in manifest.items() if v["phase"] == "round1"]
+    phase1 = len(round1) * 2 * 28 * 2 + 4 * caps["conv_core_h"]
+    phase0 = caps["phase0_validation_core_h"]
+    tot = phase0 + phase1
+    report["budget_phases"] = {"phase0_validation_core_h": phase0,
+                               "phase1_round1_core_h": phase1,
+                               "total_core_h": tot}
+    ok3 = (phase0 <= caps["phase0_validation_core_h"]
+           and phase1 <= caps["phase1_round1_core_h"]
+           and tot <= caps["total_core_h"])
+    print(f"== BUDGET Phase0 {phase0} <= {caps['phase0_validation_core_h']}; "
+          f"Phase1 {phase1} <= {caps['phase1_round1_core_h']}; "
+          f"total {tot} <= {caps['total_core_h']} "
+          + ("PASS" if ok3 else "FAIL"))
+    if not ok3:
         all_ok = False
     (ROOT / "LOGS" / "static_check_report.json").parent.mkdir(exist_ok=True)
     (ROOT / "LOGS" / "static_check_report.json").write_text(
