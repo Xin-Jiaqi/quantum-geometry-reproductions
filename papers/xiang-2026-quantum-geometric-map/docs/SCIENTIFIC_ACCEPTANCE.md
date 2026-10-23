@@ -327,4 +327,4 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Distinguish transport versus quantum lifetimes | At beta=0 spin-overlap 1 gives gamma*tau_tr=2, gamma*tau_q=1 exactly; beta=.125 gamma*tau_eff=1.961508, beta=.5 gamma*tau_eff=1.492820 | **VERIFIED named single-band model, NOT author gamma or PHE tau** |
 | Original full mixed EB Liouville conserving collision | Must extend to both bands, energies, magnetic preparation, interband coherence and EB vertex; no real impurity constants or author relaxation mechanism given | **UNRESOLVED; whole source PARTIAL** |
 
-v75 local 46 named physical tests plus one independent frozen-data provenance test **47/47 PASS**; four original-source bridge tests require full v49/v50 GitHub history and **SKIP** in standalone snapshot, full remote CI required for release.
+v75 local 51 named physical tests plus one independent frozen-data provenance test **52/52 PASS**; four original-source bridge tests require full v49/v50 GitHub history and **SKIP** in standalone snapshot, full remote CI required for release.
