@@ -1,3 +1,5 @@
+> **Stage8p 源码级勘误（2026-10-23）：** 本 Stage8o-real 原始报告与数值保留原样，但所称“修正 Kubo/projector 三方对照”的两条路线**没有使用相同的自旋源和 Zeeman 约定**：projector 分支对 Pauli SPN_z 多乘一次 g=2，对 SPN_x 没有除以 2，并将非厄米 basis connection `dM` 直接当成 `dP/dk`。因此此前即使能取回真实三方 JSON，也不能将其视为同一个 Γ 的数值验收。独立非零合成基准现已建立；真实 WSe2 一致性仍待只读复核。请先读 [Stage8p 科学审查](STAGE8P_NONZERO_METHOD_AND_REAL_DATA_REVIEW_20261023.md)。**
+
 # Stage8o-real | 真实 441 点 Seitz/SPN 对称性与 Kubo 数值核验（2026-10-23）
 
 > 自主执行 `STAGE8O_DEEPSEEK_ZERO_JOB_HANDOFF.md`：零新增 PBS/VASP/Wannier 作业，
