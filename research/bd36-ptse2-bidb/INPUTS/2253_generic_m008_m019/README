@@ -1,0 +1,7 @@
+BD36 2253_generic_m008_m019 (round1_deferred_job; bilayer). Inputs frozen, NOT_RUN.
+POSCAR_SD selective-dynamics semantics (VASP): T = coordinate FREE, F = coordinate FIXED.
+POSCAR_SD: bilayer registry-preserving F F T (x,y FIXED - in-plane registry exactly preserved; z FREE - interlayer relaxation only).
+wannier90.win: num_wann=44 (Pt:d + Se:p x spinor), atoms_frac from THIS POSCAR (slide-correct); kpoints block GENERATED post-SCF by make_win_kpoints.py.
+Interface: LWANNIER90 + LWRITE_SPN (vasp6 or vasp544 variant); no spin=true, no embedded WANNIER90_WIN.
+POTCAR absent (private; assembled at execution, SHA256 recorded locally).
+Caps: 28 cores x 2 h per job; phased: phase0 validation 56, phase1 round-1 448, total 504 core-h.
