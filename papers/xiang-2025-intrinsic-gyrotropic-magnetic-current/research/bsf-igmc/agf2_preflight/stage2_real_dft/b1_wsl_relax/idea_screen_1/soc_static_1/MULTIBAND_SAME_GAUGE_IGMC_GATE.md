@@ -1,13 +1,13 @@
 # Multiband same-gauge IGMC gate (four-band synthetic, zero VASP)
 
-**2026-10-23 ｜ Read-only synthetic Python/NumPy validation. Verdict: GO (for developing an authenticated material operator interface — NOT for costly DFT/Wannier; no material IGMC value implied).** Executable: `scripts/test_multiband_igmc_gate.py` (+ pinned reference `scripts/wannier_operator_contract_pinned26.py`); machine-readable results: `MULTIBAND_SAME_GAUGE_IGMC_GATE.json`. Wall time 73 s ≪ 15-min cap.
+**2026-10-23 ｜ Read-only synthetic Python/NumPy validation. Verdict: GO (for developing an authenticated material operator interface — NOT for costly DFT/Wannier; no material IGMC value implied).** Executable: `scripts/test_multiband_igmc_gate.py` (+ pinned reference `scripts/wannier_operator_contract_pinned26.py`); machine-readable results: `MULTIBAND_SAME_GAUGE_IGMC_GATE.json`. Original wall time 73 s ≪ 15-min cap; hardening round (2026-10-23, `MULTIBAND_GATE_HARDENING_20261023.md`) re-asserts the result with the fixed NC4, corrected NC2 labels, global indirect gap, embedded-Wilson branch check, committed Liouville third oracle and injected-fault regressions — verdict re-affirmed PASS (conditional semantics, see hardening doc).
 
 ## 1. Reused source (pinned, not on this branch)
 
 The existing four-band same-Wannier-gauge operator contract of the same repository, pinned at commit `cdac6418166466b5243e73d8eb291d6dea8d4772`:
 
 - `papers/cui-2026-curvature-flux-zeeman-qgt/ROUND26_SAME_GAUGE_WANNIER_OPERATORS.md`
-- `.../src/flux_lab/wannier_operator_contract.py` — **extracted verbatim** into `scripts/wannier_operator_contract_pinned26.py` (provenance header added; no edits to the module body)
+- `.../src/flux_lab/wannier_operator_contract.py` — **extracted verbatim** into `scripts/wannier_operator_contract_pinned26.py` (provenance comment block prepended; module body byte-identical, sha256 `8343ae06…` = upstream blob, asserted by the gate and regression R6)
 - `.../scripts/audit_wannier_operator_contract.py`, `.../results/frozen/round26_same_gauge_operator_audit.json` (read as reference)
 
 The contract provides an in-memory common-basis H(R), physical Pauli S(R) and full position connection A(R) with analytic/covariant derivatives and positive/negative gauge controls. No Wannier file importer, no material operators. The pinned fixture `synthetic_soc_bundle()` (4-band SOC toy, spin-1/2 × two orbitals) is insulating at half filling but its Dxx response is an **identically zero (degenerate symmetry) baseline** — it is used as an additional zero control (NC5), exactly as the task anticipates ("if source fixture is gapless, make a separately named, explicit synthetic modification" — here the fixture is not gapless but response-degenerate).
@@ -52,19 +52,19 @@ Converges with mesh like the frozen benchmark (4.4 % → 0.35 %); b-step 1e-4/5e
 
 **Joint gauge invariance (constant unitary on H/S/A, seed 26):** direct residual 2.8e-17, Wilson residual 1.1e-12 — invariant to numerical precision.
 
-**Negative controls (each must produce a detectable incorrect result):**
+**Negative controls (each must produce a detectable incorrect result).** 2026-10-23 erratum to the original (adcd75e) table: NC2 sign labels corrected (source/JSON were right; the Markdown reversed them) and NC4 rebuilt as a genuinely spin-conserving fixture (the adcd75e fixture acted on one tensor factor with ||[H,S^x]|| = 1.2 eV). See `MULTIBAND_GATE_HARDENING_20261023.md` for the full hardening round.
 
 | control | correct | wrong | detection |
 | --- | --- | --- | --- |
 | NC1 rotate H/A but not S | +0.03429 | +0.17040 | |Δ| = 0.136 ≫ 0.02 ✓ |
-| NC2 omit A (bare velocity) | operator max|∂H−D_kH| = 0.799 eV·Å (>0.005) ✓ | response on `v2_spinZ_pos`: cov +0.03429 → omit-A −0.02536, |Δ| = 0.0597 (>0.01) ✓ |
+| NC2 omit A (bare velocity), `v2_spinZ_pos` | with-A −0.02536 | omit-A +0.03429 | |Δ| = 0.0597 (>0.01) ✓; operator max|∂H−D_kH| = 0.799 eV·Å (>0.005) ✓ |
 | NC3 orbital pseudospin | +0.03429 | +0.31591 | |Δ| = 0.282 (≫ 5 %) ✓ |
-| NC4 no-SOC spin-conserving | D = −5.1e-18, slope = 0.0 | — | exactly zero ✓ |
+| NC4 no-SOC spin-conserving (corrected `H=h2⊗I_spin`, `S=I_orb⊗σ`) | D = 1.1e-33, slope = 0.0 | commutator guard rejects the wrong-factor arrangement (1.2 eV) | conservation ✓, zero ✓ |
 | NC5 pinned round26 | D = −2.6e-17 | — | exactly zero ✓ |
 
 Note: on `v2_positive` the covariant-vs-bare velocity response is model-insensitive (Â response channel pointwise zero for that position structure); the spin-Z position connection fixture `v2_spinZ_pos` provides the response-level omission control.
 
-**Fail-closed:** gap floor 0.02 eV enforced on all grids/fields (raises on violation); |det W| ∈ (0.9817, 0.9823) — no ambiguous/non-unitary Wilson branch; no band crossing.
+**Fail-closed:** gap floor 0.02 eV enforced on all grids/fields (raises on violation); global indirect gap `min_k ε₃ − max_k ε₂` required positive at b ∈ {0, ±1e-4, ±1e-3} (0.9853 eV on `v2_positive` @41², mesh-converging from 0.9892 @21²); embedded-Wilson branch check (adjacent-ky jumps 0.0225 rad, branch margin 0.94 rad, finite-b raw drift 7.2e-6 rad, winding ≈ 0, no Chern flag); |det W| ∈ (0.9817, 0.9823); committed orbital-Liouville third oracle agrees with direct at 0.03 % (see hardening doc §1.6).
 
 ## 5. Verdict
 

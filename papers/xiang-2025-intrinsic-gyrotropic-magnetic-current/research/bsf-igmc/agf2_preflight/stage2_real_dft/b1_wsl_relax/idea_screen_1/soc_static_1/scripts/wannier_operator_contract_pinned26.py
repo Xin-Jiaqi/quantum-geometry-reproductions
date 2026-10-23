@@ -1,15 +1,18 @@
-"""PINNED REFERENCE COPY - do not edit.
+# PINNED REFERENCE COPY - do not edit.
+# Source: repository commit cdac6418166466b5243e73d8eb291d6dea8d4772
+#   papers/cui-2026-curvature-flux-zeeman-qgt/src/flux_lab/wannier_operator_contract.py
+# Extracted verbatim (provenance comment added; module content byte-identical)
+# for the multiband same-gauge IGMC gate (PR #38). In-memory synthetic
+# operator contract only: NO Wannier file importer, NO material operators.
+#
 
-Source: repository commit cdac6418166466b5243e73d8eb291d6dea8d4772
-  papers/cui-2026-curvature-flux-zeeman-qgt/src/flux_lab/wannier_operator_contract.py
-Extracted verbatim for the multiband same-gauge IGMC gate (PR #38); the
-original module is not on this branch. Provenance is recorded in
-MULTIBAND_SAME_GAUGE_IGMC_GATE.md. This is an in-memory synthetic operator
-contract: H(R), projected physical Pauli spin S(R) and full position
-connection A(R) in one orthonormal Wannier basis. NO Wannier file importer,
-NO material operators, NO material claims.
+"""Round26 in-memory same-Wannier-gauge physical-operator input contract.
+
+Fourier X(q)=sum_R exp(2pi i R.q) X(R), where q is fractional reciprocal.
+H [eV], projected physical Pauli spin [dimensionless], projected position
+connection A [angstrom]. A includes orbital centers exactly once.
+D_k X = d_k X-i[A,X]. No Wannier file importer/material/KME claim.
 """
-
 from __future__ import annotations
 from dataclasses import dataclass
 import numpy as np
