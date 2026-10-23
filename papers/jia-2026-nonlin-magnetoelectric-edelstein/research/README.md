@@ -8,6 +8,8 @@
 - **Follow-up:** [BSF × NMEE original research index](../../../studies/bsf-nmee-connection/RESEARCH_INDEX.md). The added synthetic **sliding bilayer Kane–Mele** calculations study an **equilibrium/static**, gapped, zero-temperature Zeeman derivative of mixed spin-electric Berry curvature. This does **not** reproduce the paper's driven-DC response or predict an experimentally realized material.
 - **Current status:** Original research **MODEL-VALIDATED / ACTUAL WSe2 STRUCTURAL+SOC DFT AND 2 VASP MATRIX-POSTPROCESS JOBS EXTERNALLY RUN / REAL 441-k SEITZ+SPN CHECKS COMPLETED / EXPLORATORY STATIC MATERIAL RESPONSE FAILED C3v AND GLIDE NULL VALIDATION / Stage8n SOURCE-ROOT CLAIM NOT PROVEN IN Stage8o-real / MATERIAL STATIC NMEE NOT ACCEPTED**. Distinguish independent theory/symmetry identities from model-dependent signs and numerical examples.
 
+**Latest independent-work handoff (2026-10-23):** [Stage8p comprehensive project handoff](../../../studies/bsf-nmee-connection/hpc-stage8i/STAGE8P_PROJECT_HANDOFF_20261023.md) records Stage8o-real 441-k symmetry audit and a new successful **nonzero analytic resolvent/projector/Wilson calibration** (194 research tests passing at pre-handoff code commit); actual WSe2 AB C3v and glide total-null still fail acceptance, and the real material 3-way Kubo cross-check is **not complete**. All novelty claims remain conditional; this is a navigation link, not a modification of Jia PRL original reproduction.
+
 ## Follow-up topics (not claims from the PRL)
 
 | Topic | New original finding | Research source |
