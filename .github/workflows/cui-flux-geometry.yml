@@ -45,3 +45,5 @@ jobs:
         run: python scripts/audit_covariant_spin_ward.py
       - name: Audit matched Wannier-gauge physical operators (Round26)
         run: python scripts/audit_wannier_operator_contract.py
+      - name: Audit longitudinal finite-q charge gauge Ward (Round27)
+        run: python scripts/audit_finite_q_gauge_ward.py
