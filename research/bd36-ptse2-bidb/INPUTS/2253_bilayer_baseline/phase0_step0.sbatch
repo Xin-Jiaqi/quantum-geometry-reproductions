@@ -21,6 +21,12 @@
 
 set -euo pipefail
 
+# DEPRECATED / HARD STOP. Preflight on para (2026-10-23) found no compatible
+# SPN-capable VASP binary and no licensed Pt/Se POTCAR in this account.
+# No compute authorization is valid for a replacement job on another platform.
+echo "BLOCKED: para Phase 0 failed real preflight. Do not resubmit or recompile. See LOGS/phase0_preflight_report.md and FAST_IDEA_GO_NOGO_20261023.md."
+exit 90
+
 STD="$(cd "$(dirname "$0")" && pwd)"          # structure dir (this INPUTS dir)
 ROOT="$(cd "$STD/../.." && pwd)"              # research root
 SCRIPTS="${SCRIPTS_DIR:-$ROOT/scripts}"
