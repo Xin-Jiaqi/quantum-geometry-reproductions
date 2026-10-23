@@ -67,7 +67,7 @@ def finite_oscillator_correlator(w,*,beta=.83,levels=36):
             if j==i+1:emission+=weights[i]*abs(B[i,j])**2
             if j==i-1:absorption+=weights[i]*abs(B[i,j])**2
     return dict(emission=emission,absorption=absorption,
-                occupation=n,b=B,H=hs,rho=dm)
+                occupation=n,b=b,H=hs,rho=dm)
 
 def _validate_fock(H,N,A,beta,g2,cutoff):
     H=np.asarray(H,complex);N=np.asarray(N,complex);A=np.asarray(A,complex)
