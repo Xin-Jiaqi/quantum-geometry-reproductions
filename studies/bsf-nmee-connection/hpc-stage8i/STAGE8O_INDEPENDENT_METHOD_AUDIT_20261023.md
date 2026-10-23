@@ -42,6 +42,8 @@
 
 真实 `stage8n_AB_diag3.sanitized.json` 中，10 个 k/方向数据只有一个 rel≈0.037、另一个≈0.467，其余相对差 **9–275 倍**。当前 `stage8n_diag3.py` 只做 \(U^\dagger dM U\) 旋转，却忽略了随 k 变化的 \(U^\dagger\partial_k U\)；这个缺口可能由已有 MMN 链接中的 gauge-covariant 差分补齐，无需新 VASP。单凭其合成模型**对称零点双方都为零**，不能证明非零 Kubo 与 Wilson 的实现等价。`stage8n_kubo_derivation.md` 的投影交换子展开也应重新按 \(A^\dagger B-B^\dagger A\) 审阅，检查自旋矩阵元的共轭与指标、速度定义及整体符号。
 
+补充：Stage8n 的 `stage8n_diag3.py`/`stage8n_diag4.py` 选择了 (0.44,0.12)、(0.13,0.07) 等**并非 21 分之一整倍数**的 k 坐标，实际索引通过 `round(fx*21)` 找到最近的网格点，却仍以原浮点坐标标注结果；重审时必须报告真正的 EIG/WIN k 和 nearest-grid 位移，避免把近似位置冒充精确坐标。
+
 该独立 Kubo 对照的结果**不能排除响应估计器或物理算符/坐标实现问题**；将差异唯一归咎于 eiegh eigenvector 相位也尚无证据。
 
 ## 5. 数值单位现存错误
