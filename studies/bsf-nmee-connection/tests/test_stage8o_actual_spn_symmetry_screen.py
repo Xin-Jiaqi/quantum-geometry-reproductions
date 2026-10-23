@@ -3,11 +3,13 @@
 No spglib, WAVECAR, source files or VASP are needed for synthetic tests.
 """
 import importlib.util
+import sys
 import numpy as np
 from pathlib import Path
 import unittest
 
 path=Path(__file__).resolve().parents[1]/"hpc-stage8i"/"stage8o_actual_spn_symmetry_screen.py"
+sys.path.insert(0,str(path.parent))
 spec=importlib.util.spec_from_file_location("stage8o_actual_spn_symmetry_screen",path)
 m=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)
