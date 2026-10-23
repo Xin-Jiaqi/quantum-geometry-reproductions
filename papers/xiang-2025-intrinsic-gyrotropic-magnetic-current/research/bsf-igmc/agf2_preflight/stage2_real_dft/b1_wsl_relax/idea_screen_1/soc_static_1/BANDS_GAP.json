@@ -1,0 +1,15 @@
+{
+  "document": "BANDS_GAP.json",
+  "run": "idea_screen_1/soc_static_1 (single-point SOC screen, 2026-10-22)",
+  "gap_ev": 1.3616,
+  "homo_ev": -5.7746,
+  "lumo_ev": -4.4130,
+  "method": "occupation-defined HOMO/LUMO from the final converged vasprun.xml <eigenvalues> block (spinor eigenvalues at the last electronic iteration)",
+  "k_mesh": "12x8x1 Gamma (identical to prior non-SOC screening)",
+  "smearing": "ISMEAR=0, SIGMA=0.05",
+  "occupations": "clean 0/1 (integer occupations; well-gapped insulator at this grid)",
+  "non_soc_reference_gap_ev": 1.3875,
+  "non_soc_reference_homo_lumo_ev": [-5.8047, -4.4172],
+  "soc_gap_change_ev": -0.0259,
+  "warning": "SCREENING VALUE ONLY: single 12x8x1 Gamma mesh, not k-converged, not band-structure resolved, not a prediction of the experimental gap; HOMO/LUMO from occupation counting, not from a GW/functional benchmark."
+}

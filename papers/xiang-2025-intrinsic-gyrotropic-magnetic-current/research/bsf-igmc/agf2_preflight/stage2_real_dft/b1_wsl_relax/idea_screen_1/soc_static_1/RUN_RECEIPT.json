@@ -1,0 +1,114 @@
+{
+  "document": "RUN_RECEIPT.json",
+  "task": "B1_SOC_STATIC_SCREENING_TASK_20261022.md (commit 49d1350); explicit single-run authorization granted by user message",
+  "date": "2026-10-22",
+  "status": "PASS_SCREEN",
+  "status_definition": "SCF converged to EDIFF=1e-6 (64 electronic iterations) and the state is physically interpretable: local compensated Type-I AFM moments preserved (|S_Ag|=0.568 muB, pattern [- + + -] along x) and a clear screening gap (1.3616 eV, occupation-defined, 12x8x1). NOT a proof of easy axis, MAE, magnetic ground state, local minimum, ferroelectric switching, or any nonzero IGMC response.",
+  "budget_overshoot_notice": {
+    "authorized_cap": "8 MPI ranks, 4 h wall-clock (32 rank-hours)",
+    "actual_walltime_sec": 16769.979,
+    "actual_walltime_h": 4.658,
+    "actual_rank_hours": 37.27,
+    "overshoot": "0.66 h / 5.3 rank-hours past the 4 h cap; single continuous authorized run (no second launch, no retry, no parameter change). The slow SCF tail (last ~40 min, dE ~5e-6 -> 1e-6) crossed the cap before EDIFF was met; the executor let it finish rather than soft-stopping at 4 h and losing the converged state. Recorded here explicitly, not silent. The overshoot was the executor's stopping decision under intermittent monitoring connectivity; no further compute was spent after convergence.",
+    "no_compute_beyond_scope": true
+  },
+  "execution": {
+    "machine": "user private WSL (LinuxGNU)",
+    "vasp_binary": "$HOME/opt/bin/vasp_ncl (noncollinear)",
+    "vasp_version_banner": "vasp.6.6.0 06Mar2026 (build Sep 2 2026 13:14:08) complex",
+    "mpi": "mpirun.openmpi -np 8 (8 ranks, single node)",
+    "omp_threads": 1,
+    "start_utc": "2026-10-22 13:41:50",
+    "elapsed_sec": 16769.979,
+    "max_memory_rank0_kb": 928708,
+    "stop_reason": "EDIFF=1e-6 reached on electronic iteration 64 ('aborting loop because EDIFF'); clean finish (General timing written); NO STOPCAR created; no ionic relaxation (NSW=0, IBRION=-1)",
+    "n_scf_iterations": 64,
+    "n_ediFF_reached": 1,
+    "startup_note": "HWLOC_COMPONENTS=-gl required (WSL toolchain); launch via WSL file script",
+    "preflight_gates": {
+      "vasp_ncl_present": true,
+      "memory_safe": true,
+      "disk_safe": true,
+      "isolated_dir": "~/agf2-b1-soc1/B1_g3.0/",
+      "no_wavecar_chgcar_stopcar": true,
+      "atom_order_Ag4_F8": true,
+      "potcar_hash_match": true,
+      "prior_dirs_untouched": true
+    }
+  },
+  "inputs": {
+    "POSCAR_soc_input": "sha256 b4f1aa46c00faf455e4b0af4f323b3e1a502fea5b27692cabe583199ba2befd4 (exact idea_screen_1/POSCAR.screen_last_complete step-11 geometry; byte-identical to WSL POSCAR)",
+    "INCAR_soc": "sha256 1ab493df20cb623d0ab969e8d8903464b23daf3e8c323c86a0a10d01b64d2195 (byte-identical to WSL INCAR; exact tag set from the task file)",
+    "KPOINTS_soc": "sha256 d23a71967cc38a90b6a11ae96bdda117accc97bc92dd74acbcb6854305866d2c (12x8x1 Gamma, same as screening)",
+    "POTCAR": "sha256 8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff (hash-only; content never uploaded/committed)",
+    "key_tags": {
+      "LSORBIT": ".TRUE.", "LNONCOLLINEAR": ".TRUE.", "SAXIS": "0 0 1",
+      "MAGMOM": "-1 0 0  1 0 0  1 0 0  -1 0 0  24*0.0 (x-axis Type-I seed; initialization, not a constraint)",
+      "ISYM": "-1 (no symmetrization)", "GGA_COMPAT": ".FALSE.", "LORBIT": "11", "LORBMOM": ".TRUE.",
+      "no_ISPIN_line": true, "I_CONSTRAINED_M": "not used",
+      "EDIFF": "1e-6", "NELM": "160", "NELMIN": "4", "ENCUT": "500", "Ueff_Ag4d": "4 eV", "IVDW": "11",
+      "ISMEAR": "0 SIGMA=0.05", "ISTART": "0", "ICHARG": "2", "NSW": "0", "IBRION": "-1", "ISIF": "2",
+      "LWAVE": ".FALSE.", "LCHARG": ".FALSE."
+    }
+  },
+  "raw_outputs_private_wsl": {
+    "dir_alias": "~/agf2-b1-soc1/B1_g3.0/",
+    "OUTCAR_sha256": "484f18b30544243747302f046546caaaa921945dcbd11311b31204ee952a1571",
+    "OUTCAR_bytes": 679265,
+    "OSZICAR_sha256": "a2d3aac0707bfaeee4382c4cf66fddc67a33191018fb82a418270ef75c602695",
+    "vasprun_xml_sha256": "6f73cbc1edd20bc8d61ca39e9a8b3d35de30fba365dbddb358a3f1fdbfe08be0",
+    "vasprun_xml_bytes": 54112067,
+    "vasp_stdout_sha256": "a32c05ca31d9698f335fcbfac9c215d2bceae0390f8f57072075b3172a01ca31",
+    "note": "OSZICAR of this VASP 6.6.0 build contains the DAV electronic-iteration stream (observed, harmless); authoritative electronic record is OUTCAR + vasprun.xml",
+    "CONTCAR": "not written (NSW=0 single point)"
+  },
+  "results": {
+    "final_TOTEN_ev": -35.55001581,
+    "final_E0_ev": -35.55001581,
+    "net_magnetization_vector_mub": [0.0000, -0.0010, -0.0378],
+    "nonSOC_comparison_TOTEN_ev": -35.42794489,
+    "soc_energy_lowering_ev": -0.122071,
+    "ag_spin_moments_mub": {
+      "S_Ag1": [-0.5680, 0.0190, -0.0050],
+      "S_Ag2": [0.5680, 0.0190, -0.0040],
+      "S_Ag3": [0.5680, -0.0190, -0.0050],
+      "S_Ag4": [-0.5680, -0.0190, -0.0050]
+    },
+    "ag_orbital_moments_mub": {
+      "L_Ag1": [-0.1220, 0.0250, 0.0700],
+      "L_Ag2": [0.1220, 0.0250, 0.0700],
+      "L_Ag3": [0.1230, -0.0240, 0.0690],
+      "L_Ag4": [-0.1230, -0.0240, 0.0690]
+    },
+    "f_moments_max_mub": 0.004,
+    "magnetic_state": "Type-I interlayer Neel [- + + -] along x preserved; |S_Ag|=0.568 muB (non-SOC 0.566-0.567); small self-consistent cantings: Ag y +0.019/-0.019 layer-staggered (~1.9 deg from x), common z -0.005; net moment 0.038 muB (~1% of |S|)",
+    "gap_ev": 1.3616,
+    "gap_method": "occupation-defined HOMO/LUMO from final vasprun.xml eigenvalues, 12x8x1 Gamma, ISMEAR=0 SIGMA=0.05; screening value only",
+    "homo_ev": -5.7746,
+    "lumo_ev": -4.4130,
+    "nonSOC_gap_ev": 1.3875,
+    "soc_gap_change_ev": -0.0259,
+    "occupations": "clean 0/1 (well-gapped insulator at screening grid)"
+  },
+  "magnetic_point_group_assessment": {
+    "leading_order": "collinear Type-I along x -> consistent with the conditional m'_x magnetic point group assumed in the zero-DFT audit and tensor erratum; the m'_x hypothesis SURVIVES at leading order",
+    "exact_state_note": "self-consistent cantings (Ag y +-0.019, common z -0.005, net mz -0.038) break exact m'_x at the ~2% level; with ISYM=-1 no symmetrization was applied. Whether these are numerical (screening grid/SIGMA) or a genuine weak canting cannot be resolved here; the leading-order MPG classification is retained for the screening conclusion, not stamped as exact",
+    "not_computed": ["easy axis", "MAE", "magnetic ground state (competing orders)", "response tensors", "IGMC channels", "orbital IGMC", "B2 connector check in real material"]
+  },
+  "scope": {
+    "stayed_within_scope": true,
+    "no_pbs": true,
+    "no_second_launch": true,
+    "no_retry": true,
+    "no_parameter_change": true,
+    "no_ionic_relaxation": true,
+    "no_mae_orientation": true,
+    "no_b2_wannier_igmc": true,
+    "only_private_local_machine": true
+  },
+  "evidence_levels": {
+    "CROSS_VERIFIED_FROM_RAW_WSL_OUTPUT": ["energy, magnetization blocks, orbital moments, eigenvalues, hashes, timing, memory"],
+    "RUNNER_REPORTED": [],
+    "NOT_COMPUTED": ["MAE", "easy axis", "ground-state competition", "response theory", "Wannier", "B2", "orbital IGMC"]
+  }
+}
