@@ -9,10 +9,12 @@
 3. **反例：** 倾斜 beta=.125、同一半径 r=.3 下不同 phi 能量跨度 2 beta r=.075，所以固定半径均匀 angular scattering **不是弹性过程**。正确模型必须用变形等能壳，并区别 density-of-states weights。
 4. **硬边界：** 仅单导带弹性能壳、声明的短程 Born-style 角核，尚未构造与源双频率全矩阵 EB Liouville 一致的碰撞超算符；源原始作者旋向、Eq.(31) 印刷号、Fig2 2π、orbital MNHE 和三带项仍 OPEN。整体 PARTIAL。
 
+新增单模判据：电场源只有满足 Ls=lambda s，标量 tau=1/lambda 才严格成立。beta=0 时模残差约 1.25e-17，beta=.125 时 0.0043664，beta=.5 时 0.0168601；有限倾斜的 tau_eff 是电流投影，不等于所有响应共用的 tau。
+
 ## v75 数值与文件
 
 - `src/qgmap/elastic_spin_collision_v75.py`：守恒/细致平衡等能壳弹性散射、稳态与 AC、独立带权谱/时间解、SM 相对符号不变性。
-- `tests/test_elastic_spin_collision_v75.py`：46 named physical tests。
+- `tests/test_elastic_spin_collision_v75.py`：51 named physical tests。
 - `tests/test_elastic_spin_collision_v75_frozen.py`：1 independent frozen regeneration gate。
 - `tests/test_source_v50_collision_bridge_v75.py`：4 optional tests 需要 GitHub 原仓库 v49/v50 源码。独立 v60+ snapshot 中应标记 SKIP，严禁称 51/51 本地 PASS。
 - `scripts/reproduce_v75.py` 和 `results/frozen/v75_elastic_collision_and_source_sign.json`；完整详细物理报告 `docs/ELASTIC_COLLISION_TAU_AND_SOURCE_SIGN_V75.md`。
