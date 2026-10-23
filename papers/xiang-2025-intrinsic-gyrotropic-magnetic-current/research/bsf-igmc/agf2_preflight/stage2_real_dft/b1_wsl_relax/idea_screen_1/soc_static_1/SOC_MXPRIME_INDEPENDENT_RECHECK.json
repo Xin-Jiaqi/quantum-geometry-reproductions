@@ -1,0 +1,51 @@
+{
+  "document": "SOC_MXPRIME_INDEPENDENT_RECHECK.json",
+  "task": "B1_SOC_RESPONSE_THEORY_READONLY_HARNESS_TASK_20261023.md Phase A: reproduce the symmetry audit and correct the physical claim",
+  "date": "2026-10-23",
+  "evidence_level": "INDEPENDENTLY_RECOMPUTED (from committed PR #38 MOMENTS.csv, POSCAR.soc_input, audit_soc_mxprime.py, check_magnetic_symmetry_screen.py; private WSL OUTCAR read-only convention confirmation)",
+  "operation": "antiunitary m'_x = {m_x | (1/2,1/2,0)} T maps time-odd axial site vectors (Mx,My,Mz) -> (-Mx,+My,+Mz) between glide partners; structural glide maps (x,y,z) -> (-x+a/2, y+b/2, z)",
+  "site_pairs_1based": [[1,2],[3,4],[5,8],[6,7],[9,12],[10,11]],
+  "structural_glide_recheck": {
+    "run": "committed check_magnetic_symmetry_screen.py on committed POSCAR.soc_input (byte-identical to POSCAR.screen_last_complete, sha b4f1aa46c00faf455e4b0af4f323b3e1a502fea5b27692cabe583199ba2befd4)",
+    "pairs_mapped": "12/12 bijective same-species nearest-image matching",
+    "max_residual_angstrom": 0.00001283,
+    "status": "PASS",
+    "note": "site mapping and magnetic density symmetrization are NOT the same test; this checks site-projected output precision only"
+  },
+  "moment_mapping_recheck": {
+    "run": "python audit_soc_mxprime.py MOMENTS.csv (committed script, committed CSV)",
+    "max_spin_abs_residual_mub": 0.001,
+    "max_orbital_abs_residual_mub": 0.0,
+    "output_rounding_tolerance_mub": 0.00101,
+    "passes_reported_precision": true,
+    "per_pair_max_residuals": {"S": {"[1,2]": 0.001, "[3,4]": 0.0, "[5,8]": 0.0, "[6,7]": 0.0, "[9,12]": 0.0, "[10,11]": 0.0}, "L": {"[1,2]": 0.0, "[3,4]": 0.0, "[5,8]": 0.0, "[6,7]": 0.0, "[9,12]": 0.0, "[10,11]": 0.0}},
+    "sums_from_rounded_projected_moments_mub": {"S": [0.0, 0.0, -0.035], "L": [0.0, 0.002, 0.246]}
+  },
+  "correction_of_earlier_claim": {
+    "superseded_statement": "RUN_RECEIPT.json / SOC_STATIC_VERDICT.md (fee4e62) suggested the ~2% canting and common Mz necessarily break exact m'_x.",
+    "correct_statement": "For time-odd axial vectors under m'_x the transformation is (Mx,My,Mz)->(-Mx,+My,+Mz): My and Mz keep their sign between glide partners. A uniform Mz (Ag z ~ -0.005, F z ~ -0.002, net mz -0.038 mub) and the common orbital Lz (+0.069..+0.070 mub on all four Ag) are symmetry-ALLOWED under m'_x, not symmetry-breaking. The site-projected moment pattern is m'_x-consistent at printed precision.",
+    "status": "CONFIRMED at output precision; not a full magnetic-space-group certification and not an easy-axis or density-grid statement"
+  },
+  "why_uniform_Mz_is_allowed": {
+    "argument": "m'_x is antiunitary with spatial part R_x = diag(-1,+1,+1), det(R_x) = -1. For a time-odd axial vector M: m'_x M = det(R_x) R_x (T M) = (-1) R_x (-M) = R_x M = (-Mx, +My, +Mz). Components My, Mz are unchanged between mapped partners; only Mx reverses. Hence common Mz (and layer-staggered My) are invariant under m'_x.",
+    "pair_checks": "Ag 1->2: Sx -0.568 -> +0.568 (expected +0.568); Sy +0.019 -> +0.019; Sz -0.005 -> -0.004 (printed residual 0.001). Ag 3->4, F pairs: exact at printed precision."
+  },
+  "why_Lz_is_not_orbital_igmc": {
+    "argument": "LORBMOM=.TRUE. reports the orbital angular momentum projected inside PAW augmentation spheres (LORBIT=11). It is not the gauge-covariant orbital magnetization, not the orbital-Zeeman perturbation matrix -B.L, and not an IGMC response coefficient. Site-projected sum_12 Lz = +0.246 mub (Ag-only +0.278) must not be presented as a bulk M_orb or as orbital IGMC.",
+    "consequence": "the SOC-induced common orbital Lz is a diagnostic hint for the orbital channel, not a computed response"
+  },
+  "private_OUTCAR_conventions_readonly": {
+    "SAXIS": "0 0 1",
+    "LORBIT": 11,
+    "LORBMOM": ".TRUE.",
+    "units": "site-projected spin/orbital moments in Bohr magnetons (OUTCAR magnetization (x/y/z) blocks and orbital moment (x/y/z) blocks)",
+    "note": "read-only local review; no file upload; no new SCF"
+  },
+  "conclusions": {
+    "m_xprime_moment_mapping": "PASS_AT_OUTPUT_PRECISION",
+    "structural_glide": "PASS_AT_1.3e-5_ANGSTROM",
+    "magnetic_group_certification": "NOT_FULLY_CERTIFIED (site-moment precision only; no density-grid or k-space symmetry proof)",
+    "easy_axis_MAE_ground_state": "NOT_COMPUTED",
+    "IGMC_response": "NOT_COMPUTED"
+  }
+}

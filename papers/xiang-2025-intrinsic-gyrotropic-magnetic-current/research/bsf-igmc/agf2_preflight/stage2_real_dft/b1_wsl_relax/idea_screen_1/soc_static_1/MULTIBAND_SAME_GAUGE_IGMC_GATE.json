@@ -1,0 +1,615 @@
+{
+  "schema": "bsf-igmc-multiband-same-gauge-gate-v1-hardened",
+  "paper": "PRL 134, 116301 (2025)",
+  "task_file": "HARNESS_SYNTHETIC_GATE_HARDENING_20261023.md",
+  "source_pinned_commit": "cdac6418166466b5243e73d8eb291d6dea8d4772",
+  "pinned_module_body_sha256": "8343ae0605bfc7748eb978f4ca3c6d612228502e55472a883609404417ded100",
+  "fixtures": {},
+  "gaps": {
+    "pinned_round26": {
+      "21": {
+        "direct_min_gap_eV": 1.0257314719104504,
+        "direct_max_gap_eV": 1.8395916718358014,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.5128876922821015,
+            "conduction_min_eV": 0.5128876922821016,
+            "indirect_gap_eV": 1.025775384564203
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.5128859540520975,
+            "conduction_min_eV": 0.5128859540520975,
+            "indirect_gap_eV": 1.025771908104195
+          },
+          "0.0001": {
+            "valence_max_eV": -0.5128859540520975,
+            "conduction_min_eV": 0.5128859540520977,
+            "indirect_gap_eV": 1.0257719081041952
+          },
+          "-0.001": {
+            "valence_max_eV": -0.5128657359552252,
+            "conduction_min_eV": 0.5128657359552252,
+            "indirect_gap_eV": 1.0257314719104504
+          },
+          "0.001": {
+            "valence_max_eV": -0.5128657359552251,
+            "conduction_min_eV": 0.5128657359552254,
+            "indirect_gap_eV": 1.0257314719104507
+          }
+        }
+      },
+      "31": {
+        "direct_min_gap_eV": 1.023354537935806,
+        "direct_max_gap_eV": 1.8395916718358014,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.5116938652258207,
+            "conduction_min_eV": 0.5116938652258208,
+            "indirect_gap_eV": 1.0233877304516414
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.5116926635936879,
+            "conduction_min_eV": 0.5116926635936881,
+            "indirect_gap_eV": 1.023385327187376
+          },
+          "0.0001": {
+            "valence_max_eV": -0.5116926635936879,
+            "conduction_min_eV": 0.5116926635936883,
+            "indirect_gap_eV": 1.023385327187376
+          },
+          "-0.001": {
+            "valence_max_eV": -0.5116772689679029,
+            "conduction_min_eV": 0.511677268967903,
+            "indirect_gap_eV": 1.023354537935806
+          },
+          "0.001": {
+            "valence_max_eV": -0.5116772689679029,
+            "conduction_min_eV": 0.5116772689679031,
+            "indirect_gap_eV": 1.023354537935806
+          }
+        }
+      },
+      "41": {
+        "direct_min_gap_eV": 1.02249183626431,
+        "direct_max_gap_eV": 1.8395916718358014,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.5112597313263619,
+            "conduction_min_eV": 0.5112597313263619,
+            "indirect_gap_eV": 1.0225194626527239
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.511258808221049,
+            "conduction_min_eV": 0.5112588082210487,
+            "indirect_gap_eV": 1.0225176164420977
+          },
+          "0.0001": {
+            "valence_max_eV": -0.5112588082210491,
+            "conduction_min_eV": 0.511258808221049,
+            "indirect_gap_eV": 1.022517616442098
+          },
+          "-0.001": {
+            "valence_max_eV": -0.5112459181321551,
+            "conduction_min_eV": 0.511245918132155,
+            "indirect_gap_eV": 1.0224918362643103
+          },
+          "0.001": {
+            "valence_max_eV": -0.511245918132155,
+            "conduction_min_eV": 0.511245918132155,
+            "indirect_gap_eV": 1.02249183626431
+          }
+        }
+      }
+    },
+    "v2_positive": {
+      "21": {
+        "direct_min_gap_eV": 0.9891754337419272,
+        "direct_max_gap_eV": 1.855124214007712,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.4946040982088691,
+            "conduction_min_eV": 0.49460409820886925,
+            "indirect_gap_eV": 0.9892081964177384
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.4945500424746924,
+            "conduction_min_eV": 0.494655384586736,
+            "indirect_gap_eV": 0.9892054270614284
+          },
+          "0.0001": {
+            "valence_max_eV": -0.49465538458673564,
+            "conduction_min_eV": 0.49455004247469275,
+            "indirect_gap_eV": 0.9892054270614283
+          },
+          "-0.001": {
+            "valence_max_eV": -0.4940610595085345,
+            "conduction_min_eV": 0.49511437423339283,
+            "indirect_gap_eV": 0.9891754337419274
+          },
+          "0.001": {
+            "valence_max_eV": -0.49511437423339244,
+            "conduction_min_eV": 0.49406105950853474,
+            "indirect_gap_eV": 0.9891754337419272
+          }
+        }
+      },
+      "31": {
+        "direct_min_gap_eV": 0.9863061308400223,
+        "direct_max_gap_eV": 1.855124214007712,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.4931650981437192,
+            "conduction_min_eV": 0.49316509814371956,
+            "indirect_gap_eV": 0.9863301962874388
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.49311116796113585,
+            "conduction_min_eV": 0.493217125851703,
+            "indirect_gap_eV": 0.9863282938128388
+          },
+          "0.0001": {
+            "valence_max_eV": -0.49321712585170296,
+            "conduction_min_eV": 0.4931111679611361,
+            "indirect_gap_eV": 0.986328293812839
+          },
+          "-0.001": {
+            "valence_max_eV": -0.4926233160190385,
+            "conduction_min_eV": 0.4936828148209837,
+            "indirect_gap_eV": 0.9863061308400223
+          },
+          "0.001": {
+            "valence_max_eV": -0.493682814820984,
+            "conduction_min_eV": 0.49262331601903864,
+            "indirect_gap_eV": 0.9863061308400226
+          }
+        }
+      },
+      "41": {
+        "direct_min_gap_eV": 0.9852633724177577,
+        "direct_max_gap_eV": 1.855124214007712,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.49264147328174207,
+            "conduction_min_eV": 0.4926414732817424,
+            "indirect_gap_eV": 0.9852829465634845
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.49258765522766146,
+            "conduction_min_eV": 0.49269383695925173,
+            "indirect_gap_eV": 0.9852814921869132
+          },
+          "0.0001": {
+            "valence_max_eV": -0.49269383695925173,
+            "conduction_min_eV": 0.49258765522766185,
+            "indirect_gap_eV": 0.9852814921869135
+          },
+          "-0.001": {
+            "valence_max_eV": -0.4921008107737602,
+            "conduction_min_eV": 0.493162561643998,
+            "indirect_gap_eV": 0.9852633724177582
+          },
+          "0.001": {
+            "valence_max_eV": -0.49316256164399774,
+            "conduction_min_eV": 0.49210081077376,
+            "indirect_gap_eV": 0.9852633724177577
+          }
+        }
+      }
+    },
+    "v2_spinZ_pos": {
+      "21": {
+        "direct_min_gap_eV": 0.9891754337419272,
+        "direct_max_gap_eV": 1.855124214007712,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.4946040982088691,
+            "conduction_min_eV": 0.49460409820886925,
+            "indirect_gap_eV": 0.9892081964177384
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.4945500424746924,
+            "conduction_min_eV": 0.494655384586736,
+            "indirect_gap_eV": 0.9892054270614284
+          },
+          "0.0001": {
+            "valence_max_eV": -0.49465538458673564,
+            "conduction_min_eV": 0.49455004247469275,
+            "indirect_gap_eV": 0.9892054270614283
+          },
+          "-0.001": {
+            "valence_max_eV": -0.4940610595085345,
+            "conduction_min_eV": 0.49511437423339283,
+            "indirect_gap_eV": 0.9891754337419274
+          },
+          "0.001": {
+            "valence_max_eV": -0.49511437423339244,
+            "conduction_min_eV": 0.49406105950853474,
+            "indirect_gap_eV": 0.9891754337419272
+          }
+        }
+      },
+      "31": {
+        "direct_min_gap_eV": 0.9863061308400223,
+        "direct_max_gap_eV": 1.855124214007712,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.4931650981437192,
+            "conduction_min_eV": 0.49316509814371956,
+            "indirect_gap_eV": 0.9863301962874388
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.49311116796113585,
+            "conduction_min_eV": 0.493217125851703,
+            "indirect_gap_eV": 0.9863282938128388
+          },
+          "0.0001": {
+            "valence_max_eV": -0.49321712585170296,
+            "conduction_min_eV": 0.4931111679611361,
+            "indirect_gap_eV": 0.986328293812839
+          },
+          "-0.001": {
+            "valence_max_eV": -0.4926233160190385,
+            "conduction_min_eV": 0.4936828148209837,
+            "indirect_gap_eV": 0.9863061308400223
+          },
+          "0.001": {
+            "valence_max_eV": -0.493682814820984,
+            "conduction_min_eV": 0.49262331601903864,
+            "indirect_gap_eV": 0.9863061308400226
+          }
+        }
+      },
+      "41": {
+        "direct_min_gap_eV": 0.9852633724177577,
+        "direct_max_gap_eV": 1.855124214007712,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.49264147328174207,
+            "conduction_min_eV": 0.4926414732817424,
+            "indirect_gap_eV": 0.9852829465634845
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.49258765522766146,
+            "conduction_min_eV": 0.49269383695925173,
+            "indirect_gap_eV": 0.9852814921869132
+          },
+          "0.0001": {
+            "valence_max_eV": -0.49269383695925173,
+            "conduction_min_eV": 0.49258765522766185,
+            "indirect_gap_eV": 0.9852814921869135
+          },
+          "-0.001": {
+            "valence_max_eV": -0.4921008107737602,
+            "conduction_min_eV": 0.493162561643998,
+            "indirect_gap_eV": 0.9852633724177582
+          },
+          "0.001": {
+            "valence_max_eV": -0.49316256164399774,
+            "conduction_min_eV": 0.49210081077376,
+            "indirect_gap_eV": 0.9852633724177577
+          }
+        }
+      }
+    },
+    "no_soc_control": {
+      "21": {
+        "direct_min_gap_eV": 1.198,
+        "direct_max_gap_eV": 1.4409808688501182,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.6,
+            "conduction_min_eV": 0.6,
+            "indirect_gap_eV": 1.2
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.5999,
+            "conduction_min_eV": 0.5999,
+            "indirect_gap_eV": 1.1998
+          },
+          "0.0001": {
+            "valence_max_eV": -0.5999,
+            "conduction_min_eV": 0.5999,
+            "indirect_gap_eV": 1.1998
+          },
+          "-0.001": {
+            "valence_max_eV": -0.599,
+            "conduction_min_eV": 0.599,
+            "indirect_gap_eV": 1.198
+          },
+          "0.001": {
+            "valence_max_eV": -0.599,
+            "conduction_min_eV": 0.599,
+            "indirect_gap_eV": 1.198
+          }
+        }
+      },
+      "31": {
+        "direct_min_gap_eV": 1.198,
+        "direct_max_gap_eV": 1.4416512003551367,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.6,
+            "conduction_min_eV": 0.6,
+            "indirect_gap_eV": 1.2
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.5999,
+            "conduction_min_eV": 0.5999,
+            "indirect_gap_eV": 1.1998
+          },
+          "0.0001": {
+            "valence_max_eV": -0.5999,
+            "conduction_min_eV": 0.5999,
+            "indirect_gap_eV": 1.1998
+          },
+          "-0.001": {
+            "valence_max_eV": -0.599,
+            "conduction_min_eV": 0.599,
+            "indirect_gap_eV": 1.198
+          },
+          "0.001": {
+            "valence_max_eV": -0.599,
+            "conduction_min_eV": 0.599,
+            "indirect_gap_eV": 1.198
+          }
+        }
+      },
+      "41": {
+        "direct_min_gap_eV": 1.198,
+        "direct_max_gap_eV": 1.441894953309289,
+        "indirect_gap_by_b": {
+          "0.0": {
+            "valence_max_eV": -0.6,
+            "conduction_min_eV": 0.6,
+            "indirect_gap_eV": 1.2
+          },
+          "-0.0001": {
+            "valence_max_eV": -0.5999,
+            "conduction_min_eV": 0.5999,
+            "indirect_gap_eV": 1.1998
+          },
+          "0.0001": {
+            "valence_max_eV": -0.5999,
+            "conduction_min_eV": 0.5999,
+            "indirect_gap_eV": 1.1998
+          },
+          "-0.001": {
+            "valence_max_eV": -0.599,
+            "conduction_min_eV": 0.599,
+            "indirect_gap_eV": 1.198
+          },
+          "0.001": {
+            "valence_max_eV": -0.599,
+            "conduction_min_eV": 0.599,
+            "indirect_gap_eV": 1.198
+          }
+        }
+      }
+    }
+  },
+  "direct_wilson": {
+    "v2_positive_bstep_1e-4": [
+      {
+        "N": 21,
+        "direct_dperomega": 0.03429374753149515,
+        "wilson_slope": 0.0337544983974869,
+        "relative_discrepancy": 0.015724415464160386
+      },
+      {
+        "N": 31,
+        "direct_dperomega": 0.03429374753149538,
+        "wilson_slope": 0.034045601645660284,
+        "relative_discrepancy": 0.007235892945418133
+      },
+      {
+        "N": 41,
+        "direct_dperomega": 0.034293747531495486,
+        "wilson_slope": 0.034151744511268234,
+        "relative_discrepancy": 0.004140784558375723
+      }
+    ],
+    "v2_positive_41_rel": 0.004140784558375723
+  },
+  "bstep_conv": {
+    "v2_positive_N41": [
+      {
+        "bstep_eV": 0.0001,
+        "direct": 0.034293747531495486,
+        "wilson": 0.034151744511268234,
+        "relative_discrepancy": 0.004140784558375723
+      },
+      {
+        "bstep_eV": 0.0005,
+        "direct": 0.034293747531495486,
+        "wilson": 0.034151791706626966,
+        "relative_discrepancy": 0.004139408349529231
+      },
+      {
+        "bstep_eV": 0.001,
+        "direct": 0.034293747531495486,
+        "wilson": 0.03415193919076298,
+        "relative_discrepancy": 0.004135107736541995
+      }
+    ]
+  },
+  "gauge_invariance": {
+    "joint_U_seed": 26,
+    "direct_before": 0.034293747531495486,
+    "direct_after": 0.034293747531495514,
+    "direct_residual": 2.7755575615628914e-17,
+    "wilson_before": 0.034151744511268234,
+    "wilson_after": 0.03415174451237846,
+    "wilson_residual": 1.1102230246251565e-12
+  },
+  "negative_controls": {
+    "NC1_wrong_spin_gauge": {
+      "correct": 0.034293747531495486,
+      "wrong": 0.17040360331277501,
+      "abs_diff": 0.13610985578127954,
+      "threshold_abs_gt": 0.02,
+      "detected": true
+    },
+    "NC2_omit_A": {
+      "fixture": "v2_spinZ_pos (spin-Z position connection)",
+      "with_A_covariant": -0.025357180978182244,
+      "omit_A_bare": 0.03429374753149531,
+      "abs_diff": 0.059650928509677556,
+      "response_threshold_gt": 0.01,
+      "response_detected": true,
+      "max_partial_minus_covariant_operator_eV_A": 0.79912,
+      "operator_threshold_gt": 0.005,
+      "operator_detected": true,
+      "v2_positive_covariant": 0.034293747531495486,
+      "v2_positive_bare": 0.03429374753149531,
+      "erratum": "adcd75e gate markdown reversed the cov/bare sign assignment; JSON and source were correct. Repaired here with dated erratum (2026-10-23).",
+      "note": "on v2_positive the A-response is model-insensitive; the spin-Z position connection fixture is the response-level control"
+    },
+    "NC3_orbital_pseudospin": {
+      "physical": 0.034293747531495486,
+      "orbital_pseudospin": 0.31590558716066436,
+      "abs_diff": 0.28161183962916886,
+      "threshold_rel_gt": 0.05,
+      "detected": true
+    },
+    "NC4_no_SOC_zero_displacement_corrected": {
+      "direct": 1.096224295981363e-33,
+      "wilson_slope": 0.0,
+      "commutator_max_Sx_eV": 0.0,
+      "threshold_abs_lt": 1e-10,
+      "detected_zero": true,
+      "proof_note": "H=h2(x)I_spin, S=I_orb(x)sigma: cross-spin velocity elements vanish and same-spin sigma_x elements vanish in the occ-empty pair sum -> D exactly zero"
+    },
+    "NC5_pinned_round26_zero_D_baseline": {
+      "direct": -2.5575561729251158e-17,
+      "threshold_abs_lt": 1e-10,
+      "detected_zero": true
+    }
+  },
+  "wilson_branch": {
+    "jumps": {
+      "0.0": {
+        "max_adjacent_ky_jump": 0.022475942933048998,
+        "row_min": 1.900634646044187,
+        "row_max": 2.194188739752638,
+        "branch_margin_rad": 0.9474039138371553,
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.001744580967561138,
+        "winding_max_local_step_rad": 0.022475942933048998,
+        "winding_jump_like": false
+      },
+      "-0.0001": {
+        "max_adjacent_ky_jump": 0.022475783487714285,
+        "row_min": 1.9006294847220015,
+        "row_max": 2.19418154643906,
+        "branch_margin_rad": 0.947411107150733,
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.0017445754421792081,
+        "winding_max_local_step_rad": 0.022475783487714285,
+        "winding_jump_like": false
+      },
+      "0.0001": {
+        "max_adjacent_ky_jump": 0.022476102365773354,
+        "row_min": 1.900639806394365,
+        "row_max": 2.194195931935692,
+        "branch_margin_rad": 0.9473967216541013,
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.0017445864926850518,
+        "winding_max_local_step_rad": 0.022476102365773354,
+        "winding_jump_like": false
+      },
+      "-0.001": {
+        "max_adjacent_ky_jump": 0.022474347904918535,
+        "row_min": 1.9005829887767518,
+        "row_max": 2.194116755348586,
+        "branch_margin_rad": 0.947475898241207,
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.0017445257021595495,
+        "winding_max_local_step_rad": 0.022474347904918535,
+        "winding_jump_like": false
+      },
+      "0.001": {
+        "max_adjacent_ky_jump": 0.02247753669999497,
+        "row_min": 1.9006862061106569,
+        "row_max": 2.194260611104233,
+        "branch_margin_rad": 0.9473320424855602,
+        "winding_integer": 0,
+        "winding_closure_residual_rad": 0.0017446362073005872,
+        "winding_max_local_step_rad": 0.02247753669999497,
+        "winding_jump_like": false
+      }
+    },
+    "finite_b_drift": {
+      "-0.0001": 7.1933135776802715e-06,
+      "0.0001": 7.1921830540055964e-06,
+      "-0.001": 7.198440405176143e-05,
+      "0.001": 7.1871351595032e-05
+    },
+    "winding": {
+      "0.0": 0,
+      "-0.0001": 0,
+      "0.0001": 0,
+      "-0.001": 0,
+      "0.001": 0
+    },
+    "sum_vs_total_consistency": null,
+    "chern_winding_flagged": false,
+    "note": "row phases are smooth and away from the +/-pi branch cut; nonzero integer winding (Chern-like) is flagged explicitly with its closure residual and never silently smoothed"
+  },
+  "liouville": {
+    "N21": {
+      "ImK_per_omega": 0.0343041139997779,
+      "direct": 0.03429374753149515,
+      "wilson_slope": 0.0337544983974869,
+      "rel_vs_direct": 0.0003021931504428535
+    },
+    "N31": {
+      "ImK_per_omega": 0.03430411399975615,
+      "direct": 0.03429374753149538,
+      "wilson_slope": 0.034045601645660284,
+      "rel_vs_direct": 0.00030219314980243746
+    },
+    "note": "independent finite-frequency density-matrix solver (model response), NOT a physical orbital-field IGMC"
+  },
+  "fail_closed": {
+    "gap_floor_eV": 0.02,
+    "indirect_gap_required_positive": true,
+    "wilson_branch_jumps_rejected": true,
+    "note": "gap_scan raised on any direct-gap floor or non-positive indirect gap; wilson_branch_check raised on any principal-branch jump >= pi, row phase within 0.05 rad of the +/-pi branch cut, or finite-b drift >= pi"
+  },
+  "two_band_anchor": {
+    "dirac_N41_direct_dperomega": 0.015236647006393517,
+    "dirac_N41_wilson_dperomega": 0.015182770723390034,
+    "frozen_csv_ref_direct_41": 0.015236647,
+    "review_ref_wilson_41": 0.0151827707
+  },
+  "units": "reduced hbar=e=1; Zeeman b in eV; Dxx/omega in A/eV per BZ cell; slope via P=(a1/2pi)mean(gamma)",
+  "pinned_content_identical": true,
+  "commutators": {
+    "no_soc_corrected": {
+      "max_[H,Sx]": 0.0,
+      "max_[H,Sy]": 0.0,
+      "max_[H,Sz]": 0.0
+    },
+    "no_soc_wrong_factor_bug": {
+      "max_[H,Sx]": 1.2,
+      "max_[H,Sy]": 1.4409808688501182,
+      "max_[H,Sz]": 0.7977630377449443
+    },
+    "v2_positive": {
+      "max_[H,Sx]": 0.533708783537389,
+      "max_[H,Sy]": 0.7353304344916347,
+      "max_[H,Sz]": 0.5685068161420759
+    },
+    "pinned_round26": {
+      "max_[H,Sx]": 0.509161139154354,
+      "max_[H,Sy]": 0.6729376387340504,
+      "max_[H,Sz]": 0.44
+    }
+  },
+  "verdict": {
+    "verdict": "PASS",
+    "meaning": "corrected multiband low-omega Dxx result survives (direct +0.0342937 vs Wilson +0.0341517 at 41^2, 0.41%); gate PASS = allowed to develop a genuine source-authenticated H/S/A file importer; NOT material IGMC, NOT permission for costly DFT/Wannier",
+    "survives_low_omega_Dxx": true
+  },
+  "elapsed_sec": 195.1
+}

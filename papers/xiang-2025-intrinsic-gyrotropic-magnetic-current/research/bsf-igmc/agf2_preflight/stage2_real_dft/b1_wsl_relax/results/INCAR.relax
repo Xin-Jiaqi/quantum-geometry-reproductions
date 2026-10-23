@@ -1,0 +1,37 @@
+SYSTEM = AgF2_B1_g3.0_TypeI_nosoc_WSL_relax1
+# Source-derived: PBE, Ag 4d Dudarev Ueff=4 eV, D3 family, ENCUT=500, EDIFF=1e-6
+GGA = PE
+PREC = Accurate
+ENCUT = 500
+EDIFF = 1E-6
+ISPIN = 2
+MAGMOM = -1 1 1 -1 8*0
+LDAU = .TRUE.
+LDAUTYPE = 2
+LDAUL = 2 -1
+LDAUU = 4 0
+LDAUJ = 0 0
+LMAXMIX = 4
+LASPH = .TRUE.
+# Operator-chosen smoke-test settings, not claimed original author settings
+IVDW = 11
+ISMEAR = 0
+SIGMA = 0.05
+ISYM = 0
+ALGO = Normal
+NELM = 120
+ISTART = 0
+ICHARG = 2
+LREAL = .FALSE.
+NCORE = 4
+IBRION = 2
+ISIF = 2
+NSW = 30
+POTIM = 0.25
+EDIFFG = -0.02
+LSORBIT = .FALSE.
+LNONCOLLINEAR = .FALSE.
+LDIPOL = .FALSE.
+LORBIT = 11
+LWAVE = .FALSE.
+LCHARG = .FALSE.

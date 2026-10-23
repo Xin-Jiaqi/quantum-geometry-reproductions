@@ -1,0 +1,13 @@
+atom_1based,species,Sx_mub,Sy_mub,Sz_mub,|S|_mub,Lx_mub,Ly_mub,Lz_mub,|L|_mub,basis,SAXIS
+1,Ag,-0.5680,0.0190,-0.0050,0.5683,-0.1220,0.0250,0.0700,0.1429,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+2,Ag,0.5680,0.0190,-0.0040,0.5683,0.1220,0.0250,0.0700,0.1429,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+3,Ag,0.5680,-0.0190,-0.0050,0.5683,0.1230,-0.0240,0.0690,0.1431,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+4,Ag,-0.5680,-0.0190,-0.0050,0.5683,-0.1230,-0.0240,0.0690,0.1431,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+5,F,-0.0020,0.0040,-0.0020,0.0049,-0.0020,-0.0020,-0.0040,0.0049,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+6,F,-0.0000,0.0040,-0.0020,0.0045,0.0020,-0.0020,-0.0040,0.0049,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+7,F,0.0000,0.0040,-0.0020,0.0045,-0.0020,-0.0020,-0.0040,0.0049,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+8,F,0.0020,0.0040,-0.0020,0.0049,0.0020,-0.0020,-0.0040,0.0049,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+9,F,0.0010,-0.0040,-0.0020,0.0046,0.0020,0.0020,-0.0040,0.0049,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+10,F,0.0010,-0.0040,-0.0020,0.0046,-0.0020,0.0020,-0.0040,0.0049,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+11,F,-0.0010,-0.0040,-0.0020,0.0046,0.0020,0.0020,-0.0040,0.0049,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1
+12,F,-0.0010,-0.0040,-0.0020,0.0046,-0.0020,0.0020,-0.0040,0.0049,spinor diagonal basis (SAXIS=0 0 1: spinor axes coincide with Cartesian in VASP convention),0 0 1

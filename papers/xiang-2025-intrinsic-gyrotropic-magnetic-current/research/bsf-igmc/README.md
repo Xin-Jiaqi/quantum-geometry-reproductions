@@ -2,7 +2,7 @@
 
 **Independent follow-up study; NOT the Xiang et al. (2025) paper reproduction.**
 
-Scientific status: **MODEL-LEVEL RESULT VERIFIED / FERROELECTRICITY UNPROVEN / REAL-MATERIAL BLOCKED**.
+Scientific status: **MODEL-LEVEL RESULT VERIFIED / AgF₂ B1 NON-SOC AND SOC SCREENING PASSED / MATERIAL IGMC AND FERROELECTRIC SWITCHING NOT DEMONSTRATED**.
 
 The existing reproduction under `../../` remains immutable. The present study asks whether sliding-modulated real-space interlayer hopping, **without inserting any phenomenological odd-in-sliding onsite polarization term**, can generate a nonzero insulating Zeeman-geometry displacement response, with different transformation laws under a unitary and an antiunitary stacking connector.
 
@@ -72,4 +72,16 @@ OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
 
 ## Stage 4: first real-material candidate, AgF₂ (source-grounded preflight)
 
-See [`agf2_preflight/`](agf2_preflight/) for the independent AgF₂ Type-I/strained Type-II magnetic-connector tensor predictions, the published BSF structural evidence and the **fail-closed DFT input gate**. This follow-up does **not** modify or promote the eight-band model's artificial energy surface to a ferroelectric double well, and no AgF₂ DFT/IGMC values have been computed.
+See [`agf2_preflight/`](agf2_preflight/) for the independent AgF₂ Type-I/strained Type-II magnetic-connector tensor predictions, the published BSF structural evidence and the **fail-closed DFT input gate**. This follow-up does **not** modify or promote the eight-band model's artificial energy surface to a ferroelectric double well. A C2DB-derived AgF₂ B1 candidate has now passed a **non-SOC, low-cost structural/magnetic screen** in PR #38; no SOC-on material response or AgF₂ IGMC amplitude has been computed.
+
+
+## Stage 5: real-material B1 screen and next gate (2026-10-22)
+
+The single authorized WSL screening run is documented in [PR #38](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/38): 11/11 electronic steps converged, VASP reached the screening force criterion at 0.0782 eV/Å, the Type-I Ag moment signs and a preliminary 1.3875 eV gap were retained, and the nearest interlayer F–F distance remained 3.002 Å. This is a **screening candidate**, not a verified local minimum, magnetic ground state or FE double well.
+
+The previously proposed one-point SOC-on static screen in [B1_SOC_STATIC_SCREENING_TASK_20261022.md](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_SOC_STATIC_SCREENING_TASK_20261022.md) **has now run** (commit fee4e62): 64 SCF iterations converged, preliminary occupation gap 1.3616 eV and Type-I spin pattern preserved. Actual runtime 4.658h **exceeded** the authorized 4h limit and is disclosed in the original receipt. No material IGMC or second FE minimum was computed. The corrected channel-resolved response and literature gates are documented in [the tensor erratum](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_IGMC_TENSOR_ERRATUM_20261022.md) and [the novelty/story assessment](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_BSF_IGMC_NOVELTY_STORY_GATE_20261022.md).
+
+
+## Stage 6: SOC source evidence and response-theory gate (2026-10-23)
+
+The SOC B1 site-moment vectors are consistent with the conditional magnetic operation m'_x at the printed site precision: the antiunitary mirror sends axial time-odd (Mx,My,Mz) to (-Mx,+My,+Mz), so weak common Mz and PAW-projected Ag Lz are **allowed**, not symmetry violations. The complete magnetic density and the actual easy axis remain unverified. The [independent site/magnetic-response review](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/soc_static_1/B1_SOC_MAGNETIC_AND_RESPONSE_FEASIBILITY_AUDIT_20261023.md) corrects the earlier canting interpretation and records the resource overrun. The [operator feasibility matrix](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/soc_static_1/B1_RESPONSE_OPERATOR_FEASIBILITY_MATRIX_20261023.md) distinguishes validated toy kernels from missing AgF₂ H/spin/position matrices. The [next task](agf2_preflight/stage2_real_dft/b1_wsl_relax/idea_screen_1/soc_static_1/B1_SOC_RESPONSE_THEORY_READONLY_HARNESS_TASK_20261023.md) is **read-only**, focused on primary-source Eq. (14) convention and operator readiness, with no further VASP authorization.
