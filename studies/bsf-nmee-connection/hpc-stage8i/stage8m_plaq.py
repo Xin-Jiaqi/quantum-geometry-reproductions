@@ -129,8 +129,25 @@ def link_matrix(mats, ik, ikp, nb):
 
 # ------------------------------------------------------------- plaquette engine
 def polar_unitary(m):
-    """Unitary part of polar decomposition; returns (U, min singular value)."""
-    u, s, vh = np.linalg.svd(m)
+    """Unitary part of polar decomposition; returns (U, min singular value).
+
+    SVD-based (gesdd default); on non-convergence (ill-conditioned overlaps,
+    seen at the glide mid-point stack) falls back to the robust gesvd
+    driver when the LAPACK driver is selectable, and finally to the
+    M (M^+ M)^{-1/2} construction via symmetric eigh (never fails).
+    """
+    try:
+        u, s, vh = np.linalg.svd(m)
+    except np.linalg.LinAlgError:
+        try:
+            u, s, vh = np.linalg.svd(m, lapack_driver="gesvd")
+        except (TypeError, np.linalg.LinAlgError):
+            mm = m.conj().T @ m
+            w, v = np.linalg.eigh(mm)
+            w = np.maximum(w, 0.0)
+            s_min = float(np.sqrt(w.min()))
+            sq = v @ np.diag(1.0 / np.sqrt(w + 1e-300)) @ v.conj().T
+            return (m @ sq).astype(complex), s_min
     return (u @ vh).astype(complex), float(s[-1])
 
 

@@ -118,6 +118,88 @@ class Stage8mPlaquetteTests(unittest.TestCase):
         self.assertLess(vals[-.4], 0)
         self.assertLess(abs(vals[.4] + vals[-.4]) / abs(vals[.4]), 5e-6)
 
+    def test_glide_midpoint_half_lattice_shift_is_null(self):
+        """Layer-exchanging glide midpoint (half-lattice shift) must give
+        zero total static response in BOTH frame and mmn(chain) modes.
+        This is the symmetry regression that the real-WSe2 glide null test
+        exercises: the engine must preserve the m_z+half-translation zero
+        structure regardless of the k-edge construction."""
+        model = SlidingBilayer(replace(
+            SlidingSpec(), shift=(.5, .5), tunneling_eV=.005))
+        rec = model.model().reciprocal
+        n = 21
+        base = (np.arange(n)) / n
+        gx, gy = np.meshgrid(base, base)
+        kfrac = np.stack([gx.ravel(order='F'), gy.ravel(order='F')], axis=-1)
+        kfrac[kfrac >= .5] -= 1.0
+        kpts = kfrac @ rec
+        nk = len(kpts)
+        nb = 8
+        E = np.zeros((nk, nb))
+        frames = {}
+        for ik, kf in enumerate(kfrac):
+            H = model.matrices(np.array([kf]) @ rec)
+            Hm = H[0] if H.ndim == 3 else H
+            e, v = np.linalg.eigh(Hm)
+            E[ik] = e
+            frames[ik] = v
+        spin = {s: model.spins["total_" + s] for s in ("x", "y", "z")}
+        S = np.zeros((nk, nb, nb, 3), complex)
+        for ik in range(nk):
+            for ip, s in enumerate("xyz"):
+                Mv = spin[s]
+                Mv = Mv[0] if Mv.ndim == 3 else Mv
+                S[ik, :, :, ip] = frames[ik].T.conj() @ Mv @ frames[ik]
+        lat = (2 * np.pi * np.linalg.inv(rec.T)).T
+        a1, a2 = lat[0][:2], lat[1][:2]
+        A2d = float(np.linalg.det(np.array([a1, a2])))
+        b1 = 2 * np.pi * np.array([a2[1], -a2[0]]) / A2d
+        b2 = 2 * np.pi * np.array([-a1[1], a1[0]]) / A2d
+        ABZ = abs(b1[0] * b2[1] - b1[1] * b2[0])
+        dk = np.array([np.linalg.norm(b1) / n, np.linalg.norm(b2) / n])
+        weight = ABZ / (2 * np.pi) ** 2 / nk
+        gxi = np.round(kfrac[:, 0] * n).astype(int) % n
+        gyi = np.round(kfrac[:, 1] * n).astype(int) % n
+        coord = {(gxi[i], gyi[i]): i for i in range(nk)}
+        mats = {}
+        for ik in range(nk):
+            a, b = gxi[ik], gyi[ik]
+            for (ax, sgn) in [(0, 1), (0, -1), (1, 1), (1, -1)]:
+                ikp = coord[((a + (1 if ax == 0 else 0) * sgn) % n,
+                             (b + (1 if ax == 1 else 0) * sgn) % n)]
+                if ikp != ik:
+                    mats[(ikp, ik)] = frames[ikp].T.conj() @ frames[ik]
+        neigh = {(ax, sgn): [0] * nk for ax in (0, 1) for sgn in (-1, 1)}
+        for ik in range(nk):
+            a, b = gxi[ik], gyi[ik]
+            neigh[(0, 1)][ik] = coord[((a + 1) % n, b)]
+            neigh[(0, -1)][ik] = coord[((a - 1) % n, b)]
+            neigh[(1, 1)][ik] = coord[(a, (b + 1) % n)]
+            neigh[(1, -1)][ik] = coord[(a, (b - 1) % n)]
+        from stage8m_response import WannierProvider
+        worst = 0.0
+        for src in ("x", "y"):
+            prov = ModelProvider(model, src)
+            Sx = S[:, :, :, 0 if src == "x" else 1]
+            Sz = S[:, :, :, 2]
+            prov_r = WannierProvider(E, Sx, Sz, 4, nb)
+            for axis in (0, 1):
+                eng_f = DeterminantPlaquette(
+                    lambda k, lam, B: prov.frames(k, lam, B)[0],
+                    mode="frame", dk=dk[axis], dl=1e-4, axis=axis)
+                gf = sum(eng_f.Gamma_k(k, 0.0, 0.0, .25) for k in kpts)
+                eng_m = DeterminantPlaquette(
+                    prov_r.frames, mode="mmn", links=mats,
+                    ik_of=lambda k_c, sgn, axis=axis: neigh[
+                        (axis, 1 if sgn > 0 else -1)][k_c],
+                    dk=dk[axis], dl=1e-4, axis=axis, full_nb=nb)
+                gm = sum(eng_m.Gamma_k(ik, 0.0, 0.0, .25)
+                         for ik in range(nk))
+                worst = max(worst, abs(weight * gf), abs(weight * gm))
+        # noise floor of the estimator on this mesh is ~1e-12; require the
+        # glide-midpoint total to stay at that floor (allow 1e-11 headroom)
+        self.assertLess(worst, 1e-10)
+
     def test_source_step_gap_guard_fails_closed(self):
         model = SlidingBilayer(spec_u(.4, .005))
         kc = np.array([[1 / 3, 2 / 3]]) @ model.model().reciprocal + np.array([[.05, .02]])

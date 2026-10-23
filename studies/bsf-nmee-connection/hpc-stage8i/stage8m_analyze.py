@@ -41,7 +41,7 @@ def main():
                 parts["dl"] = float(tok[2:])
         return parts
 
-    keys = sorted(ab_cfg)
+    keys = sorted(k for k in ab_cfg if not k.startswith("_"))
     rows = []
     # B convergence: for each (src, win, dl): ratio G(B=.25)/G(B=.125)
     bconv = {}
@@ -113,10 +113,11 @@ def main():
             "max_abs_glide_Gx": max((abs(v) for k, ax in gl_null
                                      for v in (gl_null[(k, ax)][1],) if ax == "x"),
                                     default=float("nan")),
-            "max_abs_AB_Gx": max((abs(gl_null[(k, "x")][0])
-                                  for k in gl_null if k[1] == "x"),
+            "max_abs_AB_Gx": max((abs(gl_null[(k0, "x")][0])
+                                  for (k0, ax) in gl_null if ax == "x"),
                                  default=float("nan")),
-            "rows": [{"key": k, "AB": a, "GL": g}
+            "rows": [{"key": k, "AB": gl_null[(k, ax)][0],
+                      "GL": gl_null[(k, ax)][1]}
                      for k, ax in sorted(gl_null) if ax == "x"][:30],
             "note": "layer-exchanging glide should give total response 0.",
         },

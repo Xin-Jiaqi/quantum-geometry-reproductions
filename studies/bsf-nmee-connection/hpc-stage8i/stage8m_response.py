@@ -17,9 +17,14 @@ k points come from the .win kpoints block (fractional); mesh neighbours are
 found by periodic index lookup. dk along a Cartesian axis is |b_axis|/N.
 Full-BZ estimator: Gamma = (A_BZ/(2pi)^2) * (1/N_k) * sum_k Gamma(k).
 """
-import argparse, json, time, multiprocessing
+import argparse, json, time, os
+
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+
 from pathlib import Path
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 
 from stage8m_plaq import (read_eig, read_mmn_spn, DeterminantPlaquette)
@@ -117,14 +122,6 @@ class WannierProvider:
 
 
 _GLOBAL = {}
-
-
-def _init_worker(shared):
-    _GLOBAL["shared"] = shared
-
-
-def _compute_one_global(cfg):
-    return _compute_one(_GLOBAL["shared"], *cfg)
 
 
 def _compute_one(args_shared, source, window, B, dl, axis):
@@ -233,16 +230,14 @@ def run_response(dirp, *, windows, blist, dllist, sources, occ, kmesh,
                   results[key]["axis_y"]["Gamma_BZ_Ang2"],
                   "gap", per_axis[0]["min_gap_eV"], flush=True)
     else:
-        # one task per (config, axis) for good load balancing; shared arrays
-        # are injected once via the worker initializer (fork), so the task
-        # queue only pickles tiny tuples
+        # one task per (config, axis) for good load balancing; threads share
+        # the read-only arrays and numpy releases the GIL in LAPACK calls,
+        # so a thread pool avoids fork/OpenBLAS deadlocks seen with process
+        # pools on this cluster
         axis_tasks = [(s, w, B, dl, ax)
                       for (s, w, B, dl) in tasks for ax in (0, 1)]
-        with ProcessPoolExecutor(max_workers=jobs,
-                                 initializer=_init_worker,
-                                 initargs=(shared,),
-                                 mp_context=multiprocessing.get_context("fork")) as ex:
-            futures = {ex.submit(_compute_one_global, t): t
+        with ThreadPoolExecutor(max_workers=jobs) as ex:
+            futures = {ex.submit(_compute_one, shared, *t): t
                        for t in axis_tasks}
             for fut in futures:
                 t = futures[fut]
