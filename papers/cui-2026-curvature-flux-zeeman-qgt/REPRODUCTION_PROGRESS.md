@@ -268,3 +268,17 @@ Derivation: [Round29 scope](ROUND29_THERMAL_LINDBLAD_WARD.md). Full source Cui p
 ### Round29 first frozen-audit checkpoint
 
 The first remote 273-case test and audit run exposed the finite two-site bath tradeoff without changing original Cui physics: KMS pair residual 3.47e-18; Gibbs thermal-jump stationarity 3.69e-17; local CP dephasing Gibbs failure 0.023248; thermal bath site-charge source 0.074817; gauge-stale jumps false covariance 0.010845; omission of bath vertex false pure-gauge residual 0.017868. Newly frozen data and one numerical regression increase the final requested package count to **274**. Final merge requires real dual-version CI on the exact SHA. **Whole source paper remains PARTIAL.**
+
+## Round30 | Interacting many-fermion thermal sectors and collision Ward (2026-10-23)
+
+| Stream | New physically bounded milestone | Still missing |
+|---|---|---|
+| **1. Original Cui reproduction** | Exact four-mode interacting fermionic Fock test with Pauli blocking and fixed-N energy-pair KMS bath; an upstream real Fermi many-body prerequisite, **not** original KME. **Whole paper PARTIAL.** | Material-specific finite-q dissipative KME, source Eq.(19) SI, Table I and published figures. |
+| **2. Reusable physics** | Exact CAR + 16-state grand Gibbs, number-sector jumps, Pauli/no-double-occupancy, interacting vs independent one-body Fermi limit, total-number Ward vs explicit local bath source, gauge and **magnetic** bath vertices with independent finite differences. | Microscopically derived phonon/disorder self-energy and Ward ladder, fixed-mu reservoir, real Wannier spin source, thermodynamic metallic response. |
+| **3. GitHub** | Isolated Round30 module/tests/audit/frozen regressions, scoped Registry, dual Python 3.11/3.12 workflow and all Round17–29 historical steps. Final counts/status require exact CI logs. | Parallel open PR #65 and prior Round21/26–29 untouched; no full-paper promotion. |
+
+**Bounded method**: [Round30 physics](ROUND30_INTERACTING_FOCK_THERMAL_BATH.md). Number-preserving KMS jumps do **not** select a unique chemical potential; the synthetic Fock ensemble is not yet a bulk metal.
+
+### Round30 remote first-run baseline and final frozen gate
+
+Dual Python 3.11/3.12 **291/291 PASS** in first CI run 39899779828, including all past audits and the new many-fermion test. Adding an independent frozen numerical regression gives the final expected Cui count **292**; final PASS/merge claims require fresh exact-SHA remote evidence. Model diagnostic: 54 Fock number-preserving KMS jumps, interaction-dependent occupations (difference 0.075984), grand KMS 1.73e-18, Gibbs stationarity 2.36e-17, total N source ~7e-18 but local bath site source 0.271191, and missing Zeeman bath contact error 0.005563. Explicit finite interacting Fock only, **Cui source PARTIAL**.
