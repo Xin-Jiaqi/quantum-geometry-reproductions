@@ -1,0 +1,1278 @@
+{
+ "schema": "round36-zeeman-v3-audit-v1",
+ "reference_integrals": {
+  "dirac": {
+   "OmN_z_over_eps2": 0.009966678582352664,
+   "gA_xy_over_eps2": 0.01954277020732277,
+   "OmA_z_over_eps": -0.08258556021406283,
+   "gN_xy_over_eps": 0.002945607399872387,
+   "OmA_z_over_eps3": -0.09364516421659662,
+   "gN_xy_over_eps3": 0.0034654075939889724
+  },
+  "mirror_mx": {
+   "OmN_z_over_eps2": -0.025079007594624683,
+   "gA_xy_over_eps2": 0.012539503797312345,
+   "OmA_z_over_eps": 0.023564632879196384,
+   "gN_xy_over_eps": -0.011782316439598192,
+   "OmA_z_over_eps3": 0.027607287949265102,
+   "gN_xy_over_eps3": -0.013803643974632551
+  },
+  "c2prime": {
+   "OmN_z_over_eps2": -0.020660556519674977,
+   "gA_xy_over_eps2": 0.009073885847700214,
+   "OmA_z_over_eps": 0.004977575974639161,
+   "gN_xy_over_eps": 0.0039024456788258337,
+   "OmA_z_over_eps3": 0.0006718961304707698,
+   "gN_xy_over_eps3": 0.0009383798982348959
+  },
+  "c3": {
+   "OmN_z_over_eps2": -5.379082731538434e-17,
+   "gA_xy_over_eps2": -3.157057230539288e-18,
+   "OmA_z_over_eps": -0.05781956527994394,
+   "gN_xy_over_eps": 6.946610374056715e-16,
+   "OmA_z_over_eps3": -0.043930976716507746,
+   "gN_xy_over_eps3": 4.651803720093156e-19
+  }
+ },
+ "four_channel_ratios": {
+  "dirac": {
+   "GHE": {
+    "ratio_Im_sigma-_OmA": 1.0004539179785392,
+    "ratio_Im_sigma+_gN": 1.0004709509527723,
+    "ratio_Re_sigma-_OmN": 1.003381853309945,
+    "ratio_Re_sigma+_gA": 1.0034489550109595
+   },
+   "KME": {
+    "ratio_Im_alpha-_OmN": 0.9999999999999988,
+    "ratio_Im_alpha+_gA": 1.0,
+    "ratio_Re_alpha-_OmA": 0.9999999999999087,
+    "ratio_Re_alpha+_gN": 1.0000000000003604
+   }
+  },
+  "mirror_mx": {
+   "GHE": {
+    "ratio_Im_sigma-_OmA": 1.000468945778987,
+    "ratio_Im_sigma+_gN": 1.000468945778987,
+    "ratio_Re_sigma-_OmN": 1.0034939055607197,
+    "ratio_Re_sigma+_gA": 1.0034939055607195
+   },
+   "KME": {
+    "ratio_Im_alpha-_OmN": 0.9999999999999998,
+    "ratio_Im_alpha+_gA": 0.9999999999999994,
+    "ratio_Re_alpha-_OmA": 1.000000000000088,
+    "ratio_Re_alpha+_gN": 1.000000000000088
+   }
+  },
+  "c2prime": {
+   "GHE": {
+    "ratio_Im_sigma-_OmA": 1.0000540069951913,
+    "ratio_Im_sigma+_gN": 1.0000962133904734,
+    "ratio_Re_sigma-_OmN": 1.0035278058401547,
+    "ratio_Re_sigma+_gA": 1.003782117090864
+   },
+   "KME": {
+    "ratio_Im_alpha-_OmN": 1.0,
+    "ratio_Im_alpha+_gA": 0.9999999999999998,
+    "ratio_Re_alpha-_OmA": 0.9999999999996406,
+    "ratio_Re_alpha+_gN": 1.0000000000001883
+   }
+  },
+  "c3": {
+   "GHE": {
+    "ratio_Im_sigma-_OmA": 1.0003041227882836,
+    "ratio_Im_sigma+_gN": 1.0066929964358484,
+    "ratio_Re_sigma-_OmN": 18.543421777812767,
+    "ratio_Re_sigma+_gA": -460.1851677178508
+   },
+   "KME": {
+    "ratio_Im_alpha-_OmN": 1.0005013907615543,
+    "ratio_Im_alpha+_gA": 0.9946587948377739,
+    "ratio_Re_alpha-_OmA": 1.0000000000000062,
+    "ratio_Re_alpha+_gN": 4474.969917970831
+   }
+  }
+ },
+ "hodge_duality": {
+  "curl_OA_minus_half_div_w": 0.0,
+  "div_OA_plus_half_curl_w": 0.0
+ },
+ "massive_omegaA_point": [
+  -0.37200884777800125,
+  0.5228232455258396,
+  -0.6032575909913533
+ ],
+ "massless_flux_and_winding": [
+  {
+   "radius": 2.0,
+   "flux_OmegaA_nhat_dl": -3.141602510256809,
+   "flux_over_minus_pi": 1.000003137474556,
+   "winding_Cw": 1.000003137474556,
+   "gauss_index_Q": 1.000003137474556
+  },
+  {
+   "radius": 3.0,
+   "flux_OmegaA_nhat_dl": -3.141602510256809,
+   "flux_over_minus_pi": 1.000003137474556,
+   "winding_Cw": 1.000003137474556,
+   "gauss_index_Q": 1.000003137474556
+  },
+  {
+   "radius": 4.0,
+   "flux_OmegaA_nhat_dl": -3.141602510256809,
+   "flux_over_minus_pi": 1.000003137474556,
+   "winding_Cw": 1.000003137474556,
+   "gauss_index_Q": 1.000003137474556
+  },
+  {
+   "radius": 5.0,
+   "flux_OmegaA_nhat_dl": -3.141602510256809,
+   "flux_over_minus_pi": 1.000003137474556,
+   "winding_Cw": 1.000003137474556,
+   "gauss_index_Q": 1.000003137474556
+  }
+ ],
+ "negative_controls": {
+  "sigma_sign_flip_detected_all_sectors": true,
+  "hermitian_limit_gA_omegaA_vanish": true,
+  "transposed_T_misassignment_detected": true,
+  "band_parity_gA_omegaN_flip": true,
+  "flux_orientation_sign": true
+ },
+ "sector_transformation_rule": {
+  "C2": {
+   "signs": {
+    "gN": 1,
+    "gA": 1,
+    "omegaN": 1,
+    "omegaA": 1
+   },
+   "residuals": {
+    "gN": 2.7755575615628914e-17,
+    "gA": 5.551115123125783e-17,
+    "omegaN": 0.0,
+    "omegaA": 5.551115123125783e-17
+   },
+   "lam": 1.0,
+   "det": 1.0
+  },
+  "C3": {
+   "signs": {
+    "gN": 1,
+    "gA": 1,
+    "omegaN": 1,
+    "omegaA": 1
+   },
+   "residuals": {
+    "gN": 1.1102230246251565e-16,
+    "gA": 2.220446049250313e-16,
+    "omegaN": 5.551115123125783e-17,
+    "omegaA": 4.996003610813204e-16
+   },
+   "lam": 1.0,
+   "det": 1.0
+  },
+  "Mx": {
+   "signs": {
+    "gN": 1,
+    "gA": 1,
+    "omegaN": 1,
+    "omegaA": 1
+   },
+   "residuals": {
+    "gN": 7.397739665771265e-17,
+    "gA": 5.551115123125783e-17,
+    "omegaN": 1.1102230246251565e-16,
+    "omegaA": 5.551115123125783e-17
+   },
+   "lam": 1.0,
+   "det": -1.0
+  },
+  "C2'": {
+   "signs": {
+    "gN": 0,
+    "gA": 0,
+    "omegaN": 0,
+    "omegaA": 0
+   },
+   "residuals": {
+    "gN": 0.30767960705611336,
+    "gA": 0.1492808495612976,
+    "omegaN": 0.21111740442653404,
+    "omegaA": 0.11643996376891994
+   },
+   "lam": 1.0,
+   "det": 1.0
+  },
+  "Mx'": {
+   "signs": {
+    "gN": 0,
+    "gA": 0,
+    "omegaN": 0,
+    "omegaA": 0
+   },
+   "residuals": {
+    "gN": 0.3343562629613668,
+    "gA": 0.17021478428407116,
+    "omegaN": 0.28801932563042,
+    "omegaA": 0.09137617593707292
+   },
+   "lam": 1.0,
+   "det": -1.0
+  }
+ },
+ "table1_audit": [
+  {
+   "group": "1",
+   "number": 1,
+   "order": 1,
+   "n_antiunitary": 0,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "11'",
+   "number": 2,
+   "order": 2,
+   "n_antiunitary": 1,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "2",
+   "number": 6,
+   "order": 2,
+   "n_antiunitary": 0,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "21'",
+   "number": 7,
+   "order": 4,
+   "n_antiunitary": 2,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "2'",
+   "number": 8,
+   "order": 2,
+   "n_antiunitary": 1,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "m",
+   "number": 9,
+   "order": 2,
+   "n_antiunitary": 0,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "m1'",
+   "number": 10,
+   "order": 4,
+   "n_antiunitary": 2,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "m'",
+   "number": 11,
+   "order": 2,
+   "n_antiunitary": 1,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "mm2",
+   "number": 20,
+   "order": 4,
+   "n_antiunitary": 0,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "mm21'",
+   "number": 21,
+   "order": 8,
+   "n_antiunitary": 4,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "m'm2'",
+   "number": 22,
+   "order": 4,
+   "n_antiunitary": 2,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "m'm'2",
+   "number": 23,
+   "order": 4,
+   "n_antiunitary": 2,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(dz=0)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "4",
+   "number": 29,
+   "order": 4,
+   "n_antiunitary": 0,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "41'",
+   "number": 30,
+   "order": 8,
+   "n_antiunitary": 4,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "4'",
+   "number": 31,
+   "order": 4,
+   "n_antiunitary": 2,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "4mm",
+   "number": 44,
+   "order": 8,
+   "n_antiunitary": 0,
+   "gN": false,
+   "gA": false,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "4mm1'",
+   "number": 45,
+   "order": 16,
+   "n_antiunitary": 8,
+   "gN": false,
+   "gA": false,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "4'm'm",
+   "number": 46,
+   "order": 8,
+   "n_antiunitary": 4,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(Cn-radial)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "4m'm'",
+   "number": 47,
+   "order": 8,
+   "n_antiunitary": 4,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(Cn-radial)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "3",
+   "number": 60,
+   "order": 3,
+   "n_antiunitary": 0,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "31'",
+   "number": 61,
+   "order": 6,
+   "n_antiunitary": 3,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "3m",
+   "number": 68,
+   "order": 6,
+   "n_antiunitary": 0,
+   "gN": false,
+   "gA": false,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "3m1'",
+   "number": 69,
+   "order": 12,
+   "n_antiunitary": 6,
+   "gN": false,
+   "gA": false,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "3m'",
+   "number": 70,
+   "order": 6,
+   "n_antiunitary": 3,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(Cn-radial)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "6",
+   "number": 76,
+   "order": 6,
+   "n_antiunitary": 0,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "61'",
+   "number": 77,
+   "order": 12,
+   "n_antiunitary": 6,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "6'",
+   "number": 78,
+   "order": 6,
+   "n_antiunitary": 3,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": true,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gN",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "6mm",
+   "number": 91,
+   "order": 12,
+   "n_antiunitary": 0,
+   "gN": false,
+   "gA": false,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": true
+   },
+   "disagreements": []
+  },
+  {
+   "group": "6mm1'",
+   "number": 92,
+   "order": 24,
+   "n_antiunitary": 12,
+   "gN": false,
+   "gA": false,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(parity-gapless)"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "6'mm'",
+   "number": 93,
+   "order": 12,
+   "n_antiunitary": 6,
+   "gN": false,
+   "gA": false,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": false,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    }
+   ]
+  },
+  {
+   "group": "6m'm'",
+   "number": 94,
+   "order": 12,
+   "n_antiunitary": 6,
+   "gN": true,
+   "gA": true,
+   "omegaN": true,
+   "omegaA": true,
+   "paper": {
+    "gN": true,
+    "gA": false,
+    "omegaN": true,
+    "omegaA": false
+   },
+   "disagreements": [
+    {
+     "sector": "gA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary",
+      "2band-class(Cn-radial)"
+     ]
+    },
+    {
+     "sector": "omegaA",
+     "paper": false,
+     "unitary-projection": true,
+     "reasons": [
+      "antiunitary"
+     ]
+    }
+   ]
+  }
+ ],
+ "response_oracle": {
+  "1": {
+   "number": 1,
+   "channels": {
+    "omegaA (Im sigma- / w)": -0.041315684512589636,
+    "gN (Im sigma+ / w)": -0.002946993926262079,
+    "omegaN (Re sigma- / w2)": -0.005000890982354011,
+    "gA (Re sigma+ / w2)": 0.019612967511650755
+   },
+   "nonzero": {
+    "omegaA (Im sigma- / w)": true,
+    "gN (Im sigma+ / w)": true,
+    "omegaN (Re sigma- / w2)": true,
+    "gA (Re sigma+ / w2)": true
+   },
+   "realized": {
+    "omegaA": true,
+    "gN": true,
+    "omegaN": true,
+    "gA": true
+   },
+   "disagreements": {},
+   "ratios": {
+    "ratio_Im_sigma-_OmA": 1.000453984286477,
+    "ratio_Im_sigma+_gN": 1.00047095052747,
+    "ratio_Re_sigma-_OmN": 1.0033823567069333,
+    "ratio_Re_sigma+_gA": 1.0034494580102873
+   }
+  },
+  "2": {
+   "number": 6,
+   "channels": {
+    "omegaA (Im sigma- / w)": -0.023455897746694054,
+    "gN (Im sigma+ / w)": 0.00015994407693806255,
+    "omegaN (Re sigma- / w2)": 0.0005319438439732592,
+    "gA (Re sigma+ / w2)": 0.0009929089368296282
+   },
+   "nonzero": {
+    "omegaA (Im sigma- / w)": true,
+    "gN (Im sigma+ / w)": true,
+    "omegaN (Re sigma- / w2)": true,
+    "gA (Re sigma+ / w2)": true
+   },
+   "realized": {
+    "omegaA": true,
+    "gN": true,
+    "omegaN": true,
+    "gA": true
+   },
+   "disagreements": {},
+   "ratios": {
+    "ratio_Im_sigma-_OmA": 1.0003742550663164,
+    "ratio_Im_sigma+_gN": 1.0000733546628529,
+    "ratio_Re_sigma-_OmN": 1.001174784539037,
+    "ratio_Re_sigma+_gA": 1.0016738393922038
+   }
+  },
+  "m": {
+   "number": 9,
+   "channels": {
+    "omegaA (Im sigma- / w)": 0.011789926360129873,
+    "gN (Im sigma+ / w)": 0.011789926360129873,
+    "omegaN (Re sigma- / w2)": 0.012586819505716605,
+    "gA (Re sigma+ / w2)": 0.012586819505716605
+   },
+   "nonzero": {
+    "omegaA (Im sigma- / w)": true,
+    "gN (Im sigma+ / w)": true,
+    "omegaN (Re sigma- / w2)": true,
+    "gA (Re sigma+ / w2)": true
+   },
+   "realized": {
+    "omegaA": true,
+    "gN": true,
+    "omegaN": true,
+    "gA": true
+   },
+   "disagreements": {},
+   "ratios": {
+    "ratio_Im_sigma-_OmA": 1.00046906011046,
+    "ratio_Im_sigma+_gN": 1.0004690601104607,
+    "ratio_Re_sigma-_OmN": 1.0034948825838317,
+    "ratio_Re_sigma+_gA": 1.003494882583832
+   }
+  },
+  "2'": {
+   "number": 8,
+   "channels": {
+    "omegaA (Im sigma- / w)": 0.0024889219101035015,
+    "gN (Im sigma+ / w)": -0.0039028206688850107,
+    "omegaN (Re sigma- / w2)": 0.01037022095558837,
+    "gA (Re sigma+ / w2)": 0.009111705957320913
+   },
+   "nonzero": {
+    "omegaA (Im sigma- / w)": true,
+    "gN (Im sigma+ / w)": true,
+    "omegaN (Re sigma- / w2)": true,
+    "gA (Re sigma+ / w2)": true
+   },
+   "realized": {
+    "omegaA": true,
+    "gN": true,
+    "omegaN": true,
+    "gA": true
+   },
+   "disagreements": {},
+   "ratios": {
+    "ratio_Im_sigma-_OmA": 1.0000540067215478,
+    "ratio_Im_sigma+_gN": 1.0000962132215885,
+    "ratio_Re_sigma-_OmN": 1.0035289788047155,
+    "ratio_Re_sigma+_gA": 1.0037833558110691
+   }
+  },
+  "m'": {
+   "number": 11,
+   "channels": {
+    "omegaA (Im sigma- / w)": -0.013750740829791906,
+    "gN (Im sigma+ / w)": -0.013750740829791906,
+    "omegaN (Re sigma- / w2)": -1.4568966692773963e-16,
+    "gA (Re sigma+ / w2)": -2.1209704999247676e-16
+   },
+   "nonzero": {
+    "omegaA (Im sigma- / w)": true,
+    "gN (Im sigma+ / w)": true,
+    "omegaN (Re sigma- / w2)": false,
+    "gA (Re sigma+ / w2)": false
+   },
+   "realized": {
+    "omegaA": true,
+    "gN": true,
+    "omegaN": false,
+    "gA": false
+   },
+   "disagreements": {
+    "gN": "realized-but-not-listed",
+    "gA": "not-realized-but-listed",
+    "omegaN": "not-realized-in-2band-class"
+   },
+   "ratios": {
+    "ratio_Im_sigma-_OmA": 1.0004892028522616,
+    "ratio_Im_sigma+_gN": 1.0004892028522614,
+    "ratio_Re_sigma-_OmN": 2093.074107524837,
+    "ratio_Re_sigma+_gA": -4538.223008849556
+   }
+  },
+  "mm2": {
+   "number": 20,
+   "channels": {
+    "omegaA (Im sigma- / w)": 0.01686263894130577,
+    "gN (Im sigma+ / w)": 0.00010910889870045939,
+    "omegaN (Re sigma- / w2)": 0.000557221180241818,
+    "gA (Re sigma+ / w2)": -0.02659797300251787
+   },
+   "nonzero": {
+    "omegaA (Im sigma- / w)": true,
+    "gN (Im sigma+ / w)": true,
+    "omegaN (Re sigma- / w2)": true,
+    "gA (Re sigma+ / w2)": true
+   },
+   "realized": {
+    "omegaA": true,
+    "gN": true,
+    "omegaN": true,
+    "gA": true
+   },
+   "disagreements": {},
+   "ratios": {
+    "ratio_Im_sigma-_OmA": 1.059930242780543,
+    "ratio_Im_sigma+_gN": 1.0003027500591375,
+    "ratio_Re_sigma-_OmN": 0.9944676208617788,
+    "ratio_Re_sigma+_gA": -0.013723297632611334
+   }
+  },
+  "m'm2'": {
+   "number": 22,
+   "channels": {
+    "omegaA (Im sigma- / w)": 4.749573521310838e-21,
+    "gN (Im sigma+ / w)": 4.7812577474793705e-21,
+    "omegaN (Re sigma- / w2)": 0.014906266937592113,
+    "gA (Re sigma+ / w2)": 0.014906266937592113
+   },
+   "nonzero": {
+    "omegaA (Im sigma- / w)": false,
+    "gN (Im sigma+ / w)": false,
+    "omegaN (Re sigma- / w2)": true,
+    "gA (Re sigma+ / w2)": true
+   },
+   "realized": {
+    "omegaA": false,
+    "gN": false,
+    "omegaN": true,
+    "gA": true
+   },
+   "disagreements": {
+    "gN": "not-realized-but-listed",
+    "omegaA": "not-realized-but-listed"
+   },
+   "ratios": {
+    "ratio_Im_sigma-_OmA": 0.9999729472466077,
+    "ratio_Im_sigma+_gN": 1.000111660843502,
+    "ratio_Re_sigma-_OmN": 1.0036396081997057,
+    "ratio_Re_sigma+_gA": 1.0036396081997057
+   }
+  },
+  "3": {
+   "number": 60,
+   "channels": {
+    "omegaA (Im sigma- / w)": -0.0289090156817232,
+    "gN (Im sigma+ / w)": -7.752045533271357e-16,
+    "omegaN (Re sigma- / w2)": -2.2117724318704287e-15,
+    "gA (Re sigma+ / w2)": 7.372574772901429e-16
+   },
+   "nonzero": {
+    "omegaA (Im sigma- / w)": true,
+    "gN (Im sigma+ / w)": false,
+    "omegaN (Re sigma- / w2)": false,
+    "gA (Re sigma+ / w2)": false
+   },
+   "realized": {
+    "omegaA": true,
+    "gN": false,
+    "omegaN": false,
+    "gA": false
+   },
+   "disagreements": {
+    "gN": "not-realized-but-listed",
+    "gA": "not-realized-but-listed",
+    "omegaN": "not-realized-in-2band-class"
+   },
+   "ratios": {
+    "ratio_Im_sigma-_OmA": 1.0003043836869812,
+    "ratio_Im_sigma+_gN": 0.9986774507535912,
+    "ratio_Re_sigma-_OmN": -366.63375850675925,
+    "ratio_Re_sigma+_gA": -96.56073787868544
+   }
+  }
+ }
+}
