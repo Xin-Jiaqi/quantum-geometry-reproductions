@@ -158,3 +158,7 @@ Not dynamic metallic KME; original full paper **PARTIAL**.
 ## Round25: k-dependent Bloch gauge and effective-spin static Ward
 
 [covariant_spin_ward.py](src/flux_lab/covariant_spin_ward.py) extends the accepted Round24 Kramers static Fréchet identity to a smooth k-dependent Bloch basis and a deliberately synthetic effective k-dependent spin vertex. It tests the connection commutator and explicit Zeeman-current contact against independent finite-B current and finite-k spin-density differences. [Scientific scope](ROUND25_COVARIANT_SPIN_EMBEDDING.md). 11 new tests, target 214 total including frozen CI regression; first 213 succeeded in both Python versions. Equilibrium static only, not dynamic/material KME.
+
+## Round26: same-Wannier-gauge physical operators
+
+The [in-memory operator contract](src/flux_lab/wannier_operator_contract.py) checks declared same-Wannier-basis H(R), *physical Pauli* spin S(R), and full projected position A(R) including orbital centers; consistent eV/Å units, R/-R hermiticity and reciprocal Fourier derivatives. Its synthetic SOC benchmark uses independent Wilson finite differences and projector Zeeman QGT, plus deliberately wrong spin basis / omitted connection negative controls. See [bounded physical acceptance](ROUND26_SAME_GAUGE_WANNIER_OPERATORS.md) and [frozen synthetic audit](results/frozen/round26_same_gauge_operator_audit.json). The interface does not parse .spn or certify any material's spin operators, SI KME or finite-q transport. **Full original paper PARTIAL.**
