@@ -1,0 +1,31 @@
+{
+  "schema": "cui-round33-w90-native-hr-r-degeneracy-spin-blocked-v1",
+  "original_paper_status": "PARTIAL",
+  "input_data_kind": "GENERATED_FORMAT_FIXTURE_NO_REAL_WANNIER90_FILE",
+  "raw_hr_parser_implemented": true,
+  "raw_r_parser_implemented": true,
+  "authentic_material_input_found": false,
+  "wannier_physical_spin_provenance_authenticated": false,
+  "spn_bloch_to_wannier_gauge_implemented": false,
+  "kme_real_material_ready": false,
+  "nrpts": 3,
+  "num_wann": 2,
+  "wigner_seitz_degeneracy": [
+    2,
+    1,
+    2
+  ],
+  "native_weighted_h_reconstruction_max": 0,
+  "native_weighted_r_reconstruction_max": 0,
+  "analytic_complex_fourier_H_max": 1.5515838457795457e-17,
+  "analytic_complex_fourier_A_max": 0,
+  "kspace_H_hermiticity_max": 1.5515838457795457e-17,
+  "kspace_A_hermiticity_max": 0,
+  "orbital_centers_r_onsite_max": 0,
+  "wrong_omitted_ws_degeneracy_H_max": 0.1059858083023773,
+  "wsvec_dependent_input_rejected": true,
+  "expanded_ndegen_input_max": 0,
+  "physical_spin_kinetic_response_blocked": true,
+  "synthetic_source_hr_sha256_length": 64,
+  "synthetic_source_r_sha256_length": 64
+}

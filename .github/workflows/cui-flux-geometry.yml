@@ -57,3 +57,5 @@ jobs:
         run: python scripts/audit_bosonic_davies_dynamic_ward.py
       - name: Audit real-source EPW normalizer and gauge readiness (Round32)
         run: python scripts/audit_epw_material_scattering_contract.py
+      - name: Audit native Wannier90 H/r parsing and spin blocking (Round33)
+        run: python scripts/audit_native_wannier90_hr_r.py
