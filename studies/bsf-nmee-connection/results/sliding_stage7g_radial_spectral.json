@@ -1,0 +1,119 @@
+{
+  "stage": "7g",
+  "scope": "synthetic 8-band Kane-Mele homobilayer; gapped T=0 equilibrium STATIC Zeeman-derivative mixed curvature",
+  "method": "original hopping and analytic velocity, exact 4-sector occupied-to-empty band-group sums, two K/Kprime disks, weak coupling finite-t extrapolation",
+  "parameters": {
+    "slide_u": 0.4,
+    "slide_fractional": [
+      0.092,
+      0.164
+    ],
+    "t_perp_eV": 0.00015625,
+    "B_step_T": 0.25,
+    "radial_gauss_n": 40,
+    "angular_n": 96
+  },
+  "rows": [
+    {
+      "radius_inv_nm": 0.1,
+      "B_scalar_full": 0.16938838,
+      "B_scalar_low_to_low": 0.25489591,
+      "B_scalar_remote": -0.08550753,
+      "C_nematic_xx_full": -0.06633555,
+      "C_nematic_xx_low_to_low": -0.140655
+    },
+    {
+      "radius_inv_nm": 0.15,
+      "B_scalar_full": 0.18099067,
+      "B_scalar_low_to_low": 0.17976041,
+      "B_scalar_remote": 0.001230259999999983,
+      "C_nematic_xx_full": -0.08056931,
+      "C_nematic_xx_low_to_low": -0.187384
+    },
+    {
+      "radius_inv_nm": 0.2,
+      "B_scalar_full": 0.17690947,
+      "B_scalar_low_to_low": -0.00983792,
+      "B_scalar_remote": 0.18674739,
+      "C_nematic_xx_full": -0.08538704,
+      "C_nematic_xx_low_to_low": -0.155141
+    },
+    {
+      "radius_inv_nm": 0.25,
+      "B_scalar_full": 0.17286427,
+      "B_scalar_low_to_low": -0.17670151,
+      "B_scalar_remote": 0.34956578,
+      "C_nematic_xx_full": -0.08678565,
+      "C_nematic_xx_low_to_low": -0.1117
+    },
+    {
+      "radius_inv_nm": 0.35,
+      "B_scalar_full": 0.16931708,
+      "B_scalar_low_to_low": -0.34066345,
+      "B_scalar_remote": 0.50998053,
+      "C_nematic_xx_full": -0.08684345,
+      "C_nematic_xx_low_to_low": -0.07372
+    },
+    {
+      "radius_inv_nm": 0.5,
+      "B_scalar_full": 0.16823483,
+      "B_scalar_low_to_low": -0.40306206,
+      "B_scalar_remote": 0.57129689,
+      "C_nematic_xx_full": -0.08625526,
+      "C_nematic_xx_low_to_low": -0.065481
+    },
+    {
+      "radius_inv_nm": 0.75,
+      "B_scalar_full": 0.16804732,
+      "B_scalar_low_to_low": -0.42038993,
+      "B_scalar_remote": 0.58843725,
+      "C_nematic_xx_full": -0.08590622,
+      "C_nematic_xx_low_to_low": -0.06649126
+    },
+    {
+      "radius_inv_nm": 1,
+      "B_scalar_full": 0.16803252,
+      "B_scalar_low_to_low": -0.42343622,
+      "B_scalar_remote": 0.5914687399999999,
+      "C_nematic_xx_full": -0.08583183,
+      "C_nematic_xx_low_to_low": -0.067913
+    }
+  ],
+  "annulus_R0_10_to_0_75": {
+    "delta_low_to_low": -0.6752858385861178,
+    "delta_remote": 0.6739447757146343,
+    "delta_total": -0.001341062871483556,
+    "cancellation_condition_number": 1006.0904995514195
+  },
+  "sector_at_R0_75": {
+    "B_scalar": {
+      "LL": -0.4203899268,
+      "RL": 0.1985706377,
+      "LR": 0.6093633656,
+      "RR": -0.2194967594,
+      "total": 0.1680473171
+    },
+    "C_nematic_xx": {
+      "LL": -0.0664912621,
+      "RL": -0.0413340175,
+      "LR": -0.0142480289,
+      "RR": 0.0361670879,
+      "total": -0.0859062206
+    }
+  },
+  "validation": {
+    "stage7f_exact_projector_B_scalar_at_u_0_4": 0.1680437,
+    "stage7f_exact_projector_C_nematic_at_u_0_4": -0.08590333,
+    "rashba_16meV_LL_over_full_scalar": -7.99815,
+    "rashba_20meV_LL_over_full_scalar": -2.50162,
+    "rashba_24meV_LL_over_full_scalar": 0.11715,
+    "near_mu_gap_at_rashba_24meV_eV": 0.004673
+  },
+  "caveats": [
+    "Not a strict full-BZ bound, only two finite valley disks",
+    "Spectral-sector band grouping assumes isolated low/remote groups",
+    "A dressed four-band response might recover remote virtual transitions; bare LL-only sum is not such a theory",
+    "Orbital same/cross hopping split depends on declared A/B orbital embedding",
+    "Not driven-DC NMEE or a material-scale prediction"
+  ]
+}

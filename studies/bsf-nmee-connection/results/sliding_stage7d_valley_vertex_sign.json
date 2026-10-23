@@ -1,0 +1,116 @@
+{
+  "protocol": "synthetic eight-band bilayer Kane-Mele; T=0 gapped equilibrium/static finite-B NMEE; not driven DC",
+  "provenance": "Independent real-space Bloch reconstruction in local Stage7d research archive; study-only code to reproduce in scripts/run_stage7d_vertex_ratio.py",
+  "valley_reference": {
+    "t_perp_eV": 0.005,
+    "u": 0,
+    "AA_hopping_meV": 3.6117442684655585,
+    "AB_hopping_meV_upper_bound": 3e-12,
+    "v_AB_x_abs_meV_nm": 0.3891694411435943,
+    "ratio_dky_dkx_AB_at_K": [
+      0,
+      1
+    ],
+    "ratio_dky_dkx_AB_at_Kprime": [
+      0,
+      -1
+    ],
+    "gaussian_slide_velocity_identity_max_residual_eV_per_nm": 4.2e-17,
+    "slide_derivative_finite_difference_max_error_eV_per_nm": 4.9e-10
+  },
+  "rashba_counterfactual": {
+    "disk_radius_inv_nm": 0.75,
+    "radial_n": 14,
+    "angular_n": 48,
+    "t_perp_eV": 0.005,
+    "records": [
+      {
+        "u": 0.1,
+        "gamma_plus_20meV": -6.887029000108078e-7,
+        "gamma_minus_20meV": 6.887028999334804e-7,
+        "gamma_zero": -4.077978207481565e-18
+      },
+      {
+        "u": 0.4,
+        "gamma_plus_20meV": 0.000002166876852169342,
+        "gamma_minus_20meV": -0.0000021668768522208264,
+        "gamma_zero": 2.398970262748957e-18
+      }
+    ]
+  },
+  "weak_coupling_coefficients": {
+    "u": 0.4,
+    "radius_inv_nm": 0.75,
+    "radial_n": 26,
+    "angular_n": 72,
+    "records": [
+      {
+        "s_eV": 0.0025,
+        "A": 0.000030290568682010265,
+        "B": 0.16759982975744508,
+        "C": -0.0917561476750012,
+        "upper_quadratic_root": 0.547141285
+      },
+      {
+        "s_eV": 0.00125,
+        "A": 0.000030260212325564294,
+        "B": 0.16807934200916622,
+        "C": -0.09160555240846359,
+        "upper_quadratic_root": 0.544683217
+      },
+      {
+        "s_eV": 0.000625,
+        "A": 0.000030252748774290456,
+        "B": 0.1681995193250228,
+        "C": -0.09156775649218557,
+        "upper_quadratic_root": 0.544069045
+      }
+    ]
+  },
+  "ratio_scan": {
+    "u": 0.4,
+    "s_eV": 0.0025,
+    "radius_inv_nm": 0.75,
+    "radial_n": 26,
+    "angular_n": 72,
+    "gamma_over_s2": [
+      {
+        "ratio": 0.5,
+        "gamma": -0.00311887875708829
+      },
+      {
+        "ratio": 0.53,
+        "gamma": -0.000582778716376386
+      },
+      {
+        "ratio": 0.54,
+        "gamma": 0.000330990098673675
+      },
+      {
+        "ratio": 0.55,
+        "gamma": 0.00127894930441924
+      }
+    ]
+  },
+  "adaptive_full_BZ": {
+    "u": 0.4,
+    "s_eV": 0.0025,
+    "disk_radius_inv_nm": 0.75,
+    "disk_nr": 26,
+    "disk_nt": 72,
+    "exterior_grid": 151,
+    "checks": [
+      {
+        "ratio": 0.5,
+        "total": -1.9157417009549312e-8,
+        "exterior": 3.3557522225254557e-10
+      },
+      {
+        "ratio": 0.57,
+        "total": 2.0861004883574986e-8,
+        "exterior": 3.771786185876199e-10
+      }
+    ]
+  },
+  "warning": "Root near c/s~.54 is a model-dependent synthetic channel knob; high-precision full BZ root and general material sign criterion have not been proved."
+}

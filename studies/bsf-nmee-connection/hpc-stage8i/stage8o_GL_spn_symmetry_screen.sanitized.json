@@ -1,0 +1,516 @@
+{
+ "status": "CORRECTED_EXACT_SYMMETRY_SCREEN__ROOT_CAUSE_NOT_ASSIGNED",
+ "input_sha256": {
+  "poscar": "fe5eb6f6071f6a8f9a1dd76d4603b1dad694f1fbaf5d854bb49107ce79b9fb5b",
+  "win": "7c403e68f3bd52ab50a6ac69bd5093ac38a0935cb6a012be4e89cf0c3186ebc9",
+  "eig": "0362a45bcd6e7d80fced238063b10eb42e70aae33637925725bff4a2f860da9b",
+  "spn": "29a73d1a4164441974b82c528aaf73d0769360bf065ec4a8b169b35638f35d93"
+ },
+ "spglib_symprec_A": 0.001,
+ "n_kpts": 441,
+ "n_bands": 96,
+ "operations": [
+  {
+   "direct_fractional_R": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "fractional_translation": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "spin_axial_rotation_cartesian_Q": [
+    [
+     1.0,
+     2.1330966521086422e-17,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "mesh_pairs_exact": 441,
+   "max_bandwise_spectrum_symmetry_residual_eV": 0.0,
+   "max_spin_gram_covariance_residual": 1.7754158599972435e-17,
+   "median_spin_gram_covariance_residual": 1.7415799223818406e-17,
+   "max_spin_gram_covariance_absolute": 2.9046720845738644e-15,
+   "max_global_spin_gram_norm": 166.08878383709967,
+   "worst_gram_k_points": [
+    {
+     "k_index": 77,
+     "k_prime_index": 77,
+     "min_band_spacing_eV_at_kprime": 0.00015882636799968708,
+     "gram_norm_residual": 1.7754158599972435e-17
+    },
+    {
+     "k_index": 78,
+     "k_prime_index": 78,
+     "min_band_spacing_eV_at_kprime": 0.0001791346060002752,
+     "gram_norm_residual": 1.7753886473628713e-17
+    },
+    {
+     "k_index": 3,
+     "k_prime_index": 3,
+     "min_band_spacing_eV_at_kprime": 1.4195200037647737e-07,
+     "gram_norm_residual": 1.7723466236614993e-17
+    },
+    {
+     "k_index": 352,
+     "k_prime_index": 352,
+     "min_band_spacing_eV_at_kprime": 0.00037257199100082516,
+     "gram_norm_residual": 1.7657617114859652e-17
+    },
+    {
+     "k_index": 283,
+     "k_prime_index": 283,
+     "min_band_spacing_eV_at_kprime": 0.0025567495199991797,
+     "gram_norm_residual": 1.7609055335865538e-17
+    },
+    {
+     "k_index": 284,
+     "k_prime_index": 284,
+     "min_band_spacing_eV_at_kprime": 0.002556748672999376,
+     "gram_norm_residual": 1.760903751604768e-17
+    },
+    {
+     "k_index": 205,
+     "k_prime_index": 205,
+     "min_band_spacing_eV_at_kprime": 0.0013955570060000255,
+     "gram_norm_residual": 1.7608860585735705e-17
+    },
+    {
+     "k_index": 206,
+     "k_prime_index": 206,
+     "min_band_spacing_eV_at_kprime": 0.0013992663940003425,
+     "gram_norm_residual": 1.7608093820751014e-17
+    }
+   ],
+   "is_horizontal_glide": false,
+   "caveat": "Finite 96-band subspace may be non-closed at top; Gram covariance failure alone does NOT localize defect to VASP, ISYM=0 or MMN."
+  },
+  {
+   "direct_fractional_R": [
+    [
+     0,
+     -1,
+     0
+    ],
+    [
+     -1,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     -1
+    ]
+   ],
+   "fractional_translation": [
+    0.5000000003349996,
+    0.5000000003349996,
+    0.8974988157128478
+   ],
+   "spin_axial_rotation_cartesian_Q": [
+    [
+     0.5,
+     -0.8660254037844767,
+     0.0
+    ],
+    [
+     -0.8660254037844005,
+     -0.5,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   ],
+   "mesh_pairs_exact": 441,
+   "max_bandwise_spectrum_symmetry_residual_eV": 0.003102213853999558,
+   "max_spin_gram_covariance_residual": 0.00920345074781645,
+   "median_spin_gram_covariance_residual": 3.810760841535837e-07,
+   "max_spin_gram_covariance_absolute": 1.5163496919228405,
+   "max_global_spin_gram_norm": 166.08878383709967,
+   "worst_gram_k_points": [
+    {
+     "k_index": 350,
+     "k_prime_index": 357,
+     "min_band_spacing_eV_at_kprime": 0.0010651338310001535,
+     "gram_norm_residual": 0.00920345074781645
+    },
+    {
+     "k_index": 357,
+     "k_prime_index": 350,
+     "min_band_spacing_eV_at_kprime": 0.0010651347179999604,
+     "gram_norm_residual": 0.009203450747816274
+    },
+    {
+     "k_index": 36,
+     "k_prime_index": 36,
+     "min_band_spacing_eV_at_kprime": 2.6080000381512036e-09,
+     "gram_norm_residual": 0.005094253445426292
+    },
+    {
+     "k_index": 35,
+     "k_prime_index": 35,
+     "min_band_spacing_eV_at_kprime": 2.575000657145665e-09,
+     "gram_norm_residual": 0.003809968844589034
+    },
+    {
+     "k_index": 4,
+     "k_prime_index": 1,
+     "min_band_spacing_eV_at_kprime": 1.419560007320797e-07,
+     "gram_norm_residual": 0.0030658550406540454
+    },
+    {
+     "k_index": 1,
+     "k_prime_index": 4,
+     "min_band_spacing_eV_at_kprime": 1.4106599977026235e-07,
+     "gram_norm_residual": 0.003065855040653914
+    },
+    {
+     "k_index": 181,
+     "k_prime_index": 179,
+     "min_band_spacing_eV_at_kprime": 0.0005220926269999815,
+     "gram_norm_residual": 0.0023844231438290525
+    },
+    {
+     "k_index": 179,
+     "k_prime_index": 181,
+     "min_band_spacing_eV_at_kprime": 0.00052209283599991,
+     "gram_norm_residual": 0.002384423143829046
+    }
+   ],
+   "is_horizontal_glide": false,
+   "caveat": "Finite 96-band subspace may be non-closed at top; Gram covariance failure alone does NOT localize defect to VASP, ISYM=0 or MMN."
+  },
+  {
+   "direct_fractional_R": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     -1
+    ]
+   ],
+   "fractional_translation": [
+    0.5,
+    0.5,
+    0.8974988157128478
+   ],
+   "spin_axial_rotation_cartesian_Q": [
+    [
+     -1.0,
+     -2.1330966521086422e-17,
+     -0.0
+    ],
+    [
+     -0.0,
+     -1.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     1.0
+    ]
+   ],
+   "mesh_pairs_exact": 441,
+   "max_bandwise_spectrum_symmetry_residual_eV": 0.0,
+   "max_spin_gram_covariance_residual": 0.00910387976283098,
+   "median_spin_gram_covariance_residual": 2.4914296771889384e-07,
+   "max_spin_gram_covariance_absolute": 1.4900899605609474,
+   "max_global_spin_gram_norm": 166.08878383709967,
+   "worst_gram_k_points": [
+    {
+     "k_index": 35,
+     "k_prime_index": 35,
+     "min_band_spacing_eV_at_kprime": 2.575000657145665e-09,
+     "gram_norm_residual": 0.00910387976283098
+    },
+    {
+     "k_index": 357,
+     "k_prime_index": 357,
+     "min_band_spacing_eV_at_kprime": 0.0010651338310001535,
+     "gram_norm_residual": 0.007948374767456082
+    },
+    {
+     "k_index": 36,
+     "k_prime_index": 36,
+     "min_band_spacing_eV_at_kprime": 2.6080000381512036e-09,
+     "gram_norm_residual": 0.00559820622396652
+    },
+    {
+     "k_index": 4,
+     "k_prime_index": 4,
+     "min_band_spacing_eV_at_kprime": 1.4106599977026235e-07,
+     "gram_norm_residual": 0.004056448595592069
+    },
+    {
+     "k_index": 350,
+     "k_prime_index": 350,
+     "min_band_spacing_eV_at_kprime": 0.0010651347179999604,
+     "gram_norm_residual": 0.003855998202042499
+    },
+    {
+     "k_index": 181,
+     "k_prime_index": 181,
+     "min_band_spacing_eV_at_kprime": 0.00052209283599991,
+     "gram_norm_residual": 0.0037932354426887314
+    },
+    {
+     "k_index": 349,
+     "k_prime_index": 349,
+     "min_band_spacing_eV_at_kprime": 0.0010651336320002258,
+     "gram_norm_residual": 0.0037026518770615457
+    },
+    {
+     "k_index": 308,
+     "k_prime_index": 308,
+     "min_band_spacing_eV_at_kprime": 0.0008932199769997595,
+     "gram_norm_residual": 0.0034940456621272062
+    }
+   ],
+   "is_horizontal_glide": true,
+   "caveat": "Finite 96-band subspace may be non-closed at top; Gram covariance failure alone does NOT localize defect to VASP, ISYM=0 or MMN.",
+   "glide_nondegenerate_transverse_spin_check": {
+    "threshold_band_isolation_eV": 0.001,
+    "threshold_transverse_spin_raw_Pauli": 0.0001,
+    "degenerate_nearby_states_skipped": 4054,
+    "max_transverse_diag_spin": 0.735042958577802,
+    "number_of_above_threshold": 13615,
+    "examples": [
+     {
+      "k_index": 247,
+      "band_1based": 83,
+      "local_band_gap_eV": 0.0010667319020001287,
+      "Sxy_diag_norm_raw_Pauli": 0.735042958577802
+     },
+     {
+      "k_index": 247,
+      "band_1based": 84,
+      "local_band_gap_eV": 0.0010667319020001287,
+      "Sxy_diag_norm_raw_Pauli": 0.734877889650892
+     },
+     {
+      "k_index": 256,
+      "band_1based": 83,
+      "local_band_gap_eV": 0.0010660100550001772,
+      "Sxy_diag_norm_raw_Pauli": 0.720421720816447
+     },
+     {
+      "k_index": 256,
+      "band_1based": 84,
+      "local_band_gap_eV": 0.0010660100550001772,
+      "Sxy_diag_norm_raw_Pauli": 0.7203214036414338
+     },
+     {
+      "k_index": 255,
+      "band_1based": 83,
+      "local_band_gap_eV": 0.001012438995999787,
+      "Sxy_diag_norm_raw_Pauli": 0.7068132763837064
+     },
+     {
+      "k_index": 255,
+      "band_1based": 84,
+      "local_band_gap_eV": 0.001012438995999787,
+      "Sxy_diag_norm_raw_Pauli": 0.7065847150139757
+     },
+     {
+      "k_index": 248,
+      "band_1based": 83,
+      "local_band_gap_eV": 0.0010204430440001744,
+      "Sxy_diag_norm_raw_Pauli": 0.6939253251552997
+     },
+     {
+      "k_index": 248,
+      "band_1based": 84,
+      "local_band_gap_eV": 0.0010204430440001744,
+      "Sxy_diag_norm_raw_Pauli": 0.6937512911389644
+     },
+     {
+      "k_index": 248,
+      "band_1based": 81,
+      "local_band_gap_eV": 0.0018687871859999206,
+      "Sxy_diag_norm_raw_Pauli": 0.3842929613237901
+     },
+     {
+      "k_index": 248,
+      "band_1based": 82,
+      "local_band_gap_eV": 0.0018687871859999206,
+      "Sxy_diag_norm_raw_Pauli": 0.3841069636841322
+     },
+     {
+      "k_index": 255,
+      "band_1based": 81,
+      "local_band_gap_eV": 0.0018580957330005532,
+      "Sxy_diag_norm_raw_Pauli": 0.37969227393448496
+     },
+     {
+      "k_index": 255,
+      "band_1based": 82,
+      "local_band_gap_eV": 0.0018580957330005532,
+      "Sxy_diag_norm_raw_Pauli": 0.3794619536886128
+     }
+    ],
+    "limitation": "Band96 has no 97 neighbour; excluded. Raw SPN diagonal is a pseudopotential-derived band-spin proxy, not a full spatial layer operator.",
+    "by_band_gap_layer": {
+     "gap001_01": {
+      "count": 9080,
+      "max_Sxy": 0.735042958577802,
+      "mean_Sxy": 0.010629138080179859,
+      "count_Sxy_gt_1e-4": 4185
+     },
+     "gap01_05": {
+      "count": 17590,
+      "max_Sxy": 0.3464410463388533,
+      "mean_Sxy": 0.00144513273078436,
+      "count_Sxy_gt_1e-4": 7111
+     },
+     "gap_gt05": {
+      "count": 10730,
+      "max_Sxy": 0.009654301277615468,
+      "mean_Sxy": 0.00019969763593645354,
+      "count_Sxy_gt_1e-4": 2319
+     }
+    },
+    "source": "remote run 8o_GL_spn_screen.json 2026-10-23; layered stats merged locally from twice-verified prints"
+   }
+  },
+  {
+   "direct_fractional_R": [
+    [
+     0,
+     -1,
+     0
+    ],
+    [
+     -1,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "fractional_translation": [
+    3.3499958362881443e-10,
+    3.3499958362881443e-10,
+    0.0
+   ],
+   "spin_axial_rotation_cartesian_Q": [
+    [
+     -0.5,
+     0.8660254037844767,
+     -0.0
+    ],
+    [
+     0.8660254037844005,
+     0.5,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -1.0
+    ]
+   ],
+   "mesh_pairs_exact": 441,
+   "max_bandwise_spectrum_symmetry_residual_eV": 0.003102213853999558,
+   "max_spin_gram_covariance_residual": 0.008513624924927554,
+   "median_spin_gram_covariance_residual": 2.920907577037319e-07,
+   "max_spin_gram_covariance_absolute": 1.3934791933885433,
+   "max_global_spin_gram_norm": 166.08878383709967,
+   "worst_gram_k_points": [
+    {
+     "k_index": 35,
+     "k_prime_index": 35,
+     "min_band_spacing_eV_at_kprime": 2.575000657145665e-09,
+     "gram_norm_residual": 0.008513624924927554
+    },
+    {
+     "k_index": 350,
+     "k_prime_index": 357,
+     "min_band_spacing_eV_at_kprime": 0.0010651338310001535,
+     "gram_norm_residual": 0.0074182096802175804
+    },
+    {
+     "k_index": 357,
+     "k_prime_index": 350,
+     "min_band_spacing_eV_at_kprime": 0.0010651347179999604,
+     "gram_norm_residual": 0.007418209680217519
+    },
+    {
+     "k_index": 349,
+     "k_prime_index": 358,
+     "min_band_spacing_eV_at_kprime": 0.0010651346690000452,
+     "gram_norm_residual": 0.00382060396601344
+    },
+    {
+     "k_index": 358,
+     "k_prime_index": 349,
+     "min_band_spacing_eV_at_kprime": 0.0010651336320002258,
+     "gram_norm_residual": 0.003820603966013266
+    },
+    {
+     "k_index": 181,
+     "k_prime_index": 179,
+     "min_band_spacing_eV_at_kprime": 0.0005220926269999815,
+     "gram_norm_residual": 0.002599027417935701
+    },
+    {
+     "k_index": 179,
+     "k_prime_index": 181,
+     "min_band_spacing_eV_at_kprime": 0.00052209283599991,
+     "gram_norm_residual": 0.0025990274179356894
+    },
+    {
+     "k_index": 36,
+     "k_prime_index": 36,
+     "min_band_spacing_eV_at_kprime": 2.6080000381512036e-09,
+     "gram_norm_residual": 0.002350037894229586
+    }
+   ],
+   "is_horizontal_glide": false,
+   "caveat": "Finite 96-band subspace may be non-closed at top; Gram covariance failure alone does NOT localize defect to VASP, ISYM=0 or MMN."
+  }
+ ],
+ "no_new_pbs_jobs": true,
+ "NMEE_computed": false,
+ "scientific_warning": "Corrected Gram tests alone cannot establish true glide sewing, full 96-band closure, MMN compatibility or trustworthy static response. No proof VASP ISYM=0 is responsible."
+}

@@ -1,0 +1,122 @@
+{
+  "stage": "8g",
+  "date": "2026-10-21",
+  "provenance": "USER_PASTED_LOCAL_DEEPSEEK_HARNESS_REPORT__RAW_OUTCAR_CONTCAR_RESUME_JSON_NOT_INDEPENDENTLY_OBTAINED",
+  "validation_status": "HARNESS_REPORTED_CONVERGED_REVIEWED__AWAITING_INDEPENDENT_RAW_EVIDENCE",
+  "scientific_scope": "WSe2 z-scan BiDB row2685 initial non-SOC fixed-xy z-only PBE+D3(BJ) constrained structural energy pilot. Not CI-NEB or material NMEE.",
+  "git_commit_of_remote_run": "52f126345ee3d7a89d3b6c4ea199a359f35bd094",
+  "site": {
+    "name": "Tohoku University IMR Japan",
+    "server": "cmspbs1",
+    "pbs": "PBS Pro",
+    "work_root": "/work/sunq/xjq/runs-stage8g-20261020",
+    "queue": "CP_001",
+    "ncpus": 16,
+    "mem_gb": 32,
+    "walltime": "12:00:00",
+    "wsl_report": "Ubuntu workspace 20 cores / 7 GB; no scheduler or VASP on WSL"
+  },
+  "software": {
+    "vasp": "6.4.3",
+    "vasp_binary": "/work/app/VASP6/vasp.6.4.3_wannier90_cpu/bin/vasp_std",
+    "mpi": "oneAPI 2023.2.0, mpirun",
+    "spin_orbit_enabled": false,
+    "xc": "PBE",
+    "dispersion": "VASP IVDW=12 D3(BJ)",
+    "encut_eV": 520,
+    "kpoints": "Gamma-centered 15x15x1",
+    "ediff_eV": 1e-7,
+    "ediffg_eV_per_A": -0.01,
+    "cell_fixed": true,
+    "xy_frozen": true,
+    "z_relaxed": true
+  },
+  "pseudopotentials": {
+    "library": "potpaw_PBE.54",
+    "species_order": [
+      "W",
+      "Se"
+    ],
+    "W_date": "2002-04-08",
+    "Se_date": "2000-09-06",
+    "enmax_eV": {
+      "W": 223.057,
+      "Se": 211.555
+    },
+    "sha256": "7ef8b236d47cb52384021b0d5255b9dd2cd6fb636f1b7e0a093eff353b3a2a5c",
+    "pseudopotential_bytes_in_repo": false
+  },
+  "input_provenance": "harness reports all 15 input hashes matched manifest; only 3 pilot submitted",
+  "jobs": [
+    {
+      "id": "path_A_s0.00",
+      "slide_fraction": 0,
+      "pbs_id": "490621.cmspbs1",
+      "reported_status": "CONVERGED_REQUIRES_SCIENTIFIC_REVIEW",
+      "last_TOTEN_eV": -45.664806,
+      "delta_E_meV_per_two_formula_unit_cell": 0,
+      "delta_E_meV_per_formula_unit": 0,
+      "max_abs_final_Fz_eV_per_A": 0.00617,
+      "ionic_steps": 16,
+      "cell_change_A": 0,
+      "reported_max_lateral_drift_A": 1.6e-14,
+      "outcar_present_reported": true,
+      "contcar_present_reported": true,
+      "ionic_accuracy_flag_reported": true,
+      "final_scf_converged_reported": true,
+      "independently_read_outcar": false
+    },
+    {
+      "id": "path_A_s0.25",
+      "slide_fraction": 0.25,
+      "pbs_id": "490622.cmspbs1",
+      "reported_status": "CONVERGED_REQUIRES_SCIENTIFIC_REVIEW",
+      "last_TOTEN_eV": -45.651172,
+      "delta_E_meV_per_two_formula_unit_cell": 13.634,
+      "delta_E_meV_per_formula_unit": 6.817,
+      "max_abs_final_Fz_eV_per_A": 0.00621,
+      "ionic_steps": 13,
+      "cell_change_A": 0,
+      "reported_max_lateral_drift_A": 1.6e-14,
+      "outcar_present_reported": true,
+      "contcar_present_reported": true,
+      "ionic_accuracy_flag_reported": true,
+      "final_scf_converged_reported": true,
+      "independently_read_outcar": false
+    },
+    {
+      "id": "path_A_s0.50",
+      "slide_fraction": 0.5,
+      "pbs_id": "490623.cmspbs1",
+      "reported_status": "CONVERGED_REQUIRES_SCIENTIFIC_REVIEW",
+      "last_TOTEN_eV": -45.640689,
+      "delta_E_meV_per_two_formula_unit_cell": 24.117,
+      "delta_E_meV_per_formula_unit": 12.058,
+      "max_abs_final_Fz_eV_per_A": 0.00997,
+      "ionic_steps": 6,
+      "cell_change_A": 0,
+      "reported_max_lateral_drift_A": 1.6e-14,
+      "outcar_present_reported": true,
+      "contcar_present_reported": true,
+      "ionic_accuracy_flag_reported": true,
+      "final_scf_converged_reported": true,
+      "independently_read_outcar": false
+    }
+  ],
+  "relative_energy_statistics": {
+    "E025_minus_E0_meV_per_cell": 13.634,
+    "E05_minus_E0_meV_per_cell": 24.117,
+    "E05_minus_E025_meV_per_cell": 10.483,
+    "discrete_second_difference_meV_per_cell": -3.151
+  },
+  "remaining_jobs_not_submitted": 12,
+  "known_missing_checks": [
+    "Raw input/POTCAR source/output hash reconciliation not independently reviewed here",
+    "Relaxed s=0.5 CONTCAR full-atom nonsymmorphic glide symmetry not yet checked",
+    "Symmetry-related s=0.75 and s=1.00 independent energy check not performed",
+    "ENCUT/kmesh/vacuum/dipole/D3 treatment not independently converged",
+    "At s=.5 |Fz|=.00997 is close to .01 threshold",
+    "No full ionic relaxation of endpoints; no NEB; no SOC full-BZ gap; no static or driven DC NMEE"
+  ],
+  "next_step": "Perform zero-new-job read-only audit of all three remote CONTCAR/OUTCAR using new independent Stage8h science gate; propose minimal compute convergence jobs separately; do not launch 12 remaining."
+}

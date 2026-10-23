@@ -1,0 +1,87 @@
+{
+  "study": "Stage7c physical channel/spectral competition",
+  "source": "Independent direct eight-band calculation, checked against prior stage7 valley integrations",
+  "scope": "gapped T=0 equilibrium static d_B spin-momentum curvature; not driven DC",
+  "integration": {
+    "valleys": [
+      "K",
+      "Kprime"
+    ],
+    "radius_inv_nm": 0.75,
+    "radial_gauss_n": 26,
+    "angular_n": 72,
+    "zeeman_step_T": 0.25,
+    "t_perp_eV": 0.005,
+    "normalization": "All coefficients below are gamma/t_perp^2 in original program response units per eV^2"
+  },
+  "rows": [
+    {
+      "u": 0.05,
+      "mixed": -0.01577811548903884,
+      "even": 0.00047710334213277316,
+      "full": -0.015301012146906066,
+      "low_low": -0.007786043964250457,
+      "remote": -0.0075149681826556115
+    },
+    {
+      "u": 0.1,
+      "mixed": -0.03109308539585192,
+      "even": 0.003542155071622078,
+      "full": -0.027550930324229846,
+      "low_low": -0.023095596364151802,
+      "remote": -0.00445533396007804
+    },
+    {
+      "u": 0.15,
+      "mixed": -0.04550377327617627,
+      "even": 0.011593503771555493,
+      "full": -0.033910269504620776,
+      "low_low": -0.05275612426554849,
+      "remote": 0.01884585476092771
+    },
+    {
+      "u": 0.2,
+      "mixed": -0.058611354450413364,
+      "even": 0.02666907988185955,
+      "full": -0.031942274568553815,
+      "low_low": -0.10229632024064489,
+      "remote": 0.07035404567209108
+    },
+    {
+      "u": 0.25,
+      "mixed": -0.07007642444792472,
+      "even": 0.05031019043288758,
+      "full": -0.019766234015037198,
+      "low_low": -0.17551153852770132,
+      "remote": 0.15574530451266413
+    },
+    {
+      "u": 0.3,
+      "mixed": -0.07963182162771484,
+      "even": 0.08347050807158285,
+      "full": 0.0038386864438680014,
+      "low_low": -0.27424025967283683,
+      "remote": 0.2780789461167048
+    },
+    {
+      "u": 0.4,
+      "mixed": -0.09234888270704006,
+      "even": 0.17902235478919862,
+      "full": 0.08667347208215842,
+      "low_low": -0.5459524631985725,
+      "remote": 0.6326259352807311
+    }
+  ],
+  "root_checks": {
+    "disk_root_u_t005_r075": 0.29332412286776605,
+    "disk_root_u_t005_r05": 0.29365972127031076,
+    "disk_root_u_t0025_r075": 0.30030506123717277,
+    "disk_root_u_t01_r075": 0.2679789698827438,
+    "zero_at_full_BZ": "Near 0.293, not high-precision bound"
+  },
+  "warnings": [
+    "Spectrum-defined remote band sectors are not arbitrary Wannier-gauge invariant orbital observables",
+    "Positive parity-even linear coefficient is allowed by C3+mz; the approximate cubic growth is model-specific",
+    "No convergence-independent theorem establishes signs of B and C"
+  ]
+}

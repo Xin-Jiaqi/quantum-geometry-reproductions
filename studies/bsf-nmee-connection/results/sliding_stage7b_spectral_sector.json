@@ -1,0 +1,73 @@
+{
+  "protocol": "synthetic 8-band Kane-Mele bilayer; zero-K gapped equilibrium static finite-B derivative; signed two-valley K/Kprime disks",
+  "name": "Stage7b exact spectral sector (not SW and not driven DC)",
+  "radius_inv_nm": 0.5,
+  "radial_n": 26,
+  "angular_n": 72,
+  "step_T": 0.25,
+  "categories": [
+    "low_occ_to_low_emp",
+    "remote_occ_to_low_emp",
+    "low_occ_to_remote_emp",
+    "remote_occ_to_remote_emp"
+  ],
+  "rows": [
+    {
+      "u": 0.1,
+      "t_eV": 0.005,
+      "sectors": [
+        -5.664028396620029e-7,
+        -2.5798807495491916e-7,
+        -7.766620529157656e-8,
+        2.1036675024557795e-7
+      ],
+      "full": -6.916903696629208e-7,
+      "remote": -1.2528753000091778e-7,
+      "min_remote_gap_eV": 0.011575036773362357,
+      "min_mu_distance_eV": 0.012991003047125034
+    },
+    {
+      "u": 0.1,
+      "t_eV": 0.02,
+      "sectors": [
+        0.000010995417496902002,
+        -0.0000014739243744687062,
+        -0.000027289352345713413,
+        7.224847345113006e-7
+      ],
+      "full": -0.00001704537448876882,
+      "remote": -0.00002804079198567082,
+      "min_remote_gap_eV": 0.008479913732244743,
+      "min_mu_distance_eV": 0.002434990397664885
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.005,
+      "sectors": [
+        -0.000013306244344505015,
+        0.0000037473912928783876,
+        0.00001608586835972778,
+        -0.0000043621792464894265
+      ],
+      "full": 0.0000021648360616117283,
+      "remote": 0.000015471080406116743,
+      "min_remote_gap_eV": 0.012464651765192541,
+      "min_mu_distance_eV": 0.013750837325795524
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.02,
+      "sectors": [
+        0.00010779861412375515,
+        0.000011397159925455877,
+        -6.506579682279935e-7,
+        -0.00002011174707535698
+      ],
+      "full": 0.00009843336900562605,
+      "remote": -0.000009365245118129098,
+      "min_remote_gap_eV": 0.002620658457683077,
+      "min_mu_distance_eV": 0.0064138632780870244
+    }
+  ],
+  "caveat": "Each record is a signed valley disk integral, not a full-BZ result. These numbers were independently computed from the original Hamiltonian formulas; repository-native code is separately tested."
+}

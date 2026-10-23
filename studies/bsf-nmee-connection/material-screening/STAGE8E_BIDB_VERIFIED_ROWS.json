@@ -1,0 +1,224 @@
+{
+  "stage": "8e",
+  "scientific_status": "SOURCE_BIDB_ZSCAN_STRUCTURE_SYMMETRY_PASSED_FULL_IONIC_RELAX_AND_MATERIAL_NMEE_NOT_TESTED",
+  "source": {
+    "format": "ASE_SQLite",
+    "filename": "bidb.db",
+    "user_uploaded": true,
+    "size_bytes": 49745920,
+    "systems_rows": 11184,
+    "sha256": "afe1fe7711189be5b0e189b0c101d6488a7578f4f9ba4e1bb0164534f4255984",
+    "sqlite_quick_check": "ok",
+    "publication_doi": "10.1038/s41467-024-45003-w",
+    "official_sha256_independently_compared": false,
+    "repository_blob_uploaded": false
+  },
+  "filter": {
+    "exact_atoms": 6,
+    "formulae": [
+      "W2Se4",
+      "Mo2S4",
+      "W2S4"
+    ],
+    "number_of_layers": 2,
+    "per_material_count": 5,
+    "total": 15
+  },
+  "columns": [
+    "ase_row_id",
+    "material",
+    "recomputed_pg",
+    "db_slide_stability",
+    "db_gap_pbe_eV",
+    "db_interface_X_X_distance_A",
+    "allowed_Mxx_response_space_dim",
+    "Gamma_xz_x_symmetry_allowed"
+  ],
+  "rows": [
+    [
+      2684,
+      "WSe2",
+      "D3d",
+      "Stable",
+      1.166,
+      3.14902858,
+      0,
+      false
+    ],
+    [
+      2685,
+      "WSe2",
+      "C3v",
+      "Stable",
+      1.09,
+      3.15896382,
+      1,
+      true
+    ],
+    [
+      2686,
+      "WSe2",
+      "D3d",
+      "Stable",
+      1.205,
+      3.25831621,
+      0,
+      false
+    ],
+    [
+      2687,
+      "WSe2",
+      "D3d",
+      "Unstable-Max",
+      1.219,
+      3.69546672,
+      0,
+      false
+    ],
+    [
+      2688,
+      "WSe2",
+      "D3h",
+      "Unstable-Max",
+      1.123,
+      3.73520767,
+      0,
+      false
+    ],
+    [
+      1930,
+      "MoS2",
+      "C3v",
+      "Stable",
+      1.145,
+      3.03829445,
+      1,
+      true
+    ],
+    [
+      1931,
+      "MoS2",
+      "D3d",
+      "Stable",
+      1.191,
+      3.05744168,
+      0,
+      false
+    ],
+    [
+      1932,
+      "MoS2",
+      "D3d",
+      "Stable",
+      1.205,
+      3.11488336,
+      0,
+      false
+    ],
+    [
+      1933,
+      "MoS2",
+      "D3d",
+      "-",
+      1.375,
+      3.58399042,
+      0,
+      false
+    ],
+    [
+      1934,
+      "MoS2",
+      "D3h",
+      "-",
+      1.385,
+      3.61271126,
+      0,
+      false
+    ],
+    [
+      2653,
+      "WS2",
+      "D3d",
+      "Stable",
+      1.358,
+      3.09602492,
+      0,
+      false
+    ],
+    [
+      2654,
+      "WS2",
+      "C3v",
+      "Stable",
+      1.296,
+      3.08642242,
+      1,
+      true
+    ],
+    [
+      2655,
+      "WS2",
+      "D3d",
+      "Stable",
+      1.401,
+      3.17284485,
+      0,
+      false
+    ],
+    [
+      2656,
+      "WS2",
+      "D3d",
+      "-",
+      1.53,
+      3.5953545,
+      0,
+      false
+    ],
+    [
+      2657,
+      "WS2",
+      "D3h",
+      "None",
+      1.496,
+      3.62416198,
+      0,
+      false
+    ]
+  ],
+  "WSe2_primary": {
+    "row_id": 2685,
+    "bilayer_uid": "WSe2-1cfbe6183886-2-1_0_0_1--0.67_-0.33",
+    "source_layer_group": "p3m1",
+    "polar_3R_like": true,
+    "top_minus_bottom_W_frac": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "a_A": 3.3190066244679373,
+    "vacuum_cell_c_A": 27.717105608785637,
+    "dipz_source_value": -0.003,
+    "dipz_unit": "not independently inferred from database",
+    "doublelayer_fully_relaxed_geometry_confirmed": false,
+    "raw_ase_energy": null,
+    "raw_ase_forces": null,
+    "mirror_partner_created_in_standalone_zip": "DERIVED_BY_MZ_NOT_AN_INDEPENDENT_DATABASE_ROW"
+  },
+  "NMEE_tensor_theorem": {
+    "tensor": "M_ij=Gamma_{i,z;j}, in-plane i,j",
+    "covariance": "M transforms as f_z * R_2 * M * R_2^T; axial spin and axial B determinant factors cancel",
+    "C3v": "dimension_1: M=m I2. Exact AB endpoint must have zero nematic and off-diagonal terms.",
+    "D3h": "dimension_0: forbidden due horizontal mirror",
+    "D3d": "dimension_0: forbidden due inversion",
+    "generic_C1": "dimension_4: nematic generally permitted along intermediate sliding",
+    "opposite_domains": "Mirror-related AB/BA full tensors opposite in fixed lab frame, magnitude unknown"
+  },
+  "limits": [
+    "BiDB slide_stability Stable denotes local frozen-monolayer PES curvature, not experimentally confirmed FE bistability/NEB.",
+    "The source bilayer geometry is z-scan/frozen monolayer plus optimized layer distance, not authenticated full PBE-D3 ionic-relaxed output.",
+    "Database PBE gap is not full sliding path SOC gap from independent new calculations.",
+    "Independent six-site point-group enumeration agrees with original database layer groups; group theory toolkit/spglib external software not run offline.",
+    "No actual material static NMEE or driven-DC NMEE calculated; Jia PRL reproduction frozen."
+  ],
+  "deliverable": "Standalone Stage8e archive contains all 15 exported CIF/POSCAR, exact original row metadata+SHAs, code and 8 tests; large bidb.db intentionally not included."
+}

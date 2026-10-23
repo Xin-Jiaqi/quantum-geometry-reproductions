@@ -1,0 +1,84 @@
+{
+ "wilson_phase_budget": [
+  {
+   "k_frac": [
+    0.44,
+    0.12
+   ],
+   "axis": 0,
+   "phase_plus": 0.006307798027047774,
+   "phase_minus": 0.006307658231192756,
+   "dP_over_2dB": 2.7959171003573424e-07,
+   "machine_eps": 2.220446049250313e-16,
+   "dP_abs_vs_eps_ratio": 629584560.5664062
+  },
+  {
+   "k_frac": [
+    0.44,
+    0.12
+   ],
+   "axis": 1,
+   "phase_plus": -0.0014477350768440289,
+   "phase_minus": -0.0014479315632728738,
+   "dP_over_2dB": 3.9297285768990706e-07,
+   "machine_eps": 2.220446049250313e-16,
+   "dP_abs_vs_eps_ratio": 884896207.7294922
+  },
+  {
+   "k_frac": [
+    0.13,
+    0.07
+   ],
+   "axis": 0,
+   "phase_plus": 0.05893710656192169,
+   "phase_minus": 0.058936541667782096,
+   "dP_over_2dB": 1.1297882791944103e-06,
+   "machine_eps": 2.220446049250313e-16,
+   "dP_abs_vs_eps_ratio": 2544057036.59375
+  },
+  {
+   "k_frac": [
+    0.13,
+    0.07
+   ],
+   "axis": 1,
+   "phase_plus": 0.0183352887392189,
+   "phase_minus": 0.018334813023791273,
+   "dP_over_2dB": 9.51430855253288e-07,
+   "machine_eps": 2.220446049250313e-16,
+   "dP_abs_vs_eps_ratio": 2142431822.59375
+  },
+  {
+   "k_frac": [
+    0.31,
+    0.22
+   ],
+   "axis": 0,
+   "phase_plus": 0.007852671675412905,
+   "phase_minus": 0.007852468153494864,
+   "dP_over_2dB": 4.0704383608147765e-07,
+   "machine_eps": 2.220446049250313e-16,
+   "dP_abs_vs_eps_ratio": 916581234.25
+  },
+  {
+   "k_frac": [
+    0.31,
+    0.22
+   ],
+   "axis": 1,
+   "phase_plus": -0.004093706269847084,
+   "phase_minus": -0.00409369844276113,
+   "dP_over_2dB": -1.5654171908394132e-08,
+   "machine_eps": 2.220446049250313e-16,
+   "dP_abs_vs_eps_ratio": 35250061.38671875
+  }
+ ],
+ "spn_mirror_selfconsistency": {
+  "pairs": 12,
+  "TrS2_max_abs_diff": 1.0253834401057276,
+  "TrS2_median_abs_diff": 0.2830724127039588,
+  "Szdiag_max_abs_diff": 0.8691426629476622,
+  "mirror": "m_110 (kx,ky)->(-ky,-kx) cartesian",
+  "tol_frac_mesh": 0.15
+ }
+}
