@@ -295,7 +295,8 @@ def main():
         "wannier_transform": "S_WF(k)=U(k)^dagger S(k) U(k)",
     }
     print(json.dumps(rep, indent=2, sort_keys=True))
-    print("-> PASS" if rep["hermitian"] else "-> FAIL")
+    # stdout is intentionally strict JSON: downstream Phase-0 uses json.load().
+    # Status is carried by exit code; mixing a status line would corrupt JSON.
     sys.exit(0 if rep["hermitian"] else 1)
 
 
