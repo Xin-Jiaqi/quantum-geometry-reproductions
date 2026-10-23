@@ -1,5 +1,6 @@
-BD36 2254_bilayer (deferred). Inputs frozen, NOT_RUN. POSCAR from BiDB source;
-POSCAR_SD = selective-dynamics variant (x,y frozen, z free).
-POTCAR intentionally absent (private); assemble at execution from the
-approved registry, record SHA256 locally.
-wannier90.win: draft - window/num_bands finalized by projection tests.
+BD36 2254_bilayer (deferred; bilayer). Inputs frozen, NOT_RUN.
+POSCAR_SD: bilayer registry-preserving T F F (x,y frozen, z free).
+wannier90.win: num_wann=44 (Pt:d + Se:p x spinor), atoms_frac from THIS POSCAR (slide-correct); kpoints block GENERATED post-SCF by make_win_kpoints.py.
+Interface: LWANNIER90 + LWRITE_SPN (vasp6 or vasp544 variant); no spin=true, no embedded WANNIER90_WIN.
+POTCAR absent (private; assembled at execution, SHA256 recorded locally).
+Caps: 28 cores x 2 h per job; round-1 total <= 500 core-h.
