@@ -10,7 +10,7 @@ The GitHub run receipt reports one local WSL VASP 6.6.0 \`vasp_ncl\` SOC-on sing
 
 | Quantity | SOC-on run | Interpretation |
 | --- | --- | --- |
-| TOTEN | −35.55001581 eV / 12-atom cell | Source-reported converged SCF; versus non-SOC −35.42794489 eV, −0.12207092 eV at fixed snapshot. **Not MAE and not a stability comparison between different candidate structures.** |
+| TOTEN | −35.55001581 eV / 12-atom cell | Source-reported converged SCF; versus non-SOC −35.42794489 eV, −0.12207092 eV at fixed snapshot. **Not MAE and not a stability comparison between different candidate structures; moreover this is not a clean isolated SOC energy because the two input protocols differ in more than LSORBIT (e.g. noncollinear treatment, symmetry and GGA_COMPAT choice).** |
 | Occupation gap | 1.3616 eV (HOMO −5.7746, LUMO −4.4130 eV) | Screening diagnostic on limited k grid and finite smearing; not independent band-path / k-converged indirect-gap proof |
 | Ag spin moments | dominant \(\pm0.568\,\mu_B\) along x | Type-I seed survives SOC; y about ±0.019, z about −0.005 on Ag |
 | Ag local PAW orbital moment | \(|L|\simeq0.143\,\mu_B\), \(L_z\approx+0.069\ldots+0.070\,\mu_B\) | PAW-sphere angular-momentum projection; NOT orbital-B perturbation matrix and not orbital IGMC |
