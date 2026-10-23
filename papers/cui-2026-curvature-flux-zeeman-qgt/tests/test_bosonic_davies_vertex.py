@@ -144,7 +144,8 @@ class OhmicBosonicFockWard(unittest.TestCase):
         bad=linear_response(d,mode="gauge",beta=BETA,mu=MU,g2=G2,cutoff=CUTOFF,
                             include_bath_contact=False)
         self.assertGreater(np.max(abs(good["dr"]-bad["dr"])),1e-5)
-        self.assertGreater(np.max(abs(bad["dr"]-1j*(d["gauge"]@rho-rho@d["gauge"])))),1e-5)
+        gauge_dr=1j*(d["gauge"]@rho-rho@d["gauge"])
+        self.assertGreater(np.max(abs(bad["dr"]-gauge_dr)),1e-5)
 
     def test_dynamic_physical_zeeman_bath_response(self):
         d,b,_=sample()
