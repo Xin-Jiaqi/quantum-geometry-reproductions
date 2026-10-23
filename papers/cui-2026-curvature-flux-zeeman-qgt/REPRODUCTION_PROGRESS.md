@@ -250,3 +250,7 @@ At q=(1,1) on the 3×3 torus, z_drive=.42+.09i: spectral vs Liouville 3.73e-15, 
 | **3. GitHub/CI** | Isolated Round28 tests, executable independent collision audit, frozen reference after dual CI, Physical Capability Registry and a new workflow step. PR/CI status must be verified on the exact tested SHA. | Round21/26/27 and parallel PR #65 untouched; paper never auto-upgraded by test count. |
 
 **Acceptance gate:** genuine remote Python 3.11/3.12 entire Cui suite, all Round17–28 scripts and fixed numerical negative-control benchmark. Scientific scope and derivation: [Round28](ROUND28_LOCAL_CONSERVING_COLLISION.md).
+ 
+### Round28 measured first dual-interpreter acceptance
+
+Initial isolated Cui remote CI: Python 3.11/3.12 **256/256 PASS**, independent audit successful. Reported gamma=0.12 benchmark: scalar density 0.1041668, scalar current 0.0389254, independent Liouville residual 2.59e-15, pure-gauge current 1.15e-15, wrong global RTA charge-Ward violation 0.01171157, and missing gauge-reference spurious current 0.02747677. The finalized frozen numerical regression brings the expected suite to **257**; final status must be inspected in GitHub Actions independently before merging. Full Cui source **PARTIAL**.

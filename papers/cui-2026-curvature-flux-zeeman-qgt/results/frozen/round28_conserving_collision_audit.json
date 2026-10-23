@@ -1,0 +1,25 @@
+{
+  "schema": "cui-round28-local-charge-conserving-gauge-covariant-linear-collision-v1",
+  "paper_status": "PARTIAL",
+  "model": "3x3 SOC single-particle finite torus; affine linearized site dephasing; not a CP thermal bath",
+  "gamma": 0.12,
+  "drive_z": [
+    0.42,
+    0.13
+  ],
+  "pure_gauge_density_abs_max": 1.257194777525287e-15,
+  "pure_gauge_current_abs_max": 1.1457578994363434e-15,
+  "pure_gauge_density_matrix_oracle_residual_max": 1.2631122354154742e-15,
+  "scalar_density_abs_max": 0.10416679684151603,
+  "scalar_current_abs_max": 0.038925428323675994,
+  "scalar_charge_ward_residual_max": 7.713244625532705e-15,
+  "zeeman_charge_ward_residual_max": 2.0414004822472568e-15,
+  "spin_plus_em_gauge_covariance_density_matrix_error_max": 1.5439379820958906e-15,
+  "spin_plus_em_gauge_covariance_current_error_max": 1.386538170022026e-15,
+  "collision_site_charge_residual_max": 0,
+  "dense_vs_iterative_liouville_residual_max": 2.5866350006912953e-15,
+  "naive_rta_charge_ward_violation_max": 0.011711570023660384,
+  "missing_covariant_collision_reference_pure_gauge_current_max": 0.027476772934359045,
+  "conserving_micro_bath_claim": false,
+  "real_material_zeeman_KME_claim": false
+}

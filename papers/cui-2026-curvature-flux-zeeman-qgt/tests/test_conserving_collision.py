@@ -128,4 +128,31 @@ class LocalConservingCollision(unittest.TestCase):
             zeeman_vertex(t,np.ones(9),spin_axis='orbital')
         with self.assertRaises(ValueError):zeeman_vertex(t,np.ones(8))
 
+    def test_frozen_round28_independent_ci_numeric_regression(self):
+        import json
+        from pathlib import Path
+        p=Path(__file__).resolve().parents[1]/"results/frozen/round28_conserving_collision_audit.json"
+        ref=json.loads(p.read_text())
+        self.assertEqual(ref["schema"],"cui-round28-local-charge-conserving-gauge-covariant-linear-collision-v1")
+        self.assertEqual(ref["paper_status"],"PARTIAL")
+        t,L,K,Vs,Vz=setup()
+        pure=collision_response(t,K+Vs,G=L,z=Z,gamma=RATE)
+        scalar=collision_response(t,.17*L,z=Z,gamma=RATE)
+        spin=collision_response(t,Vz,z=Z,gamma=RATE)
+        naive=collision_response(t,.17*L,z=Z,conserve_local_charge=False,gauge_reference=False)
+        ungauged=collision_response(t,K+Vs,G=L,z=Z,gauge_reference=False)
+        actual={
+          "pure_gauge_density_abs_max":float(np.max(abs(pure["density"]))),
+          "pure_gauge_current_abs_max":float(np.max(abs(pure["current"]))),
+          "scalar_density_abs_max":float(np.max(abs(scalar["density"]))),
+          "scalar_current_abs_max":float(np.max(abs(scalar["current"]))),
+          "scalar_charge_ward_residual_max":float(np.max(abs(scalar["ward"]))),
+          "zeeman_charge_ward_residual_max":float(np.max(abs(spin["ward"]))),
+          "naive_rta_charge_ward_violation_max":float(np.max(abs(naive["ward"]))),
+          "missing_covariant_collision_reference_pure_gauge_current_max":
+              float(np.max(abs(ungauged["current"]))),
+        }
+        for name,value in actual.items():
+            self.assertAlmostEqual(value,ref[name],delta=2e-10,msg=name)
+
 if __name__=="__main__":unittest.main()

@@ -75,3 +75,17 @@ python scripts/audit_conserving_collision.py
 ~~~
 
 Current new tests and frozen benchmark acceptance must be verified against **actual remote Python 3.11/3.12 jobs**, in addition to all existing Round17–27 audits. No old Round21 occupation_partition changes or rewrites.
+ 
+## First actual remote numerical acceptance and frozen negative controls
+
+The initial 13 new tests (Cui **256/256**) and standalone model audit passed in **both** GitHub-hosted Python 3.11 and 3.12 on the initial branch SHA. The first independent Python 3.12 audit generated the frozen Round28 JSON used as a mandatory hard regression in the final branch. The new frozen regression adds **one test**, so final acceptance requires **257/257** plus all historical audit scripts on both interpreters.
+
+At gamma=0.12, z_drive=0.42+0.13i, the unmodified 3x3 physical-spin SOC toy yields:
+- Pure-gauge physical density and Peierls-contact-complete current max: 1.26e-15 and 1.15e-15.
+- True scalar source: induced site density max 0.1041668 and physical bond current max 0.0389254; its local Ward residual max 7.71e-15.
+- Finite Pauli-spin Zeeman source local charge Ward residual max 2.04e-15; Zeeman + pure electromagnetic gauge covariance for density matrix/current: 1.54e-15 / 1.39e-15.
+- Independent full orbital Liouville against spectral fixed-point: 2.59e-15.
+- Bad **nonconserving** global RTA local continuity violation **0.01171157**.
+- Bad **locally conserving but nongauge-covariant** reference yields false pure-gauge current **0.02747677**.
+
+These numbers are **synthetic response** diagnostics and do not imply a conserving microscopic bath or a material KME observable. Freeze: [Round28 synthetic raw JSON](results/frozen/round28_conserving_collision_audit.json).

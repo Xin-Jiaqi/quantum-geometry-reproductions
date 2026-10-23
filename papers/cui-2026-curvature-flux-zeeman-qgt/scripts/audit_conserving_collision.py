@@ -57,12 +57,11 @@ for key in ('pure_gauge_density_abs_max','pure_gauge_current_abs_max',
 for key in ('naive_rta_charge_ward_violation_max',
             'missing_covariant_collision_reference_pure_gauge_current_max'):
  assert out[key]>1e-3,(key,out[key])
-# Reference file is added after the first independent remote run.
+# Frozen values from an independently executed first remote CI run.
 ref_path=ROOT/'results/frozen/round28_conserving_collision_audit.json'
-if ref_path.exists():
-    ref=json.loads(ref_path.read_text())
-    assert ref['schema']==out['schema'] and ref['paper_status']=='PARTIAL'
-    for key,value in out.items():
-        if isinstance(value,float):
-            assert abs(value-ref[key])<2e-10,(key,value,ref[key])
+ref=json.loads(ref_path.read_text())
+assert ref['schema']==out['schema'] and ref['paper_status']=='PARTIAL'
+for key,value in out.items():
+    if isinstance(value,float):
+        assert abs(value-ref[key])<2e-10,(key,value,ref[key])
 print(json.dumps(out,indent=2,ensure_ascii=False))
