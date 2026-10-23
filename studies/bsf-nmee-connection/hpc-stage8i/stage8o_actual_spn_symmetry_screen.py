@@ -117,13 +117,19 @@ def symmetry_summary(kfrac,energies,spins,lattice,R3,tfrac,n1=21,n2=21):
     normed=[]
     absres=[]
     spectrum=[]
+    worst=[]
     for i,j in pairs:
         ideal=Q@C[i]@Q.T
         err=np.linalg.norm(C[j]-ideal,"fro")
         denom=max(np.linalg.norm(C[j],"fro"),np.linalg.norm(ideal,"fro"),1e-12)
-        normed.append(float(err/denom))
+        nrm=float(err/denom)
+        normed.append(nrm)
         absres.append(float(err))
         spectrum.append(float(np.max(np.abs(np.sort(E[i])-np.sort(E[j])))))
+        gap=float(np.min(np.abs(np.diff(np.sort(E[j])))))
+        worst.append({"k_index":i,"k_prime_index":j,
+                      "min_band_spacing_eV_at_kprime":gap,
+                      "gram_norm_residual":nrm})
     R=np.asarray(R3,int)
     horizontal_glide=(np.array_equal(R,np.diag([1,1,-1])) and
                        np.any(np.abs(np.asarray(tfrac,float)[:2]%1)>1e-6))
@@ -137,6 +143,7 @@ def symmetry_summary(kfrac,energies,spins,lattice,R3,tfrac,n1=21,n2=21):
         "median_spin_gram_covariance_residual":float(np.median(normed)),
         "max_spin_gram_covariance_absolute":max(absres),
         "max_global_spin_gram_norm":max(float(np.linalg.norm(Ci,"fro")) for Ci in C),
+        "worst_gram_k_points":sorted(worst,key=lambda x:-x["gram_norm_residual"])[:8],
         "is_horizontal_glide":bool(horizontal_glide),
         "caveat":"Finite 96-band subspace may be non-closed at top; Gram covariance failure alone does NOT localize defect to VASP, ISYM=0 or MMN."
     }
@@ -146,7 +153,7 @@ def symmetry_summary(kfrac,energies,spins,lattice,R3,tfrac,n1=21,n2=21):
         good=[]
         maxspin=0.0
         skipped=0
-        top=[]
+        bands_by_gap={"gap001_01":[],"gap01_05":[],"gap_gt05":[]}
         for ik in range(E.shape[0]):
             for ib in range(1,E.shape[1]-1):
                 sep=min(abs(E[ik,ib]-E[ik,ib-1]),
@@ -156,16 +163,28 @@ def symmetry_summary(kfrac,energies,spins,lattice,R3,tfrac,n1=21,n2=21):
                     continue
                 sp=float(np.hypot(S[ik,ib,ib,0].real,S[ik,ib,ib,1].real))
                 maxspin=max(maxspin,sp)
+                row={"k_index":ik,"band_1based":ib+1,
+                     "local_band_gap_eV":float(sep),
+                     "Sxy_diag_norm_raw_Pauli":sp}
+                if sep < .01: bands_by_gap["gap001_01"].append(row)
+                elif sep < .05: bands_by_gap["gap01_05"].append(row)
+                else: bands_by_gap["gap_gt05"].append(row)
                 if sp>1e-4:
-                    good.append({"k_index":ik,"band_1based":ib+1,
-                                 "local_band_gap_eV":float(sep),
-                                 "Sxy_diag_norm_raw_Pauli":sp})
+                    good.append(row)
+        def layer_stats(rows):
+            if not rows: return {"count":0,"max_Sxy":0.0,"mean_Sxy":0.0,
+                                 "count_Sxy_gt_1e-4":0}
+            sv=np.array([r["Sxy_diag_norm_raw_Pauli"] for r in rows])
+            return {"count":len(rows),"max_Sxy":float(sv.max()),
+                    "mean_Sxy":float(sv.mean()),
+                    "count_Sxy_gt_1e-4":int((sv>1e-4).sum())}
         report["glide_nondegenerate_transverse_spin_check"]={
             "threshold_band_isolation_eV":.001,
             "threshold_transverse_spin_raw_Pauli":1e-4,
             "degenerate_nearby_states_skipped":skipped,
             "max_transverse_diag_spin":maxspin,
             "number_of_above_threshold":len(good),
+            "by_band_gap_layer":{k:layer_stats(v) for k,v in bands_by_gap.items()},
             "examples":sorted(good,key=lambda x:-x["Sxy_diag_norm_raw_Pauli"])[:12],
             "limitation":"Band96 has no 97 neighbour; excluded. Raw SPN diagonal is a pseudopotential-derived band-spin proxy, not a full spatial layer operator."
         }
