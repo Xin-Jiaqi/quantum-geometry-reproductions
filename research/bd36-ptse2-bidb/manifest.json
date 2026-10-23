@@ -1,0 +1,69 @@
+{
+  "data_source": "User-provided bidb(2).db (ASE/SQLite), opened read-only; 11184 systems; pragma quick_check=ok",
+  "reference": "Pakdel et al., Nature Communications 15, 932 (2024), DOI 10.1038/s41467-024-45003-w",
+  "records": {
+    "2252": {
+      "uid": "PtSe2-d000f0288397",
+      "layers": 1,
+      "layer_group": 72,
+      "inversion": true,
+      "gap_pbe_eV": 1.165,
+      "gap_pbe_nosoc_eV": 1.37
+    },
+    "2253": {
+      "uid": "PtSe2-d000f0288397-2-1_0_0_1-0_0",
+      "layers": 2,
+      "layer_group": 72,
+      "inversion": true,
+      "gap_pbe_eV": 0.219,
+      "gap_pbe_nosoc_eV": 0.202,
+      "slide_stability": "Stable",
+      "interlayer_distance_A": 2.297547818786855
+    },
+    "2254": {
+      "uid": "PtSe2-d000f0288397-2-1_-1_1_0--0.33_-0.67",
+      "layers": 2,
+      "layer_group": 69,
+      "inversion": false,
+      "gap_pbe_eV": 0.384,
+      "gap_pbe_nosoc_eV": 0.439,
+      "slide_stability": "None",
+      "relative_orientation": "different from 2253"
+    },
+    "2255": {
+      "uid": "PtSe2-d000f0288397-2-1_0_0_1--0.33_-0.67",
+      "layers": 2,
+      "layer_group": 72,
+      "inversion": true,
+      "gap_pbe_eV": 0.614,
+      "gap_pbe_nosoc_eV": 0.632,
+      "slide_stability": "None",
+      "interlayer_distance_A": 2.973658043204505
+    }
+  },
+  "derived": [
+    {
+      "from_id": 2253,
+      "u_fractional": [
+        0.08,
+        0.19
+      ],
+      "label": "generic_p008_p019",
+      "rigid": true,
+      "relaxed": false,
+      "atomic_inversion_error_A": 6.3e-9
+    },
+    {
+      "from_id": 2253,
+      "u_fractional": [
+        -0.08,
+        -0.19
+      ],
+      "label": "generic_m008_m019",
+      "rigid": true,
+      "relaxed": false,
+      "atomic_inversion_error_A": 6.3e-9
+    }
+  ],
+  "scope": "Geometry and PBE-gap metadata only; no SOC Wannier Hamiltonians, layer spin matrices, or new DFT calculations. The raw BiDB SQLite file is not published."
+}
