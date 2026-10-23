@@ -202,12 +202,21 @@ paper-specific tests remain unmodified.
 - Full author paper **PARTIAL**. Remaining: dynamic metallic charge conservation, electromagnetic contacts, Wannier physical spin+position in the same gauge, source Eq.(19), real material SI and Table I reconciliation.
 
 
-## Round25: Bloch-gauge covariant static spin Ward (in independent CI)
+## Round25: Bloch-gauge covariant static spin Ward (merged)
 
 | Main workstream | New restricted gate |
 | --- | --- |
 | Paper reproduction | Derived gauge-covariant **equilibrium static** Zeeman current Ward as an independent physical negative control. Full original Cui paper remains PARTIAL; this does not reproduce a new source Eq.(19) transport measurement. |
 | Physics capability | Bloch connection A=W†dW, covariant physical velocity/spin-operator derivatives and explicit Zeeman-current contact for k-dependent synthetic effective-spin vertex; Kramers Fréchet response reused unchanged. |
-| GitHub | Round25 PR: 11 new tests including the frozen audit regression. First 213 tests passed in both Python 3.11/3.12 (Actions 39877965441); final target 214 pending repeated remote CI. |
+| GitHub | Round25 source PR #87 **merged** (squash 2bce0fb8f15b288cd864189fe55d19cf794a3cf2). Eleven new tests including frozen numerical regression: Python 3.11/3.12 **214/214 PASS** and reproducible audit on Actions run 39878438728. |
 
 Next required step is a realistic same-Wannier-gauge H, physical spin and position-operator interface; current results are neither SI nor dissipative KME.
+
+
+### Round25 physical acceptance and residuals (2026-10-23)
+
+- Synthetic k-dependent Bloch gauge: full 2×3 static susceptibility basis covariance error ≤2.4e-16 at sampled k, including exact Kramers doublets.
+- At k=(0.36,-0.29), effective projected-spin variation 0.16, T=0.22, mu=0.15, kappa=0.7: complete Ward vs independent finite-B 2.65e-11; vs finite-k spin-density gradient 4.16e-11.
+- Explicit Zeeman current-vertex contact max = 0.0421665; population-only omission has error 0.0421665. The raw k derivative of the rotated Hamiltonian differs from the physical covariant velocity by 0.425737 in the chosen toy gauge.
+- With purely k-dependent gauge but k-independent physical spin, the **covariant** spin derivative/contact is zero. All values are synthetic natural-unit model checks, NOT real material or finite-frequency KME.
+- Frozen raw audit: results/frozen/round25_covariant_spin_ward_audit.json. Full source-paper reproduction **PARTIAL**.
