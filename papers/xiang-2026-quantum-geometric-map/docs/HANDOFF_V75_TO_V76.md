@@ -16,7 +16,7 @@
 - `src/qgmap/elastic_spin_collision_v75.py`：守恒/细致平衡等能壳弹性散射、稳态与 AC、独立带权谱/时间解、SM 相对符号不变性。
 - `tests/test_elastic_spin_collision_v75.py`：51 named physical tests。
 - `tests/test_elastic_spin_collision_v75_frozen.py`：1 independent frozen regeneration gate。
-- `tests/test_source_v50_collision_bridge_v75.py`：4 optional tests 需要 GitHub 原仓库 v49/v50 源码。独立 v60+ snapshot 中应标记 SKIP，严禁称 51/51 本地 PASS。
+- `tests/test_source_v50_collision_bridge_v75.py`：4 optional tests 需要 GitHub 原仓库 v49/v50 源码。独立 v60+ snapshot 中应标记 SKIP，严禁称 56/56 本地 PASS。
 - `scripts/reproduce_v75.py` 和 `results/frozen/v75_elastic_collision_and_source_sign.json`；完整详细物理报告 `docs/ELASTIC_COLLISION_TAU_AND_SOURCE_SIGN_V75.md`。
 
 ## v76 最优研究任务
@@ -24,3 +24,13 @@
 优先将 *物理可守恒的能壳碰撞* 实际嵌入原论文双频率 Liouville 的对角占据空间，同时保持真实平衡静态 B 的准备过程、两种场插入次序以及源 E pole；用同一个杂质/碰撞模型给出所有响应通道的一致 \(\tau\)，不要单纯用不同核的任意 gamma 把已有数值凑到 Eq.(20)。必须把 per-shell elastic kernel 扩展到各能量与 valence/conduction、谱/非对角相干投影和配对顶角。对源 Eq20/31 保留双分支验证；作者纠正前 no-go 仍在。随后解决 v52 的绝对 SI 2π 和 orbital Eq49/52、三带几何/磁位置补全。
 
 本轮 GitHub 发布的确切 PR、HEAD、CI、merge 和 postmerge 只有在真实远端验收完成后补记；项目管理完成度不是物理证明比率。
+
+
+## v75 merged release verification | 2026-10-23
+
+- [PR #90](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/90) **squash merged** as `73d79b602f997ac6ab62c19c5b8e5abe879d5bb5`; final tested PR HEAD `d401721fcea0c995caa3ee58863a19e9ed887f61`.
+- [PR final HEAD Actions #39882521001](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39882521001): **1161/1161 PASS**, 177.902 s, source article explicitly `PARTIAL`; all four historical v49/v50 bridge gates individually **executed and passed**.
+- [Independent post-merge main Actions #39883014821](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39883014821): **1161/1161 PASS**, 100.137 s on exact merge SHA `73d79b602f997ac6ab62c19c5b8e5abe879d5bb5`; original paper `PARTIAL`.
+- v75 has **51 new physical science tests + one independent frozen-number regeneration + four original-source v49/v50 cross-checks**, all **56** executed within complete remote test suite. Standalone v60+ archive includes **52 PASS + 4 intentionally SKIP**, not 56 standalone PASS. Named local v71–v75 module groups separately **225/225 PASS**. All eight new source/test/data/science Git blob SHA matched exactly the tested local files before the documented final HEAD.
+- The exact scalar transport relaxation reduction `tau=1/lambda` requires the electric source to be a genuine collision eigenmode `L v=lambda v`. No-tilt Dirac: `gamma*tau_tr=2`; tilted source eigenmode residual nonzero (beta=.125: 0.00436638, beta=.5: 0.01686008). This is an *explicit single-conduction-energy-shell elastic model*, **NOT** original article full conserving spin EB relaxation.
+- Eq20/31 common-source relative sign incompatibility is verified but author intent/physical measured sign is **unresolved**; no correction is asserted. Original bulk PHE/MNHE paper science remains **PARTIAL**. These post-merge updates are documentation-only and do not alter any code, tests or frozen numerical results.
