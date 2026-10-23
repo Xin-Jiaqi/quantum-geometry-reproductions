@@ -1,0 +1,23 @@
+{
+  "schema": "cui-round32-epw-normalized-provenance-kq-gauge-goldenrule-v1",
+  "whole_source_paper": "PARTIAL",
+  "real_material_verified": false,
+  "authentic_real_epw_phonon_matrix_found": false,
+  "synthetic_normalized_archive_status": "SYNTHETIC_FIXTURE_ONLY",
+  "fake_hashed_candidate_status": "CANDIDATE_BYTES_VALIDATED_PHYSICAL_AUTHENTICITY_UNVERIFIED",
+  "fake_hashed_candidate_real_verified": false,
+  "raw_source_tamper_checksum_rejected": true,
+  "nk": 3,
+  "nq": 3,
+  "nband": 2,
+  "nmode": 1,
+  "inverse_q_mode_hermiticity_residual_max": 0,
+  "bare_finite_gaussian_goldenrule_rate_s_inverse_max": 4182276705766.125,
+  "pauli_blocking_rate_s_inverse_difference_max": 4171935511535.994,
+  "matched_independent_k_gauge_goldenrule_rate_s_inverse_residual_max": 0.00244140625,
+  "wrong_H_only_gauge_goldenrule_rate_s_inverse_difference_max": 27157034347308.645,
+  "no_exact_kms_from_offshell_gaussian_broadening": true,
+  "physical_spin_provenance_authenticated": false,
+  "real_material_kme_si_claim": false,
+  "raw_binary_epw_reader_claim": false
+}
