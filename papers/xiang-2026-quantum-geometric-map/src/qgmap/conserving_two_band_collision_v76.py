@@ -255,7 +255,7 @@ def time_evolution(s=CoherentSpec(),initial=None,t=20.):
 
 
 def equilibrium_B_collision_contact(s=CoherentSpec(),B=1e-3):
-    """Static B Ward: frozen scattering FAILS to thermalize f(H0+B sigma_x).
+    """Static B Ward: frozen scattering FAILS to thermalize f(H0-B sigma_x).
 
     A B-dependent collision must obey D_B' F0 = -D0 F_B' to make
     f(H(B)) stationary. This is a NECESSARY equilibrium contact, not a
@@ -266,14 +266,14 @@ def equilibrium_B_collision_contact(s=CoherentSpec(),B=1e-3):
     theta=d['theta'];U=d['u'];Ud=np.swapaxes(U.conj(),-1,-2)
     def f_B(x):
         # same fixed laboratory momentum, change only the external spin Hamiltonian
-        H=s.energy*(np.cos(theta)[:,None,None]*SY-np.sin(theta)[:,None,None]*SX)+s.mass*SZ+x*SX
+        H=s.energy*(np.cos(theta)[:,None,None]*SY-np.sin(theta)[:,None,None]*SX)+s.mass*SZ-x*SX
         ev,V=np.linalg.eigh(H)
         weights=fermi(ev,s.mu,s.temperature)
         FF=(V*weights[:,None,:])@np.swapaxes(V.conj(),-1,-2)
         return Ud@FF@U
     F0=d['rho0']
     FD_numeric=(f_B(B)-f_B(-B))/(2*B)
-    spin=d['spin']
+    spin=-d['spin']
     f=fermi(d['e'],s.mu,s.temperature)
     de=d['e'][:,:,None]-d['e'][:,None,:]
     df=f[:,:,None]-f[:,None,:]
