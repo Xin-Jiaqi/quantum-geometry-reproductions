@@ -19,3 +19,14 @@
 - **Release gates:** 52 physics tests + frozen evidence regeneration locally 53/53 PASS; final PR head CI, merge SHA, independent main CI and verified portable zip hashes must be checked and added only after the real results.
 
 **Planning:** paper reproduction not elevated to COMPLETE; numerical tests certify **specific physics constructions**, not paper truth.
+
+## v76 completed GitHub scientific software release | 2026-10-23
+
+- [PR #95](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/95) **squash merged** as `43dc26fbfb11ad26fb10a5a5770abe273efc1411`, final tested PR HEAD `729968a1e52f68540e0e5f826fe5e3269179c18a`.
+- **Final PR-head** [Actions #39888732159](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39888732159): **1214/1214 PASS**, `Ran 1214 tests in 175.199s`; original source science `PARTIAL`.
+- **Independent post-merge main** [Actions #39889098564](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39889098564): **1214/1214 PASS**, `Ran 1214 tests in 98.536s`, exact merge SHA `43dc26fbfb11ad26fb10a5a5770abe273efc1411`; original source `PARTIAL`.
+- New v76 52 named science tests + one independently computed full frozen-data test: local and independent fresh extraction **53/53 PASS**. v71-v75 five bounded regression groups **225/225 PASS**; v71-v76 portable named models **278/278 PASS**. Core seven v76 files verified exact Git blob SHA against independently tested local bytes, with scientific Bx sign consistent with the original source H(k,Bx)=H0-Bx sigma_x.
+- Standalone handoff ZIP **141 files with 140/140 SHA256 hashes validated after fresh extraction**. The archive contains the portable v60+ project model history; it is not a full clone of every remote GitHub module.
+- **VERIFIED:** named both-band elastic population response, charge/detailed balance and finite Bx isoenergy shells; untilted two-band coherent completely positive GKSL, nonunique spin/E-B from same population lifetime; necessary original-axis Bx equilibrium collision contact; independently realized Bz field-dependent spinor-scattering collision Ward and optical finite B derivative to **3.71e-11**, versus **0.0796876** incorrect frozen collision.
+- **CONDITIONAL:** independently specified Born-style collision and chosen local optical interband vertex. The complete author's original Bx homogeneous length gauge with field-dependent conserving bath, original source selected 1/eta electric pole in same bath, SM Eq20/Eq31 sign, orbital full Wannier MNHE and Fig2 SI are **UNRESOLVED**. Original PRB reproduction explicitly **PARTIAL**.
+- Two post-merge documentation-only commits update release evidence; the tested physics source, tests, and frozen numbers are unchanged.
