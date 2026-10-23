@@ -13,7 +13,8 @@ every negative control raises (nonzero exit), never a self-reported flag.
 Phase B - genuine Wannier90 syntax (official layouts, documented):
 author synthetic files for the identity-physics gauge (file V = U_eig+,
 final operators = the source bundle), a smooth nonidentity final gauge
-W(k) (position connection law A_f = W+ A W - i W+ d_k W included), and a
+W(k) (position connection law A_f = W+ A W + i W+ d_k W included, plus-i
+under D_k H = dH/dk - i[A,H]), and a
 disentangled 6-band case (V = [U_eig+ W; 0], U = W, U_dis = [U_eig+; 0]).
 Verify: V+ V = I; H^W(k) = V+ diag(eig) V == fourier(H_R); S^W(k) =
 V+ S^Bloch(k) V; S(R) by the matching discrete Fourier convention; r.dat
@@ -42,7 +43,8 @@ import numpy as np
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
-OUT = ROOT / "MATERIAL_HSA_SYNTHETIC_IMPORT_AUDIT.json"
+# FIX round writes a NEW receipt; the 1a70a23 audit JSON is left untouched.
+OUT = ROOT / "MATERIAL_HSA_EXTERNAL_FORMAT_FIX_QA.json"
 sys.path.insert(0, str(SCRIPT_DIR))
 
 import test_multiband_igmc_gate as GATE
@@ -55,6 +57,125 @@ REF_WILSON_41 = 0.0341517445
 SX = np.array([[0, 1], [1, 0]], complex)
 SY = np.array([[0, -1j], [1j, 0]], complex)
 SZ = np.diag([1.0, -1.0]).astype(complex)
+
+# ------------------------------------------------------------------ FIX 1
+# Independently hand-authored external-format golden fixtures. The matrices
+# and the file text below are LITERALS recorded BEFORE any of the project
+# writers/parsers run; the parse must recover exactly these physical
+# (row,column) entries from COLUMN-MAJOR blocks (rows change fastest).
+# A row-major reordering of the same entries must NOT parse to the same
+# matrix (strict comparison fails).
+
+GOLD_U = np.array([
+    [0.5 + 0.0j, 0.0 + 0.25j, -0.25 + 0.0j, 0.0 - 0.125j],
+    [-0.25 + 0.5j, 0.5 - 0.25j, 0.0 + 0.5j, 0.25 + 0.0j],
+    [0.0 + 0.125j, -0.5 + 0.0j, 0.5 + 0.25j, 0.0 - 0.5j],
+    [0.25 + 0.0j, 0.0 + 0.5j, -0.125 + 0.0j, 0.5 - 0.25j],
+], dtype=complex)
+# physical indices are explicit: GOLD_U[r, c]; the file block lists entries
+# in the order (r=0..3, c=0), then (r=0..3, c=1), ... i.e. c outer, r inner
+# (column-major, W90 docs).
+GOLD_U_FILE = [
+    # k = (0,0,0)
+    "   0.0000000000 0.0000000000 0.0000000000",
+    "  0.5000  0.0000", " -0.2500  0.5000", "  0.0000  0.1250", "  0.2500  0.0000",
+    "  0.0000  0.2500", "  0.5000 -0.2500", " -0.5000  0.0000", "  0.0000  0.5000",
+    " -0.2500  0.0000", "  0.0000  0.5000", "  0.5000  0.2500", " -0.1250  0.0000",
+    "  0.0000 -0.1250", "  0.2500  0.0000", "  0.0000 -0.5000", "  0.5000 -0.2500",
+    "",
+    # k = (0.25, 0.5, 0)
+    "   0.2500000000 0.5000000000 0.0000000000",
+    "  0.5000  0.0000", " -0.2500  0.5000", "  0.0000  0.1250", "  0.2500  0.0000",
+    "  0.0000  0.2500", "  0.5000 -0.2500", " -0.5000  0.0000", "  0.0000  0.5000",
+    " -0.2500  0.0000", "  0.0000  0.5000", "  0.5000  0.2500", " -0.1250  0.0000",
+    "  0.0000 -0.1250", "  0.2500  0.0000", "  0.0000 -0.5000", "  0.5000 -0.2500",
+    "",
+]
+# row-major reordering of the SAME 16 values (r outer, c inner) - this is
+# what a row-major serializer would emit and must NOT equal GOLD_U.
+GOLD_U_ROWMAJOR_FILE = [
+    "   0.0000000000 0.0000000000 0.0000000000",
+    "  0.5000  0.0000", "  0.0000  0.2500", " -0.2500  0.0000", "  0.0000 -0.1250",
+    " -0.2500  0.5000", "  0.5000 -0.2500", "  0.0000  0.5000", "  0.2500  0.0000",
+    "  0.0000  0.1250", " -0.5000  0.0000", "  0.5000  0.2500", "  0.0000 -0.5000",
+    "  0.2500  0.0000", "  0.0000  0.5000", " -0.1250  0.0000", "  0.5000 -0.2500",
+    "",
+]
+# rectangular 6x4 U_dis (num_bands=6 rows, num_wann=4 cols), header nk nw nb
+# = 1 4 6; entries column-major: for c in 0..3: for r in 0..5.
+GOLD_UD = np.array([
+    [0.25 + 0.25j, 0.375 + 0.125j, 0.5 + 0.5j, 0.625 + 0.375j],
+    [0.375 + 0.0j, 0.5 + 0.375j, 0.625 + 0.25j, 0.75 + 0.625j],
+    [0.5 + 0.25j, 0.625 + 0.125j, 0.75 + 0.5j, 0.875 + 0.375j],
+    [0.625 + 0.0j, 0.75 + 0.375j, 0.875 + 0.25j, 1.0 + 0.625j],
+    [0.75 + 0.25j, 0.875 + 0.125j, 1.0 + 0.5j, 1.125 + 0.375j],
+    [0.875 + 0.0j, 1.0 + 0.375j, 1.125 + 0.25j, 1.25 + 0.625j],
+], dtype=complex)
+GOLD_UD_FILE = [
+    "   0.1250000000 0.3750000000 0.0000000000",
+    "  0.2500  0.2500", "  0.3750  0.0000", "  0.5000  0.2500", "  0.6250  0.0000",
+    "  0.7500  0.2500", "  0.8750  0.0000",
+    "  0.3750  0.1250", "  0.5000  0.3750", "  0.6250  0.1250", "  0.7500  0.3750",
+    "  0.8750  0.1250", "  1.0000  0.3750",
+    "  0.5000  0.5000", "  0.6250  0.2500", "  0.7500  0.5000", "  0.8750  0.2500",
+    "  1.0000  0.5000", "  1.1250  0.2500",
+    "  0.6250  0.3750", "  0.7500  0.6250", "  0.8750  0.3750", "  1.0000  0.6250",
+    "  1.1250  0.3750", "  1.2500  0.6250",
+    "",
+]
+
+
+def test_external_format_golden():
+    """FIX 1: the parser must recover the hand-authored column-major golden
+    exactly, and must NOT recover it from a row-major block. Also verifies
+    the production writer emits column-major (roundtrip consistency)."""
+    res = {}
+    with tempfile.TemporaryDirectory() as td:
+        td = Path(td)
+        fp = td / "gold_u.mat"
+        fp.write_text("\n".join([" created (external golden)", " 2 4 4", "",
+                                 ] + GOLD_U_FILE) + "\n")
+        kpts, mats = HSA.parse_kpoint_matrix_file(fp, "u")
+        assert kpts.shape == (2, 3), kpts.shape
+        assert np.allclose(kpts, [[0, 0, 0], [0.25, 0.5, 0]], atol=1e-10)
+        assert np.allclose(mats[0], GOLD_U, atol=1e-9), "golden U block 0"
+        assert np.allclose(mats[1], GOLD_U, atol=1e-9), "golden U block 1"
+        # row-major block must NOT parse to the golden matrix
+        fp2 = td / "gold_u_rm.mat"
+        fp2.write_text("\n".join([" created (external golden row-major)",
+                                  " 1 4 4", "", ] + GOLD_U_ROWMAJOR_FILE) + "\n")
+        _, mats2 = HSA.parse_kpoint_matrix_file(fp2, "u")
+        assert not np.allclose(mats2[0], GOLD_U, atol=1e-9), \
+            "row-major block must not match the column-major golden"
+        # rectangular 6x4 U_dis golden
+        fpd = td / "gold_ud.mat"
+        fpd.write_text("\n".join([" created (external golden u_dis)",
+                                  " 1 4 6", "", ] + GOLD_UD_FILE) + "\n")
+        kd, md = HSA.parse_kpoint_matrix_file(fpd, "u_dis")
+        assert md[0].shape == (6, 4), md[0].shape
+        assert np.allclose(md[0], GOLD_UD, atol=1e-9), "golden U_dis"
+        # production writer emits the same column-major order: author a tiny
+        # identity-gauge file and confirm the on-disk block == the
+        # column-major flat of the in-memory matrix
+        F1 = GATE.build_v2()
+        d, _ = WSF.author_w90_files(F1, td / "cmcheck", 3, label="cmcheck",
+                                    gauge="identity")
+        kp, mw = HSA.parse_kpoint_matrix_file(d / "seed_u.mat", "u")
+        # regenerate expected matrices from the same U the author used:
+        # identity gauge -> file U == V == U_eig+ = eigh(Hq)[1].conj().T
+        Hq = WSF._fourier(WSF._kpts_grid(3), F1.translations, F1.h_r)
+        Ue = np.array([np.linalg.eigh(Hq[k])[1] for k in range(9)])
+        Vf = np.swapaxes(Ue.conj(), 1, 2)  # U_eig+ per k
+        ok = True
+        for k in range(9):
+            if not np.allclose(mw[k], Vf[k], atol=1e-9):
+                ok = False
+        assert ok, "production writer is not column-major"
+        res["u_golden_exact"] = True
+        res["u_rowmajor_rejected"] = True
+        res["u_dis_golden_exact"] = True
+        res["writer_column_major"] = bool(ok)
+    return res
 
 
 def _tamper_carrier(path, new_value=(0.5, 0.25)):
@@ -117,6 +238,40 @@ def phase_a():
                                      "source_wilson_41": ref_w,
                                      "ref_direct": REF_DIRECT_41,
                                      "ref_wilson": REF_WILSON_41}
+        # ---- FIX 2: positive off-site spin fixture. A real Wannier spin has
+        # S_j(-R) = S_j(R)+ with complex, NON-Hermitian off-site terms; only
+        # R=0 is individually Hermitian. Add a skew-Hermitian complex
+        # perturbation delta (delta+ = -delta) to one off-site pair:
+        #   S(+R) -> S(+R) + delta   (non-Hermitian),
+        #   S(-R) -> S(-R) + delta+  (pairing S(-R)=S(+R)+ preserved).
+        # S(0) is unchanged (delta + delta+ = 0), so the q=0 Pauli norm
+        # bound (validate) still passes; the reader must ACCEPT the file.
+        rng = np.random.default_rng(3)
+        delta = []
+        for _ in range(3):
+            A = np.array(rng.normal(size=(4, 4)))
+            delta.append(0.005j * (A + A.T))   # imaginary symmetric: delta+ = -delta
+        spin_p = F1.spin_r.copy()
+        # off-site pair: translations[0]=(-1,0), translations[1]=(1,0)
+        for j in range(3):
+            spin_p[1, j] = F1.spin_r[1, j] + delta[j]
+            spin_p[0, j] = F1.spin_r[0, j] + delta[j].conj().T
+        Fp = HSA.WannierOperatorBundle(F1.translations, F1.lattice, F1.h_r,
+                                       spin_p, F1.position_r, F1.centers,
+                                       dict(F1.provenance), dict(HSA.UNITS))
+        Fp.validate()                     # pairing + q=0 norm still hold
+        pp = td / "pos_offsite_spin.json"
+        HSA.write_hsa_carrier(Fp, pp, label="offsite_spin_positive")
+        bp, _ = HSA.read_hsa_carrier(pp)  # must import (was rejected before)
+        for j in range(3):
+            assert not np.allclose(bp.spin_r[0, j], bp.spin_r[0, j].conj().T,
+                                   atol=1e-9), "off-site S must be non-Hermitian"
+            assert np.allclose(bp.spin_r[0, j], bp.spin_r[1, j].conj().T,
+                               atol=1e-10), "pairing S(-R)=S(+R)+ lost"
+        rec["carriers"]["offsite_spin_positive"] = {
+            "status": "SYNTHETIC_CARRIER",
+            "note": "complex off-site S(+R) non-Hermitian with S(-R)=S(+R)+ "
+                    "imports; per-R Hermiticity NOT required off-site"}
         # ---- negative controls (each MUST raise)
         ng = rec["negatives"]
         # N1 corrupt hash
@@ -219,6 +374,24 @@ def phase_a():
             raise AssertionError(f"lattice swap NOT detected: Dl={Dl}")
         ng["wrong_lattice_orientation"] = {"swapped_lattice_direct_41": Dl,
                                            "abs_diff": float(abs(Dl - REF_DIRECT_41))}
+        # N9 FIX 2: mismatched +/-R spin (S(-R) != S(+R)+) must fail
+        rng = np.random.default_rng(5)
+        d9 = []
+        for _ in range(3):
+            A = np.array(rng.normal(size=(4, 4)))
+            d9.append(0.005j * (A + A.T))
+        spin_m = F1.spin_r.copy()
+        for j in range(3):
+            spin_m[1, j] = F1.spin_r[1, j] + d9[j]
+            spin_m[0, j] = F1.spin_r[0, j] + d9[j]      # SAME delta: pairing broken
+        Fm = HSA.WannierOperatorBundle(F1.translations, F1.lattice, F1.h_r,
+                                       spin_m, F1.position_r, F1.centers,
+                                       dict(F1.provenance), dict(HSA.UNITS))
+        p = td / "nc_spinpair.json"
+        HSA.write_hsa_carrier(Fm, p, label="nc_spinpair")
+        ng["mismatched_spin_pair"] = _expected_raise(
+            lambda: HSA.read_hsa_carrier(p), "Hermitian partner",
+            "mismatched +/-R spin")
     rec["status"] = "SYNTHETIC_CARRIER_PASS"
     return rec
 
@@ -285,13 +458,17 @@ def phase_b():
             "VdagV_err": rct3["max_VdagV_minus_I"], "direct_21": D3}
         # B4 negatives
         ng = rec["negatives"]
-        # wrong U orientation (transpose) -> H-vs-eig mismatch must raise
+        # wrong U orientation (transpose) -> H-vs-eig mismatch must raise.
+        # File storage is COLUMN-MAJOR (rows fastest, then columns): the
+        # flat block is recovered as M = flat.reshape(ncols, nrows).T and
+        # the transposed matrix is written back in the same order.
         d, _ = WSF.author_w90_files(F1, td / "b4a", 9, label="nc",
                                     gauge="identity")
         p = d / "seed_u.mat"
         lines = Path(p).read_text().splitlines()
         # parse header then rewrite with transposed per-k blocks
         hdr, nk, nw = lines[1].split()
+        nk, nw = int(nk), int(nw)
         out = [lines[0], lines[1], ""]
         idx = 3
         nent = 4 * 4
@@ -300,12 +477,15 @@ def phase_b():
             block = lines[idx:idx + nent]; idx += nent
             if idx < len(lines) and lines[idx] == "":
                 idx += 1
-            # transpose: swap (r,c) with (c,r) via column-major re-read
-            M = np.array([complex(*(float(y) for y in x.split()))
-                          for x in block], dtype=complex).reshape(4, 4)
+            flat = np.array([complex(*(float(y) for y in x.split()))
+                             for x in block], dtype=complex)
+            M = flat.reshape(nw, nw).T      # column-major recovery
             Mt = M.T
             out.append(kline)
-            out += [f" {z.real: .16f} {z.imag: .16f}" for z in Mt.reshape(-1)]
+            for c in range(nw):
+                for r in range(nw):          # column-major write of Mt
+                    z = Mt[r, c]
+                    out.append(f" {z.real: .16f} {z.imag: .16f}")
             out.append("")
         Path(p).write_text("\n".join(out[:-1]) + "\n")
         ng["wrong_U_orientation"] = _expected_raise(
@@ -326,16 +506,26 @@ def phase_b():
         for i in perm:
             out += blocks[i]
         Path(d / "seed.spn").write_text("\n".join(out) + "\n")
+        # HONEST LIMITATION (FIX 3): a permuted spn block file is STRUCTURALLY
+        # LEGAL - formatted spn has k blocks but no per-block k labels, so no
+        # parser can fail-closed on the k mapping from the file alone. This
+        # is a response-level control against a KNOWN synthetic reference
+        # (measured drift ~8e-6, 5 orders above the 1e-11 numerical floor),
+        # NOT an intrinsic importer rejection; provenance is marked
+        # SPN_K_PROVENANCE_UNVERIFIED (see bundle provenance).
         b4, rct4 = HSA.reconstruct_bundle_from_w90(d, nbands=4, nwann=4,
                                                    h_eig_tol=1e-8)
         D4 = GATE.direct_dxx_omega(b4, 9)
-        # measured: permuted-spn response differs by ~8e-6 (5 orders above
-        # the 1e-11 numerical floor) - a clear but weak signal of the wrong
-        # k pairing
         if abs(D4 - REF_DIRECT_41) < 1e-6:
             raise AssertionError(f"k-order mismatch NOT detected: D4={D4}")
-        ng["mismatched_k_order"] = {"direct_9_with_permuted_spn": D4,
-                                    "abs_diff": float(abs(D4 - REF_DIRECT_41))}
+        ng["mismatched_k_order"] = {
+            "direct_9_with_permuted_spn": D4,
+            "abs_diff": float(abs(D4 - REF_DIRECT_41)),
+            "class": "RESPONSE_LEVEL_CONTROL_NOT_INTRINSIC_REJECTION",
+            "note": "permuted spn blocks are structurally legal (spn has no "
+                    "per-k labels); the response drift is only detectable "
+                    "against a known synthetic reference; importer marks "
+                    "SPN_K_PROVENANCE_UNVERIFIED"}
     rec["status"] = "SYNTHETIC_FORMAT_PARSER_PASS"
     return rec
 
@@ -414,32 +604,43 @@ def phase_c():
 def main():
     t0 = time.time()
     rec = {"schema": "hsa-synthetic-import-audit-v1",
-           "task_file": "HARNESS_HSA_SYNTHETIC_IMPORT_BOOTSTRAP_20261023.md",
+           "task_file": "HARNESS_W90_EXTERNAL_FORMAT_FINAL_FIX_20261023.md",
+           "fix_round": "EXTERNAL_FORMAT_FINAL_FIX_20261023",
+           "prior_audit": "MATERIAL_HSA_SYNTHETIC_IMPORT_AUDIT.json (1a70a23)",
            "declared_support_case": {
                "2D slab": True, "orthorhombic 3x3 lattice": True,
                "Rz=0 all R": True, "write_ndegen_applied=true deg=1": True,
                "use_ws_distance=false (no ambiguous WS fold)": True,
                "SAXIS=(0,0,1)": True, "spinors=true": True,
                "single explicit k ordering (win kpoints block)": True,
-               "formatted spn only": True},
+               "formatted spn only": True,
+               "U-family matrices COLUMN-MAJOR (rows fastest, then columns)":
+                   True},
            "official_format_source": [
                "https://wannier90.readthedocs.io/en/latest/user_guide/wannier90/files/",
                "https://wannier90.readthedocs.io/en/latest/user_guide/wannier90/postproc/",
                "test-suite/tests/testw90_rmn/benchmark/diamond_r.dat"],
            "material_authenticated": False,
            "no_wannier_executed": True}
+    rec["external_format_golden"] = test_external_format_golden()
     rec["phase_A"] = phase_a()
     rec["phase_B"] = phase_b()
     rec["phase_C"] = phase_c()
     rec["elapsed_sec"] = round(time.time() - t0, 1)
     rec["verdict"] = {
         "verdict": "PASS_SYNTHETIC_FORMAT_PARSER",
-        "meaning": ("synthetic manifest carrier + genuine Wannier90-syntax "
-                    "parse preserve H/S/A and units; direct/Wilson reference "
-                    "reproduced; every negative control raised (nonzero exit); "
-                    "k-dependent joint gauge incl. position connection law "
-                    "preserves the response; Wilson winding fixed with a "
-                    "nonzero-winding regression. NOT MATERIAL_AUTHENTICATED; "
+        "meaning": ("EXTERNAL_FORMAT_FINAL_FIX: U/u_dis/v read+written "
+                    "COLUMN-MAJOR and validated against a hand-authored "
+                    "external golden (complex nonsymmetric 4x4 and 6x4); "
+                    "off-site spin Hermiticity is pairwise-only (positive "
+                    "non-Hermitian off-site fixture imports; mismatched "
+                    "+/-R fails); U-family k lists validated vs win kpoints "
+                    "and each other, V=U_dis U verified when both present; "
+                    "spn k mapping honestly marked "
+                    "SPN_K_PROVENANCE_UNVERIFIED (permuted-spn control is "
+                    "response-level only); connection law comment fixed to "
+                    "plus-i. direct/Wilson reference reproduced; every "
+                    "negative control raised. NOT MATERIAL_AUTHENTICATED; "
                     "no VASP/PBS/Wannier/SCF executed."),
         "positive_reference_survives": True}
     OUT.write_text(json.dumps(rec, indent=2) + "\n")

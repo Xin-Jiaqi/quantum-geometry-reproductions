@@ -144,20 +144,39 @@ def read_hsa_carrier(path, require_status=None):
     centers = np.asarray(d["centers"], dtype=float)
     if centers.shape != (4, 3):
         raise ValueError("centers must be (4, 3) Angstrom")
-    # 3) R <-> -R Hermiticity
+    # 3) R <-> -R Hermiticity (the ONLY per-R spin condition; a general
+    #    Wannier spin operator has S_j(-R)=S_j(R)+ with complex, non-
+    #    Hermitian off-site terms - the individual S_j(R)=S_j(R)+ holds
+    #    only at R=0 and is checked in step 4)
     _check_r_pair_hermiticity(h_r, translations)
     for j in range(3):
         _check_r_pair_hermiticity(spin_r[:, j], translations)
         _check_r_pair_hermiticity(position_r[:, j], translations)
-    # 4) spin Hermiticity and norm bound
-    for j in range(3):
-        for i in range(nr):
-            if not np.allclose(spin_r[i, j], spin_r[i, j].conj().T, atol=1e-12):
-                raise ValueError(f"spin_r[{i},{j}] not Hermitian")
-            if np.linalg.norm(spin_r[i, j], 2) > 1.0 + 1e-9:
-                raise ValueError(f"spin_r[{i},{j}] norm > 1 (not projected Pauli)")
-    # 5) centers == diag A(R=0) exactly once (R=0 may not be list index 0)
+    # 4) spin: only the on-site R=0 term is individually Hermitian; the
+    #    physical Pauli norm bound applies to the reconstructed S_j(k) on a
+    #    k sample (per-R coefficient norms are NOT a physical provenance)
     i0 = {tuple(int(x) for x in t): i for i, t in enumerate(translations)}[(0, 0)]
+    for j in range(3):
+        if not np.allclose(spin_r[i0, j], spin_r[i0, j].conj().T, atol=1e-12):
+            raise ValueError(f"spin_r[R=0,{j}] not Hermitian (on-site only)")
+    for qx, qy in ((0.0, 0.0), (0.2, 0.1), (0.45, 0.3), (0.7, 0.6), (0.9, 0.9)):
+        for j in range(3):
+            Sk = np.zeros((4, 4), complex)
+            for i, t in enumerate(translations):
+                ph = np.exp(2j * np.pi * (t[0] * qx + t[1] * qy))
+                Sk += ph * spin_r[i, j]
+            if not np.allclose(Sk, Sk.conj().T, atol=1e-9):
+                raise ValueError(f"spin S_j(q={qx},{qy}) not Hermitian")
+            # physical Pauli norm: ||S_j(k)|| <= 1 with a 0.05 slack at the
+            # sample points (a legitimate synthetic off-site spin may carry a
+            # small non-Hermitian R-term whose Fourier norm exceeds 1 by
+            # ~2|delta|); the tight ||S(0)|| <= 1+1e-9 stays in validate().
+            # NOTE: a bounded numerical norm is necessary, not sufficient,
+            # evidence of physical provenance (numerical norm != provenance).
+            if np.linalg.norm(Sk, 2) > 1.0 + 0.05:
+                raise ValueError(f"spin S_j(q={qx},{qy}) norm > 1+0.05 "
+                                 f"(not projected physical Pauli)")
+    # 5) centers == diag A(R=0) exactly once (R=0 may not be list index 0)
     onsite = np.diagonal(position_r[i0], axis1=-2, axis2=-1).T.real
     if not np.allclose(onsite, centers, atol=1e-9):
         raise ValueError("centers must equal diag of the on-site position "
@@ -317,10 +336,31 @@ def parse_spn_formatted(path, num_bands):
     return out
 
 
+def _check_k_list_consistent(kpts, label):
+    """Structural k-list check: finite 3-vectors, count >= 1, each k in
+    [0,1) (fractional, wraps allowed), and no duplicated k points within
+    1e-8 (a 'single explicit k ordering' must be unique). Cross-file and
+    cross-win equality is enforced separately with numeric tolerances."""
+    k = np.asarray(kpts, dtype=float)
+    if k.ndim != 2 or k.shape[1] != 3 or k.shape[0] < 1:
+        raise ValueError(f"{label}: k list must be (nk,3), nk >= 1")
+    if not np.all(np.isfinite(k)):
+        raise ValueError(f"{label}: non-finite k coordinates")
+    kf = k % 1.0
+    if np.max(np.abs(kf - k)) > 1e-8:
+        raise ValueError(f"{label}: k coordinates outside [0,1)")
+    d = np.abs(k[:, None, :] - k[None, :, :]).max(axis=-1)
+    iu = np.triu(np.ones((len(k), len(k)), dtype=bool), k=1)
+    if np.any(d[iu] < 1e-8):
+        raise ValueError(f"{label}: duplicate k points (k ordering not unique)")
+    return k
+
+
 def parse_kpoint_matrix_file(path, key):
     """u.mat / u_dis.mat / v.mat formatted layout:
-    comment; header; blank; per k: kpoint line + entries (re im), column-major
-    (first index fastest), blank line between blocks.
+    comment; header; blank; per k: kpoint line + entries (re im), COLUMN-MAJOR
+    (rows change fastest, then columns; official docs), blank line between
+    blocks.
     key selects the expected header: 'u' -> nk, nw, nw; 'u_dis'/'v' -> nk, nw, nb.
     Returns (kpts (nk,3) float, list of complex matrices (nrows,ncols))."""
     lines = _read_lines(path)
@@ -348,8 +388,8 @@ def parse_kpoint_matrix_file(path, key):
         p += 1
         nent = nrows * ncols
         m = np.zeros((nrows, ncols), complex)
-        for r in range(nrows):
-            for c in range(ncols):
+        for c in range(ncols):
+            for r in range(nrows):      # column-major: rows fastest
                 if p >= len(lines):
                     raise ValueError("matrix file truncated")
                 t2 = lines[p].split()
@@ -500,14 +540,49 @@ def reconstruct_bundle_from_w90(directory, nbands, nwann,
     spn = parse_spn_formatted(D / "seed.spn", nbands)
     meta = parse_win_metadata(D / "seed.win")
     kpts, lat = _check_support_case(meta, nbands, nwann, len(spn))
-    u = parse_kpoint_matrix_file(D / "seed_u.mat", "u")[1]
-    if (D / "seed_v.mat").exists():
-        v = parse_kpoint_matrix_file(D / "seed_v.mat", "v")[1]
-    elif (D / "seed_u_dis.mat").exists():
-        udis = parse_kpoint_matrix_file(D / "seed_u_dis.mat", "u_dis")[1]
+    # FIX 3: k-list validation - every U-family file's k coordinates must
+    # match the win explicit kpoint list and one another (orientation,
+    # count, numeric tolerance); spn blocks carry NO per-k labels, so its
+    # k mapping is provenance-limited (see provenance below)
+    win_k = (np.array(meta["kpoints"], dtype=float) if meta.get("kpoints")
+             else None)
+    if win_k is None or len(win_k) != len(spn):
+        raise ValueError("win explicit kpoints block missing or count "
+                         "mismatch vs spn blocks")
+    _check_k_list_consistent(win_k, "win kpoints")
+
+    def _load(key):
+        ku, mu = parse_kpoint_matrix_file(D / f"seed_{key}.mat", key)
+        _check_k_list_consistent(ku, f"{key}.mat kpoints")
+        if ku.shape != win_k.shape or not np.allclose(ku, win_k, atol=1e-8):
+            raise ValueError(f"{key}.mat k points differ from win kpoints "
+                             f"(max |d|="
+                             f"{float(np.max(np.abs(ku - win_k))):.2e})")
+        return mu
+
+    u = _load("u")
+    v_has, ud_has = (D / "seed_v.mat").exists(), (D / "seed_u_dis.mat").exists()
+    if v_has:
+        v = _load("v")
+    if ud_has:
+        udis = _load("u_dis")
+    if v_has and ud_has:
+        # FIX 3: never silently pick one: verify V = U_dis U explicitly
+        max_vud = 0.0
+        for k in range(len(u)):
+            diff = v[k] - udis[k] @ u[k]
+            max_vud = max(max_vud, float(np.max(np.abs(diff))))
+        if max_vud > 1e-8:
+            raise ValueError(f"V != U_dis U: max |V-U_dis U| = {max_vud:.3e}")
+        v_consistency = float(max_vud)
+    elif v_has:
+        v_consistency = None          # no u_dis present: nothing to compare
+    elif ud_has:
         v = [udis[k] @ u[k] for k in range(len(u))]
+        v_consistency = None
     else:
-        v = u          # no disentanglement: V(k) = U(k) alone
+        v = u                          # no disentanglement: V(k) = U(k) alone
+        v_consistency = None
     if len(v) != len(spn) or len(u) != len(spn):
         raise ValueError("gauge/spn k-count mismatch")
     e = parse_eig(D / "seed.eig", nbands, len(spn))
@@ -551,12 +626,17 @@ def reconstruct_bundle_from_w90(directory, nbands, nwann,
          "position_convention": "full_connection_including_centers",
          "producer": "synthetic_authoring_only", "run_kind": "synthetic_fixture",
          "write_ndegen_applied": True, "use_ws_distance": False,
-         "saxis": [0, 0, 1], "spin_normalization": "dimensionless_pauli"},
+         "saxis": [0, 0, 1], "spin_normalization": "dimensionless_pauli",
+         "spin_k_provenance": "SPN_K_PROVENANCE_UNVERIFIED"},
         dict(UNITS))
     bundle.validate()
     receipt = {"max_VdagV_minus_I": float(max_vv),
                "kpts": len(spn), "nbands": nbands, "nwann": nwann,
-               "H_matched_to_eig_max_err": float(err)}
+               "H_matched_to_eig_max_err": float(err),
+               "k_validation": "U-family k lists matched win explicit "
+                               "kpoints (atol 1e-8) and each other",
+               "V_UdisU_consistency": v_consistency,
+               "spin_k_provenance": "SPN_K_PROVENANCE_UNVERIFIED"}
     return bundle, receipt
 
 

@@ -24,7 +24,8 @@ Gauge algebra (official W90, contract doc §2):
   H^W(k) = V+(k) diag(eig(k)) V(k),  S_j^W(k) = V+(k) S_j^Bloch(k) V(k).
   The authored final gauge differs from the source bundle basis by a smooth
   rotation W(k): final operators (H_f, S_f, A_f) = W+ (H, S, A) W with the
-  position connection law  A_f(k) = W+ A(k) W - i W+ d_k W  (d_k in 1/Ang).
+  position connection law  A_f(k) = W+ A(k) W + i W+ d_k W  (d_k in 1/Ang;
+  PLUS i under D_k H = dH/dk - i[A,H]).
   spn holds the spin in the ab-initio eigenbasis: S_E = U_eig+ S U_eig.
   r.dat is ALREADY final Wannier gauge: read directly, no second rotation;
   centers = diagonal on-site position entries, counted once.
@@ -207,12 +208,16 @@ def author_w90_files(bundle, outdir, N, label="v2_positive",
     (D / "seed.spn").write_text("\n".join(lines) + "\n")
 
     # ---- u.mat / u_dis.mat / v.mat
+    # Official Wannier90 U-family files store matrices in COLUMN-MAJOR order
+    # (rows change fastest, then columns; per the files docs) - loop c outer,
+    # r inner. A row-major file would silently transpose a genuine complex
+    # nonsymmetric U (external-format golden test in test_import...).
     def mat_block(M_list, nrows, ncols):
         out = []
         for k in range(Nk):
             out.append(f"  {kpts[k,0]:.10f} {kpts[k,1]:.10f} {kpts[k,2]:.10f}")
-            for r in range(nrows):
-                for c in range(ncols):
+            for c in range(ncols):
+                for r in range(nrows):
                     z = M_list[k][r, c]
                     out.append(f" {z.real: .16f} {z.imag: .16f}")
             out.append("")

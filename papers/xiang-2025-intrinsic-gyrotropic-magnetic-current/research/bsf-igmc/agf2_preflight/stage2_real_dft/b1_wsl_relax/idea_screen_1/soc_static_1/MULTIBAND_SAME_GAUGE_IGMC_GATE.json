@@ -611,5 +611,5 @@
     "meaning": "corrected multiband low-omega Dxx result survives (direct +0.0342937 vs Wilson +0.0341517 at 41^2, 0.41%); gate PASS = allowed to develop a genuine source-authenticated H/S/A file importer; NOT material IGMC, NOT permission for costly DFT/Wannier",
     "survives_low_omega_Dxx": true
   },
-  "elapsed_sec": 236.5
+  "elapsed_sec": 195.1
 }
