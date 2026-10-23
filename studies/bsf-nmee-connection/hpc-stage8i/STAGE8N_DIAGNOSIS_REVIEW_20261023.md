@@ -1,3 +1,5 @@
+> **Stage8o 独立方法勘误（2026-10-23）：** 本文保留原始 DeepSeek 结果与当时的推断，但其中“数值错误已经排他性定位至 VASP 的 ISYM=0/SPN/MMN 对称性”**没有获得可靠的代码级证明**。原镜面映射不是实际原胞的 Cartesian 对称操作、只对比了 12/441 k 对、遗漏轴自旋分量旋转；原所谓 raw Wilson phase 已经除以 \(\Delta k\Delta\lambda\)，Kubo/Wilson 非零对照仍严重不一致，二维响应单位也需更正。AB C3v 与 glide null **确实失败**，故生产级数值仍不予接受，但不代表科学 idea 被否定。**请优先阅读 [Stage8o 独立审查与更正](STAGE8O_INDEPENDENT_METHOD_AUDIT_20261023.md)**；历史报告以下内容仅作为原始审计记录。
+
 # Stage8n 零新作业诊断审查 —— 对称性验证失败根因定位与证据链（2026-10-23）
 
 > 回应 Draft PR #3 审查评论（2026-10-23）的 7 项要求。全程零新增 PBS 作业；
