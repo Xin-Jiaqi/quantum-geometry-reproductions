@@ -1,0 +1,63 @@
+name: runtime-audits
+on:
+  push:
+    paths:
+      - "runtime-audits/**"
+      - ".github/workflows/runtime-audits.yml"
+  pull_request:
+    paths:
+      - "runtime-audits/**"
+      - ".github/workflows/runtime-audits.yml"
+jobs:
+  stage27-gauge-covariance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numpy
+        run: python -m pip install --quiet numpy
+      - name: Run Stage 27 gauge-covariance audit (published script + fixture)
+        run: |
+          cd runtime-audits/stage27-nlo-gauge-covariance
+          python stage27_gauge_covariance_audit.py ./out ./fixture
+      - name: Assert acceptance bounds (G1,G2,G5,G7,G8) and report constants
+        run: |
+          cd runtime-audits/stage27-nlo-gauge-covariance
+          python - <<'PY'
+          import json
+          d = json.load(open("out/STAGE27_GAUGE_COVARIANCE_AUDIT.json"))
+          c = d["checks"]
+          bounds = {
+              "G1_DHcell_eq_Udag_dHsrc_U": 1e-6,
+              "G2_DPcell_eq_Udag_dPsrc_U": 1e-6,
+              "G5_sigma_cell_cov_vs_minus_pi_Rdressed_max_strong": 5e-3,
+              "G7_Rdressed_vs_Rsrc": 1e-8,
+              "G8_sigma_src_vs_minus_pi_Rsrc_max_strong": 5e-3,
+          }
+          values = {
+              "G1_DHcell_eq_Udag_dHsrc_U": c["G1_DHcell_eq_Udag_dHsrc_U"],
+              "G2_DPcell_eq_Udag_dPsrc_U": c["G2_DPcell_eq_Udag_dPsrc_U"],
+              "G5_sigma_cell_cov_vs_minus_pi_Rdressed_max_strong":
+                  c["G5_sigma_cell_cov_vs_minus_pi_Rdressed"]["max_abs_dev_strong"],
+              "G7_Rdressed_vs_Rsrc": c["G7_Rdressed_vs_Rsrc"],
+              "G8_sigma_src_vs_minus_pi_Rsrc_max_strong":
+                  c["G8_sigma_src_vs_minus_pi_Rsrc"]["max_abs_dev_strong"],
+          }
+          failures = []
+          for key, bound in bounds.items():
+              ok = values[key] is not None and values[key] < bound
+              print(f"{key}: {values[key]} < {bound} -> {'OK' if ok else 'FAIL'}")
+              if not ok:
+                  failures.append(key)
+          if failures:
+              raise SystemExit(f"audit acceptance bounds violated: {failures}")
+          print("measured constants:", d["measured_constants"])
+          print("Stage 27 gauge-covariance audit: PASS (fixture-scope)")
+          PY
+      - name: Verify evidence checksums match the committed SHA256SUMS
+        run: |
+          cd runtime-audits/stage27-nlo-gauge-covariance
+          sha256sum -c SHA256SUMS
