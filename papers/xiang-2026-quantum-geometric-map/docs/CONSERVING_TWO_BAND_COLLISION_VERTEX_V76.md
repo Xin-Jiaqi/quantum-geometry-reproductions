@@ -49,7 +49,7 @@ For an equilibrium-prepared magnetic field, \(F_B=f_T(H_B-\mu)\) and a microscop
 =-\mathcal D_0\big[\partial_B F_B|_0\big].}
 \]
 
-For the original-orientation **Bx** Zeeman perturbation at fixed laboratory shell, freezing \(\mathcal D_0\) fails this equilibrium Ward: the local test residual is **0.2758485293** for specified model parameters; the required collision-contact trace is ~0. This is a *necessary-condition audit*, **not** a physically constructed Bx collision operator; its actual energy shell must shift as in Part I.
+For the original-orientation **Bx** Zeeman perturbation at fixed laboratory shell, freezing \(\mathcal D_0\) fails this equilibrium Ward: the local test residual is **0.3467493499** for specified model parameters; the required collision-contact trace is ~0. This is a *necessary-condition audit*, **not** a physically constructed Bx collision operator; its actual energy shell must shift as in Part I.
 
 To show sufficiency of a physically constructed field-dependent bath rather than inserting a cancellation term, separately construct an explicit fully elastic scalar-impurity GKSL family for **Bz mass-like Zeeman** \(H_B=E(\cos\theta\sigma_y-\sin\theta\sigma_x)+(m+B_z)\sigma_z\). **This is not the article's Bx geometry.** All angles at each Bz have the same two band energies, and the jump operators and spinor-overlap rates are rebuilt at each Bz. Accordingly \(\mathcal D_{B_z}[F_{B_z}]=0\) by direct evaluation, and differentiating the **full** Liouvillian includes magnetic current commutator and \(\partial_{B_z}\mathcal D\). A fixed physical orbital probe \(V_E=\sigma_x\), measured physical \(J=\sigma_y\) (a specified finite-dimensional optical test, **not homogeneous physical electric length gauge**) yields:
 
