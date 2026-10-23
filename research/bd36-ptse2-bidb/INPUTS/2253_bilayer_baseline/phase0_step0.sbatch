@@ -16,7 +16,7 @@
 #SBATCH --ntasks=28
 #SBATCH --cpus-per-task=1
 #SBATCH --time=02:00:00
-#SBATCH --partition=${PARTITION:-root.bingxing}
+#SBATCH --partition=root.bingxing
 #SBATCH --output=phase0_%j.log
 
 set -euo pipefail
@@ -40,12 +40,20 @@ echo "== [P0.a] SOC 静态 (ISYM=-1, 9x9x1 -> 81 k 全 BZ; CHGCAR 供接口) =="
 cp "$STD/INCAR_soc" INCAR
 cp "$STD/KPOINTS" KPOINTS
 cp "$STD/POSCAR" POSCAR
-[ -f POTCAR ] || { echo "FATAL: POTCAR missing (assemble per run_env.sh)"; exit 1; }
+# Stage private POTCAR into the isolated run directory. Do not commit this file.
+# run_env.sh may set POTCAR_SOURCE; alternatively place a private POTCAR beside this script.
+if [ -n "${POTCAR_SOURCE:-}" ] && [ -f "$POTCAR_SOURCE" ]; then
+  cp "$POTCAR_SOURCE" POTCAR
+elif [ -f "$STD/POTCAR" ]; then
+  cp "$STD/POTCAR" POTCAR
+fi
+[ -s POTCAR ] || { echo "FATAL: POTCAR missing; set POTCAR_SOURCE in private run_env.sh"; exit 1; }
 mpirun -np 28 "$VASP" > soc_static.out 2>&1 || { echo "EXIT-1: SOC static failed"; tail -30 soc_static.out; exit 1; }
 grep -q "k-points in reciprocal lattice" OUTCAR || { echo "EXIT-2: no k-points in OUTCAR"; exit 1; }
 
 echo "== [P0.b] 提取实际 k 列表 -> win kpoints 块 (必须 81, Gamma 首点, 权重和=81) =="
-"$PYTHON" "$W90KPT_SCRIPT" OUTCAR "9 9 1" > kpoints_block.txt || { echo "EXIT-3: kpoint extraction failed"; exit 1; }
+[ -s IBZKPT ] || { echo "EXIT-3: IBZKPT not generated"; exit 1; }
+"$PYTHON" "$W90KPT_SCRIPT" IBZKPT "9 9 1" > kpoints_block.txt || { echo "EXIT-3: kpoint extraction failed"; exit 1; }
 grep -q "count=81" kpoints_block.txt || { echo "EXIT-4: k-count != 81"; exit 1; }
 
 echo "== [P0.c] 组装 win + wannier90.x -pp =="
@@ -68,7 +76,8 @@ cp "$STD/POSCAR" POSCAR; cp "$STD/KPOINTS" KPOINTS
 [ -f CHGCAR ] || { echo "FATAL: CHGCAR missing after static"; exit 1; }
 # WRITE_SPN 仅串行: 单 MPI rank 运行接口步
 mpirun -np 1 "$VASP" > w90_iface.out 2>&1 || { echo "EXIT-6: interface run failed"; tail -40 w90_iface.out; exit 1; }
-grep -q "SPN calculated" w90_iface.out || { echo "EXIT-7: .spn not written (WRITE_SPN skipped? serial enforced?)"; grep -i spn w90_iface.out | tail -10; exit 1; }
+# Do not depend on a patch-specific stdout phrase; validate the output artifact.
+[ -s wannier90.spn ] || { echo "EXIT-7: .spn missing (serial WRITE_SPN skipped or interface failed)"; grep -i spn w90_iface.out | tail -10 || true; exit 1; }
 
 echo "== [P0.e] 真实验收 =="
 # 必需产物: .eig .amn .mmn .spn (UNK 非必需, LWRITE_UNK=F)
@@ -85,8 +94,9 @@ assert r["dims"] == [81, 64, 64, 3], r["dims"]
 assert r["hermitian"] is True, "non-Hermitian .spn"
 print("spn ACCEPTED:", r)
 EOF
-# k 一致性: 接口 OUTCAR 的 k 数与 win kpoints 块一致
-"$PYTHON" "$W90KPT_SCRIPT" OUTCAR "9 9 1" > iface_k.txt
+# k 一致性: 接口实际 IBZKPT 的完整 k 列表与 win kpoints 块一致
+[ -s IBZKPT ] || { echo "EXIT-10: interface IBZKPT missing"; exit 1; }
+"$PYTHON" "$W90KPT_SCRIPT" IBZKPT "9 9 1" > iface_k.txt
 diff <(grep -v "^begin\|^end\|^#" kpoints_block.txt) <(grep -v "^begin\|^end\|^#" iface_k.txt) >/dev/null \
   || { echo "EXIT-10: interface k-list != win kpoints"; exit 1; }
 
