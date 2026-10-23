@@ -230,3 +230,13 @@ Next required step is a realistic same-Wannier-gauge H, physical spin and positi
 | **3. GitHub/CI** | Isolated Round26 13 new tests, executable audit, frozen synthetic JSON, scoped Physics Registry entry and Python 3.11/3.12 Cui CI audit step. CI/merge status must be recorded after checking actual jobs and logs. | No Round21 repeat, no rewriting the existing 214-case baseline, no inference of Cui tests from 1105 repository tests. |
 
 At fractional q=(.183,-.271), Wilson dH residual 1.51e-10 eV·Å; spin gradient 5.83e-16 Å; QGT covariance residual 2.09e-15; **wrong spin gauge** QGT discrepancy 0.148; **missing position connection** vertex error 0.263 eV·Å. All **synthetic**, not macroscopic KME.
+
+## Round27 | Finite-(q,omega) longitudinal charge-gauge Ward (2026-10-23)
+
+| Progress line | New physically bounded result | Remaining |
+|---|---|---|
+| **1. Cui source-paper reproduction** | A necessary finite-q charge-gauge negative control for clean microscopic response on a *3×3 synthetic 2D SOC torus*. It does not reproduce source KME or revise original Table I. **Whole paper PARTIAL.** | Magnetic Zeeman KME in a conserving, contact-complete metallic continuum; materials, Eq.(19) SI and full figures. |
+| **2. Physics capability** | Exact scalar/vector pure-gauge decomposition, Peierls current contact, sitewise continuity, spectral Kubo vs independent N² Liouville, nonlinear Peierls/time evolution, strong contact-omission counterexample. | Ward-consistent collision vertex/self-energy, transverse finite-q EM response, thermodynamic response, real Wannier spin and position. |
+| **3. GitHub / CI** | Isolated Round27 source, 16 new tests, frozen numerical audit, scoped Physics Registry entry, new workflow step. **CI/merge acceptance determined from actual remote logs only.** | Unrelated open PR #65 untouched; old Round21/26 frozen code intact. |
+
+At q=(1,1) on the 3×3 torus, z_drive=.42+.09i: spectral vs Liouville 3.73e-15, charge 2.22e-15, contact-complete bond current 3.43e-15. Dropping the bond-current contact yields a spurious current **1.34659** and finite-q local continuity violation **3.59468**. These are natural-unit synthetic benchmarks, not SI observables.

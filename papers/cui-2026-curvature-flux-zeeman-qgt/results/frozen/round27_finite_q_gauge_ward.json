@@ -1,0 +1,19 @@
+{
+  "schema": "cui-round27-finite-q-u1-gauge-ward-v1",
+  "paper_status": "PARTIAL",
+  "model": "finite 3x3 2D spin-half SOC Peierls torus; no collisions/thermodynamic metallic KME",
+  "qx_qy": [1, 1],
+  "complex_drive_frequency": [0.42, 0.09],
+  "operator_continuity_residual_max": 0.0,
+  "spectral_vs_orbital_liouville_residual_max": 3.727997202013244e-15,
+  "pure_gauge_density_matrix_residual_max": 2.5785971341398196e-15,
+  "scalar_density_abs_max": 0.3198108696259328,
+  "vector_density_abs_max": 0.3198108696259343,
+  "correct_total_density_abs_max": 2.2206628790979324e-15,
+  "correct_total_current_abs_max": 3.4334409981267715e-15,
+  "wrong_missing_contact_current_abs_max": 1.346588209752348,
+  "correct_vector_continuity_residual_max": 2.3927817574267766e-15,
+  "wrong_missing_contact_continuity_residual_max": 3.5946806265521434,
+  "physical_finite_frequency_material_KME_verified": false,
+  "conserving_scattering_verified": false
+}
