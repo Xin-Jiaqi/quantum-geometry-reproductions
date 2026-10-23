@@ -310,3 +310,13 @@ After fixing an incorrect oscillator field alias that multiplied the independent
 ### Round32 first dual-interpreter source-gate acceptance and frozen control
 
 Initial GitHub-hosted Python 3.11/3.12 **326/326 PASS** and all Round17–32 audit steps. Machine-frozen synthetic complex-g matched electronic gauge error **0.00244 s^-1** relative to `4.18e12 s^-1` per-event diagnostic; bad unmatched H-only gauge error **2.72e13 s^-1**. The deliberately fake-hashed seven-source bundle remains **PHYSICAL_AUTHENTICITY_UNVERIFIED**; authentic EPW/QE and Wannier H/S/A files are still absent. A strict frozen numerical regression adds one test, making the final expected count **327**, which must be rechecked on the final tested SHA. Neither a checksum nor gauge metadata promotes Cui **PARTIAL**.
+
+## Round33 | Native Wannier90 H/r importer with wsvec and spin-provenance hard stop
+
+| Stream | Bounded new capability | Still blocking real source |
+|---|---|---|
+| **1. Cui source** | First genuine **native-format parser implementation** for Wannier90 dense \`hr.dat\` and \`r.dat\`, but no authentic raw user materials loaded; full paper **PARTIAL**. | Actual same-seed Wannier HR/r/S, \`spn\` Bloch→Wannier transformation, real phonon and complex g, original KME Eq.(19), SI and material table. |
+| **2. Physics** | Native header and 1-based indices, hr Wigner–Seitz degeneracy and r shared weights, R/-R, analytically independent H/A Fourier, center-once, write_ndegen_applied; negative missing-degeneracy and unexpanded wsvec rejection. | No wsvec pair-specific orbital mapping, no verified \`win/wout\` flags, no physical spin gauge and no 3D source. Synthetic file fixtures only. |
+| **3. GitHub** | Isolated parser/test/audit, exact CI/frozen synthetic file-format benchmark and Physics Registry entry. | All Round17–32 baselines and unrelated PRs untouched; final CI claims require real logs on exact SHA. |
+
+[Round33 native file contract and source provenance limitations](ROUND33_NATIVE_W90_HR_R_SPIN_GATE.md).
