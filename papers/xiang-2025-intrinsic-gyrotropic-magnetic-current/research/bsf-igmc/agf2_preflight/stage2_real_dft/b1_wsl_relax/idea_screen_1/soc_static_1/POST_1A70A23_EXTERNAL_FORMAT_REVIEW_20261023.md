@@ -51,6 +51,14 @@ That is a **synthetic response negative control**, not fail-closed **import auth
 
 **Mandatory scope correction:** explicitly validate the k coordinates from each U-family matrix file against \`win\` within documented tolerances and against each other. For spn, require producer-level common-k-order provenance and a source hash or an independently sourced spin-texture oracle. Label \`SPN_K_MAPPING_PROVENANCE_REQUIRED\` until that exists. Do not claim an internally permuted spn is *guaranteed* to be rejected by physics alone.
 
+## 3a. A third distinct parser generalization defect: unjustified Hermiticity at every R
+
+\`read_hsa_carrier\` already correctly invokes \`_check_r_pair_hermiticity\` for spin matrices at lines ~147–151, verifying \(\,S_j(-R)=S_j(R)^\dagger\,\). But lines ~153–158 then require **each individual** \(\,S_j(R)=S_j(R)^\dagger\,\). That stronger requirement is **not true for a general physical Wannier spin operator**. Only the on-site \(R=0\) term must be individually Hermitian; off-site terms may be complex and non-Hermitian provided the \(R↔-R\) partner rule holds.
+
+The current synthetic fixtures happen to obey this overrestrictive extra guard; real Wannier spin matrices need not. Modify the check so the individually Hermitian requirement applies only at R=0 (or remove it as redundant with the partner check), and test a complex, genuinely non-Hermitian \(S(R)\) paired with \(S(-R)=S(R)^\dagger\) that **must be accepted**. A deliberately mismatched partner must still fail.
+
+Likewise, do not over-interpret \(\|S_j(R)\|\le1\) at each Fourier coefficient as independent proof of a physical projected Pauli operator. The physically motivated bound concerns the reconstructed \(\,S_j(k)\,\) at the sampled k points, and the source spinor provenance remains an additional condition.
+
 ## 4. Validation path, zero VASP/Wannier
 
 1. Correct parser/writer U-family traversal to \`for c: for r:\` and add a **hand-authored external-golden** asymmetric complex U matrix case whose expected entries are known without this project's writer. Test a 4×4 and rectangular 6×4 matrix. Verify the genuine W90 printed order using official docs or existing fixture files.
