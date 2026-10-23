@@ -328,3 +328,16 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Original full mixed EB Liouville conserving collision | Must extend to both bands, energies, magnetic preparation, interband coherence and EB vertex; no real impurity constants or author relaxation mechanism given | **UNRESOLVED; whole source PARTIAL** |
 
 v75 local 51 named physical tests plus one independent frozen-data provenance test **52/52 PASS**; four original-source bridge tests require full v49/v50 GitHub history and **SKIP** in standalone snapshot, full remote CI required for release.
+
+## v76: conserving elastic two-band collision and explicit Bz field vertex
+
+| Physics gate | Numerical + analytic oracle | Status |
+| --- | --- | --- |
+| Two tilted Dirac bands at multiple energies under source-axis spin Bx | True equal-energy shifted iso-contours, band-specific DOS, independent direct vs weighted spectral optical/DC current, detailed balance/number zero-mode; fixed lab-radius rejected | **VERIFIED population-only; original mixed PHE not generated** |
+| Interband density-matrix collision | β=0 physically matching +/− momenta, scalar spinor-overlap jump GKSL and optional pure dephasing; positivity, Hermitian/time-domain, full dense vs spectral two-color, U1 gauge, exact trace | **VERIFIED declared local coherent probe; NOT full length-gauge drift** |
+| Lifetime non-uniqueness | Same band-population collision and tau, but different pure dephasing changes local two-color harmonic and uniform spin response | **VERIFIED independent counterexample to universal scalar tau** |
+| Original spin Bx frozen equilibrium collision | Necessary dB(D_B F_B)=0 violated by frozen collision (defect ~0.27585), correct Bx field demands moving isoenergy surfaces | **VERIFIED necessary contact only; original Bx full collision OPEN** |
+| Explicit full field-dependent Bz spin mass collision | CP GKSL scalar-impurity overlap rebuilt for every Bz; equilibrium thermal state stationary; analytic differentiated Liouville incl dB collision vs independently full 5point field response 3.71e-11; deliberately drop dB collision causes 0.07969 mismatch | **VERIFIED specified Bz optical proxy, NOT original Bx spin PHE** |
+| Original source Eq20/31, full E×Bx and orbital MNHE | Source sign irreducible; original selected electric tau pole, full field-dependent Wannier position/magnetic shift, orbital Eq49/52 and three-band and SI Fig2 issues still missing | **UNRESOLVED; source paper PARTIAL** |
+
+52 v76 named physical tests and one independent frozen numeric rerun (53/53 local PASS). [Full report](CONSERVING_TWO_BAND_COLLISION_VERTEX_V76.md).
