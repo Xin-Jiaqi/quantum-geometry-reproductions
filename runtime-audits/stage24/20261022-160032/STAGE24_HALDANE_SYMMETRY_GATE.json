@@ -1,0 +1,98 @@
+{
+  "schema": "stage24-haldane-symmetry-gate/v1",
+  "created_at_utc": "2026-10-22T07:47:02.076030+00:00",
+  "status": "PASS_HAMILTONIAN_C3H_INPLANE",
+  "model": {
+    "M_eV": 0.4,
+    "phi_rad": 1.5707963267948966,
+    "t1_eV": 1.0,
+    "t2_eV": 0.2,
+    "spin_degeneracy_frozen": 1,
+    "type": "synthetic two-band spinless Haldane tight-binding; not ab-initio"
+  },
+  "checks": {
+    "source_gauge_C3_matrix_exact": true,
+    "source_gauge_C3_bands_equal": true,
+    "cell_gauge_C3_intertwiner_exact": true,
+    "no_z_hopping_in_HR": true,
+    "mz_trivial_for_2d_spinless": true,
+    "DB_C3_inplane_components": "[\"xxx\", \"xxy\", \"xyx\", \"xyy\", \"yxx\", \"yxy\", \"yyx\", \"yyy\"]",
+    "DB_C3h_inplane_components": "[\"xxx\", \"xxy\", \"xyx\", \"xyy\", \"yxx\", \"yxy\", \"yyx\", \"yyy\"]",
+    "C3_and_C3h_inplane_identical": true,
+    "NLO_point_group": "-6",
+    "NLO_independent_count": 2,
+    "NLO_inplane_subset": "[\"xxx\", \"xxy\", \"xyx\", \"xyy\", \"yxx\", \"yxy\", \"yyx\", \"yyy\"]",
+    "NLO_inplane_equals_DB_C3h": true
+  },
+  "metrics": {
+    "max_src_C3_matrix_residual_eV": 5.978733960281817e-16,
+    "max_band_C3_residual_eV": 1.7763568394002505e-15,
+    "max_cell_C3_intertwiner_residual_eV": 1.6392246515987586e-15,
+    "HR_Rz_values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_dH_dkz_residual": 0.0,
+    "C3_inplane_components": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "C3h_inplane_components": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "NLO_point_group": "-6",
+    "NLO_independent_count": 2,
+    "NLO_allowed_nonzero_components": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "NLO_inplane_subset": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "DB_C3h_dimension": 2
+  },
+  "conclusions": [
+    "The spinless Haldane Hamiltonian is exactly C3-symmetric in the source gauge (orbital rotation identity; NN/NNN sums closed under 120 deg).",
+    "The Wannier90 HR cell-gauge representation transforms under C3 through the explicit center-embedding intertwiner W(k)=U^dag(C3 k)U(k) to machine precision.",
+    "m_z is an exact symmetry of the 2D spinless Wannier representation (no z hopping, in-plane centers, k_z-independent H). The combined Hamiltonian point group therefore contains C3h.",
+    "spglib resolves the synthetic marker POSCAR to -6 (C3h); the marker POSCAR is symmetry metadata only, and its structural -6 is consistent with the Hamiltonian-level C3h.",
+    "The frozen optical_response_invariants.json in-plane shift-current allowed coordinates are identical for C3 and C3h (6 components: xxx, xxy, xyy, yxx, yxy, yyy), and the NLO -6 classifier independent count (2) equals the C3h dimension (2).",
+    "Stage 23's structural criterion POSCAR_point_group_is_C3 is superseded by this Hamiltonian-level gate; the in-plane tensor selection is valid, while the 3D -6 vs 3 difference remains documented."
+  ],
+  "limitations": [
+    "This gate verifies Hamiltonian symmetry and in-plane tensor selection rules for the synthetic model only; it does not verify any response spectrum.",
+    "Out-of-plane components (forbidden by m_z for shift current in this model) were not screened.",
+    "C3h vs C3 differ in their full 3D tensor spaces; only the 2D in-plane response is physically relevant here and it is identical for both."
+  ]
+}

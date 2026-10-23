@@ -1,0 +1,21 @@
+Compact nonlinear-response batch
+================================
+Schema: nlo-unified-v3
+Response type: shift_current
+Batch id: 20261022_154717
+Input: <workspace>/.stage23_work/stage24_20261022/models/stage24_haldane_synthetic/L1
+Config source: None
+Tensor components: 111, 112, 121, 122, 211, 212, 221, 222
+k mesh: 5 x 5 x 1
+Energy points: 401
+Numerical baseline: reviewed-hermitian-v1
+Dimensionality: 2D
+Cell unit: uA/V^2
+Sheet unit: uA*nm/V^2
+Effective unit: disabled
+Backend: numpy-cpu
+Compute time: 0.010225 s
+Output time: 0.031295 s
+End-to-end time: 0.041520 s
+Files: spectrum.csv, run-manifest.json, summary.txt
+Theory approximation: reviewed internal contribution / diagonal TBA; full r.dat not read

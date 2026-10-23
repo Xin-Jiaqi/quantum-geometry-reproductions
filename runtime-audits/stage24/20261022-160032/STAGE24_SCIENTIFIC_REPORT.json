@@ -1,0 +1,160 @@
+{
+  "schema": "stage24-scientific-report/v1",
+  "created_at_utc": "2026-10-22",
+  "repository": "Xin-Jiaqi/quantum-geometry-reproductions",
+  "source_review": "PR #66 comment review by Xin-Jiaqi (2026-10-22T07:35:46Z)",
+  "overall_status": "PASS_WITH_UNRESOLVED_CONVENTIONS",
+  "science_repos_touched": false,
+  "dirty_trees_preserved": true,
+  "items": {
+    "1_c3h_symmetry_gate": {
+      "status": "PASS_HAMILTONIAN_C3H_INPLANE",
+      "summary": "Spinless 2D Haldane Hamiltonian (source gauge and Wannier cell gauge) is exactly C3- and m_z-symmetric; combined Hamiltonian point group contains C3h; spglib marker POSCAR resolves to -6; in-plane shift-current allowed coordinates identical for C3 and C3h in the frozen DB (6 independent in-plane components: xxx, xxy, xyy, yxx, yxy, yyy; full-label listing shows 8 with xyx==xxy, yyx==yxy); NLO -6 classifier independent_count=2 equals frozen DB C3h dimension=2; Stage 23 POSCAR_point_group_is_C3 criterion superseded by Hamiltonian-level gate.",
+      "metrics": {
+        "max_source_gauge_C3_matrix_residual_eV": 5.978733960281817e-16,
+        "max_band_C3_residual_eV": 1.7763568394002505e-15,
+        "max_cell_gauge_C3_intertwiner_residual_eV": 1.6392246515987586e-15,
+        "no_z_hopping_in_HR": true,
+        "mz_trivial_for_2d_spinless": true,
+        "db_c3_inplane_components": ["xxx", "xxy", "xyx", "xyy", "yxx", "yxy", "yyx", "yyy"],
+        "db_c3h_inplane_components": ["xxx", "xxy", "xyx", "xyy", "yxx", "yxy", "yyx", "yyy"],
+        "c3_and_c3h_inplane_identical": true,
+        "nlo_point_group": "-6",
+        "nlo_independent_count": 2,
+        "nlo_inplane_subset_equals_db_c3h": true,
+        "db_c3h_dimension": 2
+      }
+    },
+    "2_group_theory_test_contract": {
+      "status": "ANALYZED_FROZEN_GREEN_DIRTY_EXTENSION",
+      "frozen_commit": "9da48f1c89bff61d39066f032eda729f94193301",
+      "frozen_clean_clone_full_suite": "202/202 PASS",
+      "frozen_test_response_screening": "5/5 PASS",
+      "frozen_test_structure_responses": "4/4 PASS",
+      "dev_tree_failures": {
+        "total": 8,
+        "screening": "1 failure: 128 != 96 (32 point groups x 4 responses; frozen test asserts 32 x 3 = 96)",
+        "structure": "7 subtest failures: response dimension tuples now 4-tuples, e.g. (1,3,3,1) vs frozen (3,3,1), (0,0,0,0) vs (0,0,0)"
+      },
+      "root_cause": "Uncommitted dirty invariants.py adds 'edelstein' response spec (S_i = chi_ij j_j; axial output, polar input; Rashba-Edelstein) to RESPONSE_SPECS -> 4th response type in every registry row and structure-response analysis.",
+      "recommendation": "Update frozen test contract to 4 responses (screening count 32*4; EXPECTED_RESPONSE_DIMENSIONS extended to 4-tuples with edelstein dimension) as part of the intended Edelstein extension; frozen baseline itself is green. NOT executed on the science repo per instruction.",
+      "science_repo_modified": false
+    },
+    "3_qgr_physics_tests": {
+      "status": "PASS 5/5",
+      "qgr_head": "86dba1481d712b4f1f35d7acc42e1d2fd7a4486a",
+      "qgr_branch": "research/bsf-nmee-stage7-sw-gate-20261020",
+      "gt_version_note": "v0.18.0 not on PyPI; installed 0.17.0 lacks point_group_operations; used GT dev working tree src read-only, modules pinned by explicit SHA-256",
+      "gt_head": "9da48f1c89bff61d39066f032eda729f94193301",
+      "gt_module_sha256": {
+        "src/group_theory_operations/__init__.py": "f5ab672ab8408e07ca77419fc8ccb1e25de36ddb624cb2eda66962bb5793f92b",
+        "src/group_theory_operations/point_groups.py": "ff69ca2f4ae58e98ca17849b64a3dedd437128b193aaea333e1c67028c91ac58",
+        "src/group_theory_operations/catalog.py": "92a29672ef8d8526f753050214c5406f7d667e34f80fe4859245dd822e2abbe3",
+        "src/group_theory_operations/invariants.py": "f17ab14ac7b17bd4b98bfcfc47b54650a80b3bb428e8ff04512fb0e21621da7b",
+        "src/group_theory_operations/structure_responses.py": "b03bdc0cfc16a58a713ebe9237fbedc8522bfdcdf7aae182238cba5b790e2fc6"
+      },
+      "tests_run": [
+        "studies/bsf-nmee-connection/tests/test_physical_model.py::test_connection_predicts_independently_calculated_8band_response PASSED",
+        "studies/bsf-nmee-connection/tests/test_real_toolkit.py::test_bn_partner_mirror_z PASSED",
+        "studies/bsf-nmee-connection/tests/test_real_toolkit.py::test_fractional_cartesian_distinction PASSED",
+        "studies/bsf-nmee-connection/tests/test_real_toolkit.py::test_identity_and_expected_target_rejection PASSED",
+        "studies/bsf-nmee-connection/tests/test_real_toolkit.py::test_partner_mirror_involution PASSED"
+      ],
+      "dirty_tree_before_after": "5 untracked files unchanged",
+      "science_repo_modified": false
+    },
+    "4_frozen_parameters": {
+      "status": "FROZEN",
+      "parameters": {
+        "spin_degeneracy": 1,
+        "spin_degeneracy_explicit": true,
+        "planner_auto_would_have_been": 2,
+        "M_eV": 0.4,
+        "phi_rad": 1.5707963267948966,
+        "t1_eV": 1.0,
+        "t2_eV": 0.2,
+        "gauge": "wannier_cell_gauge",
+        "centers_fractional": [[0.3333, 0.6667, 0.5], [0.6667, 0.3333, 0.5]],
+        "sign_factor": -1,
+        "formula_convention": "ibanez_eq8_single_delta_full_nm",
+        "bc_combination": "Iabc + Iacb",
+        "double_delta_reduction_factor": 0.5,
+        "position_matrix_mode": "diagonal_tba",
+        "numerical_baseline": "reviewed-hermitian-v1",
+        "hr_pairing": "reviewed",
+        "units_cell": "uA/V^2",
+        "units_sheet": "uA*nm/V^2"
+      }
+    },
+    "5_nlo_run_and_independent_comparison": {
+      "status": "PASS_RUN_AND_MATCH",
+      "run": {
+        "exit_code": 0,
+        "batch_id": "shift_current_20261022_154717",
+        "grid": "5x5x1 (25 k)",
+        "energy": "0..2 eV, 401 points",
+        "broadening_eV": 0.05,
+        "degeneracy_eta_eV": 0.02,
+        "nw": 2,
+        "nocc": 1,
+        "nR": 7,
+        "cell_volume_A3": 51.96152422703998,
+        "inplane_area_A2": 2.5980762113519997,
+        "Lz_A": 20.0,
+        "direct_gap_min_eV": 1.4157196581778182,
+        "direct_gap_k_reduced": [-0.3, 0.30000000000000004, 0.0],
+        "hermiticity_enforced": true,
+        "consistency_gap_documented": true
+      },
+      "independent_reimplementation": {
+        "method": "own HR reader, own Fourier kernel, own position matrices r=v*(-i*w)/(w^2+eta^2), own generalized derivative, own single-delta Lorentzian, own Iabc+Iacb combination; no NLO imports",
+        "max_abs_diff_vs_nlo_raw": 4.426459199180499e-13,
+        "mean_abs_diff_vs_nlo_raw": 1.3929516369859448e-14,
+        "normalized_lineshape_mean_abs_diff": 2.251391188231683e-15,
+        "prefactor_cell_to_raw_uA_per_V2": -7.3583869431766225,
+        "nonzero_components_on_grid": ["xxx", "xyy", "yxy", "yyx", "yyy"],
+        "machine_zero_symmetry_allowed_on_grid": ["xxy", "xyx", "yxx"],
+        "band_pair_xxx_at_probe_1_465_eV": {
+          "pair_2_1": 0.034195030654671735,
+          "pair_1_2": 8.4693282169858e-06,
+          "pair_1_1": 0.0,
+          "pair_2_2": 0.0
+        },
+        "lorentzian": "single-delta eta=0.05 eV, FWHM 0.1 eV; no double-delta term in raw weight",
+        "tensor_arrangement": "Iabc+Iacb symmetric in optical-field indices; xyx numerically equal to xxy, yyx equal to yxy"
+      },
+      "fdr_comparison_status": "SKIPPED_NO_FDR_ARCHIVE - literal SM Eq. (75) text unavailable (Stage 22 zip absent on this machine; FDR code not in science repos); NLO kernel structure (band pairs, tensor arrangement, Lorentzian broadening, spectral weights) validated against independent standard single-delta shift-current implementation"
+    },
+    "6_unresolved_conventions": {
+      "preserved": true,
+      "items": [
+        "FDR to NLO absolute equivalence including SI prefactor and 2D sheet normalization",
+        "Eq. (9) vs SM Eq. (75) sign discrepancy (no sign flip applied)",
+        "plus/minus-frequency integration convention (negative-frequency partner contributes off-resonant tail in single-delta full-nm sum)",
+        "DFT/W90Flow ab-initio certification (this audit is synthetic-model only)",
+        "C3h-vs-C3 full 3D tensor difference (in-plane identical; resolved only for the 2D in-plane response)"
+      ]
+    }
+  },
+  "artifacts": [
+    "STAGE24_LOCAL_RUNTIME_AUDIT.md",
+    "STAGE24_HALDANE_SYMMETRY_GATE.json",
+    "STAGE24_NLO_RUN_ONCE.json",
+    "STAGE24_SHIFT_CURRENT_COMPARISON.json",
+    "STAGE24_HALDANE_PACKAGE.json",
+    "stage24_reimpl_raw_band_sum.npy",
+    "stage24_photon_eV.npy",
+    "nlo-run-output/shift_current_20261022_154717/spectrum.csv",
+    "nlo-run-output/shift_current_20261022_154717/run-manifest.json",
+    "nlo-run-output/shift_current_20261022_154717/summary.txt",
+    "scripts/stage24_haldane_symmetry_gate.py",
+    "scripts/stage24_nlo_run_once.py",
+    "scripts/stage24_shift_current_reference.py",
+    "logs/"
+  ],
+  "limitations": [
+    "Synthetic two-band model only; no ab-initio material result.",
+    "5x5x1 grid is a low-resolution diagnostic, not a converged spectrum.",
+    "Literal FDR SM Eq. (75) unavailable; absolute SI normalization, sign branch and frequency-integration convention left unresolved by design."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS_SYNTHETIC_HAMILTONIAN_MAPPING",
+  "package_dir": "<workspace>/.stage23_work/stage24_20261022/models/stage24_haldane_synthetic",
+  "report": "<workspace>/.stage23_work/stage24_20261022/STAGE24_HALDANE_PACKAGE.json",
+  "metrics": {
+    "sample_count": 128,
+    "max_H_matrix_residual_eV": 9.036560719766055e-16,
+    "max_band_eigenvalue_residual_eV": 1.7763568394002505e-15,
+    "max_Hermiticity_residual_eV": 0.0,
+    "max_dH_residual_eV_A": 9.992020309120961e-16,
+    "max_d2H_residual_eV_A2": 8.882156799609321e-16,
+    "max_real_space_Hermiticity_residual_eV": 0.0,
+    "max_HR_serialization_residual_eV": 0.0,
+    "C3_marker_orbit_residual_fractional": 0.0,
+    "minimum_sampled_direct_gap_eV": 1.3722717813075924,
+    "tolerance": 2e-10
+  },
+  "nlo_kernel_status": "NOT_RUN_NO_NLO_ROOT"
+}

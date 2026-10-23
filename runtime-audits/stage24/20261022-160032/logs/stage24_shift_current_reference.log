@@ -1,0 +1,30 @@
+{
+  "status": "PASS_COMPARISON_RAN",
+  "checks": {
+    "nlo_reimpl_matches_actual": true,
+    "normalized_lineshape_agreement": true
+  },
+  "metrics": {
+    "nlo_prefactor_cell_to_raw": -7.3583869431766225,
+    "nlo_spin_degeneracy_from_manifest": 1.0,
+    "nlo_actual_vs_reimpl_max_abs": 4.426459199180499e-13,
+    "nlo_actual_vs_reimpl_mean_abs": 1.3929516369859448e-14,
+    "nlo_actual_max_abs": 0.43682929546466137,
+    "normalized_spectra_mean_abs_diff": 2.251391188231683e-15,
+    "nonzero_components_on_grid": [
+      "xxx",
+      "xyy",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "direct_gap_min_eV": 1.4157196581778182,
+    "photon_probe_eV": 1.465,
+    "xxx_band_pair_contributions_at_probe": {
+      "xxx_pair(1,1)": 0.0,
+      "xxx_pair(2,1)": 0.034195030654671735,
+      "xxx_pair(1,2)": 8.4693282169858e-06,
+      "xxx_pair(2,2)": 0.0
+    }
+  }
+}
