@@ -26,8 +26,13 @@ def fixture(path,*,disentangle=True,bloch_phase=True):
         theta=.24+.13*ik
         u=np.cos(theta)*np.eye(2)-1j*np.sin(theta)*sy
         d=np.diag(np.exp(1j*(ik+1)*np.linspace(.13,.73,nb))) if bloch_phase else np.eye(nb)
-        Udis=d.conj().T@q if disentangle else d.conj().T@q
-        V=Udis@u
+        Udis=d.conj().T@q
+        if not disentangle:
+            # Isolated bands have no Udis file: store the FULL Bloch gauge in U.
+            u=Udis@u
+            V=u
+        else:
+            V=Udis@u
         Sb_k=np.array([d.conj().T@s@d for s in Sb])
         UU.append(u);UD.append(Udis);VV.append(V);S.append(Sb_k)
         H.append(V.conj().T@np.diag(E[ik])@V)
