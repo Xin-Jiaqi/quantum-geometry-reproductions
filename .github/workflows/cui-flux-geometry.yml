@@ -59,3 +59,5 @@ jobs:
         run: python scripts/audit_epw_material_scattering_contract.py
       - name: Audit native Wannier90 H/r parsing and spin blocking (Round33)
         run: python scripts/audit_native_wannier90_hr_r.py
+      - name: Audit native Bloch-to-Wannier physical Pauli spin chain (Round34)
+        run: python scripts/audit_native_spin_chain.py

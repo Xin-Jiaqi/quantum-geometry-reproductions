@@ -324,3 +324,13 @@ Initial GitHub-hosted Python 3.11/3.12 **326/326 PASS** and all Round17–32 aud
 ### Round33 measured first real dual-CI and source-authenticity boundary
 
 First remote GitHub CI 39911971914 passed **344/344 in both Python 3.11/3.12**, including the native-format H/r audit and all Round17–32 steps. Weighted analytical H(q) residual **1.55e-17 eV**, r reconstruction and centers **0 Å**, omitted Wigner–Seitz degeneracy **0.1059858 eV** wrong result. A strict frozen numerical regression adds one test (expected final **345**). **Original Wannier90 first-principles files and genuine physical-spin Bloch→Wannier data were not found.** Parsing generated file-format fixtures never resolves Cui **PARTIAL**.
+
+## Round34 | Native .spn Bloch physical spin + Wannier Udis U chain, optional local source discovery
+
+| Track | Bounded verified-by-CI objective | Blockers and hard limits |
+|---|---|---|
+| **1. Original Cui reproduction** | Native formatted Pauli spin and Wannier rotation parsing with independent \(H_{\mathrm eig}^W-H_{\mathrm hr}^W\) oracle, explicit same-seed evidence workflow. Entire Cui paper **PARTIAL**. | Genuine matched \`spn\`, \`u/u_dis/v/eig\`, \`hr/r/win/wout\`, source noncollinear SCF + pw2wannier90, authentic spin and EPW complex g, SI KME Eq.(19). |
+| **2. Reusable physics** | \(V=UdisU\), \(S^W=V^\dagger \sigma V\), triangle/column-major native formats, isolated vs disentangled bands, Bloch phase covariance and intentionally stale-gauge spin failure; read-only private receipt. | Test-source fixtures do not authenticate actual material spin or full position connection; raw unformatted spn requires official converter. |
+| **3. GitHub** | Isolated Round34 source/fixtures/audit/scanner/tests, one-shot local DeepSeek harness MD, frozen model evidence after first independent remote CI, Physics Registry and full dual Python regression. | Prior Round17–33 frozen baselines and parallel work remain intact, statuses require actual exact-head CI. |
+
+[Round34 derivation and hard stops](ROUND34_NATIVE_SPN_SOURCE_CHAIN.md) · [Single local handoff, minimal user interaction](ROUND34_LOCAL_DEEPSEEK_HARNESS.md).
