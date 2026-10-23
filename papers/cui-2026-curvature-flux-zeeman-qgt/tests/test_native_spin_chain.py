@@ -240,4 +240,37 @@ class NativeSpnWannierChain(unittest.TestCase):
             self.assertFalse(r["material_KME_ready"])
             self.assertEqual(r["original_cui_paper"],"PARTIAL")
 
+    def test_round34_frozen_independent_remote_spin_chain_regression(self):
+        import json
+        raw=json.loads((Path(__file__).resolve().parents[1]/
+             "results/frozen/round34_native_spin_chain_audit.json").read_text())
+        self.assertEqual(raw["schema"],"cui-round34-native-formatted-spn-Udis-U-HR-physical-spin-v1")
+        self.assertEqual(raw["paper_status"],"PARTIAL")
+        self.assertFalse(raw["true_source_spn_verified"])
+        self.assertFalse(raw["actual_material_spin_provenance_authenticated"])
+        self.assertFalse(raw["real_material_KME_ready"])
+        with tempfile.TemporaryDirectory() as td:
+            f=fixture(Path(td)/"phase",bloch_phase=True)
+            g=fixture(Path(td)/"unphased",bloch_phase=False)
+            sp,u,ud,v,eig,projected=load(f)
+            plain=load(g)[-1]
+            stale=reconstruct_spin(parse_spn_formatted(g["paths"]["spn"]),
+                                    u,u_dis=ud,eig=eig)
+            gate=check_against_native_hr(projected,f["paths"]["hr"],
+                        f["paths"]["r"],flags=flags())
+            actual={
+              "parsed_wannier_pauli_vs_independent_projection_max":
+                float(np.max(abs(projected["spin_wannier_k"]-f["Sw"]))),
+              "bloch_phase_matched_spin_gauge_covariance_max":
+                float(np.max(abs(projected["spin_wannier_k"]-plain["spin_wannier_k"]))),
+              "wrong_stale_bloch_spin_gauge_max":
+                float(np.max(abs(projected["spin_wannier_k"]-stale["spin_wannier_k"]))),
+              "u_dis_U_product_vs_native_v_max":
+                float(np.max(abs(ud["matrix"]@u["matrix"]-v["matrix"]))),
+              "eig_projected_H_vs_independent_hr_fourier_max_eV":
+                float(gate["h_from_eig_vs_hr_max_eV"]),
+            }
+            for key,val in actual.items():
+                self.assertAlmostEqual(val,raw[key],delta=2e-9,msg=key)
+
 if __name__=="__main__":unittest.main()

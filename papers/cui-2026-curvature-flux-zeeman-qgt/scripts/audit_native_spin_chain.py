@@ -71,12 +71,11 @@ assert report["max_physical_projected_spin_norm"]<=1+1e-6
 assert report["actual_material_spin_provenance_authenticated"] is False
 assert report["paper_status"]=="PARTIAL"
 frozen=ROOT/"results/frozen/round34_native_spin_chain_audit.json"
-if frozen.exists():
-    expected=json.loads(frozen.read_text())
-    assert expected.keys()==report.keys()
-    for k,x in report.items():
-        if isinstance(x,float):
-            assert abs(x-expected[k])<2e-9,(k,x,expected[k])
-        else:
-            assert x==expected[k],(k,x,expected[k])
+expected=json.loads(frozen.read_text())
+assert expected.keys()==report.keys()
+for k,x in report.items():
+    if isinstance(x,float):
+        assert abs(x-expected[k])<2e-9,(k,x,expected[k])
+    else:
+        assert x==expected[k],(k,x,expected[k])
 print(json.dumps(report,indent=2))

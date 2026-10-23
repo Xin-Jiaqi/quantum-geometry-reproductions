@@ -68,3 +68,19 @@ A real chain requires independently verified original \`.win\`/\`.wout\`, same-r
 ## 5. Hard status bounds
 
 There is no authenticated real source in this GitHub repository and no access to the local harness from this conversation. An execution instruction is **not proof the local operation ran**. The parser can verify geometry/operator algebra, but neither a hash nor a parsed \`spn\` proves its generation provenance; actual spin authentication remains \`false\` until the source chain is independently reviewed. No original paper Eq.(19), finite-frequency metallic KME, source Table I or genuine material SI response is accepted. **PAPER PARTIAL**.
+
+## First independent GitHub CI, physical numbers, and strict frozen regression (2026-10-23)
+
+The first Round34 native parser CI surfaced a *genuine test-fixture error*: in the **isolated** band case the fixture kept an extra Bloch gauge rotation outside the actual \`U.mat\`, although \`Udis.mat\` is absent. This was repaired by writing the **full Bloch→Wannier unitary into U** for that fixture. No physical validation threshold was relaxed. The independently rerun [GitHub Actions 39915478996](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39915478996) then passed **370/370** in **Python 3.11 and 3.12**, including all Round17–33 and the new Round34 audit.
+
+The first clean run supplied [the frozen native formatted spin audit](results/frozen/round34_native_spin_chain_audit.json); one subsequent mandatory frozen-data test makes the exact final target **371**, to be accepted only on a freshly CI-tested exact SHA and independently again on merged \`main\`.
+
+Measured **native-format synthetic 4 Bloch-band, 2 Wannier-band, 3-k spinor** data:
+- \`spn\` upper triangle, xyz order, and complex Pauli parser round trip residual **0**; independent native \`V\` vs \`Udis U\` **0**; projected spin vs independently computed \(V^\dagger S V\) **0**.
+- Physical spin invariant under **matched** Bloch-band phase changes to **2.61845576667e-16**; intentionally stale spin (Udis transformed but spn not) gives **0.5436847695** wrong Pauli matrix; intentionally reading column-major U as row-major gives **1.1991698578** wrong matrix.
+- Isolated-band true full native U pathway spin residual **1.2412670766e-16** (no Udis required).
+- Native \`eig\` projected Hamiltonian vs Round33 independent **native hr** Wigner–Seitz Fourier error **8.77708367144e-17 eV**.
+- Physical projected spin norm max **0.99491408 ≤ 1**.
+- Every source status flag remains **\`true_source_spn_verified=false\`**, **\`actual_material_spin_provenance_authenticated=false\`**, **\`real_material_KME_ready=false\`**, original Cui paper **PARTIAL**.
+
+The local DeepSeek harness handoff is a **read-only task instruction** committed into GitHub; this GitHub Actions verification does **not** run the user's local harness and does **not** authenticate any local first-principles calculations.

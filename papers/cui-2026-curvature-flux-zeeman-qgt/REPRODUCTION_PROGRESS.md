@@ -334,3 +334,7 @@ First remote GitHub CI 39911971914 passed **344/344 in both Python 3.11/3.12**, 
 | **3. GitHub** | Isolated Round34 source/fixtures/audit/scanner/tests, one-shot local DeepSeek harness MD, frozen model evidence after first independent remote CI, Physics Registry and full dual Python regression. | Prior Round17–33 frozen baselines and parallel work remain intact, statuses require actual exact-head CI. |
 
 [Round34 derivation and hard stops](ROUND34_NATIVE_SPN_SOURCE_CHAIN.md) · [Single local handoff, minimal user interaction](ROUND34_LOCAL_DEEPSEEK_HARNESS.md).
+
+### Round34 first remote dual-interpreter spin chain evidence
+
+The first corrected GitHub Actions [39915478996](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39915478996) passed **370/370** Python 3.11 and 3.12 Cui tests and all Round17–34 audits. A bounded isolated-band fixture gauge omission was corrected *without weakening the gates*. Spin projection and parsed \`V=UdisU\` match independent data to machine precision; matched Bloch-gauge spin residual **2.62e-16** versus stale \`spn\` error **0.543685**, row-major U error **1.19917**, and eig/HR independent Hamiltonian residual **8.78e-17 eV**. One mandatory frozen test raises final expected count **371**; final CI/merge require exact SHA. **No local DeepSeek harness has been executed or verified by this CI**; real physical spin source remains unverified and original Cui paper **PARTIAL**.
