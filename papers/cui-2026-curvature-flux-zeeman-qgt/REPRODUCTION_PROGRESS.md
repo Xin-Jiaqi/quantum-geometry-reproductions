@@ -296,3 +296,13 @@ Dual Python 3.11/3.12 **291/291 PASS** in first CI run 39899779828, including al
 ### Round31 remote baseline (first clean dual CI)
 
 After fixing an incorrect oscillator field alias that multiplied the independent correlation test by four, the first corrected GitHub-hosted [Round31 run 39904654968](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39904654968) passed **308/308** on both Python 3.11 and 3.12 and all past audit steps. Frozen first-run metrics show oscillator thermal KMS ~2.2e-16, Fock grand KMS 3.5e-18, local bath charge source 0.406784, finite-z full pure-gauge current 5.9e-17, missing dynamic gauge bath vertex 0.010774, source-complete finite-z magnetic Ward 1.5e-17 and omitted magnetic collision vertex 0.015032. One additional strict frozen-data regression yields expected **309** final tests, to be checked on exact final HEAD. No promotion of source Cui **PARTIAL**.
+
+## Round32 | Material electron-phonon input provenance and gauge gates (2026-10-23)
+
+| Track | Bounded work implemented | Unresolved |
+|---|---|---|
+| **1. Original Cui reproduction** | No actual material EPW/DFPT/Wannier spin or position source files currently present; source status **PARTIAL**. Formalize what must be provided rather than fabricate source tensors. | Full original real-material spectra, g, metal KME Eq.(19) SI, figures and Table I. |
+| **2. Reusable physics** | Explicit normalized external export (not raw EPW binary reader): H/g/spin/connection and phonon energies/phase/units, k+q closure, +/-q, SHA256 evidence, source-stage labels. Synthetic Pauli-blocked finite-width golden-rule rates have independent matched H/g gauge positive oracle and unmatched H gauge negative control. | Source file mappings/electron/phonon joint gauge cannot be authenticated from IDs and checksums; position connection needs k-gauge derivative; Gaussian broadening not exact detailed balance/vertex; no acoustic/polar divergence or BZ convergence. |
+| **3. GitHub** | New isolated Round32 source/tests/audit, synthetic-only frozen benchmark after first remote run, scoped Registry and dual Python workflow. Exact merge and test count require actual remote logs. | All Round17–31 preserved, open BZ convergence PR #65 unaffected. |
+
+[Round32 scientific and source-integrity boundary](ROUND32_EPW_MATERIAL_SCATTERING_GATE.md).

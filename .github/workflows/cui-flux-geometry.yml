@@ -55,3 +55,5 @@ jobs:
         run: python scripts/audit_interacting_fock_bath.py
       - name: Audit bosonic bath spectral KMS and finite-z fermionic Ward (Round31)
         run: python scripts/audit_bosonic_davies_dynamic_ward.py
+      - name: Audit real-source EPW normalizer and gauge readiness (Round32)
+        run: python scripts/audit_epw_material_scattering_contract.py
