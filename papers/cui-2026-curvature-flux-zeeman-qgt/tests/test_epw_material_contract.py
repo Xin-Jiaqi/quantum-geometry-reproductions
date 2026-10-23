@@ -196,4 +196,36 @@ class EpwMaterialEvidenceGate(unittest.TestCase):
   self.assertEqual(verdict['status'],"SYNTHETIC_FIXTURE_ONLY")
   self.assertFalse(verdict['real_material_verified'])
 
+ def test_frozen_remote_round32_bounded_synthetic_regression(self):
+  from pathlib import Path
+  raw=json.loads((Path(__file__).resolve().parents[1]/
+     "results/frozen/round32_epw_material_scattering_contract.json").read_text())
+  self.assertEqual(raw["schema"],"cui-round32-epw-normalized-provenance-kq-gauge-goldenrule-v1")
+  self.assertEqual(raw["whole_source_paper"],"PARTIAL")
+  self.assertFalse(raw["real_material_verified"])
+  self.assertFalse(raw["authentic_real_epw_phonon_matrix_found"])
+  self.assertFalse(raw["physical_spin_provenance_authenticated"])
+  a,m,v=setup()
+  r=scatter_rates(a,v,beta=40,mu=0,sigma_eV=.08)
+  sy=np.array([[0,-1j],[1j,0]],complex)
+  U=np.array([np.cos(.27*(i+1))*np.eye(2)-1j*np.sin(.27*(i+1))*sy for i in range(3)])
+  rotated=rotate_electronic_gauge(a,U,v["kplusq"])
+  matched=scatter_rates(rotated,v,beta=40,mu=0,sigma_eV=.08)
+  bad=copy.deepcopy(a);bad["h_eV"]=rotated["h_eV"]
+  unmatched=scatter_rates(bad,v,beta=40,mu=0,sigma_eV=.08)
+  measurements={
+   "bare_finite_gaussian_goldenrule_rate_s_inverse_max":
+      float(np.max(r["bare"])),
+   "pauli_blocking_rate_s_inverse_difference_max":
+      float(np.max(r["bare"]-r["blocked"])),
+   "matched_independent_k_gauge_goldenrule_rate_s_inverse_residual_max":
+      float(np.max(abs(r["bare"]-matched["bare"]))),
+   "wrong_H_only_gauge_goldenrule_rate_s_inverse_difference_max":
+      float(np.max(abs(r["bare"]-unmatched["bare"]))),
+  }
+  for key,val in measurements.items():
+   self.assertAlmostEqual(val,raw[key],delta=1e-9*max(1,abs(raw[key])),msg=key)
+  self.assertEqual(raw["fake_hashed_candidate_status"],
+                   "CANDIDATE_BYTES_VALIDATED_PHYSICAL_AUTHENTICITY_UNVERIFIED")
+
 if __name__=='__main__':unittest.main()

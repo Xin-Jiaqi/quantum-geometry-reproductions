@@ -81,11 +81,10 @@ assert report['wrong_H_only_gauge_goldenrule_rate_s_inverse_difference_max'] / r
 assert report['pauli_blocking_rate_s_inverse_difference_max']>1e9
 assert report['no_exact_kms_from_offshell_gaussian_broadening']
 frozen=ROOT/'results/frozen/round32_epw_material_scattering_contract.json'
-if frozen.exists():
-    expected=json.loads(frozen.read_text())
-    for key,value in report.items():
-        if isinstance(value,float):
-            assert abs(value-expected[key]) < 1e-9*max(1,abs(expected[key])),(key,value,expected[key])
-        else:
-            assert value==expected[key],(key,value,expected[key])
+expected=json.loads(frozen.read_text())
+for key,value in report.items():
+    if isinstance(value,float):
+        assert abs(value-expected[key]) < 1e-9*max(1,abs(expected[key])),(key,value,expected[key])
+    else:
+        assert value==expected[key],(key,value,expected[key])
 print(json.dumps(report,indent=2))

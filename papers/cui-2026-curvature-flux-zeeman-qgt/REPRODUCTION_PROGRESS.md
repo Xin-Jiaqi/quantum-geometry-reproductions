@@ -306,3 +306,7 @@ After fixing an incorrect oscillator field alias that multiplied the independent
 | **3. GitHub** | New isolated Round32 source/tests/audit, synthetic-only frozen benchmark after first remote run, scoped Registry and dual Python workflow. Exact merge and test count require actual remote logs. | All Round17–31 preserved, open BZ convergence PR #65 unaffected. |
 
 [Round32 scientific and source-integrity boundary](ROUND32_EPW_MATERIAL_SCATTERING_GATE.md).
+
+### Round32 first dual-interpreter source-gate acceptance and frozen control
+
+Initial GitHub-hosted Python 3.11/3.12 **326/326 PASS** and all Round17–32 audit steps. Machine-frozen synthetic complex-g matched electronic gauge error **0.00244 s^-1** relative to `4.18e12 s^-1` per-event diagnostic; bad unmatched H-only gauge error **2.72e13 s^-1**. The deliberately fake-hashed seven-source bundle remains **PHYSICAL_AUTHENTICITY_UNVERIFIED**; authentic EPW/QE and Wannier H/S/A files are still absent. A strict frozen numerical regression adds one test, making the final expected count **327**, which must be rechecked on the final tested SHA. Neither a checksum nor gauge metadata promotes Cui **PARTIAL**.

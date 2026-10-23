@@ -98,3 +98,17 @@ python scripts/audit_epw_material_scattering_contract.py
 ~~~
 
 The standalone audit produces *synthetic-only* numerical results and a **fake-hashed-candidate non-authentication** negative control. Any honest material stage needs true source files separately supplied and independently reviewed.
+
+## First independent GitHub numerical acceptance and frozen test
+
+The initial [GitHub Actions run 39908180114](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39908180114) independently passed **326/326 Cui tests** in Python **3.11 and 3.12**, including all prior Round17–31 audits and the new Round32 audit. A separate push-run Python 3.11 log (39908137196) supplied the original machine-measured [Round32 frozen synthetic JSON](results/frozen/round32_epw_material_scattering_contract.json). The final candidate adds **one mandatory frozen numerical test**, raising the target to **327**, to be revalidated in both interpreters on the exact final HEAD and again after merge.
+
+Frozen **synthetic-only**, `Nk=3,Nq=3,Nband=2,Nmode=1`:
+- Inverse-q paired complex e-ph g Hermiticity residual **0**, exact k+q closure.
+- Broadening `sigma=0.08 eV` produces max *per-event model diagnostic* **4.182276705766e12 s^-1**. Blocking effect max **4.171935511536e12 s^-1**. These are NOT physically converged lifetimes, rates for a material, or KME.
+- Independently k-dependent **matched H/g** gauge rotation alters the maximum rate by **0.00244140625 s^-1**, a relative error about **5.84e-16** against the reference max.
+- Deliberately **unmatched H-only** rotation produces error **2.715703434731e13 s^-1**. This is the negative control proving that phase-resolved complex g matters.
+- The deliberately fake seven-source file bundle is successfully SHA256 checked but remains **CANDIDATE_BYTES_VALIDATED_PHYSICAL_AUTHENTICITY_UNVERIFIED**, `real_material_verified=false`; one tampered source file is rejected. Named real material without evidence likewise remains SYNTHETIC_FIXTURE_ONLY.
+- **No authentic real EPW matrix was discovered or ingested.** The frozen file contains explicit `real_material_verified=false`, `physical_spin_provenance_authenticated=false`, `raw_binary_epw_reader_claim=false`, `real_material_kme_si_claim=false`.
+
+The final **327** and merger state require actual exact-commit CI, and are not inferred from the initial 326-result.
