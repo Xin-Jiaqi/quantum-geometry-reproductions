@@ -114,3 +114,8 @@ strict errors against the unknown continuum value. Both Python
 3.11 and 3.12 passed **178/178** tests (Actions 39750100446).
 Numerical BZ convergence remains **UNVERIFIED** and the original paper
 **PARTIAL**. [Complete bounded protocol](ROUND22_ERROR_BUDGET_AND_ALIASING.md).
+
+
+## Round25 bounded k-dependent Bloch-spin Ward
+
+Static finite-T gauge-covariant Zeeman-current response, including \(-\kappa Tr[f(H) D_k S]\) explicit spin-current contact, is proposed for a synthetic periodic k-dependent basis/vertex and checked by independent finite-B and finite-k differences. Exact Kramers degeneracy is handled by existing Round24 Fréchet method. No finite-frequency metallic KME, true Wannier operator embedding or source-paper completion. [Protocol](ROUND25_COVARIANT_SPIN_EMBEDDING.md). Initial 213/213 Python 3.11/3.12 CI PASS (Actions 39877965441); adding one frozen audit regression for final 214-test gate.
