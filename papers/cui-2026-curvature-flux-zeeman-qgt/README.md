@@ -1,5 +1,8 @@
 # Cui et al. (2026): non-Hermitian Zeeman QGT and local Dirac flux
 
+> **Codex research handoff (reviewed 2026-10-23):** [Start work immediately](CODEX_START_HERE.md) · [Independent full-reproduction and research-idea review](FULL_REVIEW_2026-10-23.md). Distinguishes independently green main (371/371 dual Python), user-reported local Fe demo, and currently unmerged scientifically contested [Round36 PR #107](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/107). **Whole Cui theoretical paper remains PARTIAL.** No material EPW archive is required by the source paper.
+
+
 **Scope: VERIFIED NONDEGENERATE MODEL-METHOD SUBSET; FULL PAPER PARTIAL.**
 
 Cui, Xiang, Xu and Wang, *Curvature-Flux Representation of Local Dirac-Node Topology from Non-Hermitian Zeeman Quantum Geometry*, arXiv:2604.09725v3 (September 2026). Independently implemented; not affiliated with the authors.
