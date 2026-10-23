@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_review_date": "2026-10-22",
+  "last_review_date": "2026-10-23",
   "purpose": "claim-level negative results preserved, NOT a novelty certificate",
   "state_definitions": [
     "NO_GO_CLAIM",
@@ -683,6 +683,51 @@
       "exact_math_tests": "stacking_z6_winding_gate.py, PASS -5/+1 layer odd, -2/+4 layer even, six index +1 roots",
       "historical_code_preserved": true,
       "model_root_claim_verified": false,
+      "compute_authorized": false
+    },
+    {
+      "id": "BD31",
+      "claim": "For an ideal C3z + vertical mx + horizontal layer-exchange mz bilayer registry family, the exact six-site stabilizers enforce layer-odd current-to-Sz response zero at G/A/B/C/M/N and layer-even response zero only at G/M/N, while A/B/C admit a one-dimensional layer-even response vector constrained to three symmetry-related axes.",
+      "status": "SYMMETRY_GATE_PASS_NOVELTY_OPEN",
+      "scope_level": "S2",
+      "contribution_type": "symmetry classification/theorem",
+      "source": "docs/BD31_LOCAL_EQUIVARIANT_RESPONSE_FIELD_RULE_20261022.md",
+      "test_code": "research/fe_domain_mode_addressability_20261022/registry_site_stabilizer_exact_gate.py, group-theory-operations-toolkit research/fe-domain-mode-addressability-20261022",
+      "exact_site_results": {
+        "G": {
+          "stabilizer_order": 12,
+          "odd_dimension": 0,
+          "even_dimension": 0
+        },
+        "A": {
+          "stabilizer_order": 4,
+          "odd_dimension": 0,
+          "even_dimension": 1
+        },
+        "B": {
+          "stabilizer_order": 4,
+          "odd_dimension": 0,
+          "even_dimension": 1
+        },
+        "C": {
+          "stabilizer_order": 4,
+          "odd_dimension": 0,
+          "even_dimension": 1
+        },
+        "M": {
+          "stabilizer_order": 6,
+          "odd_dimension": 0,
+          "even_dimension": 0
+        },
+        "N": {
+          "stabilizer_order": 6,
+          "odd_dimension": 0,
+          "even_dimension": 0
+        }
+      },
+      "evidence": "Independent standard-library exact rational 12-element group and 12x12 rational registry grid tests PASSED in current session; predicted A/B/C layer-even vector axes agree with archived source-geometry 24-band Te-p-only SOC model vectors to numerical precision.",
+      "limits": "Conditional on assumed ideal group and unitary layer exchange with fixed-current real DC response; not independently verified Seitz permutations for every new real displaced structure, not a first-principles Pd2Te2 prediction, not a new theorem by itself.",
+      "closest_competitor": "2026 Layer Edelstein Effect PRL covers fixed-stacking tensor/group criterion; original Supplemental Material not independently verified. Same-team submitted Control of the Rashba-Edelstein effect via sliding ferroelectricity in bilayer systems may directly overlap continuous sliding response and is unavailable for formula-level comparison.",
       "compute_authorized": false
     }
   ],
