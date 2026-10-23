@@ -282,3 +282,17 @@ The first remote 273-case test and audit run exposed the finite two-site bath tr
 ### Round30 remote first-run baseline and final frozen gate
 
 Dual Python 3.11/3.12 **291/291 PASS** in first CI run 39899779828, including all past audits and the new many-fermion test. Adding an independent frozen numerical regression gives the final expected Cui count **292**; final PASS/merge claims require fresh exact-SHA remote evidence. Model diagnostic: 54 Fock number-preserving KMS jumps, interaction-dependent occupations (difference 0.075984), grand KMS 1.73e-18, Gibbs stationarity 2.36e-17, total N source ~7e-18 but local bath site source 0.271191, and missing Zeeman bath contact error 0.005563. Explicit finite interacting Fock only, **Cui source PARTIAL**.
+
+## Round31 | Harmonic-boson spectrum to interacting Fock collision (2026-10-23)
+
+| Track | Bounded new verifiable advance | Not accepted |
+|---|---|---|
+| **1. Cui source** | First *explicit model bath correlation* for energy-dependent fermion transition rates; dynamic finite-z pure electromagnetic gauge Ward and magnetic field collision derivative on interacting synthetic Fock. **Whole paper PARTIAL.** | Source-specific metal KME Eq.(19), SI units/material figures and Table I; real phonon Wannier coupling. |
+| **2. Physics capability** | Finite oscillator explicit exact correlation/absorption/emission KMS versus continuous Ohmic J; Born-Markov-secular number-preserving jumps including zero-frequency collective bath, grand-Gibbs, finite-z charge gauge and physical current contact, bath source and Zeeman bath-vertex negative omissions. | Spectral J is declared, not ab-initio; no actual phonon eigenmodes, Lamb shift, nonsecular clusters, unique chemical potential or translationally conserving electronic metal. |
+| **3. GitHub & audit** | Isolated source, added tests, executable independent Round31 audit, frozen model output after first remote run, Registry and 3.11/3.12 Cui workflow audit. | Previous Round17–30 frozen outputs never rewritten; parallel BZ convergence PR #65 untouched. Final counts/CI/merge require logs on exact SHA. |
+
+[Complete Round31 derivation and scoped claims](ROUND31_BOSONIC_DAVIES_DYNAMIC_WARD.md).
+
+### Round31 remote baseline (first clean dual CI)
+
+After fixing an incorrect oscillator field alias that multiplied the independent correlation test by four, the first corrected GitHub-hosted [Round31 run 39904654968](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39904654968) passed **308/308** on both Python 3.11 and 3.12 and all past audit steps. Frozen first-run metrics show oscillator thermal KMS ~2.2e-16, Fock grand KMS 3.5e-18, local bath charge source 0.406784, finite-z full pure-gauge current 5.9e-17, missing dynamic gauge bath vertex 0.010774, source-complete finite-z magnetic Ward 1.5e-17 and omitted magnetic collision vertex 0.015032. One additional strict frozen-data regression yields expected **309** final tests, to be checked on exact final HEAD. No promotion of source Cui **PARTIAL**.
