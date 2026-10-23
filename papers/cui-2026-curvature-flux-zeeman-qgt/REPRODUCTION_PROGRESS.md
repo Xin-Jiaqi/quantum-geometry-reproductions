@@ -200,3 +200,14 @@ paper-specific tests remain unmodified.
 - Initial CI failed five tests due an incorrect U†VU / U†SU Einstein-contraction index ordering; the implementation was corrected, and the final code passed **203/203** on both Python 3.11/3.12 with a frozen-data regression. The error is part of the visible audit history, not erased.
 - Repository file: results/frozen/round24_degenerate_static_ward_audit.json. The analytic whole-BZ equilibrium current vanishes on a periodic torus; this is NOT a demonstration of dissipative finite-frequency KME or an experimental material response.
 - Full author paper **PARTIAL**. Remaining: dynamic metallic charge conservation, electromagnetic contacts, Wannier physical spin+position in the same gauge, source Eq.(19), real material SI and Table I reconciliation.
+
+
+## Round25: Bloch-gauge covariant static spin Ward (in independent CI)
+
+| Main workstream | New restricted gate |
+| --- | --- |
+| Paper reproduction | Derived gauge-covariant **equilibrium static** Zeeman current Ward as an independent physical negative control. Full original Cui paper remains PARTIAL; this does not reproduce a new source Eq.(19) transport measurement. |
+| Physics capability | Bloch connection A=W†dW, covariant physical velocity/spin-operator derivatives and explicit Zeeman-current contact for k-dependent synthetic effective-spin vertex; Kramers Fréchet response reused unchanged. |
+| GitHub | Round25 PR: 10 new tests and scripted audit. Count 203 existing + 10 target = 213 only after both 3.11 and 3.12 remote CI pass. |
+
+Next required step is a realistic same-Wannier-gauge H, physical spin and position-operator interface; current results are neither SI nor dissipative KME.

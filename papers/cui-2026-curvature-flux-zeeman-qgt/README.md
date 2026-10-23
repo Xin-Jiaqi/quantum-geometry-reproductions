@@ -153,3 +153,8 @@ nondegenerate formula, this method does not reject a Kramers doublet.
 15 new tests (including frozen-audit regression) target **203 paper-specific tests** on the isolated Cui
 package; require actual Python 3.11/3.12 CI before promoting to VERIFIED.
 Not dynamic metallic KME; original full paper **PARTIAL**.
+
+
+## Round25: k-dependent Bloch gauge and effective-spin static Ward
+
+[covariant_spin_ward.py](src/flux_lab/covariant_spin_ward.py) extends the accepted Round24 Kramers static Fréchet identity to a smooth k-dependent Bloch basis and a deliberately synthetic effective k-dependent spin vertex. It tests the connection commutator and explicit Zeeman-current contact against independent finite-B current and finite-k spin-density differences. [Scientific scope](ROUND25_COVARIANT_SPIN_EMBEDDING.md). 10 new tests, target 213 total pending dual-version CI. Equilibrium static only, not dynamic/material KME.
