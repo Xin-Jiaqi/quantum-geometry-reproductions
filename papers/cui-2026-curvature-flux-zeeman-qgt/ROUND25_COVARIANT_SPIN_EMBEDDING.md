@@ -29,3 +29,21 @@ The second contribution is the **explicit Zeeman current-vertex contact**, absen
 Only a static equilibrium Ward and a synthetic projected-spin/Bloch-gauge test. The complete periodic-BZ integral of the full derivative vanishes, so this does not generate DC equilibrium bulk transport. No finite-frequency, conserving collisions, Peierls phase at finite q, diamagnetic/transverse Maxwell contacts, realistic orbital centers or SI KME.
 
 The full original paper remains **PARTIAL**. No source published PDF or private Wannier files are included. Prior 203 accepted tests remain unchanged. Target: **213 tests total** (10 new), to be counted as verified only after Python 3.11/3.12 remote CI and runnable audit.
+
+
+## Independent initial CI acceptance and frozen numerical reference
+
+GitHub Actions run **39877965441** (Python 3.11/3.12) passed **213/213** original + 10 new tests and executed the numerical audit. These actual CI values are frozen in `results/frozen/round25_covariant_spin_ward_audit.json` with one additional frozen-reference regression test (final target **214**).
+
+At (k=(0.36,-0.29)), (T=0.22,mu=0.15,kappa=0.7), synthetic (k)-dependent projected spin amplitude 0.16:
+
+- Maximum basis-gauge invariance discrepancy: **2.37e-16**;
+- Complete Ward vs independent finite uniform B: **2.65e-11**;
+- Complete Ward vs independent finite k spin-density gradient: **4.16e-11**;
+- Maximum nonzero explicit spin-vertex contact: **0.0421665**;
+- Omitting that contact while retaining correct physical covariant velocity gives an erroneous response by **0.0421665**;
+- Raw basis derivative vs physical covariant velocity difference: **0.425737** (operator maximum norm).
+
+When spin variation is exactly zero, the effective spin covariant derivative/contact vanishes despite the same nontrivial k-dependent Bloch basis. At exact Kramers point k=0, complete Fréchet theory also remains regular. All figures are natural-unit synthetic-model results, NOT a material/Wannier contact coefficient.
+
+The frozen test adds **1** more test and must run successfully in both remote Python versions before final merge; full paper remains **PARTIAL**.

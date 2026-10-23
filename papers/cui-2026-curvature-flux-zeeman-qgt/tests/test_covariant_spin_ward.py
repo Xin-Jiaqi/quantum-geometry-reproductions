@@ -92,4 +92,25 @@ class CovariantSpinWard(unittest.TestCase):
         with self.assertRaises(ValueError):
             periodic_spin_embedding([0.,0.,0.])
 
+
+    def test_ci_frozen_covariant_contact_and_gauge_reference(self):
+        import json
+        from pathlib import Path
+        p=Path(__file__).resolve().parents[1]/"results/frozen/round25_covariant_spin_ward_audit.json"
+        ref=json.loads(p.read_text())
+        self.assertEqual(ref["schema"],"cui-flux-round25-kdependent-spin-covariant-ward-v1")
+        for row in ref["rows"]:
+            for amp in (0.,.16):
+                H,V,S,dS,A=periodic_spin_embedding(
+                    row["k"],effective_spin_variation=amp,rotate=True)
+                q=covariant_static_ward(H,V,S,dS,A)
+                frozen=row[f"variation_{amp:g}"]
+                self.assertAlmostEqual(
+                    float(np.max(abs(q["spin_vertex_contact"]))),
+                    frozen["explicit_spin_contact_max"],delta=2e-12)
+                self.assertLess(float(np.max(abs(q["full_static"].real-
+                       np.array(frozen["full_static_real"])))),2e-12)
+                self.assertLess(float(np.max(abs(q["full_static"].imag-
+                       np.array(frozen["full_static_imag"])))),2e-12)
+
 if __name__=="__main__":unittest.main()

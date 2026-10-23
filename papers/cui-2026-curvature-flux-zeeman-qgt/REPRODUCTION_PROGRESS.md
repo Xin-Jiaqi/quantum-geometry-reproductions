@@ -208,6 +208,6 @@ paper-specific tests remain unmodified.
 | --- | --- |
 | Paper reproduction | Derived gauge-covariant **equilibrium static** Zeeman current Ward as an independent physical negative control. Full original Cui paper remains PARTIAL; this does not reproduce a new source Eq.(19) transport measurement. |
 | Physics capability | Bloch connection A=W†dW, covariant physical velocity/spin-operator derivatives and explicit Zeeman-current contact for k-dependent synthetic effective-spin vertex; Kramers Fréchet response reused unchanged. |
-| GitHub | Round25 PR: 10 new tests and scripted audit. Count 203 existing + 10 target = 213 only after both 3.11 and 3.12 remote CI pass. |
+| GitHub | Round25 PR: 11 new tests including the frozen audit regression. First 213 tests passed in both Python 3.11/3.12 (Actions 39877965441); final target 214 pending repeated remote CI. |
 
 Next required step is a realistic same-Wannier-gauge H, physical spin and position-operator interface; current results are neither SI nor dissipative KME.
