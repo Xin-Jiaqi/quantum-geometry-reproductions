@@ -18,11 +18,10 @@ U,_=np.linalg.qr(rng.normal(size=(4,4))+1j*rng.normal(size=(4,4)))
 rot=global_gauge_transform(b,U).fourier(q)
 g=projector_qgt(d["H"],d["covariant_H"],d["spin"])
 g_rot=projector_qgt(rot["H"],rot["covariant_H"],rot["spin"])
-rng=np.random.default_rng(261)
-W,_=np.linalg.qr(rng.normal(size=(4,4))+1j*rng.normal(size=(4,4)))
-m=global_gauge_transform(b,W).fourier(q)
-g_bad=projector_qgt(m["H"],m["covariant_H"],d["spin"])
-g_correct=projector_qgt(m["H"],m["covariant_H"],m["spin"])
+# Use the SAME seeded rotation as the positive joint-gauge control;
+# this makes the deliberately unmatched-spin negative control reproducible.
+g_bad=projector_qgt(rot["H"],rot["covariant_H"],d["spin"])
+g_correct=g_rot
 torque=np.stack([d["H"]@s-s@d["H"] for s in d["spin"]])
 report={
     "schema":"cui-round26-same-wannier-operator-contract-v1",
@@ -46,6 +45,6 @@ assert report["missing_connection_error_max"]>.005
 assert report["spin_torque_commutator_abs_max"]>.1
 frozen=json.loads((ROOT/"results/frozen/round26_same_gauge_operator_audit.json").read_text())
 assert frozen["schema"]==report["schema"] and frozen["paper_status"]=="PARTIAL"
-for key in ("covariant_vertex_abs_max","missing_connection_error_max","spin_torque_commutator_abs_max"):
+for key in ("covariant_vertex_abs_max","missing_connection_error_max","spin_torque_commutator_abs_max","wrong_spin_gauge_QGT_error_max"):
     assert abs(report[key]-frozen[key])<1e-11, key
 print(json.dumps(report,indent=2))
