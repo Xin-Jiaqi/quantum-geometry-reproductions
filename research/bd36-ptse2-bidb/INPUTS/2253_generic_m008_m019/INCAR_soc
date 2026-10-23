@@ -1,0 +1,22 @@
+# BD36 zero-field nonmagnetic SOC static (PBE+D3+LSORBIT)
+SYSTEM   = 2253_generic_m008_m019 soc static (nonmagnetic, zero field)
+PREC     = Accurate
+ENCUT    = 500
+ISMEAR   = 0
+SIGMA    = 0.05
+ISPIN    = 2
+LNONCOLLINEAR = .TRUE.
+LSORBIT  = .TRUE.
+SAXIS    = 0 0 1
+MAGMOM   = 0 0 0.02 0 0 0.02 0 0 0.02 0 0 0.02 0 0 0.02 0 0 0.02
+IBRION   = -1
+NSW      = 0
+EDIFF    = 1E-6
+NELM     = 120
+LREAL    = .FALSE.
+ALGO     = Normal
+IVDW     = 12
+LWAVE    = .TRUE.
+LCHARG   = .TRUE.
+LORBIT   = 11
+NCORE    = 4

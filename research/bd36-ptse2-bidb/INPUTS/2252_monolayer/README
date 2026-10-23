@@ -1,0 +1,5 @@
+BD36 2252_monolayer (round1). Inputs frozen, NOT_RUN. POSCAR from BiDB source;
+POSCAR_SD = selective-dynamics variant (x,y frozen, z free).
+POTCAR intentionally absent (private); assemble at execution from the
+approved registry, record SHA256 locally.
+wannier90.win: draft - window/num_bands finalized by projection tests.

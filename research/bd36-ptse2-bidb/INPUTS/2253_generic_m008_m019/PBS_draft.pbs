@@ -1,0 +1,19 @@
+#!/bin/bash
+# PBS Pro draft for IMR (Japan). NOT_RUN - requires explicit user approval
+# of platform+resources. Placeholder: queue P_030, 28-112 cores, 460GB node.
+#PBS -N BD36-2253_generic_m008_m019
+#PBS -q P_030
+#PBS -l select=1:ncpus=28:mpiprocs=28:mem=128gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -V
+set -e
+cd $PBS_O_WORKDIR
+source /etc/profile.d/modules.sh 2>/dev/null || true
+# VASP6 + Wannier90 environment TBD at execution (confirm binaries on IMR)
+MPI=mpirun
+VASP=vasp_ncl
+test -x $(command -v $MPI)
+test -x $(command -v $VASP)
+$MPI -np 28 $VASP > vasp.stdout
+echo "EXIT_OK"
