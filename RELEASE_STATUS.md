@@ -414,3 +414,13 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - PR, final source SHA, complete GitHub CI, squash commit and independent post-merge main CI only certified after actual remote logs, not inferred from local tests.
 
 - v75 **single-scalar-tau exactness gate**: only if the electric collision source is an exact eigenmode `L v=lambda v` may the full collision inverse reduce to tau=1/lambda. Rayleigh-mode residual is ~1.25e-17 for beta=0, 0.004366379 for beta=.125, 0.016860078 for beta=.5. Five additional tests document the necessary condition; author full EB collision still OPEN.
+
+
+## v75 merged release verification | 2026-10-23
+
+- [PR #90](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/90) **squash merged** as `73d79b602f997ac6ab62c19c5b8e5abe879d5bb5`; final tested PR HEAD `d401721fcea0c995caa3ee58863a19e9ed887f61`.
+- [PR final HEAD Actions #39882521001](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39882521001): **1161/1161 PASS**, 177.902 s, source article explicitly `PARTIAL`; all four historical v49/v50 bridge gates individually **executed and passed**.
+- [Independent post-merge main Actions #39883014821](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39883014821): **1161/1161 PASS**, 100.137 s on exact merge SHA `73d79b602f997ac6ab62c19c5b8e5abe879d5bb5`; original paper `PARTIAL`.
+- v75 has **51 new physical science tests + one independent frozen-number regeneration + four original-source v49/v50 cross-checks**, all **56** executed within complete remote test suite. Standalone v60+ archive includes **52 PASS + 4 intentionally SKIP**, not 56 standalone PASS. Named local v71–v75 module groups separately **225/225 PASS**. All eight new source/test/data/science Git blob SHA matched exactly the tested local files before the documented final HEAD.
+- The exact scalar transport relaxation reduction `tau=1/lambda` requires the electric source to be a genuine collision eigenmode `L v=lambda v`. No-tilt Dirac: `gamma*tau_tr=2`; tilted source eigenmode residual nonzero (beta=.125: 0.00436638, beta=.5: 0.01686008). This is an *explicit single-conduction-energy-shell elastic model*, **NOT** original article full conserving spin EB relaxation.
+- Eq20/31 common-source relative sign incompatibility is verified but author intent/physical measured sign is **unresolved**; no correction is asserted. Original bulk PHE/MNHE paper science remains **PARTIAL**. These post-merge updates are documentation-only and do not alter any code, tests or frozen numerical results.
