@@ -2,7 +2,7 @@
 import argparse,json
 from pathlib import Path
 import numpy as np
-from qgmap.elastic_spin_collision_v75 import Spec,collision_data,eig_physics,steady,sign_invariance
+from qgmap.elastic_spin_collision_v75 import Spec,collision_data,eig_physics,steady,sign_invariance,transport_mode_closure
 
 def to_json(a):
     if isinstance(a,(np.floating,np.integer)):return a.item()
@@ -19,11 +19,14 @@ def generate():
            'stronger_tilt_dirac_spinor':Spec(beta=.5,spin_overlap=1)}
     out={}
     for key,s in specs.items():
-        e=eig_physics(s);sol=steady(s)
+        e=eig_physics(s);sol=steady(s);mc=transport_mode_closure(s)
         out[key]={'beta':s.beta,'overlap':s.spin_overlap,'gamma':s.gamma,
                    'tau_current':to_json(sol['tau_current']),
                    'gamma_times_tau_current':to_json(s.gamma*sol['tau_current']),
                    'spectral_gap':e['spectral_gap'],
+                   'electric_mode_rayleigh_rate':to_json(mc['rayleigh_rate']),
+                   'electric_mode_defect':mc['eigenmode_defect'],
+                   'single_tau_exact':mc['mode_is_exact'],
                    'charge_conservation_error':e['number_conservation_error'],
                    'detailed_balance_error':e['detailed_balance_error'],
                    'energy_shell_error':e['energy_shell_error'],
