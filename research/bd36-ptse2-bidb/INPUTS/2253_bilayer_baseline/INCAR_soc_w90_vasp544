@@ -32,6 +32,7 @@ IVDW     = 12
 LWAVE    = .TRUE.
 LCHARG   = .TRUE.
 LORBIT   = 11
-NCORE    = 1   # serial .spn writer: exactly one MPI rank
+# Serial .spn writer: interface step runs with exactly one MPI rank
+NCORE    = 1
 LASPH     = .TRUE.
 GGA_COMPAT = .FALSE.
