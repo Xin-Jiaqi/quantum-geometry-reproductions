@@ -66,7 +66,7 @@ class Stage8oRealSymmetryTests(unittest.TestCase):
         R=np.diag([1,1,-1])
         E=np.tile(np.array([0.,1.,2.,3.]),(9,1))
         s=spin4(9)
-        s[2,:,:,0]*=1.1
+        s[2,:,:,0]+=0.5*np.diag([1.,-1.,1.,-1.])
         data=m.symmetry_summary(full_grid(),E,s,fake_hex_lattice(),R,
                                 [.5,.5,0.1],n1=3,n2=3)
         self.assertGreater(data["max_spin_gram_covariance_residual"],.01)
