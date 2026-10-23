@@ -1,0 +1,185 @@
+{
+  "schema": "bsf-igmc-multiband-same-gauge-gate-v1",
+  "paper": "PRL 134, 116301 (2025)",
+  "task_file": "HARNESS_MULTIBAND_SAME_GAUGE_TEST_20261023.md",
+  "source_pinned_commit": "cdac6418166466b5243e73d8eb291d6dea8d4772",
+  "fixtures": {},
+  "gaps": {
+    "pinned_round26": {
+      "21": {
+        "min_gap_eV": 1.0257314719104504,
+        "max_gap_eV": 1.8395916718358014
+      },
+      "31": {
+        "min_gap_eV": 1.023354537935806,
+        "max_gap_eV": 1.8395916718358014
+      },
+      "41": {
+        "min_gap_eV": 1.02249183626431,
+        "max_gap_eV": 1.8395916718358014
+      }
+    },
+    "v2_positive": {
+      "21": {
+        "min_gap_eV": 0.9891754337419272,
+        "max_gap_eV": 1.855124214007712
+      },
+      "31": {
+        "min_gap_eV": 0.9863061308400223,
+        "max_gap_eV": 1.855124214007712
+      },
+      "41": {
+        "min_gap_eV": 0.9852633724177577,
+        "max_gap_eV": 1.855124214007712
+      }
+    },
+    "v2_spinZ_pos": {
+      "21": {
+        "min_gap_eV": 0.9891754337419272,
+        "max_gap_eV": 1.855124214007712
+      },
+      "31": {
+        "min_gap_eV": 0.9863061308400223,
+        "max_gap_eV": 1.855124214007712
+      },
+      "41": {
+        "min_gap_eV": 0.9852633724177577,
+        "max_gap_eV": 1.855124214007712
+      }
+    },
+    "no_soc_control": {
+      "21": {
+        "min_gap_eV": 1.2,
+        "max_gap_eV": 1.4420890806545277
+      },
+      "31": {
+        "min_gap_eV": 1.2,
+        "max_gap_eV": 1.4427605748385122
+      },
+      "41": {
+        "min_gap_eV": 1.2,
+        "max_gap_eV": 1.4430047498737346
+      }
+    }
+  },
+  "direct_wilson": {
+    "v2_positive_bstep_1e-4": [
+      {
+        "N": 21,
+        "direct_dperomega": 0.03429374753149515,
+        "wilson_slope": 0.0337544983974869,
+        "relative_discrepancy": 0.015724415464160386
+      },
+      {
+        "N": 31,
+        "direct_dperomega": 0.03429374753149538,
+        "wilson_slope": 0.034045601645660284,
+        "relative_discrepancy": 0.007235892945418133
+      },
+      {
+        "N": 41,
+        "direct_dperomega": 0.034293747531495486,
+        "wilson_slope": 0.034151744511268234,
+        "relative_discrepancy": 0.004140784558375723
+      }
+    ],
+    "v2_positive_41_rel": 0.004140784558375723
+  },
+  "bstep_conv": {
+    "v2_positive_N41": [
+      {
+        "bstep_eV": 0.0001,
+        "direct": 0.034293747531495486,
+        "wilson": 0.034151744511268234,
+        "relative_discrepancy": 0.004140784558375723
+      },
+      {
+        "bstep_eV": 0.0005,
+        "direct": 0.034293747531495486,
+        "wilson": 0.034151791706626966,
+        "relative_discrepancy": 0.004139408349529231
+      },
+      {
+        "bstep_eV": 0.001,
+        "direct": 0.034293747531495486,
+        "wilson": 0.03415193919076298,
+        "relative_discrepancy": 0.004135107736541995
+      }
+    ]
+  },
+  "gauge_invariance": {
+    "joint_U_seed": 26,
+    "direct_residual": 2.7755575615628914e-17,
+    "wilson_residual": 1.1102230246251565e-12,
+    "direct_before": 0.034293747531495486,
+    "direct_after": 0.034293747531495514,
+    "wilson_before": 0.034151744511268234,
+    "wilson_after": 0.03415174451237846
+  },
+  "negative_controls": {
+    "NC1_wrong_spin_gauge": {
+      "correct": 0.034293747531495486,
+      "wrong": 0.17040360331277501,
+      "abs_diff": 0.13610985578127954,
+      "threshold_abs_gt": 0.02,
+      "detected": true
+    },
+    "NC2_omit_A": {
+      "max_partial_minus_covariant_operator": 0.79912,
+      "operator_threshold_gt": 0.005,
+      "response_cov": -0.025357180978182244,
+      "response_bare": 0.03429374753149531,
+      "response_abs_diff": 0.059650928509677556,
+      "response_threshold_gt": 0.01,
+      "operator_detected": true,
+      "response_detected": true,
+      "note": "on v2_positive the A-response is model-insensitive; the spin-Z position connection fixture is the response-level control"
+    },
+    "NC3_orbital_pseudospin": {
+      "physical": 0.034293747531495486,
+      "orbital_pseudospin": 0.31590558716066436,
+      "abs_diff": 0.28161183962916886,
+      "threshold_rel_gt": 0.05,
+      "detected": true
+    },
+    "NC4_no_SOC_zero_displacement": {
+      "direct": -5.102159806506916e-18,
+      "wilson_slope": 0.0,
+      "threshold_abs_lt": 1e-10,
+      "detected_zero": true
+    },
+    "NC5_pinned_round26_zero_D_baseline": {
+      "direct": -2.5575561729251158e-17,
+      "threshold_abs_lt": 1e-10,
+      "detected_zero": true,
+      "note": "pointwise Dxx identically zero on the pinned fixture (degenerate symmetry zero); used as an additional zero control"
+    }
+  },
+  "fail_closed": {
+    "min_det_abs": 0.9817052529451956,
+    "max_det_abs": 0.9823073485565951,
+    "det_in_(0.9,1.1)": true,
+    "gap_floor_eV": 0.02,
+    "no_crossing_asserted": true,
+    "note": "gap_scan raised on any gap below floor; Wilson dets tracked"
+  },
+  "two_band_anchor": {
+    "dirac_N41_direct_dperomega": 0.015236647006393517,
+    "dirac_N41_wilson_dperomega": 0.015182770723390034,
+    "frozen_csv_ref_direct_41": 0.015236647,
+    "review_ref_wilson_41": 0.0151827707,
+    "note": "reproduces the frozen round3 benchmark at printed precision"
+  },
+  "units": "reduced hbar=e=1; Zeeman b in eV; Dxx/omega in A/eV per BZ cell; slope via P=(a1/2pi)mean(gamma)",
+  "verdict": {
+    "verdict": "GO",
+    "go_for": "developing an authenticated material operator interface (NOT costly DFT/Wannier; no material IGMC value implied)",
+    "checks": {
+      "direct_wilson_41_rel<2%": true,
+      "gauge_invariance": true,
+      "negative_controls_detected": true,
+      "fail_closed": true
+    }
+  },
+  "elapsed_sec": 72.9
+}
