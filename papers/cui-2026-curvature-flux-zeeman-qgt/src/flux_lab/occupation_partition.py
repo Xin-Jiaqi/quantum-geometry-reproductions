@@ -12,12 +12,11 @@ observable weight. No metallic intraband, disorder, or SI interpretation.
 """
 from __future__ import annotations
 import numpy as np
-from .nonabelian_response import _cluster_data,cluster_interband_kubo
+from .nonabelian_response import _cluster_data
 from .causal_response import _fermi
 from .hexagonal_bz import hexagonal_bz_quadrature,hexagonal_symmetrized_model
 from .primitive_bz import primitive_cell_quadrature
 from .group_microscopic import build_group
-from .core import PAULI
 from .core import PAULI
 
 _PHYSICAL_SPIN=np.stack([np.kron(np.eye(2),s) for s in PAULI])
@@ -46,7 +45,6 @@ def pair_resolved(H,V,spin,*,mu=.13,temperature=.17,z=.071+.004j,
     neg=np.zeros((2,3),complex)
     min_gap=np.inf;min_detune=np.inf;resonant_count=0;resonant_max_df=0.
     transition_count=0
-    odd=np.zeros((2,3),complex)
     for n in range(len(e)):
         for m in range(len(e)):
             if labels[n]==labels[m]:continue
