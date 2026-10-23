@@ -1,0 +1,383 @@
+{
+  "channels": {
+    "b_then_e": {
+      "imag": -1.0655718726924625e-13,
+      "real": 1.8730301089506793
+    },
+    "e_then_b": {
+      "imag": -7.288078487773823e-16,
+      "real": -2.7085489354229333
+    },
+    "eb_decomposition_error": 3.608331127749526e-15,
+    "eb_non_electric_diag": {
+      "imag": 1.0249134712218764e-17,
+      "real": -1.8730863614077617
+    },
+    "electric_diag_pole": {
+      "imag": 1.0930203725542895e-15,
+      "real": -0.8354625740151685
+    },
+    "electric_diag_pole_residue": {
+      "imag": 3.3879222005349294e-18,
+      "real": -0.0025063877220455077
+    },
+    "eta_e_scaled_b_then_e": {
+      "imag": -3.1967156180773875e-16,
+      "real": 0.005619090326852038
+    },
+    "eta_e_scaled_e_then_b": {
+      "imag": -2.186423546332147e-18,
+      "real": -0.0081256468062688
+    },
+    "eta_e_scaled_full": {
+      "imag": -3.2185798535407093e-16,
+      "real": -0.002506556479416762
+    },
+    "eta_e_scaled_intraband_e_pole": {
+      "imag": 3.2790611176628687e-18,
+      "real": -0.0025063877220455055
+    },
+    "full": {
+      "imag": -1.0728599511802364e-13,
+      "real": -0.835518826472254
+    },
+    "output_regulator": {
+      "imag": 0.0,
+      "real": 0.004
+    },
+    "status": "SOURCE_HOMOGENEOUS_LG_SELECTED_E_POLE_AUDIT_NOT_FULL_DC_PHE"
+  },
+  "finite_omega_control": [
+    [
+      0.008,
+      {
+        "imag": -9.31828644138234e-05,
+        "real": -1.7691831729004412e-05
+      },
+      {
+        "imag": -0.00011195978163299463,
+        "real": -1.302498152337339e-05
+      }
+    ],
+    [
+      0.004,
+      {
+        "imag": -4.68592302709859e-05,
+        "real": -4.761761087368937e-06
+      },
+      {
+        "imag": -5.608476152945524e-05,
+        "real": -3.459208928496396e-06
+      }
+    ],
+    [
+      0.002,
+      {
+        "imag": -2.3547015080188888e-05,
+        "real": -1.1545435603540614e-06
+      },
+      {
+        "imag": -2.80895152686535e-05,
+        "real": -8.889576454470263e-07
+      }
+    ],
+    [
+      0.001,
+      {
+        "imag": -1.1844689724839978e-05,
+        "real": -2.362456811898754e-07
+      },
+      {
+        "imag": -1.4053206111794328e-05,
+        "real": -2.241485310564122e-07
+      }
+    ]
+  ],
+  "limits": {
+    "electric_selected_pole_only": "E diagonal population contribution isolated algebraically; E-offdiagonal + B-first also have output-pole effects and must not be silently omitted",
+    "joint_regulators": "Fixed finite eta_B path is not the joint eta_E/eta_B -> 0 source limit",
+    "no_physical_bath": "adiabatic infinitesimals are not a uniform scattering rate; Eq15 phenomenological tau substitution is not derived here",
+    "source_conflict": "SM Eq20 and printed Eq31 remain opposite with indexed v=i(e_m-e_n) r; source author intent unknown"
+  },
+  "model": "Homogeneous spin-Zeeman two-colour Dirac Liouville, independent Fermi Frechet derivative, source Eq20 literal contraction. No relaxation bath or transport dc claim.",
+  "ratio_scaled_full_to_eq20": {
+    "imag": 1.2840244565403357e-13,
+    "real": 1.0001182511356592
+  },
+  "regulator_paths": {
+    "etaB_equals_etaE": [
+      {
+        "eta_b": 0.008,
+        "eta_e": 0.008,
+        "scaled_B_then_E": {
+          "imag": -2.7337361308225948e-17,
+          "real": 0.003743360470854388
+        },
+        "scaled_E_then_B": {
+          "imag": 2.31680481068904e-18,
+          "real": -0.0062551971228710646
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 9.772879722875863e-19,
+          "real": -0.0025082731903656526
+        },
+        "scaled_full": {
+          "imag": -2.5020556497536906e-17,
+          "real": -0.0025118366520166763
+        }
+      },
+      {
+        "eta_b": 0.004,
+        "eta_e": 0.004,
+        "scaled_B_then_E": {
+          "imag": -5.870931101303056e-17,
+          "real": 0.0037454632559586675
+        },
+        "scaled_E_then_B": {
+          "imag": 7.292951577688522e-18,
+          "real": -0.00625312690213028
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 1.5826984311988922e-18,
+          "real": -0.002506767468802552
+        },
+        "scaled_full": {
+          "imag": -5.141635943534203e-17,
+          "real": -0.002507663646171612
+        }
+      },
+      {
+        "eta_b": 0.002,
+        "eta_e": 0.002,
+        "scaled_B_then_E": {
+          "imag": -2.362711991031426e-16,
+          "real": 0.0037459919093221885
+        },
+        "scaled_E_then_B": {
+          "imag": 2.8317222901782047e-19,
+          "real": -0.006252604768036114
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 3.400285745125083e-18,
+          "real": -0.002506387722045507
+        },
+        "scaled_full": {
+          "imag": -2.359880268741248e-16,
+          "real": -0.0025066128587139256
+        }
+      },
+      {
+        "eta_b": 0.001,
+        "eta_e": 0.001,
+        "scaled_B_then_E": {
+          "imag": -2.1309641837366632e-16,
+          "real": 0.0037461247222916787
+        },
+        "scaled_E_then_B": {
+          "imag": -1.2753559449379799e-17,
+          "real": -0.0062524735830801915
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 7.05515944871778e-18,
+          "real": -0.002506292232582384
+        },
+        "scaled_full": {
+          "imag": -2.258499778230461e-16,
+          "real": -0.0025063488607885128
+        }
+      }
+    ],
+    "etaB_ten_etaE": [
+      {
+        "eta_b": 0.08,
+        "eta_e": 0.008,
+        "scaled_B_then_E": {
+          "imag": -7.482405072895532e-19,
+          "real": 0.0006525052282727677
+        },
+        "scaled_E_then_B": {
+          "imag": 9.928650027181994e-19,
+          "real": -0.00324803555796915
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": -9.400924466716115e-20,
+          "real": -0.002561216324330104
+        },
+        "scaled_full": {
+          "imag": 2.446244954286461e-19,
+          "real": -0.0025955303296963826
+        }
+      },
+      {
+        "eta_b": 0.04,
+        "eta_e": 0.004,
+        "scaled_B_then_E": {
+          "imag": -1.3339766112415294e-18,
+          "real": 0.0006738080651467329
+        },
+        "scaled_E_then_B": {
+          "imag": 1.530967639057167e-18,
+          "real": -0.0032036332627143386
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 3.431582390494145e-19,
+          "real": -0.002521044785484333
+        },
+        "scaled_full": {
+          "imag": 1.9699102781563773e-19,
+          "real": -0.002529825197567606
+        }
+      },
+      {
+        "eta_b": 0.02,
+        "eta_e": 0.002,
+        "scaled_B_then_E": {
+          "imag": -1.758354739470312e-18,
+          "real": 0.0006792753108745978
+        },
+        "scaled_E_then_B": {
+          "imag": 3.8609001947768365e-19,
+          "real": -0.003191537853195639
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 3.0238974914635584e-19,
+          "real": -0.0025100450785587973
+        },
+        "scaled_full": {
+          "imag": -1.3722647199926281e-18,
+          "real": -0.0025122625423210413
+        }
+      },
+      {
+        "eta_b": 0.01,
+        "eta_e": 0.001,
+        "scaled_B_then_E": {
+          "imag": -5.773189175802431e-18,
+          "real": 0.0006806570605967464
+        },
+        "scaled_E_then_B": {
+          "imag": -2.453950434472225e-18,
+          "real": -0.0031884313182420866
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 1.2913046524482163e-18,
+          "real": -0.0025072161861000274
+        },
+        "scaled_full": {
+          "imag": -8.227139610274655e-18,
+          "real": -0.0025077742576453403
+        }
+      }
+    ],
+    "etaB_tenth_etaE": [
+      {
+        "eta_b": 0.0008,
+        "eta_e": 0.008,
+        "scaled_B_then_E": {
+          "imag": -4.461893316711005e-16,
+          "real": 0.0068105332076287845
+        },
+        "scaled_E_then_B": {
+          "imag": 3.53888137623438e-18,
+          "real": -0.009317764554937168
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 1.4462957681085015e-18,
+          "real": -0.0025068734438148214
+        },
+        "scaled_full": {
+          "imag": -4.4265045029486617e-16,
+          "real": -0.002507231347308384
+        }
+      },
+      {
+        "eta_b": 0.0004,
+        "eta_e": 0.004,
+        "scaled_B_then_E": {
+          "imag": -9.848312571855435e-16,
+          "real": 0.006811045185136604
+        },
+        "scaled_E_then_B": {
+          "imag": 1.3113856989563503e-17,
+          "real": -0.009317549487209642
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 2.92021508405331e-18,
+          "real": -0.002506414393475948
+        },
+        "scaled_full": {
+          "imag": -9.7171740019598e-16,
+          "real": -0.0025065043020730373
+        }
+      },
+      {
+        "eta_b": 0.0002,
+        "eta_e": 0.002,
+        "scaled_B_then_E": {
+          "imag": -8.04339672083303e-16,
+          "real": 0.006811173772796484
+        },
+        "scaled_E_then_B": {
+          "imag": 9.633485986747324e-20,
+          "real": -0.00931749523219785
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 6.4199450545673635e-18,
+          "real": -0.00250629893815443
+        },
+        "scaled_full": {
+          "imag": -8.042433372234355e-16,
+          "real": -0.0025063214594013656
+        }
+      },
+      {
+        "eta_b": 0.0001,
+        "eta_e": 0.001,
+        "scaled_B_then_E": {
+          "imag": -8.187644788382869e-15,
+          "real": 0.006811206114810478
+        },
+        "scaled_E_then_B": {
+          "imag": -2.2496211333963748e-17,
+          "real": -0.00931748169627623
+        },
+        "scaled_explicit_e_diag_pole": {
+          "imag": 1.2815648330118525e-17,
+          "real": -0.0025062698867707833
+        },
+        "scaled_full": {
+          "imag": -8.210140999716834e-15,
+          "real": -0.0025062755814657524
+        }
+      }
+    ]
+  },
+  "scientific_status": "PARTIAL",
+  "source_literal_eq20_physical_B": {
+    "imag": -4.8051934220040885e-20,
+    "real": -0.002506260111312342
+  },
+  "source_printed_eq31_physical_B": {
+    "imag": 4.8051934220040885e-20,
+    "real": 0.002506260111312342
+  },
+  "source_sign_discrepancy": {
+    "imag": -9.610386844008177e-20,
+    "real": -0.005012520222624684
+  },
+  "spec": {
+    "beta": 0.125,
+    "cutoff": 2.5,
+    "direction": "xy",
+    "eta_b": 0.001,
+    "eta_e": 0.003,
+    "helicity": "main",
+    "mu": 0.3,
+    "nphi": 88,
+    "nr": 64,
+    "omega_b": 0.0,
+    "omega_e": 0.0,
+    "temperature": 0.03
+  },
+  "version": "v74"
+}
