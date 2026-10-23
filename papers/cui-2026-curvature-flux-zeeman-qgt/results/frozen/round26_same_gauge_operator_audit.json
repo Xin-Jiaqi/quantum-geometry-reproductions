@@ -1,0 +1,23 @@
+{
+  "schema": "cui-round26-same-wannier-operator-contract-v1",
+  "paper_status": "PARTIAL",
+  "fractional_k": [
+    0.183,
+    -0.271
+  ],
+  "model": "synthetic 4-band spin x orbital SOC; no material-input authentication",
+  "units": {
+    "energy": "eV",
+    "length": "angstrom",
+    "spin": "dimensionless_pauli"
+  },
+  "wilson_finite_difference_dH_residual_max": 1.5099066441593718e-10,
+  "wilson_finite_difference_dS_residual_max": 5.828670879282072e-16,
+  "global_unitary_QGT_residual_max": 2.088607245176097e-15,
+  "wrong_spin_gauge_QGT_error_max": 0.1479256693770167,
+  "missing_connection_error_max": 0.26271798400914637,
+  "covariant_vertex_abs_max": 0.8164026249324332,
+  "spin_torque_commutator_abs_max": 0.44,
+  "actual_material_spin_verified": false,
+  "finite_frequency_metallic_KME": false
+}

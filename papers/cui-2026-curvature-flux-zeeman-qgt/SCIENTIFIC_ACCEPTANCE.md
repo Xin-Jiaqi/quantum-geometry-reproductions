@@ -119,3 +119,7 @@ Numerical BZ convergence remains **UNVERIFIED** and the original paper
 ## Round25 bounded k-dependent Bloch-spin Ward
 
 Static finite-T gauge-covariant Zeeman-current response, including \(-\kappa Tr[f(H) D_k S]\) explicit spin-current contact, is proposed for a synthetic periodic k-dependent basis/vertex and checked by independent finite-B and finite-k differences. Exact Kramers degeneracy is handled by existing Round24 Fréchet method. No finite-frequency metallic KME, true Wannier operator embedding or source-paper completion. [Protocol](ROUND25_COVARIANT_SPIN_EMBEDDING.md). Initial 213/213 Python 3.11/3.12 CI PASS (Actions 39877965441); adding one frozen audit regression for final 214-test gate.
+
+## Round26: Wannier-operator input gate (synthetic, restricted)
+
+The new [same-gauge operator contract](ROUND26_SAME_GAUGE_WANNIER_OPERATORS.md) checks explicit physical Pauli spin, H(R), position connection A(R), orbital-center consistency, Fourier derivatives, basis provenance declarations and independent Wilson/unitary QGT controls. It is a **synthetic method verification**, NOT a genuine Wannier .spn converter or authenticated physical-spin matrix for a real material. A falsified basis ID can pass metadata checks but yield a demonstrably wrong QGT: this is an explicit **physical negative control**, not a guarantee of automatic gauge discovery. No new original-paper figure, Eq.(19) SI material KME or finite-q conservation is accepted. **PAPER PARTIAL**. The prior Round21/Round25 accepted modules and audit remain unchanged.

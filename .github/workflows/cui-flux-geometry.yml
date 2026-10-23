@@ -43,3 +43,5 @@ jobs:
         run: python scripts/audit_degenerate_static_ward.py
       - name: Audit covariant k-dependent spin Ward (Round25)
         run: python scripts/audit_covariant_spin_ward.py
+      - name: Audit matched Wannier-gauge physical operators (Round26)
+        run: python scripts/audit_wannier_operator_contract.py

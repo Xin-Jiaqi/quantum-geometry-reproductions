@@ -220,3 +220,13 @@ Next required step is a realistic same-Wannier-gauge H, physical spin and positi
 - Explicit Zeeman current-vertex contact max = 0.0421665; population-only omission has error 0.0421665. The raw k derivative of the rotated Hamiltonian differs from the physical covariant velocity by 0.425737 in the chosen toy gauge.
 - With purely k-dependent gauge but k-independent physical spin, the **covariant** spin derivative/contact is zero. All values are synthetic natural-unit model checks, NOT real material or finite-frequency KME.
 - Frozen raw audit: results/frozen/round25_covariant_spin_ward_audit.json. Full source-paper reproduction **PARTIAL**.
+
+## Round26 | same-Wannier-gauge physical-operator prerequisite (2026-10-23)
+
+| Track | New bounded milestone | Still unresolved |
+|---|---|---|
+| **1. Paper reproduction** | A four-band SOC *synthetic* same-gauge operator input gate precedes existing Zeeman-QGT calculations; existing scientific baselines retained. **Full original Cui paper PARTIAL.** | Source Eq.(19) SI KME/material figures, original Table I and actual same-gauge material spin/position. |
+| **2. Physics capability** | Validated Fourier H/S/A, orbital embedding and units; independent Wilson finite-difference covariant dH/dS, projector QGT covariance; R/-R, physical spin torque and bad-gauge/missing-connection controls. | Declared matching gauge ID is **not** independent spin-provenance authentication; true material operator ingestion, finite-q EM Ward, collisions, metallic transport. |
+| **3. GitHub/CI** | Isolated Round26 13 new tests, executable audit, frozen synthetic JSON, scoped Physics Registry entry and Python 3.11/3.12 Cui CI audit step. CI/merge status must be recorded after checking actual jobs and logs. | No Round21 repeat, no rewriting the existing 214-case baseline, no inference of Cui tests from 1105 repository tests. |
+
+At fractional q=(.183,-.271), Wilson dH residual 1.51e-10 eV·Å; spin gradient 5.83e-16 Å; QGT covariance residual 2.09e-15; **wrong spin gauge** QGT discrepancy 0.148; **missing position connection** vertex error 0.263 eV·Å. All **synthetic**, not macroscopic KME.
