@@ -78,10 +78,9 @@ for key in ('local_dephasing_gibbs_stationarity_violation_max',
  assert report[key]>1e-3,(key,report[key])
 assert report['rk4_min_eigenvalue']>-1e-9
 ref_file=ROOT/'results/frozen/round29_thermal_lindblad_ward_audit.json'
-if ref_file.exists():
- ref=json.loads(ref_file.read_text())
- assert ref['schema']==report['schema'] and ref['paper_status']=='PARTIAL'
- for k,v in report.items():
-  if isinstance(v,float):
-   assert abs(v-ref[k])<3e-10,(k,v,ref[k])
+ref=json.loads(ref_file.read_text())
+assert ref['schema']==report['schema'] and ref['paper_status']=='PARTIAL'
+for k,v in report.items():
+ if isinstance(v,float):
+  assert abs(v-ref[k])<3e-10,(k,v,ref[k])
 print(json.dumps(report,indent=2))

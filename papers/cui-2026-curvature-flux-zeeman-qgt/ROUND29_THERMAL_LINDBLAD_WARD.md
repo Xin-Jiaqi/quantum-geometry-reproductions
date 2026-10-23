@@ -72,3 +72,17 @@ The executable audit is [audit_thermal_lindblad_ward.py](scripts/audit_thermal_l
 ## Hard limits
 
 This is **two sites**, **one normalized canonical particle**, and chosen GKSL matrices, not a translationally converged metal, quantum Boltzmann kinetic theory, Ward-Takahashi self-energy and vertex, nonlinear magnetoelectric Edelstein, finite-frequency Eq.(19) KME or original author's real-material calculation. It demonstrates a practical design tension in these two chosen toy baths, not an impossibility theorem. The earlier 257 Cui tests are preserved unchanged. New tests and actual Python 3.11/3.12 counts must come from GitHub logs, not this document.
+
+## First independent CI measured numbers (2026-10-23)
+
+The first GitHub-hosted CI model audit (Python 3.11) produced the frozen [raw Round29 JSON](results/frozen/round29_thermal_lindblad_ward_audit.json). The frozen-data test is added only *after* these values were observed, and the final isolated test target is **274 = 257 prior + 16 new + 1 frozen regression**, requiring successful Python 3.11 **and** 3.12 actual CI jobs.
+
+At β=0.8, γ_th=0.16, γ_loc=0.18 in the synthetic four-dimensional spin×site toy:
+
+- Canonical pairwise detailed balance residual **3.47e-18** and thermal GKSL Gibbs stationarity **3.69e-17**.
+- Onsite CP dephasing Gibbs violation **0.0232482** with positive initial canonical energy drift **0.0569797**.
+- A localized input has thermal-jump site bath source **0.0748172** while the global source cancels to **2.78e-17**. Site continuity **including** the source is exact; *omitting* it produces **0.0748172** false residual.
+- Jointly rotated jump matrices have U(1) covariance residual **8.18e-18**. Freezing the jumps yields **0.0108446** erroneous local gauge covariance; omitting the collision vertex produces pure-gauge residual **0.0178684**.
+- Independent finite-amplitude bath-vertex derivative residual **5.11e-13**; dense GKSL exponential vs RK4 **2.86e-10**, smallest evolved eigenvalue **0.0364169** (finite-time positivity in the tested example).
+
+The observed values certify this exact model protocol, not a material bath or a universal collision no-go. The source-paper status remains **PARTIAL**. The final CI status is recorded separately after both versions complete.

@@ -67,11 +67,16 @@ def thermal_transition_jumps(H,A,beta=.8,gamma=.16):
     This *postulated* bath coupling is not an electron-phonon derivation.
     """
     H=np.asarray(H,complex);A=np.asarray(A,complex)
+    if (H.ndim!=2 or H.shape[0]!=H.shape[1] or H.shape[0]<2 or
+        not np.all(np.isfinite(H)) or not np.allclose(H,H.conj().T,atol=1e-12,rtol=0)):
+        raise ValueError("finite Hermitian nondegenerate bath Hamiltonian required")
     if A.shape!=H.shape or not np.all(np.isfinite(A)) or not np.allclose(A,A.conj().T,atol=1e-12):
         raise ValueError("finite same-basis Hermitian bath coupling required")
     if not np.isfinite(beta) or beta<=0 or not np.isfinite(gamma) or gamma<0:
         raise ValueError("positive beta, finite nonnegative gamma required")
     e,U=np.linalg.eigh(H)
+    if np.min(np.diff(e))<=1e-9:
+        raise ValueError("degenerate bath spectrum requires invariant cluster jumps")
     B=U.conj().T@A@U;n=len(e)
     rates=np.zeros((n,n))
     jumps=[]

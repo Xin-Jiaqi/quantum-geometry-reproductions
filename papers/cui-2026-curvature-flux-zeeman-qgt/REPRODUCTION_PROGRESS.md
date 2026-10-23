@@ -264,3 +264,7 @@ Initial isolated Cui remote CI: Python 3.11/3.12 **256/256 PASS**, independent a
 | **3. GitHub** | Round29 isolated code/tests/audit, scoped Physics Registry, explicit negative controls and full pre-existing Cui CI matrix. Final test count and acceptance determined from exact remote logs. | Round21,26–28 and parallel numerical BZ PR #65 left unchanged. |
 
 Derivation: [Round29 scope](ROUND29_THERMAL_LINDBLAD_WARD.md). Full source Cui paper **PARTIAL**.
+
+### Round29 first frozen-audit checkpoint
+
+The first remote 273-case test and audit run exposed the finite two-site bath tradeoff without changing original Cui physics: KMS pair residual 3.47e-18; Gibbs thermal-jump stationarity 3.69e-17; local CP dephasing Gibbs failure 0.023248; thermal bath site-charge source 0.074817; gauge-stale jumps false covariance 0.010845; omission of bath vertex false pure-gauge residual 0.017868. Newly frozen data and one numerical regression increase the final requested package count to **274**. Final merge requires real dual-version CI on the exact SHA. **Whole source paper remains PARTIAL.**

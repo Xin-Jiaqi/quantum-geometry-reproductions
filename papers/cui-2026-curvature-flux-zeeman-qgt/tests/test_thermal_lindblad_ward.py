@@ -145,6 +145,36 @@ class ThermalLindbladWard(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'gamma'):local_lindblad(P,gamma=-.1)
   with self.assertRaises(ValueError):thermal_transition_jumps(H,A,beta=-.1)
   with self.assertRaises(ValueError):thermal_transition_jumps(H,np.ones((3,3)))
+  with self.assertRaisesRegex(ValueError,'degenerate'):thermal_transition_jumps(np.zeros((4,4)),A)
+  with self.assertRaisesRegex(ValueError,'Hermitian'):thermal_transition_jumps(H+1j*np.eye(4),A)
   with self.assertRaisesRegex(ValueError,'gauge'):gauge_rotate(H,np.ones((4,4)),.2)
   with self.assertRaisesRegex(ValueError,'jumps'):dissipator(H,np.zeros((1,3,3)))
+ def test_frozen_remote_round29_numeric_gates(self):
+  import json
+  from pathlib import Path
+  frozen=json.loads((Path(__file__).resolve().parents[1]/
+      "results/frozen/round29_thermal_lindblad_ward_audit.json").read_text())
+  self.assertEqual(frozen["schema"],"cui-round29-lindblad-local-charge-vs-thermal-balance-v1")
+  self.assertEqual(frozen["paper_status"],"PARTIAL")
+  rho,local,bath,rates,e=setup()
+  X=P[0]/2
+  phi=.39
+  rotated=gauge_rotate(X,G,phi)
+  actual={
+    "thermal_gibbs_stationarity_abs_max":float(np.max(abs(dissipator(rho,bath)))),
+    "local_dephasing_gibbs_stationarity_violation_max":
+        float(np.max(abs(dissipator(rho,local)))),
+    "local_dephasing_gibbs_energy_drift":
+        float(np.trace(H@dissipator(rho,local)).real),
+    "thermal_bath_local_charge_source_abs_max":
+        float(max(abs(np.trace(p@dissipator(X,bath))) for p in P)),
+    "wrong_stale_jump_gauge_error_max":
+        float(np.max(abs(dissipator(rotated,bath)-
+                              gauge_rotate(dissipator(X,bath),G,phi)))),
+    "wrong_omitted_bath_vertex_gauge_error_max":
+        float(np.max(abs(dissipator(comm(rho),bath)))),
+  }
+  for key,value in actual.items():
+   self.assertAlmostEqual(value,frozen[key],delta=3e-10,msg=key)
+
 if __name__=='__main__':unittest.main()
