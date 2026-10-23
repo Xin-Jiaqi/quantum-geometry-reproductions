@@ -99,10 +99,9 @@ for key in ("interaction_vs_noninteracting_occupation_max",
 assert report['number_sector_sizes']==[1,4,6,4,1]
 assert report['fermionic_occupation_min']>0 and report['fermionic_occupation_max']<1
 freeze=ROOT/'results/frozen/round30_interacting_fock_bath_audit.json'
-if freeze.exists():
- expected=json.loads(freeze.read_text())
- assert expected['schema']==report['schema'] and expected['paper_status']=="PARTIAL"
- for key,value in report.items():
-  if isinstance(value,float):
-   assert abs(value-expected[key])<2e-9,(key,value,expected[key])
+expected=json.loads(freeze.read_text())
+assert expected['schema']==report['schema'] and expected['paper_status']=="PARTIAL"
+for key,value in report.items():
+ if isinstance(value,float):
+  assert abs(value-expected[key])<2e-9,(key,value,expected[key])
 print(json.dumps(report,indent=2,ensure_ascii=False))

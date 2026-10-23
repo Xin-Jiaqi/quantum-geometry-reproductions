@@ -166,4 +166,38 @@ class InteractingFockThermalBath(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'charge gauge'):
    unitary_phase(d['H'],np.ones((16,16)),.2)
 
+ def test_frozen_round30_independent_physical_regression(self):
+  import json
+  from pathlib import Path
+  ref=json.loads((Path(__file__).resolve().parents[1]/
+      "results/frozen/round30_interacting_fock_bath_audit.json").read_text())
+  self.assertEqual(ref["schema"],"cui-round30-interacting-four-mode-fermionic-kms-ward-v1")
+  self.assertEqual(ref["paper_status"],"PARTIAL")
+  d,t,rho=setup()
+  X=np.zeros((16,16),complex);X[3,3]=1.
+  bal=local_charge_balance(d,X,t["jumps"])
+  bare=fock_soc_hubbard(interaction=0,cross=0)
+  rb=grand_gibbs(bare["H"],bare["N"],beta=BETA,mu=MU)
+  vals=np.array([np.trace(n@rho).real for n in d["occupations"]])
+  vals0=np.array([np.trace(n@rb).real for n in bare["occupations"]])
+  p=sector_gibbs_weights(t["energies"],t["numbers"],beta=BETA,mu=MU)
+  actual={
+    "grand_KMS_pair_residual_max":
+        float(np.max(abs(t["rates"]*p[None,:]-t["rates"].T*p[:,None]))),
+    "grand_gibbs_GKSL_stationarity_max":
+        float(np.max(abs(dissipator(rho,t["jumps"])))),
+    "interaction_vs_noninteracting_occupation_max":
+        float(np.max(abs(vals-vals0))),
+    "local_bath_source_abs_max":
+        float(np.max(abs(bal["bath_source"]))),
+    "wrong_omitted_bath_source_local_continuity_max":
+        float(np.max(abs(bal["density_rate"]+
+            np.array([bal["current"],-bal["current"]])))),
+    "sitewise_continuity_with_bath_source_max":
+        float(np.max(abs(bal["continuity"]))),
+  }
+  self.assertEqual(len(t["jumps"]),ref["number_conserving_kms_jump_count"])
+  for name,val in actual.items():
+   self.assertAlmostEqual(val,ref[name],delta=2e-9,msg=name)
+
 if __name__=='__main__':unittest.main()

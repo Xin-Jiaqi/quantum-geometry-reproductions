@@ -110,3 +110,18 @@ python scripts/audit_interacting_fock_bath.py
 ## Not accepted
 
 No microscopic phonon or disorder bath correlation function, Fermi-golden-rule electronic collision integral derived from a material, Ward-Takahashi self-energy/vertex ladder, conserving finite-q metallic KME, real-source Wannier physical spin+position provenance, thermodynamic BZ limit, SI units, original Table I or Eq.(19). All computed values are **finite, interacting, synthetic many-electron diagnostics**. **Whole source paper PARTIAL.**
+
+## Remote first-pass numerical evidence and frozen regression (2026-10-23)
+
+The first PR Actions [39899779828](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/runs/39899779828) passed **291/291 Cui tests** in both Python 3.11 and 3.12, including the standalone Round30 audit and all prior scripts. This first run provided the independent raw [frozen Round30 JSON](results/frozen/round30_interacting_fock_bath_audit.json). The final branch adds **one mandatory regression** and promotes the audit reference to required input. Hence exact final remote acceptance needs **292/292 tests** plus all audits in both interpreters.
+
+For beta=0.83, mu=0.16, gamma=0.14, U=0.48 and V=0.19, **all synthetic Fock natural units**:
+- Exactly **54 within-number-sector jumps**, number sector sizes (1,4,6,4,1), exact CAR and Pauli blocked hopping residual **0**.
+- Interactions change orbital occupations relative to noninteracting Fermi oracle by **0.0759840**; actual occupations lie between **0.367963** and **0.551128**.
+- Grand-canonical pair KMS residual **1.73e-18**; interacting Gibbs bath stationarity **2.36e-17**.
+- Total particle-number bath source on arbitrary density **7.17e-18** and N² bath source **5.94e-18**, while local site bath source on the selected double-occupied state is **0.2711908**. Thus omitting the bath source produces false local continuity error **0.2711908**; with the source, sitewise continuity residual **0**.
+- Independent orbital Kronecker Liouville vs direct looped GKSL **2.43e-17**.
+- Correct joint U(1) jump covariance **6.13e-18**; frozen jumps produce **0.00347651** error; omitting gauge bath contact **0.00898266**; finite-difference gauge contact **3.34e-13**.
+- Static physical Zeeman equilibrium collision differentiation residual **7.33e-11**; omitting B-dependent bath contact produces **0.00556326** false stationarity error.
+
+Neither these positive nor negative controls establish unique mu thermalization or a conserving *material* KME. Full Cui paper remains **PARTIAL**.
