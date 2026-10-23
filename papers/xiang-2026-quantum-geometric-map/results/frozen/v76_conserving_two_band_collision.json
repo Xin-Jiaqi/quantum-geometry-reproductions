@@ -1,0 +1,156 @@
+{
+  "Bz_consistent_mixed": {
+    "analytic_magnetic_derivative": {
+      "imag": -0.25454784024741894,
+      "real": 0.3567981052213774
+    },
+    "collision_vertex_drive_norm": 0.519457657973008,
+    "equilibrium_collision_ward_residual": 1.5412974625246306e-10,
+    "field_equilibrium_collision_defect_at_zero": 9.708198244655322e-17,
+    "frozen_collision_derivative": {
+      "imag": -0.26294650489968285,
+      "real": 0.2775543546305666
+    },
+    "full_difference_error": 3.710181624569036e-11,
+    "independent_five_point": {
+      "imag": -0.2545478402782297,
+      "real": 0.35679810524204725
+    },
+    "linear_at_B0": {
+      "imag": -0.13093135944025758,
+      "real": 0.12628856853479967
+    },
+    "missing_collision_vertex_error": 0.07968757480560058
+  },
+  "bx_frozen_collision_no_go": {
+    "analytic_coherent_identity_residual": 4.576481969663748e-16,
+    "finite_B_derivative_residual": 7.90752826101323e-08,
+    "frozen_B_stationarity_defect": 0.34674934991441,
+    "required_collision_contact_norm": 0.34674934991441,
+    "required_contact_total_trace": {
+      "imag": 5.7777898331617076e-34,
+      "real": -3.469446951953614e-18
+    }
+  },
+  "coherent": {
+    "b_then_e": {
+      "imag": 2.7033430431385546e-15,
+      "real": 1.1049350948365171e-15
+    },
+    "e_then_b": {
+      "imag": -2.9629076969683865e-15,
+      "real": -1.3149203947904198e-15
+    },
+    "local_harmonic_1": {
+      "imag": 0.800529765767064,
+      "real": -0.056942446022221836
+    },
+    "local_mixed_norm": 7.282044091097086,
+    "total": {
+      "imag": -1.249000902703301e-16,
+      "real": -3.191891195797325e-16
+    },
+    "trace_second": {
+      "imag": 2.220446049250313e-16,
+      "real": 1.3322676295501878e-15
+    }
+  },
+  "coherent_spec": {
+    "energy": 0.4,
+    "eta_b": 0.03,
+    "eta_e": 0.04,
+    "gamma": 0.07,
+    "mass": 0.21,
+    "mu": 0.08,
+    "n": 16,
+    "omega_b": 0.18,
+    "omega_e": 0.13,
+    "pure_phi": 0.0,
+    "temperature": 0.14
+  },
+  "fixed_lab_ring_nonelastic": {
+    "conduction_spread": 0.17570986568379462,
+    "fixed_radius_not_elastic": true,
+    "status": "REJECT_FIXED_LAB_RING_FOR_SOURCE_BX_ELASTIC_SCATTERING",
+    "valence_spread": 0.17570986568379457
+  },
+  "gauge_local_harmonic": {
+    "imag": 0.8005297657670636,
+    "real": -0.056942446022221906
+  },
+  "independent_dense_local_harmonic": {
+    "imag": 0.8005297657670637,
+    "real": -0.05694244602222158
+  },
+  "population_independent_spectral": {
+    "-1": {
+      "imag": 0.0,
+      "real": 1.510553191266756
+    },
+    "1": {
+      "imag": 0.0,
+      "real": 9.45183373479417
+    }
+  },
+  "population_per_band": {
+    "-1": {
+      "imag": 0.0,
+      "real": 1.5105531912667605
+    },
+    "1": {
+      "imag": 0.0,
+      "real": 9.451833734794173
+    }
+  },
+  "population_spec": {
+    "beta": 0.125,
+    "energies": [
+      0.3,
+      0.6
+    ],
+    "eta_b": 0.03,
+    "eta_e": 0.04,
+    "gamma": 0.07,
+    "mu": 0.19,
+    "n": 16,
+    "omega_b": 0.18,
+    "omega_e": 0.13,
+    "pure_phi": 0.0,
+    "temperature": 0.16
+  },
+  "population_total": {
+    "imag": 0.0,
+    "real": 10.962386926060933
+  },
+  "pure_dephasing_no_go": {
+    "local_harmonic_difference": {
+      "imag": -0.20513474063399484,
+      "real": 0.056960339930602004
+    },
+    "local_harmonic_phi": {
+      "imag": 0.5953950251330692,
+      "real": 1.789390838016769e-05
+    },
+    "local_harmonic_zero_phi": {
+      "imag": 0.800529765767064,
+      "real": -0.056942446022221836
+    },
+    "population_L_error": 0.0,
+    "spin_difference": {
+      "imag": 4.9873299934333204e-18,
+      "real": 0.06819878869577245
+    },
+    "spin_phi": {
+      "imag": 2.6020852139652106e-18,
+      "real": -1.1430438956767244
+    },
+    "spin_zero_phi": {
+      "imag": -2.3852447794681098e-18,
+      "real": -1.2112426843724968
+    }
+  },
+  "scientific_status": "VERIFIED_NAMED_TWO_BAND_MODELS_NOT_ORIGINAL_SOURCE_COMPLETE",
+  "scope": "band-resolved elastic Boltzmann, untilted-coherent CP Lindblad; Bz controlled collision vertex NOT Xiang spin-Bx PHE",
+  "source_science": "PARTIAL",
+  "version": "v76"
+}
