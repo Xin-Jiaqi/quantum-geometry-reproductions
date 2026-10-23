@@ -18,7 +18,6 @@
       "PASS": "E POTCAR absent (private; assembled at execution)"
     },
     "2253_bilayer_baseline": {
-      "FAIL": "C INCAR_relax INCOMPATIBLE",
       "PASS": "E POTCAR absent (private; assembled at execution)"
     },
     "2253_generic_m008_m019": {
