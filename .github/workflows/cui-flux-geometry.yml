@@ -49,3 +49,5 @@ jobs:
         run: python scripts/audit_finite_q_gauge_ward.py
       - name: Audit locally conserving charge collision and Zeeman gauge (Round28)
         run: python scripts/audit_conserving_collision.py
+      - name: Audit GKSL thermal balance and local bath charge Ward (Round29)
+        run: python scripts/audit_thermal_lindblad_ward.py

@@ -254,3 +254,17 @@ At q=(1,1) on the 3×3 torus, z_drive=.42+.09i: spectral vs Liouville 3.73e-15, 
 ### Round28 measured first dual-interpreter acceptance
 
 Initial isolated Cui remote CI: Python 3.11/3.12 **256/256 PASS**, independent audit successful. Reported gamma=0.12 benchmark: scalar density 0.1041668, scalar current 0.0389254, independent Liouville residual 2.59e-15, pure-gauge current 1.15e-15, wrong global RTA charge-Ward violation 0.01171157, and missing gauge-reference spurious current 0.02747677. The finalized frozen numerical regression brings the expected suite to **257**; final status must be inspected in GitHub Actions independently before merging. Full Cui source **PARTIAL**.
+
+## Round29 | Canonical thermal GKSL versus local charge conservation (2026-10-23)
+
+| Track | Independently testable bounded milestone | Remaining |
+|---|---|---|
+| **1. Cui paper reproduction** | Compare two explicit CP toy baths and expose which Ward/source terms each supports; not a published Eq.(19) real-material or experimental response. **Full paper PARTIAL.** | Microscopic electron/phonon/disorder self-energy and conserving vertex, fermionic metallic occupations, SI response, original Table I and materials. |
+| **2. Physics capability** | Local GKSL dephasing conserves onsite bath charge but is not finite-T Gibbs preserving; canonical KMS pair-transition GKSL preserves Gibbs but creates a local bath source. Joint jump/H gauge covariance and explicit bath-vertex finite difference distinguish correct and stale jump bases. | Only two-site one-particle canonical synthetic baths; no thermodynamic limit, actual material scattering or current vertex reconstruction. |
+| **3. GitHub** | Round29 isolated code/tests/audit, scoped Physics Registry, explicit negative controls and full pre-existing Cui CI matrix. Final test count and acceptance determined from exact remote logs. | Round21,26–28 and parallel numerical BZ PR #65 left unchanged. |
+
+Derivation: [Round29 scope](ROUND29_THERMAL_LINDBLAD_WARD.md). Full source Cui paper **PARTIAL**.
+
+### Round29 first frozen-audit checkpoint
+
+The first remote 273-case test and audit run exposed the finite two-site bath tradeoff without changing original Cui physics: KMS pair residual 3.47e-18; Gibbs thermal-jump stationarity 3.69e-17; local CP dephasing Gibbs failure 0.023248; thermal bath site-charge source 0.074817; gauge-stale jumps false covariance 0.010845; omission of bath vertex false pure-gauge residual 0.017868. Newly frozen data and one numerical regression increase the final requested package count to **274**. Final merge requires real dual-version CI on the exact SHA. **Whole source paper remains PARTIAL.**
