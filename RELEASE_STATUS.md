@@ -383,3 +383,12 @@ Replaces scalar gamma with exact energy-dependent two semi-infinite elastic lead
 - **VERIFIED** separately regulated electric/magnetic response insertions and BOTH ordering paths; exact finite-q charge Ward and k-frame covariance; spectral eigenpair vs independent dense Sylvester; separate equilibrium magnetic population channel and its convergence to independent v72 dB.
 - **CONDITIONAL** finite-q chosen transverse midpoint current, collisionless input regulators and explicitly opt-in equilibrium static-B preparation. **UNRESOLVED** original author's selected electric 1/eta_E pole, true homogeneous dissipative spin PHE, full orbital magnetic Wannier/MNHE and SM sign/factor/3-band and SI plot issues. Original Xiang paper **PARTIAL**.
 - Final documentation-only commits made after verified merge CI modify no v73 science source, tests or numeric frozen evidence. Portable handoff independent snapshot is scientifically tested but not declared byte-identical to every remote Git blob.
+
+
+### v74 | original selected electric-pole source algebra and path audit (2026-10-23; pending PR/main CI)
+
+- Independent analytic Fermi-matrix Fréchet + k-derivative Liouvillian calculation of **the same source-defined homogeneous Dirac SM Eq15/20** previously reproduced by v50; explicit segregation of selected E-intraband pole, E->B remainder and B->E order. **No claim this is a newly discovered pole or a complete dc PHE.**
+- etaE=.003 etaB=.001 normalized B physical spin source: etaE BE +.005619090327, etaE EB -.008125646806, total **-.002506556479** versus independently contracted literal SM Eq20 -.002506260111; printed Eq31 remains +.002506260111, unresolved source sign inconsistency.
+- Three distinct joint etaB/etaE trajectories and finite real electric frequency negative controls. Extra six-source comparators invoke original v49/v50 authoritative implementation on the **full GitHub repository**.
+- 45 new source-algebra physics tests + 1 frozen-data regeneration **46/46 PASS independently**; six v49/v50 comparisons on standalone v60+ package are **SKIPPED**, not passed. Final full repository PR CI and independent post-merge main CI are mandatory and not yet certified.
+- **VERIFIED** declared two-band source E pole decomposition, **CONDITIONAL** adiabatic regulator paths/selected phenomenological tau prescription, **UNRESOLVED** actual transport bath, source Eq20/31 sign, original opposite spin helicities, orbital MNHE/full magnetic Wannier, Fig2 SI. Original paper **PARTIAL**.

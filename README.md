@@ -224,3 +224,8 @@ New [v63 physics report](papers/xiang-2026-quantum-geometric-map/docs/QWZ_NONINV
 ### v73: independent two-color finite-q spin-Zeeman Liouville and static B preparation
 
 [Detailed source-qualified v73 science](papers/xiang-2026-quantum-geometric-map/docs/TWO_COLOR_FINITE_Q_SPIN_PREPARATION_V73.md). Both magnetic-then-electric and electric-then-magnetic insertions with separate omegaE+i etaE / omegaB+i etaB poles, exact finite-q charge Ward and two numerically independent spectral/Sylvester implementations. Collisionless static omegaB→0 lacks diagonal Fermi population derivative; separate **explicitly labeled equilibrated-static-B protocol** restores the v72 analytic magnetic derivative as etaB→0. Original paper's **selected etaE tau pole, full homogeneous spin PHE and orbital MNHE are NOT reproduced**. Source status **PARTIAL**.
+
+
+### v74 | Published SM selected electric-pole decomposition and sign-boundary audit
+
+[Scientific report](papers/xiang-2026-quantum-geometric-map/docs/SELECTED_ELECTRIC_POLE_SOURCE_AUDIT_V74.md). This is a **source-scoped independent extension of existing v50**, not a first discovery of the published Eq15/20 electric pole. Independently analytic Fermi Fréchet and differentiated magnetic Liouvillian separate the selected electric intraband 1/etaE source, E->B other terms and B->E path. Strong B/E pathway cancellation is essential: etaE-weighted +.005619090327 and -.008125646806 sum to **-.002506556479**, approaching direct literal SM Eq20 **-.002506260111** under joint regulator removal. Printed SM Eq31 still gives the opposite sign. Original Xiang PRB overall **PARTIAL**.

@@ -302,3 +302,16 @@ v67 has 45 new physical + 1 frozen tests, standalone v60–v67 **265/265 local P
 | Original spin PHE / orbital MNHE, physical SI | Source Eq20/31 spin index/helicity, orbital Eq49/52 and 3-band, full Wannier B shift, magnetization/transport and Fig2 | **UNRESOLVED; original source PARTIAL** |
 
 45 physical gates and independent full frozen-numeric regeneration gate. See [v73 report](TWO_COLOR_FINITE_Q_SPIN_PREPARATION_V73.md).
+
+
+## v74 | Original SM Eq15 selected electric pole, two ordering cancellations
+
+| Gate | Verification | Scientific scope |
+| --- | --- | --- |
+| Homogeneous source Dirac E/B two-color | Independent analytic Fermi Fréchet electric derivative and exact magnetic Liouvillian k derivative, both response insertion orders | **VERIFIED named source-algebra model**, not microscopic tau bath |
+| Electric input selected intraband pole | Explicit D_b f_n=f'_n v^b_nn, output resolvent and E->B complement; exact channel decomposition | **VERIFIED algebraically**, other channels need not individually be regular as etaSigma->0 |
+| Joint regulator removal | etaB/etaE=.1,1,10 paths, etaE=.008->.001, etaE*full tends to independent SM Eq20 literal signed current; finite omegaE negative control | **VERIFIED sampled paths**, universal limit-order exchange unproved |
+| Original source v49/v50 independent comparator | Separate pre-existing finite k difference source implementation and literal SM Eq20/31 integrals, U1/physical spin helicity retained | **CROSS-ORACLE dependent on complete GitHub repository v49/v50**, six explicit tests |
+| Original published dc spin PHE and orbital MNHE | Eq31 sign, main/SM helicity, phenomenological tau collision mechanism, Fig2 SI and orbital multi-band Wannier sectors | **UNRESOLVED, paper PARTIAL** |
+
+45 new model physics gates + 1 independent frozen numeric regeneration; six full-repo v49/v50 source cross-oracles are skipped in portable v60+ handoff, not claimed local PASS. See [v74 report](SELECTED_ELECTRIC_POLE_SOURCE_AUDIT_V74.md).
