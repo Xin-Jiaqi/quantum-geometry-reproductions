@@ -35,7 +35,11 @@ if [ -z "${VASP:-}" ] || [ -z "${W90:-}" ]; then
 fi
 export OMP_NUM_THREADS=1
 
-mkdir -p phase0_run && cd phase0_run
+# Fail closed on re-submission. Never re-use old .spn/.eig/.amn/.mmn
+# from a previous attempt: each Slurm job gets an isolated directory.
+RUN_DIR="$STD/phase0_run_${SLURM_JOB_ID:-manual}"
+[ ! -e "$RUN_DIR" ] || { echo "FATAL: run directory already exists: $RUN_DIR (no duplicate run)"; exit 1; }
+mkdir "$RUN_DIR" && cd "$RUN_DIR"
 echo "== [P0.a] SOC 静态 (ISYM=-1, 9x9x1 -> 81 k 全 BZ; CHGCAR 供接口) =="
 cp "$STD/INCAR_soc" INCAR
 cp "$STD/KPOINTS" KPOINTS
