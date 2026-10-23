@@ -1,4 +1,6 @@
 # BD36 SOC + VASP6 native W90 interface (IMR target)
+# NOTE: LWRITE_SPN (VASP > 6.4.2 only) always writes a FORMATTED .spn and
+# auto-adds 'spn_formatted = .true.' to the win; no LSPN_FMTED keyword.
 SYSTEM   = 2253_generic_m008_m019 soc w90 interface (vasp6)
 PREC     = Accurate
 ENCUT    = 500
@@ -14,6 +16,7 @@ ISYM     = -1
 LWANNIER90 = .TRUE.
 LWRITE_SPN  = .TRUE.
 LWRITE_UNK  = .FALSE.
+KPAR     = 1
 IBRION   = -1
 NSW      = 0
 EDIFF    = 1E-6

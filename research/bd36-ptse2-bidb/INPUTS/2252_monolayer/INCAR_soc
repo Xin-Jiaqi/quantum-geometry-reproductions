@@ -9,6 +9,7 @@ LNONCOLLINEAR = .TRUE.
 LSORBIT  = .TRUE.
 SAXIS    = 0 0 1
 MAGMOM   = 0 0 0.02 0 0 0.02 0 0 0.02
+ISYM     = -1
 IBRION   = -1
 NSW      = 0
 EDIFF    = 1E-6

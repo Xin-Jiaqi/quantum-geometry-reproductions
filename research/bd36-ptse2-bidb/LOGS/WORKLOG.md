@@ -74,3 +74,28 @@ No production compute submitted. PR #99 updated with per-item PASS/FAIL.
 官方核实：VASP wiki LWRITE_SPN 仅 >6.4.2（para 5.4.4 官方不支持 → 第 0 步裁决意义上升）；
 .spn 格式经 wannierberri 生产解析器 + wannier90 conv_write_spn 源码确认。
 新增 PARA_STEP0_SCHEME.md（第 0 步独立作业方案）。
+
+## R1.3（2026-10-23，READ_ONLY）Phase 0 提交前修正
+
+1. **read_spn.py 三角存储方向修复**：官方格式（wannier90 conv_write_spn + VASP2WAN90_v2_fix
+   mlwf.F 源码）按 (m 外循环, n=1..m 内循环) 顺序存储**上三角元素 S[n,m]（n≤m）**、3 分量
+   依次排列。旧 np.tril_indices 下三角槽位会**错误共轭非对角复数元素**（σ_y 变 −σ_y）。
+   改为上三角槽位 + Hermite 补全（= wannierberri 约定）。**独立符号测试**（非自循环）：
+   手工构造官方格式 σ_y 夹具断言 M[0,1]=−i；旧方向给 +i（判别器实证）。
+   **新增 binary (unformatted) .spn 解析**：Fortran 顺序记录帧（头记录 + nbnd/nk 记录 +
+   每 k 点 complex128[3·ntri]），auto 检测按"第 2 行是否为 nbnd nk"判定。
+2. **para VaspWannier 补丁核查（非 strings 判定）**：来源 = Chengcheng-Xiao/VASP2WAN90_v2_fix
+   （vasp.5.4.4.pl2_w90，2022-04-06）。源码事实：LWRITE_SPN **仅串行**（NCPU≠1 静默跳过；
+   CALC_SPN_EXP "only works in serial"）；**LSPN_FMTED** 默认 .FALSE.→binary、TRUE→ASCII
+   （2ES26.16）；存储上三角。VASP wiki：原生 LWRITE_SPN 仅 >6.4.2 且恒 formatted。
+3. **SOC/接口一致性修复**：INCAR_soc（预处理）加 **ISYM=−1** → 与接口同一完整 81 k 全 BZ，
+   消除 ISYM 导致的 k 列表不一致；两 w90 变体加 **KPAR=1**；vasp544 加 **LSPN_FMTED=.TRUE.**
+   （ASCII .spn）并注明串行约束；vasp6 注明原生恒 formatted（无 LSPN_FMTED）。
+   检查器新增：INCAR_soc ISYM=−1、w90 KPAR=1、vasp544 LSPN_FMTED、vasp6 无 LSPN_FMTED、
+   ISPIN=2/MAGMOM 3n 兼容、.sbatch 卫生扫描。LWRITE_UNK=F → **UNK 非必需产物**（验收清单
+   只含 .eig/.amn/.mmn/.spn）。
+4. **Phase 0 完整可执行单作业**：INPUTS/2253_bilayer_baseline/**phase0_step0.sbatch**
+   （a 静态→b 提取 81 k→c -pp→d 接口串行→e 真实验收；EXIT-1..10 退出条件；bash -n 与
+   卫生检查通过）。PARA_STEP0_SCHEME.md 更新至 R1.3。
+测试：run_tests.py **21/21 PASS**（新增 binary .spn、4-band official、ISYM/LSPN 反例、
+phase0 脚本语法+卫生）。

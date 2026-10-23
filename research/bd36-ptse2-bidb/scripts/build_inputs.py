@@ -97,6 +97,7 @@ LNONCOLLINEAR = .TRUE.
 LSORBIT  = .TRUE.
 SAXIS    = 0 0 1
 MAGMOM   = {magmom}
+ISYM     = -1
 IBRION   = -1
 NSW      = 0
 EDIFF    = 1E-6
@@ -113,6 +114,8 @@ GGA_COMPAT = .FALSE.
 """
 
 INCAR_SOC_W90_VASP6 = """# BD36 SOC + VASP6 native W90 interface (IMR target)
+# NOTE: LWRITE_SPN (VASP > 6.4.2 only) always writes a FORMATTED .spn and
+# auto-adds 'spn_formatted = .true.' to the win; no LSPN_FMTED keyword.
 SYSTEM   = {tag} soc w90 interface (vasp6)
 PREC     = Accurate
 ENCUT    = {encut}
@@ -128,6 +131,7 @@ ISYM     = -1
 LWANNIER90 = .TRUE.
 LWRITE_SPN  = .TRUE.
 LWRITE_UNK  = .FALSE.
+KPAR     = 1
 IBRION   = -1
 NSW      = 0
 EDIFF    = 1E-6
@@ -144,8 +148,12 @@ GGA_COMPAT = .FALSE.
 """
 
 INCAR_SOC_W90_VASP544 = """# BD36 SOC + VaspWannier(v5.4.4) W90 interface (para variant)
-# NOTE: LWANNIER90/LWRITE_SPN keywords verified present in this build's binary,
-# but end-to-end .spn output NOT yet validated -> in-place validation job first.
+# NOTE: VaspWannier 5.4.4 interface = VASP2WAN90_v2_fix patch family
+# (Chengcheng-Xiao/VASP2WAN90_v2_fix, vasp.5.4.4.pl2_w90).
+#  * LWRITE_SPN is SERIAL-ONLY in this patch (WDES%COMM%NCPU==1 required;
+#    silently skipped otherwise) -> run this step with 1 MPI rank (srun -n 1).
+#  * LSPN_FMTED=.TRUE. -> ASCII .spn; default (.FALSE.) -> unformatted binary.
+#  * end-to-end .spn output NOT yet validated -> in-place validation job first.
 SYSTEM   = {tag} soc w90 interface (vasp544)
 PREC     = Accurate
 ENCUT    = {encut}
@@ -160,7 +168,9 @@ NBANDS   = {nbands}
 ISYM     = -1
 LWANNIER90 = .TRUE.
 LWRITE_SPN  = .TRUE.
+LSPN_FMTED  = .TRUE.
 LWRITE_UNK  = .FALSE.
+KPAR     = 1
 IBRION   = -1
 NSW      = 0
 EDIFF    = 1E-6
@@ -175,7 +185,6 @@ NCORE    = 4
 LASPH     = .TRUE.
 GGA_COMPAT = .FALSE.
 """
-
 W90_WIN = """# BD36 {tag} wannier90.win (spinors; .spn via VASP LWRITE_SPN, NOT spin=true)
 num_wann = {num_wann}
 num_bands = {nbands}
@@ -285,7 +294,17 @@ def sd_flags(n, kind):
 
 
 def main():
+    _keep = []
     if OUT.exists():
+        # snapshot EVERYTHING not regenerated (top-level extras like
+        # CONVERGENCE_TABLE.md, per-structure extras like phase0_step0.sbatch)
+        _GEN = {"POSCAR", "POSCAR_SD", "INCAR_relax", "INCAR_soc",
+                "INCAR_soc_w90_vasp6", "INCAR_soc_w90_vasp544", "KPOINTS",
+                "PBS_draft.pbs", "sbatch_draft.sh", "README", "wannier90.win",
+                "caps.json", "manifest.json"}
+        for _f in OUT.rglob("*"):
+            if _f.is_file() and _f.name not in _GEN:
+                _keep.append((_f.relative_to(OUT), _f.read_bytes()))
         shutil.rmtree(OUT)
     OUT.mkdir()
     manifest = {}
@@ -341,6 +360,11 @@ def main():
         }
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True))
     (OUT / "caps.json").write_text(json.dumps(CAPS, indent=2, sort_keys=True))
+    # restore non-generated extras AFTER the build loop (dirs now exist)
+    for _rel, _data in _keep:
+        _dst = OUT / _rel
+        _dst.parent.mkdir(parents=True, exist_ok=True)
+        _dst.write_bytes(_data)
     print(json.dumps(manifest, indent=2, sort_keys=True))
 
 

@@ -118,6 +118,25 @@ def main():
     rc, out = sh(["read_spn.py", str(bad)])
     results.append(("read_spn rejects bad header", rc != 0, rc, out))
 
+    # binary (unformatted) .spn parse: 4-band sigma_y via official packing
+    sys.path.insert(0, str(HERE))
+    import numpy as np
+    from read_spn import (official_binary_spn, official_text_spn,
+                          SX4, SY4, SZ4, parse_spn)
+    nbnd4 = 4
+    mats4 = np.zeros((1, nbnd4, nbnd4, 3), dtype=complex)
+    mats4[0, :, :, 0] = SX4
+    mats4[0, :, :, 1] = SY4
+    mats4[0, :, :, 2] = SZ4
+    (LOGS / "r13_spn_4band_binary.spn").write_bytes(official_binary_spn(mats4))
+    (LOGS / "r13_spn_4band_official.spn").write_text(official_text_spn(mats4))
+    rc, out = sh(["read_spn.py", str(LOGS / "r13_spn_4band_binary.spn"), "1"])
+    ok = rc == 0 and "hermitian" in out
+    results.append(("read_spn parses BINARY .spn (auto-detect)", ok, rc, out))
+    rc, out = sh(["read_spn.py", str(LOGS / "r13_spn_4band_official.spn"), "1"])
+    ok = rc == 0 and "hermitian" in out
+    results.append(("read_spn parses FORMATTED 4-band official", ok, rc, out))
+
     # U2 make_win_kpoints
     rc, out = sh(["make_win_kpoints.py", str(LOGS / "test_kpoints_official_ibzkpt")])
     results.append(("win-kpts rejects VASP Cartesian example", rc != 0, rc, out))
@@ -182,14 +201,37 @@ def main():
     rc, out = sh(["static_check_inputs.py", "--inputs", str(neg_tree("neg_budget500", mut_budget))])
     results.append(("neg: total-cap 500 (unphased) detected", rc != 0, rc, out))
 
+    def mut_isym(dst):
+        f = dst / "2253_bilayer_baseline" / "INCAR_soc"
+        f.write_text(f.read_text().replace("ISYM     = -1\n", ""))
+    rc, out = sh(["static_check_inputs.py", "--inputs", str(neg_tree("neg_no_isym", mut_isym))])
+    results.append(("neg: INCAR_soc missing ISYM=-1 detected", rc != 0, rc, out))
+
+    def mut_lspn(dst):
+        f = dst / "2253_bilayer_baseline" / "INCAR_soc_w90_vasp544"
+        f.write_text(f.read_text().replace("LSPN_FMTED  = .TRUE.\n", ""))
+    rc, out = sh(["static_check_inputs.py", "--inputs", str(neg_tree("neg_no_lspn", mut_lspn))])
+    results.append(("neg: vasp544 missing LSPN_FMTED detected", rc != 0, rc, out))
+
+    # phase0 script: bash syntax + hygiene (no internal absolute paths)
+    r = subprocess.run(["bash", "-n",
+                        str(INPUTS / "2253_bilayer_baseline" / "phase0_step0.sbatch")],
+                       capture_output=True, text=True)
+    results.append(("phase0_step0.sbatch bash syntax OK", r.returncode == 0,
+                    r.returncode, r.stderr))
+    txt = (INPUTS / "2253_bilayer_baseline" / "phase0_step0.sbatch").read_text()
+    import re as _re
+    rc = 1 if _re.search(r"/(home|share|Users|work|scratch)/", txt) else 0
+    results.append(("phase0_step0.sbatch hygiene (no internal paths)", rc == 0, rc, ""))
+
     def mut_gga(dst):
         f = dst / "2253_bilayer_baseline" / "INCAR_relax"
         f.write_text(f.read_text().replace("GGA_COMPAT = .FALSE.", "GGA_COMPAT = .TRUE."))
     rc, out = sh(["static_check_inputs.py", "--inputs", str(neg_tree("neg_gga_compat", mut_gga))])
     results.append(("neg: GGA_COMPAT=.TRUE. detected", rc != 0, rc, out))
 
-    bad = section("U1/U2/U3 unit + regression", results[:10])
-    bad += section("S1/S2 checker positive + negative", results[10:])
+    bad = section("U1/U2/U3 unit + regression", results[:12])
+    bad += section("S1/S2 checker positive + negative", results[12:])
     print(f"\nTOTAL: {len(results) - bad}/{len(results)} PASS")
     sys.exit(1 if bad else 0)
 

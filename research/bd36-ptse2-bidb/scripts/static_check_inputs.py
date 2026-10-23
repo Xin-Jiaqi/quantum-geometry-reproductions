@@ -172,6 +172,20 @@ def main():
             else:
                 fail(f"B win atom count {len(win_atoms)} != POSCAR {n}")
         # --- C. INCARs ---
+        if (d / "INCAR_soc").exists():
+            t = parse_incar(d / "INCAR_soc")
+            okc = True
+            okc &= bool_of(t.get("LNONCOLLINEAR", "F"))
+            okc &= bool_of(t.get("LSORBIT", "F"))
+            okc &= t.get("ISPIN", "0") == "2"
+            okc &= t.get("SAXIS", "") == "0 0 1"
+            mm = t.get("MAGMOM", "").split()
+            okc &= len(mm) == 3 * n and all(v == "0.02" for v in mm[2::3])
+            okc &= t.get("ISYM", "0") == "-1"   # full 81-k mesh == interface
+            okc &= bool_of(t.get("LASPH", "F"))
+            okc &= t.get("GGA_COMPAT", "TRUE").strip(".") == "FALSE"
+            ok("C INCAR_soc compatible (ISPIN=2, MAGMOM 3n, ISYM=-1, "
+               "LASPH/GGA_COMPAT)") if okc else fail("C INCAR_soc INCOMPATIBLE")
         if (d / "INCAR_relax").exists():
             t = parse_incar(d / "INCAR_relax")
             okc = True
@@ -201,7 +215,8 @@ def main():
             okc &= len(mm) == 3 * n
             if "w90" in inc:
                 okc &= t.get("NBANDS", "0").isdigit() and int(t.get("NBANDS", 0)) >= nw
-                okc &= t.get("ISYM", "-1") == "-1"
+                okc &= t.get("ISYM", "-1") == "-1"   # full 81-k mesh
+                okc &= t.get("KPAR", "1") == "1"
             okc &= str(t.get("IVDW", "")).isdigit() and int(t.get("IVDW", 0)) >= 10
             if "w90" in inc:
                 okc &= bool_of(t.get("LWANNIER90", "F"))
@@ -209,6 +224,13 @@ def main():
                 if "WANNIER90_WIN" in t:
                     okc = False
                     fail("C embedded WANNIER90_WIN present (incompatible)")
+            if inc == "INCAR_soc_w90_vasp544":
+                # VaspWannier patch: LSPN_FMTED=.TRUE. -> ASCII .spn; WRITE_SPN
+                # is serial-only (NCPU==1) - document in script
+                okc &= t.get("LSPN_FMTED", "FALSE").strip(".").upper() == "TRUE"
+            if inc == "INCAR_soc_w90_vasp6":
+                # VASP>6.4.2 native: always formatted; LSPN_FMTED must be absent
+                okc &= "LSPN_FMTED" not in t
             ok(f"C {inc} compatible") if okc else fail(f"C {inc} INCOMPATIBLE")
         # --- D. resources ---
         wall_h = 2
@@ -221,7 +243,7 @@ def main():
         # --- E. hygiene ---
         bad_paths = []
         for f in d.iterdir():
-            if f.suffix in (".sh", ".pbs", ".py") or f.name == "README":
+            if f.suffix in (".sh", ".pbs", ".sbatch", ".py") or f.name == "README":
                 txt = f.read_text(errors="replace")
                 if re.search(r"/(home|share|Users|work|scratch)/", txt):
                     bad_paths.append(f.name)

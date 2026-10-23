@@ -1,15 +1,27 @@
-# BD36 | para 第 0 步：就地接口验证作业方案（PARA_STEP0_SCHEME.md, R1.2）
+# BD36 | para 第 0 步：就地接口验证作业方案（PARA_STEP0_SCHEME.md, rev R1.3）
 
 > 单独交付（R1.2 要求）。严格 READ_ONLY 期间**只提交方案，不提交作业**；批准后由
 > 授权执行（1 作业，Phase 0 = **56 核时**：28 核 × ≤2 h，`sbatch` 一次）。
 
-## 0. 背景与裁决目标（R1.2 官方核实后）
+## 0. 背景与裁决目标（R1.3 补丁源码核实，非 strings 判定）
 
-- VASP wiki（2024-10 版）确认 `LWRITE_SPN` **仅 VASP > 6.4.2 提供**，且只支持默认
-  `SAXIS = 0 0 1`（我们的 INCAR 恰为默认值 ✓）。
-- para 的 VASP 5.4.4（VaspWannier 自定义构建）**官方不支持** LWRITE_SPN；其二进制
-  strings 含 LWRITE_SPN 关键字（R1.1 实证），但 HgI2 基准目录**从未跑出任何输出**
-  （无 eig/amn/mmn/UNK/.spn）→ **端到端从未验证**。
+- **补丁来源已确认**：para 的 "VaspWannier" = [Chengcheng-Xiao/VASP2WAN90_v2_fix]
+  (https://github.com/Chengcheng-Xiao/VASP2WAN90_v2_fix) 补丁族（`mlwf.F`/
+  `wave_high.F`，目标 `vasp.5.4.4.pl2_w90`，2022-04-06 版）。.spn 功能由该补丁
+  2020-06-25 加入。**关键源码事实**：
+  - `WRITE_SPN` **仅串行**：`IF (WRITE_SPN .AND. WDES%COMM%NCPU.NE.1) WRITE_SPN=.FALSE.`
+    （静默跳过！）；`CALC_SPN_EXP` 注释 "This routine only works in serial"。
+  - **LSPN_FMTED**（补丁 INCAR 关键字，默认 `.FALSE.`）：`FALSE` → `.spn` 为
+    **unformatted (binary)**（头记录 + `nbnd nk` 记录 + 每 k 点 complex128 记录）；
+    `TRUE` → **formatted ASCII**（`2ES26.16`，每三角元素 3 分量连续）。
+  - 存储方向：`spn_n_loop DO N=1,NB_TOT / spn_m_loop DO M=1,N /
+    spin_mat(NI,s)=SPN(M,N,s)` → 按 (m 外循环, n=1..m) 顺序存储**上三角元素
+    S[n,m]（n≤m）**、3 分量依次排列（read_spn.py R1.3 已按此修正并经独立
+    σ_y 符号测试验证：M[0,1]=−i 判别，旧方向会给 +i）。
+  - VASP wiki（2024-10）确认原生 `LWRITE_SPN` **仅 VASP > 6.4.2**（VASP 6 原生
+    恒为 formatted，自动在 win 加 `spn_formatted = .true.`；无 LSPN_FMTED）。
+- para 的二进制 strings 含 LWRITE_SPN 等关键字与上述补丁一致（补充证据），但
+  HgI2 基准目录**从未跑出任何输出**（无 eig/amn/mmn/UNK/.spn）→ **端到端从未验证**。
 - 第 0 步 = **一次 2253 基准的最小化全链作业**，裁决：para 能否产出可被
   `read_spn.py`（R1.2 重写版）解析的正确 .spn。
   - **通过** → 走方案 A 完成 Round-1（Phase 1 = 448 核时）；
@@ -17,20 +29,20 @@
     WSL（6.6.0）原生 LWRITE_SPN 路径，para 仅承担 SOC 静态部分。
 
 ## 1. 作业内容（单作业，2253_bilayer_baseline，9×9×1 全 BZ = 81 k）
+执行脚本：`INPUTS/2253_bilayer_baseline/phase0_step0.sbatch`（完整可执行；批准后
+`sbatch` 一次，28 核 × ≤2 h = ≤56 核时）。
 
-| 阶段 | 输入 | 说明 | 预期产物 | 校验（脚本） |
-|---|---|---|---|---|
-| a | INCAR_soc + KPOINTS(9 9 1) | SOC 静态（LSORBIT, SAXIS 默认, ISYM=1 收敛用 / −1 接口用） | CHGCAR, OUTCAR（含实际 k 列表） | `make_win_kpoints.py OUTCAR` → k 计数/顺序/权重 |
-| b | wannier90.win（kpoints 块由 a 生成） | `wannier90.x -pp`（3.0.0，需 MKL+MPI 环境） | *.win 展开（含 kpoints 块） | diff 与 a 的 k 列表一致 |
-| c | INCAR_soc_w90_vasp544（LWANNIER90=T, LWRITE_SPN=T, ISYM=−1） | VASP 接口 | .eig .amn .mmn **.spn** UNK | `read_spn.py <seed>.spn 81`：头 `nbnd nk`、Bloch 基、Hermite、维数 (81,64,64,3) |
-| d | （可选）wannier90.x 主运行 | 插值 hr.dat | hr 插值误差报告 | 插值误差 < 1e-5 量级 |
+| 阶段 | 内容 | 预期产物 | 校验 / 退出条件 |
+|---|---|---|---|
+| a | SOC 静态（INCAR_soc：ISYM=−1 → **与接口同一完整 81 k 全 BZ**，CHGCAR 供接口） | CHGCAR, OUTCAR | EXIT-1/2：静态失败、OUTCAR 无 k 列表 |
+| b | `make_win_kpoints.py OUTCAR` → win kpoints 块 | kpoints_block.txt | EXIT-3/4：提取失败、k 计数≠81 |
+| c | 组装 win（去占位 kpoints 块 + 追加生成块）→ `wannier90.x -pp` | wannier90.win 展开 + kpt 文件 | EXIT-5：-pp 失败（MPI/MKL 环境） |
+| d | 接口（INCAR_soc_w90_vasp544：LWANNIER90+LWRITE_SPN+**LSPN_FMTED=.TRUE.**+ISYM=−1+KPAR=1；**单 MPI rank 串行**——补丁约束） | .eig .amn .mmn **.spn** | EXIT-6/7：接口失败、OUTCAR 无 "SPN calculated"（串行未生效则静默跳过） |
+| e | 真实验收 | — | EXIT-8/9/10：必需产物缺失（**UNK 非必需**，LWRITE_UNK=F）、`read_spn.py` 拒绝（维数须 (81,64,64,3)、Hermite）、接口 k 列表≠win kpoints |
 
-- **墙钟预算**：28 核并行，SOC 静态 ≤1 h + 接口 ≤1 h → 单作业 ≤2 h = 56 核时。
-- **失败退出条件**（任一命中即停，不继续烧核时）：
-  1. OUTCAR 无 k 列表 / k 数与 81 不符；
-  2. 接口作业未生成 .spn（或尺寸 ≠ (81,64,64,3)）；
-  3. `read_spn.py` 报格式错误（头解析失败 / 非实对角 / 行数不匹配）；
-  4. wannier90.x -pp 或主运行 MPI-init 失败（登录节点已见 PMPI_Init 中止）。
+- **墙钟预算**：静态 28 核 ≤1 h；接口 1 核串行 ≤1 h → 单作业 ≤2 h = 56 核时。
+- **k 一致性（R1.3 修复）**：预处理与接口 **均 ISYM=−1**，同为 81 k 全 BZ；win kpoints
+  块由预处理 OUTCAR 生成，接口实际 k 列表与其 diff 一致（EXIT-10）。
 
 ## 2. 环境装配（批准后执行时）
 

@@ -1,6 +1,10 @@
 # BD36 SOC + VaspWannier(v5.4.4) W90 interface (para variant)
-# NOTE: LWANNIER90/LWRITE_SPN keywords verified present in this build's binary,
-# but end-to-end .spn output NOT yet validated -> in-place validation job first.
+# NOTE: VaspWannier 5.4.4 interface = VASP2WAN90_v2_fix patch family
+# (Chengcheng-Xiao/VASP2WAN90_v2_fix, vasp.5.4.4.pl2_w90).
+#  * LWRITE_SPN is SERIAL-ONLY in this patch (WDES%COMM%NCPU==1 required;
+#    silently skipped otherwise) -> run this step with 1 MPI rank (srun -n 1).
+#  * LSPN_FMTED=.TRUE. -> ASCII .spn; default (.FALSE.) -> unformatted binary.
+#  * end-to-end .spn output NOT yet validated -> in-place validation job first.
 SYSTEM   = 2253_bilayer_baseline soc w90 interface (vasp544)
 PREC     = Accurate
 ENCUT    = 500
@@ -15,7 +19,9 @@ NBANDS   = 64
 ISYM     = -1
 LWANNIER90 = .TRUE.
 LWRITE_SPN  = .TRUE.
+LSPN_FMTED  = .TRUE.
 LWRITE_UNK  = .FALSE.
+KPAR     = 1
 IBRION   = -1
 NSW      = 0
 EDIFF    = 1E-6
