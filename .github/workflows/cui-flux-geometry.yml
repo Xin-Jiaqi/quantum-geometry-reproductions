@@ -51,3 +51,5 @@ jobs:
         run: python scripts/audit_conserving_collision.py
       - name: Audit GKSL thermal balance and local bath charge Ward (Round29)
         run: python scripts/audit_thermal_lindblad_ward.py
+      - name: Audit interacting fermionic Fock KMS collision and magnetic vertex (Round30)
+        run: python scripts/audit_interacting_fock_bath.py
