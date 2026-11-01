@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "reviewed": "2026-11-01",
+  "meaning": "MODEL_READY means independently verified named model/protocol; not complete paper or material reproduction",
+  "capabilities": [
+    {
+      "id": "nmee",
+      "name": "NMEE",
+      "directory": "papers/jia-2026-nonlin-magnetoelectric-edelstein",
+      "source": "https://doi.org/10.1103/r3x2-kb93",
+      "citation": "PRL 136, 226302 (2026)",
+      "status": "MODEL_READY",
+      "capability": "E × B → spin magnetization; full finite-frequency multiband/PT response",
+      "pythonpath": ".",
+      "example": "examples/use_dynamic.py",
+      "documentation": "README.md",
+      "apis": [
+        "nmee_lab.evaluate_dynamic",
+        "nmee_lab.evaluate_clean",
+        "nmee_lab.evaluate_insulating_static"
+      ],
+      "units": "H: eV; k: nm^-1; dynamic response: (nm V T)^-1 for s/mu_B",
+      "limits": [
+        "Named AC/static/printed protocols are separate; no completed intrinsic metallic DC extraction",
+        "Same-gauge physical spin and position connection required"
+      ],
+      "expected_tests": 38
+    },
+    {
+      "id": "spin",
+      "name": "Spin transport",
+      "directory": "papers/xiang-2025-spin-quantum-geometry",
+      "source": "https://doi.org/10.1103/14mp-263q",
+      "citation": "PRL 135, 146303 (2025)",
+      "status": "MODEL_READY",
+      "capability": "E / E² → spin polarization and conventional spin current",
+      "pythonpath": ".",
+      "example": "scripts/reproduce_core.py",
+      "documentation": "README.md",
+      "apis": [
+        "methods.response.SpinModel",
+        "methods.response.response_at_k",
+        "methods.response.integrate_response"
+      ],
+      "units": "e=hbar=1; physical spin sigma/2; BZ measure d2k/(2pi)^2",
+      "limits": [
+        "Full finite-frequency result is not automatically isolated tau^0",
+        "Conventional spin current is not generally conserved with spin-orbit torque"
+      ],
+      "expected_tests": 76
+    },
+    {
+      "id": "magnetotransport",
+      "name": "Magnetotransport",
+      "directory": "papers/xiang-2026-quantum-geometric-map",
+      "source": "https://doi.org/10.1103/kd12-4ycj",
+      "citation": "PRB 113, L201406 (2026)",
+      "status": "MODEL_READY",
+      "capability": "Spin/orbital PHE and MNHE in the declared paper-model protocols",
+      "pythonpath": "src",
+      "example": "scripts/reproduce_core.py",
+      "documentation": "README.md",
+      "apis": [
+        "qgmap.spin_multiband_v5.four_band_audit",
+        "qgmap.orbital_phe_v4.orbital_phe_eq56",
+        "qgmap.orbital_mnhe_v5.orbital_mnhe_3d",
+        "qgmap.orbital_geometry_v54.band_geometry"
+      ],
+      "units": "Per-channel normalization: see JSON; natural units and selected SI bridges are distinct",
+      "limits": [
+        "General multiband orbital positional shift is not completed",
+        "Finite-device conductance is not interchangeable with bulk mixed E/B response"
+      ],
+      "expected_tests": 1214
+    },
+    {
+      "id": "curvature-flux",
+      "name": "Curvature–Flux",
+      "directory": "papers/cui-2026-curvature-flux-zeeman-qgt",
+      "source": "https://doi.org/10.48550/arXiv.2604.09725",
+      "citation": "arXiv:2604.09725v3 (preprint)",
+      "status": "MODEL_READY",
+      "capability": "Zeeman geometry, Dirac flux/winding, interband GHE/KME",
+      "pythonpath": "src",
+      "example": "scripts/reproduce_core.py",
+      "documentation": "README.md",
+      "apis": [
+        "flux_lab.core.qgt_eigen",
+        "flux_lab.core.flux_circle_from_qgt",
+        "flux_lab.causal_response.interband_kubo",
+        "flux_lab.causal_response.source_kme_expansion"
+      ],
+      "units": "hbar=1; source omega=-drive omega; source KME observable sigma/2",
+      "limits": [
+        "Whole Table I not certified; use physical model symmetry checks",
+        "Interband response excludes full metallic intraband/collision response"
+      ],
+      "expected_tests": 375
+    },
+    {
+      "id": "igmc",
+      "name": "IGMC",
+      "directory": "papers/xiang-2025-intrinsic-gyrotropic-magnetic-current",
+      "source": "https://doi.org/10.1103/PhysRevLett.134.116301",
+      "citation": "PRL 134, 116301 (2025)",
+      "status": "MODEL_READY",
+      "capability": "Rashba/Dirac conduction and displacement magnetic current",
+      "pythonpath": "src",
+      "example": "scripts/reproduce_core.py",
+      "documentation": "CORE_ACCESS.md",
+      "apis": [
+        "igmc_lab.core.pair_kernels",
+        "igmc_lab.core.dirac_response",
+        "igmc_lab.fermi_contour.integrate_contour",
+        "igmc_lab.core.physical_response_si"
+      ],
+      "units": "H: eV; k: Angstrom^-1; explicit Hz/rad/s; plotted SI coefficient A/(m T)",
+      "limits": [
+        "Two-band nondegenerate, nonresonant model scope",
+        "Author Fig2(d) amplitude and complete Eq14 convention remain unresolved"
+      ],
+      "expected_tests": 76
+    }
+  ]
+}

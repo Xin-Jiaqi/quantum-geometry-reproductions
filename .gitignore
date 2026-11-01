@@ -19,3 +19,5 @@ OUTCAR
 *.vasp
 private/
 secrets/
+# New reusable-study outputs; checked-in paper references remain tracked.
+outputs/
