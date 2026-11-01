@@ -1,0 +1,14 @@
+{
+  "citation": "10.1103/14mp-263q",
+  "tau_ps": 0.5,
+  "beta_meV": 10.0,
+  "delta_meV": 40.0,
+  "fig1a_Drude_max_mesh_difference": 2.862293735361732e-17,
+  "fig1a_intrinsic_max_mesh_difference": 9.056899788516606e-19,
+  "status": "printed model curves recomputed; absolute SI axis not accepted; intrinsic reduced Eq13 only",
+  "display_multipliers": {
+    "fig1a_intrinsic": 100,
+    "fig1b_intrinsic": 1000
+  },
+  "multipliers_reason": "same visibility multipliers explicitly used in the paper; not amplitude fits"
+}

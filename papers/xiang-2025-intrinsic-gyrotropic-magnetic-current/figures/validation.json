@@ -1,0 +1,226 @@
+{
+  "generated_by": "scripts/plot_main_figures.py",
+  "parameters": {
+    "source": "Xiang et al. PRL 134 116301 (2025)",
+    "conventions": {
+      "e": 1,
+      "hbar": 1,
+      "spin_operator": "Pauli sigma, as printed H1=-g*mu_B*B*sigma",
+      "zeeman_amplitude": "g*mu_B factored out of response sigma",
+      "frequency": "hbar omega energy units in code; figure SI normalization not yet validated",
+      "integration_measure": "d^2k/(2pi)^2",
+      "temperature_K": 0,
+      "chemical_potential_eV": 0,
+      "eta_eV": 0,
+      "resp_protocol": "paper-defined-low-frequency with independent finite-omega test"
+    },
+    "rashba": {
+      "lambda_eV_angstrom": 0.6,
+      "mass_over_m_e": 1.1,
+      "hbar_sq_over_2m_e_eV_angstrom2": 3.80998212,
+      "continuum": true,
+      "k_cutoff_inv_angstrom": 0.5
+    },
+    "dirac": {
+      "beta_eV": 0.25,
+      "a_angstrom": 1.0,
+      "vF_eV_angstrom": 0.825,
+      "M_eV_angstrom2": 0.1,
+      "omega_caption_Hz": 1000000000000,
+      "hbar_omega_for_synthetic_test_eV": 0.001,
+      "BZ": "[-pi/a,pi/a)^2",
+      "mesh": "midpoint periodic NxN"
+    },
+    "figure_data_source": "author figures only, no published numeric arrays; no digitized values yet"
+  },
+  "scope": "main Figs1/2 model diagnostics, not calibrated paper SI axes",
+  "rashba_quadrature_max_error": 1.0312862942377446e-05,
+  "rashba_heatmap": "radius below 0.023 angstrom^-1 masked for display; color limited to +/-30; NPZ also retains raw kernels",
+  "dirac_heatmap": "color limits at 99.5% absolute-value quantile; NPZ retains unclipped data",
+  "dirac_mesh": 181,
+  "convergence_table": "../results/raw/dirac_convergence.csv",
+  "recomputed_convergence": [
+    {
+      "case": "Dirac_C_insulator",
+      "mu_eV": 0,
+      "N": 51,
+      "sigmaC": 3.8841634297131026e-08,
+      "sigmaD_over_omega": 4.2684468459252463e-20,
+      "Re_Kubo": 1.2818966893097717e-07,
+      "Im_Kubo": -7.836601631190882e-21
+    },
+    {
+      "case": "Dirac_C_insulator",
+      "mu_eV": 0,
+      "N": 101,
+      "sigmaC": 2.0104995123007088e-14,
+      "sigmaD_over_omega": 3.265041735001931e-20,
+      "Re_Kubo": 8.934716935754157e-08,
+      "Im_Kubo": 1.438552730574581e-20
+    },
+    {
+      "case": "Dirac_C_insulator",
+      "mu_eV": 0,
+      "N": 151,
+      "sigmaC": -1.9944184504471915e-17,
+      "sigmaD_over_omega": 1.5581394144118684e-19,
+      "Re_Kubo": 8.934714916882722e-08,
+      "Im_Kubo": -1.5330326758007398e-20
+    },
+    {
+      "case": "Dirac_C_insulator",
+      "mu_eV": 0,
+      "N": 201,
+      "sigmaC": 0.0,
+      "sigmaD_over_omega": 2.198407018885981e-20,
+      "Re_Kubo": 8.934714926365057e-08,
+      "Im_Kubo": 6.61239611149299e-21
+    },
+    {
+      "case": "Dirac_C_insulator",
+      "mu_eV": 0,
+      "N": 301,
+      "sigmaC": -6.525000343841716e-17,
+      "sigmaD_over_omega": -7.873183445234192e-20,
+      "Re_Kubo": 8.93471492437655e-08,
+      "Im_Kubo": 1.1107863727280685e-20
+    },
+    {
+      "case": "Dirac_D_insulator",
+      "mu_eV": 0,
+      "N": 51,
+      "sigmaC": -4.695291530517771e-19,
+      "sigmaD_over_omega": 0.015234220368111104,
+      "Re_Kubo": 1.7073787383700985e-19,
+      "Im_Kubo": 1.5234330922929964e-05
+    },
+    {
+      "case": "Dirac_D_insulator",
+      "mu_eV": 0,
+      "N": 101,
+      "sigmaC": -4.353388980002574e-19,
+      "sigmaD_over_omega": 0.015234078035779145,
+      "Re_Kubo": 4.1357195310024453e-19,
+      "Im_Kubo": 1.523418858767426e-05
+    },
+    {
+      "case": "Dirac_D_insulator",
+      "mu_eV": 0,
+      "N": 151,
+      "sigmaC": -8.180231925662309e-19,
+      "sigmaD_over_omega": 0.01523407803570312,
+      "Re_Kubo": 1.1686045608089013e-19,
+      "Im_Kubo": 1.5234188587598004e-05
+    },
+    {
+      "case": "Dirac_D_insulator",
+      "mu_eV": 0,
+      "N": 201,
+      "sigmaC": -2.4182477207745793e-19,
+      "sigmaD_over_omega": 0.015234078035703157,
+      "Re_Kubo": -1.3190442113315887e-19,
+      "Im_Kubo": 1.5234188587598043e-05
+    },
+    {
+      "case": "Dirac_D_insulator",
+      "mu_eV": 0,
+      "N": 301,
+      "sigmaC": 2.524320295281313e-19,
+      "sigmaD_over_omega": 0.015234078035703156,
+      "Re_Kubo": 7.474929029716509e-20,
+      "Im_Kubo": 1.5234188587598134e-05
+    },
+    {
+      "case": "Dirac_C_metal",
+      "mu_eV": 0.85,
+      "N": 51,
+      "sigmaC": -0.08059303509147696,
+      "sigmaD_over_omega": 1.4939563960738362e-19,
+      "Re_Kubo": -0.08059304461494304,
+      "Im_Kubo": -2.167570663946414e-21
+    },
+    {
+      "case": "Dirac_C_metal",
+      "mu_eV": 0.85,
+      "N": 101,
+      "sigmaC": -0.08055233157225218,
+      "sigmaD_over_omega": 1.6325208675009654e-20,
+      "Re_Kubo": -0.08055234107512267,
+      "Im_Kubo": 1.5262369568563713e-20
+    },
+    {
+      "case": "Dirac_C_metal",
+      "mu_eV": 0.85,
+      "N": 151,
+      "sigmaC": -0.08055553244638912,
+      "sigmaD_over_omega": 1.9476742680148354e-20,
+      "Re_Kubo": -0.0805555419508851,
+      "Im_Kubo": -1.4740698805776344e-20
+    },
+    {
+      "case": "Dirac_C_metal",
+      "mu_eV": 0.85,
+      "N": 201,
+      "sigmaC": -0.08063281380116015,
+      "sigmaD_over_omega": -1.0992035094429906e-20,
+      "Re_Kubo": -0.08063282333236198,
+      "Im_Kubo": 5.785846597556367e-21
+    },
+    {
+      "case": "Dirac_C_metal",
+      "mu_eV": 0.85,
+      "N": 301,
+      "sigmaC": -0.08078041359107169,
+      "sigmaD_over_omega": -1.930002167508771e-20,
+      "Re_Kubo": -0.0807804231733624,
+      "Im_Kubo": 2.751760902893365e-21
+    },
+    {
+      "case": "Dirac_D_metal",
+      "mu_eV": 0.85,
+      "N": 51,
+      "sigmaC": -2.561068107555148e-19,
+      "sigmaD_over_omega": -0.05032821833611926,
+      "Re_Kubo": 1.7073787383700985e-19,
+      "Im_Kubo": -5.0328226766523124e-05
+    },
+    {
+      "case": "Dirac_D_metal",
+      "mu_eV": 0.85,
+      "N": 101,
+      "sigmaC": -6.530083470003861e-20,
+      "sigmaD_over_omega": -0.050365656739750034,
+      "Re_Kubo": 2.8297028370016733e-19,
+      "Im_Kubo": -5.036566518158222e-05
+    },
+    {
+      "case": "Dirac_D_metal",
+      "mu_eV": 0.85,
+      "N": 151,
+      "sigmaC": 5.453487950441539e-19,
+      "sigmaD_over_omega": -0.050380494426871134,
+      "Re_Kubo": 0.0,
+      "Im_Kubo": -5.038050287396918e-05
+    },
+    {
+      "case": "Dirac_D_metal",
+      "mu_eV": 0.85,
+      "N": 201,
+      "sigmaC": -2.4182477207745793e-19,
+      "sigmaD_over_omega": -0.050399456649748445,
+      "Re_Kubo": -1.3190442113315887e-19,
+      "Im_Kubo": -5.039946510339962e-05
+    },
+    {
+      "case": "Dirac_D_metal",
+      "mu_eV": 0.85,
+      "N": 301,
+      "sigmaC": -9.55810597242439e-20,
+      "sigmaD_over_omega": -0.05042065892322005,
+      "Re_Kubo": -4.411433525734334e-20,
+      "Im_Kubo": -5.0420667384221754e-05
+    }
+  ],
+  "frequency": "Fig2d is sigmaD per photon energy hbar*omega, not per Hz",
+  "unresolved": "published Fig2d absolute amplitude; no fitted factor applied"
+}
