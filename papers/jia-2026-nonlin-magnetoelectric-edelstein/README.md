@@ -1,5 +1,7 @@
 # Jia et al. (2026): Nonlinear Magnetoelectric Edelstein Effect
 
+**正文主图：** [图片、数据与重算说明](figures/README.md)
+
 **Reference:** Jinxiong Jia, Longjun Xiang, Zhenhua Qiao, and Jian Wang, *Nonlinear Magnetoelectric Edelstein Effect*, Physical Review Letters **136**, 226302 (2026). DOI: [10.1103/r3x2-kb93](https://doi.org/10.1103/r3x2-kb93).
 
 This folder is the independently tested **paper reproduction module**, not an implementation endorsed by the original authors. It reproduces the Kane–Mele and CuMnAs tight-binding mechanisms, separates *published* and *static* response conventions, and offers a checked input interface for an existing Wannier Stage-1 pipeline. It does **not** claim perfect agreement with published curves or universal metallic driven-DC physics.

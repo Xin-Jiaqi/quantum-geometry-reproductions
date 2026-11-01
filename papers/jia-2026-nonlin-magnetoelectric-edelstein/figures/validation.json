@@ -1,0 +1,37 @@
+{
+  "citation": "10.1103/r3x2-kb93",
+  "generated_by": "scripts/plot_main_figures.py",
+  "fig1": {
+    "mesh": 201,
+    "static_A_plus_B_max": 3.595214403961933e-15,
+    "extrinsic_reversal_max": 1.7328564674470998e-16,
+    "a_nm": 1.0,
+    "temperature_K": 100.0,
+    "tau_fs": 50.0,
+    "fig1c_status": "static diagnostic, not PT-degenerate paper Eq1 DC reproduction"
+  },
+  "fig2": {
+    "mesh": 451,
+    "soc_points": 41,
+    "soc_zero": "not evaluated: nondegenerate formula invalid",
+    "gap_eV": [
+      0.008624995362430204,
+      0.04215250727238046
+    ],
+    "temperature_K": 10.0,
+    "bond_nm": 0.142,
+    "heatmap": "zx;x printed kernel; two K/K-prime patches, relative k +/-0.04 angstrom^-1",
+    "fig2_status": "printed Eq1 model recomputation; not digitized-curve validation",
+    "soc_mu_protocol": "mu follows each SOC-dependent gap centre; not a literal fixed-mu source reconstruction"
+  },
+  "convergence": {
+    "451": [
+      -0.010739723280414728,
+      -0.005634378333767496
+    ],
+    "601": [
+      -0.010739903894472562,
+      -0.005634112145699436
+    ]
+  }
+}
