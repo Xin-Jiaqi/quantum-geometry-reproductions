@@ -3,7 +3,7 @@
   "validation": "38 tests passed on Python 3.11 and 3.12; original 5 frozen outputs unchanged",
   "figure_status": "Fig1b model pass; Fig1c physical protocol partial; Fig1d Eq2 method pass; Fig2 model method pass, paper pixel mismatch",
   "source_sha256": {
-    "README.md": "6f9d43402f3374b6f99a15d74f6022b62030aba166b3c59978baabeea19111b9",
+    "README.md": "e9ae445b2935d082ad6fe914c9030bc2149b09c89ca3e4984d3ce106ab815195",
     "docs/ACCEPTANCE.md": "a3d16695de0772bae47fc2d35ea13f3c3010930fe3c9b3ab17cfb1bc71508fb7",
     "docs/AUTHOR_DISCUSSION_BRIEF.md": "10e0f5ab54a87d796f1ceffd9479028938cd3ff62b1e27d489e33e128aa784de",
     "docs/FINAL_VERIFICATION.md": "ca9c68237dea3a86666071436f3d4060aa00fe2798ba3f8933aa9cad799ec603",

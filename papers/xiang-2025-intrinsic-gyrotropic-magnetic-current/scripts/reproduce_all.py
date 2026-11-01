@@ -9,8 +9,6 @@ import json, csv, sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
-sys.path.insert(0,str(ROOT.parents[1]/'scripts'))
-from figure_support import export, metadata
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -46,11 +44,7 @@ for ax,Z,name in [(axs[1,0],zxy,r'(c) $Z^{-+}_{xy}$'),(axs[1,1],zxx,r'(d) $Z^{-+
     ax.set_aspect('equal');ax.set(xlabel=r'$k_x\,({\rm \AA}^{-1})$',ylabel=r'$k_y\,({\rm \AA}^{-1})$',title=name)
     fig.colorbar(mesh,ax=ax,shrink=.75)
 fig.suptitle('Xiang et al. 2025, Fig. 1: independent model reproduction (not source artwork)')
-export(fig,FIG,'fig1_rashba_model',dict(k=x,energy_upper=y0+.6*np.abs(x),
-       energy_lower=y0-.6*np.abs(x),mu=mu_r,response=analytic,
-       grid_kx=X,grid_ky=Y,zxy=zxy.filled(np.nan),zxx=zxx.filled(np.nan),
-       zxy_raw=kp['Z01'],zxx_raw=kxx['Z01'],plot_mask=mask,
-       quadrature_mu=mu_check,quadrature_response=numcheck))
+fig.savefig(FIG/'fig1_rashba_model.png',dpi=175);plt.close(fig)
 writejson('fig1_rashba.json',{'protocol':'PRL_Eq15_16_Rashba_analytic_and_interband_polar_quad','units':'e=hbar=1; sigmaC reciprocal angstrom; plotted physical prefactor -gmuB not applied','parameters':P['rashba'],'mu_test_eV':mu_check,'numeric_sigmaC':numcheck,'analytic_sigmaC':[rashba_analytic(z) for z in mu_check],'band_minimum_eV':energy_min,'panels':['a','b','c','d']})
 
 # Fig.2 periodic 2D lattice Dirac; one eigendecomposition for entire mu scan.
@@ -81,9 +75,7 @@ axin.pcolormesh(kx,ky,qbare,cmap='RdBu_r',vmin=-sc,vmax=sc,shading='auto',raster
 axin.set_xticks([]);axin.set_yticks([]);axin.set_title('bare Q',fontsize=7)
 ax=axs[1,1];ax.plot(mu_arr,d_slope);ax.axhline(0,c='gray',ls='--',lw=.8);ax.set(xlabel=r'$\mu_F$ (eV)',ylabel=r'$\sigma^D_{xx}/\Omega$ (natural units)',title=r'(d) Displacement IGMC, $\Omega\rightarrow0$')
 fig.suptitle('Xiang et al. 2025, Fig. 2: independent model reproduction (not calibrated SI)')
-export(fig,FIG,'fig2_dirac_model',dict(k=kline,energy_upper=mag,energy_lower=-mag,
-       mu=mu_arr,sigmaC=c_vals,sigmaD_per_omega=d_slope,grid_kx=kx,grid_ky=ky,
-       weighted_metric=weighted,bare_metric=qbare))
+fig.savefig(FIG/'fig2_dirac_model.png',dpi=175);plt.close(fig)
 writejson('fig2_dirac.json',{'protocol':'PRL_Eq17_dirac_low_frequency_geometric_C_D','mesh':[N,N],'parameters':P['dirac'],'temperature_K':0,'mu_eV':mu_arr.tolist(),'sigmaC_xy':c_vals,'sigmaD_xx_per_omega_eV':d_slope,'units':'e=hbar=1; d2k/(2pi)^2; sigmaD computed per photon-energy Omega; paper SI -gmuB conversion not applied','panels':['a','b','c_weighted_plus_bare_inset','d_normalized_by_Omega']})
 
 rows=[]
@@ -93,12 +85,4 @@ for name,mu,alpha,beta in [('Dirac_C_insulator',0,'x','y'),('Dirac_D_insulator',
         rows.append({'case':name,'mu_eV':mu,'N':n,'sigmaC':data['sigma_C'],'sigmaD_over_omega':data['sigma_D_per_omega'],'Re_Kubo':data['Kubo_real'],'Im_Kubo':data['Kubo_imag']})
 with (RAW/'dirac_convergence.csv').open('w',newline='') as f:
     w=csv.DictWriter(f,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
-metadata(FIG,{'generated_by':'scripts/reproduce_all.py','parameters':P,
-              'scope':'main Figs1/2 model diagnostics, not calibrated paper SI axes',
-              'rashba_quadrature_max_error':float(np.max(abs(np.asarray(numcheck)-[rashba_analytic(z) for z in mu_check]))),
-              'rashba_heatmap':'radius below 0.023 angstrom^-1 masked for display; color limited to +/-30; NPZ also retains raw kernels',
-              'dirac_heatmap':'color limits at 99.5% absolute-value quantile; NPZ retains unclipped data',
-              'dirac_mesh':N,'convergence_table':'../raw/dirac_convergence.csv',
-              'frequency':'Fig2d is sigmaD per photon energy hbar*omega, not per Hz',
-              'unresolved':'published Fig2d absolute amplitude; no fitted factor applied'})
 print('Wrote Fig1/Fig2 model diagnostics and raw convergence. This is model-only, not absolute SI/pixel acceptance.')

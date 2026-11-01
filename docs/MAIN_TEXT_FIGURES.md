@@ -10,7 +10,7 @@
 | Spin | [Fig. 1(a,b)](../papers/xiang-2025-spin-quantum-geometry/figures/README.md) | 二阶自旋流与自旋磁化的 Drude/本征贡献 | 使用自然单位；归一化和正文/SM 分支差异保留 |
 | Magnetotransport | [Fig. 2(a–d)](../papers/xiang-2026-quantum-geometric-map/figures/README.md) | 倾斜 Dirac 能带、线性磁电导、Zeeman 曲率分布 | 印刷 Eq. (11) 与原图约差 2π；有限温曲线为明确标注的延拓 |
 | Curvature–Flux | [Fig. 1、2 + 通量检验](../papers/cui-2026-curvature-flux-zeeman-qgt/figures/README.md) | 四类几何、绕数场/通量场、局域 Dirac 拓扑 | 正文图是示意；响应通道表不等于已模拟宏观电流 |
-| IGMC | [Fig. 1、2](../papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/results/figures/README.md) | Rashba/Dirac 能带、传导与位移响应、几何分布 | 原 Fig. 2(d) 绝对幅度仍未闭合；自然单位曲线可用 |
+| IGMC | [Fig. 1、2](../papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/figures/README.md) | Rashba/Dirac 能带、传导与位移响应、几何分布 | 原 Fig. 2(d) 绝对幅度仍未闭合；自然单位曲线可用 |
 
 ## NMEE：从输入到响应
 
@@ -34,7 +34,7 @@ c 面板每个 SOC 参数取对应能隙中心，λso=0 的严格简并点不套
 
 ![Curvature–Flux：QGT 通量与 Wilson 环路独立检验](../papers/cui-2026-curvature-flux-zeeman-qgt/figures/flux_numerical_check.png)
 
-![IGMC：Dirac 模型的传导与位移电流](../papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/results/figures/fig2_dirac_model.png)
+![IGMC：Dirac 模型的传导与位移电流](../papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/figures/fig2_dirac_model.png)
 
 ## 重算与核验
 
