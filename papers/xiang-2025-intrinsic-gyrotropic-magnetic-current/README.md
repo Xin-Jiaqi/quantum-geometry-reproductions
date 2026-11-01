@@ -1,5 +1,7 @@
 # Xiang et al. (2025): intrinsic gyrotropic magnetic current
 
+**正文主图：** [图片、数据与重算说明](results/figures/README.md)
+
 **Reference:** Xiang, Jia, Xu, Qiao, Wang, *Intrinsic Gyrotropic Magnetic Current from Zeeman Quantum Geometry*, Physical Review Letters **134**, 116301 (2025), [DOI](https://doi.org/10.1103/PhysRevLett.134.116301). This module is an **independent model calculation**, not endorsed by the authors.
 
 **2026-10-20 status: PARTIAL.** The two Hamiltonian model mechanisms, Rashba Fig.1 AC SI, the bulk of Dirac Fig.2, and the independently checked Eq.(12) displacement factor are reproducible. The **SM Table I–III group-symmetry coverage now includes all 122 magnetic point groups**, using real data from the user's group-theory toolkit. The published Fig.2(d) absolute ordinate and source Fig.2(d) plotting provenance **remain unresolved**; we do not rescale the validated physical response to fit them.
