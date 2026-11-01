@@ -79,7 +79,7 @@ class V40CurrentVertex(unittest.TestCase):
         # W=0 exact L=4 torus spectrum is the unshifted QWZ BZ mesh.
         e=exact_disorder_ra_torus(L=4,W=0.,seeds=3)
         self.assertAlmostEqual(e['mean'],-1.9355212426658206,delta=1e-11)
-        self.assertEqual(e['standard_deviation'],0.)
+        self.assertAlmostEqual(e['standard_deviation'],0.,delta=1e-14)
 
     def test_exact_torus_disorder_reproducible_not_SCBA(self):
         a=exact_disorder_ra_torus(L=4,W=.12,seeds=6)

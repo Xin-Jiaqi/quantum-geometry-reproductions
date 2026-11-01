@@ -1,12 +1,12 @@
 {
   "paper": "Jia et al., PRL 136, 226302 (2026)",
-  "validation": "30 tests passed",
+  "validation": "38 tests passed on Python 3.11 and 3.12; original 5 frozen outputs unchanged",
   "figure_status": "Fig1b model pass; Fig1c physical protocol partial; Fig1d Eq2 method pass; Fig2 model method pass, paper pixel mismatch",
   "source_sha256": {
-    "README.md": "75903acd13fdb968286e0a34ce936bc1578d83a524548424b12543d50a8bd057",
+    "README.md": "6f9d43402f3374b6f99a15d74f6022b62030aba166b3c59978baabeea19111b9",
     "docs/ACCEPTANCE.md": "a3d16695de0772bae47fc2d35ea13f3c3010930fe3c9b3ab17cfb1bc71508fb7",
-    "docs/AUTHOR_DISCUSSION_BRIEF.md": "5e506d7ba61c0373bed6f491b9b4627029698c7339d7f73f75c9785834f46202",
-    "docs/FINAL_VERIFICATION.md": "6a9fa66a23b9e688974e18256acf95d3eaaa92670811b95470ce72f5c8ff5850",
+    "docs/AUTHOR_DISCUSSION_BRIEF.md": "10e0f5ab54a87d796f1ceffd9479028938cd3ff62b1e27d489e33e128aa784de",
+    "docs/FINAL_VERIFICATION.md": "ca9c68237dea3a86666071436f3d4060aa00fe2798ba3f8933aa9cad799ec603",
     "docs/OPEN_SCIENTIFIC_QUESTION.md": "e75c7cd96994e2a84dc04b63e494d135b99d009f3e2eed5129adee48a46a636d",
     "docs/PHYSICS_PROTOCOLS.md": "9d73fd98842c9eaab546a5fd36b98be58f08438304f83229406a9eb43741bbb2",
     "docs/PROVENANCE.md": "ff51a7cee83327a2593aabc969d10c4d9632474b3dd2f4d00724503e1adc2ff7",
@@ -16,7 +16,7 @@
     "examples/use_unified.py": "27432f798991a1c8bedbff318e4329c1b9c3f660f2f3246f7bddaba49addf1ea",
     "examples/wannier_connection_template.py": "131d4c2b048a73d17a8b032373f73d1d8b60f5c610f28d3d4a7bbb58d72999c9",
     "integration/stage1_handoff.py": "d18ab9462e905ffc225b447158f7b67b07af9564df23494ef6442333d59e728d",
-    "nmee_lab/__init__.py": "6ded2d9df57e70b13e29a9310a36e54377dda491ac2a265b78785ba7750c5de3",
+    "nmee_lab/__init__.py": "bf98720026aad31a21486ab0057233cdcbd23af80392432f6a6f5bb9c0a71dcb",
     "nmee_lab/api.py": "c40f77d7daf824d01f42972a2fb6179ff04b24a5bc6df98b8e746cb56bf7d9c3",
     "nmee_lab/clean_core/__init__.py": "9370327b5964d4eb725980a269ae958e783d3d30a828572f8ff962d9a429a604",
     "nmee_lab/clean_core/core.py": "7e2df251b6e357cb6f2ff596a69f5dd6b4160f3f4d0ee559a655ee6b9f3a80d5",
@@ -40,14 +40,21 @@
     "results/fig1d_cumnas_eq2.json": "e25d412fe735e02820885f29251be25e1e3c584e41939897ce96083b6b2d5d7f",
     "results/fig2_km_451.json": "fa797841681493e52da212618b1134575e742110ea7c9fbe245ea96ab7e5bf99",
     "scripts/reproduce.py": "6825a7793309905db64400c181fa602fe6d943377968bb94806f08690b51aaaf",
-    "scripts/verify_release.py": "200a65f7c7191f1d4f7365fe27168957fce0afa1b258ad2a7eb07d55cb6276ab",
+    "scripts/verify_release.py": "ea6022e55d9918fe30a718162320615f1b8f6a565c9ed7adeec32b6bcb897287",
     "tests/test_covariant.py": "11b214e0a3420531577bc270b309f4582f7a0e9d525934f6a8044871e352f28e",
     "tests/test_reproduction_cli.py": "8bd31c99970d56918335ac240fd0520cf401870450e6bd9b182ba38bb7175ca7",
     "tests/test_stage1_handoff.py": "ce27a2c60845f500611fdab0c6c5f2eb57dd1b3113a2816d3802bb90c49416e7",
     "tests/test_unified.py": "92638ac42a04a78e0caa93825cb346ef682a75cf1875f87f9a3cce5e28cdfbec",
     "validation/run_gauge_benchmark.py": "00baffb47c6e6b8ed08baf264ede84a077261628ad21394c6135e94034df661a",
     "validation/synthetic_benchmark_meta.json": "c57714f7e897dde8abcc63d7219fa126d3f6c4b0b057751101a448574d2aec1e",
-    "validation/synthetic_covariant_benchmark.csv": "d7b060c555488ab8cf94cfbf672a78ebdec75c6d0aa670550f3f95b56fba4802"
+    "validation/synthetic_covariant_benchmark.csv": "d7b060c555488ab8cf94cfbf672a78ebdec75c6d0aa670550f3f95b56fba4802",
+    "nmee_lab/dynamic.py": "7718542bc6a28b6357871058c73d00efb36954b2ea6a748ad535af2f5b955d04",
+    "tests/test_dynamic.py": "85d247fa29b185547c21d68b9c531aea5a99c2007aaf990b422b25c777a6c410",
+    "examples/use_dynamic.py": "1e842d7c0e8f5ce6558ffc8472ef3781fa9eec713c9c36510188ba855d3ac2c6",
+    "validation/check_diagonal_source.py": "8496d8bfd805fbb982506ff36c9ec1a501ecde6d3b0d5df566075b2251ea67ec",
+    "results/dynamic_core.json": "5aff2994227f5e40a391a69984f59adc58368bf22c35165ca5035334bd2ab420",
+    "results/diagonal_source_audit.json": "4d4efab9de2cc7139943eb5c79a338f929423f2de67701cdd409c62c66683f84",
+    "pyproject.toml": "0b05b178f546614d9298310d0578bd023de8b263b328d17b79e1aed00a596aa8"
   },
   "scientific_acceptance": "PARTIAL_PENDING_DC_DEFINITION",
   "frozen_model_cases": [
@@ -57,5 +64,29 @@
     "fig1d_cumnas_eq2.json",
     "fig1_cumnas_BGK.json"
   ],
-  "integrity_protocol": "SHA256 v2: all tracked .py/.md/.csv/.json/.txt within paper folder except this manifest itself and Python caches"
+  "integrity_protocol": "SHA256 v3: explicit source/document/data inventory; prior manifest hash and base commit recorded in core_access_update",
+  "core_access_update": {
+    "date": "2026-11-01",
+    "base_commit": "86980c87890f0ec674db37a659a88e131762f77f",
+    "prior_manifest_sha256": "918c949ac863169238c115833dc5f2a1d977544b8b9669faccfcf1fd29edbb2e",
+    "updated_existing_paths": [
+      "README.md",
+      "docs/AUTHOR_DISCUSSION_BRIEF.md",
+      "docs/FINAL_VERIFICATION.md",
+      "nmee_lab/__init__.py",
+      "scripts/verify_release.py",
+      "pyproject.toml"
+    ],
+    "protocol": "finite_frequency_full_EB_adiabatic_covariant",
+    "does_not_close": "paper_defined_intrinsic_PT_DC",
+    "added_inventory_paths": [
+      "nmee_lab/dynamic.py",
+      "tests/test_dynamic.py",
+      "examples/use_dynamic.py",
+      "validation/check_diagonal_source.py",
+      "results/dynamic_core.json",
+      "results/diagonal_source_audit.json",
+      "pyproject.toml"
+    ]
+  }
 }

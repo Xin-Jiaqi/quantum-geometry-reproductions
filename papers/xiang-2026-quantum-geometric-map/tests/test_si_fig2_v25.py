@@ -6,6 +6,9 @@ from qgmap.si_fig2_v25 import (FigureInputs, H, HBAR, E, MU_B, geometry, geometr
                                independent_angular_geometry, tanh_population, evaluate,
                                independent_volt_from_ratio)
 
+# Frozen SI numbers used CODATA2022; do not confuse a constants update with a kernel error.
+MU_B_SCALE = MU_B / 9.2740100657e-24
+
 class TestFigureSI(unittest.TestCase):
     def setUp(self): self.p=FigureInputs()
     def test_stable_closed_form_matches_printed(self):
@@ -17,14 +20,14 @@ class TestFigureSI(unittest.TestCase):
     def test_zero_t_figure_geometry(self):
         self.assertAlmostEqual(geometry(self.p.beta),-.00250641590669,delta=1e-12)
     def test_ordinate_si(self):
-        self.assertAlmostEqual(evaluate(self.p)['minus_1e4_sigma_over_e2_hbar'],11.02083611497046,delta=1e-9)
+        self.assertAlmostEqual(evaluate(self.p)['minus_1e4_sigma_over_e2_hbar'],11.02083611497046*MU_B_SCALE,delta=1e-9)
     def test_eq11_voltage(self):
-        self.assertAlmostEqual(evaluate(self.p)['open_circuit_voltage_microV'],268.26200776,delta=1e-7)
+        self.assertAlmostEqual(evaluate(self.p)['open_circuit_voltage_microV'],268.26200776*MU_B_SCALE,delta=1e-7)
     def test_2pi_diagnostic_ordinate(self):
         q=evaluate(self.p,hypothesis='single_2pi_diagnostic')
-        self.assertAlmostEqual(q['minus_1e4_sigma_over_e2_hbar'],1.75402054470,delta=1e-10)
+        self.assertAlmostEqual(q['minus_1e4_sigma_over_e2_hbar'],1.75402054470*MU_B_SCALE,delta=1e-10)
     def test_2pi_diagnostic_voltage(self):
-        self.assertAlmostEqual(evaluate(self.p,hypothesis='single_2pi_diagnostic')['open_circuit_voltage_microV'],42.695224579,delta=1e-7)
+        self.assertAlmostEqual(evaluate(self.p,hypothesis='single_2pi_diagnostic')['open_circuit_voltage_microV'],42.695224579*MU_B_SCALE,delta=1e-7)
     def test_ratio_exactly_2pi(self):
         x=evaluate(self.p)['sigma_sheet_S'];y=evaluate(self.p,hypothesis='single_2pi_diagnostic')['sigma_sheet_S']
         self.assertAlmostEqual(x/y,2*math.pi,delta=1e-13)

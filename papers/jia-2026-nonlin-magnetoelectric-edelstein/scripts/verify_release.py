@@ -63,6 +63,16 @@ def verify_cases():
         compare(frozen,json.loads(proc.stdout),filename)
     return len(CASES)
 
+def verify_dynamic_core():
+    for script, reference in (
+        ('examples/use_dynamic.py', 'results/dynamic_core.json'),
+        ('validation/check_diagonal_source.py', 'results/diagonal_source_audit.json'),
+    ):
+        proc=subprocess.run([sys.executable,str(ROOT/script)],cwd=ROOT,
+                            capture_output=True,text=True,check=True,timeout=180)
+        compare(json.loads((ROOT/reference).read_text()),json.loads(proc.stdout),reference)
+    return 2
+
 def run_tests():
     proc=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],
                         cwd=ROOT,capture_output=True,text=True,timeout=180)
@@ -83,6 +93,8 @@ def main():
     print(f'Integrity: PASS ({count} SHA256 paths)')
     cases=verify_cases()
     print(f'Frozen model cases: PASS ({cases} outputs)')
+    dynamic=verify_dynamic_core()
+    print(f'Dynamic core and source diagonal audit: PASS ({dynamic} outputs)')
     if not options.skip_tests:run_tests()
     print('Software/model reproduction: PASS')
     print('Scientific acceptance: PARTIAL (CuMnAs finite-T PT-degenerate driven-DC intrinsic definition awaits clarification)')

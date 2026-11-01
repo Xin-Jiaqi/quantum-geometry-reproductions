@@ -1,0 +1,5 @@
+# Shared environment for the five model recipes and regression tests.
+# Individual paper dependencies remain declared in their own packages.
+numpy==1.26.4
+scipy==1.14.0
+matplotlib>=3.7,<4

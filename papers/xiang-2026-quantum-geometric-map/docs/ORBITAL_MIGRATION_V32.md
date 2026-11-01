@@ -1,3 +1,12 @@
+> **Superseded Eq56 interpretation, 2026-11-01:** original SM p12 differentiates
+> f_n twice. Its two lines agree after the full chain rule. The v4 callable
+> API has now been corrected; old misread numbers have explicit historical
+> labels. The later v53 audit already had the correct source interpretation.
+> Statements below that Eq56 has an unresolved source sign error are historical,
+> not the current verdict. Eq49→Eq52's retained velocity-metric factor remains
+> a separate real algebraic conflict. Use the module README / reproduce_core.py
+> for the current core capability boundary.
+
 # v32 orbital-response migration: printed versus independently derived formulas
 
 The source implementations are from the offline v30 reproduction of Xiang et al., PRB 113 L201406 (2026), with the small periodic Bloch model support extracted into `_orbital_grid.py`.

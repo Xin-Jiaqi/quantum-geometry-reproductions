@@ -8,9 +8,13 @@
       "bytes": 8415
     },
     "tests/test_current_vertex_v40.py": {
-      "sha256": "f5c91aa296799ba348a6b8999ae4a7bd6ea30435b2a6423771c475350933f8d5",
-      "git_blob_sha1": "79bdb272ac68fc752056806d8ddfa873af308f08",
-      "bytes": 4878
+      "sha256": "2c10ee7102b76dbe5a44a931b3ca6d3da93254eeaf848a8ce12f4c1fdab41dba",
+      "git_blob_sha1": "9984c898b76d4bb4406a517ca4c35e7617285988",
+      "bytes": 4896,
+      "imported_sha256": "f5c91aa296799ba348a6b8999ae4a7bd6ea30435b2a6423771c475350933f8d5",
+      "imported_git_blob_sha1": "79bdb272ac68fc752056806d8ddfa873af308f08",
+      "imported_bytes": 4878,
+      "revision_reason": "2026-11-01: zero-disorder standard deviation checked at floating-point tolerance (1e-14), not exact bitwise zero; numerical references unchanged."
     },
     "tests/test_v40_frozen.py": {
       "sha256": "250baa80cb3885dd1c924c9d07f50704717eda0e549e117a72add8af4c7597d8",

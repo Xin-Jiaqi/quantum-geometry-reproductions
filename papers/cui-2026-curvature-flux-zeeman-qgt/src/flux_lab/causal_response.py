@@ -156,3 +156,31 @@ def source_four_sector_geometric(H,dH,spin,*,mu=0.,temperature=.025,
             out["gA"]+=kappa*f[n]*(2*omega_source**2/eps**2)*ga[:2,:]
     return {**out,"sigma_source_omega":sum(out.values()),
             "source_frequency":omega_source,"drive_frequency":-omega_source}
+
+
+def source_kme_expansion(H,dH,spin,*,mu=0.,temperature=.025,
+                         omega_source=.01,spin_factor=.5):
+    """Clean interband KME through O(omega_source²), source spin observable.
+
+    Output M=spin_factor*<sigma>; .5 matches source Eq115, not SI magnetic
+    moment. Eq126 agrees with spectral/Liouville response at z=-omega_source.
+    Main Eq19 has the opposite linear term in the same source frequency.
+    Keep its printed value explicitly separate; no collision/DC-metal claim.
+    Static response is returned separately and must remain in reciprocity.
+    """
+    D=_data(H,dH,spin);e,r,s=(D[k] for k in ("e","r","s"))
+    f=_fermi(e,mu,temperature)
+    c0=np.zeros((3,2),complex);c1=np.zeros_like(c0);c2=np.zeros_like(c0)
+    for n in range(len(e)):
+        for m in range(len(e)):
+            if n==m:continue
+            eps=e[n]-e[m]
+            T=np.outer(r[:,n,m],s[:,m,n]).T
+            c0+=2*spin_factor*f[n]*T.real/eps
+            c1+=-2j*spin_factor*f[n]*T.imag/eps**2
+            c2+=2*spin_factor*f[n]*T.real/eps**3
+    w=omega_source
+    return dict(static=c0,linear_coefficient=c1,quadratic_coefficient=c2,
+                appendix126_dynamic=w*c1+w*w*c2,
+                main19_printed_dynamic=-w*c1+w*w*c2,
+                source_frequency=w,drive_frequency=-w,spin_factor=spin_factor)

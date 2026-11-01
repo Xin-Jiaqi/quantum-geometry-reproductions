@@ -1,16 +1,56 @@
-# One theoretical question for author correspondence (not sent)
+# Source audit and optional author question (not sent)
 
-**Citation:** Jia *et al.*, *Nonlinear Magnetoelectric Edelstein Effect*, PRL **136**, 226302 (2026), DOI: [10.1103/r3x2-kb93](https://doi.org/10.1103/r3x2-kb93).
+Jia et al., PRL **136**, 226302 (2026),
+[DOI](https://doi.org/10.1103/r3x2-kb93).
+The local published SM was visually checked at pp. 2–3; SHA256:
+`13bada2e109d9f1faea6be9370c50bec04968b06057c262cd7ef69e29a28673a`.
 
-## Technical context
+## Confirmed local inconsistency (2026-11-01)
 
-- The Supplemental Material constructs the intrinsic EB-order density matrix including a diagonal term in Eq. (9), whose trace contribution is explicit in Eq. (11).
-- Its final two-band + three-band formulas, Eqs. (13)+(14), appear not to retain an explicit counterpart of that contribution. The PRL's main Eq. (1) uses the final form.
-- Our nondegenerate gapped static tests, including an independently differentiated finite-Zeeman equilibrium response, favor retaining the contribution **for that static protocol**. The printed response and the full-static response are both preserved in the repository; their values are not silently equated.
-- For CuMnAs, Fig. 1(c) requires finite-temperature intrinsic NMEE with exact PT doublets and potentially gapless Dirac neighborhoods. We have tested separate finite-frequency and conserving relaxation schemes, but these do not prove equivalence to the PRL-defined nonequilibrium intrinsic DC limit.
+Page 2 defines Bbar = -g mu_B B and page 3 defines
+s_alpha = mu_B Tr(sigma_alpha rho). The displayed diagonal term of Eq. (9) is
 
-## One question (English, for the researcher to send or adapt)
+```
+rho_nn / (E Bbar) = -2 sum_l (f_n-f_l) Q_nl / epsilon_nl^2.
+```
 
-> In the Supplemental Material, the intrinsic density matrix of Eq. (9) includes a diagonal contribution that we do not see explicitly in the final two- and three-band expressions, Eqs. (13)–(14). We find that it contributes to the equilibrium/static EB response in independent gapped model checks. Could you clarify whether this term cancels or is excluded under a particular nonequilibrium DC limit or density-matrix preparation? In particular, what prescription for the two field limits and PT-degenerate subspaces is intended when evaluating the finite-temperature CuMnAs Fig. 1(c)?
+For Hermitian r and spin, Q_nl=Q_ln. Contracting this term using the stated
+magnetic-field convention gives
 
-This is a **physical-definition question**, not an assertion that the published derivation is incorrect. No numerical grid, absolute length scale or minor typographical questions are proposed for the first correspondence. The author has **not** been contacted by this repository.
+```
+Gamma_diagonal = +2 g mu_B^2 sum_nl f_n (sigma_nn-alpha - sigma_ll-alpha)
+                                            Q_nl / epsilon_nl^2.
+```
+
+Eq. (11) prints **minus** in front of the same reindexed sum. Hence these two
+displayed diagonal terms cannot both follow from the definitions. This
+comparison requires no frequency limit, Fourier normalization, fitting or
+choice of eigenvector phases. It does not determine which full equation
+should be corrected or rule out a redistribution among other terms.
+
+`validation/check_diagonal_source.py` independently contracts the literal
+Eq. (9) term and compares the Eq. (11) term for 2/3/5-band matrices. Residuals
+against the plus-sign reindexing are below 1e-12; the printed term is opposite.
+`results/diagonal_source_audit.json` records the numbers.
+
+An additional gapped two-band test in `tests/test_dynamic.py` has a diagonal
+observable at k=0, so the printed Eq. (13)/(14) kernels vanish at that point.
+The full finite-frequency orbital response tends to a nonzero diagonal
+contribution as the two switching rates decrease together. This is a local
+model check, not a proof of the full integrated metallic DC response.
+
+## Still open
+
+The previous question about the relation between Eq. (9), Eq. (13)/(14),
+and the nonequilibrium DC preparation remains open, particularly for exact
+PT doublets at finite T. The new dynamic interface evaluates SM (6)/(7)
+before that split; it does not silently choose a correction to Fig. 1(c).
+
+If author discussion is later desired, the concrete question is:
+
+> Using Bbar=-g mu_B B, the displayed diagonal term in Eq. (9) appears to give
+> a plus-sign contribution after contraction, whereas Eq. (11) prints a minus.
+> Could you clarify this sign and how that term enters Eqs. (13)/(14), including
+> the field-limit and degenerate-subspace prescription used for Fig. 1(c)?
+
+No correspondence has been sent.

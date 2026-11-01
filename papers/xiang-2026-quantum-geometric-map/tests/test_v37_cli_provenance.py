@@ -6,6 +6,9 @@ from pathlib import Path
 import subprocess
 import sys
 import unittest
+from scipy import constants
+
+MU_B_SCALE=constants.physical_constants['Bohr magneton'][0]/9.2740100657e-24
 
 ROOT=Path(__file__).resolve().parents[1]
 SCRIPT=ROOT/"scripts/reproduce_advanced.py"
@@ -28,8 +31,8 @@ class V37PublishedModel(unittest.TestCase):
 
     def test_si_two_distinct_protocol_branches(self):
         r=call("fig2-si-v25")
-        self.assertAlmostEqual(r["literal_hbar"]["minus_1e4_sigma_over_e2_hbar"],11.02083611497046,delta=1e-8)
-        self.assertAlmostEqual(r["single_2pi_diagnostic"]["minus_1e4_sigma_over_e2_hbar"],1.754020544703229,delta=1e-8)
+        self.assertAlmostEqual(r["literal_hbar"]["minus_1e4_sigma_over_e2_hbar"],11.02083611497046*MU_B_SCALE,delta=1e-8)
+        self.assertAlmostEqual(r["single_2pi_diagnostic"]["minus_1e4_sigma_over_e2_hbar"],1.754020544703229*MU_B_SCALE,delta=1e-8)
         self.assertAlmostEqual(r["ratio"],2*math.pi,delta=1e-10)
 
     def test_independent_joule_liouville(self):

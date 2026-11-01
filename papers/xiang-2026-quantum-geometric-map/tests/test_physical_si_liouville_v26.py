@@ -23,7 +23,7 @@ class PhysicalSI(unittest.TestCase):
     def test_03_hbar_frequency_matches_tau_phase(self):
         x=frequency_hypotheses(self.p)
         self.assertAlmostEqual(x['omega_Z_rad_s'],2*math.pi*x['f_Z_Hz'],delta=.01)
-        self.assertAlmostEqual(x['tau_omega_Z_rad'],.4397050020926946,places=11)
+        self.assertAlmostEqual(x['tau_omega_Z_rad'],.4397050020926946*(c.physical_constants['Bohr magneton'][0]/9.2740100657e-24),places=11)
     def test_04_angular_integral_has_correct_2pi_square_measure(self):
         self.assertAlmostEqual(geometry(self.p.beta),independent_angular_geometry(self.p.beta),places=12)
         self.assertNotAlmostEqual(geometry(self.p.beta),2*math.pi*independent_angular_geometry(self.p.beta),places=6)

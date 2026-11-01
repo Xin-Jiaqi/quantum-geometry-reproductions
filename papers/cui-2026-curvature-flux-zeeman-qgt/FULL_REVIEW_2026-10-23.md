@@ -1,4 +1,6 @@
 # Cui arXiv:2604.09725v3 | Independent end-to-end research review
+
+> 2026-11-01逐页核查更新：§2(C)的笼统符号FLAG现已拆分。GHE Eq16与Eq112一致；KME Eq19与Eq126的一阶项相反，独立轨道响应支持Eq126。m′/C3负对照已进入主工作分支测试。见[当前能力与证据](README.md)。未合并PR107，不宣称全表已核准。
 **Reviewed:** 2026-10-23. **Source paper:** Cui, Xiang, Xu & Wang, *Curvature-Flux Representation of Local Dirac-Node Topology from Non-Hermitian Zeeman Quantum Geometry*, arXiv:2604.09725v3 (revised 2026-09-17). **Correct target:** a theoretical, 2D Dirac / non-Hermitian Zeeman-QGT / GHE-KME / 2D magnetic-point-group paper. The printed Table I contains *symmetry classes*, **not** a table of computed materials. Never make real-material EPW/DFPT source collection a paper-reproduction acceptance prerequisite.
 
 **Start the next local Codex session at [CODEX_START_HERE.md](CODEX_START_HERE.md)**. That file is the executable handoff, this file is the scientific ledger.

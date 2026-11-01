@@ -1,0 +1,77 @@
+{
+  "geometry_eigen_projector_error": 3.510833468576701e-16,
+  "massless_flux": -3.141602510256808,
+  "winding": 1.000003137474556,
+  "berry_phase": 3.1415926535897927,
+  "spectral_orbital_error": 2.260742322604916e-14,
+  "source_GHE_expansion_errors": [
+    4.4325139867909904e-05,
+    5.535222560678767e-06,
+    6.917336460067764e-07
+  ],
+  "source_KME": [
+    {
+      "omega_source": 0.04,
+      "appendix126_error": 2.15341959193864e-05,
+      "main19_error": 0.03441723533308566
+    },
+    {
+      "omega_source": 0.02,
+      "appendix126_error": 2.689207789272825e-06,
+      "main19_error": 0.017200539973129602
+    },
+    {
+      "omega_source": 0.01,
+      "appendix126_error": 3.3607086280277703e-07,
+      "main19_error": 0.00859926145967864
+    }
+  ],
+  "reciprocal_error": 2.669305748659312e-16,
+  "mirror_prime_operator": {
+    "H": 0.0,
+    "velocity": 0.0,
+    "spin": 0.0
+  },
+  "mirror_prime_response": {
+    "chi": 5.551115123125783e-17,
+    "alpha": 5.551115123125783e-17
+  },
+  "four_band_BZ": [
+    {
+      "kmesh": 32,
+      "mu": 2.3,
+      "temperature": 0.2,
+      "omega_drive": 0.035,
+      "chi_yz_im": 7.592980948599632e-05,
+      "chi_yz_re": 3.6422416731934915e-20,
+      "max_local_reciprocal_residual": 4.1098676581322033e-16,
+      "normalization": "BZ d2k/(2pi)^2; natural units; interband only"
+    },
+    {
+      "kmesh": 64,
+      "mu": 2.3,
+      "temperature": 0.2,
+      "omega_drive": 0.035,
+      "chi_yz_im": 7.589709612703637e-05,
+      "chi_yz_re": -3.3572944957812245e-19,
+      "max_local_reciprocal_residual": 4.458246748912325e-16,
+      "normalization": "BZ d2k/(2pi)^2; natural units; interband only"
+    },
+    {
+      "kmesh": 96,
+      "mu": 2.3,
+      "temperature": 0.2,
+      "omega_drive": 0.035,
+      "chi_yz_im": 7.589709091702096e-05,
+      "chi_yz_re": -1.0832022030338848e-19,
+      "max_local_reciprocal_residual": 4.2977795998292025e-16,
+      "normalization": "BZ d2k/(2pi)^2; natural units; interband only"
+    }
+  ],
+  "source_verdict": {
+    "Eq16_vs_112": "Agree after static subtraction and omega_source=-omega_drive",
+    "Eq19_vs_126": "Linear terms disagree in the SAME source frequency; independent dynamics supports Eq126",
+    "TableI": "Invalid mirror-prime and universal C3 radial counterexamples rejected; whole table not certified"
+  },
+  "scope": "Clean interband model core, physical Pauli spin; source KME is sigma/2, no SI or full metallic collision claim"
+}
