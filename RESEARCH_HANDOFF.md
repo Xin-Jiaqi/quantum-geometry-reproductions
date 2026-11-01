@@ -10,7 +10,7 @@
 | 2，已接通 | [Spin Transport](papers/xiang-2025-spin-quantum-geometry/README.md) | 约化Eq13与完整多带响应容易混用；原SM积分和多源项有分歧 | 确认已有完整响应内核的适用范围，补实际缺失通道；以独立密度矩阵验证；给出可改模型的入口，不将材料DFT设为模型使用门槛 |
 | 3，已接通 | [Magnetotransport](papers/xiang-2026-quantum-geometric-map/README.md) | spin/orbital以及bulk/device能力混杂；原SM符号、三带轨道项需分开 | 优先闭合论文核心模型的指定spin/orbital通道，标出一般多带仍缺的具体项；停止扩大到普适Kubo–NEGF或全自洽无序 |
 | 4，已接通 | [Curvature–Flux](papers/cui-2026-curvature-flux-zeeman-qgt/README.md) | v3的频率符号、Table I及PR107无效反例影响可靠调用 | 修正反例，按真实反幺正群作用检查目标响应；保持几何/频率入口；不新增EPW、浴或材料设施 |
-| 5，排队 | [IGMC](papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/README.md) | 核心模型已可用；依赖导入、绝对幅度和反幺正约定需收尾 | 修复实际运行阻碍；完成指定模型单位/频率桥；作者原始数据缺失不无限追索 |
+| 5，已接通 | [IGMC](papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/CORE_ACCESS.md) | 核心模型已可用；依赖导入、绝对幅度和反幺正约定需收尾 | 修复实际运行阻碍；完成指定模型单位/频率桥；作者原始数据缺失不无限追索 |
 
 排序依据是核心调用受阻程度，不是论文重要性。每篇交付：一个清晰入口、一个可重算例子、独立核验、明确边界。下一篇从其当前代码及正文/SM重新核对，不能只接受历史验收文字。
 
@@ -35,7 +35,25 @@
 
 ## Curvature–Flux 本轮结果
 
-几何/通量、完整带间GHE/KME可调用；补原文σ/2的KME低频入口。PDF p4/p12/p13核对：Eq16与Eq112动态项一致；Eq19与Eq126一阶项确有内部冲突，轨道Liouville支持附录。无效m′和C3径向反例已用物理不变性测试排除。375项通过，四带BZ 64²→96²相对变化6.86e-8。Table I全表与真实金属散射不设为本篇模型门槛。下一篇IGMC。
+几何/通量、完整带间GHE/KME可调用；补原文σ/2的KME低频入口。PDF p4/p12/p13核对：Eq16与Eq112动态项一致；Eq19与Eq126一阶项确有内部冲突，轨道Liouville支持附录。无效m′和C3径向反例已用物理不变性测试排除。375项通过，四带BZ 64²→96²相对变化6.86e-8。Table I全表与真实金属散射不设为本篇模型门槛。
+
+## IGMC 本轮结果
+
+Rashba/Dirac的C、D与完整非共振响应已有可靠内核，新增一处重算入口，列明Hz/rad·s⁻¹和SI换算。费米海/费米面以及波包/格林函数/轨道Liouville一致。SM Eq34/46局部系数问题重读确认，但不推断作者Fig2(d)程序。纠正旧Round8说明：完整1 THz与低频结果的微小差别是有限频率项，不是101²网格误差。Python3.12显式载入完整本地toolkit后76项全部通过；干净Python3.11环境75通过、1可选外部toolkit跳过。Round1–8冻结核验和Round9本地完整性门槛通过；历史“LOCAL_DRAFT”是旧验收器标签，不代表本轮远端状态。
+
+## 五篇当前使用边界
+
+**核心物理已在指定模型/响应协议下接入，可以支持后续idea检验；没有把五篇全部实验/材料/图像标为完全复现。** 优先直接调用各模块入口，改变模型或协议后只验证相应假设，不预先扩大为通用材料平台。
+
+| 论文 | 本轮直接重算入口 | 本轮无需追平的内容 |
+|---|---|---|
+| NMEE | 模块`nmee_lab.evaluate_dynamic`及README示例 | 作者Fig1c本征DC、完整散射极限 |
+| Spin | `scripts/reproduce_core.py` | 材料DFT、将有限η自动认作tau0 |
+| Magnetotransport | `scripts/reproduce_core.py` | 超出原文省略三带过程的完整轨道理论、统一bulk/device散射 |
+| Curvature–Flux | `scripts/reproduce_core.py` | Table I全表、完整金属带内/耗散KME、真实材料SI |
+| IGMC | `scripts/reproduce_core.py`及CORE_ACCESS.md | 作者Fig2(d)原始幅度来源、Eq14完整约定、一般多带共振/散射 |
+
+本轮论文PDF正文及SM/附录均只读取于本地Zotero；没有复制进代码库。源文争议与我们误读的更正已分别记录。停止增加新物理设施，等待用户开启idea讨论。
 
 ## 继续工作规则
 
@@ -48,4 +66,4 @@
 
 ## 关于根目录的统一接口
 
-`integration/physics_interface/`仍是四模块的元数据/设计契约，不是数值调度器。调用当前NMEE应使用其模块入口；不要把根 `contracts.evaluate` 的占位接口当作已实现。其他论文完成核心接入后，再决定是否需要一个很薄的统一入口；现在不重做平台架构。
+`integration/physics_interface/`仍是四模块的元数据/设计契约，不是数值调度器。调用当前NMEE应使用其模块入口；不要把根 `contracts.evaluate` 的占位接口当作已实现。五篇已有各自数值入口，目前不增加统一调度层，也不重做平台架构。
