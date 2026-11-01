@@ -1,5 +1,7 @@
 # Cui 2026: causal interband response, v2 scientific acceptance
 
+> 2026-11-01更新：原文归一化KME已由`source_kme_expansion`接通，Eq16/112一致而Eq19/126的一阶项冲突已分别核查；以[当前入口](README.md)及`results/core_access.json`为准。下文39项是历史计数。
+
 **Status: named MODEL/METHOD VALIDATED; full paper remains PARTIAL.**
 
 **Source:** Cui et al., *Curvature-Flux Representation of Local Dirac-Node Topology from Non-Hermitian Zeeman Quantum Geometry*, arXiv:2604.09725v3, main Eqs.(16)–(19), Appendix B Eqs.(90)–(126). Independently checked against the local 15-page paper; no publisher PDF/figures included.

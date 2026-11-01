@@ -1,5 +1,34 @@
 # Cui et al. (2026): non-Hermitian Zeeman QGT and local Dirac flux
 
+## 当前核心能力（2026-11-01）
+
+**模型核心已接通。** 下列是当前入口；后续各轮记录保留为历史，不能把其材料、浴、EPW等扩展门槛当作本篇模型使用的前置条件。
+
+| 能力 | 可直接调用 |
+|---|---|
+| 四类Zeeman几何、Dirac曲率通量/绕数 | `core.qgt_eigen` / `qgt_projector`；`flux_circle_from_qgt` |
+| 任意非简并多带的带间GHE/KME | `causal_response.interband_kubo` / 独立 `interband_liouville` |
+| 正文Eq16四通道与低频展开 | `source_four_sector_geometric`；`static_subtracted_gyrotropic` |
+| 按原文σ/2归一化的KME | 新 `source_kme_expansion`：附录Eq126动态项、静态项、正文Eq19印刷分支分别返回 |
+| 反幺正物理检查 | `antiunitary_response.operator_residual` / `kubo_symmetry_residual` |
+
+输入H、D_kH和物理Pauli自旋须在同一基底；频率单位是能量（ħ=1），`omega_source=-omega_drive`。`source_kme_expansion`默认M=〈σ〉/2；旧`interband_kubo`默认M=κ〈σ〉，比较时须显式设κ=1/2。有限η不等于已解决真实散射。现有简并簇方法是独立的带间协议，不能自动补全金属带内响应。
+
+**本次逐页核查原PDF v3，p4/p12/p13：**
+
+- GHE：Eq112减去静态项后等于Eq16；统一傅里叶符号后没有所指的一阶符号冲突。
+- KME：Eq19与Eq126在同一个ω_source下的一阶项仍相反。独立轨道Liouville支持Eq126；频率减半时其二阶截断误差约缩小8倍，Eq19差异约缩小2倍。只确认这处局部不一致，不推广为全篇错误。
+- 旧PR107的m′模型不满足真实反幺正对称性，不能反驳Table I；C3强制径向d的说法也被合法的切向模型否定。新增可运行反例检查。Table I全表仍不背书，按实际模型检查张量。
+
+```bash
+PYTHONPATH=src OPENBLAS_NUM_THREADS=1 python scripts/reproduce_core.py
+PYTHONPATH=src OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests
+```
+
+[本次结果](results/core_access.json)：本征态/投影子几何差3.51e-16，Kubo/轨道求解差2.26e-14；非零四带BZ算例64²→96²相对变化6.86e-8。375项测试通过；新增4项在Python3.11亦通过。旧冻结结果未改。模型能力不等同于作者全部图像、Table I或材料SI复现。
+
+---
+
 > **Codex research handoff (reviewed 2026-10-23):** [Start work immediately](CODEX_START_HERE.md) · [Independent full-reproduction and research-idea review](FULL_REVIEW_2026-10-23.md). Distinguishes independently green main (371/371 dual Python), user-reported local Fe demo, and currently unmerged scientifically contested [Round36 PR #107](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/107). **Whole Cui theoretical paper remains PARTIAL.** No material EPW archive is required by the source paper.
 
 
