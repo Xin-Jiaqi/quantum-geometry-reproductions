@@ -1,5 +1,7 @@
 # Xiang, Jin & Wang (2025): Spin Transport Revealed by Spin Quantum Geometry
 
+**正文主图：** [图片、数据与重算说明](figures/README.md)
+
 Independent **paper-model** subset for PRL **135**, 146303 (2025), DOI `10.1103/14mp-263q`.
 
 ## Core access (2026-11-01)
