@@ -1,0 +1,79 @@
+{
+  "citation": "10.1103/kd12-4ycj",
+  "parameters": {
+    "beta": 0.125,
+    "vF_eVA": 1.0,
+    "tau_ps": 0.5,
+    "g_factor": 10.0,
+    "Bx_T": 1.0
+  },
+  "geometry_eigenvector_max_error": 1.4210854715202004e-14,
+  "SI_audit": {
+    "protocol": "v52_PRB_printed_Eq11_vs_Fig2b_and_43microV_absolute_SI_audit",
+    "scientific_status": "PARTIAL",
+    "source_main_SHA256": "b87e0970f25dd45c5048f8cbbb8691b53ea215040935e9b21a4cde80c69b2730",
+    "source_sm_SHA256": "9b0b8603d13962e100cc059bf4d96b91aa37062360d13decd1cb2eda495332c4",
+    "source_statement": "Fig2(b) prints -10^4 sigma^(1)_xy,x g mu_B B_x in units e^2/hbar; text claims ~43 microV",
+    "params": {
+      "beta": 0.125,
+      "tau_ps": 0.5,
+      "g_factor": 10.0,
+      "bx_tesla": 1.0,
+      "ey_v_per_m": 10000.0,
+      "lateral_um": 100.0,
+      "resistance_ohm": 1000.0
+    },
+    "physics_constants": {
+      "bohr_magneton_j_per_t": 9.2740100783e-24,
+      "bohr_magneton_ev_per_t": 5.7883818060350026e-05,
+      "planck_h_j_s": 6.62607015e-34,
+      "hbar_j_s": 1.0545718176461565e-34,
+      "e_squared_over_h_siemens": 3.8740458649318244e-05,
+      "e_squared_over_hbar_siemens": 0.0002434134805787947,
+      "ratio_e2hbar_over_e2h": 6.283185307179586
+    },
+    "geometry_F_beta": -0.002506415906691721,
+    "zeeman_g_muB_B_ev": 0.0005788381806035003,
+    "tau_zeeman_over_hbar": 0.4397050026900935,
+    "literal_Eq11": {
+      "sigma_S": -2.682620081278145e-07,
+      "sigma_over_e2hbar": -0.0011020836129943762,
+      "figure_axis_minus_1e4": 11.020836129943762,
+      "predicted_voltage_microV": 268.26200812781445
+    },
+    "independent_e2h_variant": {
+      "sigma_S": -4.269522463729988e-08,
+      "sigma_over_e2hbar": -0.00017540205470863035,
+      "figure_axis_minus_1e4": 1.7540205470863035,
+      "predicted_voltage_microV": 42.69522463729987
+    },
+    "published": {
+      "figure_plateau_read_approx": 1.75,
+      "figure_digitization_tolerance": 0.03,
+      "hall_voltage_claim_microV_approx": 43.0,
+      "figure_axis_unit_printed": "e^2 / hbar",
+      "fig2b_figure_temps_K": [
+        0.0,
+        20.0,
+        40.0
+      ]
+    },
+    "quantitative_comparisons": {
+      "literal_plateau_divided_by_graph_readout": 6.29762064568215,
+      "literal_voltage_divided_by_quoted_43microV": 6.238651351809638,
+      "literal_divided_by_e2h_variant": 6.283185307179586,
+      "h_variant_plateau_minus_observed": 0.004020547086303505,
+      "h_variant_voltage_minus_quoted_microV": -0.30477536270012706
+    },
+    "not_proven": [
+      "Whether the authors used e^2/h as their intended plotting convention",
+      "How the original SM Eq20/31 signed PHE branch entered the published figure",
+      "Original plotting code has not been independently inspected",
+      "No arbitrary 2pi correction is accepted as an author erratum",
+      "Full original physical steady-state PHE and orbital multiband remain OPEN"
+    ]
+  },
+  "status": "Fig2 numerical panels recomputed; 2pi amplitude mismatch remains explicit",
+  "finite_temperature": "tanh Fermi-population continuation; printed Eq11 is T=0",
+  "fig1": "conceptual classification diagram, not numerical data; summarized in gallery"
+}

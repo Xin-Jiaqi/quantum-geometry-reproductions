@@ -1,5 +1,7 @@
 ## Core access decision (2026-11-01)
 
+**正文主图：** [图片、数据与重算说明](figures/README.md)
+
 **Source-model physics is callable.** Use `python scripts/reproduce_core.py`
 (after installing this module) for the five source-model channels below.
 Do not substitute later finite-device or equilibrium-polarization work for
