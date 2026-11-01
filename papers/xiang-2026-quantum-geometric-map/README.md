@@ -1,3 +1,40 @@
+## Core access decision (2026-11-01)
+
+**Source-model physics is callable.** Use `python scripts/reproduce_core.py`
+(after installing this module) for the five source-model channels below.
+Do not substitute later finite-device or equilibrium-polarization work for
+these bulk response kernels.
+
+| Capability | Callable entry | Scope |
+|---|---|---|
+| Spin PHE | `qgmap.dirac.continuum_temperature_kernel` | Printed Eq11, tilt/mu/T; named sign branch |
+| Spin MNHE | `qgmap.spin_multiband_v5.density_matrix_audit(H,vx,vy,S,...)` | Supplied nondegenerate N-band matrices, source SM16–19 vs SM29, normalized BZ mean |
+| Orbital PHE | `qgmap.orbital_phe_v4.orbital_phe_eq56` | Periodic two-band Bz model; both correct Eq56 lines and finite-B derivative |
+| Orbital MNHE | `qgmap.orbital_mnhe_v5.orbital_mnhe_2d/3d` | Source two-band approximation; Eq48/49 versus printed Eq52 kept separate |
+| General orbital geometry | `qgmap.orbital_geometry_v54.band_geometry(H,velocities)` | Nondegenerate N-band metric/curvature/moment and complete moment-curvature sector, not full MNHE |
+
+**Correction to the legacy v4 API:** SM p12 Eq56 contains `d_ab f_n`, not
+`(d_ab epsilon_n)*fprime_n`. Its chain rule is
+`d_ab f = (d_ab epsilon) fprime + va*vb*fsecond`. Thus both printed lines
+agree after BZ integration. The old `eq56_second_line_as_printed` and
+`printed_line_discrepancy` now represent the actual source. The erroneous
+old numbers remain under `historical_misread_*`; the legacy key containing
+`corrected_sign` is only a compatibility alias for the source result.
+The CLI now reaches this corrected interpretation, rather than preserving
+an invalid manuscript-error claim. This agrees with the later v53 audit.
+
+By contrast, SM pp11–12 really omits three-band terms in Eq49/52 and retains
+a factor 2 in Eq49 that becomes factor 1 in printed Eq52. Re-reading the
+source and direct integration by parts confirm that discrepancy **within
+those retained terms**. General multiband positional shift is a separate
+extension, not an acceptance prerequisite for the source's model approximation.
+
+The small SI regression failures are corrected by comparing the frozen
+CODATA2022 references at the installed Bohr-magneton value; physical solver
+files and old numeric snapshots are unchanged. Original and revised test
+fingerprints are retained in the migration manifest. A clean torus standard
+deviation is tested at machine precision rather than against exact zero.
+
 > **v49 ORIGINAL PRIMARY SOURCE AVAILABLE:** Both user-provided PDFs have now been SHA256-verified: published PRB (8 pages) and authentic Supplemental Material (16 pages). Prior v45–v48 statements that the SM was unavailable are superseded. The original SM Eq15 inserts phenomenological tau at a selected electric-field adiabatic pole, while Eq20 and printed Eq31 have a literal **overall sign mismatch** under the velocity-r identity quoted in Eq31. Main Eq10 and SM Eq62 use opposite spin helicities for fixed physical sigma_x. Independent both-direction eigenbasis calculations keep all branches, no signs fitted. See [v49 source-certified scientific audit](docs/ORIGINAL_SM_SOURCE_AUDIT_V49.md). The article is still **PARTIAL**, with the source-level sign bridge OPEN.
 
 > **v47 SCIENTIFIC CORRECTION:** The original v46 electric-y equilibrium source contained a wrong Pauli derivative sign. The v46 frozen outputs and claim that unsymmetrized xy approximately matches Eq.(8) are **RETRACTED**. Code and tests are corrected. The properly symmetrized frozen-target response `(xy+yx)/2` matches signed main Eq.(11) across beta=.025–.6 at eta=.002, with relative residual about 5×10^-5; the author's Supplemental Material relaxation operator is still **not independently checked**. See [v47 correction](docs/ORIGINAL_PHE_SYMMETRIC_SOURCE_CORRECTION_V47.md). Whole paper scientific status **PARTIAL**.

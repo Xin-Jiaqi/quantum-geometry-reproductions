@@ -7,8 +7,9 @@ class OrbitalGates(unittest.TestCase):
     def test_finite_field_eq56_first_line(self):
         d=orbital_phe_eq56(N=61)
         self.assertLess(abs(d["finite_difference_minus_first"]),5e-7)
-        self.assertGreater(abs(d["printed_line_discrepancy"]),1e-3)
-        self.assertAlmostEqual(d["printed_line_discrepancy"],-0.03880300933996192,places=10)
+        self.assertLess(abs(d["printed_line_discrepancy"]),5e-7)
+        self.assertAlmostEqual(d["historical_misread_minus_first"],-0.03880300933996192,places=10)
+        self.assertAlmostEqual(d['eq56_second_line_as_printed'],d['eq56_integrated_by_parts_corrected_sign'],places=12)
     def test_mnhe_2d_sbc(self):
         d=orbital_mnhe_2d(N=61)
         self.assertLess(abs(d["eq52_minus_eq48"]),1e-12)

@@ -48,16 +48,24 @@
     "trailing_newline": true
   },
   "test_physical_si_liouville_v26.py": {
-    "sha256": "e79d51c0685468ce3ab6cc9298e4a0fea4cad54bfee84c26defb081dfaf5af80",
-    "git_blob_sha1": "d9dffd3816374798b28eb82c8b82050922716c2a",
-    "size": 4756,
-    "trailing_newline": true
+    "sha256": "93eb90aaef53226193cf024677d45e95ebb8ae31e8a5ae0bab30e25b2f94906c",
+    "git_blob_sha1": "bac7b7d6b751ca7511b8a4900ee4cf4a1bf62b34",
+    "size": 4816,
+    "trailing_newline": true,
+    "imported_sha256": "e79d51c0685468ce3ab6cc9298e4a0fea4cad54bfee84c26defb081dfaf5af80",
+    "imported_git_blob_sha1": "d9dffd3816374798b28eb82c8b82050922716c2a",
+    "imported_size": 4756,
+    "revision_reason": "2026-11-01: test SI references follow installed Bohr magneton; source solvers and numeric snapshots unchanged"
   },
   "test_si_fig2_v25.py": {
-    "sha256": "b2c99700e7fcbaf959df6ac32caa3b349aa83390cdb3c2e2e66a0dcbac3b38da",
-    "git_blob_sha1": "e4f43398800ddbd637229af610f1588c09a07254",
-    "size": 4068,
-    "trailing_newline": true
+    "sha256": "52ca35e96c892da3838bc486ca1c467dd1f23aceb4f9cc8ecf64a03aeba7eba5",
+    "git_blob_sha1": "f2becd52cdcc6bdbde3501487b6340fe5301f1b5",
+    "size": 4242,
+    "trailing_newline": true,
+    "imported_sha256": "b2c99700e7fcbaf959df6ac32caa3b349aa83390cdb3c2e2e66a0dcbac3b38da",
+    "imported_git_blob_sha1": "e4f43398800ddbd637229af610f1588c09a07254",
+    "imported_size": 4068,
+    "revision_reason": "2026-11-01: test SI references follow installed Bohr magneton; source solvers and numeric snapshots unchanged"
   },
   "v26_si_liouville_prefactor.json": {
     "sha256": "6f351d45c6612beb9d83ac31b4790183ff8ff5ebc83dbc923afbc49b657918db",

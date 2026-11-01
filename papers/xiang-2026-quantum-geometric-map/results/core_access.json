@@ -1,0 +1,108 @@
+{
+  "spin_PHE": {
+    "printed_eq11_kernel": -0.002506415906691721,
+    "finiteT": -0.0020582363330464014
+  },
+  "spin_MNHE": {
+    "protocol": "SM16_19_4band_spin_density_vs_SM29",
+    "n_band": 4,
+    "mu": 0.15,
+    "T": 0.29,
+    "min_gap": 1.1066813641720115,
+    "mesh_count": 1681,
+    "j_rho_terms": [
+      0.0006462491579956449,
+      -0.00011127502878352829,
+      -0.00020722083137739373,
+      0.00046205957355069583
+    ],
+    "imag_rho_currents": [
+      1.361756325401394e-21,
+      -3.575980618723569e-20,
+      -5.951905516340152e-20,
+      4.7820703788212556e-21
+    ],
+    "total_rho": 0.0007898128713854187,
+    "direct_SM29": 0.0007898128713854168,
+    "closing_residual": 1.8431436932253575e-18,
+    "tau_order": "tau^0",
+    "magnetic_convention": "Bbar=-g*mu_B*B (Pauli spin)",
+    "units": "dimensionless e=hbar=1, momentum integral BZ mean"
+  },
+  "orbital_PHE": {
+    "protocol": "orbital_PHE_SM_eq56_literal_vs_independent_finite_B_2D_Bz",
+    "mesh": 121,
+    "mu": 1.15,
+    "T": 0.1,
+    "B_step": 0.001,
+    "a": "x",
+    "b": "y",
+    "normalization": "sigma_ab,z^(1)/tau, e=hbar=1, BZ mean over [-pi,pi)^2",
+    "minimum_direct_gap": 1.380144849781515,
+    "eq56_first_line": 0.003242459772040051,
+    "eq56_second_line_as_printed": 0.0032424597720400413,
+    "eq56_integrated_by_parts_corrected_sign": 0.003242459772040039,
+    "independent_finite_B_boltzmann_derivative": 0.0032424778458710335,
+    "fermi_second_derivative_integral": 0.019401505118975794,
+    "Berry_curvature_part": -0.0034756468392505933,
+    "printed_line_discrepancy": -1.1465454635839333e-17,
+    "historical_misread_second_line": -0.03556055046591154,
+    "historical_misread_minus_first": -0.0388030102379516,
+    "source_verdict": "Eq56 agrees: d_ab f = d_ab epsilon * fprime + va*vb*fsecond; no source sign error",
+    "legacy_key_note": "eq56_integrated_by_parts_corrected_sign is retained as an alias; it is the source result, not a manuscript correction",
+    "ibp_minus_first": -1.1162135730129297e-17,
+    "finite_difference_minus_first": 1.8073830982626854e-08,
+    "finite_difference_antisymmetry_step": 0.001
+  },
+  "orbital_MNHE_2D": {
+    "protocol": "strict_2D_Bz_orbital_MNHE_SBC_only",
+    "N": 121,
+    "mu": 1.15,
+    "T": 0.1,
+    "Bstep": 0.0003,
+    "min_direct_gap": 1.380144849781515,
+    "eq48_moment_Fermi_surface": 0.0791344583746833,
+    "eq52_squared_curvature": 0.0791344583746833,
+    "independent_B_derivative": 0.07913445900434071,
+    "eq52_minus_eq48": 0.0,
+    "finite_field_minus_eq48": 6.296574095454588e-10,
+    "limit": "No z momentum dependence, F_xz=F_yz=0. This does not test QMQ."
+  },
+  "orbital_MNHE_3D": {
+    "protocol": "3D_2band_orbital_intrinsic_SM48_49_vs_literal_SM52",
+    "N": 25,
+    "mu": 1.6,
+    "T": 0.27,
+    "Bstep": 0.0005,
+    "tilt_scale": 1.0,
+    "a": "x",
+    "b": "y",
+    "min_direct_gap": 3.4974137758561294,
+    "eq48_positional_curl": -8.217650014041556e-06,
+    "eq48_orbital_moment": 0.0004948163529007628,
+    "eq48_total": 0.00048659870288672124,
+    "eq48_ibp_direct": 0.00048674721036980306,
+    "eq52_printed_literal": 0.0004874092080879548,
+    "eq52_eq49_derived_factor2": 0.0004865230639952326,
+    "factor_one_geometric_piece": -8.86144092722224e-07,
+    "second_derivative_metric_piece": -6.521000720085727e-06,
+    "eq52_printed_minus_eq48": 8.105052012335632e-07,
+    "eq49_derived_minus_eq48": -7.563889148863839e-08,
+    "finite_field_wavepacket_derivative": 0.00048659870654637087,
+    "finite_field_minus_eq48": 3.659649623274919e-12,
+    "units": "e=hbar=1; 3D BZ mean; B couples orbital moment in normalized energy units",
+    "limits": "Eq49 and Eq52 omit three-band processes; finite-B check uses Eq49 positional shift"
+  },
+  "multiband_moment_sector_only": {
+    "full": -0.0007242273383417938,
+    "diagonal_m_eq_l": -0.0014034116377249885,
+    "cross_m_ne_l": 0.0006791842993831948
+  },
+  "scope": "Source-model kernels are callable; general multiband positional shift and physical metallic DC are not inferred",
+  "source_corrections": {
+    "Eq56": "Two lines agree; historical code misread d_ab f as d_ab epsilon*fprime",
+    "Eq49_to_52": "Factor 2 survives IBP in retained velocity-metric term; source Eq52 prints 1",
+    "Eq20_to_31": "Relative sign inconsistency remains",
+    "three_band": "Source Eq49 and Eq52 explicitly drop these; full moment sector is not full MNHE"
+  }
+}

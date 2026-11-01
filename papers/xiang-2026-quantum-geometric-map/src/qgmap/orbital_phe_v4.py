@@ -1,7 +1,8 @@
 """Orbital PHE, SM Eq. (53)-(56), two-band periodic 2D B_z subcase.
 
-Scientific audit: compare Eq.56 first and second displayed lines independently with
-finite-B semiclassical Boltzmann conductivity.  The three-band processes of SM
+Source correction: Eq56 differentiates f_n, not epsilon_n. The two displayed
+lines agree after integration by parts and the Fermi-function chain rule.
+Keep the historical misreading explicitly labeled for traceability. The three-band processes of SM
 Eq.(49) are not evaluated. All numbers e=hbar=tau=1, k in radians, T in energy.
 Model has an isolated two-band spectrum and a band-independent orbital moment
 m_z=(epsilon_n-epsilon_other)*Omega_n/2.
@@ -62,7 +63,9 @@ def orbital_phe_eq56(N=141,mu=1.15,T=.10,model=LatticeModel(),a=0,b=1,B_step=1e-
     _,fp,fpp=second_fermi(E,mu,T)
     geom=-vx*vy*Omega*fp
     first= -dma*vy*fp -vx*(dmb*fp+m*vy*fpp) +geom
-    second=2*m*h*fp -vx*vy*m*fpp+geom
+    historical_misread=2*m*h*fp -vx*vy*m*fpp+geom
+    d2f=h*fp+vx*vy*fpp
+    second=2*m*d2f -vx*vy*m*fpp+geom  # Literal source Eq56, d_ab f_n.
     ibp=2*m*h*fp +vx*vy*m*fpp+geom
     def integrate(z):return float(np.mean(np.sum(z,axis=-1)))
     def sigma(B):
@@ -80,6 +83,10 @@ def orbital_phe_eq56(N=141,mu=1.15,T=.10,model=LatticeModel(),a=0,b=1,B_step=1e-
        'fermi_second_derivative_integral':integrate(vx*vy*m*fpp),
        'Berry_curvature_part':integrate(geom),
        'printed_line_discrepancy':integrate(second-first),
+       'historical_misread_second_line':integrate(historical_misread),
+       'historical_misread_minus_first':integrate(historical_misread-first),
+       'source_verdict':'Eq56 agrees: d_ab f = d_ab epsilon * fprime + va*vb*fsecond; no source sign error',
+       'legacy_key_note':'eq56_integrated_by_parts_corrected_sign is retained as an alias; it is the source result, not a manuscript correction',
        'ibp_minus_first':integrate(ibp-first),
        'finite_difference_minus_first':fd-integrate(first),
        'finite_difference_antisymmetry_step':B_step}

@@ -8,7 +8,7 @@
 |---|---|---|---|
 | 1，已接通 | [NMEE](papers/jia-2026-nonlin-magnetoelectric-edelstein/README.md) | PT简并/多带完整E×B计算藏在底层，缺统一的物理输入与验证入口 | 接通明确频率协议、两种作用顺序、热占据和同规范算符；独立求解/收敛通过；DC争议留明，不强行冒充作者Fig1c |
 | 2，已接通 | [Spin Transport](papers/xiang-2025-spin-quantum-geometry/README.md) | 约化Eq13与完整多带响应容易混用；原SM积分和多源项有分歧 | 确认已有完整响应内核的适用范围，补实际缺失通道；以独立密度矩阵验证；给出可改模型的入口，不将材料DFT设为模型使用门槛 |
-| 3，排队 | [Magnetotransport](papers/xiang-2026-quantum-geometric-map/README.md) | spin/orbital以及bulk/device能力混杂；原SM符号、三带轨道项需分开 | 优先闭合论文核心模型的指定spin/orbital通道，标出一般多带仍缺的具体项；停止扩大到普适Kubo–NEGF或全自洽无序 |
+| 3，已接通 | [Magnetotransport](papers/xiang-2026-quantum-geometric-map/README.md) | spin/orbital以及bulk/device能力混杂；原SM符号、三带轨道项需分开 | 优先闭合论文核心模型的指定spin/orbital通道，标出一般多带仍缺的具体项；停止扩大到普适Kubo–NEGF或全自洽无序 |
 | 4，排队 | [Curvature–Flux](papers/cui-2026-curvature-flux-zeeman-qgt/README.md) | v3的频率符号、Table I及PR107无效反例影响可靠调用 | 修正反例，按真实反幺正群作用检查目标响应；保持几何/频率入口；不新增EPW、浴或材料设施 |
 | 5，排队 | [IGMC](papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/README.md) | 核心模型已可用；依赖导入、绝对幅度和反幺正约定需收尾 | 修复实际运行阻碍；完成指定模型单位/频率桥；作者原始数据缺失不无限追索 |
 
@@ -27,7 +27,11 @@
 
 ## Spin 本轮结果
 
-完整一阶/二阶电场响应接通，spin current与spin polarization使用物理算符；SM四源项、规范变换及非零四带积分检验通过。76项测试在Python3.11/3.12通过。紧凑Eq13/14的作者省略项与全有限频率响应分开；材料DFT与物理tau0仍不混称完成。下一篇Magnetotransport。
+完整一阶/二阶电场响应接通，spin current与spin polarization使用物理算符；SM四源项、规范变换及非零四带积分检验通过。76项测试在Python3.11/3.12通过。紧凑Eq13/14的作者省略项与全有限频率响应分开；材料DFT与物理tau0仍不混称完成。Magnetotransport随后已收拢，见下。
+
+## Magnetotransport 本轮结果
+
+统一示例直接调用spin PHE/MNHE、orbital PHE/MNHE与通用几何。修正旧v4入口对Eq56的误读：d_ab f包含fsecond链式项，两行并不冲突；历史数值另标。Eq49→52因子2与Eq20→31相对符号问题继续单列。一般三带轨道扩展不是原文两带近似的验收前提。SI测试按物理常数版本比较，源求解器/旧数值不改。下一篇Curvature–Flux。
 
 ## 继续工作规则
 
