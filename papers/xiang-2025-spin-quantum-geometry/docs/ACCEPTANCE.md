@@ -1,3 +1,30 @@
+## Current core-access decision — 2026-11-01
+
+Model-level spin-current and spin-polarization capabilities are callable via
+`methods.response`, with both linear and quadratic finite-frequency fields,
+all intermediate bands, the full physical velocity vertex and an explicit
+position connection. 76 tests pass on Python 3.11/3.12. The independent
+four-source SM(2) audit covers 2/4/6 bands. At eta=.02 the nested k derivatives
+need a converged step: .004 gives <2e-7 absolute source residual; taking an
+arbitrarily tiny step amplifies eigenproblem roundoff and is not improvement.
+
+`results/CORE_RESPONSE.json` is a nonzero four-band BZ benchmark. Its 25² to
+41² mesh difference is 1.091e-8 and .003 to .006 derivative-step difference
+is 1.430e-11. It is full finite-frequency response, not tau^0 extraction.
+A shifted-inversion-symmetric initial toy gave zero and was rejected as a
+positive transport benchmark; an independent sin(kx) hopping breaks that
+symmetry in the saved example.
+
+Source recheck: SM p12 Eq.(55) integrates Delta² over [0,2pi] but prints
+Delta² instead of 2pi*Delta² in its last line. Existing printed/corrected
+branches remain separate. SM p6 explicitly drops terms from Eq.(26) for
+main Eq.(13), and p9 drops three-band processes for main Eq.(14). The core
+access decision does not require those approximations to become universal.
+The physical metallic tau^0 preparation and original absolute axes remain
+open; neither prevents use within the validated named protocols.
+
+---
+
 # Scientific acceptance, 2026-10-20 (curated V28 subset)
 
 | Item | Gate | Meaning |

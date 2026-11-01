@@ -1,0 +1,51 @@
+{
+  "protocol": "full_quadratic_spin_current_symmetric",
+  "model": "synthetic four-band physical spin",
+  "settings": {
+    "energy1": {
+      "real": 0.08,
+      "imag": 0.12
+    },
+    "energy2": {
+      "real": -0.08,
+      "imag": 0.12
+    },
+    "axis1": 0,
+    "axis2": 1,
+    "mu": 0.1,
+    "thermal_energy": 0.25,
+    "current_axis": 0,
+    "component": "z",
+    "step": 0.003
+  },
+  "rows": [
+    {
+      "n": 25,
+      "step": 0.003,
+      "response": {
+        "real": 0.0086299565015393,
+        "imag": -0.00033391664734121597
+      }
+    },
+    {
+      "n": 41,
+      "step": 0.003,
+      "response": {
+        "real": 0.008629967405798003,
+        "imag": -0.000333916833276393
+      }
+    },
+    {
+      "n": 41,
+      "step": 0.006,
+      "response": {
+        "real": 0.008629967416639482,
+        "imag": -0.00033391684259825096
+      }
+    }
+  ],
+  "mesh_change": 1.0905843834515216e-08,
+  "step_change": 1.4298066210911142e-11,
+  "units": "e=hbar=1; spin sigma/2; d2k/(2pi)^2",
+  "scope": "Not reduced Eq13, not isolated tau0, not a DFT material"
+}

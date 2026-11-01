@@ -2,6 +2,46 @@
 
 Independent **paper-model** subset for PRL **135**, 146303 (2025), DOI `10.1103/14mp-263q`.
 
+## Core access (2026-11-01)
+
+`methods.response` now exposes the full **linear and quadratic electric-field
+response** for a supplied Bloch model, physical spin and position connection.
+It includes all intermediate bands before a tau-power split. The output is
+conventional spin current `{D_a H, sigma_c}/4` or spin `sigma_c/2`; temperature
+is **k_B T in energy units**, not kelvin.
+
+```python
+from methods.response import SpinModel, response_at_k, integrate_response
+# H(kx,ky), A(kx,ky,axis), sigma(kx,ky,component) in one orbital gauge:
+model = SpinModel(H, A, sigma, reciprocal)
+linear = response_at_k(model, [kx,ky], energy1=.08+.12j,
+                       current_axis=0, component="z")
+quadratic = response_at_k(model, [kx,ky], energy1=.08+.12j,
+                          energy2=-.08+.12j, axis1=0, axis2=1,
+                          current_axis=0, component="z", thermal_energy=.25)
+```
+
+Both drive energies have positive imaginary parts. The quadratic tensor is
+symmetrized: two labeled drives contribute `2*K*E1*E2`; an identical-drive
+second harmonic contributes `K*E1**2`. Cosine Fourier amplitudes are E/2.
+It retains the full density response and is **not** an isolated intrinsic DC
+coefficient. Converge the k grid and finite-difference step independently;
+smaller derivative steps eventually amplify roundoff.
+
+`python scripts/reproduce_core.py` gives a nonzero four-band spin-current
+example with mesh and derivative-step checks. The full 76-test suite passes
+on Python 3.11/3.12, including independent SM Eq.(2) four-source sums at
+2/4/6 bands, an orbital-superoperator solver, a curved scalar-band analytic
+check, and k-dependent gauge transformations. Existing paper-model curves
+and their separate source branches are preserved.
+
+**Scope correction:** SM p6 Eq.(26) explicitly drops its fourth and last
+terms to produce main Eq.(13); SM Eq.(45) similarly drops three-band terms
+for main Eq.(14). Thus the compact main formulas are not a complete generic
+multiband theory. The full finite-frequency density calculation is the
+callable route when those terms matter. MnBi2Te4 DFT remains separate and
+is not a prerequisite for these model capabilities.
+
 ## Reproduce without publisher data
 
 ```sh
