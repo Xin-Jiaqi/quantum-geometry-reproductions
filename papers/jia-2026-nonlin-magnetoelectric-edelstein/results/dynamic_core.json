@@ -1,0 +1,81 @@
+{
+  "model": "CuMnAs Eq5",
+  "theta_rad": 0.15,
+  "a_nm": 1.0,
+  "settings": {
+    "electric_energy_eV": {
+      "real": 0.043,
+      "imag": 0.017
+    },
+    "magnetic_energy_eV": {
+      "real": 0.071,
+      "imag": 0.023
+    },
+    "mu_eV": 0.03,
+    "temperature_K": 100.0,
+    "observable": "A_z",
+    "magnetic": "x",
+    "beta": 0
+  },
+  "convergence": [
+    {
+      "n": 241,
+      "response": {
+        "real": 0.000796387692137933,
+        "imag": 0.0007576022298683375
+      },
+      "parts": {
+        "B_then_E": {
+          "real": 0.0007637196927869907,
+          "imag": 0.0005963370555239617
+        },
+        "E_then_B": {
+          "real": 3.266799935094231e-05,
+          "imag": 0.00016126517434437583
+        }
+      }
+    },
+    {
+      "n": 481,
+      "response": {
+        "real": 0.0007971459398607192,
+        "imag": 0.0007572370702508236
+      },
+      "parts": {
+        "B_then_E": {
+          "real": 0.0007617182501861798,
+          "imag": 0.0005956533948928682
+        },
+        "E_then_B": {
+          "real": 3.542768967453936e-05,
+          "imag": 0.00016158367535795543
+        }
+      }
+    },
+    {
+      "n": 721,
+      "response": {
+        "real": 0.000797145298755873,
+        "imag": 0.0007572370731671948
+      },
+      "parts": {
+        "B_then_E": {
+          "real": 0.000761718846586404,
+          "imag": 0.000595653778842026
+        },
+        "E_then_B": {
+          "real": 3.5426452169468964e-05,
+          "imag": 0.0001615832943251687
+        }
+      }
+    }
+  ],
+  "protocol": "finite_frequency_full_EB_adiabatic_covariant",
+  "normalization": "s/mu_B per E[V/nm] B[T], 2D (nm V T)^-1",
+  "output_energy_eV": {
+    "real": 0.11399999999999999,
+    "imag": 0.04
+  },
+  "last_relative_mesh_change": 5.831061139182418e-07,
+  "scope": "Full AC response at fixed switching rates; no eta-to-zero or intrinsic-DC claim"
+}

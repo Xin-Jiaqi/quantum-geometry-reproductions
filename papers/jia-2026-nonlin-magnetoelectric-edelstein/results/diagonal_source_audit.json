@@ -1,0 +1,26 @@
+{
+  "source": "Jia PRL136226302 SM page3 Eqs9,11; Bbar=-g mu_B B on page2",
+  "sm_sha256": "13bada2e109d9f1faea6be9370c50bec04968b06057c262cd7ef69e29a28673a",
+  "conclusion": "INTERNAL_DIAGONAL_SIGN_INCONSISTENCY",
+  "checks": [
+    {
+      "bands": 2,
+      "eq9_contracted": 2.017466648972277,
+      "plus_reindexed": 2.0174666489722766,
+      "eq11_printed_diagonal": -2.0174666489722766
+    },
+    {
+      "bands": 3,
+      "eq9_contracted": 4.010801198183422,
+      "plus_reindexed": 4.010801198183423,
+      "eq11_printed_diagonal": -4.010801198183423
+    },
+    {
+      "bands": 5,
+      "eq9_contracted": 0.21620112251781592,
+      "plus_reindexed": 0.21620112251781595,
+      "eq11_printed_diagonal": -0.21620112251781595
+    }
+  ],
+  "scope": "Only the displayed diagonal term; no claim that either full equation is corrected"
+}

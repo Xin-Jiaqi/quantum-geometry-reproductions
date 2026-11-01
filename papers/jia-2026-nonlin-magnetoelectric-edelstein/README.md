@@ -4,6 +4,52 @@
 
 This folder is the independently tested **paper reproduction module**, not an implementation endorsed by the original authors. It reproduces the Kane–Mele and CuMnAs tight-binding mechanisms, separates *published* and *static* response conventions, and offers a checked input interface for an existing Wannier Stage-1 pipeline. It does **not** claim perfect agreement with published curves or universal metallic driven-DC physics.
 
+## Core access (2026-11-01)
+
+The module now has three explicit, callable paths:
+
+| Input / question | Entry | Supported scope |
+|---|---|---|
+| Nondegenerate model, published two/three-band formula | `evaluate_clean(..., CleanSpec(branch="printed"))` | Existing printed and full-static branches retained |
+| PT-degenerate / general multiband model, mixed AC E/B response | `evaluate_dynamic(model, k, DynamicSpec(...))` | Full finite-frequency SM (6)/(7), both time orderings, finite-T Fermi derivative, physical position/spin operators |
+| Gapped T=0 static interband response | `evaluate_insulating_static(...)` | Occupied/unoccupied groups, including degeneracy inside each group |
+
+CuMnAs Eq. (2) Fermi-surface response remains available via `scripts/reproduce.py --case fig1d-printed`; the separate BGK path retains its stated collision/preparation protocol. These capabilities can be used without closing every paper discrepancy.
+
+```python
+from nmee_lab import DynamicSpec, evaluate_dynamic, cumnas_dynamic_model
+from nmee_lab.ptbackend.cumnas import Model, points
+
+p = Model(a_nm=1.)  # Explicit model length; not measured CuMnAs data.
+model = cumnas_dynamic_model(theta_rad=.15, params=p)
+spec = DynamicSpec(
+    electric_energy_eV=.043+.017j, magnetic_energy_eV=.071+.023j,
+    mu_eV=.03, temperature_K=100., observable="A_z", magnetic="x", beta=0,
+)
+result = evaluate_dynamic(model, points(481)/p.a_nm, spec)
+print(result["response"], result["parts"])
+```
+
+`Re(z)=hbar*omega` and `Im(z)>0` are supplied in eV; output is at `z_E+z_B`.
+The response is per **complex Fourier amplitude** E*B, in `(nm V T)^-1` for
+`s/mu_B`. For two cosine drives, each signed pair carries **1/4** of this
+coefficient; retain its output frequency when summing the pairs. Imaginary
+energies specify adiabatic switching, not a fitted scattering time. `T>0` is
+required to resolve Fermi derivatives; the T=0 static path is separate.
+
+For another model, supply `CovariantBloch2D`: H(k), partial H, position
+connection A, observable/Zeeman spin and partial Zeeman spin, all in one
+orbital gauge. The covariant derivatives include both `[A,H]` and `[A,S]`.
+No physical spin or position connection is inferred from HR alone.
+Equal-weight BZ integration is chunked to allow dense meshes.
+
+`python examples/use_dynamic.py` reproduces the **specified AC benchmark**:
+481² -> 721² changes the complex result by **5.84e-7 relative**. The reported
+result is approximately `0.000797145299 + 0.000757237073j`; this is not a
+replacement for the published intrinsic DC Fig. 1(c). See
+[verification](docs/FINAL_VERIFICATION.md) and the
+[source-sign audit](docs/AUTHOR_DISCUSSION_BRIEF.md).
+
 ## Source article, Supplemental Material, and study notes
 
 - [Published PRL article (official DOI)](https://doi.org/10.1103/r3x2-kb93)
