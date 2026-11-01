@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="728.39952pt" height="296.39952pt" viewBox="0 0 728.39952 296.39952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T19:01:20.773840</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 296.39952 
+L 728.39952 296.39952 
+L 728.39952 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <!-- Zeeman QGT: $T^{ab}=r^a\sigma^b$ -->
+    <g transform="translate(272.99976 26.939966)">
+     <text>
+      <tspan style="font: 15px 'DejaVu Sans'" x="0 10.275879 19.504395 28.73291 43.344727 52.536621 62.043457 66.811523 78.618164 90.241699 99.404297 104.458008 135.873291" y="-0.2843750000000007">Zeeman QGT: =</tspan>
+      <tspan style="font: oblique 15px 'DejaVu Sans'" x="109.226074 151.364014 165.073848" y="-0.2843750000000007">Trσ</tspan>
+      <tspan style="font: oblique 10.5px 'DejaVu Sans'" x="119.441406 125.875732 158.229365 175.250605" y="-6.026562500000001">abab</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="patch_2">
+    <path d="M 362.249814 52.74553 
+Q 228.541065 81.929608 95.924633 110.87527 
+" style="fill: none; stroke: #808080; stroke-linecap: round"/>
+    <path d="M 100.259118 111.976285 
+L 95.924633 110.87527 
+L 99.406136 108.06829 
+" style="fill: none; stroke: #808080; stroke-linecap: round"/>
+   </g>
+   <g id="text_2">
+    <text style="font: 700 10px 'DejaVu Sans'; text-anchor: middle" x="92.879942" y="148.19976" transform="rotate(-0 92.879942 148.19976)">Normal metric</text>
+   </g>
+   <g id="text_3">
+    <!-- $g^N$: -->
+    <g transform="translate(85.814942 180.403375)">
+     <text>
+      <tspan style="font: oblique 9px 'DejaVu Sans'" x="0" y="-0.9609375">g</tspan>
+      <tspan style="font: oblique 6.3px 'DejaVu Sans'" x="6.132344" y="-4.40625">N</tspan>
+      <tspan style="font: 9px 'DejaVu Sans'" x="11.091133" y="-0.9609375">:</tspan>
+     </text>
+    </g>
+    <text style="font: 9px 'DejaVu Sans'" transform="translate(59.042755 190.499688)">real symmetric</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 362.524435 53.416923 
+Q 318.977818 81.931164 276.366553 109.832939 
+" style="fill: none; stroke: #808080; stroke-linecap: round"/>
+    <path d="M 280.808586 109.31492 
+L 276.366553 109.832939 
+L 278.617357 105.968501 
+" style="fill: none; stroke: #808080; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font: 700 10px 'DejaVu Sans'; text-anchor: middle" x="273.759821" y="148.19976" transform="rotate(-0 273.759821 148.19976)">Normal curvature</text>
+   </g>
+   <g id="text_5">
+    <!-- $\Omega^N$: -->
+    <g transform="translate(266.244821 180.421657)">
+     <text>
+      <tspan style="font: 9px 'DejaVu Sans'" x="0 11.922363" y="-0.9609375">Ω:</tspan>
+      <tspan style="font: oblique 6.3px 'DejaVu Sans'" x="6.963574" y="-4.40625">N</tspan>
+     </text>
+    </g>
+    <text style="font: 9px 'DejaVu Sans'" transform="translate(217.203258 190.499688)">imaginary antisymmetric</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 365.875085 53.416923 
+Q 409.421702 81.931164 452.032967 109.832939 
+" style="fill: none; stroke: #808080; stroke-linecap: round"/>
+    <path d="M 449.782163 105.968501 
+L 452.032967 109.832939 
+L 447.590934 109.31492 
+" style="fill: none; stroke: #808080; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font: 700 10px 'DejaVu Sans'; text-anchor: middle" x="454.639699" y="148.19976" transform="rotate(-0 454.639699 148.19976)">Anomalous metric</text>
+   </g>
+   <g id="text_7">
+    <!-- $g^A$: -->
+    <g transform="translate(447.754699 180.403375)">
+     <text>
+      <tspan style="font: oblique 9px 'DejaVu Sans'" x="0" y="-0.9609375">g</tspan>
+      <tspan style="font: oblique 6.3px 'DejaVu Sans'" x="6.132344" y="-4.40625">A</tspan>
+      <tspan style="font: 9px 'DejaVu Sans'" x="10.688154" y="-0.9609375">:</tspan>
+     </text>
+    </g>
+    <text style="font: 9px 'DejaVu Sans'" transform="translate(406.706965 190.499688)">imaginary symmetric</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 366.149706 52.74553 
+Q 499.858455 81.929608 632.474887 110.87527 
+" style="fill: none; stroke: #808080; stroke-linecap: round"/>
+    <path d="M 628.993384 108.06829 
+L 632.474887 110.87527 
+L 628.140402 111.976285 
+" style="fill: none; stroke: #808080; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font: 700 10px 'DejaVu Sans'; text-anchor: middle" x="635.519578" y="148.19976" transform="rotate(-0 635.519578 148.19976)">Anomalous curvature</text>
+   </g>
+   <g id="text_9">
+    <!-- $\Omega^A$: -->
+    <g transform="translate(628.229578 180.421657)">
+     <text>
+      <tspan style="font: 9px 'DejaVu Sans'" x="0 11.519385" y="-0.9609375">Ω:</tspan>
+      <tspan style="font: oblique 6.3px 'DejaVu Sans'" x="6.963574" y="-4.40625">A</tspan>
+     </text>
+    </g>
+    <text style="font: 9px 'DejaVu Sans'" transform="translate(593.058562 190.499688)">real antisymmetric</text>
+   </g>
+   <g id="text_10">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="364.19976" y="266.639558" transform="rotate(-0 364.19976 266.639558)">Fig. 1 redrawn: symmetry under index exchange defines metric vs curvature</text>
+   </g>
+  </g>
+ </g>
+</svg>

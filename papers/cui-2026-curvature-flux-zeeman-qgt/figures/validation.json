@@ -1,0 +1,11 @@
+{
+  "citation": "arXiv:2604.09725v3",
+  "source_figures": "Figs1/2 are conceptual schematics",
+  "added_check": "eigenvector-QGT contour flux; independent Wilson-loop topology",
+  "matrix_vs_projector_error": 3.376611507232129e-16,
+  "mesh_refinement_max_error": 2.957044637375006e-05,
+  "gapless_flux_error_vs_minus_pi": 9.856667015029075e-06,
+  "massive_flux_error": 3.834507653932562e-05,
+  "sign": "OmegaA inward for d=(kx,ky,0), flux=-pi. Outward vector would be -2 OmegaA.",
+  "scope": "local model topology and source channel table; not a bulk current or experimental curve"
+}

@@ -1,5 +1,7 @@
 # Cui et al. (2026): non-Hermitian Zeeman QGT and local Dirac flux
 
+**正文主图：** [图片、数据与重算说明](figures/README.md)
+
 ## 当前核心能力（2026-11-01）
 
 **模型核心已接通。** 下列是当前入口；后续各轮记录保留为历史，不能把其材料、浴、EPW等扩展门槛当作本篇模型使用的前置条件。
