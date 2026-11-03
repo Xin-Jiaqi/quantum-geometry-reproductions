@@ -74,11 +74,13 @@ def main():
         ax.set_title(title,fontsize=8,pad=14)
     output = ROOT/'figures/bilayer_stage9_physics'
     fig.savefig(output.with_suffix('.svg'))
+    svg = output.with_suffix('.svg')
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
     fig.savefig(output.with_suffix('.pdf'))
     fig.savefig(output.with_suffix('.png'), dpi=600)
     plt.close(fig)
     with (ROOT/'results/bilayer_stage9_figure_source.csv').open('w',newline='') as f:
-        writer=csv.writer(f);writer.writerow(['panel','x','quantity','value']);writer.writerows(source)
+        writer=csv.writer(f,lineterminator='\n');writer.writerow(['panel','x','quantity','value']);writer.writerows(source)
 
 
 if __name__ == '__main__':
