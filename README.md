@@ -47,7 +47,7 @@ python scripts/core.py test all
 
 ## 仓库布局
 
-当前探索：[Bilayer KM 的静态 NMEE：电极化、滑移阶数与层间耦合](studies/bsf-nmee-connection/STAGE8_README.md)。
+当前探索：[Bilayer KM：完整 AB→BA 路径、自旋调控与层间耦合机制](studies/bsf-nmee-connection/STAGE9_README.md)。
 已有计算证据与适用范围见[简明中文结论](studies/bsf-nmee-connection/docs/BILAYER_KM_FINDINGS_ZH.md)；不作为原论文驱动直流响应或实际材料的额外验收。
 
 ```text

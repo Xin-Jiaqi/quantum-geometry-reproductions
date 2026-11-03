@@ -1,0 +1,65 @@
+{
+  "grid": {
+    "n_exterior_kept": 1647,
+    "n_valley_total": 6480,
+    "exterior_area_weight": 18.70239867619162,
+    "valley_area_weight": 0.35809862195676445,
+    "bz_area_weight": 19.08848340903347,
+    "normalization_error": -0.027986110885084514
+  },
+  "scope": "equal adiabatic rates; numerical cross-check, not a relaxation model",
+  "models": {
+    "AB": {
+      "static": -2.471276702294205e-05,
+      "samples": [
+        {
+          "eta_eV": 0.001,
+          "real": -2.4437791105426607e-05,
+          "imag": 4.1374737439942634e-16
+        },
+        {
+          "eta_eV": 0.0003,
+          "real": -2.468786001238239e-05,
+          "imag": 3.936808727695583e-15
+        },
+        {
+          "eta_eV": 0.0001,
+          "real": -2.4709943848220308e-05,
+          "imag": 2.2901324952491385e-14
+        },
+        {
+          "eta_eV": 3e-05,
+          "real": -2.4712444393633552e-05,
+          "imag": 6.316777165642309e-13
+        }
+      ],
+      "eta_squared_intercept": -2.4712691700322772e-05
+    },
+    "generic_small": {
+      "static": -6.878616231953439e-07,
+      "samples": [
+        {
+          "eta_eV": 0.001,
+          "real": -6.813123876335325e-07,
+          "imag": -3.049654198636736e-16
+        },
+        {
+          "eta_eV": 0.0003,
+          "real": -6.872678887637632e-07,
+          "imag": 5.299628530764136e-17
+        },
+        {
+          "eta_eV": 0.0001,
+          "real": -6.877935570150441e-07,
+          "imag": -9.94196003479499e-15
+        },
+        {
+          "eta_eV": 3e-05,
+          "real": -6.878535787513235e-07,
+          "imag": 3.512059139151502e-13
+        }
+      ],
+      "eta_squared_intercept": -6.878595149669994e-07
+    }
+  }
+}
