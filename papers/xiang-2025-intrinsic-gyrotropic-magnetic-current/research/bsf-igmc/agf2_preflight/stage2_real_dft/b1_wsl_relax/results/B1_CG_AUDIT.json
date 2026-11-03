@@ -1,0 +1,144 @@
+{
+ "document": "B1_CG_AUDIT.json",
+ "date": "2026-10-22",
+ "status": "PASS_READONLY_AUDIT",
+ "author_role": "DeepSeek Harness research executor + independent numerical auditor",
+ "authorization": {
+  "allowed": [
+   "read-only analysis of existing WSL VASP outputs",
+   "lightweight python parsing",
+   "git commits to PR #38 branch research/agf2-b1-wsl-relax-20261021"
+  ],
+  "forbidden": [
+   "new VASP/PBS jobs",
+   "any modification of original private outputs",
+   "B2/NEB/SOC/Wannier/IGMC",
+   "auto-retry",
+   "PBS qsub/qdel"
+  ],
+  "task_file": "HARNESS_CG_AUDIT_AND_NEXT_DECISION_20261022.md (commit 34dd447)"
+ },
+ "source_files_private_wsl": {
+  "dir_alias": "~/agf2-b1-relax1/B1_g3.0/",
+  "OUTCAR_sha256": "ed32014a6e273cc605ec9a5d2aca1ab9cadc24f51bd28e06f36f7469cebf8a8c",
+  "OUTCAR_bytes": 3898565,
+  "vasprun_xml_sha256": "4955d88e739eb5f78416e11416ac2c68a644c8cdca0742f917da24b7870bf644",
+  "vasprun_xml_bytes": 8215644,
+  "OSZICAR_sha256": "a208006f9ead3d13f93066ea6f17a3edaddf733054cd273ea906f9fedb60d757",
+  "CONTCAR_sha256": "8626816ef31a3d7a640f42d46c02a44e51766dec594991c5542473fb6a5bc120",
+  "vasp_stdout_lines": 310,
+  "build_string": "vasp.6.6.0 06Mar2026 (build Sep  2 2026 13:14:08) complex",
+  "executed_on": "LinuxGNU date 2026.10.21 19:21:18, 8 mpi-ranks, 1 node",
+  "nions": 12,
+  "ions_per_type": [
+   4,
+   8
+  ],
+  "elapsed_sec": 9336.599,
+  "note": "only non-sensitive hashes/sizes are committed; POTCAR content never uploaded (hash-only verification)"
+ },
+ "input_hashes_verified": {
+  "POSCAR_initial": "2d323c3fe2353ef984330b3b99fc24a75a85337883bbaf36d08b20ed45e6d60a",
+  "POSCAR_expected": "2d323c3fe2353ef984330b3b99fc24a75a85337883bbaf36d08b20ed45e6d60a",
+  "INCAR_relax": "1d8ff5dcbdae142eef2bc06ace2a604be3dc73cc3ec821139ce2df3b795fe097",
+  "INCAR_relax_expected": "1d8ff5dcbdae142eef2bc06ace2a604be3dc73cc3ec821139ce2df3b795fe097",
+  "KPOINTS": "4ab9ad06699176341f30e79f18b822be389d066f64e0295ce368e74b8b99420a",
+  "KPOINTS_expected": "4ab9ad06699176341f30e79f18b822be389d066f64e0295ce368e74b8b99420a",
+  "POTCAR": "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff",
+  "POTCAR_note": "hash verified on WSL (sha256sum), content never transferred or uploaded",
+  "POTCAR_expected": "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff",
+  "POSCAR_relaxed_committed": "d49c82807fc2309575e5d3757904ab78caab348aef10e895ac2327a904ac2d68"
+ },
+ "counts": {
+  "ionic_steps_in_outcar": 15,
+  "ediFF_reached_markers_total": 15,
+  "oszicar_steps": 15,
+  "vasprun_calculation_blocks": 15,
+  "vasprun_force_varrays": 15,
+  "stdout_cg_markers": 45,
+  "stdout_ionic_step_F_lines": 15
+ },
+ "consistency_checks": {
+  "outcar_vs_vasprun_max_abs_force_diff_ev_ang": 7.668115805070108e-07,
+  "energy_outcar_toten_vs_oszicar_F_max_abs_diff": "<=5e-7 (all 15 steps)",
+  "energy_outcar_toten_vs_vasprun_e_fr_max_abs_diff": "0.0 (all 15 steps; last scstep per calculation)",
+  "geometry_step1_vs_independent_audit": {
+   "ag_z_sep_A": "4.969271 ok",
+   "inner_f_gap_z_A": "3.000000 ok",
+   "nearest_ff_A": "3.680562 ok"
+  },
+  "geometry_step15_vs_independent_audit": {
+   "ag_z_sep_A": "4.044265 ok",
+   "inner_f_gap_z_A": "2.211875 ok",
+   "nearest_ff_A": "3.052256 ok",
+   "slide_A": "0.005148 ok"
+  },
+  "POSCAR_relaxed_vs_OUTCAR_step15": "max |dR| = 0.0 A over all 12 atoms (identical)",
+  "CONTCAR_vs_OUTCAR_step15": "max |dR| = 7.33e-06 A (fractional rounding)",
+  "poscar_relaxed_not_predictor_only": "step 15 is a completed ionic step (OSZICAR line 15, 15th TOTAL-FORCE block, converged SCF); STOPCAR soft stop detected before step-15 SCF but step 15 completed normally; aborted line search is the step-16 trial (stdout lines 307-309)"
+ },
+ "dated_erratum": [
+  {
+   "item": "B1_RELAX_RUN_RECEIPT.json final_geometry.vertical_F_plane_gap_A = 2.687",
+   "issue": "inconsistent with committed step-15 POSCAR: inner F-plane vertical gap = 14.582070 - 12.370195 = 2.211875 A",
+   "explanation": "2.687 matches the step-12 inner F-plane gap (2.6869 A); the final-geometry field accidentally carried an intermediate monitoring value",
+   "action": "historical value preserved; correct step-15 value is 2.2119 A; definition: mean z of top-half inner F (atoms 5,8) minus mean z of bottom-half inner F (atoms 9,12)"
+  },
+  {
+   "item": "B1_RELAX_SCIENTIFIC_ASSESSMENT.md relative slide 0.03 A",
+   "issue": "0.005 fractional-units statement inconsistent with recorded t_y -0.3400 -> -0.3391 (Delta frac = 0.0009)",
+   "explanation": "correct: 0.0009 x b(5.87966575 A) = 0.0053 A interlayer relative slide (unrounded coords 0.005148 A); ~0.03 A is each layer's own absolute y translation (top Ag -0.02635 A, bottom Ag -0.03150 A), not the relative slide",
+   "action": "corrected in this audit; per-step ag_y_relative_slide_A in B1_CG_TRAJECTORY.csv"
+  },
+  {
+   "item": "earlier claim CONTCAR uninitialized / all-zero",
+   "issue": "tail -12 of CONTCAR caught the trailing 12x3 zero velocity block",
+   "explanation": "CONTCAR actually contains valid step-15 fractional coordinates (Direct block, 12 rows) followed by 12 zero-velocity rows; agrees with the OUTCAR step-15 block to 7.33e-06 A",
+   "action": "corrected here; CONTCAR sha 8626816ef31a3d7a640f42d46c02a44e51766dec594991c5542473fb6a5bc120 (private)"
+  }
+ ],
+ "physical_findings": {
+  "trajectory": "15/15 ionic steps electronically converged (EDIFF 1e-6); TOTEN -35.17579601 -> -35.34931729 eV (dE -0.173521 eV); step 14 bounce -35.25754857",
+  "forces": "max|F| step1 0.1442, min step6 0.0510, step13 0.4395, step14 0.6963, step15 0.4973 eV/A; NOT force-converged (25x EDIFFG=-0.02)",
+  "geometry": "Ag z-sep 4.9693 -> 4.0443 A; inner F gap 3.0000 -> 2.2119 A (step14 minimum 1.6276 A); nearest interlayer F-F 3.6806 -> 3.0523 A (step14 2.6440 A); Ag relative y slide +0.00515 A (step14 peak 0.0088 A)",
+  "layer_force_decomposition": "steps 1-13: net z compression projection grows -0.22 -> -0.33 eV/A; step 14: forces REVERSE (+0.53/-0.53 eV/A, layers pushed apart after overshoot); step 15: back to compression (-0.315/+0.315); y sliding force small throughout (<=0.06 eV/A) with step-14 spike",
+  "max_force_atoms": "step 6: F atoms 9/12 (Fz ~ +0.0508); steps 13-15: Ag atoms 1,3,4 with combined Fz and Fy (e.g. step 14 Ag4 F=(+0.546,+0.429,-0.052) norm 0.696)",
+  "cg_line_search": "trial markers at stdout lines 47/112/136 (trialstep 1.00 -> 2.27 -> 2.04); ZBRENT 'increasing intervall' at lines 73/165/179/196/215/244; opt extrapolations 10.0/7.33/20.39/44.85/93.78/191.64/387.36/225.42/306.39; curvature ****** at lines 214/243/276; bracket finally found at 14->15 (line 277) and bisectioning at 15->16 (line 308, aborted by STOPCAR)",
+  "step15_lowE_largeF": "line-search minimum along the search direction was bracketed around step 15's geometry, but the full 36-dim gradient at that point is still large (0.497 eV/A); energy descent along a steep anharmonic direction does not imply a stationary point",
+  "magnetic_order": "net magnetization 0.0 all steps (OSZICAR mag column); final per-atom Ag moments runner-reported [-0.566,+0.566,+0.566,-0.566] mub retained (NOT recomputed here)",
+  "gap": "occupation-defined gap initial 1.494 / final 1.445 eV at 12x8x1 (diagnostic only, not k-converged) - runner-reported, not recomputed"
+ },
+ "evidence_levels": {
+  "RUNNER_REPORTED": [
+   "old receipt values not re-derived here: per-atom moments, gap, elapsed"
+  ],
+  "INDEPENDENTLY_RECOMPUTED_FROM_COMMITTED_COORDINATES": [
+   "step-1/step-15 geometry metrics matching audit_agf2_b1_positions.py"
+  ],
+  "CROSS_VERIFIED_FROM_RAW_WSL_OUTPUT": [
+   "all per-step forces/energies/positions/geometry in this audit (OUTCAR+OSZICAR+vasprun+stdout)"
+  ],
+  "INFERRED_HYPOTHESIS": [
+   "CG line-search extrapolation overshoot as the mechanism of the step-13/14 near-contact",
+   "steep anharmonic interface compression valley"
+  ],
+  "NOT_COMPUTED": [
+   "Hessian eigenmodes/dynamical matrix",
+   "magnetic ground state",
+   "SOC easy axis",
+   "sliding potential curvature/barrier",
+   "Berry curvature/Pz",
+   "B2/NEB energies",
+   "IGMC"
+  ]
+ },
+ "deliverables": [
+  "results/B1_CG_LINESEARCH_AUDIT.md",
+  "results/B1_CG_TRAJECTORY.csv",
+  "results/B1_CG_ION_FORCES.csv",
+  "results/B1_CG_AUDIT.json",
+  "results/B1_NEXT_COMPUTATION_PROPOSAL.md",
+  "scripts/parse_vasp_b1_cg.py",
+  "scripts/test_parse_vasp_b1_cg.py"
+ ]
+}

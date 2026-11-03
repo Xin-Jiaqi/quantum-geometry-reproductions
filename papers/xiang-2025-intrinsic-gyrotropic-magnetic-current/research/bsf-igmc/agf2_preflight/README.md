@@ -1,6 +1,6 @@
 # AgF₂: symmetry-first DFT preflight for BSF × IGMC
 
-**Research extension, not a reproduction of Xiang et al. (2025).** This directory is independent of the frozen IGMC paper model code. Current status: **SYMMETRY PASS / LITERATURE BSF SUPPORT / DFT INPUTS BLOCKED / MATERIAL IGMC UNCOMPUTED**.
+**Research extension, not a reproduction of Xiang et al. (2025).** This directory is independent of the frozen IGMC paper model code. Current status: **LITERATURE BSF SUPPORT / C2DB-DERIVED B1 NON-SOC SCREENING PASS / AUTHOR-RELAXED STRUCTURE AND SOC RESPONSE UNVERIFIED / MATERIAL IGMC UNCOMPUTED**.
 
 This first real-material candidate follows the **AgF₂ bilayer** reported by Zhu et al., *PRL* **135**, 056801 (2025), DOI [10.1103/dmzg-ck2t](https://doi.org/10.1103/dmzg-ck2t), rather than interpreting the preceding eight-band toy Hamiltonian as AgF₂.
 
@@ -45,7 +45,7 @@ python -m unittest discover -s tests -v
 python agf2_preflight.py --out results/agf2_preflight.json
 ```
 
-The **DFT input gate intentionally returns `BLOCKED_INPUTS`** when using the example contract. The original paper provides stacking translations and polarization but these are **not complete POSCAR atomic coordinates**, and we have not located/validated the author's released pair of relaxed structures or their frozen functional/U/POTCAR protocol. No guessed POSCAR, Hubbard U or pseudopotential was created; no DFT was run.
+The **source-constrained, author-exact DFT input gate still returns `BLOCKED_INPUTS`** when using the example contract: published stacking translations and polarization are not complete POSCAR coordinates, and the authors' relaxed structures and exact POTCAR protocol have not been validated here. Separately, a C2DB-derived B1 candidate was screened in a single non-SOC WSL calculation; this is not an author-structure reproduction. See [PR #38](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/pull/38) and its [screening verdict](../stage2_real_dft/b1_wsl_relax/idea_screen_1/IDEA_SCREENING_VERDICT.md).
 
 Read [materials/DFT readiness](docs/AGF2_DFT_READINESS.md), [analytic symmetry check](docs/AGF2_SYMMETRY_DERIVATION.md), [sample DFT contract](inputs/agf2_dft_contract.example.json), and [machine-readable gate output](results/agf2_preflight.json).
 
@@ -55,3 +55,8 @@ Read [materials/DFT readiness](docs/AGF2_DFT_READINESS.md), [analytic symmetry c
 - Xiang et al., *PRL* 134, 116301 (2025), DOI `10.1103/PhysRevLett.134.116301`: IGMC mechanisms under independent reproduction; its Fig. 2(d) normalization ambiguity stays open.
 - [`Xin-Jiaqi/group-theory-operations-toolkit`](https://github.com/Xin-Jiaqi/group-theory-operations-toolkit) v0.18.0 is the background source for layer/magnetic-group capabilities; **this small gate derives the elementary diagonal-mirror tensors independently**, rather than claiming a live invocation of the toolkit's API. Revalidate against the native toolkit in the DFT structure's *actual* Hall/layer setting.
 - No published figure, supplemental PDF, POTCAR, or unpublished atomic data is redistributed.
+
+
+## Update 2026-10-22: independent B1 screening, source gate unchanged
+
+The earlier statement that no DFT had been run described the initial preflight and is superseded by the separate low-cost B1 screen. The new run used the C2DB-derived candidate geometry, not author-relaxed coordinates, and did not establish a double well or IGMC response. The exact-source reproduction remains blocked on the missing author-relaxed structures/protocol. The proposed SOC static task is [here](../stage2_real_dft/b1_wsl_relax/idea_screen_1/B1_SOC_STATIC_SCREENING_TASK_20261022.md) and is not executed/authorized by this README.

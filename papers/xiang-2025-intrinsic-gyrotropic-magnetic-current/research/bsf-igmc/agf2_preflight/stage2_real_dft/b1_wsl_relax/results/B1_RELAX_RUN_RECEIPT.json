@@ -1,0 +1,71 @@
+{
+  "schema": "bsf_igmc_agf2_b1_wsl_relax_run_receipt_v1",
+  "date_utc": "2026-10-21T14:50:00Z",
+  "status": "PARTIAL",
+  "status_meaning": "one WSL B1_g3.0 fixed-cell ionic relaxation ran 15 ionic steps (all electronically converged to EDIFF=1E-6), energy descended -35.17580 -> -35.34932 eV (Delta=-0.1735 eV), Type-I Ag moments +/-0.566 uB preserved, but the force criterion EDIFFG=-0.02 was NOT reached (final max|F|=0.497 eV/A). Stopped gracefully via STOPCAR for structural safety: CG oscillated non-convergently on the soft interface-compression mode and step 14 reached F-F 2.644 A (near F-F contact). Not a scientific reproduction claim.",
+  "authorization": "user-approved single B1_g3.0 Type-I non-SOC WSL relaxation per B1_WSL_RELAX_EXECUTION_TASK_20261021.md; no new PBS job; no B2/NEB/SOC/Wannier/IGMC; no retry",
+  "inputs": {
+    "poscar_sha256": "2d323c3fe2353ef984330b3b99fc24a75a85337883bbaf36d08b20ed45e6d60a",
+    "poscar_source": "verified original G1 POSCAR (C2DB-derived unrelaxed B1_g3.0; no selective dynamics; 12 atoms Ag4F8; lattice a=3.827025 b=5.879666 c=26.938541 A)",
+    "kpoints_sha256": "4ab9ad06699176341f30e79f18b822be389d066f64e0295ce368e74b8b99420a",
+    "kpoints": "12x8x1 Gamma-centered screening mesh (NOT k-converged production)",
+    "potcar_sha256": "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff",
+    "potcar_note": "locked Ag||F PAW (Ag 02Apr2005, F 08Apr2002), element order Ag F; content not uploaded",
+    "incar_sha256": "1d8ff5dcbdae142eef2bc06ace2a604be3dc73cc3ec821139ce2df3b795fe097",
+    "incar_note": "INCAR.relax (committed) = G1 INCAR with ONLY: SYSTEM=AgF2_B1_g3.0_TypeI_nosoc_WSL_relax1; IBRION=-1->2; +ISIF=2; NSW=0->30; +POTIM=0.25; +EDIFFG=-0.02. All else unchanged (GGA=PE, ENCUT=500, EDIFF=1E-6, ISPIN=2, MAGMOM=-1 1 1 -1 8*0, LDAUTYPE=2/LDAUU=4, IVDW=11 D3-zero, ISMEAR=0/SIGMA=0.05, ISYM=0, LORBIT=11, NCORE=4, LREAL=.FALSE., ALGO=Normal, ISTART=0/ICHARG=2, LWAVE/LCHARG=.FALSE.)"
+  },
+  "environment": {
+    "host": "researcher's local Windows machine, WSL2 VM",
+    "ram_total_gb": 7.8,
+    "peak_memory_gb_sampled": 3.2,
+    "vasp": "vasp.6.6.0 06Mar2026 (build 2026-09-02), complex, private local build",
+    "mpi": "OpenMPI 4.1.6 (mpirun.openmpi)",
+    "ranks": 8,
+    "parallel_layout": "NCORE=4 -> 2 band groups, k serial",
+    "persistent_session": "held ssh session for the whole run (9336.6 s elapsed, no session-end kill)",
+    "elapsed_sec": 9336.6,
+    "started_utc": "2026-10-21T11:21:17Z"
+  },
+  "force_audit_before_run": {
+    "max_force_ev_ang": 0.1443,
+    "max_fy_ev_ang": 0.0484,
+    "verdict": "PASS - structure neither static nor suspect; no interlayer F-F below 2.2 A (nearest 3.6806 A); see G1_FORCE_AND_GEOMETRY_AUDIT.md"
+  },
+  "run_result": {
+    "ionic_steps": 15,
+    "nsw_cap": 30,
+    "nsw_cap_hit": false,
+    "electronic_steps_converged_ediFF": "15/15 (OUTCAR markers: aborting loop because EDIFF is reached)",
+    "toten_initial_ev": -35.17580,
+    "toten_lowest_ev": -35.34932,
+    "toten_final_ev": -35.34932,
+    "delta_e_vs_initial_ev": -0.1735,
+    "max_force_initial_ev_ang": 0.1442,
+    "max_force_final_ev_ang": 0.4973,
+    "max_force_min_ev_ang": 0.0510,
+    "force_criterion_met": false,
+    "net_magnetization_mub_each_step": 0.0000,
+    "final_ag_moments_mub": [-0.566, 0.566, 0.566, -0.566],
+    "final_ag_d_channel_mub": [-0.574, 0.574, 0.574, -0.574],
+    "final_f_moments": "|m| <= 0.006",
+    "magnetic_pattern": "Type-I interlayer Neel OPPOSITE preserved (signs relative, non-SOC)",
+    "final_geometry": {
+      "source": "OUTCAR ionic step 15 TOTAL-FORCE block (CONTCAR uninitialized at soft stop)",
+      "committed_as": "POSCAR.relaxed (sha256 d49c82807fc2309575e5d3757904ab78caab348aef10e895ac2327a904ac2d68)",
+      "ag_ag_interlayer_A": 4.044,
+      "nearest_interlayer_F_F_A": 3.052,
+      "vertical_F_plane_gap_A": 2.687,
+      "t_y_sliding_fraction": -0.3391,
+      "t_y_sliding_change_frac": 0.0009
+    },
+    "preliminary_gap_diagnostic": {
+      "initial_ev": 1.494,
+      "final_ev": 1.445,
+      "source": "last eigenvalues block of vasprun.xml, occ>=0.5, 12x8x1 NOT k-converged, ISMEAR=0 SIGMA=0.05",
+      "caveat": "diagnostic only, not a reproduction claim"
+    }
+  },
+  "stop_reason": "structural-safety stop per task: CG relaxation oscillated without converging on the soft interface-compression mode (max|F| 0.05->0.70 eV/A over steps 6-14) and step 14 reached nearest interlayer F-F 2.644 A (near F-F contact, above the 2.2 A suspect threshold but on a worsening trajectory). STOPCAR written 2026-10-21T13:41:53Z; VASP exited gracefully after step 15 SCF ('soft stop encountered! aborting job'). No auto-retry, no parameter changes (U/MAGMOM/smearing untouched), no scope expansion.",
+  "verdict": "PARTIAL - structure relaxed substantially toward a shorter-interface local minimum (Delta-E -0.17 eV; Ag-Ag 4.97->4.04 A; F-F 3.68->3.05 A) with Type-I magnetic order and net M=0 preserved and no lateral sliding; force criterion NOT met (0.50 eV/A final). B1 stack robust against lateral drift in this screening model; interface minimum not fully converged. Full discussion: B1_RELAX_SCIENTIFIC_ASSESSMENT.md.",
+  "boundary": "PARTIAL result is not a reproduction claim: no converged minimum, 12x8x1 not k-converged, unrelaxed-author geometry, no multi-magnetic-state/k/numerical convergence. No claim on Pz, double-well ferroelectricity, or IGMC."
+}
