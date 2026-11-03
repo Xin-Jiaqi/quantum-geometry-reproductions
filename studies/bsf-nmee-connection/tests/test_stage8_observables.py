@@ -83,6 +83,13 @@ class BilayerAuditTests(unittest.TestCase):
         np.testing.assert_allclose(a['C'],b['C'],atol=1e-12)
         self.assertAlmostEqual(a['delta_N_per_cell'],b['delta_N_per_cell'],delta=1e-14)
 
+    def test_symmetry_closed_grid_preserves_small_slide_powers(self):
+        rows = [observables(AuditBilayer(replace(self.spec,shift=(.23*u,.41*u))),
+                            self.k,self.w) for u in (.025,.05)]
+        for key,expected in [('dipole_over_e_d_per_cell',3),('trace',3),('difference',1)]:
+            power = np.log2(abs(rows[1][key]/rows[0][key]))
+            self.assertAlmostEqual(power,expected,delta=.03)
+
 
 if __name__ == '__main__':
     unittest.main()

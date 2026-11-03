@@ -116,6 +116,8 @@ def run(output, quick=False):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--quick',action='store_true')
-    parser.add_argument('--output',type=Path,default=ROOT/'results/bilayer_stage8_audit.json')
+    parser.add_argument('--output',type=Path)
     args=parser.parse_args()
-    run(args.output,args.quick)
+    output = args.output or ROOT/'results'/('bilayer_stage8_quick.json' if args.quick
+                                            else 'bilayer_stage8_audit.json')
+    run(output,args.quick)
