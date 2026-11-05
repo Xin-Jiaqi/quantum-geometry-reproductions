@@ -44,3 +44,5 @@ KM 例子中在上、下层分别将原有 A/B 亚晶格在位项改为 $45-\eta
 ## 复核
 
 [脚本](../scripts/run_domain_environment.py) 复用现有哈密顿量、速度、自旋和积分核；修改在位项时速度算符无附加项。[全部 934 个采样/求根点](../results/domain_environment_cxx.csv)与[根和扫描窗口](../results/domain_environment_roots.json)包括低分辨率探索、主要分支的加密积分和镜像奇扰动对照。已排除不绝缘点；符号括区无法排除未采到的切触零点。示例：在 study 目录运行脚本，给定 `--fraction .25 --surface 3 --grid 61 60 96 --low -4 --high 0 --output /tmp/km-A3`。材料的两畴 DFT、实际深度探针模拟及器件含义另见本地 MoSSe worklog。
+
+以 ±0.1 meV 的小扰动再分解一次。仅改下层时，中点斜率 −2.492，半间距斜率 +0.376；只保留镜像偶的一半，中点斜率为零、半间距斜率 +0.378；只保留镜像奇的一半，中点斜率 −2.491、半间距斜率为零（均为 meV/meV，取数值精度）。这直接区分了单侧环境造成的一阶中点移动和间距变化。[成对根与导数](../results/domain_environment_derivatives.json)
