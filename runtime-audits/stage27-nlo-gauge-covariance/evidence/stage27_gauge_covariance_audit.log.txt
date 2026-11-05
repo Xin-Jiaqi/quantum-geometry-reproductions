@@ -1,0 +1,151 @@
+{
+  "schema": "stage27-gauge-covariance-audit/v1",
+  "created_at_utc": "2026-10-23T01:53:47.278961+00:00",
+  "conventions": {
+    "H_src": "analytic 2-band Haldane M=0.4 phi=pi/2 t1=1.0 t2=0.2 NN=(3,2) NNN=(3,2)",
+    "U": "diag(1, e^{-ik.d1}), d1=(1,0) A (Cartesian-k convention)",
+    "tau": "i(d_a U)U^dagger, verified against wannier90-wcenter.dat",
+    "covariant_derivative": "D_a X = d_a X + i[X, tau_a]",
+    "k_grid": "5x5x1 (primary), 9x9x1/13x13x1 (convergence)",
+    "eta_sp": 0.05,
+    "eta_band_primary": 0.005,
+    "eta_band_scan": [
+      0.05,
+      0.02,
+      0.01,
+      0.005,
+      0.002
+    ],
+    "components": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        2
+      ]
+    ],
+    "broadening_delta": "eta_sp/pi/((w-eps)^2+eta_sp^2)",
+    "bc_sym": "C_sym = (C + swapaxes(b,c))/2, sigma from Im C_sym",
+    "projector_fd_steps": {
+      "h_d1": 0.0001,
+      "h_d2": 0.003
+    },
+    "strong_point_mask": "|raw| > 0.02"
+  },
+  "checks": {
+    "G0_Hcell_analytic_vs_HR_kernel": 7.850462293418876e-16,
+    "G0b_tau_vs_wcenter": {
+      "tau_from_U_diag": [
+        0.9999999983340329,
+        -7.709323995048054e-14,
+        0.0
+      ],
+      "tau_from_U_imag_diag": [
+        1.527021707991144e-14,
+        -4.974729825387819e-17,
+        0.0
+      ],
+      "center_diff_A": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "offdiag_abs_max": 0.0,
+      "max_dev_diag": 1.6659671420871494e-09
+    },
+    "G1_DHcell_eq_Udag_dHsrc_U": 9.578146720215638e-09,
+    "G2_DPcell_eq_Udag_dPsrc_U": 1.2485025268648585e-08,
+    "G3_sigma_src_vs_cell_cov": {
+      "max_abs_dev_all": 7.02587722261061e-05,
+      "max_abs_dev_strong": 7.02587722261061e-05,
+      "n_strong_points": 15
+    },
+    "G4_sigma_cell_plain_vs_cell_cov": {
+      "max_abs_dev_all": 1.3825216575483146,
+      "max_abs_dev_strong": 1.3825216575483146,
+      "n_strong_points": 15
+    },
+    "G5_sigma_cell_cov_vs_minus_pi_Rdressed": {
+      "max_abs_dev_all": 0.00031958045191626816,
+      "max_abs_dev_strong": 0.00031958045191626816,
+      "n_strong_points": 15
+    },
+    "G6_sigma_cell_plain_vs_minus_pi_Rplain": {
+      "max_abs_dev_all": 0.0006261355576615557,
+      "max_abs_dev_strong": 0.0006261355576615557,
+      "n_strong_points": 14
+    },
+    "G7_Rdressed_vs_Rsrc": 1.4432899320127035e-15,
+    "G8_sigma_src_vs_minus_pi_Rsrc": {
+      "max_abs_dev_all": 0.00034610939632329085,
+      "max_abs_dev_strong": 0.00034610939632329085,
+      "n_strong_points": 15
+    }
+  },
+  "eta_band_stability_G5": {
+    "0.05": {
+      "max_abs_dev_all": 0.005871846833631622,
+      "max_abs_dev_strong": 0.005871846833631622,
+      "n_strong_points": 15
+    },
+    "0.02": {
+      "max_abs_dev_all": 0.000620320666172125,
+      "max_abs_dev_strong": 0.000620320666172125,
+      "n_strong_points": 15
+    },
+    "0.01": {
+      "max_abs_dev_all": 0.00023615904027729506,
+      "max_abs_dev_strong": 0.00023615904027729506,
+      "n_strong_points": 15
+    },
+    "0.005": {
+      "max_abs_dev_all": 0.00031958045191626816,
+      "max_abs_dev_strong": 0.00031958045191626816,
+      "n_strong_points": 15
+    },
+    "0.002": {
+      "max_abs_dev_all": 0.0003722340241592015,
+      "max_abs_dev_strong": 0.0003722340241592015,
+      "n_strong_points": 15
+    }
+  },
+  "kgrid_convergence_G5": {
+    "5": {
+      "max_abs_dev_all": 0.00031958045191626816,
+      "max_abs_dev_strong": 0.00031958045191626816,
+      "n_strong_points": 15
+    },
+    "9": {
+      "max_abs_dev_all": 0.00019627287276707817,
+      "max_abs_dev_strong": 0.00019627287276707817,
+      "n_strong_points": 15
+    },
+    "13": {
+      "max_abs_dev_all": 0.0001715070687006992,
+      "max_abs_dev_strong": 0.0001715070687006992,
+      "n_strong_points": 14
+    }
+  },
+  "measured_constants": {
+    "sigma_cell_cov_over_minus_Rdressed": 3.1405706697342133,
+    "sigma_src_over_minus_Rsrc": 3.1407025316916717
+  },
+  "negative_findings_kept": [
+    "G4: plain cell-gauge sigma differs from the covariant/source sigma (ordinary dP_cell is NOT the physically matched object); the plain pair is gauge-dependent.",
+    "Stage 25's -(pi/2) relation is NOT assumed; the measured constant is ~pi for the matched (covariant/dressed, source) pairings, see pairing table.",
+    "Pairings that mix conventions (e.g. cell_plain sigma with dressed raw) are reported in the pairing table, not hidden."
+  ],
+  "unresolved_items": [
+    "Absolute SI prefactor and 2D sheet normalization (Lz*0.1) remain out of scope of this geometric audit.",
+    "FDR SM Eq. (75) original text not available on this machine (SKIPPED_NO_FDR_ARCHIVE); the projector form is an independent reconstruction of arXiv:2409.16358 Eqs. (3)+(6), not a verbatim SM copy."
+  ]
+}
