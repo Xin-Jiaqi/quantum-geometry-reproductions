@@ -1,0 +1,103 @@
+group,x,xunit,layer,C,source
+KM_t,0.0,meV,bottom,-7.412582771861725e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,0.0,meV,top,7.412582771815332e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,0.0,meV,total,2.010564759455714e-17,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,5.0,meV,bottom,-6.117506212146109e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,5.0,meV,top,9.404485748265091e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,5.0,meV,total,3.286979536102851e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,10.0,meV,bottom,-2.9601943898546865e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,10.0,meV,top,0.00012976906104617003,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,10.0,meV,total,0.00010016711714717008,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,0.0,meV,bottom,-2.9601943898546865e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,0.0,meV,top,0.00012976906104617003,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,0.0,meV,total,0.00010016711714717008,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,2.0,meV,bottom,-2.2279818223241597e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,2.0,meV,top,9.903774879893525e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,2.0,meV,total,7.67579305763194e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,4.0,meV,bottom,-1.5055222133124866e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,4.0,meV,top,7.438915597227471e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,4.0,meV,total,5.9333933839103535e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,5.0,meV,bottom,-1.190740275404834e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,5.0,meV,top,6.400597017759636e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,5.0,meV,total,5.209856742364824e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,6.0,meV,bottom,-9.503417627994043e-06,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,6.0,meV,top,5.486551392745655e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,6.0,meV,total,4.5362096300139965e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,7.0,meV,bottom,-8.435965358041873e-06,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,7.0,meV,top,4.702853720666485e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,7.0,meV,total,3.859257184956215e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,8.0,meV,bottom,-9.711293729488895e-06,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,8.0,meV,top,4.064580635234651e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,8.0,meV,total,3.093451262328758e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,9.0,meV,bottom,-1.5085992896980423e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,9.0,meV,top,3.5938598501998294e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,9.0,meV,total,2.085260560591409e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,10.0,meV,bottom,-2.7709055922362663e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,10.0,meV,top,3.307861082066377e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,10.0,meV,total,5.36955489951586e-06,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,11.0,meV,bottom,-5.334185850242913e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,11.0,meV,top,3.17725244858739e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,11.0,meV,total,-2.1569334017096367e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,12.0,meV,bottom,-0.0001025421930440166,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,12.0,meV,top,3.011998944446755e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_U,12.0,meV,total,-7.242220359971295e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,12.0,meV,bottom,-1.4596157306927325e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,12.0,meV,top,0.0001407456806772491,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,12.0,meV,total,0.00012614952337131947,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,14.0,meV,bottom,9.035489204816749e-07,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,14.0,meV,top,0.00014841932131629812,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,14.0,meV,total,0.00014932287023695798,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,15.0,meV,bottom,8.735586434282594e-06,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,15.0,meV,top,0.0001510194089864329,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,15.0,meV,total,0.00015975499542085055,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,16.0,meV,bottom,1.6585717747090553e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,16.0,meV,top,0.00015285730497205147,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,16.0,meV,total,0.00016944302271908396,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,18.0,meV,bottom,3.226636155588352e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,18.0,meV,top,0.00015454460721815136,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,18.0,meV,total,0.0001868109687751261,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,20.0,meV,bottom,4.7832433082511516e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,20.0,meV,top,0.00015416916537280888,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,20.0,meV,total,0.00020200159845431528,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,25.0,meV,bottom,8.571774713447215e-05,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,25.0,meV,top,0.00014899995941090622,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+KM_t,25.0,meV,total,0.0002347177065456639,fixed_stack_cxx.csv; m45; fraction.25; grid81x80x120; step.03125
+MoSSe_A,0.0,V/nm,total,-4.161937102998485e-10,ss-mirror-domains/results/A_+0.000.json
+MoSSe_A,0.0,V/nm,bottom,-6.850888380390203e-09,ss-mirror-domains/results/A_+0.000.json
+MoSSe_A,0.0,V/nm,top,6.434694670090353e-09,ss-mirror-domains/results/A_+0.000.json
+MoSSe_A,0.18,V/nm,total,-1.0931264827694977e-10,ss-mirror-domains/results/A_+0.180.json
+MoSSe_A,0.18,V/nm,bottom,-6.876831949032923e-09,ss-mirror-domains/results/A_+0.180.json
+MoSSe_A,0.18,V/nm,top,6.7675193007559815e-09,ss-mirror-domains/results/A_+0.180.json
+MoSSe_A,0.25,V/nm,total,9.414948235643164e-12,ss-mirror-domains/results/A_+0.250.json
+MoSSe_A,0.25,V/nm,bottom,-6.879855610763969e-09,ss-mirror-domains/results/A_+0.250.json
+MoSSe_A,0.25,V/nm,top,6.889270558999617e-09,ss-mirror-domains/results/A_+0.250.json
+MoSSe_A,0.32,V/nm,total,1.2932457694463266e-10,ss-mirror-domains/results/A_+0.320.json
+MoSSe_A,0.32,V/nm,bottom,-6.902385299661573e-09,ss-mirror-domains/results/A_+0.320.json
+MoSSe_A,0.32,V/nm,top,7.031709876606204e-09,ss-mirror-domains/results/A_+0.320.json
+MoSSe_A,0.5,V/nm,total,4.3615917103669434e-10,ss-mirror-domains/results/A_+0.500.json
+MoSSe_A,0.5,V/nm,bottom,-6.937460745634202e-09,ss-mirror-domains/results/A_+0.500.json
+MoSSe_A,0.5,V/nm,top,7.3736199166709195e-09,ss-mirror-domains/results/A_+0.500.json
+MoSSe_B,0.0,V/nm,total,4.1629478632198194e-10,ss-mirror-domains/results/B_+0.000.json
+MoSSe_B,0.0,V/nm,bottom,-6.426569944519555e-09,ss-mirror-domains/results/B_+0.000.json
+MoSSe_B,0.0,V/nm,top,6.842864730841521e-09,ss-mirror-domains/results/B_+0.000.json
+MoSSe_B,-0.18,V/nm,total,1.0926275805361093e-10,ss-mirror-domains/results/B_-0.180.json
+MoSSe_B,-0.18,V/nm,bottom,-6.783163295750364e-09,ss-mirror-domains/results/B_-0.180.json
+MoSSe_B,-0.18,V/nm,top,6.892426053803959e-09,ss-mirror-domains/results/B_-0.180.json
+MoSSe_B,-0.25,V/nm,total,-9.860539586838789e-12,ss-mirror-domains/results/B_-0.250.json
+MoSSe_B,-0.25,V/nm,bottom,-6.903453557444079e-09,ss-mirror-domains/results/B_-0.250.json
+MoSSe_B,-0.25,V/nm,top,6.893593017857222e-09,ss-mirror-domains/results/B_-0.250.json
+MoSSe_B,-0.32,V/nm,total,-1.2960316669478702e-10,ss-mirror-domains/results/B_-0.320.json
+MoSSe_B,-0.32,V/nm,bottom,-7.0462454717118875e-09,ss-mirror-domains/results/B_-0.320.json
+MoSSe_B,-0.32,V/nm,top,6.916642305017067e-09,ss-mirror-domains/results/B_-0.320.json
+MoSSe_B,-0.5,V/nm,total,-4.3640911476772596e-10,ss-mirror-domains/results/B_-0.500.json
+MoSSe_B,-0.5,V/nm,bottom,-7.405850255496731e-09,ss-mirror-domains/results/B_-0.500.json
+MoSSe_B,-0.5,V/nm,top,6.9694411407290054e-09,ss-mirror-domains/results/B_-0.500.json
+MoSSe_d,0.125,angstrom,bottom,-3.191210415508778e-09,7269-mechanism/results/point-7269d0p125.json
+MoSSe_d,0.25,angstrom,bottom,-1.3218144452998075e-10,7269-mechanism/results/point-7269d0p25.json
+MoSSe_d,0.375,angstrom,bottom,2.302709800028371e-09,7269-mechanism/results/point-7269d0p375.json
+MoSSe_d,0.5,angstrom,bottom,4.2251874674150396e-09,7269-mechanism/results/point-7269d0p5.json
+MoSSe_d,1.0,angstrom,bottom,8.520743886949411e-09,7269-mechanism/results/point-7269d1.json
+MoSSe_d,0,angstrom,bottom,-6.869817834752205e-09,7269-mechanism/results/signed-7269.summary
+MoSSe_d,2,angstrom,bottom,1.0500865989772646e-08,7269-mechanism/results/signed-7269p2.summary
+MoSSe_d_check,0,angstrom,bottom,-7.204825482506109e-09,7269-mechanism/results/signed-7269-k9.summary
+MoSSe_d_check,1,angstrom,bottom,1.06419221768344e-08,7269-mechanism/results/signed-7269d1-k9.summary
