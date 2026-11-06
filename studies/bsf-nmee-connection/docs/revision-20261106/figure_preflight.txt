@@ -1,0 +1,25 @@
+Nature Figure Static Preflight
+source: outputs/bilayer-km-prl-discussion/revision-20261106/plot_revision.py
+backend: python
+
+[PASS] SOURCE-SYNTAX: Python source parses successfully
+[PASS] FONT-FAMILY: A publication-safe sans-serif family is configured
+  - Arial
+  - sans-serif
+[PASS] FONT-SIZE: All detected text sizes are at least 5 pt (minimum 6 pt)
+[PASS] COLOR-MAP: No rainbow/jet/hsv color mapping detected
+[PASS] EDITABLE-TEXT: SVG and PDF editable-text settings are configured
+[PASS] EXPORT-VECTOR: Both SVG and PDF exports are present
+[WARN] EXPORT-RASTER: PNG preview is present but no TIFF submission raster was found
+[WARN] RASTER-DPI: Raster export meets the 300 dpi floor but not the 600 dpi default
+  - 320
+[PASS] FINAL-WIDTH: Detected width 177.8 mm matches a common journal column width
+[PASS] DATA-SAMPLING: No high-confidence row-sampling operation detected
+[PASS] DATA-EXCLUSION: No high-confidence missing-data exclusion detected
+[PASS] DEMO-DATA: No obvious simulated-data generator detected
+[PASS] LOG-GUARD: No logarithmic transform or axis detected
+[PASS] BACKEND-EXCLUSIVE: No obvious cross-backend plotting reference found for python
+
+summary: 12 pass, 2 warn, 0 fail
+verdict: READY FOR VISUAL QA
+note: static preflight does not validate statistics, source-data truth, or rendered appearance
