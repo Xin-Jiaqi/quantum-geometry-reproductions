@@ -1,5 +1,7 @@
 # BSF × NMEE: Connection-operator interface (stage 1)
 
+Latest discussion manuscript (2026-11-06): [fixed intermediate KM stacking, local reversal and vector compensation](docs/revision-20261106c/正文讨论稿-修订版.md), with [scope, raw data and handoff](docs/revision-20261106c/WORKLOG.md). The older native-X projection zeros are not full-spin compensation points; the new mirror-normal probe and its different zero are explicitly defined. KM AB/BA names refer to the model, while MoSSe S/S A/B names refer to the material.
+
 **Scope:** link existing symmetry and NMEE packages. This is **not** a new material prediction or a validated ferroelectric switching path. The first example is the horizontal-mirror connection between two *symmetry-related* candidate interface translations, and an **independently evaluated synthetic eight-band Hamiltonian** that realizes the same unitary transformation.
 
 ## Reuse, do not duplicate

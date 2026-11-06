@@ -1,0 +1,22 @@
+{
+  "fine_input_rows": 21,
+  "Fig1b": {
+    "predicate": "U=0",
+    "rows": 8
+  },
+  "Fig1c": {
+    "predicate": "t=10 and 0<=U<=5",
+    "rows": 8,
+    "reason": "first total zero while both layer signs are retained; full scan in S6b"
+  },
+  "Fig1d": {
+    "predicate": "mass=45, lambda in {.24,.25,.26}, t=10, 3<=U<=5, common coarse grid",
+    "reason": "zoom on nearby total zeros; all raw points archived"
+  },
+  "FigS6a": {
+    "rows": 4,
+    "source": "tensor_check.json; lambda=.25",
+    "reason": "independent full in-plane tensor, native X probe; no full vector reconstructed from scalar data"
+  },
+  "statistics": "deterministic calculations; no error bars or statistical sample claims"
+}
