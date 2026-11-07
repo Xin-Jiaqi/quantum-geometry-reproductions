@@ -1,0 +1,32 @@
+{
+  "qualitative_sign_checks": "passed for both 96 and 112 states, all three orbital windows",
+  "bottom_zero_chi_to_odd_response_ratio_96": 0.00034111490338910804,
+  "bottom_zero_chi_to_odd_response_ratio_112": 0.5068177002744851,
+  "absolute_amplitude_converged": false,
+  "independent_gated_DFT_submitted": false,
+  "jobs": {
+    "548088": "zero-field SCF, export and controls; exit 0; 14m23s",
+    "548122": "empty-band audit; exit 0; 11s",
+    "548129": "fixed-zero-field-potential empty-state refinement and controls; exit 0; 7m50s",
+    "548133": "96-state controls; exit 0; 17s"
+  },
+  "sha256": {
+    "initial/INCAR": "f41c82f25827b9fa1062533472e54b2230bee1394abcaf67d615c74fc34146dd",
+    "initial/full-controls-analysis.json": "c2fab3726ca2857498fa2083cac01e570f1fd10594c695b0515d1ea5f905f6d3",
+    "initial/full-controls-export.json": "289117d280fd915e682f87b4cce86a68d14fee5694bdf9524d9d5e60fe71e222",
+    "initial/zero-audit.json": "136667b6f1e1e9fdabd4812d88c7bbaa9e06122abf8d122c59f31e155ae14272",
+    "initial/zero.pbs": "81ad0a738d074fabf4bbc40bc7a25b0c17b14a13fc07483c9a62ae7a106180f2",
+    "refined/INCAR": "6b56dff729b095a635f51c42a451f420f6386f27c709c16564ed395eceb58263",
+    "refined/controls96-analysis.json": "1a6a4e5f4c5b2cae87e0376eefdc64d30ab9e12c73bd470b3e517cb2bb7fcf9a",
+    "refined/controls96.pbs": "2cf80b358463b3ae07d5b2e171a88a86f307dc344c21b11024666f0754a43117",
+    "refined/full-controls-analysis.json": "d69162611c500451b0d4bbbeffa6def4398b2771116e6a8c78c043082f8e9dd5",
+    "refined/full-controls-export.json": "f63c2be2a6b915fdf9bd7502eb20f62614642c6302564d941d98ebe7ab11c629",
+    "refined/refine.pbs": "1a1314aec8ef3513c200d04f351bca91a19bd20002498b1cc8acdc5c6f9746ed",
+    "refined/zero-audit.json": "4fb62e7ef9dd8474ce3065ca2fb2b46db0d16b9467f4eb7d9846e8529f275067",
+    "scripts/analyze_zero.py": "b3e2212f6d35ed3a3b34ad622e0fa9a694f641c9f23c23e0c1e266d2b2686b22",
+    "scripts/audit_zero.py": "9795adb56e3a5f34cac76dd95f3094136edfd72f8bd1bfc5f581e3056a46e5b3",
+    "scripts/controls96.py": "770027553a57cc5fa03a74e64731ff4a310a6de19b571c72e1350d22779c8e4f",
+    "scripts/export_zero.py": "7879a6defb01e33ee8904e57ad39235469b2ee2a15c40379b2898782b7ba6ceb",
+    "scripts/project_zero.py": "6859a45317404b05f83fef30db7ba69cd1a4b414c2c9a1b7a11d37622cbcdc28"
+  }
+}
