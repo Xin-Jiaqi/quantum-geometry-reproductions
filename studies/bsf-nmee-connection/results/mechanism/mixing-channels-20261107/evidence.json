@@ -1,0 +1,51 @@
+{
+  "material-channels": {
+    "minimum_gap_eV": 0.8414275128737015,
+    "max_half_step_change": 5.2210333723934355e-05
+  },
+  "material-channel-detail": {
+    "minimum_gap_eV": 0.8414275128737083,
+    "max_half_step_change": 0.00010138040048701669
+  },
+  "material-edge-channels": {
+    "minimum_gap_eV": 0.8414458253593079,
+    "max_half_step_change": 5.682502915860255e-05
+  },
+  "jobs": [
+    {
+      "id": "548191.cmspbs1",
+      "node": "csuper001",
+      "exit": 0,
+      "wall_seconds": 38
+    },
+    {
+      "id": "548192.cmspbs1",
+      "node": "csuper001",
+      "exit": 0,
+      "wall_seconds": 55
+    },
+    {
+      "id": "548193.cmspbs1",
+      "node": "csuper001",
+      "exit": 0,
+      "wall_seconds": 32
+    }
+  ],
+  "hashes": {
+    "km-fine.json": "ceef386f247926458092fde7bc306152d930c60e52f310f7537d0a0f34d00e99",
+    "km-coarse.json": "a68b671d92f4b3aeb8ead8a446f845739d2187d329728b1f96f5ffd88cb50b67",
+    "material-channels.json": "3d8d0d7ab36dd85b8e4e24d821a90ac931e3103ff8b0ba8e369f96e8313f6008",
+    "material-edge-channels.json": "513d5debbb17d1a1cd4fb17bd382d91f0bd8827bcf5cda1da7357160a754fa62",
+    "material-channel-detail.json": "40ee95c36bb6c06b32773233a7d3babefe02e32b81c62c1003b800e18e180b80",
+    "channel_summary.csv": "fe65c4e0df934b38fa2738126b56a9e00cf0cb77bd77d33688981492af7325c6",
+    "scripts/run_material.py": "748c6b7009d3e3cba858b14524fee558ee0c6aa161fdcd732c72b762df974c87",
+    "scripts/detail.pbs": "543f6700498774609fac791e3cd7bfa518ce0eb0e52fe9134a5ea4724ad3f149",
+    "scripts/run_detail.py": "510925c49d0dced50475891e14ca376a02e7eda34152dbebe835f0c980750453",
+    "scripts/model.py": "c6d8684518151d5842d30216499782036d816922f1b597567fcadf7595856aed",
+    "scripts/edge.pbs": "a6e98e5c1a9793294591ef02924eb83f1c92a82bea497d1bf0a8ce7076d1a33c",
+    "scripts/mixing_channels.py": "48ab9c5053a75031964476906e05c5d33afb208fa41b85783ac2440242f21773",
+    "scripts/channels.pbs": "f01e64c2af9771f92c8d16328ea930628051de5ca53f1274baff0eb3db4a70dc",
+    "scripts/run_edge.py": "24606895e4a89597d2b603140aa2ae45b1bd40b724dd3f7ca2313a79fe0d6e23",
+    "README.md": "759c452827ac83d5a0c78c2bb10526b063ded9a3ce89db26522ae06a5a451211"
+  }
+}
