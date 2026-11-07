@@ -40,6 +40,19 @@
       "source": "548485.json"
     },
     {
+      "structure": "A",
+      "gate_Vnm": -0.25,
+      "mesh": 6,
+      "probe_VA": 0.004,
+      "zeeman_eV": 0.016,
+      "C_total": -0.12377871846612046,
+      "C_bottom": -4.502808174236796,
+      "C_top": 4.3790294557706755,
+      "B_even_total": null,
+      "gap_min_eV": 1.135298,
+      "source": "548487.json"
+    },
+    {
       "structure": "mono",
       "gate_Vnm": 0.25,
       "mesh": 6,
@@ -64,6 +77,32 @@
       "B_even_total": null,
       "gap_min_eV": 1.567864,
       "source": "548489.json"
+    },
+    {
+      "structure": "A",
+      "gate_Vnm": 0.0,
+      "mesh": 6,
+      "probe_VA": 0.002,
+      "zeeman_eV": 0.008,
+      "C_total": -0.5448095698534553,
+      "C_bottom": -5.211858072349651,
+      "C_top": 4.667048502496196,
+      "B_even_total": null,
+      "gap_min_eV": 1.138609,
+      "source": "548513.json"
+    },
+    {
+      "structure": "A",
+      "gate_Vnm": 0.25,
+      "mesh": 6,
+      "probe_VA": 0.004,
+      "zeeman_eV": 0.016,
+      "C_total": -0.9628662386162392,
+      "C_bottom": -4.630491882619818,
+      "C_top": 3.6676256440035786,
+      "B_even_total": null,
+      "gap_min_eV": 1.10964,
+      "source": "548534.json"
     }
   ],
   "checks": {
@@ -71,14 +110,56 @@
     "mirror_sum_bottomA_topB": 0.018640943859352,
     "mirror_sum_topA_bottomB": -0.019151621191130452,
     "mirror_max_residual_relative_to_layer_scale": 0.0041988519284222705,
-    "mono_gate_oddness_residual": -0.00034938415745081053
+    "mono_gate_oddness_residual": -0.00034938415745081053,
+    "smaller_probe_total_relative_change": 0.0033552710420868656,
+    "smaller_probe_same_total_sign": true,
+    "smaller_probe_layer_relative_changes": {
+      "C_bottom": 0.1426615062689001,
+      "C_top": 0.1614863924182702
+    }
   },
   "independent_layer_control": [
+    {
+      "gate_Vnm": -0.25,
+      "two_isolated_layers": 0.27857693025379876,
+      "bilayer_A": -0.12377871846612046,
+      "difference": -0.40235564871991925
+    },
     {
       "gate_Vnm": 0.0,
       "two_isolated_layers": -0.0001674924485977523,
       "bilayer_A": -0.5429876989509558,
       "difference": -0.5428202065023581
+    },
+    {
+      "gate_Vnm": 0.25,
+      "two_isolated_layers": -0.2792756985687004,
+      "bilayer_A": -0.9628662386162392,
+      "difference": -0.6835905400475388
+    }
+  ],
+  "sealed_prediction_tests": [
+    {
+      "gate_Vnm": 0.25,
+      "predicted_C_total": -0.8220959050710583,
+      "actual_C_total": -0.9628662386162392,
+      "difference": -0.14077033354518087,
+      "actual_gate_increment": -0.41987853966528343,
+      "predicted_gate_increment": -0.27910820612010256,
+      "increment_ratio": 1.5043575590343132,
+      "lower_increment": -0.06933528133744726,
+      "upper_increment": -0.3505432583278365
+    },
+    {
+      "gate_Vnm": -0.25,
+      "predicted_C_total": -0.26424327624855926,
+      "actual_C_total": -0.12377871846612046,
+      "difference": 0.1404645577824388,
+      "actual_gate_increment": 0.41920898048483535,
+      "predicted_gate_increment": 0.2787444227023965,
+      "increment_ratio": 1.5039188100003953,
+      "lower_increment": 0.05834842704557541,
+      "upper_increment": 0.3608605534392604
     }
   ],
   "units": "1e-9 (nm V T)^-1, Pauli spin density",

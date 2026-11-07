@@ -22,5 +22,22 @@ for gate in [-.25,0.,.25]:
  if ('A',gate) in lookup and ('mono',gate) in lookup:
   independent=2*lookup['mono',gate]['C_total'];actual=lookup['A',gate]['C_total']
   controls.append({'gate_Vnm':gate,'two_isolated_layers':independent,'bilayer_A':actual,'difference':actual-independent})
-(root/'summary.json').write_text(json.dumps({'rows':rows,'checks':checks,'independent_layer_control':controls,'units':'1e-9 (nm V T)^-1, Pauli spin density','missing_rows_are_pending_not_zero':True,'control_note':'Two isolated monolayers at the same applied perpendicular field; the difference includes all interface effects, not only hopping/hybridization.'},indent=2))
+prediction_tests=[]
+if (root/'gate_prediction.json').exists() and ('A',0.) in lookup:
+ base=lookup['A',0.]
+ for pred in json.loads((root/'gate_prediction.json').read_text())['predictions']:
+  key=('A',pred['gate_physical_Vnm'])
+  if key not in lookup:continue
+  actual=lookup[key]
+  da=actual['C_total']-base['C_total'];dp=pred['predicted_C_total']-base['C_total']
+  prediction_tests.append({'gate_Vnm':key[1],'predicted_C_total':pred['predicted_C_total'],'actual_C_total':actual['C_total'],'difference':actual['C_total']-pred['predicted_C_total'],'actual_gate_increment':da,'predicted_gate_increment':dp,'increment_ratio':da/dp if abs(dp)>1e-12 else None,'lower_increment':actual['C_bottom']-base['C_bottom'],'upper_increment':actual['C_top']-base['C_top']})
+ for r in rows:
+  if r['structure']=='A' and r['gate_Vnm']==0. and r['mesh']==6 and r['probe_VA']==.002 and r['zeeman_eV']==.008:
+   checks['smaller_probe_total_relative_change']=(r['C_total']-base['C_total'])/base['C_total']
+   checks['smaller_probe_same_total_sign']=bool(r['C_total']*base['C_total']>0)
+   checks['smaller_probe_layer_relative_changes']={key:(r[key]-base[key])/base[key] for key in ('C_bottom','C_top')}
+mesh_rows={r['mesh']:r for r in rows if r['structure']=='A' and r['gate_Vnm']==0. and r['probe_VA']==.002 and r['zeeman_eV']==.008}
+if 6 in mesh_rows and 9 in mesh_rows:
+ checks['mesh_6_to_9_at_same_small_probes']={key:{'k6':mesh_rows[6][key],'k9':mesh_rows[9][key],'relative_change':(mesh_rows[9][key]-mesh_rows[6][key])/mesh_rows[6][key],'same_sign':bool(mesh_rows[9][key]*mesh_rows[6][key]>0)} for key in ('C_total','C_bottom','C_top')}
+(root/'summary.json').write_text(json.dumps({'rows':rows,'checks':checks,'independent_layer_control':controls,'sealed_prediction_tests':prediction_tests,'units':'1e-9 (nm V T)^-1, Pauli spin density','missing_rows_are_pending_not_zero':True,'control_note':'Two isolated monolayers at the same applied perpendicular field; the difference includes all interface effects, not only hopping/hybridization.'},indent=2))
 print(json.dumps({'rows':rows,'checks':checks},indent=2))

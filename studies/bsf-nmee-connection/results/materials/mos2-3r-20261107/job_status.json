@@ -24,18 +24,20 @@
     "resources_used.cput": "06:45:56"
   },
   "548486": {
-    "state": "R",
+    "state": "F",
+    "Exit_status": "-29",
     "exec_host": "csuper006/5*4",
-    "resources_used.walltime": "01:23:17",
-    "resources_used.mem": "11266968kb",
-    "resources_used.cput": "05:21:57"
+    "resources_used.walltime": "02:02:07",
+    "resources_used.mem": "11292408kb",
+    "resources_used.cput": "08:01:47"
   },
   "548487": {
-    "state": "R",
+    "state": "F",
+    "Exit_status": "0",
     "exec_host": "csuper007/2*4",
-    "resources_used.walltime": "01:22:46",
+    "resources_used.walltime": "01:36:32",
     "resources_used.mem": "11426080kb",
-    "resources_used.cput": "05:22:08"
+    "resources_used.cput": "06:20:47"
   },
   "548488": {
     "state": "F",

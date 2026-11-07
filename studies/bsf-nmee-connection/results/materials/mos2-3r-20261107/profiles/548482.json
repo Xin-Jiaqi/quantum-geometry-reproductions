@@ -1171,6 +1171,6 @@
     -1.5635563249999986,
     1.5635563250000022
   ],
-  "analysis_pbs": "548516.cmspbs1",
+  "analysis_pbs": "548537.cmspbs1",
   "note": "Monolayer halves describe spatial cancellation within one layer, not two material layers. Profile is the planar average of the induced Pauli spin response."
 }

@@ -29,7 +29,8 @@
     "queue": "CP_001",
     "initial_state": "submitted",
     "resource_update": "Queued request reduced to 4 CPUs/16GB; running after scheduler cycle.",
-    "B_signs": "positive (time reversal)"
+    "B_signs": "positive (time reversal)",
+    "outcome": "Walltime limit during final diagonalization; exit -29; no completed negative-Ex density or response accepted; recovered by 548534"
   },
   "548487": {
     "structure": "A",
@@ -81,6 +82,56 @@
     "queue": "CP_001",
     "resources": "16 CPU,20 GB,1 hour",
     "restart": "Read-only reuse of completed zero-B start; new B seed and both E signs",
-    "initial_state": "running on csuper002"
+    "initial_state": "running on csuper002",
+    "exit_status": 0
+  },
+  "548532": {
+    "purpose": "Dependent profile analysis",
+    "parent_jobs": [
+      "548486",
+      "548513"
+    ],
+    "outcome": "Did not run because 548486 failed; not a successful analysis"
+  },
+  "548534": {
+    "structure": "A",
+    "gate_physical_Vnm": 0.25,
+    "purpose": "Recover only incomplete negative-Ex point from 548486",
+    "queue": "CP_001",
+    "resources": "16 CPU,20 GB,3 hours",
+    "retained_completed_sources": [
+      "start",
+      "seedB+1",
+      "E+1B+1"
+    ],
+    "retained_parent": "548486",
+    "incomplete_density": "E-1B+1_walltime548486, excluded from results"
+  },
+  "548535": {
+    "purpose": "Profile and canonical metadata of completed baseline, negative-gate and half-probe states",
+    "exit_status": 0
+  },
+  "548536": {
+    "structure": "A",
+    "gate_physical_Vnm": 0,
+    "mesh": 9,
+    "probe_VA": 0.002,
+    "zeeman_eV": 0.008,
+    "purpose": "Independent mesh check of target Cxx, fresh zero-B reference",
+    "queue": "CP_001",
+    "resources": "16 CPU,32 GB,4 hours"
+  },
+  "548537": {
+    "purpose": "Profiles including recovered positive gate",
+    "parent_jobs": [
+      "548534"
+    ]
+  },
+  "548538": {
+    "purpose": "Profiles including independent mesh check",
+    "parent_jobs": [
+      "548534",
+      "548536"
+    ]
   }
 }
