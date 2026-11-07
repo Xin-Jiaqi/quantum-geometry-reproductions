@@ -105,7 +105,15 @@
       "E+1B+1"
     ],
     "retained_parent": "548486",
-    "incomplete_density": "E-1B+1_walltime548486, excluded from results"
+    "incomplete_density": "E-1B+1_walltime548486, excluded from results",
+    "final_status": {
+      "state": "F",
+      "Exit_status": "0",
+      "exec_host": "csuper004/4*16",
+      "resources_used.walltime": "00:21:25",
+      "resources_used.mem": "15644416kb",
+      "resources_used.cput": "05:36:35"
+    }
   },
   "548535": {
     "purpose": "Profile and canonical metadata of completed baseline, negative-gate and half-probe states",
@@ -119,19 +127,45 @@
     "zeeman_eV": 0.008,
     "purpose": "Independent mesh check of target Cxx, fresh zero-B reference",
     "queue": "CP_001",
-    "resources": "16 CPU,32 GB,4 hours"
+    "resources": "16 CPU,32 GB,4 hours",
+    "final_status": {
+      "state": "F",
+      "Exit_status": "0",
+      "exec_host": "csuper005/5*16",
+      "resources_used.walltime": "01:34:20",
+      "resources_used.mem": "28034108kb",
+      "resources_used.cput": "24:47:39"
+    }
   },
   "548537": {
     "purpose": "Profiles including recovered positive gate",
     "parent_jobs": [
       "548534"
-    ]
+    ],
+    "final_status": {
+      "state": "F",
+      "Exit_status": "0",
+      "exec_host": "csuper001/3",
+      "resources_used.walltime": "00:00:12",
+      "resources_used.mem": "1308780kb",
+      "resources_used.cput": "00:00:08"
+    },
+    "queue": "CP_001 (qsub override of profile.pbs default)"
   },
   "548538": {
     "purpose": "Profiles including independent mesh check",
     "parent_jobs": [
       "548534",
       "548536"
-    ]
+    ],
+    "final_status": {
+      "state": "F",
+      "Exit_status": "0",
+      "exec_host": "csuper001/4",
+      "resources_used.walltime": "00:00:14",
+      "resources_used.mem": "1436540kb",
+      "resources_used.cput": "00:00:09"
+    },
+    "queue": "CP_001 (qsub override of profile.pbs default)"
   }
 }

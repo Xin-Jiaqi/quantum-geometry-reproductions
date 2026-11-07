@@ -103,6 +103,19 @@
       "B_even_total": null,
       "gap_min_eV": 1.10964,
       "source": "548534.json"
+    },
+    {
+      "structure": "A",
+      "gate_Vnm": 0.0,
+      "mesh": 9,
+      "probe_VA": 0.002,
+      "zeeman_eV": 0.008,
+      "C_total": -0.5844608405761382,
+      "C_bottom": -6.27003328867759,
+      "C_top": 5.685572448101452,
+      "B_even_total": null,
+      "gap_min_eV": 1.1384830000000001,
+      "source": "548536.json"
     }
   ],
   "checks": {
@@ -116,6 +129,30 @@
     "smaller_probe_layer_relative_changes": {
       "C_bottom": 0.1426615062689001,
       "C_top": 0.1614863924182702
+    },
+    "mesh_6_to_9_at_same_small_probes": {
+      "C_total": {
+        "k6": -0.5448095698534553,
+        "k9": -0.5844608405761382,
+        "relative_change": 0.07278005548498068,
+        "same_sign": true
+      },
+      "C_bottom": {
+        "k6": -5.211858072349651,
+        "k9": -6.27003328867759,
+        "relative_change": 0.20303223948899363,
+        "same_sign": true
+      },
+      "C_top": {
+        "k6": 4.667048502496196,
+        "k9": 5.685572448101452,
+        "relative_change": 0.21823727459881603,
+        "same_sign": true
+      }
+    },
+    "forbidden_linear_sz_residual_at_same_small_probes": {
+      "6": 3.414348244303311,
+      "9": 0.10003207312424886
     }
   },
   "independent_layer_control": [

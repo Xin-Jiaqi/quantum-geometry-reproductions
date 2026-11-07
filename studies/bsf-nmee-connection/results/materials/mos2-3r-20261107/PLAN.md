@@ -1,5 +1,7 @@
 # Non-Janus control: 3R MoS2
 
+Archived pre-calculation plan. Completed outcomes and accuracy limits are in README.md and the unified worklog; the expectations below are retained as written before the results.
+
 2026-11-07 Asia/Shanghai. Authorized scope: compare isolated layer, stable 3R bilayer, mirror partner and a few perpendicular biases. Suspend twelve-state work. Do not select a material or stacking by the computed response sign.
 
 ## Selection and question

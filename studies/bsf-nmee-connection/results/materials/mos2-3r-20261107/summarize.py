@@ -39,5 +39,6 @@ if (root/'gate_prediction.json').exists() and ('A',0.) in lookup:
 mesh_rows={r['mesh']:r for r in rows if r['structure']=='A' and r['gate_Vnm']==0. and r['probe_VA']==.002 and r['zeeman_eV']==.008}
 if 6 in mesh_rows and 9 in mesh_rows:
  checks['mesh_6_to_9_at_same_small_probes']={key:{'k6':mesh_rows[6][key],'k9':mesh_rows[9][key],'relative_change':(mesh_rows[9][key]-mesh_rows[6][key])/mesh_rows[6][key],'same_sign':bool(mesh_rows[9][key]*mesh_rows[6][key]>0)} for key in ('C_total','C_bottom','C_top')}
+ checks['forbidden_linear_sz_residual_at_same_small_probes']={str(mesh):json.loads((root/'results'/row['source']).read_text())['C_xyz_total_bottom_top_1e-9'][2][0] for mesh,row in mesh_rows.items()}
 (root/'summary.json').write_text(json.dumps({'rows':rows,'checks':checks,'independent_layer_control':controls,'sealed_prediction_tests':prediction_tests,'units':'1e-9 (nm V T)^-1, Pauli spin density','missing_rows_are_pending_not_zero':True,'control_note':'Two isolated monolayers at the same applied perpendicular field; the difference includes all interface effects, not only hopping/hybridization.'},indent=2))
 print(json.dumps({'rows':rows,'checks':checks},indent=2))

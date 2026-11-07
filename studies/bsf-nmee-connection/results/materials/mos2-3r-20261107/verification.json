@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-07T22:17:29+08:00",
+  "result_records": 9,
+  "planned_comparison_records": 7,
+  "accuracy_records": 2,
+  "raw_spin_to_coefficient_recalculation": "pass",
+  "layer_sum": "pass",
+  "spatial_profile_integrals": "pass",
+  "seed_gap_metadata": "pass",
+  "analysis_syntax": "pass",
+  "all_continuation_jobs_finished_normally": true,
+  "physical_accuracy": "Qualitative signs retained; layer magnitudes and gate thresholds not converged. This verification is not full-tensor or experimental validation.",
+  "python": "3.12.4 (v3.12.4:8e8a4baf65, Jun  6 2024, 17:33:18) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "1.26.4",
+  "figure_visual_inspection": "passed: labels, legend, units and layer/net distinction legible; all seven planned base points shown",
+  "svg_editable_text_elements": 40
+}

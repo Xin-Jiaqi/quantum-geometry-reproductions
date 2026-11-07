@@ -1,6 +1,6 @@
 # Non-Janus 3R-MoS2 NMEE control
 
-Status: all seven planned baseline/gate comparisons and the half-probe check are complete. The independent 9×9 half-probe check is still running; no final mesh-convergence claim is made. Twelve-state model work remains paused.
+Status: all seven planned comparison points and two accuracy checks are complete. The independent 9×9 check retains lower-negative, upper-positive and net-negative zero-gate A responses, with 7.28% net and 20–22% layer-amplitude changes from the smaller-probe 6×6 result. This is qualitative screening, not converged amplitudes or full-tensor validation. All listed calculations have ended; twelve-state model work remains paused.
 
 BiDB 1929 is the isolated layer; BiDB 1930 is the sliding-stable parallel 3R bilayer. B is the exact horizontal mirror partner of A, not a second unrelated chemical orientation. Slabs are centered and share the same supercell height. A source and B partner have equal zero-field energy by symmetry, not a new independent stability calculation.
 
@@ -42,6 +42,18 @@ Cxx is the coefficient of induced Pauli spin density sx = Cxx Ex Bz. Units: 10^-
 
 Figure: (a) zero-gate whole monolayer and lower/upper/net bilayer coefficients; A and B are horizontal mirror partners. (b) Changes from zero gate in each layer of A, not the absolute coefficients. (c) A net coefficient, the sealed additive prediction, and two isolated-layer responses. Lines connect discrete calculated points and do not fit a compensation threshold. All seven base-protocol points are used; the half-probe/mesh checks are separate accuracy diagnostics. No statistical confidence intervals are implied. SVG/PDF retain editable text; PNG is a preview, so the source validator's missing-TIFF warning is intentional.
 
-The observed gate increments are 1.504 times the sealed independent-layer-increment prediction on both sides. This rejects exact independent addition at the tested precision; it does not uniquely separate hopping from interface electrostatics, and the ratio is not yet a converged material constant. Reducing both probe fields by two changes the zero-gate net coefficient by 0.34%, while layer amplitudes change by 14–16%. A forbidden linear sz component retains a residual: the full response tensor is not validated. The independent mesh check is needed before treating target Cxx amplitudes as reliable.
+The observed gate increments are 1.504 times the sealed independent-layer-increment prediction on both sides. This rejects exact independent addition at the tested precision; it does not uniquely separate hopping from interface electrostatics, and the ratio is not yet a converged material constant. Reducing both probe fields by two changes the zero-gate net coefficient by 0.34%, while layer amplitudes change by 14–16%. A forbidden linear sz component retains a residual: the full response tensor is not validated. The independent mesh check is complete: at the same small probes, k9 gives net/lower/upper = -0.584461/-6.270033/+5.685572, versus k6 -0.544810/-5.211858/+4.667049. Signs are retained; magnitudes are not converged. The forbidden sz residual drops from 3.414 to 0.100 but remains nonzero. PEAD polarization-string clustering warnings also remain an open numerical diagnostic. The biased points were not rerun at k9, so the 1.50 ratio and any extrapolated compensation field are not precision predictions.
 
 The whole-layer monolayer coefficient is zero by symmetry, whereas its internal opposite spatial contributions are large. Rigidly translating two isolated-layer response profiles gives nonzero half-space tail contributions of about +2.04/-2.04, opposite to the actual A layer signs, and zero net. See profile_superposition.json for this partition diagnostic; it is not a self-consistent decoupled-layer calculation or a uniquely separable physical mechanism.
+
+## Completed accuracy checks
+
+| Zero-gate A protocol | Lower | Upper | Net |
+|---|---:|---:|---:|
+| k6, Ex=0.004 V/Å, BEXT=0.016 eV | -4.5612 | +4.0182 | -0.5430 |
+| k6, both probes halved | -5.2119 | +4.6670 | -0.5448 |
+| k9, same halved probes | -6.2700 | +5.6856 | -0.5845 |
+
+Units as above. These are deterministic sensitivity tests, not statistical replicates. No rigorous uncertainty interval or continuum-limit extrapolation is inferred. The qualitative interface-activation interpretation remains a candidate; static interface electrostatics and coherent interlayer mixing have not been separated. The small signal is not an experimental-detectability claim.
+
+Final lineage: 548534 recovered the incomplete positive-gate comparison by recomputing only its negative-Ex state; 548536 independently evaluated the k9 check; 548538 generated the final canonical gap metadata and spatial profiles for all nine records. See jobs.json and continuation_status.json. Input hashes in input_hashes.json are the original setup snapshot; final_manifest.json hashes this delivered analysis/data bundle. verification.json checks internal data integrity, not the physical convergence of the entire response tensor.
