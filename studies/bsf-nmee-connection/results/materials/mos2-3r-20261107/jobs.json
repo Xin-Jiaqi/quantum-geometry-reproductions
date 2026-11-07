@@ -13,36 +13,74 @@
     "structure": "A",
     "gate_physical_Vnm": 0,
     "queue": "DP_002",
-    "initial_state": "submitted"
+    "initial_state": "submitted",
+    "completion_protocol": "Stopped intentionally after both positive-B field calculations converged; response collected by 548511."
   },
   "548485": {
     "structure": "B",
     "gate_physical_Vnm": 0,
     "queue": "DP_002",
-    "initial_state": "submitted"
+    "initial_state": "submitted",
+    "completion_protocol": "Stopped intentionally after both positive-B field calculations converged; response collected by 548515."
   },
   "548486": {
     "structure": "A",
     "gate_physical_Vnm": 0.25,
     "queue": "CP_001",
-    "initial_state": "submitted"
+    "initial_state": "submitted",
+    "resource_update": "Queued request reduced to 4 CPUs/16GB; running after scheduler cycle.",
+    "B_signs": "positive (time reversal)"
   },
   "548487": {
     "structure": "A",
     "gate_physical_Vnm": -0.25,
     "queue": "CP_001",
-    "initial_state": "submitted"
+    "initial_state": "submitted",
+    "resource_update": "Queued request reduced to 4 CPUs/16GB; running after scheduler cycle.",
+    "B_signs": "positive (time reversal)"
   },
   "548488": {
     "structure": "mono",
     "gate_physical_Vnm": 0.25,
     "queue": "CP_001",
-    "initial_state": "submitted"
+    "initial_state": "submitted",
+    "resource_update": "Queued request reduced to 4 CPUs/16GB; running after scheduler cycle.",
+    "B_signs": "positive (time reversal)"
   },
   "548489": {
     "structure": "mono",
     "gate_physical_Vnm": -0.25,
     "queue": "CP_001",
-    "initial_state": "submitted"
+    "initial_state": "submitted",
+    "resource_update": "Queued request reduced to 4 CPUs/16GB; running after scheduler cycle.",
+    "B_signs": "positive (time reversal)"
+  },
+  "548511": {
+    "purpose": "A zero-gate density collector",
+    "parent_job": "548484",
+    "exit_status": 0
+  },
+  "548515": {
+    "purpose": "B zero-gate density collector",
+    "parent_job": "548485",
+    "exit_status": 0
+  },
+  "548508": {
+    "purpose": "Initial monolayer profile and gap metadata correction",
+    "exit_status": 0
+  },
+  "548516": {
+    "purpose": "Completed baseline/monolayer profiles and gap metadata correction"
+  },
+  "548513": {
+    "structure": "A",
+    "gate_physical_Vnm": 0,
+    "probe_VA": 0.002,
+    "zeeman_eV": 0.008,
+    "purpose": "One smaller-probe check",
+    "queue": "CP_001",
+    "resources": "16 CPU,20 GB,1 hour",
+    "restart": "Read-only reuse of completed zero-B start; new B seed and both E signs",
+    "initial_state": "running on csuper002"
   }
 }

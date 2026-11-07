@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-11-07T19:50:43.153107+08:00",
+  "status": "Prediction recorded before either gated bilayer response was available locally; both original jobs running at latest scheduler observation.",
+  "model": "Each material layer adds the isolated monolayer gate increment to its zero-gate interface response; no gate-dependent interface correction.",
+  "formula": "C_layer_A(F)=C_layer_A(0)+C_mono(F)-C_mono(0)",
+  "inputs": [
+    "548482",
+    "548484",
+    "548488",
+    "548489"
+  ],
+  "units": "1e-9 (nm V T)^-1",
+  "predictions": [
+    {
+      "gate_physical_Vnm": 0.25,
+      "predicted_C_total": -0.8220959050710583,
+      "predicted_C_bottom": -4.7007107043424226,
+      "predicted_C_top": 3.878614799271364
+    },
+    {
+      "gate_physical_Vnm": -0.25,
+      "predicted_C_total": -0.26424327624855926,
+      "predicted_C_bottom": -4.421784389931172,
+      "predicted_C_top": 4.157541113682614
+    }
+  ],
+  "meaning": "Failure rejects simple isolated-layer addition. It does not uniquely separate interlayer hopping from self-consistent interface electrostatics."
+}

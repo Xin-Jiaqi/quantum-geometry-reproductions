@@ -1,0 +1,3 @@
+# Figure contract
+Question: does a stable 3R interface activate the s_x/(Ex Bz) response absent in the unbiased monolayer, and can stacking/gate control the output? Final claim must follow completed data.
+Python quantitative grid, 178 mm width, editable SVG/PDF and PNG. Panel a zero-gate mono/A/B layer and net coefficients; panel b A gate dependence together with isolated-layer gate control. Full source CSV; all seven planned points shown when complete, no interpolation presented as a measured switching threshold. Error diagnostics are numerical checks, not statistical confidence intervals. Monolayer half-space integrals are not plotted as layers. Absolute values remain exploratory until mesh/probe checks. No new mechanism schematic before causal evidence exists.

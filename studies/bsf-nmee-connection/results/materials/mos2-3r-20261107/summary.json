@@ -1,0 +1,87 @@
+{
+  "rows": [
+    {
+      "structure": "mono",
+      "gate_Vnm": 0.0,
+      "mesh": 6,
+      "probe_VA": 0.004,
+      "zeeman_eV": 0.016,
+      "C_total": -8.374622429887615e-05,
+      "C_bottom": null,
+      "C_top": null,
+      "B_even_total": -2.148344921857547e-05,
+      "gap_min_eV": 1.5678659999999998,
+      "source": "548482.json"
+    },
+    {
+      "structure": "A",
+      "gate_Vnm": 0.0,
+      "mesh": 6,
+      "probe_VA": 0.004,
+      "zeeman_eV": 0.016,
+      "C_total": -0.5429876989509558,
+      "C_bottom": -4.561156601282371,
+      "C_top": 4.018168902331415,
+      "B_even_total": null,
+      "gap_min_eV": 1.1226530000000001,
+      "source": "548484.json"
+    },
+    {
+      "structure": "B",
+      "gate_Vnm": 0.0,
+      "mesh": 6,
+      "probe_VA": 0.004,
+      "zeeman_eV": 0.016,
+      "C_total": 0.5424770216191771,
+      "C_bottom": -4.037320523522546,
+      "C_top": 4.579797545141723,
+      "B_even_total": null,
+      "gap_min_eV": 1.1226530000000001,
+      "source": "548485.json"
+    },
+    {
+      "structure": "mono",
+      "gate_Vnm": 0.25,
+      "mesh": 6,
+      "probe_VA": 0.004,
+      "zeeman_eV": 0.016,
+      "C_total": -0.1396378492843502,
+      "C_bottom": null,
+      "C_top": null,
+      "B_even_total": null,
+      "gap_min_eV": 1.567864,
+      "source": "548488.json"
+    },
+    {
+      "structure": "mono",
+      "gate_Vnm": -0.25,
+      "mesh": 6,
+      "probe_VA": 0.004,
+      "zeeman_eV": 0.016,
+      "C_total": 0.13928846512689938,
+      "C_bottom": null,
+      "C_top": null,
+      "B_even_total": null,
+      "gap_min_eV": 1.567864,
+      "source": "548489.json"
+    }
+  ],
+  "checks": {
+    "mirror_sum_total": -0.000510677331778675,
+    "mirror_sum_bottomA_topB": 0.018640943859352,
+    "mirror_sum_topA_bottomB": -0.019151621191130452,
+    "mirror_max_residual_relative_to_layer_scale": 0.0041988519284222705,
+    "mono_gate_oddness_residual": -0.00034938415745081053
+  },
+  "independent_layer_control": [
+    {
+      "gate_Vnm": 0.0,
+      "two_isolated_layers": -0.0001674924485977523,
+      "bilayer_A": -0.5429876989509558,
+      "difference": -0.5428202065023581
+    }
+  ],
+  "units": "1e-9 (nm V T)^-1, Pauli spin density",
+  "missing_rows_are_pending_not_zero": true,
+  "control_note": "Two isolated monolayers at the same applied perpendicular field; the difference includes all interface effects, not only hopping/hybridization."
+}
