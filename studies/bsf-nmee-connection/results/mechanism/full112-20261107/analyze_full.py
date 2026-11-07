@@ -1,0 +1,40 @@
+"""112-state frozen-potential diagnostic. Reject a claimed zero-field mechanism if baseline is magnetic."""
+import os,socket,json
+from pathlib import Path
+import numpy as np
+if not os.environ.get('PBS_JOBID') or socket.gethostname().startswith(('super','cms-ssh')):raise SystemExit('PBS compute required')
+from model import localized_model,polar_cols,BOTTOM
+from scipy.linalg import null_space
+D=np.load('full-controls-cache.npz'); nk=len(D['k']); n=round(nk**.5); links=D['links']; neighbors=D['neighbors'];cell=D['cell'];Z=D['Z'];spin=D['spin']; P=D['P']; diag=D['diag']
+adj=lambda a:a.conj().swapaxes(-1,-2)
+def chi(h):
+ e,u=np.linalg.eigh(h);occ=u[:,:,:48];emp=u[:,:,48:];deriv=np.zeros_like(occ,dtype=complex)
+ for a in range(4):
+  shifted=links[:,a]@occ[neighbors[:,a]]
+  deriv+=(-1)**a*n*cell[a//2,0]/(4*np.pi)*shifted@np.linalg.inv(adj(occ)@shifted)
+ pairs=2*((adj(occ)@spin@emp)*(adj(emp)@(1j*deriv)).swapaxes(1,2)).real/(e[:,:48,None]-e[:,None,48:])
+ return float(pairs.sum(axis=(1,2)).mean()*6.331927853335898e4),float(e[:,48].min()-e[:,47].max())
+def response(h,step=.002):
+ a,ga=chi(h+step*Z);b,gb=chi(h-step*Z)
+ return {'C':(a-b)/(2*step),'gap':min(ga,gb),'even_chi':(a+b)/2,'step':step}
+H0=diag-.016*Z
+out={'scope':'112-state frozen finite-B Kohn-Sham potential, external Zeeman subtracted; residual TR breaking must be assessed before physical zero-field interpretation','node':socket.gethostname(),'job':os.environ['PBS_JOBID'],'mesh':n}
+zero,gap=chi(H0);out['baseline']={'chi_zero':zero,'gap':gap,'steps':[response(H0,b) for b in (.001,.002,.008,.016)],'prepared_reference':chi(diag)[0]/.016}
+out['windows']={}
+for frozen in (4,8,12):
+ grid,_=localized_model(D,frozen); ix=np.rint(D['k'][:,:2]*n).astype(int)%n
+ h=np.array([grid[tuple(i)] for i in ix]);lifts=[];nf=28+frozen
+ for cf,e in zip(D['coeff'],D['energy']):
+  f,_=polar_cols(cf[:,:nf].astype(complex));rest=null_space(adj(f));u,_=polar_cols(((adj(rest)@cf[:,nf:])/(1+((e[nf:]-e[nf])/4)**2)).conj().T)
+  lifts.append(np.vstack([np.zeros((20,44)),adj(f),u@adj(rest)]))
+ lift=np.array(lifts);HT=lift@(h*(BOTTOM[:,None]!=BOTTOM[None,:]))@adj(lift)
+ weak=H0-HT;strong=H0;sources=[np.linalg.eigh(x) for x in (weak,strong)]
+ rows={}
+ for p in (0,1):
+  for q in (0,1):
+   ep,up=sources[p];eq=sources[q][0];de=ep[:,:,None]-ep[:,None,:];dq=eq[:,:,None]-eq[:,None,:]
+   if np.any((abs(de)<1e-9)&(abs(dq)>1e-7)):raise ValueError('degenerate spectral ambiguity')
+   hc=(up*eq[:,None,:])@adj(up);rows[f'states{p}_energy{q}']=response(hc)
+ gate=[dict(U=float(U),**response(H0+U*(.5*np.eye(112)-P))) for U in (-.6,-.45,-.3,-.15,0,.15,.3,.45,.6)] if frozen==8 else []
+ out['windows'][str(frozen)]={'spectral':rows,'gate':gate}
+Path('full-controls-analysis.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out),flush=True)

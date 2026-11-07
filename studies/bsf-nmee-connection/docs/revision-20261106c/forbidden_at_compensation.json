@@ -1,0 +1,76 @@
+{
+  "mirror": [
+    {
+      "lambda": 0,
+      "max_error_eV": 4.779001811769297e-16
+    },
+    {
+      "lambda": 0.2,
+      "max_error_eV": 4.779001811769297e-16
+    },
+    {
+      "lambda": 0.25,
+      "max_error_eV": 4.779001811769297e-16
+    },
+    {
+      "lambda": 0.3,
+      "max_error_eV": 4.779001811769297e-16
+    },
+    {
+      "lambda": 1,
+      "max_error_eV": 4.779001811769297e-16
+    }
+  ],
+  "lambda": 0.25,
+  "mass_meV": 45,
+  "grid": [
+    41,
+    45,
+    72
+  ],
+  "step_T": 0.0625,
+  "t_meV": 10,
+  "U_meV": 4.75,
+  "probe_direction_native_XY": [
+    0.5,
+    0.8660254037844386
+  ],
+  "response": {
+    "longitudinal": {
+      "t_meV": 10,
+      "U_top_minus_bottom_meV": 4.75,
+      "gap_meV": 10.762682019477536,
+      "common_gap_meV": 10.705050648336298,
+      "bottom": -2.3244222271766053e-05,
+      "top": 2.280334391012483e-05,
+      "total": -4.408783615678611e-07,
+      "layer_sum_error": -7.336152356169495e-17,
+      "bottom_positive_k": 0.0021611769595234662,
+      "bottom_negative_k": -0.0021844211817950714
+    },
+    "transverse": {
+      "t_meV": 10,
+      "U_top_minus_bottom_meV": 4.75,
+      "gap_meV": 10.762682019477536,
+      "common_gap_meV": 10.705050648336298,
+      "bottom": 2.1907660147785224e-17,
+      "top": 1.2710915219676933e-16,
+      "total": 1.6439167794708178e-16,
+      "layer_sum_error": -1.537486560252723e-17,
+      "bottom_positive_k": 0.0010556860244279186,
+      "bottom_negative_k": -0.0010556860244278962
+    },
+    "out_of_plane": {
+      "t_meV": 10,
+      "U_top_minus_bottom_meV": 4.75,
+      "gap_meV": 10.762682019477536,
+      "common_gap_meV": 10.705050648336298,
+      "bottom": -1.7607443281164592e-16,
+      "top": -1.0885389811754465e-16,
+      "total": -3.5475095083725705e-16,
+      "layer_sum_error": 6.982261990806649e-17,
+      "bottom_positive_k": 0.0012268412268610547,
+      "bottom_negative_k": -0.0012268412268612607
+    }
+  }
+}

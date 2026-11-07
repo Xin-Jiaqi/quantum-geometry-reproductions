@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -q DP_002
+#PBS -N xjq-nmee-check
+#PBS -l select=1:ncpus=4:mem=16gb
+#PBS -l walltime=00:45:00
+#PBS -j oe
+set -eu
+test -s "$PBS_NODEFILE"
+case "$(hostname -s)" in super*|cms-ssh*) exit 71;; esac
+cd "$PBS_O_WORKDIR"
+export OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4
+python3 -u analyze_full_20261107.py

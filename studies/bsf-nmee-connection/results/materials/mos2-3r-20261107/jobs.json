@@ -1,0 +1,48 @@
+{
+  "548482": {
+    "structure": "mono",
+    "gate_physical_Vnm": 0,
+    "initial_state": "submitted"
+  },
+  "548483": {
+    "structure": "A",
+    "gate_physical_Vnm": 0,
+    "initial_state": "cancelled while queued; replaced by DP_002 job 548484"
+  },
+  "548484": {
+    "structure": "A",
+    "gate_physical_Vnm": 0,
+    "queue": "DP_002",
+    "initial_state": "submitted"
+  },
+  "548485": {
+    "structure": "B",
+    "gate_physical_Vnm": 0,
+    "queue": "DP_002",
+    "initial_state": "submitted"
+  },
+  "548486": {
+    "structure": "A",
+    "gate_physical_Vnm": 0.25,
+    "queue": "CP_001",
+    "initial_state": "submitted"
+  },
+  "548487": {
+    "structure": "A",
+    "gate_physical_Vnm": -0.25,
+    "queue": "CP_001",
+    "initial_state": "submitted"
+  },
+  "548488": {
+    "structure": "mono",
+    "gate_physical_Vnm": 0.25,
+    "queue": "CP_001",
+    "initial_state": "submitted"
+  },
+  "548489": {
+    "structure": "mono",
+    "gate_physical_Vnm": -0.25,
+    "queue": "CP_001",
+    "initial_state": "submitted"
+  }
+}

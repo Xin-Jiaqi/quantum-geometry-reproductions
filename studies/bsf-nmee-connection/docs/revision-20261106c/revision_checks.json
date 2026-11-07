@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "fine_points": 21,
+  "neighbour_points": 37,
+  "first_zero_bracket_meV": [
+    4.5,
+    4.75
+  ],
+  "linear_interpolation_meV": 4.726572135351323,
+  "min_fine_common_gap_meV": 5.197355146239499,
+  "max_fine_layer_sum_error": 1.5715510490177387e-15,
+  "max_rotated_tensor_forbidden": 1.0640834459223203e-15,
+  "neighbours": [
+    {
+      "lambda": 0.24,
+      "mass_meV": 45,
+      "both_routes": true
+    },
+    {
+      "lambda": 0.25,
+      "mass_meV": 45,
+      "both_routes": true
+    },
+    {
+      "lambda": 0.26,
+      "mass_meV": 45,
+      "both_routes": true
+    },
+    {
+      "lambda": 0.25,
+      "mass_meV": 44.9,
+      "both_routes": true
+    },
+    {
+      "lambda": 0.25,
+      "mass_meV": 45.1,
+      "both_routes": true
+    }
+  ],
+  "max_independent_scalar_tensor_error": 2.254733942955167e-15,
+  "negative_controls_retained": true,
+  "relative_links_and_tables": "pass"
+}

@@ -1,0 +1,25 @@
+{
+  "source_revision": "revision-20261106c",
+  "figure_renaming": {
+    "Fig1_KM": "Fig01_KM_overview",
+    "FigS4_KM_AB_BA": "Fig03_KM_AB_BA",
+    "FigS6_probe_and_range": "Fig04_KM_probe_direction",
+    "Fig2_MoSSe_distance": "Fig05_MoSSe_distance",
+    "FigS5_orbital_levels": "Fig06_MoSSe_orbitals",
+    "Fig3_MoSSe_controls": "Fig07_MoSSe_gate_controls",
+    "FigS1_environment": "Fig08_MoSSe_environment",
+    "FigS2_probe_weight": "Fig09_MoSSe_probe_weight",
+    "FigS3_numerical_checks": "Fig10_MoSSe_numerical_checks"
+  },
+  "new_figure": "Fig02_KM_neighbourhood",
+  "sections": [
+    "physical question",
+    "KM and robustness",
+    "MoSSe",
+    "experimental interpretation",
+    "mechanism status",
+    "complete definitions"
+  ],
+  "omissions": "duplicated definitions and reviewer conversation removed from prose; source text preserved in archive/worklog",
+  "new_calculation": false
+}

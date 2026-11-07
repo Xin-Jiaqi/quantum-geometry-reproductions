@@ -1,0 +1,36 @@
+{
+  "tests": {
+    "passed": 5,
+    "scope": "new model symmetries, KM limit, velocities, and channel projector tests"
+  },
+  "execution": "Mac local; no cluster/DFT/strain jobs",
+  "figure_preflight": "13 pass, 1 PNG-not-TIFF warning, 0 fail; visual inspection passed",
+  "max_half_step_response_difference": 4.830649769083095e-13,
+  "spectral_velocity_difference": 3.975582363313655e-06,
+  "invalid_metallic_control": "controlled.json: all_paths_CC; not included in claims",
+  "hashes": {
+    "half-step.json": "25e4e9e108f48f1848f47c572c32923344d57564891f4c8e379fca2b604c96c0",
+    "minimal_model_mechanism.svg": "34ee56d19e782c44a168d2d7a73cd379973c18b2c4f389e3eb5890a2e086085b",
+    "fine.json": "25df6fe03cc5d7e09b2f98a37cd7dac0fe626622baa7909d5eff2d955d0868b6",
+    "minimal_model_mechanism.png": "e8e4e2e59baf26a72de52d69c4ca3677676caed38411599ec09fdf94c0d59b92",
+    "minimal_model_mechanism.pdf": "2dbad3cd56bbd4942d057555b448095fe24a9f17aecac21a390eb2df8b207732",
+    "figure-contract.md": "5f591cfd3c30eef132b00b68d314a46072459113fad4d2550d3678fb2c691990",
+    "main-thresholds-predictions.json": "099e6a6755122d4209bc4a495402e3a89d37dd08bb11afd93cb15e5b36963b47",
+    "README.md": "375d5549c785403bcb2ee041755befaf6472e04c73b81434e32df9bb848d0710",
+    "heldout-fine.json": "a981dc1b7a85ee77b25fb61d9ea36d319f4c39727ebe43ee5b382562ffd8fac5",
+    "controlled.json": "fe6b0c2c7600bd428936e6405fc7b0f2c96355c71906f68d3a3e9e1262353704",
+    "spectral-refined.json": "3d31e7cacdaba4db0082ad166c44e9cff95ace2781dace72e522625455e46696",
+    "main-thresholds.json": "d953d7b812c9f4bf3dc55d8c821d30eb28c63cc44ffd52fbe73d6e548d9e8b83",
+    "plot_model.py": "ee1979e897b74fbea22ff68bfd189237c32ba33f117743995b39b814fe5036b9",
+    "figure_source.csv": "edcc4ecdb068db295d90dbae571988b8c1387e48d6ba67e5205393284124b1b3",
+    "exploration/explore.json": "eaf97ca8d296104717db5a587e6497691500bbec39ede8e5332074057e30814f",
+    "exploration/thresholds.py": "5cb620f2bda604fb490bd3618a241887dd8da0ab044ef70b60ca521e763a5f86",
+    "exploration/validate_predictions.py": "3f449b2547dd5d9a3ef8897f65bc5500b6f04c29d0f429b40e9bccde92707c2d",
+    "exploration/thresholds.json": "056389440b055fb84364bc8e48cd42e799276196b200b89a9bd715031b98c0d5",
+    "exploration/predictions-before-check.json": "a56a42f6f407f53e1926e68ac6c3cbd0dacbffc4177b1db74cc0614774c20f7e",
+    "exploration/spectral.py": "0ea9e318b62c380617ca71aefc6b036f50b0c318d740829bd866b0b32edc6537",
+    "exploration/explore.py": "d33ebf90536e6af721ff1eae93f7022eba598c50bad66ecaae25cb50d521aa41",
+    "exploration/spectral-refined.py": "43cd60e1eee0c54a3d6ef177af164e565efe335de7b42054c2398031aea755c5",
+    "exploration/spectral.json": "1d0f36f071a0963eca69cfdc2fe0e2696d796a74ca992a0906e38f71bf263633"
+  }
+}

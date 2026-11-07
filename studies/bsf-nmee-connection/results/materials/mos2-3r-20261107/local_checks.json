@@ -1,0 +1,12 @@
+{
+  "mirror_position_error_A": 9.125535621437887e-15,
+  "synthetic_spin_integral": "passed",
+  "unit_conversion": "matches established protocol with actual MoS2 area",
+  "response_signs_used_for_selection": false,
+  "structures_sha256": {
+    "POSCAR.B": "8cd1092847ed3fc7ec943ab39a2489f267bcce7e1699cd78a96418897ae82f39",
+    "POSCAR.mono": "8340f0fdfd129d5d298bdf5cd342abff6eb0fd67906bc4c401443a9311149c4e",
+    "POSCAR.A": "910e866c278c3d86c6d877184366e23029653e7eb6d5f931334072acff70aede"
+  },
+  "database_sha256": "afe1fe7711189be5b0e189b0c101d6488a7578f4f9ba4e1bb0164534f4255984"
+}

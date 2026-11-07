@@ -1,0 +1,38 @@
+{
+  "source_rows": 37,
+  "panels": {
+    "lambda=0.24": {
+      "hybridization_points": 3,
+      "gate_points": 7,
+      "individual_gate_layer_signs": "lower negative; upper positive"
+    },
+    "lambda=0.25": {
+      "hybridization_points": 3,
+      "gate_points": 7,
+      "individual_gate_layer_signs": "lower negative; upper positive"
+    },
+    "lambda=0.26": {
+      "hybridization_points": 3,
+      "gate_points": 7,
+      "individual_gate_layer_signs": "lower negative; upper positive"
+    },
+    "mass_meV=44.9": {
+      "hybridization_points": 3,
+      "gate_points": 3,
+      "individual_gate_layer_signs": "lower negative; upper positive"
+    },
+    "mass_meV=45": {
+      "hybridization_points": 3,
+      "gate_points": 7,
+      "individual_gate_layer_signs": "lower negative; upper positive"
+    },
+    "mass_meV=45.1": {
+      "hybridization_points": 3,
+      "gate_points": 3,
+      "individual_gate_layer_signs": "lower negative; upper positive"
+    }
+  },
+  "filter": "all supplied points used in applicable sweeps; total panels zoom to U>=4, all gate points are shown in layer panels",
+  "shared_reference": "lambda=.25,m=45 shown in both rows",
+  "interpolation": "straight display segments only; no interpolated simulation data"
+}

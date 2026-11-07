@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "new_simulation": false,
+  "source_points": 37,
+  "data_values_changed": false,
+  "preserved_existing_files": 130,
+  "imported_research_records": 17,
+  "captions": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+  ],
+  "markdown_links_tables_math_delimiters": "pass",
+  "figure_source_preflight": {
+    "ready": true,
+    "strict": false,
+    "counts": {
+      "PASS": 12,
+      "WARN": 2,
+      "FAIL": 0
+    }
+  },
+  "visual_review": "New comparison and relabelled direction figure reviewed; existing figures reused unchanged",
+  "accepted_export_notes": "PNG 320 dpi for discussion; editable PDF/SVG provided, not a final submission raster bundle"
+}

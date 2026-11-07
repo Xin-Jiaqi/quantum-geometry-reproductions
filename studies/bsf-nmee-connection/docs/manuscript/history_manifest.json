@@ -1,0 +1,121 @@
+[
+  {
+    "label": "KM 阶段 2",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/STAGE2_WORKLOG.md",
+    "archive": "归档/研究记录/KM/阶段2.md",
+    "original_sha256": "68c9bb63f9e875e89484fd423330d519e878a4c75fcf4dece33386eac9fbf6d2",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "KM 阶段 3",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/STAGE3_WORKLOG.md",
+    "archive": "归档/研究记录/KM/阶段3.md",
+    "original_sha256": "d625d61a5fb76ccb9d39eb8c28158417a77015bcc61a22dd6d3f842006eef202",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "KM 阶段 4",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/STAGE4_WORKLOG.md",
+    "archive": "归档/研究记录/KM/阶段4.md",
+    "original_sha256": "5e0948163c1b724796f8410e7756cd82fe0244e5e198414079ae91de6947d98b",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "KM 阶段 5",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/STAGE5_WORKLOG.md",
+    "archive": "归档/研究记录/KM/阶段5.md",
+    "original_sha256": "4219b1770068c7ff227aaccaa40cf3f70f9541f9b537814295714b09f1919878",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "KM 阶段 6",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/STAGE6_WORKLOG.md",
+    "archive": "归档/研究记录/KM/阶段6.md",
+    "original_sha256": "c033a2d0c0eacc667e0511d2727ce36bd48c1f78f3a14e0ccf9ec403bea46b6f",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "KM 阶段 7",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/STAGE7_WORKLOG.md",
+    "archive": "归档/研究记录/KM/阶段7.md",
+    "original_sha256": "21e4ad3455b830f61dd0d54281c4a31f54d38fd51a579538e5400fa58019baf5",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "KM 极化与幂次",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/STAGE8_PHYSICS.md",
+    "archive": "归档/研究记录/KM/阶段8_极化与幂次.md",
+    "original_sha256": "b229421527b079ed410a83670166b58673e2628b838860e2c2a5587825511b3d",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "KM 完整滑移路径",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/STAGE9_MODEL_PHYSICS.md",
+    "archive": "归档/研究记录/KM/阶段9_完整路径.md",
+    "original_sha256": "97b8426add9adaec8129c1d4e5389c49e0e3d25cc798c7a1d539614f6998bf37",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "固定堆垛的层响应",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/FIXED_STACK_LAYER_CXX_WORKLOG.md",
+    "archive": "归档/研究记录/KM/固定堆垛的层响应.md",
+    "original_sha256": "d81bb07e1098ee3a9fea62cbbaa7be72539a92fdd96ccb098b1b78ce4a9521d7",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "KM 环境响应",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/DOMAIN_ENVIRONMENT_WORKLOG.md",
+    "archive": "归档/研究记录/KM/器件环境与投影零点.md",
+    "original_sha256": "352df48d27f05d3be8ffb2f983bf549d969d54bc285ba1c1b553075fc6f1ffe8",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "MoSSe 初始对照",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/MoSSe-NMEE-结果.md",
+    "archive": "归档/研究记录/MoSSe/初始材料对照.md",
+    "original_sha256": "afc4f6e8fb368b011e8f868aed3297c31a46b52c4bbe1843c7b716ccbb455475",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "S/S 层距与带间分解",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/7269-mechanism/WORKLOG.md",
+    "archive": "归档/研究记录/MoSSe/S-S层距与带间分解.md",
+    "original_sha256": "71e4d0148ea504299478433436c0450f30cbb3b3e6934475c622b2375762bac3",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "轨道模型与门控",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/7269-mechanism/orbital-model/WORKLOG.md",
+    "archive": "归档/研究记录/MoSSe/轨道模型与门控.md",
+    "original_sha256": "691a6003e1abecf8c12d41bf1edc028be99920467acb7617b1a89325c8eea8e8",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "S/Se 独立预测",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/7266-blind/WORKLOG.md",
+    "archive": "归档/研究记录/MoSSe/S-Se堆垛的独立预测.md",
+    "original_sha256": "48fe812417fcb85991232b077ffc3adabfaac6dd94c6d333f281a176e4a3d870",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "MoSSe 镜像伙伴",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/ss-mirror-domains/WORKLOG.md",
+    "archive": "归档/研究记录/MoSSe/镜像伙伴.md",
+    "original_sha256": "ef03bf5a5726745208d84b2c87bb28f534c083b92eafee31843fed7830695eb5",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "MoSSe 环境与读出",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/domain-readout/WORKLOG.md",
+    "archive": "归档/研究记录/MoSSe/器件环境与实验读出.md",
+    "original_sha256": "a8e614ae2b18269c5fe0242a669913306bdce4366a0a58f4ec500aec386c0c6a",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  },
+  {
+    "label": "最初物理叙事",
+    "source": "/Users/jiaqi/Desktop/worksofJiaqi/quantum-geometry-reproductions/studies/bsf-nmee-connection/docs/story-20261106/WORKLOG.md",
+    "archive": "归档/研究记录/稿件/最初物理叙事.md",
+    "original_sha256": "a0cbe5d93b75a23b7bb12dd09e429e58dad430ca12ea05c1b701136f2ba52bf5",
+    "link_policy": "existing relative data links made absolute; original source unchanged"
+  }
+]

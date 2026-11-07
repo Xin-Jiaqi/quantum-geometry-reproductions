@@ -1,0 +1,220 @@
+{
+  "grid": [
+    81,
+    80,
+    120
+  ],
+  "nk": 76899,
+  "step_T": 0.002,
+  "units": "(nm V T)^-1",
+  "rows": {
+    "main_t0.0": {
+      "parameters": {
+        "name": "main_t0.0",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.0,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        -3.1460470412098516e-05,
+        0.00012335422263894677,
+        9.189375220731274e-05
+      ],
+      "gap_eV": 0.013255598542175243,
+      "insulating": true,
+      "layer_sum_error": 1.9535520662077033e-14
+    },
+    "main_t0.04": {
+      "parameters": {
+        "name": "main_t0.04",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.04,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        -0.00012454477450024956,
+        5.501819780659418e-05,
+        -6.952657668362121e-05
+      ],
+      "gap_eV": 0.015212746974269468,
+      "insulating": true,
+      "layer_sum_error": -1.0034169133608939e-14
+    },
+    "main_t0.08": {
+      "parameters": {
+        "name": "main_t0.08",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.08,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        9.956067653357638e-06,
+        -1.8232241683006884e-05,
+        -8.276174026189442e-06
+      ],
+      "gap_eV": 0.01762282788712962,
+      "insulating": true,
+      "layer_sum_error": -3.4598043288820712e-15
+    },
+    "main_t0.12": {
+      "parameters": {
+        "name": "main_t0.12",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.12,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        0.0002146613994969996,
+        -4.6329580759079455e-05,
+        0.00016833181872168588
+      ],
+      "gap_eV": 0.020340347296492874,
+      "insulating": true,
+      "layer_sum_error": 1.623427412465739e-14
+    },
+    "rho0.25": {
+      "parameters": {
+        "name": "rho0.25",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.12,
+        "rho": 0.25,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        6.977319347452577e-05,
+        1.3511098765382225e-05,
+        8.328429224291065e-05
+      ],
+      "gap_eV": 0.020232009866464135,
+      "insulating": true,
+      "layer_sum_error": -3.0026572591171363e-15
+    },
+    "rho1.0": {
+      "parameters": {
+        "name": "rho1.0",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.12,
+        "rho": 1.0,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        -0.0007544444238369685,
+        0.00025048444635459243,
+        -0.000503959977471595
+      ],
+      "gap_eV": 0.011123651139106457,
+      "insulating": true,
+      "layer_sum_error": -1.0781089562761359e-14
+    },
+    "energy0.5": {
+      "parameters": {
+        "name": "energy0.5",
+        "energy": 0.5,
+        "tlow": 0.01,
+        "textra": 0.12,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        -0.0001414135028771614,
+        0.00012777008723555185,
+        -1.36434156331875e-05
+      ],
+      "gap_eV": 0.016320577397163343,
+      "insulating": true,
+      "layer_sum_error": -8.42204181828593e-15
+    },
+    "site_B": {
+      "parameters": {
+        "name": "site_B",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.12,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 1,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        -0.00041804176065643727,
+        0.0004709764312792168,
+        5.293467062017719e-05
+      ],
+      "gap_eV": 0.01597808688934028,
+      "insulating": true,
+      "layer_sum_error": 2.602315606926864e-15
+    },
+    "all_paths_VC": {
+      "parameters": {
+        "name": "all_paths_VC",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.12,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "VC",
+        "flat": false
+      },
+      "C": [
+        0.0003190721419505653,
+        -2.366161149977298e-05,
+        0.00029541053045566536
+      ],
+      "gap_eV": 0.0222001213578944,
+      "insulating": true,
+      "layer_sum_error": -4.873055084453348e-15
+    }
+  },
+  "scope": "Unfitted KM plus one spinful empty orbital per layer; projected orbital-selective coupling; not a MoSSe downfolding or strain prediction."
+}

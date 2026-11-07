@@ -47,11 +47,14 @@ python scripts/core.py test all
 
 ## 仓库布局
 
+当前探索：[Bilayer KM：完整 AB→BA 路径、自旋调控与层间耦合机制](studies/bsf-nmee-connection/STAGE9_README.md)。
+已有计算证据与适用范围见[简明中文结论](studies/bsf-nmee-connection/docs/BILAYER_KM_FINDINGS_ZH.md)；不作为原论文驱动直流响应或实际材料的额外验收。
+
 ```text
 physics/                  # 当前能力目录与机器清单
 scripts/core.py            # 运行与测试入口
 papers/                   # 五篇独立实现、正文/SM核查、冻结基准
-studies/                  # 历史跨论文探索，不作为核心能力验收
+studies/                  # 模型探索与历史记录，不作为核心能力验收
 integration/              # 旧接口设计与材料输入契约
 outputs/                  # 用户本地运行结果（不入库）
 docs/REUSE.md             # 新任务如何调用

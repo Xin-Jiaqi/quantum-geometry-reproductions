@@ -1,0 +1,11 @@
+panel,series,x,y,source
+a,calculated,0.0,-3.2183812267397305,controlled.json:main_t0.0
+a,calculated,40.0,-12.53540722936028,controlled.json:main_t0.04
+a,calculated,80.0,0.8934894763140688,controlled.json:main_t0.08
+a,calculated,120.0,21.34273088006122,controlled.json:main_t0.12
+a,calculated,160.0,33.73376758978915,controlled.json:main_t0.16
+b,training,120.0,78.2820334572442,main-thresholds.json:training
+b,training,250.0,116.65955790502166,main-thresholds.json:training
+b,training,500.0,183.4910003527645,main-thresholds.json:training
+b,held-out,180.0,95.10300996392306,main-thresholds.json:predictions
+b,held-out,350.0,145.43323935214838,main-thresholds.json:predictions

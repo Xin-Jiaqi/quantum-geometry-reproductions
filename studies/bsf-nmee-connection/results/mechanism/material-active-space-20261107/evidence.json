@@ -1,0 +1,57 @@
+{
+  "tests_passed": 2,
+  "jobs": [
+    {
+      "id": 548243,
+      "exit": 0,
+      "node": "csuper001",
+      "wall_seconds": 23
+    },
+    {
+      "id": 548244,
+      "exit": 0,
+      "node": "csuper001",
+      "wall_seconds": 5
+    },
+    {
+      "id": 548247,
+      "exit": 0,
+      "node": "csuper001",
+      "wall_seconds": 5
+    },
+    {
+      "id": 548272,
+      "exit": 0,
+      "node": "csuper001",
+      "wall_seconds": 7
+    },
+    {
+      "id": 548273,
+      "exit": 0,
+      "node": "csuper001",
+      "wall_seconds": 21
+    }
+  ],
+  "complete_space_sign_check": "original<0, H_block<0, E_block>0 for all six window/cutoff choices",
+  "failed_models_retained": "bare twelve-state and window-dependent twenty-state data are preserved",
+  "hashes": {
+    "toy_coupling_norms.json": "b91aa9d17e66e2ecab575372b2b8820401effe358a77a11400c17a7273838533",
+    "validate20.json": "07454d1388781dbc83f9af583d6981c921beb3b513cac5f27af882ddba3551f3",
+    "material12.json": "00310b60e0d6b339c06c919c628061fcd35aa450bd4d52108ca80dad446b282c",
+    "README.md": "a8992a95b122be0a679542c9a0af295e29801d11c3005f012768b449c3d7c210",
+    "ladder.json": "f22e0b28225b2e18b6ad4ef1067b1c778511c25c21111ca00598ae5b260dd527",
+    "closure.json": "fd5ef2226d3cdacb5202272c1679ecf8de50773f92efdc545e6d593da0942575",
+    "full_vertices.json": "f54c8820b9237906127f3aad76b33ac8d7e3e02b14c5616b14cd284f69776151",
+    "scripts/material12.pbs": "2f395ae0f0e2c7c1749a96a2d135207ebdbb67bf51d31c96dbc9a4b5b98255ea",
+    "scripts/validate20.pbs": "0ac49b2d953a04fa04c903c2354a9e80b9f85e55824aab0c478d195291067b13",
+    "scripts/full_vertices.py": "64c4678ed49da4490f368560213517b794112ca81808a2326f7c1cff2997b73b",
+    "scripts/material_subspaces.py": "bedd039c64bb347f7842531323344d07ba90a83bae0629308aacae76f91e8363",
+    "scripts/validate20.py": "4ed5e44b16158891bd2fd9f7b266dc85f8b5b4c4fee8a9170e9a21a674dd8f9c",
+    "scripts/closure.pbs": "e0b30f46683ae56211196f046bc0307a07aa65b0a0dbdc5e733b4b91650542f2",
+    "scripts/full_vertices.pbs": "ad3fbe06ff39b69073a224064b16c72e01b40054f5134d70c3989c9a16d8fa76",
+    "scripts/material12.py": "78bac0f6614cfd643271b9a2543b533d95475d9dcce6c5c90f2fdc198cf70948",
+    "scripts/closure.py": "9d9dcde5641978a80a905badc02d0d47e50e841ba79b5e623fcc71c54d0d7ebf",
+    "scripts/ladder.pbs": "b98faf9bba4a45b0a8aa70b0f4eb2a9da38f17fe2fb9fce04359c58dd5c03502",
+    "scripts/ladder.py": "3482eeca1bdb4dff4657c9545db27f77d23d7197d7f76d57ed3d3a8db692d819"
+  }
+}
