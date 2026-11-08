@@ -6,5 +6,23 @@
     "em02": "558255.cmspbs1",
     "ep02": "558256.cmspbs1"
   },
-  "status": "submitted; completion not yet established"
+  "status": "all three strain cases and controls complete; original ep02 post-relaxation guard failure recovered without rerelaxation",
+  "mechanism_after_success": {
+    "e000": "558259.cmspbs1",
+    "em02": "558260.cmspbs1",
+    "ep02": "558261.cmspbs1"
+  },
+  "prediction_metric_audit": "prediction_metric_audit.json",
+  "spectrum_after_success": "558270.cmspbs1",
+  "spectrum_two_completed_cases": "558273.cmspbs1",
+  "continuation": {
+    "ep02": "558276.cmspbs1",
+    "mechanism_ep02": "558277.cmspbs1",
+    "spectrum_all": "558278.cmspbs1"
+  },
+  "obsolete_dependencies": [
+    "558261.cmspbs1",
+    "558270.cmspbs1"
+  ],
+  "completed_at": "2026-11-08T18:06:16.501104+08:00"
 }

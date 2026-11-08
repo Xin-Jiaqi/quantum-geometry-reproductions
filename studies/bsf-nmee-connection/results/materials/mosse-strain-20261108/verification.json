@@ -1,0 +1,179 @@
+{
+  "em02": {
+    "strain": -0.02,
+    "pointgroup": "3m",
+    "spacegroup_supercell": "P3m1",
+    "registry": {
+      "max_lateral_displacement_A": 1.7381696560745428e-08,
+      "max_lateral_fractional_change": 3.9987162470112025e-09,
+      "tolerance_A": 1e-05
+    },
+    "matched_isolated_geometry_error_A": 1.7763568394002505e-15,
+    "max_force_components_eVA": {
+      "max_z_force_eVA": 0.008841,
+      "max_inplane_force_eVA": 0.0
+    },
+    "responses": {
+      "A": {
+        "96": {
+          "C": [
+            -0.4018180902675263,
+            -3.3634536392497494,
+            2.961635548982223
+          ],
+          "max_relevant_half_step_change": 5.148560414447445e-06
+        },
+        "112": {
+          "C": [
+            -0.3854251407999509,
+            -2.907879773935226,
+            2.5224546331352755
+          ],
+          "max_relevant_half_step_change": 5.585049117851071e-06
+        }
+      },
+      "mono": {
+        "48": {
+          "C": [
+            19.50202771771554
+          ],
+          "max_relevant_half_step_change": 2.2549909097335785e-05
+        },
+        "56": {
+          "C": [
+            19.679230714399946
+          ],
+          "max_relevant_half_step_change": 2.2707520994202923e-05
+        },
+        "64": {
+          "C": [
+            19.677290452095715
+          ],
+          "max_relevant_half_step_change": 2.2749897251372886e-05
+        }
+      }
+    },
+    "A_zeroB_gap_eV": 0.954272856244553,
+    "A_input_hashes_match_remote": true,
+    "mono_zeroB_gap_eV": 1.5709621365571682,
+    "mono_input_hashes_match_remote": true
+  },
+  "e000": {
+    "strain": 0.0,
+    "pointgroup": "3m",
+    "spacegroup_supercell": "P3m1",
+    "registry": {
+      "max_lateral_displacement_A": 9.666302172805535e-09,
+      "max_lateral_fractional_change": 2.327160634527483e-09,
+      "tolerance_A": 1e-05
+    },
+    "matched_isolated_geometry_error_A": 1.7763568394002505e-15,
+    "max_force_components_eVA": {
+      "max_z_force_eVA": 0.004864,
+      "max_inplane_force_eVA": 0.0
+    },
+    "responses": {
+      "A": {
+        "96": {
+          "C": [
+            -0.2749818411664597,
+            -6.916464905278335,
+            6.641483064111877
+          ],
+          "max_relevant_half_step_change": 1.9523111800090476e-05
+        },
+        "112": {
+          "C": [
+            -0.27083890804381355,
+            -6.193129577381433,
+            5.9222906693376185
+          ],
+          "max_relevant_half_step_change": 1.8980797585221865e-05
+        }
+      },
+      "mono": {
+        "48": {
+          "C": [
+            11.349535819384602
+          ],
+          "max_relevant_half_step_change": 1.450846672668149e-05
+        },
+        "56": {
+          "C": [
+            11.43068074780905
+          ],
+          "max_relevant_half_step_change": 1.4428127723675743e-05
+        },
+        "64": {
+          "C": [
+            11.434122950780148
+          ],
+          "max_relevant_half_step_change": 1.4374574300646259e-05
+        }
+      }
+    },
+    "A_zeroB_gap_eV": 0.80427172922854,
+    "A_input_hashes_match_remote": true,
+    "mono_zeroB_gap_eV": 1.463740811576181,
+    "mono_input_hashes_match_remote": true
+  },
+  "ep02": {
+    "strain": 0.02,
+    "pointgroup": "3m",
+    "spacegroup_supercell": "P3m1",
+    "registry": {
+      "max_lateral_displacement_A": 3.723189470247613e-07,
+      "max_lateral_fractional_change": 6.6482662708367e-08,
+      "tolerance_A": 1e-05
+    },
+    "matched_isolated_geometry_error_A": 3.552713678800501e-15,
+    "max_force_components_eVA": {
+      "max_z_force_eVA": 0.003062,
+      "max_inplane_force_eVA": 1e-06
+    },
+    "responses": {
+      "A": {
+        "96": {
+          "C": [
+            -0.1023139912039599,
+            -7.320180751823965,
+            7.217866760620006
+          ],
+          "max_relevant_half_step_change": 1.9726544337572705e-05
+        },
+        "112": {
+          "C": [
+            -0.07562232287894934,
+            -6.372668763788355,
+            6.297046440909406
+          ],
+          "max_relevant_half_step_change": 1.899948689132458e-05
+        }
+      },
+      "mono": {
+        "48": {
+          "C": [
+            5.29980711403729
+          ],
+          "max_relevant_half_step_change": 5.5952229281786003e-05
+        },
+        "56": {
+          "C": [
+            5.298722442975612
+          ],
+          "max_relevant_half_step_change": 5.59126146670863e-05
+        },
+        "64": {
+          "C": [
+            5.313001057200279
+          ],
+          "max_relevant_half_step_change": 5.585379756389841e-05
+        }
+      }
+    },
+    "A_zeroB_gap_eV": 0.4260334674897006,
+    "A_input_hashes_match_remote": true,
+    "mono_zeroB_gap_eV": 1.0893538567093266,
+    "mono_input_hashes_match_remote": true
+  }
+}

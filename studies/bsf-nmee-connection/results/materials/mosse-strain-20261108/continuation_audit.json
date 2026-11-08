@@ -1,0 +1,7 @@
+{
+  "failed_job": "558256.cmspbs1",
+  "failure": "post-relaxation 1e-8 fractional lateral-coordinate assertion; VASP ionic convergence succeeded",
+  "actual_input": "All T T T flags in all three POSCARs; previous claimed FixCartesian restriction was not written by this ASE exporter",
+  "physical_effect": "all-ionic relaxation retained the same C3v stacking; accepted measured Cartesian drift below 1e-5 A",
+  "change": "physical registry validation, independent symmetry check, continue completed relaxation without rerunning or changing convergence criterion"
+}

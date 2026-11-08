@@ -1,11 +1,11 @@
-"""Fixed-registry biaxial strain: constrained ionic relaxation, independent SCF,
+"""Fixed-cell biaxial strain: all-ion relaxation with a registry check, independent SCF,
 full KS NMEE, and a matched-geometry isolated lower-layer reference. PBS only.
 """
 from pathlib import Path
 import os,socket,json,re,shutil,subprocess,sys,hashlib,time
 import numpy as np
 from ase.io import read,write
-from ase.constraints import FixCartesian
+from geometry_check import validate_fixed_registry
 from analyze import Response
 if not os.getenv('PBS_JOBID') or not os.getenv('PBS_NODEFILE') or socket.gethostname().startswith(('super','cms-ssh')):raise SystemExit('PBS compute only')
 root=Path.cwd();strain=float(os.environ['STRAIN']);label=os.environ['CASE'];assert label in ('em01','e000','ep01','em02','ep02');assert abs(strain)<=.020001
@@ -14,7 +14,7 @@ assert not (base/'progress.json').exists(),'Existing calculation; do not overwri
 old=Path('/work/sunq/xjq/mosse-7269-mechanism-20261104/zero-field-refined-20261107/seed')
 exe='/work/app/VASP6/vasp.6.4.3_wannier90_cpu/bin/vasp_ncl'
 ranks=len(Path(os.environ['PBS_NODEFILE']).read_text().splitlines())
-meta={'case':label,'strain':strain,'job':os.environ['PBS_JOBID'],'node':socket.gethostname(),'relaxation':'PBE-D3(0), SOC; fixed strained cell and C3v lateral registry; all ionic z positions free; force 0.01 eV/A', 'NMEE':'frozen-potential full KS spin-only EB; strained Hamiltonian independently self-consistent','source':str(old)}
+meta={'case':label,'strain':strain,'job':os.environ['PBS_JOBID'],'node':socket.gethostname(),'relaxation':'PBE-D3(0), SOC; fixed strained cell; all ions relaxed; same lateral registry verified within 1e-5 A; force 0.01 eV/A', 'NMEE':'frozen-potential full KS spin-only EB; strained Hamiltonian independently self-consistent','source':str(old)}
 def progress(stage,**kw):
  meta.update(stage=stage,**kw);(base/'progress.json').write_text(json.dumps(meta,indent=2));print('PROGRESS',stage,flush=True)
 def common(nat,nb):return f'''SYSTEM=MoSSe S/S biaxial strain {strain:+.4f}
@@ -58,18 +58,22 @@ def vasp(dest,relax=False):
 at=read(old/'POSCAR');original=at.copy();cell=at.cell.array.copy();cell[:2]*=1+strain;at.set_cell(cell,scale_atoms=True)
 # Vacuum axis is unchanged; center the bilayer so the z=1/2 layer partition is physical.
 at.positions[:,2]+=(at.cell[2,2]/2-(at.positions[:,2].max()+at.positions[:,2].min())/2)
-initial=at.copy();at.set_constraint(FixCartesian(range(len(at)),mask=(True,True,False)))
+initial=at.copy();at.set_constraint()
 relax=base/'relax';inc=common(6,80).replace('EDIFF=1e-9','EDIFF=1e-7')+'NSW=80\nIBRION=2\nISIF=2\nPOTIM=0.25\nEDIFFG=-0.01\n'
+# Preserve the actual run setup: +2% used k-point parallelism in relaxation only.
+# The earlier 0/-2% jobs used v1. Physics settings were identical.
+if label=='ep02': inc=inc.replace('KPAR=1','KPAR=4')
+meta['relax_kpar']=4 if label=='ep02' else 1
 inputs(relax,at,inc);progress('relax_running');out=vasp(relax,True)
 at=read(relax/'CONTCAR');at.set_constraint();at.positions[:,2]+=(at.cell[2,2]/2-(at.positions[:,2].max()+at.positions[:,2].min())/2)
 assert abs(at.cell.array-initial.cell.array).max()<1e-7
-fracdiff=at.get_scaled_positions()[:,:2]-initial.get_scaled_positions()[:,:2];fracdiff-=np.rint(fracdiff);assert abs(fracdiff).max()<1e-8
+registry=validate_fixed_registry(initial,at)
 lower=at.positions[:,2]<at.cell[2,2]/2;assert lower.sum()==3
 try:
  aa=read(relax/'OUTCAR',index=-1);forces=aa.get_forces(apply_constraint=False);maxfz=float(abs(forces[:,2]).max());maxfxy=float(abs(forces[:,:2]).max())
 except Exception as err:raise RuntimeError('Cannot verify relaxed forces') from err
-if maxfz>.012 or maxfxy>.012:raise RuntimeError(f'Constrained residual forces too large: {maxfz},{maxfxy}')
-meta['geometry']={'max_z_force_eVA':maxfz,'max_inplane_force_eVA':maxfxy,'interface_SS_gap_A':float(at.positions[~lower,2].min()-at.positions[lower,2].max()),'cell_A':at.cell.array.tolist(),'positions_A':at.positions.tolist(),'lower_atoms':np.flatnonzero(lower).tolist(),'lateral_shift_residual':float(abs(fracdiff).max())}
+if maxfz>.012 or maxfxy>.012:raise RuntimeError(f'Residual forces too large: {maxfz},{maxfxy}')
+meta['geometry']={'max_z_force_eVA':maxfz,'max_inplane_force_eVA':maxfxy,'interface_SS_gap_A':float(at.positions[~lower,2].min()-at.positions[lower,2].max()),'cell_A':at.cell.array.tolist(),'positions_A':at.positions.tolist(),'lower_atoms':np.flatnonzero(lower).tolist(),'registry_validation':registry}
 progress('relaxed')
 for material in ('A','mono'):
  atoms=at.copy() if material=='A' else at[lower]

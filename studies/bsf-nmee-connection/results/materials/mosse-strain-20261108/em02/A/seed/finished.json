@@ -1,0 +1,11 @@
+{
+  "job": "558255.cmspbs1",
+  "node": "csuper004",
+  "strain": -0.02,
+  "material": "A",
+  "input_sha256": {
+    "POSCAR": "b2533356d22338aa10ed6c2c7de227b275d6e35017940366fbf8039cfadb41ff",
+    "KPOINTS": "548591f8344dd4a50ee990618e473fb072d44e5f0555e8a8f794d67f7b557ea5",
+    "INCAR": "682af6c605f46468b0bd7266abf7627fff469b9ccd8bebc66427916a4094da11"
+  }
+}
