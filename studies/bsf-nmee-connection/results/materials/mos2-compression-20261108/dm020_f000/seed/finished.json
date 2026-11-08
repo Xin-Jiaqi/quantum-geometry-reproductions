@@ -1,0 +1,21 @@
+{
+  "case": "dm020_f000",
+  "delta_d_A": -0.2,
+  "physical_Fz_Vnm": 0.0,
+  "VASP_EFIELD_VA": -0.0,
+  "job": "558196.cmspbs1",
+  "node": "csuper005",
+  "initial_charge_only": "/work/sunq/xjq/mos2-interface-20261108/A/seed/CHGCAR",
+  "lower_atoms_zero_based": [
+    0,
+    2,
+    3
+  ],
+  "interface_gap_A": 2.838294450000001,
+  "model": "full KS static spin-only EB response; gate SCF, probes frozen potential",
+  "input_sha256": {
+    "POSCAR": "e4841dabaa96056cef57ed4bb17e5d49b5a6bf52708f94e68556752c3778241f",
+    "INCAR": "ade6054da3abee30b752bd406c4f15b8fbeb8bd447ed07716c593033b2360499",
+    "KPOINTS": "f62d4cd12ab931acad3cff275021829fc9e53e3deaff97c2ae62ceabb938699d"
+  }
+}

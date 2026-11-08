@@ -1,0 +1,56 @@
+[
+  {
+    "case": "d000_f000",
+    "delta_d_A": 0,
+    "Fz_Vnm": 0,
+    "seed": "/work/sunq/xjq/mos2-interface-20261108/A/seed"
+  },
+  {
+    "case": "d000_fm050",
+    "delta_d_A": 0,
+    "Fz_Vnm": -0.5,
+    "seed": "/work/sunq/xjq/mos2-gate-spacing-20261108/d000_fm050/seed"
+  },
+  {
+    "case": "dm010_f000",
+    "delta_d_A": -0.1,
+    "Fz_Vnm": 0,
+    "seed": "/work/sunq/xjq/mos2-compression-20261108/dm010_f000/seed"
+  },
+  {
+    "case": "dm010_fm050",
+    "delta_d_A": -0.1,
+    "Fz_Vnm": -0.5,
+    "seed": "/work/sunq/xjq/mos2-compression-20261108/dm010_fm050/seed"
+  },
+  {
+    "case": "dm020_f000",
+    "delta_d_A": -0.2,
+    "Fz_Vnm": 0,
+    "seed": "/work/sunq/xjq/mos2-compression-20261108/dm020_f000/seed"
+  },
+  {
+    "case": "dm020_fm050",
+    "delta_d_A": -0.2,
+    "Fz_Vnm": -0.5,
+    "seed": "/work/sunq/xjq/mos2-compression-20261108/dm020_fm050/seed"
+  },
+  {
+    "case": "d000_fm032",
+    "delta_d_A": 0,
+    "Fz_Vnm": -0.32,
+    "seed": "/work/sunq/xjq/mos2-compression-20261108/d000_fm032/seed"
+  },
+  {
+    "case": "dm010_fm032",
+    "delta_d_A": -0.1,
+    "Fz_Vnm": -0.32,
+    "seed": "/work/sunq/xjq/mos2-compression-20261108/dm010_fm032/seed"
+  },
+  {
+    "case": "dm020_fm032",
+    "delta_d_A": -0.2,
+    "Fz_Vnm": -0.32,
+    "seed": "/work/sunq/xjq/mos2-compression-20261108/dm020_fm032/seed"
+  }
+]
