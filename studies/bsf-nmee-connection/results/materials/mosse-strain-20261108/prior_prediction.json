@@ -1,0 +1,26 @@
+{
+  "sealed_at": "2026-11-08T15:56:44.653399+08:00",
+  "before_strained_DFT": true,
+  "model_job": "558253.cmspbs1",
+  "prediction": "At fixed vertical coordinates and frozen intralayer states, +2% tensile weakens the lower negative response slightly; -2% compression strengthens it slightly. No small-strain sign reversal is predicted by this geometric hopping-only model.",
+  "C_lower_96_zero": -6.601856954,
+  "C_lower_96_tension_range": [
+    -6.444860179,
+    -6.40735525
+  ],
+  "C_lower_96_compression_range": [
+    -6.715340304,
+    -6.676955396
+  ],
+  "selected_strains": [
+    -0.02,
+    0,
+    0.02
+  ],
+  "model_limits": [
+    "Uncalibrated hopping-distance exponents 3 and 5, not empirical deformation potentials",
+    "Vertical relaxation and intralayer electronic changes excluded; no accurate threshold prediction",
+    "112-state B-even artifact remains; 96/112 agree on qualitative direction"
+  ],
+  "verification": "Same S/S registry, fixed strained lateral cell, PBE-D3(0)+SOC ionic z relaxation. Atoms lie on C3v-constrained lateral sites; inspect residual in-plane forces. Independently self-consistent full material and extracted lower monolayer at identical intralayer geometry. Smooth screened electrostatic reference; examine each layer separately. Stop if insulating regime or registry lost."
+}

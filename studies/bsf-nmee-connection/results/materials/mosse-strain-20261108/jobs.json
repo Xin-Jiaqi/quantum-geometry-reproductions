@@ -1,0 +1,10 @@
+{
+  "submitted_at": "2026-11-08T16:01:19.855558+08:00",
+  "prediction": "558253.cmspbs1",
+  "strain": {
+    "e000": "558254.cmspbs1",
+    "em02": "558255.cmspbs1",
+    "ep02": "558256.cmspbs1"
+  },
+  "status": "submitted; completion not yet established"
+}

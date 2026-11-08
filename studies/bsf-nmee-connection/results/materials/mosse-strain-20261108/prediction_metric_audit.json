@@ -1,0 +1,116 @@
+{
+  "recorded_at": "2026-11-08T16:06:13.108213+08:00",
+  "no_strained_DFT_response_seen": true,
+  "reason": "With fixed h and fractional-k vertices, in-plane derivative scales by (1+strain), density factor by 1/(1+strain)^2. Hence metric-only C scales by 1/(1+strain). Remove this trivial factor to assess mixing.",
+  "conclusion": "Most of the small tensile weakening comes from the geometric response normalization. The hopping-only change is small and not monotonic in strain; no robust strong tensile preference or attainable flip threshold is established. Keep \u00b12% as balanced tests, not a predicted switch.",
+  "rows": [
+    {
+      "nb": 96,
+      "power": 3,
+      "strain": -0.02,
+      "C_lower": -6.715340303783007,
+      "metric_only_C": -6.736588728638309,
+      "metric_normalized_C": -6.581033497707347,
+      "normalized_change": 0.020823456358195713
+    },
+    {
+      "nb": 96,
+      "power": 3,
+      "strain": 0,
+      "C_lower": -6.601856954065543,
+      "metric_only_C": -6.601856954065543,
+      "metric_normalized_C": -6.601856954065543,
+      "normalized_change": 0.0
+    },
+    {
+      "nb": 96,
+      "power": 3,
+      "strain": 0.02,
+      "C_lower": -6.444860178591025,
+      "metric_only_C": -6.47240877849563,
+      "metric_normalized_C": -6.573757382162846,
+      "normalized_change": 0.02809957190269685
+    },
+    {
+      "nb": 96,
+      "power": 5,
+      "strain": -0.02,
+      "C_lower": -6.676955396357216,
+      "metric_only_C": -6.736588728638309,
+      "metric_normalized_C": -6.5434162884300715,
+      "normalized_change": 0.058440665635471234
+    },
+    {
+      "nb": 96,
+      "power": 5,
+      "strain": 0,
+      "C_lower": -6.601856954065543,
+      "metric_only_C": -6.601856954065543,
+      "metric_normalized_C": -6.601856954065543,
+      "normalized_change": 0.0
+    },
+    {
+      "nb": 96,
+      "power": 5,
+      "strain": 0.02,
+      "C_lower": -6.4073552501969635,
+      "metric_only_C": -6.47240877849563,
+      "metric_normalized_C": -6.535502355200903,
+      "normalized_change": 0.06635459886464012
+    },
+    {
+      "nb": 112,
+      "power": 3,
+      "strain": -0.02,
+      "C_lower": -5.935248519650359,
+      "metric_only_C": -5.963059829371957,
+      "metric_normalized_C": -5.816543549257352,
+      "normalized_change": 0.02725508352716588
+    },
+    {
+      "nb": 112,
+      "power": 3,
+      "strain": 0,
+      "C_lower": -5.843798632784518,
+      "metric_only_C": -5.843798632784518,
+      "metric_normalized_C": -5.843798632784518,
+      "normalized_change": 0.0
+    },
+    {
+      "nb": 112,
+      "power": 3,
+      "strain": 0.02,
+      "C_lower": -5.707716540672302,
+      "metric_only_C": -5.729214345867174,
+      "metric_normalized_C": -5.821870871485748,
+      "normalized_change": 0.02192776129876961
+    },
+    {
+      "nb": 112,
+      "power": 5,
+      "strain": -0.02,
+      "C_lower": -5.892318813542451,
+      "metric_only_C": -5.963059829371957,
+      "metric_normalized_C": -5.774472437271601,
+      "normalized_change": 0.0693261955129163
+    },
+    {
+      "nb": 112,
+      "power": 5,
+      "strain": 0,
+      "C_lower": -5.843798632784518,
+      "metric_only_C": -5.843798632784518,
+      "metric_normalized_C": -5.843798632784518,
+      "normalized_change": 0.0
+    },
+    {
+      "nb": 112,
+      "power": 5,
+      "strain": 0.02,
+      "C_lower": -5.674115148365433,
+      "metric_only_C": -5.729214345867174,
+      "metric_normalized_C": -5.787597451332742,
+      "normalized_change": 0.056201181451775994
+    }
+  ]
+}
