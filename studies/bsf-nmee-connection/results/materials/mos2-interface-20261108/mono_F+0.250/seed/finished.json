@@ -1,0 +1,11 @@
+{
+  "structure": "mono",
+  "job": "558146.cmspbs1",
+  "node": "csuper001",
+  "bands": 64,
+  "occupied": 24,
+  "electrostatic_potential": "ionic+Hartree, LVHAR",
+  "zero_magnetic_field": true,
+  "gate_physical_Vnm": 0.25,
+  "dipole_corrected": true
+}

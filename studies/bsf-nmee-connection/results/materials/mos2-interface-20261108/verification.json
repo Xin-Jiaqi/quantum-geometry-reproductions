@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-08T10:31:23.782933+08:00",
+  "completed_jobs": 9,
+  "response_records_checked": 124,
+  "mixing_reversal_all_six_windows": true,
+  "spectral_sign_follows_states_all_six_windows": true,
+  "occupied_empty_sufficient_all_six_windows": true,
+  "not_unique_channel": true,
+  "smooth_electrostatic_lower_positive_all_controls": true,
+  "calibration_screened_field_correct_sign_and_order": true,
+  "absolute_amplitudes_converged": false,
+  "exact_electrostatic_hybridization_partition": false,
+  "KM_identical_microscopic_channel": false,
+  "min_gap_across_records_eV": 1.1386007883275053,
+  "figure_source_rows": 42,
+  "figure_visual_inspection": "labels and axes clear; all chosen window values shown; sensitivity not statistical uncertainty"
+}

@@ -5,7 +5,10 @@ if not os.getenv('PBS_JOBID') or not os.getenv('PBS_NODEFILE') or socket.gethost
     raise SystemExit('PBS compute allocation required')
 root=Path.cwd(); label=os.environ['STRUCTURE']; assert label in ('A','mono')
 old=Path('/work/sunq/xjq/mos2-nmee-20261107')
-base=root/label; base.mkdir(exist_ok=True); d=base/'seed'; d.mkdir(exist_ok=True)
+gate=float(os.environ.get('GATE_VNM','0'));case=label if gate==0 else f'{label}_F{gate:+.3f}'
+base=root/case; base.mkdir(exist_ok=True); d=base/'seed'; d.mkdir(exist_ok=True)
+if (d/'finished.json').exists():
+    raise SystemExit('Reference already finished; never overwrite')
 nb,nat,nwann,nocc=(112,6,44,48) if label=='A' else (64,3,22,24)
 for name in ('POSCAR','POTCAR','KPOINTS','CHGCAR'):
     shutil.copyfile(old/f'{label}_F+0.000_k6_e0.004_b0.016/start'/name,d/name)
@@ -36,7 +39,7 @@ ICHARG=1
 LDIPOL=T
 IDIPOL=3
 DIPOL=0.5 0.5 0.5
-EFIELD=0
+EFIELD={-gate/10:.10f}
 LVHAR=T
 NUM_WANN={nwann}
 LWANNIER90=T
@@ -48,8 +51,6 @@ S:p
 end projections
 "
 '''
-if (d/'finished.json').exists():
-    raise SystemExit('Reference already finished; never overwrite')
 (d/'INCAR').write_text(inc)
 ranks=len(Path(os.environ['PBS_NODEFILE']).read_text().splitlines())
 with (d/'vasp.log').open('w') as f:
@@ -62,5 +63,5 @@ for name in ('wannier90.mmn','WAVECAR','LOCPOT','CHGCAR'):
     assert (d/name).stat().st_size>1000,name
 (d/'finished.json').write_text(json.dumps({'structure':label,'job':os.environ['PBS_JOBID'],
     'node':socket.gethostname(),'bands':nb,'occupied':nocc,'electrostatic_potential':'ionic+Hartree, LVHAR',
-    'zero_field':True,'dipole_corrected':True},indent=2))
+    'zero_magnetic_field':True,'gate_physical_Vnm':gate,'dipole_corrected':True},indent=2))
 print('REFERENCE_DONE',label,flush=True)

@@ -1,0 +1,12 @@
+{
+  "lower": {
+    "linear_fit_physical_Vnm": -0.05561536140438572,
+    "deltaV_S_planes_eV": -0.012624569450200167,
+    "scope": "plane-average interface potential, independently calculated, not fitted to response"
+  },
+  "upper": {
+    "linear_fit_physical_Vnm": 0.07045495474302403,
+    "deltaV_S_planes_eV": 0.018022919294055893,
+    "scope": "plane-average interface potential, independently calculated, not fitted to response"
+  }
+}
