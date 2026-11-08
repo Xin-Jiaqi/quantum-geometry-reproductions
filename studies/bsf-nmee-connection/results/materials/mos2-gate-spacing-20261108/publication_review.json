@@ -1,0 +1,11 @@
+{
+  "worklog_mirrors_identical": true,
+  "old_formula_typo_corrected": true,
+  "main_manuscript_unchanged": true,
+  "figure_source_rows": 30,
+  "figure_points": 5,
+  "static_preflight": "13 pass, 1 warn (PNG preview rather than TIFF; editable PDF/SVG provided), 0 fail",
+  "visual_review": "Three panels readable; layer/net separation, zero lines, legends and all five actual points inspected; no cropping or fitted root.",
+  "immutable_input_whitespace": "ASE-generated POSCAR header trailing blanks retained byte-for-byte to preserve input hashes; whitespace check excludes only these four original structure files.",
+  "scientific_code_review": "PBS-only scientific execution, distinct case isolation, original engine unchanged, positive gap checks, separate net/layer outputs, all completed points retained; no unresolved implementation blocker."
+}
