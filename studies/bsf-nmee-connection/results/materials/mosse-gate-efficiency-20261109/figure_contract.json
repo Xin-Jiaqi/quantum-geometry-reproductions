@@ -1,0 +1,22 @@
+{
+  "conclusion": "Moderate net gate-sensitivity enhancement, dominated by upper-layer response.",
+  "archetype": "comparison plus layer-resolved mechanism control",
+  "data": [
+    "curves.csv",
+    "slopes.csv"
+  ],
+  "no_fitting": true,
+  "panel_a": "all computed increments; duplicate full curves removed; high-band-count representative emphasized",
+  "panel_b": "signed central derivatives at delta F=0.025; marker midpoint and span of settings, not error bars",
+  "no_statistical_interpretation": true,
+  "dimensions_mm": [
+    183,
+    73
+  ],
+  "field_scope": "one-electron imposed slope, not calibrated external voltage",
+  "exports": [
+    "PDF",
+    "SVG",
+    "PNG 600 dpi"
+  ]
+}

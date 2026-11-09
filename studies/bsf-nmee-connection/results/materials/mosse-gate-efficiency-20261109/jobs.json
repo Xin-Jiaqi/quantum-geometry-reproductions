@@ -1,0 +1,25 @@
+{
+  "submitted_at": "2026-11-09T10:54:37.790593+08:00",
+  "job": "559753.cmspbs1",
+  "workdir": "/work/sunq/xjq/mosse-gate-efficiency-20261109",
+  "status": "completed; both Exit_status=0",
+  "no_new_DFT": true,
+  "jobs": [
+    {
+      "id": "559753.cmspbs1",
+      "node": "csuper001",
+      "queue": "DP_002",
+      "exit_status": 0,
+      "walltime": "00:03:19"
+    },
+    {
+      "id": "559757.cmspbs1",
+      "node": "csuper001",
+      "queue": "DP_002",
+      "exit_status": 0,
+      "walltime": "00:00:50"
+    }
+  ],
+  "pending_jobs": [],
+  "completed_recorded_at": "2026-11-09T11:10:45.503802+08:00"
+}
