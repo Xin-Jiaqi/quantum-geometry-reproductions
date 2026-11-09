@@ -1,8 +1,8 @@
 # InSe homobilayer: interface response and screened electrical control
 
-The seven preplanned gate-SCF states and the electrostatic/channel controls
-are complete. An independent 8x8 zero-gate check is reported in `mesh_summary.json`
-when available. These are exploratory material results, not final amplitude
+The seven preplanned gate-SCF states, electrostatic/channel controls, independent
+8x8 zero-gate SCF, and Gamma character diagnostic are complete. All allocations
+have ended. These are exploratory material results, not final amplitude
 convergence or experimental validation.
 
 ## Physics result
@@ -72,6 +72,15 @@ strongly compensate. They motivate the independent mesh check; they must not
 be advertised as a giant net signal. Gate-slope convergence is separate from
 zero-gate C convergence.
 
+The independent 8x8 SCF retains the layer signs and gives
+(-1061.649, +1060.758) for lower/upper C at 160 bands, changes of only
+0.81%/0.86% relative to 6x6. The small net C changes from -1.369 to -0.891,
+about **35%**. The sampled gap is 0.900 eV. Thus opposite local responses are
+stable in this check, whereas their small remainder is quantitatively more
+sensitive. The 1.4-1.6 gate-gain range is an initial **6x6 estimate across band
+cutoffs**, not a mesh-converged enhancement interval. Finite-gate 8x8 states
+have not been calculated. See `mesh_summary.json` for all cutoffs and maps.
+
 The symmetric +/-B derivative is used throughout. Halving its step changes
 the large layer C by about 0.014 or less at the representative full-space
 cutoff, much less than its magnitude. Nevertheless, finite-space B-even
@@ -123,8 +132,15 @@ The initial momentum map concentrates near Gamma. At radius 0.4 Gamma-K,
 seven of 36 points carry about 93% of the absolute lower-C integrand and 86%
 of the absolute net-G integrand. Signed regional sums can exceed the net
 because other regions cancel them. These percentages are mesh-dependent.
-Orbital characters, when archived in `orbital_snapshot.json`, are descriptive
-projected weights; they do not prove a unique pz or band-edge NMEE mechanism.
+The 8x8 check retains Gamma concentration: the same radius contains about
+92% of the absolute layer-C integrand (13 of 64 points). The Gamma character
+diagnostic finds the top valence pair (bands 75/76) to have 74-77% Se pz weight
+in the selected orthonormal trial representation; the lowest empty pair
+(77/78) has about 53% In s and 45% Se pz. Nearby occupied pairs 69/70 and 73/74,
+about 0.63-0.69 eV below the sampled VBM, are predominantly Se px/py.
+These support the choice of an s,p orbital contrast to the TMDs, but are
+descriptive projected weights, not a unique pz or band-edge NMEE mechanism.
+The directional channel intervention includes more states than these pairs.
 
 ## Relevance to the PRL candidate
 
@@ -158,7 +174,8 @@ background, not by themselves the new result claimed here.
 - `summary.json`, `points.csv`, `slopes.csv`: initial seven-state comparison.
 - `reference.json`, `planar.json`, `reference_summary.json`: electrostatic reference.
 - `channels.json`, `overlaps.json`, `channel_summary.json`: common-channel controls.
-- `A0_mesh8/result.json`, `mesh_summary.json`: separate zero-gate mesh audit when collected.
+- `A0_mesh8/result.json`, `mesh_summary.json`: separate zero-gate mesh audit.
+- `orbital_snapshot.json`, `orbital_summary.json`: Gamma pair characters and representation ranges.
 - `inse_gate_comparison.pdf/.svg/.png`, `figure_source.csv`, `figure_qa.md`:
   discussion figure, source data, caption, and numerical-scope caveats.
 - `jobs.json`: scheduler provenance, including the intentionally interrupted

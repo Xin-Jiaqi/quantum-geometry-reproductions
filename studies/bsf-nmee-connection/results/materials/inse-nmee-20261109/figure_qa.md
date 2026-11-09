@@ -16,7 +16,10 @@ statistical confidence intervals. Lines connect the three calculated fields.
 
 The figure uses the 6x6 gate-SCF exploration. The independent 8x8 zero-gate
 check is reported separately and cannot establish convergence of the gate
-sensitivity. No giant-response or final device-performance claim is made.
+sensitivity. That check changes individual layer C by less than 1% but the
+small compensated net C by about 35%; the plotted gate-gain values therefore
+remain preliminary, not a converged quantitative claim. No giant-response or
+final device-performance claim is made.
 
 Source data: figure_source.csv; numerical records and their processing are
 listed in figure_contract.json. The MoSSe comparison is retained in

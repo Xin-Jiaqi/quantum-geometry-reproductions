@@ -105,3 +105,13 @@ stopped during the newly started Am to stay within its allocation. Its Am
 data are not used. Fresh Am/Ap completed in 560139/560116. The reference and
 channel controls completed in 560207. The independent 8x8 A0 check and a small
 Gamma orbital-character diagnostic have separate allocations in jobs.json.
+
+## Independent check outcome
+
+The 8x8 zero-gate SCF (560208) completes normally: the two layer C values
+change by less than 1%, their signs persist, and the small net remainder
+changes by about 35%. Consequently, retain the local-response finding but
+do not present the 6x6 gate-gain estimate as mesh-converged. Gamma concentration
+persists. The separate Gamma character diagnostic (560244) also completes;
+Se pz dominated top valence and In s / Se pz lowest empty states support the
+orbital premise, without establishing a one-pair response mechanism.
