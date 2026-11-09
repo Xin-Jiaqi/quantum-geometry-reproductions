@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the five verified paper recipes without merging their physical conventions."""
+"""Run the independently verified paper recipes without merging their physical conventions."""
 from __future__ import annotations
 import argparse
 import json
