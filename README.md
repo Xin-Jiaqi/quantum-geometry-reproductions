@@ -2,7 +2,7 @@
 
 [![Core regression](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/workflows/core-capabilities.yml/badge.svg)](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/workflows/core-capabilities.yml)
 
-从论文中提取、独立核验并复用量子几何与输运计算。当前 **5 个核心模块可运行**，每个都有明确的输入、频率/单位约定、独立对照和可重算例子。
+从论文中提取、独立核验并复用量子几何与输运计算。当前 **6 个核心模块可运行**，每个都有明确的输入、频率/单位约定、独立对照和可重算例子。
 
 `MODEL_READY` 表示指定模型与响应协议可用；原图完全复现、通用材料能力和源文争议分别记录。本仓库不是作者官方实现。
 
@@ -17,6 +17,7 @@
 | 平面Hall与磁非线性Hall | [Magnetotransport](papers/xiang-2026-quantum-geometric-map/README.md) | 指定模型的spin/orbital PHE、MNHE及多带几何 | 未完成一般多带轨道位置修正 |
 | Zeeman几何、Dirac通量及互易响应 | [Curvature–Flux](papers/cui-2026-curvature-flux-zeeman-qgt/README.md) | 四类几何、绕数/通量、带间GHE/KME | Table I全表、完整金属耗散未核准 |
 | 交变磁场诱导传导/位移电流 | [IGMC](papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/CORE_ACCESS.md) | Rashba/Dirac、非共振响应、SI换算 | 原Fig2(d)幅度来源仍未决 |
+| 交错磁体磁性光伏：线偏振 MIC | [Ezawa BPVE](papers/ezawa-2025-altermagnet-bpve/README.md) | quantum metric × 带间速度差、磁序反号、Eq. (17) 数值基准 | 仅两带模型；Eq. (19) 存待核查差异；无 Wannier 生产链路 |
 
 **能力详情与API：** [能力目录](physics/README.md) · [机器可读清单](physics/capabilities.json)
 **论文覆盖：** [王健组近期文献与缺口](docs/LITERATURE_COVERAGE.md)——五篇核心接入不代表近期PRL/PRB全部覆盖。
@@ -34,7 +35,7 @@ python scripts/core.py run igmc --output outputs/igmc.json
 python scripts/core.py test igmc
 ```
 
-模块ID依次为 `nmee`、`spin`、`magnetotransport`、`curvature-flux`、`igmc`。
+模块ID依次为 `nmee`、`spin`、`magnetotransport`、`curvature-flux`、`igmc`、`altermagnet-bpve`。
 
 ```bash
 python scripts/core.py run all --output outputs/all.json
@@ -50,7 +51,7 @@ python scripts/core.py test all
 ```text
 physics/                  # 当前能力目录与机器清单
 scripts/core.py            # 运行与测试入口
-papers/                   # 五篇独立实现、正文/SM核查、冻结基准
+papers/                   # 六篇独立实现、正文/SM核查、冻结基准
 studies/                  # 历史跨论文探索，不作为核心能力验收
 integration/              # 旧接口设计与材料输入契约
 outputs/                  # 用户本地运行结果（不入库）

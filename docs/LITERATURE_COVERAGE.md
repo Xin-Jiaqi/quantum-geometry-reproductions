@@ -59,3 +59,9 @@
 5. 五篇已接入工作的正文+SM/附录及独立物理核验沿用本轮逐篇证据。新发现条目这次完成的是书目/核心观测量与代码覆盖核对，**尚未完成其全文和SM的逐式审计**，不能将目录登记称为新能力。
 
 机器清单：[literature-coverage.json](../physics/literature-coverage.json)。当前判断不依赖测试数量或笼统的PARTIAL标签；后续若选某篇接入，只需为其核心物理建立独立入口与验收，不预先扩成材料平台。
+
+## Added: Ezawa 2025 — Bulk photovoltaic effects in altermagnets
+
+- `papers/ezawa-2025-altermagnet-bpve` (core ID `altermagnet-bpve`) provides a validated **model-only** symmetric/linear-polarization magnetic-injection (`x;xx`) channel from the two-band quantum metric and velocity difference. Eq. (17), magnetic reversal, Pauli blocking and an independent broadened Cartesian integral have been tested.
+- This does **not** extend the maintained antisymmetric/circular injection kernel in the separate Wannier NLO workflow. Magnetic point-group selection, multi-band Wannier position matrices, calibrated SI units, magnetic shift current and electron-hole interactions remain unimplemented.
+- The published Eq. (19) `x;yy` differs from direct Eq. (7)/(9) calculation; retain as an explicit OPEN_SOURCE_DISCREPANCY, not a fitted correction.
