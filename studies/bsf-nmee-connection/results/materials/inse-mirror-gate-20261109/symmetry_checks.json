@@ -1,0 +1,14 @@
+{
+  "operation_count": 12,
+  "tensor": "s_i=Gamma_ijk E_j B_k; two axial factors cancel det(R)^2 under spatial operations",
+  "invariant_dimension": 1,
+  "allowed_indices_in_actual_cartesian_frame": [
+    "xxy",
+    "xyx",
+    "yxx",
+    "yyy"
+  ],
+  "xxz_allowed": false,
+  "layer_force_argument": "C3 leaves F_z invariant; no nonzero invariant in-plane layer force vector. This is not a positive-curvature or switching-threshold test.",
+  "FQFE_scope": "An isolated D3h endpoint keeps xxz forbidden at zero gate. Allowed all-in-plane Gamma components reverse under an inversion-related endpoint. A vertical gate cannot be inferred to select these endpoints; FQFE changes internal sublattice registry, not interlayer displacement."
+}
