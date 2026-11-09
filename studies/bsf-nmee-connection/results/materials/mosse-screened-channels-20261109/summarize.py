@@ -19,7 +19,7 @@ for (nb,frozen,channel,alpha),rows in groups.items():
     r['upper_absolute_share']=float(abs(g[2])/(abs(g[1])+abs(g[2])))
     r['min_gap_eV']=min(v['gap_eV'] for v in rows.values());table.append(r)
 with (root/'summary.csv').open('w') as f:
-    writer=csv.DictWriter(f,fieldnames=list(table[0]));writer.writeheader();writer.writerows(table)
+    writer=csv.DictWriter(f,fieldnames=list(table[0]),lineterminator='\n');writer.writeheader();writer.writerows(table)
 full_by_case={}
 for case in ('fm010','fp010'):
     old=json.loads((root.parent/'mosse-gate-scf-20261109'/case/'result.json').read_text())
