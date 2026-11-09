@@ -27,7 +27,7 @@ jobs:
       fail-fast: false
       matrix:
         python: ['3.11', '3.12']
-        capability: [nmee, spin, magnetotransport, curvature-flux, igmc, altermagnet-bpve, orbital-igmc]
+        capability: [nmee, spin, magnetotransport, curvature-flux, igmc, altermagnet-bpve, imhe, orbital-igmc]
     env:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'

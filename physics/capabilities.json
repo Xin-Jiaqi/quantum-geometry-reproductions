@@ -145,6 +145,33 @@
       "expected_tests": 8
     },
     {
+      "id": "imhe",
+      "name": "Layer-orbital IMHE",
+      "directory": "papers/das-2026-layer-orbital-imhe",
+      "source": "https://arxiv.org/abs/2604.20249v1",
+      "citation": "arXiv:2604.20249v1 (2026)",
+      "status": "MODEL_READY",
+      "capability": "Declared fixed-reference orbital-moment Hamiltonian: multiband mixed Berry/energy derivatives and geometric Hall/band-drift coefficients",
+      "pythonpath": "src",
+      "example": "scripts/reproduce_core.py",
+      "documentation": "README.md",
+      "apis": [
+        "imhe_lab.Fields",
+        "imhe_lab.geometry",
+        "imhe_lab.orbital_moment",
+        "imhe_lab.transport",
+        "imhe_lab.exact_transport"
+      ],
+      "units": "e=hbar=1; dimensionless k; explicit d2k/(2pi)^2; per probe u*b, drift per tau; no SI calibration",
+      "limits": [
+        "Independent periodic three-band model, not source R5G figures or a nonquantized insulating plateau",
+        "Fixed orthonormal basis and nondegenerate bands; reference A5 moment frozen under probes; explicit C required for extra mixed contacts",
+        "Full refers only to stated Berry-current and band-drift functionals; no Lorentz force, phase-space drift correction or disorder vertices",
+        "A4 sign and A8-like second-order-state truncation conflicts are documented; no forced source normalization"
+      ],
+      "expected_tests": 29
+    },
+    {
       "id": "orbital-igmc",
       "name": "Orbital IGMC",
       "directory": "papers/ghorai-2026-orbital-igmc",
