@@ -4,9 +4,12 @@
     "mono": "560010.cmspbs1",
     "bilayer": "560011.cmspbs1",
     "positive_bilayer_gate": "560116.cmspbs1",
-    "negative_bilayer_gate": "560139.cmspbs1"
+    "negative_bilayer_gate": "560139.cmspbs1",
+    "controls": "560207.cmspbs1",
+    "mesh8": "560208.cmspbs1",
+    "orbital_character": "560244.cmspbs1"
   },
-  "status": "mono0/monom/monop/A0/B0 complete; Am and Ap delegated to individual jobs",
+  "status": "All seven primary points and electrostatic/channel controls complete; mesh8 running and orbital character queued.",
   "remote": "/work/sunq/xjq/inse-nmee-20261109",
   "scope": "7 fixed-geometry neutral SOC gate-SCF points, full-KS EB response; no relaxation",
   "queue": "DP_002",
@@ -16,12 +19,38 @@
   "storage": "work user used6552337912KiB at preflight; user caps unspecified; group/project cap unknown",
   "fee": "user states free; not independently audited",
   "frontend_science": false,
-  "last_observed_China": "2026-11-09T17:59:43.507591+08:00",
-  "followup": "One independent 8x8 zero-gate SCF planned because of unexpectedly large compensated layer response; not yet submitted",
+  "last_observed_China": "2026-11-09T19:04:16.149721+08:00",
+  "followup": "Separate 8x8 zero-gate SCF and Gamma character check; no new physical parameter scan.",
   "original_bilayer_allocation": {
     "id": "560011.cmspbs1",
     "exit_status": 271,
     "walltime": "01:26:38",
     "reason": "After A0 and B0 finished, stop just-started Am to avoid the 2h batch limit. Partial Am preserved at Am_interrupted_560011, never used as a result; fresh Am allocated independently."
+  },
+  "completed": {
+    "560010.cmspbs1": {
+      "exit_status": 0,
+      "walltime": "01:07:05",
+      "node": "csuper001"
+    },
+    "560116.cmspbs1": {
+      "exit_status": 0,
+      "walltime": "00:43:16",
+      "node": "csuper001"
+    },
+    "560139.cmspbs1": {
+      "exit_status": 0,
+      "walltime": "00:27:27",
+      "node": "csuper002"
+    },
+    "560207.cmspbs1": {
+      "exit_status": 0,
+      "walltime": "00:06:00",
+      "node": "csuper001"
+    }
+  },
+  "pending": {
+    "560208.cmspbs1": "running on csuper002",
+    "560244.cmspbs1": "queued"
   }
 }

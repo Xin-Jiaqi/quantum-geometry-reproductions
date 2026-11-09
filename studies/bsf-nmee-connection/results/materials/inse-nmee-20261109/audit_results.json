@@ -1,0 +1,9 @@
+{
+  "seven_points_complete": true,
+  "all_science_nodes_are_compute_nodes": true,
+  "net_equals_layer_sum_max_error": 2.2737367544323206e-13,
+  "full_channel_restoration_max_error": 0.0,
+  "minimum_probe_gap_eV": 0.9328119686029228,
+  "python_sources_parse": true,
+  "scope": "Data/provenance consistency; not a proof of physical or mesh convergence."
+}

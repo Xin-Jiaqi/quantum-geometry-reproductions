@@ -1,0 +1,32 @@
+{
+  "purpose": "Exploratory material-physics report, not a final convergence/submission claim",
+  "claim": "Similar net electrical gains in MoSSe and InSe conceal very different layer-resolved changes: InSe has large opposing increments, while MoSSe is predominantly changed on its upper layer.",
+  "question": "Does interface mixing link the rewritten layer response to electrical control in a different orbital system?",
+  "archetype": "Measured-control comparison plus a Hamiltonian intervention",
+  "panels": {
+    "a": "Net gate-induced change: screened bilayer, isolated pair, specified electrostatic reference",
+    "b": "Signed lower/upper changes under the same actual gate, compared with a matched isolated layer",
+    "c": "Signed layer contributions to net gain, normalized by the matched isolated-pair gate slope: isolated reference, MoSSe, InSe. Net shown as their sum."
+  },
+  "backend": "Python/matplotlib only",
+  "sources": [
+    "summary.json",
+    "reference.json",
+    "reference_summary.json",
+    "channels.json",
+    "channel_summary.json",
+    "mosse_comparison.json"
+  ],
+  "statistics": "Deterministic calculations, not samples. No statistical errors/p-values. Alternate cutoffs/windows shown as sensitivity, never confidence intervals.",
+  "scope": "Fixed geometry, neutral insulating Ex Bz Pauli-spin response. Gate-SCF; subsequent probe and mixing controls use frozen screened potentials. This figure compares actual gate-SCF data and specified electrostatic reference; channel-intervention details remain in the accompanying results table.",
+  "exports": [
+    "PNG",
+    "PDF",
+    "SVG",
+    "figure_source.csv"
+  ],
+  "width_mm": 183,
+  "height_mm": 67,
+  "fonts": "Arial; labels 8pt, ticks >=7pt; editable vector text",
+  "final_qa": "source validator plus local visual inspection; denser zero-gate check must be reported separately"
+}

@@ -1,0 +1,88 @@
+panel,series,setting,x,y,representative
+a,Bilayer,0,-0.1,0.42583695577117975,False
+a,Bilayer,0,0.0,0.0,False
+a,Bilayer,0,0.1,-0.4250862664696158,False
+a,Bilayer,1,-0.1,0.42491435002239797,False
+a,Bilayer,1,0.0,0.0,False
+a,Bilayer,1,0.1,-0.42514979471650927,False
+a,Bilayer,2,-0.1,0.417388277226892,True
+a,Bilayer,2,0.0,0.0,True
+a,Bilayer,2,0.1,-0.4274385386097892,True
+a,Isolated pair,0,-0.1,0.2973378179568817,False
+a,Isolated pair,0,0.0,0.0,False
+a,Isolated pair,0,0.1,-0.2973418398731885,False
+a,Isolated pair,1,-0.1,0.26902782361940775,False
+a,Isolated pair,1,0.0,0.0,False
+a,Isolated pair,1,0.1,-0.2690247638626955,False
+a,Isolated pair,2,-0.1,0.26278122355812455,True
+a,Isolated pair,2,0.0,0.0,True
+a,Isolated pair,2,0.1,-0.26280265334526365,True
+a,Electrostatic,0,-0.1,0.27233813437033116,False
+a,Electrostatic,0,0.0,0.0,False
+a,Electrostatic,0,0.1,-0.2723393073410061,False
+a,Electrostatic,1,-0.1,0.2724345703122881,False
+a,Electrostatic,1,0.0,0.0,False
+a,Electrostatic,1,0.1,-0.2724355060625061,False
+a,Electrostatic,2,-0.1,0.24412595813196947,False
+a,Electrostatic,2,0.0,0.0,False
+a,Electrostatic,2,0.1,-0.24408995239984677,False
+a,Electrostatic,3,-0.1,0.24414597587486742,False
+a,Electrostatic,3,0.0,0.0,False
+a,Electrostatic,3,0.1,-0.2441098815312871,False
+a,Electrostatic,4,-0.1,0.23801195405141007,False
+a,Electrostatic,4,0.0,0.0,False
+a,Electrostatic,4,0.1,-0.23802303356822596,False
+a,Electrostatic,5,-0.1,0.2381743679445516,True
+a,Electrostatic,5,0.0,0.0,True
+a,Electrostatic,5,0.1,-0.23814799558533317,True
+b,Lower layer,0,-0.1,-0.8028922555256486,False
+b,Lower layer,0,0.0,0.0,False
+b,Lower layer,0,0.1,0.5982555921598305,False
+b,Lower layer,1,-0.1,-0.8231773830000293,False
+b,Lower layer,1,0.0,0.0,False
+b,Lower layer,1,0.1,0.6115258283639378,False
+b,Lower layer,2,-0.1,-0.820053826916137,True
+b,Lower layer,2,0.0,0.0,True
+b,Lower layer,2,0.1,0.5972601208545711,True
+b,Upper layer,0,-0.1,1.2287292112966952,False
+b,Upper layer,0,0.0,0.0,False
+b,Upper layer,0,0.1,-1.0233418586292373,False
+b,Upper layer,1,-0.1,1.2480917330224202,False
+b,Upper layer,1,0.0,0.0,False
+b,Upper layer,1,0.1,-1.0366756230807823,False
+b,Upper layer,2,-0.1,1.2374421041427013,True
+b,Upper layer,2,0.0,0.0,True
+b,Upper layer,2,0.1,-1.0246986594647751,True
+b,Isolated layer,0,-0.1,0.14866890897844084,False
+b,Isolated layer,0,0.0,0.0,False
+b,Isolated layer,0,0.1,-0.14867091993659426,False
+b,Isolated layer,1,-0.1,0.13451391180970387,False
+b,Isolated layer,1,0.0,0.0,False
+b,Isolated layer,1,0.1,-0.13451238193134776,False
+b,Isolated layer,2,-0.1,0.13139061177906228,True
+b,Isolated layer,2,0.0,0.0,True
+b,Isolated layer,2,0.1,-0.13140132667263182,True
+c,Lower layer,representative,0,0.5,True
+c,Upper layer,representative,0,0.5,True
+c,Net gain,representative,0,1.0,True
+c,Lower layer,representative,1,-0.06192385560065961,True
+c,Upper layer,representative,1,1.5494372182071625,True
+c,Net gain,representative,1,1.487513362606503,True
+c,Lower layer,representative,2,-2.696646548827136,True
+c,Upper layer,representative,2,4.304052812531954,True
+c,Net gain,representative,2,1.607406263704818,True
+c,Net gain,0,1,1.4796348737720664,False
+c,Net gain,1,1,1.5120820248540185,False
+c,Net gain,2,1,1.4805549701973255,False
+c,Net gain,3,1,1.4865889418622478,False
+c,Net gain,4,1,1.5191885898216093,False
+c,Net gain,5,1,1.4875133626065022,False
+c,Net gain,0,2,1.430893441598009,False
+c,Net gain,1,2,1.5814870925959426,False
+c,Net gain,2,2,1.6190055662556224,False
+c,Net gain,3,2,1.429448836102299,False
+c,Net gain,4,2,1.579890450331088,False
+c,Net gain,5,2,1.6173710459827597,False
+c,Net gain,6,2,1.4206418610641136,False
+c,Net gain,7,2,1.5701565896935343,False
+c,Net gain,8,2,1.6074062637046522,False

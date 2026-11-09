@@ -1,0 +1,13 @@
+{
+  "job": "560207.cmspbs1",
+  "node": "csuper001",
+  "orientation": "<u_F|u_0>, same k and physical PAW metric",
+  "max_norm_error": 4.984253392137939e-06,
+  "zero_source": "/work/sunq/xjq/inse-nmee-20261109/A0/A/seed",
+  "gate_source": "/work/sunq/xjq/inse-nmee-20261109",
+  "cache_sha256": {
+    "zero": "482f447db0805643e42d6199a2bebe5fe155f96be04557d30b52136c5638197a",
+    "Am": "e13c8d03995845905d7c69f851345626ea976219a087dbc2dd8c6bbefb6d3a67",
+    "Ap": "a7e6d0d9e6eb413282ffdd193d1bcd1c3bb73242e33f2cc3442ecc5a6b366844"
+  }
+}

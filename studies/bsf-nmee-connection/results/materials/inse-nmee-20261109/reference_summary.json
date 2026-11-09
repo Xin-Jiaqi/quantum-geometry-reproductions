@@ -1,0 +1,90 @@
+{
+  "rows": [
+    {
+      "nb": 64,
+      "taper_end_A": 3.883653,
+      "C0_lower": 0.7938115352398599,
+      "C0_upper": -0.6722268654119382,
+      "C0_net": 0.12158466982792171,
+      "G_lower": -1.3621864789144205,
+      "G_upper": -1.3612007296422657,
+      "G_net": -2.7233872085566864
+    },
+    {
+      "nb": 64,
+      "taper_end_A": 4.483653,
+      "C0_lower": 0.8966368896608701,
+      "C0_upper": -0.7688984277470607,
+      "C0_net": 0.12773846191380933,
+      "G_lower": -1.362725276878065,
+      "G_upper": -1.361625104995906,
+      "G_net": -2.724350381873971
+    },
+    {
+      "nb": 72,
+      "taper_end_A": 3.883653,
+      "C0_lower": 0.791217809721316,
+      "C0_upper": -0.6700068469822757,
+      "C0_net": 0.1212109627390402,
+      "G_lower": -1.2210312512640569,
+      "G_upper": -1.220048301395024,
+      "G_net": -2.441079552659081
+    },
+    {
+      "nb": 72,
+      "taper_end_A": 4.483653,
+      "C0_lower": 0.8962381197248601,
+      "C0_upper": -0.768842603175392,
+      "C0_net": 0.12739551654946812,
+      "G_lower": -1.221187143156997,
+      "G_upper": -1.2200921438737755,
+      "G_net": -2.4412792870307722
+    },
+    {
+      "nb": 80,
+      "taper_end_A": 3.883653,
+      "C0_lower": 0.7903744399146077,
+      "C0_upper": -0.669380687181332,
+      "C0_net": 0.12099375273327562,
+      "G_lower": -1.1906564547583642,
+      "G_upper": -1.1895184833398158,
+      "G_net": -2.38017493809818
+    },
+    {
+      "nb": 80,
+      "taper_end_A": 4.483653,
+      "C0_lower": 0.8933183013036855,
+      "C0_upper": -0.7662542100852227,
+      "C0_net": 0.12706409121846285,
+      "G_lower": -1.1914377512435104,
+      "G_upper": -1.1901740664059135,
+      "G_net": -2.381611817649424
+    }
+  ],
+  "gate_potential_checks": {
+    "bilayer": {
+      "vacuum_dV_dz_per_F": 0.10004479720534777,
+      "vacuum_fit_residual": 1.3199015994442775e-06,
+      "In_planes_z_A": [
+        10.253650898268766,
+        13.067896608268763,
+        18.666715788268764,
+        21.480961498268766
+      ],
+      "In_plane_dV_per_F": [
+        -0.060740257282846856,
+        -0.03795432095114459,
+        0.038126039530964606,
+        0.06072314618946147
+      ],
+      "interlayer_lever_eV_per_V_nm": 0.09877188197720876,
+      "bare_linear_lever_eV_per_V_nm": 0.8413064890000002
+    },
+    "mono": {
+      "vacuum_dV_dz_per_F": 0.09999780951539924,
+      "vacuum_fit_residual": 8.522702498133745e-08
+    }
+  },
+  "minimum_reference_gap_eV": 1.4097467417555554,
+  "scope": "Matched InSe smooth planar electrostatic reference at three screened gate fields.\n\nThe potential comes from the actual self-consistent bilayer minus its matched\nisolated layer at the SAME applied field. This is a specified frozen-potential\nreference, not a unique or additive partition of interface physics. No new SCF.\nPAW augmentation uses the locally constant smooth potential approximation.\n"
+}

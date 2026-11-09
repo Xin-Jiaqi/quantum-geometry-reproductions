@@ -80,3 +80,28 @@ Opposite layer slopes, little net gain, or strong layer asymmetry are retained
 as alternative outcomes. Gamma concentration and directional VC controls will
 test the proposed interpretation. Large zero-field layer C alone proves none
 of these gate properties.
+
+## Outcome of the gate prediction (all seven primary points complete)
+
+The symmetry predictions survive the initial calculation. The conditional
+same-sign layer-increment branch does NOT occur: positive F makes the negative
+lower C less negative and the positive upper C less positive. Both layer
+magnitudes decrease, with the upper changing more. Their increments oppose
+one another; net gain is about 1.4-1.6 relative to the matched isolated pair
+over the tested band cutoffs, rather than a giant gain inferred from C(0).
+Neither layer nor the net response reverses sign within +/-0.10 V/nm.
+
+Selected cross-layer occupied-empty mixing matters, but is not the unique
+origin of the negative lower C: it stays negative when that selected mixing
+is removed. Occupied-occupied/empty-empty mixing also matters. Removing one
+directional occupied-empty block reverses the direction in which the gate
+tunes each layer, while leaving the static layer-spin signs unchanged. These
+are frozen-potential Hamiltonian interventions, not realizable independent
+experimental knobs or additive contributions. The real gate-SCF gain and
+these interventions must not be conflated.
+
+Execution record: the original 560011 batch completed A0/B0, then was explicitly
+stopped during the newly started Am to stay within its allocation. Its Am
+data are not used. Fresh Am/Ap completed in 560139/560116. The reference and
+channel controls completed in 560207. The independent 8x8 A0 check and a small
+Gamma orbital-character diagnostic have separate allocations in jobs.json.
