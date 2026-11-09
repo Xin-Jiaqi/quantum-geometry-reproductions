@@ -1,0 +1,181 @@
+{
+  "job": "558273.cmspbs1",
+  "node": "csuper001",
+  "units": "1e-9 (nm V T)^-1",
+  "scope": "Post-DFT spectral counterfactual, not an additive energy/geometry decomposition.\nSwap energy-ordered spectra between independently strained states only when the\nwithin-k degeneracy blocks are compatible. Keep physical spin and position\noperators belonging to the state reference; never substitute old velocities.\n",
+  "pairing": "energy order at identical fractional k; reject if a <1e-5 eV degeneracy in either spectrum is split by >1e-4 eV in the other",
+  "rows": [
+    {
+      "states": "em02",
+      "spectrum": "em02",
+      "nb": 96,
+      "degeneracy_mismatch_count": 0,
+      "max_degenerate_energy_adjustment_eV": 0.0,
+      "C_total_lower_upper": [
+        -0.4018180902675263,
+        -3.3634536392497494,
+        2.961635548982223
+      ],
+      "even_chi": [
+        7.673544151406096e-06,
+        5.4489598067129254e-05,
+        -4.6816053915722886e-05
+      ],
+      "gap_eV": 0.9503065697150689,
+      "min_neighbor_singular": 0.768131450317713,
+      "b_eV": 0.002,
+      "metric_normalized_lower": -3.2961845664647544
+    },
+    {
+      "states": "em02",
+      "spectrum": "e000",
+      "nb": 96,
+      "degeneracy_mismatch_count": 0,
+      "max_degenerate_energy_adjustment_eV": 1.5905115247960566e-05,
+      "C_total_lower_upper": [
+        -0.8628119494285549,
+        -14.239051017986577,
+        13.376239068558021
+      ],
+      "even_chi": [
+        1.888222553545827e-05,
+        3.784773977249384e-05,
+        -1.8965514237035894e-05
+      ],
+      "gap_eV": 0.8002858668084806,
+      "min_neighbor_singular": 0.7681314270857386,
+      "b_eV": 0.002,
+      "metric_normalized_lower": -13.954269997626845
+    },
+    {
+      "states": "em02",
+      "spectrum": "em02",
+      "nb": 112,
+      "degeneracy_mismatch_count": 0,
+      "max_degenerate_energy_adjustment_eV": 0.0,
+      "C_total_lower_upper": [
+        -0.3854251407999509,
+        -2.907879773935226,
+        2.5224546331352755
+      ],
+      "even_chi": [
+        -0.0002009473044758719,
+        0.0003852311811516156,
+        -0.0005861784856274876
+      ],
+      "gap_eV": 0.9503065697195301,
+      "min_neighbor_singular": 0.7681314552207559,
+      "b_eV": 0.002,
+      "metric_normalized_lower": -2.8497221784565214
+    },
+    {
+      "states": "em02",
+      "spectrum": "e000",
+      "nb": 112,
+      "degeneracy_mismatch_count": 0,
+      "max_degenerate_energy_adjustment_eV": 1.5905115247960566e-05,
+      "C_total_lower_upper": [
+        -0.8452563399779576,
+        -13.744403766692528,
+        12.899147426714569
+      ],
+      "even_chi": [
+        -0.00020156189457158386,
+        0.0003749557083970994,
+        -0.0005765176029686823
+      ],
+      "gap_eV": 0.8002858668137047,
+      "min_neighbor_singular": 0.7681314320924971,
+      "b_eV": 0.002,
+      "metric_normalized_lower": -13.469515691358678
+    },
+    {
+      "states": "e000",
+      "spectrum": "em02",
+      "nb": 96,
+      "degeneracy_mismatch_count": 0,
+      "max_degenerate_energy_adjustment_eV": 2.32967222633107e-05,
+      "C_total_lower_upper": [
+        0.18741707555616405,
+        3.922573754744904,
+        -3.73515667918874
+      ],
+      "even_chi": [
+        -5.762303988138891e-05,
+        -5.989092418347795e-06,
+        -5.163394746304133e-05
+      ],
+      "gap_eV": 0.9502995177541509,
+      "min_neighbor_singular": 0.7742892578801277,
+      "b_eV": 0.002,
+      "metric_normalized_lower": 3.922573754744904
+    },
+    {
+      "states": "e000",
+      "spectrum": "e000",
+      "nb": 96,
+      "degeneracy_mismatch_count": 0,
+      "max_degenerate_energy_adjustment_eV": 0.0,
+      "C_total_lower_upper": [
+        -0.2749818411664597,
+        -6.916464905278335,
+        6.641483064111877
+      ],
+      "even_chi": [
+        -6.162466540687915e-05,
+        1.1908422360293151e-05,
+        -7.353308776717263e-05
+      ],
+      "gap_eV": 0.800284439092808,
+      "min_neighbor_singular": 0.7742892247555971,
+      "b_eV": 0.002,
+      "metric_normalized_lower": -6.916464905278335
+    },
+    {
+      "states": "e000",
+      "spectrum": "em02",
+      "nb": 112,
+      "degeneracy_mismatch_count": 0,
+      "max_degenerate_energy_adjustment_eV": 2.32967222633107e-05,
+      "C_total_lower_upper": [
+        0.19049007177084595,
+        4.599033617466594,
+        -4.408543545695746
+      ],
+      "even_chi": [
+        0.020266767994136514,
+        0.06736023468875592,
+        -0.047093466694619404
+      ],
+      "gap_eV": 0.9502995177590488,
+      "min_neighbor_singular": 0.7742892616901182,
+      "b_eV": 0.002,
+      "metric_normalized_lower": 4.599033617466594
+    },
+    {
+      "states": "e000",
+      "spectrum": "e000",
+      "nb": 112,
+      "degeneracy_mismatch_count": 0,
+      "max_degenerate_energy_adjustment_eV": 0.0,
+      "C_total_lower_upper": [
+        -0.27083890804381355,
+        -6.193129577381433,
+        5.9222906693376185
+      ],
+      "even_chi": [
+        0.020527045506479574,
+        0.06924320930258573,
+        -0.04871616379610616
+      ],
+      "gap_eV": 0.8002844390988029,
+      "min_neighbor_singular": 0.7742892286715468,
+      "b_eV": 0.002,
+      "metric_normalized_lower": -6.193129577381433
+    }
+  ],
+  "layer_electrons": {
+    "em02": 23.99780516070546,
+    "e000": 23.997893170703293
+  }
+}

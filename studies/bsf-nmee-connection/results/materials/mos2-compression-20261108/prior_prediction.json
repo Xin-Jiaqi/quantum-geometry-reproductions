@@ -1,0 +1,18 @@
+{
+  "predictions_Vnm": {
+    "96": {
+      "reference_two_point_estimate": -0.26350679179399294,
+      "expanded030_two_point_estimate": -0.16502868084110844,
+      "compression010_extrapolation": -0.29633282877828776,
+      "compression020_extrapolation": -0.32915886576258263
+    },
+    "112": {
+      "reference_two_point_estimate": -0.28847682373373223,
+      "expanded030_two_point_estimate": -0.174837910959102,
+      "compression010_extrapolation": -0.3263564613252756,
+      "compression020_extrapolation": -0.3642360989168191
+    }
+  },
+  "scope": "Selection aid from previous expansion only; linear response interpolation and geometric extrapolation, not measured critical fields",
+  "common_intermediate_field_Vnm": -0.32
+}

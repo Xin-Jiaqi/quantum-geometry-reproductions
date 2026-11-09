@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-11-09T19:30:58.941492+08:00",
+  "resource": "Japan IMR",
+  "queue": "DP_002",
+  "jobs": {
+    "B6": "560298.cmspbs1",
+    "B8": "560299.cmspbs1"
+  },
+  "A8": "not yet submitted; wait for task slot",
+  "request": {
+    "ncpus": 4,
+    "mem_GB": 24,
+    "walltime": "02:00:00"
+  },
+  "storage": {
+    "usage_KiB": 6565700748,
+    "numeric_user_caps": 0,
+    "interpretation": "unspecified, not unlimited",
+    "group_project_caps": "unknown",
+    "new_output_budget_GB": 20
+  },
+  "fee": "user states free; not independently audited",
+  "remote": "/work/sunq/xjq/inse-mirror-gate-20261109",
+  "frontend_science": false,
+  "other_shared_jobs": "observed but unchanged",
+  "constraints": "All science in PBS compute nodes; preserve original results."
+}

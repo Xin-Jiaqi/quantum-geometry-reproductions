@@ -1,0 +1,59 @@
+{
+  "Mo_centers_A": [
+    -3.0827035550000037,
+    3.082703545000001
+  ],
+  "rows": [
+    {
+      "gate_physical_Vnm": 0.0,
+      "rigid_sum_total_bottom_top": [
+        -0.00016749244859282086,
+        2.039659292196068,
+        -2.03982678464461
+      ],
+      "linear_translation_total_bottom_top": [
+        -0.00016749244872560354,
+        2.0628150245472456,
+        -2.062982516995981
+      ],
+      "actual_total_bottom_top": [
+        -0.5429876989509421,
+        -4.561156601282351,
+        4.018168902331398
+      ],
+      "interface_change_total_bottom_top": [
+        -0.5428202065023573,
+        -6.600815893478394,
+        6.057995686976039
+      ]
+    },
+    {
+      "gate_physical_Vnm": 0.25,
+      "rigid_sum_total_bottom_top": [
+        -0.27927569856866685,
+        1.8972630635833103,
+        -2.176538762151999
+      ],
+      "linear_translation_total_bottom_top": [
+        -0.2792756985688223,
+        1.9204089155932509,
+        -2.199684614162035
+      ]
+    },
+    {
+      "gate_physical_Vnm": -0.25,
+      "rigid_sum_total_bottom_top": [
+        0.27857693025381436,
+        2.179687657582387,
+        -1.9011107273285757
+      ],
+      "linear_translation_total_bottom_top": [
+        0.2785769302536858,
+        2.2028439634797348,
+        -1.9242670332261556
+      ]
+    }
+  ],
+  "units": "1e-9 (nm V T)^-1",
+  "note": "Rigidly translated isolated-layer response densities, not a self-consistent decoupled-bilayer calculation. Half-space values include density tails from both layers; the total is partition independent. Deviations include all interface effects and do not uniquely isolate hybridization."
+}

@@ -1,0 +1,26 @@
+#!/bin/bash
+#PBS -N inse-controls
+#PBS -q DP_002
+#PBS -l select=1:ncpus=4:mpiprocs=4:ompthreads=1:mem=24gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+set -eo pipefail
+test -n "${PBS_JOBID:-}" && test -s "$PBS_NODEFILE"
+case "$(hostname -s)" in super*|cms-ssh*) exit 71;; esac
+cd "$PBS_O_WORKDIR"
+source /work/sunq/xjq/releases/W90Flow-20260812/site/japan/load_oneapi.sh
+ulimit -s unlimited
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+case "$MODE" in
+ orbitals) python3 -u orbital_snapshot.py > orbitals.log 2>&1 ;;
+ mesh8) python3 -u mesh_check.py > mesh8.log 2>&1 ;;
+ both) python3 -u reference.py > reference.log 2>&1 &
+       reference_pid=$!
+       python3 -u export_overlaps.py > overlaps.log 2>&1
+       python3 -u screened_channels.py > channels.log 2>&1
+       wait "$reference_pid" ;;
+ reference) python3 -u reference.py > reference.log 2>&1 ;;
+ channels) python3 -u export_overlaps.py > overlaps.log 2>&1
+           python3 -u screened_channels.py > channels.log 2>&1 ;;
+ *) exit 72 ;;
+esac

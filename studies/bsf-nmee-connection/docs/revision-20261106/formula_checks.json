@@ -1,0 +1,6 @@
+{
+  "Bloch_blocks_max_eV": 5.551115123125783e-17,
+  "interband_formula_max": 1.8431436932253575e-18,
+  "t_sign_unitary_max_eV": 0.0,
+  "scope": "Algebra at three off-symmetry k points; no new integrated response or DFT."
+}

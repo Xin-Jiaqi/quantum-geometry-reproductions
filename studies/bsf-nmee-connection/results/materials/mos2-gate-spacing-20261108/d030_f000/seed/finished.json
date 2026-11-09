@@ -1,0 +1,20 @@
+{
+  "case": "d030_f000",
+  "delta_d_A": 0.3,
+  "physical_Fz_Vnm": 0.0,
+  "VASP_EFIELD_VA": -0.0,
+  "job": "558159.cmspbs1",
+  "node": "csuper001",
+  "lower_atoms_zero_based": [
+    0,
+    2,
+    3
+  ],
+  "interface_gap_A": 3.338294450000001,
+  "model": "full KS static spin-only EB response; gate SCF, probes frozen potential",
+  "input_sha256": {
+    "POSCAR": "2a6c9aa8dd3c46dbe754b5e0cc4b1ae1d5253de91551f5c1941838b07f2b1a4e",
+    "INCAR": "2ce61be3ec29781a7507dd974da5e7d0fb391b09681cfaa157921cde0b93a7e7",
+    "KPOINTS": "f62d4cd12ab931acad3cff275021829fc9e53e3deaff97c2ae62ceabb938699d"
+  }
+}

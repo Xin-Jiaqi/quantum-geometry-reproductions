@@ -1,0 +1,10 @@
+{
+  "structure": "A",
+  "job": "558139.cmspbs1",
+  "node": "csuper001",
+  "bands": 112,
+  "occupied": 48,
+  "electrostatic_potential": "ionic+Hartree, LVHAR",
+  "zero_field": true,
+  "dipole_corrected": true
+}

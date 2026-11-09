@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-11-09T10:52:22.438313+08:00",
+  "status": "plan sealed before model response",
+  "question": "Does interlayer VC mixing enhance absolute net gate sensitivity over isolated/electrostatic controls?",
+  "no_external_field_calibration": true,
+  "no_new_DFT": true
+}

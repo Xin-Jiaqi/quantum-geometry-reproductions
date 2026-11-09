@@ -1,0 +1,1477 @@
+{
+  "units": "1e-9 (nm V T)^-1, Pauli spin density per area",
+  "scope": "Fixed-registry frozen-ion, static spin-only full-KS probe response; gate self-consistent.",
+  "root_scope": "Three actual fields per geometry. Interpolations are estimates; cutoff/taper spread is not statistical uncertainty.",
+  "full_rows": [
+    {
+      "case": "d000_f000",
+      "delta_d_A": 0,
+      "Fz_Vnm": 0,
+      "cutoff": 96,
+      "C_total": -0.4055989617718232,
+      "C_lower": -5.090895450487447,
+      "C_upper": 4.685296488715624,
+      "gap_min_eV": 1.1505615349731981
+    },
+    {
+      "case": "d000_f000",
+      "delta_d_A": 0,
+      "Fz_Vnm": 0,
+      "cutoff": 112,
+      "C_total": -0.42816064901118994,
+      "C_lower": -4.368241005978239,
+      "C_upper": 3.940080356967049,
+      "gap_min_eV": 1.1505615349802325
+    },
+    {
+      "case": "d000_fm050",
+      "delta_d_A": 0,
+      "Fz_Vnm": -0.5,
+      "cutoff": 96,
+      "C_total": 0.3640186997131919,
+      "C_lower": -4.9977785853440295,
+      "C_upper": 5.361797285057222,
+      "gap_min_eV": 1.1754899168334993
+    },
+    {
+      "case": "d000_fm050",
+      "delta_d_A": 0,
+      "Fz_Vnm": -0.5,
+      "cutoff": 112,
+      "C_total": 0.3139451525390719,
+      "C_lower": -4.276829116989523,
+      "C_upper": 4.590774269528595,
+      "gap_min_eV": 1.1754899168405397
+    },
+    {
+      "case": "dm010_f000",
+      "delta_d_A": -0.1,
+      "Fz_Vnm": 0,
+      "cutoff": 96,
+      "C_total": -0.4975176338123839,
+      "C_lower": -6.53633290865572,
+      "C_upper": 6.038815274843337,
+      "gap_min_eV": 1.0797397429504167
+    },
+    {
+      "case": "dm010_f000",
+      "delta_d_A": -0.1,
+      "Fz_Vnm": 0,
+      "cutoff": 112,
+      "C_total": -0.5328382873374886,
+      "C_lower": -5.6743865108877385,
+      "C_upper": 5.1415482235502505,
+      "gap_min_eV": 1.0797397429573463
+    },
+    {
+      "case": "dm010_fm050",
+      "delta_d_A": -0.1,
+      "Fz_Vnm": -0.5,
+      "cutoff": 96,
+      "C_total": 0.30475353527257504,
+      "C_lower": -6.46807417456848,
+      "C_upper": 6.772827709841056,
+      "gap_min_eV": 1.1026564323870527
+    },
+    {
+      "case": "dm010_fm050",
+      "delta_d_A": -0.1,
+      "Fz_Vnm": -0.5,
+      "cutoff": 112,
+      "C_total": 0.24693318697033825,
+      "C_lower": -5.5816565821724895,
+      "C_upper": 5.828589769142828,
+      "gap_min_eV": 1.1026564323939845
+    },
+    {
+      "case": "dm020_f000",
+      "delta_d_A": -0.2,
+      "Fz_Vnm": 0,
+      "cutoff": 96,
+      "C_total": -0.5887853264853546,
+      "C_lower": -8.481661573978974,
+      "C_upper": 7.89287624749362,
+      "gap_min_eV": 0.9993256902800005
+    },
+    {
+      "case": "dm020_f000",
+      "delta_d_A": -0.2,
+      "Fz_Vnm": 0,
+      "cutoff": 112,
+      "C_total": -0.6736544261248228,
+      "C_lower": -7.408448963180064,
+      "C_upper": 6.734794537055242,
+      "gap_min_eV": 0.9993256902868048
+    },
+    {
+      "case": "dm020_fm050",
+      "delta_d_A": -0.2,
+      "Fz_Vnm": -0.5,
+      "cutoff": 96,
+      "C_total": 0.20202617975451914,
+      "C_lower": -8.371930131371654,
+      "C_upper": 8.573956311126175,
+      "gap_min_eV": 1.0202754078003111
+    },
+    {
+      "case": "dm020_fm050",
+      "delta_d_A": -0.2,
+      "Fz_Vnm": -0.5,
+      "cutoff": 112,
+      "C_total": 0.14842893597520107,
+      "C_lower": -7.304941322499006,
+      "C_upper": 7.453370258474206,
+      "gap_min_eV": 1.0202754078071161
+    },
+    {
+      "case": "d000_fm032",
+      "delta_d_A": 0,
+      "Fz_Vnm": -0.32,
+      "cutoff": 96,
+      "C_total": 0.09029492107094424,
+      "C_lower": -5.0266645973775175,
+      "C_upper": 5.1169595184484615,
+      "gap_min_eV": 1.1666848929731979
+    },
+    {
+      "case": "d000_fm032",
+      "delta_d_A": 0,
+      "Fz_Vnm": -0.32,
+      "cutoff": 112,
+      "C_total": 0.04725111860097907,
+      "C_lower": -4.306261416362099,
+      "C_upper": 4.353512534963078,
+      "gap_min_eV": 1.1666848929802325
+    },
+    {
+      "case": "dm010_fm032",
+      "delta_d_A": -0.1,
+      "Fz_Vnm": -0.32,
+      "cutoff": 96,
+      "C_total": 0.02518334210226793,
+      "C_lower": -6.49141020381949,
+      "C_upper": 6.516593545921758,
+      "gap_min_eV": 1.0945279507311927
+    },
+    {
+      "case": "dm010_fm032",
+      "delta_d_A": -0.1,
+      "Fz_Vnm": -0.32,
+      "cutoff": 112,
+      "C_total": -0.03318532267957437,
+      "C_lower": -5.611448673204522,
+      "C_upper": 5.578263350524947,
+      "gap_min_eV": 1.0945279507381296
+    },
+    {
+      "case": "dm020_fm032",
+      "delta_d_A": -0.2,
+      "Fz_Vnm": -0.32,
+      "cutoff": 96,
+      "C_total": -0.07861721674408106,
+      "C_lower": -8.415248815323695,
+      "C_upper": 8.336631598579611,
+      "gap_min_eV": 1.012818943218658
+    },
+    {
+      "case": "dm020_fm032",
+      "delta_d_A": -0.2,
+      "Fz_Vnm": -0.32,
+      "cutoff": 112,
+      "C_total": -0.14682308392601334,
+      "C_lower": -7.336849377850145,
+      "C_upper": 7.190026293924132,
+      "gap_min_eV": 1.0128189432254653
+    }
+  ],
+  "compensation": [
+    {
+      "model": "full",
+      "cutoff": 96,
+      "taper_end_A": null,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.2617327461733105
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.26350679179399294
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": -1,
+          "upper": 1
+        }
+      ]
+    },
+    {
+      "model": "full",
+      "cutoff": 96,
+      "taper_end_A": null,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.3045826393214128
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.3100682493550368
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": -1,
+          "upper": 1
+        }
+      ]
+    },
+    {
+      "model": "full",
+      "cutoff": 96,
+      "taper_end_A": null,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.37042377333829474
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.37226654002854165
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": -1,
+          "upper": 1
+        }
+      ]
+    },
+    {
+      "model": "full",
+      "cutoff": 112,
+      "taper_end_A": null,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.28819523835462113
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.2884768237337323
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": -1,
+          "upper": 1
+        }
+      ]
+    },
+    {
+      "model": "full",
+      "cutoff": 112,
+      "taper_end_A": null,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.34132439619855465
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.34166310572624414
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": -1,
+          "upper": 1
+        }
+      ]
+    },
+    {
+      "model": "full",
+      "cutoff": 112,
+      "taper_end_A": null,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.40951049722039073
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.40972391437527866
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": -1,
+          "upper": 1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": -1,
+          "upper": 1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 40,
+      "taper_end_A": 3.2,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.19910227829826005
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.19908373673298257
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 40,
+      "taper_end_A": 3.2,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.2620878576821429
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.2620867710736756
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 40,
+      "taper_end_A": 3.2,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.34115606449439895
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.34115461240492617
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 40,
+      "taper_end_A": 3.8,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.2063641959919857
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.20634689050671645
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 40,
+      "taper_end_A": 3.8,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.27161161816359775
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.2716113819930068
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 40,
+      "taper_end_A": 3.8,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.3534987340959972
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.3534981410159709
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 48,
+      "taper_end_A": 3.2,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.19892704092566588
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.19890842449356766
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 48,
+      "taper_end_A": 3.2,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.26184702947319904
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.26184594356045265
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 48,
+      "taper_end_A": 3.2,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.34083498983411054
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.3408335400361209
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 48,
+      "taper_end_A": 3.8,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.20624958714072206
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.20623221491276056
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 48,
+      "taper_end_A": 3.8,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.2715079748439701
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.27150775281002726
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 48,
+      "taper_end_A": 3.8,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.35346143538845176
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.35346086248048414
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 56,
+      "taper_end_A": 3.2,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.19876666095343648
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.19874792436463357
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 56,
+      "taper_end_A": 3.2,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.2616575324458606
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.26165646923911107
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 56,
+      "taper_end_A": 3.2,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.3406227814804334
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.34062136971517976
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 56,
+      "taper_end_A": 3.8,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.20629991557234678
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.2062824659499355
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 56,
+      "taper_end_A": 3.8,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.2716144771266952
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.2716143005263505
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 56,
+      "taper_end_A": 3.8,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.3536704204183617
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.35366990590228353
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 64,
+      "taper_end_A": 3.2,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.20419240091301466
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.20417332572932062
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 64,
+      "taper_end_A": 3.2,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.26652609905853597
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.26652514388156534
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 64,
+      "taper_end_A": 3.2,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.34467687142605075
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.3446756179474634
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 64,
+      "taper_end_A": 3.8,
+      "delta_d_A": 0,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.21080642217177872
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.2107886780072143
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 64,
+      "taper_end_A": 3.8,
+      "delta_d_A": -0.1,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.32,
+            0
+          ],
+          "interpolated_Vnm": -0.2755623948282961
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.2755622429293112
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    },
+    {
+      "model": "electrostatic",
+      "cutoff": 64,
+      "taper_end_A": 3.8,
+      "delta_d_A": -0.2,
+      "three_point_bracket": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            -0.32
+          ],
+          "interpolated_Vnm": -0.35680012716858156
+        }
+      ],
+      "endpoints_only": [
+        {
+          "bracket_Vnm": [
+            -0.5,
+            0
+          ],
+          "interpolated_Vnm": -0.3567996320953906
+        }
+      ],
+      "layer_signs_at_actual_points": [
+        {
+          "Fz_Vnm": -0.5,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": -0.32,
+          "lower": 1,
+          "upper": -1
+        },
+        {
+          "Fz_Vnm": 0,
+          "lower": 1,
+          "upper": -1
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "min_full_gap_eV": 0.9993256902800005,
+    "min_reference_gap_eV": 1.5966985745430735,
+    "max_half_b_change": 3.269864533894662e-05,
+    "all_full_lower_negative": true,
+    "all_full_upper_positive": true,
+    "new_input_hash_sets_verified": 7
+  },
+  "zero_gate_and_gate_leverage": [
+    {
+      "cutoff": 96,
+      "delta_d_A": 0,
+      "zero_gate_total": -0.4055989617718232,
+      "gate_secant_slope": -1.5392353229700302,
+      "lower_change": 0.09311686514341755,
+      "upper_change": 0.6765007963415988
+    },
+    {
+      "cutoff": 96,
+      "delta_d_A": -0.1,
+      "zero_gate_total": -0.4975176338123839,
+      "gate_secant_slope": -1.6045423381699178,
+      "lower_change": 0.06825873408724004,
+      "upper_change": 0.7340124349977186
+    },
+    {
+      "cutoff": 96,
+      "delta_d_A": -0.2,
+      "zero_gate_total": -0.5887853264853546,
+      "gate_secant_slope": -1.5816230124797475,
+      "lower_change": 0.1097314426073197,
+      "upper_change": 0.6810800636325549
+    },
+    {
+      "cutoff": 112,
+      "delta_d_A": 0,
+      "zero_gate_total": -0.42816064901118994,
+      "gate_secant_slope": -1.4842116031005237,
+      "lower_change": 0.09141188898871544,
+      "upper_change": 0.6506939125615459
+    },
+    {
+      "cutoff": 112,
+      "delta_d_A": -0.1,
+      "zero_gate_total": -0.5328382873374886,
+      "gate_secant_slope": -1.5595429486156538,
+      "lower_change": 0.09272992871524899,
+      "upper_change": 0.6870415455925771
+    },
+    {
+      "cutoff": 112,
+      "delta_d_A": -0.2,
+      "zero_gate_total": -0.6736544261248228,
+      "gate_secant_slope": -1.6441667242000477,
+      "lower_change": 0.103507640681058,
+      "upper_change": 0.7185757214189641
+    }
+  ]
+}

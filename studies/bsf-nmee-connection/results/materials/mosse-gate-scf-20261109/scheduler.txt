@@ -1,0 +1,22 @@
+Job Id: 559806.cmspbs1
+    Job_Name = xjq-mosse-gm
+    resources_used.cput = 02:04:18
+    resources_used.mem = 3858020kb
+    resources_used.walltime = 00:32:39
+    job_state = F
+    queue = DP_002
+    exec_host = csuper001/2*4
+    stime = Mon Nov  9 12:51:50 2026
+    obittime = Mon Nov  9 13:24:32 2026
+    Exit_status = 0
+Job Id: 559807.cmspbs1
+    Job_Name = xjq-mosse-gp
+    resources_used.cput = 01:24:54
+    resources_used.mem = 4059440kb
+    resources_used.walltime = 00:22:16
+    job_state = F
+    queue = DP_002
+    exec_host = csuper003/2*4
+    stime = Mon Nov  9 12:51:50 2026
+    obittime = Mon Nov  9 13:14:10 2026
+    Exit_status = 0

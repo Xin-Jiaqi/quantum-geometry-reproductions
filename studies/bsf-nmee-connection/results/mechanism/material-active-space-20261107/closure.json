@@ -1,0 +1,166 @@
+{
+  "job": "548247.cmspbs1",
+  "node": "csuper001",
+  "scope": "Predefined energy-pair empty-sector tests and zero-field/probe block controls; no fitted model parameters",
+  "units": "1e-9 (nm V T)^-1",
+  "pairs": {
+    "(0,)": {
+      "dimension": 12,
+      "rows": {
+        "0.0": {
+          "C": 23.528555006357923,
+          "gap": 1.3979268767683217,
+          "even_chi": -1.3881452442673914e-05,
+          "minimum_occupied_overlap_singular": 0.4164545282720324
+        },
+        "1.0": {
+          "C": 79.793817928594,
+          "gap": 0.9525825919551081,
+          "even_chi": -1.6401693559153774e-05,
+          "minimum_occupied_overlap_singular": 0.41566709476172614
+        }
+      }
+    },
+    "(1,)": {
+      "dimension": 12,
+      "rows": {
+        "0.0": {
+          "C": 44.15350692321862,
+          "gap": 1.3979268769676723,
+          "even_chi": 1.1812429498089805e-06,
+          "minimum_occupied_overlap_singular": 0.4164543172304702
+        },
+        "1.0": {
+          "C": 55.56647095539313,
+          "gap": 0.9527008017176218,
+          "even_chi": 9.302558799419158e-06,
+          "minimum_occupied_overlap_singular": 0.4167569935898788
+        }
+      }
+    },
+    "(2,)": {
+      "dimension": 12,
+      "rows": {
+        "0.0": {
+          "C": 30.540668837602063,
+          "gap": 1.3979268729582859,
+          "even_chi": -1.6596273276891366e-05,
+          "minimum_occupied_overlap_singular": 0.41645276704018147
+        },
+        "1.0": {
+          "C": 45.23205658665113,
+          "gap": 0.9526562010295243,
+          "even_chi": -2.053193587926022e-05,
+          "minimum_occupied_overlap_singular": 0.41655961587081913
+        }
+      }
+    },
+    "(0, 1)": {
+      "dimension": 16,
+      "rows": {
+        "0.0": {
+          "C": 26.54816417540468,
+          "gap": 1.3979268771322282,
+          "even_chi": 1.5264372741907728e-06,
+          "minimum_occupied_overlap_singular": 0.41645599471523037
+        },
+        "1.0": {
+          "C": 9.268500120849449,
+          "gap": 0.9526075554094887,
+          "even_chi": 8.538510981127845e-06,
+          "minimum_occupied_overlap_singular": 0.4158064792470381
+        }
+      }
+    },
+    "(0, 2)": {
+      "dimension": 16,
+      "rows": {
+        "0.0": {
+          "C": 19.173422490020876,
+          "gap": 1.3979268731221792,
+          "even_chi": -1.4211001541364343e-05,
+          "minimum_occupied_overlap_singular": 0.41645444527807957
+        },
+        "1.0": {
+          "C": 73.38667122409429,
+          "gap": 0.9525641341635956,
+          "even_chi": -2.1029758201965287e-05,
+          "minimum_occupied_overlap_singular": 0.41571040270869686
+        }
+      }
+    },
+    "(1, 2)": {
+      "dimension": 16,
+      "rows": {
+        "0.0": {
+          "C": 40.39240001191275,
+          "gap": 1.3979268733217536,
+          "even_chi": 9.351738641805163e-07,
+          "minimum_occupied_overlap_singular": 0.4164542371718154
+        },
+        "1.0": {
+          "C": 44.333892185238064,
+          "gap": 0.9526830861031184,
+          "even_chi": 9.848116925240125e-06,
+          "minimum_occupied_overlap_singular": 0.41700519592651675
+        }
+      }
+    }
+  },
+  "vertices": {
+    "all": {
+      "C": -7.233759710574352,
+      "gap": 0.9525889306883504,
+      "even_chi": 1.019770654298209e-05,
+      "minimum_occupied_overlap_singular": 0.41617319114606877
+    },
+    "H_block": {
+      "C": -2.3248856820856716,
+      "gap": 0.9527405081350291,
+      "even_chi": 1.4506315557660365e-05,
+      "minimum_occupied_overlap_singular": 0.4163558837956796
+    },
+    "Z_block": {
+      "C": 5.26596209744843,
+      "gap": 0.9525889792785094,
+      "even_chi": 1.019771526240918e-05,
+      "minimum_occupied_overlap_singular": 0.4161730500550853
+    },
+    "S_block": {
+      "C": 2.263365274514037,
+      "gap": 0.9525889306883504,
+      "even_chi": -1.1005459724253586e-05,
+      "minimum_occupied_overlap_singular": 0.41617319114606877
+    },
+    "E_block": {
+      "C": 36.512506148528935,
+      "gap": 0.9525889306883504,
+      "even_chi": 2.5415046983959244e-06,
+      "minimum_occupied_overlap_singular": 0.4163584677626819
+    },
+    "H_Z_block": {
+      "C": 4.372642455539603,
+      "gap": 0.9527405088947721,
+      "even_chi": 1.4506317705289228e-05,
+      "minimum_occupied_overlap_singular": 0.41635573772427614
+    },
+    "H_Z_E_block": {
+      "C": 28.393950796513415,
+      "gap": 0.9527405088947721,
+      "even_chi": -2.895485294786282e-06,
+      "minimum_occupied_overlap_singular": 0.41635573772427614
+    },
+    "all_block": {
+      "C": 28.393950796513415,
+      "gap": 0.9527405088947721,
+      "even_chi": -2.895485294786282e-06,
+      "minimum_occupied_overlap_singular": 0.41635573772427614
+    }
+  },
+  "checks": {
+    "isometry": 4.440892098500626e-15,
+    "H_active_dark_eV": 0.9701598290589002,
+    "Zeeman_active_dark": 0.4424825803320785,
+    "spin_active_dark": 0.6329661593986623
+  }
+}

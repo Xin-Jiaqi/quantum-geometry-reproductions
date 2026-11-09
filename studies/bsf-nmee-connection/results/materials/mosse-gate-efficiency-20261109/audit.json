@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "curve_rows": 407,
+  "direction_rows": 16,
+  "layer_sum_error": 5.329070518200751e-15,
+  "min_gap_eV": 0.6275513689737668,
+  "full_layers_keep_opposite_signs": true,
+  "gain_over_64state_refs_fraction": [
+    0.2993473177391621,
+    0.32178422143640395
+  ],
+  "upper_fraction_of_full_gate_slope": [
+    0.7832216935314391,
+    0.785684972956003
+  ],
+  "tangent_additivity_max_error": 0.0002512907417715482,
+  "half_Zeeman_step_max_error": 6.157451255006663e-05,
+  "scope": "saved-results consistency, not proof of absolute mesh/screening convergence",
+  "visual_qa": "PNG inspected: labels/units readable, no clipping; setting ranges not statistical errors",
+  "review": "checked mirror gate parity, physical gate vs cache Z spin distinction, consistent channel deletion in H and gate, nonadditive intervention caveats; no credentials or licensed potentials in archive"
+}

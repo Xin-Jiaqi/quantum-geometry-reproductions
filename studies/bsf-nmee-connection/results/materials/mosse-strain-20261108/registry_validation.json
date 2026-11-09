@@ -1,0 +1,26 @@
+{
+  "e000": {
+    "max_lateral_displacement_A": 9.666302172805535e-09,
+    "max_lateral_fractional_change": 2.327160634527483e-09,
+    "tolerance_A": 1e-05,
+    "actual_all_ions_free": true
+  },
+  "em02": {
+    "max_lateral_displacement_A": 1.7381696560745428e-08,
+    "max_lateral_fractional_change": 3.9987162470112025e-09,
+    "tolerance_A": 1e-05,
+    "actual_all_ions_free": true
+  },
+  "ep02": {
+    "max_lateral_displacement_A": 3.723189470247613e-07,
+    "max_lateral_fractional_change": 6.6482662708367e-08,
+    "tolerance_A": 1e-05,
+    "actual_all_ions_free": true
+  },
+  "reject_0p01_A_displacement": true,
+  "periodic_image_accepted": {
+    "max_lateral_displacement_A": 3.723189470247613e-07,
+    "max_lateral_fractional_change": 6.6482662708367e-08,
+    "tolerance_A": 1e-05
+  }
+}

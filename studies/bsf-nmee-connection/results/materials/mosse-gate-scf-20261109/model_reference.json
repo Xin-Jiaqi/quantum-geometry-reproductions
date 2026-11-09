@@ -1,0 +1,145 @@
+{
+  "summary": {
+    "accepted_curve_rows": 407,
+    "invalid_rows": [],
+    "central_slopes": {
+      "VC_only": {
+        "G_net": [
+          -13.51487279283775,
+          -13.124097621499873
+        ],
+        "G_lower": [
+          -4.453201734859178,
+          -3.8329054046343103
+        ],
+        "G_upper": [
+          -9.34614022336806,
+          -9.029409852192316
+        ]
+      },
+      "electrostatic_pair": {
+        "G_net": [
+          -11.975037616985631,
+          -11.41577783270133
+        ],
+        "G_lower": [
+          -5.985246468550933,
+          -5.707818126618278
+        ],
+        "G_upper": [
+          -5.989791148434698,
+          -5.707959706083052
+        ]
+      },
+      "full": {
+        "G_net": [
+          -15.663352075465271,
+          -15.55973300745585
+        ],
+        "G_lower": [
+          -3.3730125704592773,
+          -3.3568917236529927
+        ],
+        "G_upper": [
+          -12.306460351812287,
+          -12.186720436996605
+        ]
+      },
+      "isolated_pair": {
+        "G_net": [
+          -11.850158158525801,
+          -11.3614005136116
+        ],
+        "G_lower": [
+          -5.9250790792629004,
+          -5.6807002568058
+        ],
+        "G_upper": [
+          -5.9250790792629004,
+          -5.6807002568058
+        ]
+      },
+      "no_VC": {
+        "G_net": [
+          -12.779927482702416,
+          -11.78600570031339
+        ],
+        "G_lower": [
+          -6.014006688329161,
+          -5.7339704153929105
+        ],
+        "G_upper": [
+          -7.045957067309523,
+          -5.818246800509144
+        ]
+      },
+      "no_Vb_Ct": {
+        "G_net": [
+          -14.205454586678634,
+          -14.1163532012642
+        ],
+        "G_lower": [
+          -13.015634743286224,
+          -12.938947302192076
+        ],
+        "G_upper": [
+          -1.2665072844865932,
+          -1.100718457977976
+        ]
+      },
+      "no_Vt_Cb": {
+        "G_net": [
+          -13.67990767832322,
+          -13.570089292113847
+        ],
+        "G_lower": [
+          4.054900286007897,
+          4.112621499705593
+        ],
+        "G_upper": [
+          -17.734807964331115,
+          -17.68271079181944
+        ]
+      },
+      "no_selected_hopping": {
+        "G_net": [
+          -11.976376230164956,
+          -11.414987975856116
+        ],
+        "G_lower": [
+          -6.209122163030187,
+          -4.911890391900613
+        ],
+        "G_upper": [
+          -6.946172315895858,
+          -5.715328145273304
+        ]
+      }
+    },
+    "min_gap_eV": 0.6275513689737668,
+    "max_half_B_change": 6.157451255006663e-05,
+    "field_calibration": "imposed one-electron model slope; no external screening calibration"
+  },
+  "audit": {
+    "passed": true,
+    "curve_rows": 407,
+    "direction_rows": 16,
+    "layer_sum_error": 5.329070518200751e-15,
+    "min_gap_eV": 0.6275513689737668,
+    "full_layers_keep_opposite_signs": true,
+    "gain_over_64state_refs_fraction": [
+      0.2993473177391621,
+      0.32178422143640395
+    ],
+    "upper_fraction_of_full_gate_slope": [
+      0.7832216935314391,
+      0.785684972956003
+    ],
+    "tangent_additivity_max_error": 0.0002512907417715482,
+    "half_Zeeman_step_max_error": 6.157451255006663e-05,
+    "scope": "saved-results consistency, not proof of absolute mesh/screening convergence",
+    "visual_qa": "PNG inspected: labels/units readable, no clipping; setting ranges not statistical errors",
+    "review": "checked mirror gate parity, physical gate vs cache Z spin distinction, consistent channel deletion in H and gate, nonadditive intervention caveats; no credentials or licensed potentials in archive"
+  },
+  "field_definition": "linear electron potential +F_model*z/10 eV; imposed model slope in V/nm, no new self-consistent screening"
+}

@@ -1,0 +1,26 @@
+{
+  "em02": {
+    "pointgroup": "3m",
+    "spacegroup_supercell": "P3m1",
+    "tolerance_A": 1e-05,
+    "SS_gap_A": 2.9576925757615733,
+    "lower_thickness_A": 3.2654943672607697,
+    "upper_thickness_A": 3.265693115816587
+  },
+  "e000": {
+    "pointgroup": "3m",
+    "spacegroup_supercell": "P3m1",
+    "tolerance_A": 1e-05,
+    "SS_gap_A": 3.00027196246368,
+    "lower_thickness_A": 3.2213468509968877,
+    "upper_thickness_A": 3.221513250219484
+  },
+  "ep02": {
+    "pointgroup": "3m",
+    "spacegroup_supercell": "P3m1",
+    "tolerance_A": 1e-05,
+    "SS_gap_A": 2.97048534054535,
+    "lower_thickness_A": 3.177874544714122,
+    "upper_thickness_A": 3.1780572352909786
+  }
+}

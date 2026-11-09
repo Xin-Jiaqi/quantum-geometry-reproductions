@@ -1,0 +1,12 @@
+{
+  "label": "A",
+  "bands": 112,
+  "nocc": 48,
+  "nk": 36,
+  "metric_max": 2.6880870303003235e-06,
+  "link_reverse_error": 1.0000333894311098e-12,
+  "wave_link_gauge_error": 0.006477245150883875,
+  "gap_eV": 0.80427172922854,
+  "job": "558254.cmspbs1",
+  "node": "csuper001"
+}

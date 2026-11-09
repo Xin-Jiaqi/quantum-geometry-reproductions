@@ -1,0 +1,11 @@
+{
+  "A_reference": "558139.cmspbs1",
+  "mono_reference": "558140.cmspbs1",
+  "A_export": "558142.cmspbs1",
+  "mono_export": "558143.cmspbs1",
+  "analysis": "558144.cmspbs1",
+  "gate_calibration": "558146.cmspbs1",
+  "electrostatic_audit": "558147.cmspbs1",
+  "channels": "558148.cmspbs1",
+  "gate_embedding": "558149.cmspbs1"
+}

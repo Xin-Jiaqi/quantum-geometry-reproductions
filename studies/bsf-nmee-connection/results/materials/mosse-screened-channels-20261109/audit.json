@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "rows": 126,
+  "baseline_max_errors": {
+    "fm010": 0.0,
+    "fp010": 0.0
+  },
+  "min_gap_eV": 0.7949593152992888,
+  "max_transport_deviation": 0.0001499317129999289,
+  "max_half_probe_change": 3.893866914950195e-05,
+  "max_even_chi": 0.0729503218925247
+}

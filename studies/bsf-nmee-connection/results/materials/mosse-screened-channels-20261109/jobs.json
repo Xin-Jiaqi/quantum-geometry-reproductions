@@ -1,0 +1,14 @@
+{
+  "job_id": "559934.cmspbs1",
+  "state": "F",
+  "exit_status": 0,
+  "node": "csuper001",
+  "walltime": "00:01:52",
+  "ncpus": 4,
+  "memory_request_gib": 8,
+  "scope": "Existing gate-SCF data; selected channel response interventions only; no new DFT",
+  "remote": "/work/sunq/xjq/mosse-screened-channels-20261109",
+  "frontend_science": false,
+  "quota": "Work user caps unspecified; group/project cap unknown; no licensed input duplication",
+  "observed_at": "2026-11-09T14:31:55.542689+08:00"
+}

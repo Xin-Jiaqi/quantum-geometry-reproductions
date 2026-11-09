@@ -1,0 +1,28 @@
+{
+  "stage": 8,
+  "scope": "gapped static EB spin response and electronic layer dipole; not driven DC or DFT",
+  "base_commit": "0efbc83",
+  "sha256": {
+    "../../papers/jia-2026-nonlin-magnetoelectric-edelstein/nmee_lab/clean_core/core.py": "7e2df251b6e357cb6f2ff596a69f5dd6b4160f3f4d0ee559a655ee6b9f3a80d5",
+    "../../papers/jia-2026-nonlin-magnetoelectric-edelstein/nmee_lab/clean_core/models.py": "a45d3c4ffbfd532f6af99904cc203c0e12df1d0f64917adac9fb7fa76f579e54",
+    "bsf_nmee/bilayer_audit.py": "18f205c6ed156c5f7768f707563bcc5f55e3e31e11feedb5ae1d1c3889bc792b",
+    "bsf_nmee/sliding_tight_binding.py": "39e3ecc4b4996ce02dcb64fdf8417253c3ccc8b5f6a9df201a57f3098739d125",
+    "bsf_nmee/static_observables.py": "9f0c2a9b95a74f4dbd359aedb86e71d7b094630c48e0c998dc96297272c7c451",
+    "bsf_nmee/valley_quadrature.py": "9f3cb1d89bff0955c2e0c942ed9b4d45d81b1575506db727949e54751d252760",
+    "docs/BILAYER_KM_FINDINGS_ZH.md": "436aaa3b5e5fe081cf551644cc128aabfdfe9fc36916c99d58dc2f5eba898b03",
+    "docs/STAGE8_FIGURE_CONTRACT.md": "aec0c0077254b5418d7fa27f5df154d1519635dbb7e4ba3fc35d160a1fd92181",
+    "docs/STAGE8_PHYSICS.md": "b229421527b079ed410a83670166b58673e2628b838860e2c2a5587825511b3d",
+    "figures/bilayer_stage8_physics.pdf": "9e33637a11526826bbb944630673178f99e85b5ad74c1c89598bb4b761721394",
+    "figures/bilayer_stage8_physics.png": "7bc7d8c1c976ef810fb2a32aa70ce493d8b2151de345cfc32165c0cf12c88495",
+    "figures/bilayer_stage8_physics.svg": "579cbc3a8898177d239ad8f25dbb3940cf22e8ca79d567a3c043b954702f1d77",
+    "results/bilayer_stage8_audit.json": "72ebf2fc71534a597b4ea1887501bcb27a786e92da7063d9f9f780a550c6c5ba",
+    "results/bilayer_stage8_controls.json": "c37bf705ef2c3ac0bf6f1a8082a7aee270ad6bbf97aeab0beed51eba798bdc9d",
+    "results/bilayer_stage8_figure_data.csv": "e86aa4a115b56e931ae9a5b16f7d9c3eca66c41759beb9c6209f81d17e5ae135",
+    "scripts/plot_stage8_audit.py": "9e89dab16bc84adce48b1407c0ec396b201eec0775e037c34451195bc812e53a",
+    "scripts/run_stage8_audit.py": "eb1183cca20d29880876f699cb44a80369b92d86d59c4029c3f06d4df5cbb979",
+    "scripts/run_stage8_controls.py": "009e6caaea71ca4601ffec4dd24fd28c460656692dcd95ac4d601a95e94e06ee",
+    "tests/test_stage8_evidence.py": "3d6b67600756b77360ec8e38e555e70433e3b75e3793876c93483290a66a3f22",
+    "tests/test_stage8_observables.py": "bb8941e55126ad8254e4e0ae760276d074c795d33f2d4f534265b378cab67da0",
+    "STAGE8_README.md": "1d352b76bb2b1021dea79120ab58a733cc1516151337855ab106266eda35d6b9"
+  }
+}

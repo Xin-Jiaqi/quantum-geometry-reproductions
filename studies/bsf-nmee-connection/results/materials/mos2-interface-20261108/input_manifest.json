@@ -1,0 +1,16 @@
+{
+  "prepared_at": "2026-11-08T10:14:37.685604+08:00",
+  "files": {
+    "PLAN.md": "58137742dd4616c1cce04bf57c89661856636caea49a2f1034fafb60f1c87bd4",
+    "reference.py": "be988343fbaca12386fbf808357bf107907db8b20d959e20ac7075d8745eb129",
+    "reference.pbs": "042fee39832e080346af936d6b174ded7860e515fb8fab833683e4136f2ad981",
+    "export.py": "bf1d116788cb2b7e52d7807eb59bcca2799d51742d0e15c8e3c5eee2ef9bf014",
+    "analyze.py": "1b760eaccf0b6580f44f4461596122c19991c237c285ce719daa74ccedf7a28a",
+    "electrostatic.py": "55f1df3b47386cb6b6375075063af38eb6f748265b30ac072917d5340f0f1f7e",
+    "post.pbs": "9929b1471e5c09f3055c3f8739b1b8cabd29706e73ba01eeb5a9102057653a44",
+    "jobs.json": "70231676de74eb7c1845bf013feba98a61250805fe9f7ed48b38bd73fb067446",
+    "local_validation.json": "7ae6bbc7466c9e1c5044e41a5951c3c705e5aedb1d8d310c25b2e7b790baede9"
+  },
+  "scientific_status": "Running; no new mechanism result yet",
+  "parent_checkpoint": "cc22e3f"
+}

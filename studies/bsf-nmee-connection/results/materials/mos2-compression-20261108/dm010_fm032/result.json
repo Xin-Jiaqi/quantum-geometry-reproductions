@@ -1,0 +1,88 @@
+{
+  "case": "dm010_fm032",
+  "delta_d_A": -0.1,
+  "physical_Fz_Vnm": -0.32,
+  "VASP_EFIELD_VA": 0.032,
+  "job": "558205.cmspbs1",
+  "node": "csuper006",
+  "initial_charge_only": "/work/sunq/xjq/mos2-gate-spacing-20261108/d000_fm050/seed/CHGCAR",
+  "lower_atoms_zero_based": [
+    0,
+    2,
+    3
+  ],
+  "interface_gap_A": 2.938294449999999,
+  "model": "full KS static spin-only EB response; gate SCF, probes frozen potential",
+  "input_sha256": {
+    "POSCAR": "85a9ecb44d6b6367d5c0d8a507ef00865e65d379c86e1232af93d3f341d71864",
+    "INCAR": "aabe4ce3bff0deaee3a477bdfe964d460652d099105b712ea5a237908f67c30c",
+    "KPOINTS": "f62d4cd12ab931acad3cff275021829fc9e53e3deaff97c2ae62ceabb938699d"
+  },
+  "results": {
+    "96": {
+      "standard": {
+        "C_total_lower_upper": [
+          0.02518334210226793,
+          -6.49141020381949,
+          6.516593545921758
+        ],
+        "even_chi": [
+          5.039036304858549e-05,
+          4.5464035990944e-05,
+          4.926327057641969e-06
+        ],
+        "gap_eV": 1.0945279507311927,
+        "min_neighbor_singular": 0.7836886385694426,
+        "b_eV": 0.002
+      },
+      "half_b": {
+        "C_total_lower_upper": [
+          0.025182534520217906,
+          -6.491438965188813,
+          6.51662149970903
+        ],
+        "even_chi": [
+          5.039036446474002e-05,
+          4.5464036041646064e-05,
+          4.926328423093991e-06
+        ],
+        "gap_eV": 1.0965215410815157,
+        "min_neighbor_singular": 0.7836889169390385,
+        "b_eV": 0.001
+      }
+    },
+    "112": {
+      "standard": {
+        "C_total_lower_upper": [
+          -0.03318532267957437,
+          -5.611448673204522,
+          5.578263350524947
+        ],
+        "even_chi": [
+          0.0002368497594810978,
+          0.015537293131564628,
+          -0.01530044337208353
+        ],
+        "gap_eV": 1.0945279507381296,
+        "min_neighbor_singular": 0.78368863914306,
+        "b_eV": 0.002
+      },
+      "half_b": {
+        "C_total_lower_upper": [
+          -0.03318614155531932,
+          -5.611477728222735,
+          5.578291586667417
+        ],
+        "even_chi": [
+          0.0002368496584149927,
+          0.015537292675904795,
+          -0.015300443017489803
+        ],
+        "gap_eV": 1.096521541083268,
+        "min_neighbor_singular": 0.7836889172262672,
+        "b_eV": 0.001
+      }
+    }
+  },
+  "units": "1e-9 (nm V T)^-1, Pauli spin density"
+}

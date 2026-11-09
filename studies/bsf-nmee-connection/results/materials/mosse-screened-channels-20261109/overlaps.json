@@ -1,0 +1,13 @@
+{
+  "job": "559934.cmspbs1",
+  "node": "csuper001",
+  "orientation": "<u_F|u_0>, same k and physical PAW metric",
+  "max_norm_error": 2.6932758185882477e-06,
+  "zero_source": "/work/sunq/xjq/mosse-strain-20261108/e000/A/seed",
+  "gate_source": "/work/sunq/xjq/mosse-gate-scf-20261109",
+  "cache_sha256": {
+    "zero": "4f0ae0719f85ebfe757108d01da2c09cea846af46ca14d3013aa94d4ccfa976c",
+    "fm010": "69a918520377b3459b3759c679476d59f67e82687b6b11825dc9bd125a8f6b62",
+    "fp010": "c6e2eac08b36e84a957b4d26bb4fdd998a5bfb88996f3583cd1b0ca6b9202ae3"
+  }
+}

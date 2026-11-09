@@ -1,0 +1,2772 @@
+{
+  "scope": "half-filled gapped mirror-paired model; no structural energetics",
+  "grid": {
+    "n_exterior_kept": 3651,
+    "n_valley_total": 11520,
+    "exterior_area_weight": 18.729388047939047,
+    "valley_area_weight": 0.3580986219567645,
+    "bz_area_weight": 19.08848340903347,
+    "normalization_error": -0.000996739137658409
+  },
+  "coordinates": "60deg code; A1=a1,A2=a2-a1 is the 120deg convention",
+  "path": [
+    {
+      "lambda": 0.0,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          -0.3333333333333333,
+          0.6666666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02536263783670689,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4712892845341514e-05,
+          -1.5601890769503197e-17
+        ],
+        [
+          6.989993255423441e-17,
+          -2.4712892845322808e-05
+        ]
+      ],
+      "trace": -4.9425785690664325e-05,
+      "difference": -1.870587560716397e-17,
+      "offdiagonal_sum": 5.429804178473121e-17,
+      "delta_N_per_cell": -4.677633973815064e-07,
+      "dipole_over_e_d_per_cell": 2.338816986907532e-07,
+      "dipole_over_e_d_per_nm2": 4.464446925135004e-06,
+      "occupied_energy_eV_per_cell": -5.357485968220806,
+      "sampled_direct_gap_eV": 0.03319777597285772,
+      "sampled_indirect_gap_eV": 0.03319777597285771,
+      "sampled_mu_distance_eV": 0.016598887986428838
+    },
+    {
+      "lambda": 0.0625,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          -0.2916666666666667,
+          0.6458333333333334
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02526313226663445,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4217843244818717e-05,
+          -1.3818200304012765e-07
+        ],
+        [
+          -1.3818200301934046e-07,
+          -2.4377402078095056e-05
+        ]
+      ],
+      "trace": -4.8595245322913776e-05,
+      "difference": 1.5955883327633876e-07,
+      "offdiagonal_sum": -2.763640060594681e-07,
+      "delta_N_per_cell": -4.597334723033945e-07,
+      "dipole_over_e_d_per_cell": 2.2986673615169725e-07,
+      "dipole_over_e_d_per_nm2": 4.387807379320344e-06,
+      "occupied_energy_eV_per_cell": -5.3574859349613835,
+      "sampled_direct_gap_eV": 0.03301247350443263,
+      "sampled_indirect_gap_eV": 0.03296033094376912,
+      "sampled_mu_distance_eV": 0.01648016547188455
+    },
+    {
+      "lambda": 0.125,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          -0.25,
+          0.625
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.0251627133701657,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.2887875244279745e-05,
+          -2.327791413168879e-07
+        ],
+        [
+          -2.327791413508056e-07,
+          -2.315666544425986e-05
+        ]
+      ],
+      "trace": -4.6044540688539604e-05,
+      "difference": 2.687901999801141e-07,
+      "offdiagonal_sum": -4.6555828266769353e-07,
+      "delta_N_per_cell": -4.351816882249259e-07,
+      "dipole_over_e_d_per_cell": 2.1759084411246294e-07,
+      "dipole_over_e_d_per_nm2": 4.153479217798334e-06,
+      "occupied_energy_eV_per_cell": -5.357485847219209,
+      "sampled_direct_gap_eV": 0.03276623745483338,
+      "sampled_indirect_gap_eV": 0.032693238790994866,
+      "sampled_mu_distance_eV": 0.016346619395497426
+    },
+    {
+      "lambda": 0.1875,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          -0.20833333333333331,
+          0.6041666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02507441764378673,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.0711694306329706e-05,
+          -2.8245614619565995e-07
+        ],
+        [
+          -2.8245614618095175e-07,
+          -2.1037846570295794e-05
+        ]
+      ],
+      "trace": -4.17495408766255e-05,
+      "difference": 3.2615226396608734e-07,
+      "offdiagonal_sum": -5.649122923766117e-07,
+      "delta_N_per_cell": -3.940599996718374e-07,
+      "dipole_over_e_d_per_cell": 1.970299998359187e-07,
+      "dipole_over_e_d_per_nm2": 3.7610038829497983e-06,
+      "occupied_energy_eV_per_cell": -5.357485724747731,
+      "sampled_direct_gap_eV": 0.03253444335696903,
+      "sampled_indirect_gap_eV": 0.03244572873710031,
+      "sampled_mu_distance_eV": 0.01622286436855014
+    },
+    {
+      "lambda": 0.25,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          -0.16666666666666669,
+          0.5833333333333334
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025000592394669802,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -1.7723904829545992e-05,
+          -2.88609279409552e-07
+        ],
+        [
+          -2.886092794989312e-07,
+          -1.8057162120041743e-05
+        ]
+      ],
+      "trace": -3.5781066949587735e-05,
+      "difference": 3.3325729049575115e-07,
+      "offdiagonal_sum": -5.772185589084832e-07,
+      "delta_N_per_cell": -3.3722489501524407e-07,
+      "dipole_over_e_d_per_cell": 1.6861244750762204e-07,
+      "dipole_over_e_d_per_nm2": 3.2185559068057675e-06,
+      "occupied_energy_eV_per_cell": -5.357485588239284,
+      "sampled_direct_gap_eV": 0.03233320473201044,
+      "sampled_indirect_gap_eV": 0.0322331303394039,
+      "sampled_mu_distance_eV": 0.016116565169701925
+    },
+    {
+      "lambda": 0.3125,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          -0.125,
+          0.5625
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02494208056421953,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -1.4007948496508836e-05,
+          -2.5541759539509614e-07
+        ],
+        [
+          -2.5541759547008296e-07,
+          -1.4302879331363898e-05
+        ]
+      ],
+      "trace": -2.8310827827872734e-05,
+      "difference": 2.949308348550613e-07,
+      "offdiagonal_sum": -5.108351908651792e-07,
+      "delta_N_per_cell": -2.6644388449350427e-07,
+      "dipole_over_e_d_per_cell": 1.3322194224675213e-07,
+      "dipole_over_e_d_per_nm2": 2.5430048342963413e-06,
+      "occupied_energy_eV_per_cell": -5.357485457621403,
+      "sampled_direct_gap_eV": 0.03217031190954789,
+      "sampled_indirect_gap_eV": 0.03206194845372386,
+      "sampled_mu_distance_eV": 0.016030974226861915
+    },
+    {
+      "lambda": 0.375,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          -0.08333333333333331,
+          0.5416666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02489970193751572,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -9.694932961586329e-06,
+          -1.8976246772396547e-07
+        ],
+        [
+          -1.8976246768482463e-07,
+          -9.914051785092704e-06
+        ]
+      ],
+      "trace": -1.9608984746679033e-05,
+      "difference": 2.1911882350637529e-07,
+      "offdiagonal_sum": -3.795249354087901e-07,
+      "delta_N_per_cell": -1.8433473097388663e-07,
+      "dipole_over_e_d_per_cell": 9.216736548694331e-08,
+      "dipole_over_e_d_per_nm2": 1.7593352269518403e-06,
+      "occupied_energy_eV_per_cell": -5.357485350414828,
+      "sampled_direct_gap_eV": 0.03205069775864877,
+      "sampled_indirect_gap_eV": 0.031936567944282165,
+      "sampled_mu_distance_eV": 0.015968283972141072
+    },
+    {
+      "lambda": 0.4375,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          -0.041666666666666685,
+          0.5208333333333334
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.024874040680849308,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -4.957670221017251e-06,
+          -1.0092364701494827e-07
+        ],
+        [
+          -1.0092364707279796e-07,
+          -5.0742068106432304e-06
+        ]
+      ],
+      "trace": -1.003187703166048e-05,
+      "difference": 1.165365896259795e-07,
+      "offdiagonal_sum": -2.018472940877462e-07,
+      "delta_N_per_cell": -9.423395108120303e-08,
+      "dipole_over_e_d_per_cell": 4.711697554060151e-08,
+      "dipole_over_e_d_per_nm2": 8.993916058906071e-07,
+      "occupied_energy_eV_per_cell": -5.357485280286573,
+      "sampled_direct_gap_eV": 0.03197764487153458,
+      "sampled_indirect_gap_eV": 0.03186009176608702,
+      "sampled_mu_distance_eV": 0.015930045883043503
+    },
+    {
+      "lambda": 0.5,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.0,
+          0.5
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.024865447870766284,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          1.388149758166008e-16,
+          -1.4927746501574385e-17
+        ],
+        [
+          -6.402344621783977e-17,
+          1.4694719760455468e-16
+        ]
+      ],
+      "trace": 2.857621734211555e-16,
+      "difference": -8.132221787953873e-18,
+      "offdiagonal_sum": -7.895119271941416e-17,
+      "delta_N_per_cell": 5.07691463447583e-18,
+      "dipole_over_e_d_per_cell": -2.538457317237915e-18,
+      "dipole_over_e_d_per_nm2": -4.8455300384635516e-17,
+      "occupied_energy_eV_per_cell": -5.357485255918386,
+      "sampled_direct_gap_eV": 0.03195308084729045,
+      "sampled_indirect_gap_eV": 0.03183439082508577,
+      "sampled_mu_distance_eV": 0.015917195412542873
+    },
+    {
+      "lambda": 0.5625,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.041666666666666685,
+          0.4791666666666667
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.024874040680849325,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          4.957670221108854e-06,
+          1.0092364697638437e-07
+        ],
+        [
+          1.0092364701593199e-07,
+          5.074206810636167e-06
+        ]
+      ],
+      "trace": 1.0031877031745021e-05,
+      "difference": -1.1653658952731287e-07,
+      "offdiagonal_sum": 2.0184729399231635e-07,
+      "delta_N_per_cell": 9.423395111386602e-08,
+      "dipole_over_e_d_per_cell": -4.711697555693301e-08,
+      "dipole_over_e_d_per_nm2": -8.993916062023506e-07,
+      "occupied_energy_eV_per_cell": -5.357485280286573,
+      "sampled_direct_gap_eV": 0.031977644871534566,
+      "sampled_indirect_gap_eV": 0.03186009176608695,
+      "sampled_mu_distance_eV": 0.015930045883043465
+    },
+    {
+      "lambda": 0.625,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.08333333333333331,
+          0.4583333333333333
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.024899701937515735,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          9.694932961500836e-06,
+          1.89762467641565e-07
+        ],
+        [
+          1.8976246751445645e-07,
+          9.914051784831276e-06
+        ]
+      ],
+      "trace": 1.960898474633211e-05,
+      "difference": -2.1911882333043977e-07,
+      "offdiagonal_sum": 3.795249351560214e-07,
+      "delta_N_per_cell": 1.8433473097996883e-07,
+      "dipole_over_e_d_per_cell": -9.216736548998441e-08,
+      "dipole_over_e_d_per_nm2": -1.7593352270098902e-06,
+      "occupied_energy_eV_per_cell": -5.357485350414828,
+      "sampled_direct_gap_eV": 0.032050697758648806,
+      "sampled_indirect_gap_eV": 0.03193656794428219,
+      "sampled_mu_distance_eV": 0.01596828397214109
+    },
+    {
+      "lambda": 0.6875,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.125,
+          0.4375
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02494208056421951,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          1.4007948496781124e-05,
+          2.55417595527468e-07
+        ],
+        [
+          2.55417595506377e-07,
+          1.4302879331712397e-05
+        ]
+      ],
+      "trace": 2.831082782849352e-05,
+      "difference": -2.9493083493127394e-07,
+      "offdiagonal_sum": 5.10835191033845e-07,
+      "delta_N_per_cell": 2.664438845108749e-07,
+      "dipole_over_e_d_per_cell": -1.3322194225543745e-07,
+      "dipole_over_e_d_per_nm2": -2.543004834462131e-06,
+      "occupied_energy_eV_per_cell": -5.357485457621403,
+      "sampled_direct_gap_eV": 0.032170311909547854,
+      "sampled_indirect_gap_eV": 0.0320619484537239,
+      "sampled_mu_distance_eV": 0.016030974226861935
+    },
+    {
+      "lambda": 0.75,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.16666666666666669,
+          0.4166666666666667
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02500059239466982,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          1.772390482972257e-05,
+          2.886092792293029e-07
+        ],
+        [
+          2.8860927927446363e-07,
+          1.805716211991226e-05
+        ]
+      ],
+      "trace": 3.578106694963483e-05,
+      "difference": -3.3325729018968765e-07,
+      "offdiagonal_sum": 5.772185585037665e-07,
+      "delta_N_per_cell": 3.372248950226446e-07,
+      "dipole_over_e_d_per_cell": -1.686124475113223e-07,
+      "dipole_over_e_d_per_nm2": -3.2185559068764e-06,
+      "occupied_energy_eV_per_cell": -5.357485588239284,
+      "sampled_direct_gap_eV": 0.0323332047320104,
+      "sampled_indirect_gap_eV": 0.03223313033940389,
+      "sampled_mu_distance_eV": 0.016116565169701946
+    },
+    {
+      "lambda": 0.8125,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.20833333333333331,
+          0.3958333333333333
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02507441764378675,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          2.071169430603947e-05,
+          2.8245614623084263e-07
+        ],
+        [
+          2.8245614623726875e-07,
+          2.1037846570108667e-05
+        ]
+      ],
+      "trace": 4.174954087614813e-05,
+      "difference": -3.2615226406919836e-07,
+      "offdiagonal_sum": 5.649122924681114e-07,
+      "delta_N_per_cell": 3.9405999972006294e-07,
+      "dipole_over_e_d_per_cell": -1.9702999986003147e-07,
+      "dipole_over_e_d_per_nm2": -3.7610038834100748e-06,
+      "occupied_energy_eV_per_cell": -5.357485724747731,
+      "sampled_direct_gap_eV": 0.03253444335696902,
+      "sampled_indirect_gap_eV": 0.032445728737100346,
+      "sampled_mu_distance_eV": 0.01622286436855017
+    },
+    {
+      "lambda": 0.875,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.25,
+          0.375
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025162713370165693,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          2.288787524419121e-05,
+          2.327791413999763e-07
+        ],
+        [
+          2.32779141451158e-07,
+          2.3156665444150917e-05
+        ]
+      ],
+      "trace": 4.604454068834213e-05,
+      "difference": -2.687901999597074e-07,
+      "offdiagonal_sum": 4.655582828511343e-07,
+      "delta_N_per_cell": 4.351816882434928e-07,
+      "dipole_over_e_d_per_cell": -2.175908441217464e-07,
+      "dipole_over_e_d_per_nm2": -4.153479217975541e-06,
+      "occupied_energy_eV_per_cell": -5.357485847219209,
+      "sampled_direct_gap_eV": 0.03276623745483342,
+      "sampled_indirect_gap_eV": 0.03269323879099488,
+      "sampled_mu_distance_eV": 0.01634661939549744
+    },
+    {
+      "lambda": 0.9375,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.2916666666666667,
+          0.3541666666666667
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025263132266634486,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          2.42178432449564e-05,
+          1.3818200304118957e-07
+        ],
+        [
+          1.381820030413789e-07,
+          2.4377402078213603e-05
+        ]
+      ],
+      "trace": 4.859524532317e-05,
+      "difference": -1.595588332572026e-07,
+      "offdiagonal_sum": 2.7636400608256845e-07,
+      "delta_N_per_cell": 4.5973347230843894e-07,
+      "dipole_over_e_d_per_cell": -2.2986673615421947e-07,
+      "dipole_over_e_d_per_nm2": -4.387807379368489e-06,
+      "occupied_energy_eV_per_cell": -5.3574859349613835,
+      "sampled_direct_gap_eV": 0.03301247350443266,
+      "sampled_indirect_gap_eV": 0.032960330943769184,
+      "sampled_mu_distance_eV": 0.016480165471884585
+    },
+    {
+      "lambda": 1.0,
+      "t_eV": 0.005,
+      "parameters": {
+        "shift": [
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025362637836706906,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          2.4712892844984124e-05,
+          4.100080231262653e-17
+        ],
+        [
+          3.3291342143434427e-17,
+          2.4712892844913044e-05
+        ]
+      ],
+      "trace": 4.942578568989717e-05,
+      "difference": 7.107961680179187e-17,
+      "offdiagonal_sum": 7.429214445606096e-17,
+      "delta_N_per_cell": 4.677633974166139e-07,
+      "dipole_over_e_d_per_cell": -2.3388169870830694e-07,
+      "dipole_over_e_d_per_nm2": -4.4644469254700786e-06,
+      "occupied_energy_eV_per_cell": -5.357485968220806,
+      "sampled_direct_gap_eV": 0.03319777597285779,
+      "sampled_indirect_gap_eV": 0.033197775972857765,
+      "sampled_mu_distance_eV": 0.01659888798642888
+    },
+    {
+      "lambda": 0.0,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          -0.3333333333333333,
+          0.6666666666666666
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.024630655570549123,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -0.00019412140226371817,
+          5.077716715123486e-17
+        ],
+        [
+          7.052711773455528e-17,
+          -0.000194121402263827
+        ]
+      ],
+      "trace": -0.0003882428045275452,
+      "difference": 1.0882679306323251e-16,
+      "offdiagonal_sum": 1.2130428488579013e-16,
+      "delta_N_per_cell": -4.991892652424808e-06,
+      "dipole_over_e_d_per_cell": 2.495946326212404e-06,
+      "dipole_over_e_d_per_nm2": 4.764383003774348e-05,
+      "occupied_energy_eV_per_cell": -5.357579440154053,
+      "sampled_direct_gap_eV": 0.03466174052261187,
+      "sampled_indirect_gap_eV": 0.034661740522611846,
+      "sampled_mu_distance_eV": 0.017330870261305885
+    },
+    {
+      "lambda": 0.0625,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          -0.2916666666666667,
+          0.6458333333333334
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.024292598818770612,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -0.00019509401968355303,
+          4.710199519303134e-06
+        ],
+        [
+          4.710199519304519e-06,
+          -0.00018965514976264055
+        ]
+      ],
+      "trace": -0.0003847491694461936,
+      "difference": -5.438869920912484e-06,
+      "offdiagonal_sum": 9.420399038607653e-06,
+      "delta_N_per_cell": -4.9285599136565525e-06,
+      "dipole_over_e_d_per_cell": 2.4642799568282762e-06,
+      "dipole_over_e_d_per_nm2": 4.7039367071130234e-05,
+      "occupied_energy_eV_per_cell": -5.357578910056295,
+      "sampled_direct_gap_eV": 0.03427432608732956,
+      "sampled_indirect_gap_eV": 0.03392350814223946,
+      "sampled_mu_distance_eV": 0.016961754071119706
+    },
+    {
+      "lambda": 0.125,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          -0.25,
+          0.625
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.023890551942890848,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -0.00019088222559174005,
+          8.48416879050584e-06
+        ],
+        [
+          8.484168790527603e-06,
+          -0.00018108555132139372
+        ]
+      ],
+      "trace": -0.0003719677769131338,
+      "difference": -9.79667427034633e-06,
+      "offdiagonal_sum": 1.6968337581033444e-05,
+      "delta_N_per_cell": -4.721405582455095e-06,
+      "dipole_over_e_d_per_cell": 2.3607027912275475e-06,
+      "dipole_over_e_d_per_nm2": 4.506223606400601e-05,
+      "occupied_energy_eV_per_cell": -5.357577511431591,
+      "sampled_direct_gap_eV": 0.03357927857109574,
+      "sampled_indirect_gap_eV": 0.03295445962037204,
+      "sampled_mu_distance_eV": 0.016477229810185994
+    },
+    {
+      "lambda": 0.1875,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          -0.20833333333333331,
+          0.6041666666666666
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.0235214742348089,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -0.00017949285490654763,
+          1.0815428721766756e-05
+        ],
+        [
+          1.0815428721754069e-05,
+          -0.00016700427353867254
+        ]
+      ],
+      "trace": -0.00034649712844522014,
+      "difference": -1.2488581367875099e-05,
+      "offdiagonal_sum": 2.1630857443520823e-05,
+      "delta_N_per_cell": -4.346766160991517e-06,
+      "dipole_over_e_d_per_cell": 2.1733830804957585e-06,
+      "dipole_over_e_d_per_nm2": 4.148658687351731e-05,
+      "occupied_energy_eV_per_cell": -5.35757555890466,
+      "sampled_direct_gap_eV": 0.03287509973779607,
+      "sampled_indirect_gap_eV": 0.03198712277919259,
+      "sampled_mu_distance_eV": 0.015993561389596293
+    },
+    {
+      "lambda": 0.25,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          -0.16666666666666669,
+          0.5833333333333334
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.023209101156630947,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -0.00015942661363795566,
+          1.1418662314759829e-05
+        ],
+        [
+          1.1418662314812923e-05,
+          -0.00014624147811553005
+        ]
+      ],
+      "trace": -0.0003056680917534857,
+      "difference": -1.3185135522425615e-05,
+      "offdiagonal_sum": 2.2837324629572754e-05,
+      "delta_N_per_cell": -3.788908054731184e-06,
+      "dipole_over_e_d_per_cell": 1.894454027365592e-06,
+      "dipole_over_e_d_per_nm2": 3.6162254270544714e-05,
+      "occupied_energy_eV_per_cell": -5.357573382211691,
+      "sampled_direct_gap_eV": 0.03224854023122013,
+      "sampled_indirect_gap_eV": 0.03112069713836572,
+      "sampled_mu_distance_eV": 0.015560348569182859
+    },
+    {
+      "lambda": 0.3125,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          -0.125,
+          0.5625
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.022963968883741907,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -0.00013013353718823147,
+          1.029459981882599e-05
+        ],
+        [
+          1.0294599818798429e-05,
+          -0.00011824635723509416
+        ]
+      ],
+      "trace": -0.0002483798944233256,
+      "difference": -1.1887179953137315e-05,
+      "offdiagonal_sum": 2.058919963762442e-05,
+      "delta_N_per_cell": -3.0465962914294796e-06,
+      "dipole_over_e_d_per_cell": 1.5232981457147398e-06,
+      "dipole_over_e_d_per_nm2": 2.9077451381487237e-05,
+      "occupied_energy_eV_per_cell": -5.357571299096592,
+      "sampled_direct_gap_eV": 0.03175345477049999,
+      "sampled_indirect_gap_eV": 0.03039899605814291,
+      "sampled_mu_distance_eV": 0.015199498029071454
+    },
+    {
+      "lambda": 0.375,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          -0.08333333333333331,
+          0.5416666666666666
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.022783876039883022,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -9.231118107872251e-05,
+          7.711363770253235e-06
+        ],
+        [
+          7.711363770359912e-06,
+          -8.34068651813387e-05
+        ]
+      ],
+      "trace": -0.0001757180462600612,
+      "difference": -8.904315897383808e-06,
+      "offdiagonal_sum": 1.5422727540613145e-05,
+      "delta_N_per_cell": -2.138192941094261e-06,
+      "dipole_over_e_d_per_cell": 1.0690964705471305e-06,
+      "dipole_over_e_d_per_nm2": 2.0407430240695124e-05,
+      "occupied_energy_eV_per_cell": -5.357569589102742,
+      "sampled_direct_gap_eV": 0.0314048673624537,
+      "sampled_indirect_gap_eV": 0.02985863382409431,
+      "sampled_mu_distance_eV": 0.014929316912047153
+    },
+    {
+      "lambda": 0.4375,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          -0.041666666666666685,
+          0.5208333333333334
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.022670852247378873,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -4.793428044957152e-05,
+          4.110966523288219e-06
+        ],
+        [
+          4.110966523325009e-06,
+          -4.318734519189135e-05
+        ]
+      ],
+      "trace": -9.112162564146287e-05,
+      "difference": -4.746935257680165e-06,
+      "offdiagonal_sum": 8.221933046613228e-06,
+      "delta_N_per_cell": -1.1033529587800804e-06,
+      "dipole_over_e_d_per_cell": 5.516764793900402e-07,
+      "dipole_over_e_d_per_nm2": 1.053066732399077e-05,
+      "occupied_energy_eV_per_cell": -5.357568470407576,
+      "sampled_direct_gap_eV": 0.031196523152309474,
+      "sampled_indirect_gap_eV": 0.029518351752969393,
+      "sampled_mu_distance_eV": 0.014759175876484697
+    },
+    {
+      "lambda": 0.5,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.0,
+          0.5
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.022632942729691716,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          2.6940855346594793e-17,
+          4.8513845767386844e-17
+        ],
+        [
+          -2.9069056923120485e-17,
+          1.157149066487758e-17
+        ]
+      ],
+      "trace": 3.8512346011472374e-17,
+      "difference": 1.5369364681717213e-17,
+      "offdiagonal_sum": 1.944478884426636e-17,
+      "delta_N_per_cell": -6.957718027517524e-18,
+      "dipole_over_e_d_per_cell": 3.478859013758762e-18,
+      "dipole_over_e_d_per_nm2": 6.640614256650061e-17,
+      "occupied_energy_eV_per_cell": -5.357568081661557,
+      "sampled_direct_gap_eV": 0.031129788624501692,
+      "sampled_indirect_gap_eV": 0.029403413956707824,
+      "sampled_mu_distance_eV": 0.0147017069783539
+    },
+    {
+      "lambda": 0.5625,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.041666666666666685,
+          0.4791666666666667
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.022670852247378866,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          4.793428044971847e-05,
+          -4.110966523221722e-06
+        ],
+        [
+          -4.110966523196535e-06,
+          4.3187345191916126e-05
+        ]
+      ],
+      "trace": 9.112162564163459e-05,
+      "difference": 4.746935257802341e-06,
+      "offdiagonal_sum": -8.221933046418256e-06,
+      "delta_N_per_cell": 1.1033529587680907e-06,
+      "dipole_over_e_d_per_cell": -5.516764793840453e-07,
+      "dipole_over_e_d_per_nm2": -1.0530667323876336e-05,
+      "occupied_energy_eV_per_cell": -5.357568470407576,
+      "sampled_direct_gap_eV": 0.03119652315230946,
+      "sampled_indirect_gap_eV": 0.02951835175296942,
+      "sampled_mu_distance_eV": 0.014759175876484702
+    },
+    {
+      "lambda": 0.625,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.08333333333333331,
+          0.4583333333333333
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02278387603988303,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          9.231118107871095e-05,
+          -7.711363770267675e-06
+        ],
+        [
+          -7.711363770354552e-06,
+          8.340686518133649e-05
+        ]
+      ],
+      "trace": 0.00017571804626004744,
+      "difference": 8.904315897374456e-06,
+      "offdiagonal_sum": -1.5422727540622225e-05,
+      "delta_N_per_cell": 2.1381929411067798e-06,
+      "dipole_over_e_d_per_cell": -1.0690964705533899e-06,
+      "dipole_over_e_d_per_nm2": -2.0407430240814607e-05,
+      "occupied_energy_eV_per_cell": -5.357569589102742,
+      "sampled_direct_gap_eV": 0.031404867362453695,
+      "sampled_indirect_gap_eV": 0.02985863382409433,
+      "sampled_mu_distance_eV": 0.014929316912047151
+    },
+    {
+      "lambda": 0.6875,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.125,
+          0.4375
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.022963968883741918,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          0.00013013353718833713,
+          -1.0294599818885524e-05
+        ],
+        [
+          -1.0294599818760817e-05,
+          0.00011824635723484673
+        ]
+      ],
+      "trace": 0.00024837989442318386,
+      "difference": 1.1887179953490399e-05,
+      "offdiagonal_sum": -2.058919963764634e-05,
+      "delta_N_per_cell": 3.0465962914394174e-06,
+      "dipole_over_e_d_per_cell": -1.5232981457197087e-06,
+      "dipole_over_e_d_per_nm2": -2.9077451381582088e-05,
+      "occupied_energy_eV_per_cell": -5.357571299096592,
+      "sampled_direct_gap_eV": 0.03175345477049999,
+      "sampled_indirect_gap_eV": 0.03039899605814293,
+      "sampled_mu_distance_eV": 0.01519949802907146
+    },
+    {
+      "lambda": 0.75,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.16666666666666669,
+          0.4166666666666667
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.023209101156630975,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          0.00015942661363795653,
+          -1.1418662314577827e-05
+        ],
+        [
+          -1.1418662314713263e-05,
+          0.0001462414781154453
+        ]
+      ],
+      "trace": 0.0003056680917534018,
+      "difference": 1.318513552251124e-05,
+      "offdiagonal_sum": -2.283732462929109e-05,
+      "delta_N_per_cell": 3.788908054725852e-06,
+      "dipole_over_e_d_per_cell": -1.894454027362926e-06,
+      "dipole_over_e_d_per_nm2": -3.6162254270493824e-05,
+      "occupied_energy_eV_per_cell": -5.357573382211691,
+      "sampled_direct_gap_eV": 0.03224854023122016,
+      "sampled_indirect_gap_eV": 0.031120697138365717,
+      "sampled_mu_distance_eV": 0.015560348569182855
+    },
+    {
+      "lambda": 0.8125,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.20833333333333331,
+          0.3958333333333333
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.023521474234808885,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          0.0001794928549064327,
+          -1.0815428721806735e-05
+        ],
+        [
+          -1.0815428721738973e-05,
+          0.00016700427353869753
+        ]
+      ],
+      "trace": 0.00034649712844513026,
+      "difference": 1.2488581367735182e-05,
+      "offdiagonal_sum": -2.163085744354571e-05,
+      "delta_N_per_cell": 4.346766160984483e-06,
+      "dipole_over_e_d_per_cell": -2.1733830804922416e-06,
+      "dipole_over_e_d_per_nm2": -4.1486586873450175e-05,
+      "occupied_energy_eV_per_cell": -5.357575558904659,
+      "sampled_direct_gap_eV": 0.032875099737796086,
+      "sampled_indirect_gap_eV": 0.03198712277919258,
+      "sampled_mu_distance_eV": 0.015993561389596282
+    },
+    {
+      "lambda": 0.875,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.25,
+          0.375
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.023890551942890824,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          0.00019088222559160564,
+          -8.484168790562408e-06
+        ],
+        [
+          -8.484168790413994e-06,
+          0.00018108555132165954
+        ]
+      ],
+      "trace": 0.0003719677769132652,
+      "difference": 9.796674269946096e-06,
+      "offdiagonal_sum": -1.69683375809764e-05,
+      "delta_N_per_cell": 4.7214055824353575e-06,
+      "dipole_over_e_d_per_cell": -2.3607027912176788e-06,
+      "dipole_over_e_d_per_nm2": -4.506223606381763e-05,
+      "occupied_energy_eV_per_cell": -5.357577511431593,
+      "sampled_direct_gap_eV": 0.03357927857109575,
+      "sampled_indirect_gap_eV": 0.032954459620372044,
+      "sampled_mu_distance_eV": 0.01647722981018601
+    },
+    {
+      "lambda": 0.9375,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.2916666666666667,
+          0.3541666666666667
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02429259881877063,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          0.0001950940196834218,
+          -4.7101995192655345e-06
+        ],
+        [
+          -4.710199519325291e-06,
+          0.00018965514976250857
+        ]
+      ],
+      "trace": 0.00038474916944593036,
+      "difference": 5.438869920913216e-06,
+      "offdiagonal_sum": -9.420399038590826e-06,
+      "delta_N_per_cell": 4.928559913666093e-06,
+      "dipole_over_e_d_per_cell": -2.4642799568330463e-06,
+      "dipole_over_e_d_per_nm2": -4.703936707122129e-05,
+      "occupied_energy_eV_per_cell": -5.357578910056295,
+      "sampled_direct_gap_eV": 0.03427432608732957,
+      "sampled_indirect_gap_eV": 0.033923508142239454,
+      "sampled_mu_distance_eV": 0.01696175407111972
+    },
+    {
+      "lambda": 1.0,
+      "t_eV": 0.02,
+      "parameters": {
+        "shift": [
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "tunneling_eV": 0.02,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02463065557054917,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          0.00019412140226411151,
+          3.058780053342377e-17
+        ],
+        [
+          -2.3936621949885054e-17,
+          0.00019412140226398694
+        ]
+      ],
+      "trace": 0.00038824280452809845,
+      "difference": 1.2457482961858446e-16,
+      "offdiagonal_sum": 6.6511785835387176e-18,
+      "delta_N_per_cell": 4.991892652442599e-06,
+      "dipole_over_e_d_per_cell": -2.4959463262212994e-06,
+      "dipole_over_e_d_per_nm2": -4.764383003791328e-05,
+      "occupied_energy_eV_per_cell": -5.357579440154053,
+      "sampled_direct_gap_eV": 0.03466174052261189,
+      "sampled_indirect_gap_eV": 0.034661740522611874,
+      "sampled_mu_distance_eV": 0.01733087026130592
+    }
+  ],
+  "polar_local": [
+    {
+      "direction": [
+        0.23,
+        0.41
+      ],
+      "q": 0.0,
+      "parameters": {
+        "shift": [
+          -0.3333333333333333,
+          0.6666666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02536263783670689,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4712892845345054e-05,
+          -1.703878790308879e-17
+        ],
+        [
+          7.262588663513482e-17,
+          -2.4712892845335527e-05
+        ]
+      ],
+      "trace": -4.942578569068058e-05,
+      "difference": -9.52742659071637e-18,
+      "offdiagonal_sum": 5.558709873204603e-17,
+      "delta_N_per_cell": -4.6776339738150553e-07,
+      "dipole_over_e_d_per_cell": 2.3388169869075277e-07,
+      "dipole_over_e_d_per_nm2": 4.464446925134996e-06,
+      "occupied_energy_eV_per_cell": -5.357485968220806,
+      "sampled_direct_gap_eV": 0.03319777597285772,
+      "sampled_indirect_gap_eV": 0.03319777597285771,
+      "sampled_mu_distance_eV": 0.016598887986428838
+    },
+    {
+      "direction": [
+        0.23,
+        0.41
+      ],
+      "q": -0.04,
+      "parameters": {
+        "shift": [
+          -0.3425333333333333,
+          0.6502666666666667
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025303062212319424,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4657778937750114e-05,
+          -2.0840066117167217e-08
+        ],
+        [
+          -2.1316211873446103e-08,
+          -2.4449715474897037e-05
+        ]
+      ],
+      "trace": -4.910749441264715e-05,
+      "difference": -2.0806346285307778e-07,
+      "offdiagonal_sum": -4.215627799061332e-08,
+      "delta_N_per_cell": -4.6468196106709435e-07,
+      "dipole_over_e_d_per_cell": 2.3234098053354717e-07,
+      "dipole_over_e_d_per_nm2": 4.43503695215318e-06,
+      "occupied_energy_eV_per_cell": -5.357485954848778,
+      "sampled_direct_gap_eV": 0.033100354388904935,
+      "sampled_indirect_gap_eV": 0.033061565487500486,
+      "sampled_mu_distance_eV": 0.01653078274375024
+    },
+    {
+      "direction": [
+        0.23,
+        0.41
+      ],
+      "q": -0.02,
+      "parameters": {
+        "shift": [
+          -0.3379333333333333,
+          0.6584666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025336194204104136,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4727599977003547e-05,
+          -9.82039598719132e-09
+        ],
+        [
+          -9.880126104645132e-09,
+          -2.4619176783208453e-05
+        ]
+      ],
+      "trace": -4.9346776760212e-05,
+      "difference": -1.08423193795094e-07,
+      "offdiagonal_sum": -1.9700522091836452e-08,
+      "delta_N_per_cell": -4.6699788041578806e-07,
+      "dipole_over_e_d_per_cell": 2.3349894020789403e-07,
+      "dipole_over_e_d_per_nm2": 4.45714064618528e-06,
+      "occupied_energy_eV_per_cell": -5.357485964804249,
+      "sampled_direct_gap_eV": 0.03316324872324518,
+      "sampled_indirect_gap_eV": 0.03314011135809289,
+      "sampled_mu_distance_eV": 0.016570055679046444
+    },
+    {
+      "direction": [
+        0.23,
+        0.41
+      ],
+      "q": -0.01,
+      "parameters": {
+        "shift": [
+          -0.33563333333333334,
+          0.6625666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02535211112974233,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4730699391834437e-05,
+          -4.747132552491575e-09
+        ],
+        [
+          -4.754605502381833e-09,
+          -2.4675409774425556e-05
+        ]
+      ],
+      "trace": -4.940610916626e-05,
+      "difference": -5.5289617408880645e-08,
+      "offdiagonal_sum": -9.501738054873409e-09,
+      "delta_N_per_cell": -4.675726792640501e-07,
+      "dipole_over_e_d_per_cell": 2.3378633963202505e-07,
+      "dipole_over_e_d_per_nm2": 4.462626665324571e-06,
+      "occupied_energy_eV_per_cell": -5.3574859673577535,
+      "sampled_direct_gap_eV": 0.03318706191469155,
+      "sampled_indirect_gap_eV": 0.033175567537538864,
+      "sampled_mu_distance_eV": 0.016587783768769425
+    },
+    {
+      "direction": [
+        0.23,
+        0.41
+      ],
+      "q": 0.01,
+      "parameters": {
+        "shift": [
+          -0.3310333333333333,
+          0.6707666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025352527606559212,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4674434357939175e-05,
+          4.394812506840052e-09
+        ],
+        [
+          4.402285323324403e-09,
+          -2.473183634842864e-05
+        ]
+      ],
+      "trace": -4.940627070636781e-05,
+      "difference": 5.740199048946592e-08,
+      "offdiagonal_sum": 8.797097830164455e-09,
+      "delta_N_per_cell": -4.6757411076349504e-07,
+      "dipole_over_e_d_per_cell": 2.3378705538174752e-07,
+      "dipole_over_e_d_per_nm2": 4.462640327901273e-06,
+      "occupied_energy_eV_per_cell": -5.357485967340502,
+      "sampled_direct_gap_eV": 0.0331872848507251,
+      "sampled_indirect_gap_eV": 0.03317642555442874,
+      "sampled_mu_distance_eV": 0.016588212777214367
+    },
+    {
+      "direction": [
+        0.23,
+        0.41
+      ],
+      "q": 0.02,
+      "parameters": {
+        "shift": [
+          -0.3287333333333333,
+          0.6748666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02533747457283229,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.461559952463175e-05,
+          8.411352597706903e-09
+        ],
+        [
+          8.471082791674565e-09,
+          -2.4732469032146726e-05
+        ]
+      ],
+      "trace": -4.9348068556778475e-05,
+      "difference": 1.1686950751497668e-07,
+      "offdiagonal_sum": 1.6882435389381468e-08,
+      "delta_N_per_cell": -4.6700932810539016e-07,
+      "dipole_over_e_d_per_cell": 2.3350466405269508e-07,
+      "dipole_over_e_d_per_nm2": 4.457249905701801e-06,
+      "occupied_energy_eV_per_cell": -5.357485964666301,
+      "sampled_direct_gap_eV": 0.03316308456288056,
+      "sampled_indirect_gap_eV": 0.03314265162745316,
+      "sampled_mu_distance_eV": 0.016571325813726567
+    },
+    {
+      "direction": [
+        0.23,
+        0.41
+      ],
+      "q": 0.04,
+      "parameters": {
+        "shift": [
+          -0.32413333333333333,
+          0.6830666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02530400660248628,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.44380071342807e-05,
+          1.520768154997546e-08
+        ],
+        [
+          1.568383753768283e-08,
+          -2.4679804978088546e-05
+        ]
+      ],
+      "trace": -4.9117812112369246e-05,
+      "difference": 2.417978438078457e-07,
+      "offdiagonal_sum": 3.089151908765829e-08,
+      "delta_N_per_cell": -4.6477341160200006e-07,
+      "dipole_over_e_d_per_cell": 2.3238670580100003e-07,
+      "dipole_over_e_d_per_nm2": 4.435909778162328e-06,
+      "occupied_energy_eV_per_cell": -5.3574859537465755,
+      "sampled_direct_gap_eV": 0.03309633254863433,
+      "sampled_indirect_gap_eV": 0.03306366419934983,
+      "sampled_mu_distance_eV": 0.01653183209967491
+    },
+    {
+      "direction": [
+        -0.41,
+        0.23
+      ],
+      "q": 0.0,
+      "parameters": {
+        "shift": [
+          -0.3333333333333333,
+          0.6666666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02536263783670689,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4712892845340938e-05,
+          -1.5314679180317305e-17
+        ],
+        [
+          7.058194395963929e-17,
+          -2.4712892845322835e-05
+        ]
+      ],
+      "trace": -4.942578569066377e-05,
+      "difference": -1.8102788148718907e-17,
+      "offdiagonal_sum": 5.526726477932199e-17,
+      "delta_N_per_cell": -4.677633973815064e-07,
+      "dipole_over_e_d_per_cell": 2.338816986907532e-07,
+      "dipole_over_e_d_per_nm2": 4.464446925135004e-06,
+      "occupied_energy_eV_per_cell": -5.357485968220806,
+      "sampled_direct_gap_eV": 0.03319777597285772,
+      "sampled_indirect_gap_eV": 0.03319777597285771,
+      "sampled_mu_distance_eV": 0.016598887986428838
+    },
+    {
+      "direction": [
+        -0.41,
+        0.23
+      ],
+      "q": -0.04,
+      "parameters": {
+        "shift": [
+          -0.3169333333333333,
+          0.6574666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025327290152923742,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4619734203623916e-05,
+          -6.222638708576417e-08
+        ],
+        [
+          -6.217156037402835e-08,
+          -2.467866724917927e-05
+        ]
+      ],
+      "trace": -4.9298401452803185e-05,
+      "difference": 5.893304555535365e-08,
+      "offdiagonal_sum": -1.243979474597925e-07,
+      "delta_N_per_cell": -4.66529544535413e-07,
+      "dipole_over_e_d_per_cell": 2.332647722677065e-07,
+      "dipole_over_e_d_per_nm2": 4.4526707353440826e-06,
+      "occupied_energy_eV_per_cell": -5.357485962775006,
+      "sampled_direct_gap_eV": 0.033147987182711156,
+      "sampled_indirect_gap_eV": 0.03311983960330615,
+      "sampled_mu_distance_eV": 0.016559919801653073
+    },
+    {
+      "direction": [
+        -0.41,
+        0.23
+      ],
+      "q": -0.02,
+      "parameters": {
+        "shift": [
+          -0.32513333333333333,
+          0.6620666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02534790352794405,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4681759677804153e-05,
+          -3.182752495770278e-08
+        ],
+        [
+          -3.1820661832645165e-08,
+          -2.4712348527895966e-05
+        ]
+      ],
+      "trace": -4.939410820570012e-05,
+      "difference": 3.058885009181347e-08,
+      "offdiagonal_sum": -6.364818679034794e-08,
+      "delta_N_per_cell": -4.674564028499283e-07,
+      "dipole_over_e_d_per_cell": 2.3372820142496416e-07,
+      "dipole_over_e_d_per_nm2": 4.461516895123658e-06,
+      "occupied_energy_eV_per_cell": -5.357485966839205,
+      "sampled_direct_gap_eV": 0.03318141053976501,
+      "sampled_indirect_gap_eV": 0.03316631451762217,
+      "sampled_mu_distance_eV": 0.016583157258811085
+    },
+    {
+      "direction": [
+        -0.41,
+        0.23
+      ],
+      "q": -0.01,
+      "parameters": {
+        "shift": [
+          -0.3292333333333333,
+          0.6643666666666667
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025356729243506224,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4701157753261852e-05,
+          -1.6091203602081974e-08
+        ],
+        [
+          -1.6090345484872233e-08,
+          -2.4716730469914135e-05
+        ]
+      ],
+      "trace": -4.941788822317599e-05,
+      "difference": 1.5572716652283164e-08,
+      "offdiagonal_sum": -3.218154908695421e-08,
+      "delta_N_per_cell": -4.676868412994248e-07,
+      "dipole_over_e_d_per_cell": 2.338434206497124e-07,
+      "dipole_over_e_d_per_nm2": 4.4637162553836665e-06,
+      "occupied_energy_eV_per_cell": -5.357485967872934,
+      "sampled_direct_gap_eV": 0.03319341912779231,
+      "sampled_indirect_gap_eV": 0.03318546634015607,
+      "sampled_mu_distance_eV": 0.016592733170078013
+    },
+    {
+      "direction": [
+        -0.41,
+        0.23
+      ],
+      "q": 0.01,
+      "parameters": {
+        "shift": [
+          -0.3374333333333333,
+          0.6689666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02535699319950124,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4717028997985962e-05,
+          1.644352439209894e-08
+        ],
+        [
+          1.644266623239129e-08,
+          -2.4700904661826974e-05
+        ]
+      ],
+      "trace": -4.941793365981293e-05,
+      "difference": -1.6124336158988e-08,
+      "offdiagonal_sum": 3.288619062449023e-08,
+      "delta_N_per_cell": -4.67687243921535e-07,
+      "dipole_over_e_d_per_cell": 2.338436219607675e-07,
+      "dipole_over_e_d_per_nm2": 4.463720098106402e-06,
+      "occupied_energy_eV_per_cell": -5.357485967868081,
+      "sampled_direct_gap_eV": 0.033193423132820796,
+      "sampled_indirect_gap_eV": 0.033185991565289716,
+      "sampled_mu_distance_eV": 0.016592995782644848
+    },
+    {
+      "direction": [
+        -0.41,
+        0.23
+      ],
+      "q": 0.02,
+      "parameters": {
+        "shift": [
+          -0.3415333333333333,
+          0.6712666666666667
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025348981579323998,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4713633333383898e-05,
+          3.3236578146944824e-08
+        ],
+        [
+          3.3229715113863025e-08,
+          -2.4680838306972953e-05
+        ]
+      ],
+      "trace": -4.939447164035685e-05,
+      "difference": -3.2795026410945114e-08,
+      "offdiagonal_sum": 6.646629326080785e-08,
+      "delta_N_per_cell": -4.674596233880593e-07,
+      "dipole_over_e_d_per_cell": 2.3372981169402965e-07,
+      "dipole_over_e_d_per_nm2": 4.461547632717999e-06,
+      "occupied_energy_eV_per_cell": -5.357485966800398,
+      "sampled_direct_gap_eV": 0.0331816295238572,
+      "sampled_indirect_gap_eV": 0.033168496426427344,
+      "sampled_mu_distance_eV": 0.016584248213213665
+    },
+    {
+      "direction": [
+        -0.41,
+        0.23
+      ],
+      "q": 0.04,
+      "parameters": {
+        "shift": [
+          -0.34973333333333334,
+          0.6758666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025328832559701288,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4684529973163664e-05,
+          6.78589226930069e-08
+        ],
+        [
+          6.78040956964321e-08,
+          -2.4616777072130725e-05
+        ]
+      ],
+      "trace": -4.930130704529439e-05,
+      "difference": -6.775290103293915e-08,
+      "offdiagonal_sum": 1.35663018389439e-07,
+      "delta_N_per_cell": -4.6655529436921837e-07,
+      "dipole_over_e_d_per_cell": 2.3327764718460919e-07,
+      "dipole_over_e_d_per_nm2": 4.452916497981772e-06,
+      "occupied_energy_eV_per_cell": -5.357485962464705,
+      "sampled_direct_gap_eV": 0.033147144143610106,
+      "sampled_indirect_gap_eV": 0.033122807289072305,
+      "sampled_mu_distance_eV": 0.016561403644536142
+    }
+  ],
+  "essential_terms": {
+    "reference": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.023975658210999493,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -6.878622949030833e-07,
+          -1.28795789360636e-07
+        ],
+        [
+          -1.2066070471359282e-07,
+          8.484719985155882e-07
+        ]
+      ],
+      "trace": 1.6060970361250492e-07,
+      "difference": -1.5363342934186714e-06,
+      "offdiagonal_sum": -2.4945649407422883e-07,
+      "delta_N_per_cell": 1.417684848923336e-09,
+      "dipole_over_e_d_per_cell": -7.08842424461668e-10,
+      "dipole_over_e_d_per_nm2": -1.35307268589556e-08,
+      "occupied_energy_eV_per_cell": -5.357480121563751,
+      "sampled_direct_gap_eV": 0.028857234297777687,
+      "sampled_indirect_gap_eV": 0.02885719921193592,
+      "sampled_mu_distance_eV": 0.01442859960596795,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 1.8174540230252396e-18,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 0.020000000000000004,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.11175513758867144
+      }
+    },
+    "no_Rashba": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 1.2230635358656539e-09,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.0,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -3.815418657433852e-18,
+          2.953137717162583e-17
+        ],
+        [
+          2.6387134589638677e-17,
+          2.1297852957218228e-17
+        ]
+      ],
+      "trace": 1.7482434299784376e-17,
+      "difference": -2.511327161465208e-17,
+      "offdiagonal_sum": 5.591851176126451e-17,
+      "delta_N_per_cell": 1.1139287550221979e-11,
+      "dipole_over_e_d_per_cell": -5.5696437751109895e-12,
+      "dipole_over_e_d_per_nm2": -1.0631605279543259e-10,
+      "occupied_energy_eV_per_cell": -5.356086695070511,
+      "sampled_direct_gap_eV": 0.07680483225425841,
+      "sampled_indirect_gap_eV": 0.07680478927490322,
+      "sampled_mu_distance_eV": 0.03840239463745161,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 1.8174540230252396e-18,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 0.020000000000000004,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.0
+      }
+    },
+    "Rashba_reversed": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02397565821099948,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": -0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          6.878622948841983e-07,
+          1.2879578950347587e-07
+        ],
+        [
+          1.206607047059162e-07,
+          -8.484719985085197e-07
+        ]
+      ],
+      "trace": -1.6060970362432135e-07,
+      "difference": 1.5363342933927181e-06,
+      "offdiagonal_sum": 2.494564942093921e-07,
+      "delta_N_per_cell": 1.4176848590595684e-09,
+      "dipole_over_e_d_per_cell": -7.088424295297842e-10,
+      "dipole_over_e_d_per_nm2": -1.3530726955698252e-08,
+      "occupied_energy_eV_per_cell": -5.357480121563751,
+      "sampled_direct_gap_eV": 0.028857234297777687,
+      "sampled_indirect_gap_eV": 0.028857199211935927,
+      "sampled_mu_distance_eV": 0.014428599605967962,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 1.8174540230252396e-18,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 0.020000000000000004,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.11175513758867144
+      }
+    },
+    "no_staggered": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.028271473740612507,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.0,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          3.754015763250969e-17,
+          -7.422938779012924e-17
+        ],
+        [
+          -4.266349021658547e-17,
+          6.624669111353972e-17
+        ]
+      ],
+      "trace": 1.0378684874604942e-16,
+      "difference": -2.8706533481030026e-17,
+      "offdiagonal_sum": -1.168928780067147e-16,
+      "delta_N_per_cell": -6.900698930667432e-18,
+      "dipole_over_e_d_per_cell": 3.450349465333716e-18,
+      "dipole_over_e_d_per_nm2": 6.586193852439009e-17,
+      "occupied_energy_eV_per_cell": -5.357278015893662,
+      "sampled_direct_gap_eV": 0.040262911818835706,
+      "sampled_indirect_gap_eV": 0.040262911818704325,
+      "sampled_mu_distance_eV": 0.020131455909352156,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 1.8174540230252396e-18,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 2.710505431213761e-19,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.11175513758867144
+      }
+    },
+    "staggered_reversed": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.023975658210999482,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": -0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          6.878622951421397e-07,
+          1.2879578957475586e-07
+        ],
+        [
+          1.20660704775749e-07,
+          -8.484719983611506e-07
+        ]
+      ],
+      "trace": -1.606097032190109e-07,
+      "difference": 1.5363342935032903e-06,
+      "offdiagonal_sum": 2.4945649435050483e-07,
+      "delta_N_per_cell": -1.4176848364068617e-09,
+      "dipole_over_e_d_per_cell": 7.088424182034308e-10,
+      "dipole_over_e_d_per_nm2": 1.3530726739495344e-08,
+      "occupied_energy_eV_per_cell": -5.357480121563751,
+      "sampled_direct_gap_eV": 0.028857234297777694,
+      "sampled_indirect_gap_eV": 0.02885719921193592,
+      "sampled_mu_distance_eV": 0.01442859960596796,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 1.8174540230252396e-18,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 0.020000000000000004,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.11175513758867144
+      }
+    },
+    "no_intrinsic_SOC": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 1.4975051051621668e-09,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.0,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -9.873747041803431e-08,
+          -2.289507420088301e-08
+        ],
+        [
+          -2.2177035633136244e-09,
+          5.6614227399532864e-08
+        ]
+      ],
+      "trace": -4.2123243018501444e-08,
+      "difference": -1.5535169781756717e-07,
+      "offdiagonal_sum": -2.5112777764196635e-08,
+      "delta_N_per_cell": -7.773741945157844e-09,
+      "dipole_over_e_d_per_cell": 3.886870972578922e-09,
+      "dipole_over_e_d_per_nm2": 7.419447207312649e-08,
+      "occupied_energy_eV_per_cell": -5.355267497047072,
+      "sampled_direct_gap_eV": 0.012877213932727649,
+      "sampled_indirect_gap_eV": 0.012877209673221085,
+      "sampled_mu_distance_eV": 0.00643860483661054,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 1.8174540230252396e-18,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 0.02,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.11175513758867144
+      }
+    },
+    "same_only": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02397605212706399,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 0.0
+      },
+      "C": [
+        [
+          2.2905590473466883e-10,
+          3.676009256330808e-11
+        ],
+        [
+          3.668307981903181e-11,
+          -2.2327450138457038e-10
+        ]
+      ],
+      "trace": 5.78140335009845e-12,
+      "difference": 4.5233040611923924e-10,
+      "offdiagonal_sum": 7.344317238233989e-11,
+      "delta_N_per_cell": 1.7755989974527043e-18,
+      "dipole_over_e_d_per_cell": -8.877994987263522e-19,
+      "dipole_over_e_d_per_nm2": -1.694674600198619e-17,
+      "occupied_energy_eV_per_cell": -5.357479903296784,
+      "sampled_direct_gap_eV": 0.028848210411437702,
+      "sampled_indirect_gap_eV": 0.028848210411437692,
+      "sampled_mu_distance_eV": 0.014424105205718823,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 1.8174540230252396e-18,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 0.020000000000000004,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.11175513758867144
+      }
+    },
+    "cross_only": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02541195703929178,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 0.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          7.843352601422777e-08,
+          2.5513214104828635e-10
+        ],
+        [
+          2.5488776102122683e-10,
+          7.514052234386982e-08
+        ]
+      ],
+      "trace": 1.535740483580976e-07,
+      "difference": 3.2930036703579543e-09,
+      "offdiagonal_sum": 5.100199020695132e-10,
+      "delta_N_per_cell": 1.3062340652205346e-09,
+      "dipole_over_e_d_per_cell": -6.531170326102673e-10,
+      "dipole_over_e_d_per_nm2": -1.2467013641138249e-08,
+      "occupied_energy_eV_per_cell": -5.357479943673142,
+      "sampled_direct_gap_eV": 0.03310027761573733,
+      "sampled_indirect_gap_eV": 0.0330993285534846,
+      "sampled_mu_distance_eV": 0.016549664276742298,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 9.69739903612216e-19,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 0.020000000000000004,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.11175513758867144
+      }
+    },
+    "decoupled": {
+      "parameters": {
+        "shift": [
+          0.023,
+          0.041
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02541380894788669,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 0.0,
+        "cross_scale": 0.0
+      },
+      "C": [
+        [
+          -2.8872068708201106e-17,
+          4.6850731120663177e-17
+        ],
+        [
+          -4.178538587952444e-18,
+          -1.141994752990584e-16
+        ]
+      ],
+      "trace": -1.4307154400725952e-16,
+      "difference": 8.53274065908573e-17,
+      "offdiagonal_sum": 4.267219253271073e-17,
+      "delta_N_per_cell": -5.721322407653511e-18,
+      "dipole_over_e_d_per_cell": 2.8606612038267553e-18,
+      "dipole_over_e_d_per_nm2": 5.460568392811269e-17,
+      "occupied_energy_eV_per_cell": -5.357479733616607,
+      "sampled_direct_gap_eV": 0.033095488146448394,
+      "sampled_indirect_gap_eV": 0.03309548814644837,
+      "sampled_mu_distance_eV": 0.01654774407322418,
+      "symmetry": {
+        "C3_eV": 3.855927796350635e-16,
+        "mirror_pair_eV": 0.0,
+        "time_reversal_eV": 0.0,
+        "graphene_inversion_eV": 0.020000000000000004,
+        "single_layer_vertical_mirror_eV": 2.7755575615628914e-17,
+        "single_layer_horizontal_mirror_eV": 0.11175513758867144
+      }
+    }
+  },
+  "fine": {
+    "AB": {
+      "parameters": {
+        "shift": [
+          -0.3333333333333333,
+          0.6666666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02536264669576064,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.471295281683727e-05,
+          -6.968255709333186e-18
+        ],
+        [
+          1.617397176592716e-17,
+          -2.4712952816888147e-05
+        ]
+      ],
+      "trace": -4.942590563372542e-05,
+      "difference": 5.0876186943882296e-17,
+      "offdiagonal_sum": 9.205716056593974e-18,
+      "delta_N_per_cell": -4.674639774007683e-07,
+      "dipole_over_e_d_per_cell": 2.3373198870038415e-07,
+      "dipole_over_e_d_per_nm2": 4.461589188467678e-06,
+      "occupied_energy_eV_per_cell": -5.357447590720679,
+      "sampled_direct_gap_eV": 0.03319775547612737,
+      "sampled_indirect_gap_eV": 0.03319775547612734,
+      "sampled_mu_distance_eV": 0.01659887773806367
+    },
+    "mid": {
+      "parameters": {
+        "shift": [
+          0.0,
+          0.5
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.02486546752310015,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          8.30131046916292e-17,
+          -8.507655324370704e-17
+        ],
+        [
+          -2.2983359619042742e-17,
+          3.762531837293708e-17
+        ]
+      ],
+      "trace": 1.2063842306456627e-16,
+      "difference": 4.5387786318692116e-17,
+      "offdiagonal_sum": -1.0805991286274978e-16,
+      "delta_N_per_cell": 7.61735978299586e-18,
+      "dipole_over_e_d_per_cell": -3.80867989149793e-18,
+      "dipole_over_e_d_per_nm2": -7.270192291917759e-17,
+      "occupied_energy_eV_per_cell": -5.357446878369346,
+      "sampled_direct_gap_eV": 0.031952916675593634,
+      "sampled_indirect_gap_eV": 0.03183471784735989,
+      "sampled_mu_distance_eV": 0.015917358923679924
+    },
+    "BA": {
+      "parameters": {
+        "shift": [
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025362646695760643,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          2.471295281669986e-05,
+          -1.616220039798925e-17
+        ],
+        [
+          -1.8441637248029604e-17,
+          2.4712952816625356e-05
+        ]
+      ],
+      "trace": 4.942590563332522e-05,
+      "difference": 7.450501804048826e-17,
+      "offdiagonal_sum": -3.4603837646018853e-17,
+      "delta_N_per_cell": 4.674639773951663e-07,
+      "dipole_over_e_d_per_cell": -2.3373198869758314e-07,
+      "dipole_over_e_d_per_nm2": -4.461589188414211e-06,
+      "occupied_energy_eV_per_cell": -5.357447590720679,
+      "sampled_direct_gap_eV": 0.03319775547612738,
+      "sampled_indirect_gap_eV": 0.03319775547612737,
+      "sampled_mu_distance_eV": 0.01659887773806365
+    },
+    "AB_plus": {
+      "parameters": {
+        "shift": [
+          -0.3310333333333333,
+          0.6707666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.025352134428280236,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4674494320273477e-05,
+          4.3948100018136e-09
+        ],
+        [
+          4.402282924565146e-09,
+          -2.473189628093269e-05
+        ]
+      ],
+      "trace": -4.9406390601206166e-05,
+      "difference": 5.740196065921185e-08,
+      "offdiagonal_sum": 8.797092926378746e-09,
+      "delta_N_per_cell": -4.6727481453596234e-07,
+      "dipole_over_e_d_per_cell": 2.3363740726798117e-07,
+      "dipole_over_e_d_per_nm2": 4.459783772364451e-06,
+      "occupied_energy_eV_per_cell": -5.357447589840318,
+      "sampled_direct_gap_eV": 0.03318724654107195,
+      "sampled_indirect_gap_eV": 0.03317557428659666,
+      "sampled_mu_distance_eV": 0.016587787143298324
+    },
+    "AB_minus": {
+      "parameters": {
+        "shift": [
+          -0.33563333333333334,
+          0.6625666666666666
+        ],
+        "tunneling_eV": 0.005,
+        "decay_nm": 0.16,
+        "cross_sublattice": true,
+        "lattice_shell": 5,
+        "mu_eV": 0.0253516435835228,
+        "bond_nm": 0.142,
+        "rashba_soc_eV": 0.02,
+        "intrinsic_soc_eV": 0.01,
+        "staggered_eV": 0.01,
+        "stacking": "mirror",
+        "bond_anisotropy_eV": 0.0,
+        "same_scale": 1.0,
+        "cross_scale": 1.0
+      },
+      "C": [
+        [
+          -2.4730759324267633e-05,
+          -4.74713009368723e-09
+        ],
+        [
+          -4.754603066187261e-09,
+          -2.4675469736768444e-05
+        ]
+      ],
+      "trace": -4.940622906103608e-05,
+      "difference": -5.5289587499188437e-08,
+      "offdiagonal_sum": -9.50173315987449e-09,
+      "delta_N_per_cell": -4.67273383917238e-07,
+      "dipole_over_e_d_per_cell": 2.33636691958619e-07,
+      "dipole_over_e_d_per_nm2": 4.459770118193559e-06,
+      "occupied_energy_eV_per_cell": -5.3574475898575695,
+      "sampled_direct_gap_eV": 0.03318719122348204,
+      "sampled_indirect_gap_eV": 0.03317458779488379,
+      "sampled_mu_distance_eV": 0.016587293897441895
+    }
+  }
+}

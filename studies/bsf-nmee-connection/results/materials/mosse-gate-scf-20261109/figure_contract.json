@@ -1,0 +1,15 @@
+{
+  "question": "Does gate screening preserve net gain and upper-layer dominance?",
+  "archetype": "quantitative grid",
+  "backend": "python",
+  "dimensions_mm": [
+    183,
+    75
+  ],
+  "data": "same \u00b10.10 interval; all tested state cutoffs retained, duplicate full projection windows omitted",
+  "mark_definition": "points and spans: basis choices; filled point highest state cutoff, not statistical uncertainty",
+  "panel_a": "absolute net sensitivity, independent layer sum vs bilayer, with/without gate screening",
+  "panel_b": "signed layer and net sensitivities after gate SCF",
+  "no_near_zero_normalization": true,
+  "model_upper_reference": "approximate mirror; SCF upper reference exact geometry"
+}

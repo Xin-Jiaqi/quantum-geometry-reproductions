@@ -1,0 +1,9 @@
+{
+  "mono_m001_error_A": 3.000000112000258e-08,
+  "n_atoms": {
+    "A": 8,
+    "B": 8,
+    "mono": 4
+  },
+  "same_fixed_cell": true
+}

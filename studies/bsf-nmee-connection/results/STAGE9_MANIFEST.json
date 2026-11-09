@@ -1,0 +1,26 @@
+{
+  "stage": 9,
+  "scope": "full stacking path, microscopic controls and low-frequency EB response; no material energetics",
+  "sha256": {
+    "STAGE9_README.md": "f537435fa30768b312cf9a25f566bc22c074799aa100620edcfc943dc2f2b81c",
+    "bsf_nmee/bilayer_protocol.py": "d0e55338981ebebeed6a12ec6c6aeb4133ce38e6d37f0e13b51d662aec1fd6d3",
+    "docs/STAGE9_FIGURE_QA.md": "aa3727d425f238faf65efc62b5a4c08fd444b8840dbf4d1038e0464e187b0cb6",
+    "docs/STAGE9_MODEL_PHYSICS.md": "97b8426add9adaec8129c1d4e5389c49e0e3d25cc798c7a1d539614f6998bf37",
+    "docs/STAGE9_SECTION.md": "d25fcd809d78bb4dca8f7a8620b889f3bd6d176be2b529b858d31393159fc3fc",
+    "figures/bilayer_stage9_physics.pdf": "e8d08ffe2d3263b0beae9f53ce62460197e081ec138ed3823911a21c6c56781e",
+    "figures/bilayer_stage9_physics.png": "54ffb1b3df4d271641f027a015e331baa2860a9279494f42141165ae33582d3a",
+    "figures/bilayer_stage9_physics.svg": "c89097cbc2ed20caff7e855eaa22d1f604b76709a0f31ee64e44c19d8e9e8789",
+    "results/bilayer_stage9_coupling.json": "411003cd9f3c6acc08c45971200e88fcaf2bdfca88379be87cbed063202d1c26",
+    "results/bilayer_stage9_figure_source.csv": "a551513a8e16d72e660084c8d1efc4571ff5be7af32f9e63f0a6d7891989babd",
+    "results/bilayer_stage9_limit_check.json": "d05b9c0e6658a162d1a8931eb292e4b1eae3930fa0288f361361e6912320c237",
+    "results/bilayer_stage9_path.json": "f4153ac513125ff8e5b30d79041cad2a6199b23b27d43af1f25765d9c8e8878f",
+    "results/bilayer_stage9_protocol.json": "2b9bfa269bdaafcced97deab1cca442ed5b470ba959010eaee23dfb1f0a9b117",
+    "scripts/plot_stage9_physics.py": "a1ee0e5f00830d1b19d6c1805194af79a53d68be7105d88c7a27f562310451d7",
+    "scripts/run_stage9_coupling.py": "3accec2b07a170e1ec0589eb9336d9bbd92338ac1553052a8527919cf47bf2c5",
+    "scripts/run_stage9_limit_check.py": "3e7dab4878f2946e38d4b9240bb0361cb194b028905977dd6242061be0e410f0",
+    "scripts/run_stage9_path.py": "1e4a7970bb754c936cdcf9856a5607f5afc89bff7edd4cdb3f99d9e65a09c839",
+    "scripts/run_stage9_protocol.py": "7c5e9fb16dd886bf10625c370e21f54bbdd5ea5e9f45b7ab84f7d18c5b0e5b3b",
+    "tests/test_stage9_evidence.py": "0492fe08c334e574992c31d0da3e5f4693cd9c7b98f3ea29914d4b363643158e",
+    "tests/test_stage9_protocol.py": "9a5cef97c7487200d2859028a5cd4f313e1c2173c0fda71b6b0c85eab7b7e375"
+  }
+}

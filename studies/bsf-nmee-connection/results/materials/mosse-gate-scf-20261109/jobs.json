@@ -1,0 +1,31 @@
+{
+  "submitted_at": "2026-11-09T11:52:54.896492+08:00",
+  "resource": "Japan IMR",
+  "queue": "DP_002",
+  "workdir": "/work/sunq/xjq/mosse-gate-scf-20261109",
+  "jobs": {
+    "fm010": "559806.cmspbs1",
+    "fp010": "559807.cmspbs1"
+  },
+  "status": "both completed, Exit_status=0; six gate SCFs and all exports/responses complete",
+  "per_job": "4 CPU,24GB,2h maximum; three sequential SCFs plus export/response",
+  "storage_estimate_GB": 4,
+  "scope": "fixed geometry, \u00b10.10 V/nm external gate SCF, exact lower/upper isolated controls",
+  "compute_constraint": "all Japan-side preparation, VASP, wavefunction export and scientific analysis inside PBS",
+  "other_jobs": "not modified",
+  "completed_recorded_at": "2026-11-09T12:27:59.176958+08:00",
+  "pending_jobs": [],
+  "completion": {
+    "fm010": {
+      "node": "csuper001",
+      "walltime": "00:32:39",
+      "exit_status": 0
+    },
+    "fp010": {
+      "node": "csuper003",
+      "walltime": "00:22:16",
+      "exit_status": 0
+    }
+  },
+  "private_resource_record": "Detailed shared-account quota observation retained only in protected local keeper."
+}

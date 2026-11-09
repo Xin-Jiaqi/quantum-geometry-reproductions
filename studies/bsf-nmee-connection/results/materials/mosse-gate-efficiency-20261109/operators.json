@@ -1,0 +1,16 @@
+{
+  "job": "559753.cmspbs1",
+  "node": "csuper001",
+  "source": "/work/sunq/xjq/mosse-strain-20261108/e000",
+  "gate": "linear electron potential +F_model*z/10 eV; imposed model slope in V/nm, no new self-consistent screening",
+  "matched_lower": "exact intralayer geometry from relaxed e000 bilayer",
+  "upper_reference": "horizontal mirror of lower single-layer reference; actual upper intralayer geometry differs slightly",
+  "upper_mirror_geometry_error_A": 0.0006911132377354079,
+  "constant_operator_error": {
+    "A": 2.6880870314105465e-06,
+    "mono": 2.521968289537213e-06
+  },
+  "Mo_separation_A": 6.038885087525385,
+  "reference": "planar ionic+Hartree difference, smoothed 0.20 A, cutoffs 3.2/3.8 A; nonunique electrostatic reference",
+  "no_new_DFT": true
+}

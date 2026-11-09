@@ -1,0 +1,332 @@
+{
+  "job": "548273.cmspbs1",
+  "node": "csuper001",
+  "scope": "Fixed zero-field active projector; block probe vertices in full 96/112 material space, no state deletion",
+  "units": "1e-9 (nm V T)^-1",
+  "runs": {
+    "window4_bands96": {
+      "rows": {
+        "all": {
+          "C": -6.60185695479572,
+          "gap": 0.8418949306844723,
+          "even_chi": 4.503982259578682e-06,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        },
+        "H_block": {
+          "C": -2.568843934421008,
+          "gap": 0.9526896787079675,
+          "even_chi": -1.9259338127902183e-05,
+          "minimum_occupied_overlap_singular": 0.7871035683076651
+        },
+        "Z_block": {
+          "C": -1.836152884855911,
+          "gap": 0.8419077960508968,
+          "even_chi": 4.5039905859792315e-06,
+          "minimum_occupied_overlap_singular": 0.7740397445765689
+        },
+        "S_block": {
+          "C": -40.717840007683826,
+          "gap": 0.8418949306844723,
+          "even_chi": -1.7366571274241016e-05,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        },
+        "E_block": {
+          "C": 69.25981455374233,
+          "gap": 0.8418949306844723,
+          "even_chi": -3.165560225941444e-05,
+          "minimum_occupied_overlap_singular": 0.41394487088166526
+        },
+        "all_block": {
+          "C": 21.39021493836936,
+          "gap": 0.9526897156538411,
+          "even_chi": -1.4027184954149008e-05,
+          "minimum_occupied_overlap_singular": 0.41440444299165063
+        },
+        "Z_offdiag_only": {
+          "C": -4.765639299224763,
+          "gap": 0.8458689528968848,
+          "even_chi": 4.503981838138889e-06,
+          "minimum_occupied_overlap_singular": 0.7740400884847294
+        },
+        "S_offdiag_only": {
+          "C": 34.115983052859214,
+          "gap": 0.8418949306844723,
+          "even_chi": 2.1870553573291596e-05,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        }
+      },
+      "Zeeman_linearity_residual": -6.477071504651377e-05,
+      "readout_linearity_residual": 2.8890667636005674e-11
+    },
+    "window4_bands112": {
+      "rows": {
+        "all": {
+          "C": -5.843798635667188,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.005923482198464659,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        },
+        "H_block": {
+          "C": -1.5373291580357087,
+          "gap": 0.9526913373799277,
+          "even_chi": -0.006453660211480664,
+          "minimum_occupied_overlap_singular": 0.7870959844138466
+        },
+        "Z_block": {
+          "C": -1.5156299301808687,
+          "gap": 0.8419077976525011,
+          "even_chi": -0.0059234816106514395,
+          "minimum_occupied_overlap_singular": 0.7740397487523626
+        },
+        "S_block": {
+          "C": -39.501030223385364,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.007443963181658422,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        },
+        "E_block": {
+          "C": 69.5766602645273,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.008510332313985888,
+          "minimum_occupied_overlap_singular": 0.4139428069741931
+        },
+        "all_block": {
+          "C": 22.36995520537141,
+          "gap": 0.9526913743226416,
+          "even_chi": -0.007966188589689147,
+          "minimum_occupied_overlap_singular": 0.414402667250995
+        },
+        "Z_offdiag_only": {
+          "C": -4.328103808229454,
+          "gap": 0.8458689535377483,
+          "even_chi": -0.005923481196150277,
+          "minimum_occupied_overlap_singular": 0.774040088548635
+        },
+        "S_offdiag_only": {
+          "C": 33.65723158769195,
+          "gap": 0.8418949306904413,
+          "even_chi": 0.0015204809832233268,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        }
+      },
+      "Zeeman_linearity_residual": -6.4897256865315e-05,
+      "readout_linearity_residual": 2.6219026949547697e-11
+    },
+    "window8_bands96": {
+      "rows": {
+        "all": {
+          "C": -6.60185695479572,
+          "gap": 0.8418949306844723,
+          "even_chi": 4.503982259578682e-06,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        },
+        "H_block": {
+          "C": -14.005746586796946,
+          "gap": 0.9527404730664689,
+          "even_chi": -1.1567084143005585e-05,
+          "minimum_occupied_overlap_singular": 0.776846983952896
+        },
+        "Z_block": {
+          "C": 23.828566099658477,
+          "gap": 0.8419079266556754,
+          "even_chi": 4.503980995832629e-06,
+          "minimum_occupied_overlap_singular": 0.7740398238400575
+        },
+        "S_block": {
+          "C": -28.237009084839634,
+          "gap": 0.8418949306844723,
+          "even_chi": 1.9930326639886614e-05,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        },
+        "E_block": {
+          "C": 94.22387724536473,
+          "gap": 0.8418949306844723,
+          "even_chi": 3.627304409511978e-05,
+          "minimum_occupied_overlap_singular": 0.41586053452164684
+        },
+        "all_block": {
+          "C": 17.295604196472976,
+          "gap": 0.9527405088947809,
+          "even_chi": 3.609728120596012e-05,
+          "minimum_occupied_overlap_singular": 0.4163557377242757
+        },
+        "Z_offdiag_only": {
+          "C": -30.430268050230296,
+          "gap": 0.8458688640070313,
+          "even_chi": 4.503990190665025e-06,
+          "minimum_occupied_overlap_singular": 0.7740401678308975
+        },
+        "S_offdiag_only": {
+          "C": 21.635152130011402,
+          "gap": 0.8418949306844723,
+          "even_chi": -1.5426344336634534e-05,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        }
+      },
+      "Zeeman_linearity_residual": -0.00015500422390246626,
+      "readout_linearity_residual": 3.2510882874703384e-11
+    },
+    "window8_bands112": {
+      "rows": {
+        "all": {
+          "C": -5.843798635667188,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.005923482198464659,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        },
+        "H_block": {
+          "C": -12.840969596306405,
+          "gap": 0.9527405281972385,
+          "even_chi": -0.006493500199210987,
+          "minimum_occupied_overlap_singular": 0.7768345326306156
+        },
+        "Z_block": {
+          "C": 24.2592015703236,
+          "gap": 0.8419079264726322,
+          "even_chi": -0.00592348154502614,
+          "minimum_occupied_overlap_singular": 0.7740398273012241
+        },
+        "S_block": {
+          "C": -26.9684783021841,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.006083241055398807,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        },
+        "E_block": {
+          "C": 94.59362388485434,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.006503607273996667,
+          "minimum_occupied_overlap_singular": 0.4158591703004492
+        },
+        "all_block": {
+          "C": 18.581702943999996,
+          "gap": 0.952740564019537,
+          "even_chi": -0.006500987957849459,
+          "minimum_occupied_overlap_singular": 0.4163548565133222
+        },
+        "Z_offdiag_only": {
+          "C": -30.102845311221493,
+          "gap": 0.8458688641990901,
+          "even_chi": -0.005923481192502626,
+          "minimum_occupied_overlap_singular": 0.7740401671803487
+        },
+        "S_offdiag_only": {
+          "C": 21.124679666458274,
+          "gap": 0.8418949306904413,
+          "even_chi": 0.00015975885683251062,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        }
+      },
+      "Zeeman_linearity_residual": -0.00015489476929531065,
+      "readout_linearity_residual": 5.863753926860227e-11
+    },
+    "window12_bands96": {
+      "rows": {
+        "all": {
+          "C": -6.60185695479572,
+          "gap": 0.8418949306844723,
+          "even_chi": 4.503982259578682e-06,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        },
+        "H_block": {
+          "C": -14.76437911984116,
+          "gap": 0.952728085226301,
+          "even_chi": -1.2519912038665842e-05,
+          "minimum_occupied_overlap_singular": 0.7828943939989931
+        },
+        "Z_block": {
+          "C": 4.044946194842509,
+          "gap": 0.841907872214805,
+          "even_chi": 4.503983575960581e-06,
+          "minimum_occupied_overlap_singular": 0.774039845964577
+        },
+        "S_block": {
+          "C": -40.283259951862185,
+          "gap": 0.8418949306844723,
+          "even_chi": 2.246427156030184e-06,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        },
+        "E_block": {
+          "C": 89.1385311409747,
+          "gap": 0.8418949306844723,
+          "even_chi": 1.1906454679050382e-05,
+          "minimum_occupied_overlap_singular": 0.4200760558968017
+        },
+        "all_block": {
+          "C": 5.163486077644956,
+          "gap": 0.9527281231590927,
+          "even_chi": 1.1535823168790094e-05,
+          "minimum_occupied_overlap_singular": 0.420507685943149
+        },
+        "Z_offdiag_only": {
+          "C": -10.646688059537386,
+          "gap": 0.8458689191954715,
+          "even_chi": 4.503986087436851e-06,
+          "minimum_occupied_overlap_singular": 0.7740401897545868
+        },
+        "S_offdiag_only": {
+          "C": 33.68140299709993,
+          "gap": 0.8418949306844723,
+          "even_chi": 2.257555225780583e-06,
+          "minimum_occupied_overlap_singular": 0.7740398918275387
+        }
+      },
+      "Zeeman_linearity_residual": -0.00011509010084331806,
+      "readout_linearity_residual": -3.346656285430072e-11
+    },
+    "window12_bands112": {
+      "rows": {
+        "all": {
+          "C": -5.843798635667188,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.005923482198464659,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        },
+        "H_block": {
+          "C": -14.110200168619382,
+          "gap": 0.9527280972175876,
+          "even_chi": -0.006167771482871098,
+          "minimum_occupied_overlap_singular": 0.7828943385537449
+        },
+        "Z_block": {
+          "C": 4.287227720532836,
+          "gap": 0.8419078721319331,
+          "even_chi": -0.005923481777724846,
+          "minimum_occupied_overlap_singular": 0.7740398491402557
+        },
+        "S_block": {
+          "C": -39.48561355998287,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.005760132673457055,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        },
+        "E_block": {
+          "C": 89.321843795828,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.005865079365886733,
+          "minimum_occupied_overlap_singular": 0.4200766734529133
+        },
+        "all_block": {
+          "C": 5.32680683916651,
+          "gap": 0.9527281351440233,
+          "even_chi": -0.005973040779546232,
+          "minimum_occupied_overlap_singular": 0.42050840749342816
+        },
+        "Z_offdiag_only": {
+          "C": -10.130911576574684,
+          "gap": 0.8458689192850145,
+          "even_chi": -0.005923481181290217,
+          "minimum_occupied_overlap_singular": 0.7740401888136184
+        },
+        "S_offdiag_only": {
+          "C": 33.64181492421376,
+          "gap": 0.8418949306904413,
+          "even_chi": -0.00016334952514929224,
+          "minimum_occupied_overlap_singular": 0.7740398959412986
+        }
+      },
+      "Zeeman_linearity_residual": -0.00011477962534023334,
+      "readout_linearity_residual": 1.0192025001742877e-10
+    }
+  }
+}

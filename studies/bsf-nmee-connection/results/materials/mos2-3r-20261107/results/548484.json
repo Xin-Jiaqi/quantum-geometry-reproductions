@@ -1,0 +1,110 @@
+{
+  "structure": "A",
+  "gate_physical_Vnm": 0.0,
+  "vasp_EFIELD": 0.0,
+  "probe_VA": 0.004,
+  "zeeman_eV": 0.016,
+  "mesh": 6,
+  "area_A2": 8.780007382484833,
+  "C_xyz_total_bottom_top_1e-9": [
+    [
+      -0.5429876989509558,
+      -4.561156601282371,
+      4.018168902331415
+    ],
+    [
+      0.00010675480060391059,
+      0.0011717089002319604,
+      -0.00106495409962805
+    ],
+    [
+      3.521684495384924,
+      1.744505371141069,
+      1.7771791242438548
+    ]
+  ],
+  "B_even_residual_xyz": null,
+  "one_B_sign_C_xyz": [
+    [
+      [
+        -0.5429876989509558,
+        -4.561156601282371,
+        4.018168902331415
+      ],
+      [
+        0.00010675480060391059,
+        0.0011717089002319604,
+        -0.00106495409962805
+      ],
+      [
+        3.521684495384924,
+        1.744505371141069,
+        1.7771791242438548
+      ]
+    ]
+  ],
+  "B_signs": [
+    1
+  ],
+  "spin_raw": {
+    "E+1B+1": [
+      [
+        47.99999961778105,
+        23.99828591372086,
+        24.00171370406019
+      ],
+      [
+        -5.28549748521689e-10,
+        -4.354615736196627e-09,
+        3.826065987674938e-09
+      ],
+      [
+        1.6752267971469104e-12,
+        1.4322511385407732e-10,
+        -1.415498870569304e-10
+      ],
+      [
+        -6.966806212980415e-05,
+        -3.4863132198415004e-05,
+        -3.4804929931389144e-05
+      ]
+    ],
+    "E-1B+1": [
+      [
+        47.99999961777948,
+        23.998285059684797,
+        24.001714558094683
+      ],
+      [
+        5.244647072538921e-10,
+        4.490821914574855e-09,
+        -3.966357207320963e-09
+      ],
+      [
+        1.4681975247038321e-12,
+        1.4095282221231656e-10,
+        -1.3948462468761273e-10
+      ],
+      [
+        -6.967489172224148e-05,
+        -3.486651531257678e-05,
+        -3.4808376409664705e-05
+      ]
+    ]
+  },
+  "pbs": "548484.cmspbs1",
+  "analysis_pbs": "548511.cmspbs1",
+  "node": "csuper001",
+  "structure_sha256": "910e866c278c3d86c6d877184366e23029653e7eb6d5f931334072acff70aede",
+  "mono_halfspace_warning": false,
+  "protocol_note": "Nonmagnetic time reversal; original job deliberately stopped after completed positive-B +/-E pair. No negative-B numerical residual claimed.",
+  "raw_finite_field_eigenvalue_gaps_not_physical": {
+    "E+1B+1": 9999.772315,
+    "E-1B+1": 9999.772309
+  },
+  "seed_gaps_eV": {
+    "B+1": 1.1226530000000001
+  },
+  "gap_note": "Finite-PEAD empty EIGENVAL values are 10000-eV placeholders, not physical gaps. Only normal-diagonalized zero-Ex seed gaps are reported. Response densities and C are unchanged.",
+  "electric_probe_to_conservative_breakdown_ratio": 0.6806875780176974
+}

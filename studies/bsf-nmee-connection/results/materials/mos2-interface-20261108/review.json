@@ -1,0 +1,8 @@
+{
+  "correctness": "Physics controls, layer sums, gaps, independent k-gauge covariance and baseline signs checked. PAW/gauge checks passed. See verification.json for unresolved numerical precision.",
+  "data_integrity": "All six windows retained, including same-sector reversals and ambiguous net sign. No fitting or fabricated response. Figure uses all 42 selected source points.",
+  "safety": "All nine actual jobs ran in PBS allocations. Moved completed-reference guard ahead of input copies during final code review; each completed reference was run only once, so computed data unaffected.",
+  "security": "No licensed PAW/WAVECAR/CHGCAR or credentials included. Only derived scientific results and inputs.",
+  "performance": "Bounded 4-CPU PBS references; analyses bounded to cached 36-k full-space data. No frontend scientific calculations.",
+  "scope": "MoS2 fixed 3R only plus one previously tested monolayer gate for calibration. No twelve-state model restart or new material."
+}

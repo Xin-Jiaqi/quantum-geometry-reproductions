@@ -1,0 +1,14 @@
+{
+  "changed": "queued +2% relaxation KPAR 1 -> 4, same four CPUs; SCF/response stays KPAR=1",
+  "reason": "reduce MPI communication for small primitive cell; no change to physical Hamiltonian or convergence tolerances",
+  "old_sha256": "73c63dd92879ca503af3c402b00b5b73738e2c00a7481f57b718bd272b965c5c",
+  "new_sha256": "24b01233f674e506a9416ab9948227664a9a717448f1efe5db619ad905891034",
+  "v1_jobs": [
+    "558254",
+    "558255"
+  ],
+  "v2_jobs": [
+    "558256"
+  ],
+  "source": "https://vasp.at/wiki/KPAR"
+}

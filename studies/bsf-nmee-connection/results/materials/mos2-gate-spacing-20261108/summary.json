@@ -1,0 +1,154 @@
+{
+  "rows": [
+    {
+      "case": "d000_fm050",
+      "delta_d_A": 0.0,
+      "Fz_Vnm": -0.5,
+      "C_96_total_lower_upper": [
+        0.3640186997131919,
+        -4.9977785853440295,
+        5.361797285057222
+      ],
+      "C_112_total_lower_upper": [
+        0.3139451525390719,
+        -4.276829116989523,
+        4.590774269528595
+      ],
+      "signs_agree_between_cutoffs": true
+    },
+    {
+      "case": "d000_f000",
+      "delta_d_A": 0.0,
+      "Fz_Vnm": 0.0,
+      "C_96_total_lower_upper": [
+        -0.4055989617718232,
+        -5.090895450487447,
+        4.685296488715624
+      ],
+      "C_112_total_lower_upper": [
+        -0.42816064901118994,
+        -4.368241005978239,
+        3.940080356967049
+      ],
+      "signs_agree_between_cutoffs": true
+    },
+    {
+      "case": "d015_fm050",
+      "delta_d_A": 0.15,
+      "Fz_Vnm": -0.5,
+      "C_96_total_lower_upper": [
+        0.40059961406352557,
+        -3.4347671468315033,
+        3.835366760895029
+      ],
+      "C_112_total_lower_upper": [
+        0.38095336870967283,
+        -2.860663020485617,
+        3.24161638919529
+      ],
+      "signs_agree_between_cutoffs": true
+    },
+    {
+      "case": "d030_fm050",
+      "delta_d_A": 0.3,
+      "Fz_Vnm": -0.5,
+      "C_96_total_lower_upper": [
+        0.4380676255761464,
+        -2.38212622067929,
+        2.8201938462554366
+      ],
+      "C_112_total_lower_upper": [
+        0.42505086252715973,
+        -1.88900218167034,
+        2.3140530441975
+      ],
+      "signs_agree_between_cutoffs": true
+    },
+    {
+      "case": "d030_f000",
+      "delta_d_A": 0.3,
+      "Fz_Vnm": 0.0,
+      "C_96_total_lower_upper": [
+        -0.21582063368755455,
+        -2.5260416573373328,
+        2.3102210236497784
+      ],
+      "C_112_total_lower_upper": [
+        -0.22854756861359052,
+        -2.019021850065544,
+        1.7904742814519534
+      ],
+      "signs_agree_between_cutoffs": true
+    }
+  ],
+  "audit": [
+    {
+      "case": "d000_fm050",
+      "step_change_max": 2.627343162675544e-05,
+      "gap_min_eV": 1.1754899168334993
+    },
+    {
+      "case": "d015_fm050",
+      "step_change_max": 2.2368915720605287e-05,
+      "gap_min_eV": 1.2545120025259118
+    },
+    {
+      "case": "d030_fm050",
+      "step_change_max": 1.8781788347022044e-05,
+      "gap_min_eV": 1.3119378268176713
+    },
+    {
+      "case": "d030_f000",
+      "step_change_max": 1.915852247180716e-05,
+      "gap_min_eV": 1.3140924344274594
+    }
+  ],
+  "comparisons_total_lower_upper": {
+    "96": {
+      "gate_change_at_d0": [
+        0.7696176614850151,
+        0.09311686514341755,
+        0.6765007963415988
+      ],
+      "gate_change_at_d030": [
+        0.653888259263701,
+        0.14391543665804285,
+        0.5099728226056581
+      ],
+      "distance_change_at_zero_gate": [
+        0.18977832808426864,
+        2.5648537931501143,
+        -2.375075465065845
+      ],
+      "distance_change_at_minus_half_gate": [
+        0.07404892586295453,
+        2.6156523646647396,
+        -2.541603438801786
+      ]
+    },
+    "112": {
+      "gate_change_at_d0": [
+        0.7421058015502618,
+        0.09141188898871544,
+        0.6506939125615459
+      ],
+      "gate_change_at_d030": [
+        0.6535984311407502,
+        0.13001966839520418,
+        0.5235787627455464
+      ],
+      "distance_change_at_zero_gate": [
+        0.19961308039759942,
+        2.3492191559126945,
+        -2.1496060755150954
+      ],
+      "distance_change_at_minus_half_gate": [
+        0.11110570998808783,
+        2.3878269353191834,
+        -2.276721225331095
+      ]
+    }
+  },
+  "units": "1e-9 (nm V T)^-1, Pauli spin density",
+  "scope": "All actual points; no fitted critical distance/field. Positive gaps are checked at sampled points, not all interpolating structures."
+}

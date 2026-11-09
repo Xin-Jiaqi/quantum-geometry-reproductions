@@ -1,0 +1,12 @@
+{
+  "source_check": "figure_source_check.json",
+  "visual_inspection": "All three actual points and setting ranges inspected at rendered size; labels/legend visible, no clipping; markers distinguish series.",
+  "exports": [
+    "PNG 600 dpi",
+    "editable SVG",
+    "embedded-font PDF"
+  ],
+  "source_data": "responses.csv",
+  "sensitivity_ranges": "retained-state/reference settings, not statistical uncertainty",
+  "missing_points": false
+}

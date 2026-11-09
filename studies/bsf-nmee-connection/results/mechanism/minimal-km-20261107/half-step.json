@@ -1,0 +1,82 @@
+{
+  "grid": [
+    41,
+    40,
+    64
+  ],
+  "nk": 20301,
+  "step_T": 0.001,
+  "units": "(nm V T)^-1",
+  "rows": {
+    "main_t0.04": {
+      "parameters": {
+        "name": "main_t0.04",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.04,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        -0.00012535407277666777,
+        5.585824379521209e-05,
+        -6.949582894320578e-05
+      ],
+      "gap_eV": 0.015228053035949084,
+      "insulating": true,
+      "layer_sum_error": -3.8249893703767857e-14
+    },
+    "main_t0.12": {
+      "parameters": {
+        "name": "main_t0.12",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.12,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "selective",
+        "flat": false
+      },
+      "C": [
+        0.00021342730870221177,
+        -4.497558719679384e-05,
+        0.00016845172142634576
+      ],
+      "gap_eV": 0.02038006073927187,
+      "insulating": true,
+      "layer_sum_error": 7.907216548197482e-14
+    },
+    "all_paths_VC": {
+      "parameters": {
+        "name": "all_paths_VC",
+        "energy": 0.12,
+        "tlow": 0.01,
+        "textra": 0.12,
+        "rho": 0.1,
+        "mass": 0.045,
+        "fraction": 0.25,
+        "site": 0,
+        "rashba": 0.02,
+        "mode": "VC",
+        "flat": false
+      },
+      "C": [
+        0.0003178341695493428,
+        -2.2306905847618852e-05,
+        0.0002955272637133375
+      ],
+      "gap_eV": 0.02221494356233723,
+      "insulating": true,
+      "layer_sum_error": -1.161353999079573e-14
+    }
+  },
+  "scope": "Unfitted KM plus one spinful empty orbital per layer; projected orbital-selective coupling; not a MoSSe downfolding or strain prediction."
+}

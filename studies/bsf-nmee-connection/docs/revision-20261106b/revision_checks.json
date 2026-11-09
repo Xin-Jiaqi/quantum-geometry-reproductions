@@ -1,0 +1,10 @@
+{
+  "mirror_response_max_abs": 1.2175590397012215e-15,
+  "decoupled_bias_variation": 5.793976409762536e-16,
+  "min_common_gap_meV": 3.9271471683239247,
+  "main_captions": 3,
+  "supplement_captions": 5,
+  "table_columns": 5,
+  "local_links": "pass",
+  "scope": "Data, symmetry relation, insulating condition and manuscript integrity; not new DFT convergence."
+}

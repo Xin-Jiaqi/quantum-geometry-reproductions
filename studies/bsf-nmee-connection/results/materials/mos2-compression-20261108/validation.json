@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "case": "dm010_f000",
+      "geometric_point_group": "3m",
+      "rigid_layer_compression_verified": true,
+      "zero_B_reference": true,
+      "input_job": "558194.cmspbs1",
+      "export_checks_passed": true
+    },
+    {
+      "case": "dm010_fm050",
+      "geometric_point_group": "3m",
+      "rigid_layer_compression_verified": true,
+      "zero_B_reference": true,
+      "input_job": "558195.cmspbs1",
+      "export_checks_passed": true
+    },
+    {
+      "case": "dm020_f000",
+      "geometric_point_group": "3m",
+      "rigid_layer_compression_verified": true,
+      "zero_B_reference": true,
+      "input_job": "558196.cmspbs1",
+      "export_checks_passed": true
+    },
+    {
+      "case": "dm020_fm050",
+      "geometric_point_group": "3m",
+      "rigid_layer_compression_verified": true,
+      "zero_B_reference": true,
+      "input_job": "558197.cmspbs1",
+      "export_checks_passed": true
+    },
+    {
+      "case": "d000_fm032",
+      "geometric_point_group": "3m",
+      "rigid_layer_compression_verified": true,
+      "zero_B_reference": true,
+      "input_job": "558204.cmspbs1",
+      "export_checks_passed": true
+    },
+    {
+      "case": "dm010_fm032",
+      "geometric_point_group": "3m",
+      "rigid_layer_compression_verified": true,
+      "zero_B_reference": true,
+      "input_job": "558205.cmspbs1",
+      "export_checks_passed": true
+    },
+    {
+      "case": "dm020_fm032",
+      "geometric_point_group": "3m",
+      "rigid_layer_compression_verified": true,
+      "zero_B_reference": true,
+      "input_job": "558206.cmspbs1",
+      "export_checks_passed": true
+    }
+  ],
+  "scope": "Input and numerical integrity only; the physical prediction is not a pass/fail condition."
+}

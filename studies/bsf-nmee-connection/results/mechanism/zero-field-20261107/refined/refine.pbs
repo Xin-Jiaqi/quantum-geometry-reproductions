@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -q DP_002
+#PBS -N xjq-nmee-refine
+#PBS -l select=1:ncpus=4:mpiprocs=4:ompthreads=1:mem=16gb
+#PBS -l walltime=00:45:00
+#PBS -j oe
+set -eo pipefail
+test -s "$PBS_NODEFILE"
+case "$(hostname -s)" in super*|cms-ssh*) exit 71;; esac
+cd "$PBS_O_WORKDIR"
+source /work/sunq/xjq/releases/W90Flow-20260812/site/japan/load_oneapi.sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 MAT=7269 MESH=6
+mkdir seed
+cp ../zero-field-20261107/seed/{POSCAR,POTCAR,KPOINTS,CHGCAR,WAVECAR} seed/
+cp INCAR seed/
+cd seed
+mpirun -np 4 -ppn 4 -hostfile "$PBS_NODEFILE" /work/app/VASP6/vasp.6.4.3_wannier90_cpu/bin/vasp_ncl > vasp.log 2>&1
+grep -q 'aborting loop because EDIFF is reached' OUTCAR
+grep -q 'General timing and accounting' OUTCAR
+test -s wannier90.mmn
+cd ..
+python3 -u project_zero.py
+python3 -u export_zero.py
+python3 -u analyze_zero.py
+python3 -u audit_zero.py

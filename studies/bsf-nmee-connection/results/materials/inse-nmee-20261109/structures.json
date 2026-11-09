@@ -1,0 +1,289 @@
+{
+  "A": {
+    "symbols": [
+      "In",
+      "In",
+      "In",
+      "In",
+      "Se",
+      "Se",
+      "Se",
+      "Se"
+    ],
+    "positions_A": [
+      [
+        2.03712241,
+        1.17613317,
+        10.253650898268766
+      ],
+      [
+        2.03712241,
+        1.17613317,
+        13.067896608268766
+      ],
+      [
+        -0.0,
+        0.0,
+        18.666715788268768
+      ],
+      [
+        -0.0,
+        0.0,
+        21.480961498268766
+      ],
+      [
+        0.0,
+        2.35226634,
+        8.977120648268766
+      ],
+      [
+        0.0,
+        2.35226634,
+        14.344426828268766
+      ],
+      [
+        2.03712241,
+        1.17613317,
+        17.390185538268767
+      ],
+      [
+        2.03712241,
+        1.17613317,
+        22.757491718268767
+      ]
+    ],
+    "cell_A": [
+      [
+        4.0742448149687736,
+        -6.937680409065838e-18,
+        0.0
+      ],
+      [
+        -2.0371224074843868,
+        3.528399510999987,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        31.734612366537533
+      ]
+    ],
+    "hash": "a3f61c1872df6f8fff668a6ee2fe0cc7197971f8f426b7b7e7afba366ec617ac"
+  },
+  "B": {
+    "symbols": [
+      "In",
+      "In",
+      "In",
+      "In",
+      "Se",
+      "Se",
+      "Se",
+      "Se"
+    ],
+    "positions_A": [
+      [
+        2.5156131157098203e-09,
+        2.3522663403333293,
+        21.480961468268763
+      ],
+      [
+        2.5156131157098203e-09,
+        2.3522663403333293,
+        18.66671575826876
+      ],
+      [
+        2.037122407484387,
+        1.1761331703333289,
+        13.067896578268765
+      ],
+      [
+        2.037122407484387,
+        1.1761331703333289,
+        10.253650868268767
+      ],
+      [
+        -7.538865537942564e-17,
+        -6.666578400427337e-10,
+        22.757491718268767
+      ],
+      [
+        -7.538865537942564e-17,
+        -6.666578400427337e-10,
+        17.390185538268767
+      ],
+      [
+        2.5156131157098203e-09,
+        2.3522663403333293,
+        14.344426828268766
+      ],
+      [
+        2.5156131157098203e-09,
+        2.3522663403333293,
+        8.977120648268766
+      ]
+    ],
+    "cell_A": [
+      [
+        4.0742448149687736,
+        -6.937680409065838e-18,
+        0.0
+      ],
+      [
+        -2.0371224074843868,
+        3.528399510999987,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        31.734612366537533
+      ]
+    ],
+    "hash": "043c979556fb247448bf2f2d68b6793aee63d7ce5d2fc0f790d39038c99f6304"
+  },
+  "mono": {
+    "symbols": [
+      "In",
+      "In",
+      "Se",
+      "Se"
+    ],
+    "positions_A": [
+      [
+        2.03712241,
+        1.17613317,
+        14.460183343268767
+      ],
+      [
+        2.03712241,
+        1.17613317,
+        17.27442905326877
+      ],
+      [
+        0.0,
+        2.35226634,
+        13.183653093268767
+      ],
+      [
+        0.0,
+        2.35226634,
+        18.550959273268766
+      ]
+    ],
+    "cell_A": [
+      [
+        4.0742448149687736,
+        -6.937680409065838e-18,
+        0.0
+      ],
+      [
+        -2.0371224074843868,
+        3.528399510999987,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        31.734612366537533
+      ]
+    ],
+    "hash": "f75b562a155c62685379f2ac64a90e0dcf1e867f867137d9c6d6e4700eecb9ca"
+  },
+  "database": {
+    "862": {
+      "uid": "In2Se2-eb204c739879",
+      "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/InSe/In2Se2-eb204c739879",
+      "stoichiometry": "AB",
+      "monolayer_uid": "In2Se2-eb204c739879",
+      "number_of_layers": 1,
+      "nspecies": 2,
+      "layer_group_number": 78,
+      "layer_group": "p-6m2",
+      "space_group_number": 187,
+      "space_group": "P-6m2",
+      "equivalent_atoms": "[0 0 2 2]",
+      "has_inversion_symmetry": false,
+      "magnetic": false,
+      "cod_id": 9008967,
+      "icsd_id": 640503,
+      "ehull": 0.0,
+      "dynamically_stable": "Yes",
+      "gap_pbe": 1.404,
+      "gap_pbe_dir": 1.447,
+      "gap_pbe_nosoc": 1.43,
+      "gap_pbe_dir_nosoc": 1.5,
+      "dipz": 0.0
+    },
+    "863": {
+      "uid": "In2Se2-eb204c739879-2--1_0_0_-1-Iz-0.33_-0.33",
+      "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/InSe/In2Se2-eb204c739879/In2Se2-2--1_0_0_-1-Iz-0.33_-0.33",
+      "stoichiometry": "AB",
+      "monolayer_uid": "In2Se2-eb204c739879",
+      "bilayer_uid": "In2Se2-eb204c739879-2--1_0_0_-1-Iz-0.33_-0.33",
+      "number_of_layers": 2,
+      "nspecies": 2,
+      "layer_group_number": 72,
+      "layer_group": "p-3m1",
+      "space_group_number": 164,
+      "space_group": "P-3m1",
+      "equivalent_atoms": "[0 1 2 3 0 1 2 3]",
+      "has_inversion_symmetry": true,
+      "magnetic": false,
+      "cod_id": 9008967,
+      "icsd_id": 640503,
+      "gap_pbe": 0.869,
+      "gap_pbe_dir": 0.912,
+      "gap_pbe_nosoc": 0.889,
+      "gap_pbe_dir_nosoc": 0.947,
+      "dipz": -0.0,
+      "with_props": true,
+      "slide_stability": "Stable",
+      "binding_energy_zscan": 20.276504555874066,
+      "binding_energy_gs": 17.29185403270734,
+      "distance": 2.9999999999999964
+    },
+    "864": {
+      "uid": "In2Se2-eb204c739879-2-1_0_0_1-0.33_-0.33",
+      "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/InSe/In2Se2-eb204c739879/In2Se2-2-1_0_0_1-0.33_-0.33",
+      "stoichiometry": "AB",
+      "monolayer_uid": "In2Se2-eb204c739879",
+      "bilayer_uid": "In2Se2-eb204c739879-2-1_0_0_1-0.33_-0.33",
+      "number_of_layers": 2,
+      "nspecies": 2,
+      "layer_group_number": 69,
+      "layer_group": "p3m1",
+      "space_group_number": 156,
+      "space_group": "P3m1",
+      "equivalent_atoms": "[0 1 2 3 4 5 6 7]",
+      "has_inversion_symmetry": false,
+      "magnetic": false,
+      "cod_id": 9008967,
+      "icsd_id": 640503,
+      "gap_pbe": 0.892,
+      "gap_pbe_dir": 0.936,
+      "gap_pbe_nosoc": 0.915,
+      "gap_pbe_dir_nosoc": 0.972,
+      "dipz": 0.0,
+      "with_props": true,
+      "slide_stability": "Stable",
+      "binding_energy_zscan": 20.159070559246853,
+      "binding_energy_gs": 17.173952417072638,
+      "distance": 3.045758705689753
+    }
+  },
+  "conventions": {
+    "A_registry": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "B_registry": [
+      0.6666666666666666,
+      0.3333333333333333
+    ],
+    "partner": "m001 plus common translation -t; mirror-related monolayer retains chemical orientation",
+    "physical_gate": "F is conventional +z field; VASP EFIELD=-F/10 eV/A",
+    "partition": "physical z=L/2; isolated half-cell values are not separate layers"
+  }
+}

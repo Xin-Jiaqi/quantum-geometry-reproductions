@@ -1,0 +1,16 @@
+{
+  "e000": {
+    "spacegroup_number": 156,
+    "international": "P3m1",
+    "pointgroup": "3m",
+    "operations": 6,
+    "tolerance_A": 1e-05
+  },
+  "em02": {
+    "spacegroup_number": 156,
+    "international": "P3m1",
+    "pointgroup": "3m",
+    "operations": 6,
+    "tolerance_A": 1e-05
+  }
+}
