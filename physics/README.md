@@ -9,6 +9,7 @@
 | `magnetotransport` | `qgmap.orbital_phe_v4.orbital_phe_eq56`；`orbital_mnhe_v5.orbital_mnhe_3d`；`orbital_geometry_v54.band_geometry` | 有限B微分、四带spin MNHE、几何投影对照 | 选定spin/orbital通道；自然单位和SI桥分开 |
 | `curvature-flux` | `flux_lab.core.qgt_eigen`；`causal_response.interband_kubo`；`source_kme_expansion` | 本征态/投影子、Kubo/Liouville、互易性、物理反幺正检查 | 同规范H、速度与物理Pauli自旋；几何/带间GHE/KME |
 | `igmc` | `igmc_lab.core.pair_kernels`；`dirac_response`；`fermi_contour.integrate_contour` | 波包/格林函数/Liouville、费米海/费米面 | 两带物理Pauli基底、非共振频率；C、D及A/(m·T)换算 |
+| `altermagnet-bpve` | `altermagnet_bpve.contour_injection`；`grid_injection` | 解析 Eq. (17)、独立本征态 metric、Néel 反号、Cartesian delta 网格 | 两带 `d-wave` Rashba，模型单位，T=0；Eq. (19) 差异独立标记 |
 
 详细模型设置、打印公式分支与本轮例子见[根目录索引](../README.md)。`python scripts/core.py run <ID>`从根目录执行；它的作用是选择运行环境和记录来源，不改变物理公式。
 
