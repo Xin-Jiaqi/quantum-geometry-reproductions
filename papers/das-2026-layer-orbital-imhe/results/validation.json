@@ -1,0 +1,205 @@
+{
+  "status": "MODEL_READY",
+  "protocol": "fixed_reference_A5_moment_H0_plus_uP_minus_bM_periodic_3band",
+  "source": "arXiv:2604.20249v1; Eq1, Eq6/Eq7 partial sectors, A16 product rule",
+  "units": "e=hbar=1; dimensionless k; explicit torus d2k/(2pi)^2; per probe u*b; drift per tau; NOT calibrated SI",
+  "parameters": {
+    "background_gate": 0.23,
+    "mu": 0.2,
+    "thermal_energy": 0.15,
+    "mesh": 32,
+    "magnetic_order_for_nonzero_drift": 0.13
+  },
+  "time_reversal_symmetric": {
+    "intrinsic_eq6": -1.796248661780139e-05,
+    "intrinsic_full": -0.0002401016971178835,
+    "intrinsic_terms": {
+      "sea": -1.9737281225588204e-05,
+      "energy_surface": 1.7747946077868122e-06,
+      "electric_geometry_magnetic_energy": -0.00021276809991209103,
+      "magnetic_geometry_electric_energy": 3.158340497927448e-05,
+      "occupation_cross": -4.095451556726556e-05
+    },
+    "intrinsic_tensor": [
+      [
+        0.0,
+        0.0002401016971178835
+      ],
+      [
+        -0.0002401016971178835,
+        0.0
+      ]
+    ],
+    "extrinsic_eq7": [
+      [
+        4.0657581468206416e-20,
+        1.3552527156068805e-20
+      ],
+      [
+        1.3552527156068805e-20,
+        5.421010862427522e-20
+      ]
+    ],
+    "band_drift_full": [
+      [
+        5.421010862427522e-20,
+        -2.0328790734103208e-19
+      ],
+      [
+        -1.9651164376299768e-19,
+        2.168404344971009e-19
+      ]
+    ],
+    "band_drift_cross": [
+      [
+        1.3552527156068805e-20,
+        -2.168404344971009e-19
+      ],
+      [
+        -2.1006417091906648e-19,
+        1.6263032587282567e-19
+      ]
+    ],
+    "min_direct_gap": 1.2942797546783702
+  },
+  "broken_time_reversal": {
+    "intrinsic_eq6": -2.1356903795903664e-05,
+    "intrinsic_full": -0.00021522987605211407,
+    "intrinsic_terms": {
+      "sea": -2.164901363426606e-05,
+      "energy_surface": 2.921098383623984e-07,
+      "electric_geometry_magnetic_energy": -0.00018264858476707178,
+      "magnetic_geometry_electric_energy": 3.206297905096696e-05,
+      "occupation_cross": -4.3287366540105594e-05
+    },
+    "intrinsic_tensor": [
+      [
+        0.0,
+        0.00021522987605211407
+      ],
+      [
+        -0.00021522987605211407,
+        0.0
+      ]
+    ],
+    "extrinsic_eq7": [
+      [
+        0.00010396466623186668,
+        -2.1190484815658192e-05
+      ],
+      [
+        -2.1190484815658192e-05,
+        -0.00013376625184900227
+      ]
+    ],
+    "band_drift_full": [
+      [
+        0.0002677238270262691,
+        5.006391696624627e-05
+      ],
+      [
+        5.006391696624626e-05,
+        -2.0794706544124942e-05
+      ]
+    ],
+    "band_drift_cross": [
+      [
+        0.00016375916079440245,
+        7.125440178190446e-05
+      ],
+      [
+        7.125440178190445e-05,
+        0.00011297154530487733
+      ]
+    ],
+    "min_direct_gap": 1.273255054975461
+  },
+  "validation": {
+    "field_steps": [
+      {
+        "step": 0.004,
+        "intrinsic_finite_difference": -0.00024010239848708042,
+        "intrinsic_abs_error": 7.013691969326614e-10,
+        "drift_max_abs_error": 1.5980008293719518e-09
+      },
+      {
+        "step": 0.002,
+        "intrinsic_finite_difference": -0.00024010187241185754,
+        "intrinsic_abs_error": 1.752939740519606e-10,
+        "drift_max_abs_error": 3.975992890503134e-10
+      },
+      {
+        "step": 0.001,
+        "intrinsic_finite_difference": -0.00024010174035603293,
+        "intrinsic_abs_error": 4.3238149443226154e-11,
+        "drift_max_abs_error": 9.846790966156274e-11
+      }
+    ],
+    "intrinsic_mesh32_to48_abs": 1.8973538018496328e-19,
+    "projector_vs_spectral_max_abs": 1.4039706897062132e-10,
+    "gapped_T0": {
+      "intrinsic_eq6": -2.0328790734103208e-20,
+      "intrinsic_full": -2.0328790734103208e-20,
+      "intrinsic_terms": {
+        "sea": -2.0328790734103208e-20,
+        "energy_surface": 0.0,
+        "electric_geometry_magnetic_energy": 0.0,
+        "magnetic_geometry_electric_energy": 0.0,
+        "occupation_cross": 0.0
+      },
+      "intrinsic_tensor": [
+        [
+          0.0,
+          2.0328790734103208e-20
+        ],
+        [
+          -2.0328790734103208e-20,
+          0.0
+        ]
+      ],
+      "extrinsic_eq7": [
+        [
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0
+        ]
+      ],
+      "band_drift_full": [
+        [
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0
+        ]
+      ],
+      "band_drift_cross": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "min_direct_gap": 1.2942797546783702
+    }
+  },
+  "source_code_sha256": {
+    "src/imhe_lab/__init__.py": "a58f4cccda8ec09cc7a3f48632a1fcb985ed47c6c3dca8d03b345179b2b7cf42",
+    "src/imhe_lab/core.py": "48951a40a31ce01e60a5723f58d57ac88e0b6fc24ca947d9e0c8930220f9dd0a",
+    "src/imhe_lab/models.py": "898f6b1e26686316c9e9b836c5ea82a36f20c188990adb1df19011435f658ac5"
+  },
+  "limits": [
+    "Independent synthetic periodic model, not R5G or its 0.05 e^2/h peak",
+    "Reference A5 moment frozen under probe fields; optional C declares extra mixed operator",
+    "Full means stated Berry-current / band-drift functionals, not all orbital transport",
+    "No Lorentz/phase-space drift/disorder vertices, arbitrary Wannier embedding or degeneracy solver",
+    "No generic gate-odd/even assertion and no nonquantized insulating DC plateau imposed"
+  ]
+}
