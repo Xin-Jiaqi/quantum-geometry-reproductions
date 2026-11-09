@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-11-09T16:30:01.019571+08:00",
+  "jobs": {
+    "mono": "560010.cmspbs1",
+    "bilayer": "560011.cmspbs1"
+  },
+  "status": "submitted; results pending",
+  "remote": "/work/sunq/xjq/inse-nmee-20261109",
+  "scope": "7 fixed-geometry neutral SOC gate-SCF points, full-KS EB response; no relaxation",
+  "queue": "DP_002",
+  "ncpus_each": 4,
+  "mem_each_GB": 24,
+  "walltime_each": "02:00:00",
+  "storage": "work user used6552337912KiB at preflight; user caps unspecified; group/project cap unknown",
+  "fee": "user states free; not independently audited",
+  "frontend_science": false
+}
