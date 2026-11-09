@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "six_SCF_points_complete": true,
+  "actual_input_hashes_checked": true,
+  "geometry_exact_lower_and_upper_checked": true,
+  "physical_gate_sign_and_vacuum_slope_checked": true,
+  "six_points": [
+    {
+      "case": "fm010",
+      "material": "A",
+      "iterations": 22,
+      "SCF_seconds": 830.3169897766784,
+      "gap_eV": 0.8091627948909796
+    },
+    {
+      "case": "fm010",
+      "material": "mono",
+      "iterations": 21,
+      "SCF_seconds": 433.84959711600095,
+      "gap_eV": 1.4636889338700936
+    },
+    {
+      "case": "fm010",
+      "material": "upper",
+      "iterations": 32,
+      "SCF_seconds": 623.2608376266435,
+      "gap_eV": 1.4639341401030457
+    },
+    {
+      "case": "fp010",
+      "material": "A",
+      "iterations": 24,
+      "SCF_seconds": 597.480684154667,
+      "gap_eV": 0.7993508215631167
+    },
+    {
+      "case": "fp010",
+      "material": "mono",
+      "iterations": 19,
+      "SCF_seconds": 265.50138816423714,
+      "gap_eV": 1.4637927636122319
+    },
+    {
+      "case": "fp010",
+      "material": "upper",
+      "iterations": 32,
+      "SCF_seconds": 419.9097020421177,
+      "gap_eV": 1.4638295609458196
+    }
+  ],
+  "physical_half_B_error_max": 2.0148606206582542e-05,
+  "no_layer_reversal": true,
+  "all_insulating": true,
+  "visual_qa": "PNG inspected: signed layer slopes and global screening suppression shown separately; no clipping; all state cutoffs retained. PNG preview plus editable PDF/SVG; no TIFF required for worklog.",
+  "review": "Gate ICHARG=1/2 remains self-consistent; probes remain frozen-potential, correctly documented. Actual upper single-layer geometry and total single-layer responses used. No independent claim of unique hybridization/screening decomposition.",
+  "limitations": [
+    "one weak-field pair at fixed ions",
+    "inherited 6x6 mesh, not final k-mesh convergence",
+    "pure spin Zeeman and frozen Ex/Bz probe definition"
+  ]
+}

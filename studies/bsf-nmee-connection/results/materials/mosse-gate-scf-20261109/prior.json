@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-11-09T11:49:23.086626+08:00",
+  "fields_V_nm": [
+    -0.1,
+    0.1
+  ],
+  "physical_field_definition": "electron energy +e F z; VASP EFIELD=-F/10 eV/A per official EFIELD convention",
+  "materials": [
+    "same relaxed S/S bilayer",
+    "exact lower isolated geometry",
+    "exact upper isolated geometry"
+  ],
+  "hypothesis": "self-consistent gate screening retains bilayer gain over matched isolated-layer sum and upper-layer-dominated slope",
+  "falsifier": "gate gain absent or not stable; upper contribution not dominant",
+  "scope": "SCF for perpendicular gate only; fixed-ion spin-only NMEE from full KS finite-B response; no B-field SCF or ionic screening",
+  "same_probe_convention": true,
+  "gate_zero_reference": "existing e000 A and lower mono; no exact upper zero needed for symmetric slopes",
+  "source_model_commit": "0fb4d289f73d66b0042ac57015dd65858bb4d919"
+}
