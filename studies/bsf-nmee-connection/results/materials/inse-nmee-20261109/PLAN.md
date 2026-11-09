@@ -55,3 +55,12 @@ completion separately. Expected new output <15GB. User work quota caps zero/
 unspecified; group/project cap unknown. All VASP, wave processing, profiles,
 hashes and numerical work on PBS compute nodes, never the frontend. No other
 account jobs changed. Local only prepares inputs and summarizes small results.
+
+## Execution refinement after the first A0 result (2026-11-09)
+
+The zero-field layer values are unexpectedly large and nearly compensate. One
+independent 8x8 A0 SCF, initialized from the converged 6x6 charge density, is
+added to test integration sensitivity before interpreting a large magnitude.
+The primary seven-state gate comparison is unchanged. After the mono allocation
+finished, Ap was delegated to a separate allocation (560116); the original
+bilayer runner skips its completed record. No duplicate gate SCF is intended.

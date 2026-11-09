@@ -2,9 +2,11 @@
   "observed_at": "2026-11-09T16:30:01.019571+08:00",
   "jobs": {
     "mono": "560010.cmspbs1",
-    "bilayer": "560011.cmspbs1"
+    "bilayer": "560011.cmspbs1",
+    "positive_bilayer_gate": "560116.cmspbs1",
+    "negative_bilayer_gate": "560139.cmspbs1"
   },
-  "status": "submitted; results pending",
+  "status": "mono0/monom/monop/A0/B0 complete; Am and Ap delegated to individual jobs",
   "remote": "/work/sunq/xjq/inse-nmee-20261109",
   "scope": "7 fixed-geometry neutral SOC gate-SCF points, full-KS EB response; no relaxation",
   "queue": "DP_002",
@@ -13,5 +15,13 @@
   "walltime_each": "02:00:00",
   "storage": "work user used6552337912KiB at preflight; user caps unspecified; group/project cap unknown",
   "fee": "user states free; not independently audited",
-  "frontend_science": false
+  "frontend_science": false,
+  "last_observed_China": "2026-11-09T17:59:43.507591+08:00",
+  "followup": "One independent 8x8 zero-gate SCF planned because of unexpectedly large compensated layer response; not yet submitted",
+  "original_bilayer_allocation": {
+    "id": "560011.cmspbs1",
+    "exit_status": 271,
+    "walltime": "01:26:38",
+    "reason": "After A0 and B0 finished, stop just-started Am to avoid the 2h batch limit. Partial Am preserved at Am_interrupted_560011, never used as a result; fresh Am allocated independently."
+  }
 }
