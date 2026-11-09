@@ -143,6 +143,33 @@
         "Not a Wannier injection/shift calculator; published x;yy Eq.(19) disagrees with direct Eq.(7) integration; retained as discrepancy"
       ],
       "expected_tests": 8
+    },
+    {
+      "id": "orbital-igmc",
+      "name": "Orbital IGMC",
+      "directory": "papers/ghorai-2026-orbital-igmc",
+      "source": "https://doi.org/10.1103/xr5v-gkv5",
+      "citation": "PRB 114, 245420 (2026)",
+      "status": "MODEL_READY",
+      "capability": "Orbital/spin magnetic displacement current in CuMnAs; explicit printed_D10 and density_A9 protocols",
+      "pythonpath": "src",
+      "example": "scripts/reproduce_core.py",
+      "documentation": "README.md",
+      "apis": [
+        "orbital_igmc.CuMnAs",
+        "orbital_igmc.geometry",
+        "orbital_igmc.integrate",
+        "orbital_igmc.response_si",
+        "orbital_igmc.density_reference"
+      ],
+      "units": "H: eV; q=k*a; explicit a and Bunit=hbar/(e*a^2); harmonic/phasor sheet current A/(m T)",
+      "limits": [
+        "D10/A9 orbital amplitude inequivalence retained; no unique physical amplitude certification",
+        "Fixed orthonormal basis and persistent energy blocks; not general Wannier transport",
+        "Low-frequency intrinsic polarization only; zero-T metals rejected; finite-T metals need convergence",
+        "In-plane lattice length is an explicit illustrative input; no full-figure or voltage certification"
+      ],
+      "expected_tests": 23
     }
   ]
 }
