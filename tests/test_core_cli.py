@@ -9,7 +9,7 @@ class CoreEntry(unittest.TestCase):
     def test_all_registered_entries_resolve(self):
         self.assertEqual([r['id'] for r in core.capabilities()],
                          ['nmee','spin','magnetotransport','curvature-flux','igmc',
-                          'altermagnet-bpve','imhe'])
+                          'altermagnet-bpve','imhe','orbital-igmc'])
 
     def test_routes_to_selected_module_with_current_interpreter(self):
         for row in core.capabilities():

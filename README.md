@@ -2,7 +2,7 @@
 
 [![Core regression](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/workflows/core-capabilities.yml/badge.svg)](https://github.com/Xin-Jiaqi/quantum-geometry-reproductions/actions/workflows/core-capabilities.yml)
 
-从论文中提取、独立核验并复用量子几何与输运计算。当前 **7 个核心模块可运行**，每个都有明确的输入、频率/单位约定、独立对照和可重算例子。
+从论文中提取、独立核验并复用量子几何与输运计算。当前 **8 个核心模块可运行**，每个都有明确的输入、频率/单位约定、独立对照和可重算例子。
 
 `MODEL_READY` 表示指定模型与响应协议可用；原图完全复现、通用材料能力和源文争议分别记录。本仓库不是作者官方实现。
 
@@ -19,9 +19,11 @@
 | 交变磁场诱导传导/位移电流 | [IGMC](papers/xiang-2025-intrinsic-gyrotropic-magnetic-current/CORE_ACCESS.md) | Rashba/Dirac、非共振响应、SI换算 | 原Fig2(d)幅度来源仍未决 |
 | 交错磁体磁性光伏：线偏振 MIC | [Ezawa BPVE](papers/ezawa-2025-altermagnet-bpve/README.md) | quantum metric × 带间速度差、磁序反号、Eq. (17) 数值基准 | 仅两带模型；Eq. (19) 存待核查差异；无 Wannier 生产链路 |
 | 层电偶极×轨道磁矩的混合几何与电流 | [IMHE](papers/das-2026-layer-orbital-imhe/README.md) | 多带混合导数、A16完整乘积展开、有限外场独立核验 | 固定参考磁矩的有效模型；非R5G/SI/全磁输运；原文差异单列 |
+| 轨道磁位移电流、反铁磁 Néel 读出 | [Orbital IGMC](papers/ghorai-2026-orbital-igmc/README.md) | CuMnAs 双重简并、轨道三项/自旋对照、带隙平台与反号 | D10/A9 轨道幅度差异未决；显式公式与单位协议 |
 
 **能力详情与API：** [能力目录](physics/README.md) · [机器可读清单](physics/capabilities.json)
 **论文覆盖：** [王健组近期文献与缺口](docs/LITERATURE_COVERAGE.md)——五篇核心接入不代表近期PRL/PRB全部覆盖。
+**本次接入：** [仓库 review 与 Ghorai 2026 轨道 IGMC](docs/ORBITAL_IGMC_REVIEW.md)。
 
 ## 运行
 
@@ -36,7 +38,7 @@ python scripts/core.py run igmc --output outputs/igmc.json
 python scripts/core.py test igmc
 ```
 
-模块ID依次为 `nmee`、`spin`、`magnetotransport`、`curvature-flux`、`igmc`、`altermagnet-bpve`、`imhe`。
+模块ID依次为 `nmee`、`spin`、`magnetotransport`、`curvature-flux`、`igmc`、`altermagnet-bpve`、`imhe`、`orbital-igmc`。
 
 ```bash
 python scripts/core.py run all --output outputs/all.json
@@ -52,7 +54,7 @@ python scripts/core.py test all
 ```text
 physics/                  # 当前能力目录与机器清单
 scripts/core.py            # 运行与测试入口
-papers/                   # 七篇独立实现、正文/SM核查、冻结基准
+papers/                   # 八篇独立实现、正文/SM核查、冻结基准
 studies/                  # 历史跨论文探索，不作为核心能力验收
 integration/              # 旧接口设计与材料输入契约
 outputs/                  # 用户本地运行结果（不入库）
