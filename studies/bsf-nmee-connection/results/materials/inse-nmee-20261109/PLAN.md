@@ -64,3 +64,19 @@ added to test integration sensitivity before interpreting a large magnitude.
 The primary seven-state gate comparison is unchanged. After the mono allocation
 finished, Ap was delegated to a separate allocation (560116); the original
 bilayer runner skips its completed record. No duplicate gate SCF is intended.
+
+## Conditional prediction after C(A,0), before inspecting bilayer gate responses
+
+2026-11-09T18:20:27.691364+08:00
+
+The large opposite layer C(0), together with the much smaller isolated-layer
+gate sensitivity, motivates a separate possibility: if paired cross-layer
+virtual transitions dominate and their gaps are detuned oppositely by F, the
+CHANGES of the two layer responses can have the same sign and comparable
+magnitudes. Net electrical enhancement could then occur without strong layer
+selection. This is conditional on the electronic mechanism, not required by
+C3v and not yet a result. It does not predict an absolute sign or gain factor.
+Opposite layer slopes, little net gain, or strong layer asymmetry are retained
+as alternative outcomes. Gamma concentration and directional VC controls will
+test the proposed interpretation. Large zero-field layer C alone proves none
+of these gate properties.
