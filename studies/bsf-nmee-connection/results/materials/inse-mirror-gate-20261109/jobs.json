@@ -4,9 +4,10 @@
   "queue": "DP_002",
   "jobs": {
     "B6": "560298.cmspbs1",
-    "B8": "560299.cmspbs1"
+    "B8": "560299.cmspbs1",
+    "A8": "560314.cmspbs1"
   },
-  "A8": "not yet submitted; wait for task slot",
+  "A8": "afterok dependency on 560298.cmspbs1; no extra simultaneous allocation",
   "request": {
     "ncpus": 4,
     "mem_GB": 24,
@@ -23,5 +24,21 @@
   "remote": "/work/sunq/xjq/inse-mirror-gate-20261109",
   "frontend_science": false,
   "other_shared_jobs": "observed but unchanged",
-  "constraints": "All science in PBS compute nodes; preserve original results."
+  "constraints": "All science in PBS compute nodes; preserve original results.",
+  "last_checked_China": "2026-11-09T20:27:50+08:00",
+  "status": {
+    "B6": {
+      "state": "F",
+      "exit_status": 0,
+      "walltime": "00:57:00"
+    },
+    "B8": {
+      "state": "R",
+      "node": "csuper001"
+    },
+    "A8": {
+      "state": "R",
+      "node": "csuper006"
+    }
+  }
 }

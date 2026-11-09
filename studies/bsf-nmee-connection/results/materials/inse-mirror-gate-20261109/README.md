@@ -5,6 +5,13 @@ and numerical scope are sealed in [PLAN.md](PLAN.md). The primary observable
 is the existing fixed-ion insulating spin coefficient C_l in s_x,l=C_l Ex Bz.
 The perpendicular gate F is distinct from the electric and magnetic probes.
 
+Initial 6x6 B(-0.10) and B(+0.10) are complete independently: the same positive
+gate weakens both local magnitudes in A and strengthens both in B. At 160
+bands, B changes from (-1051.752,+1053.130) to (-1052.995,+1053.950), with its
+net coefficient decreasing from +1.379 to +0.956. The layer-spin signs do not
+reverse. The 128/144-band checks retain the tuning directions. The two 8x8
+batches are running; quantitative convergence is not claimed.
+
 ## Question and prediction
 
 In the original A domain, a small positive F weakens both opposite layer-spin
@@ -13,6 +20,27 @@ claim means that a layer's spin changes its own sign. The mirror law relates
 C_lower(B,F)=-C_upper(A,-F); the finite-field B values must be calculated
 independently. Two meshes test tuning directions, without pursuing identical
 enhancement factors. Five new SCFs are planned; no ionic switching is simulated.
+
+## Physical distinction to test
+
+Let C_net=C_upper+C_lower and C_stag=(C_upper-C_lower)/2. The latter measures
+the opposing layer-spin response; it is not spontaneous magnetic order.
+Horizontal-mirror partners obey
+
+- C_net^B(F) = -C_net^A(-F),
+- C_stag^B(F) = C_stag^A(-F).
+
+Consequently their zero-gate linear **net** tuning is identical, whereas the
+linear tuning of the opposing layer response reverses. The independent SCFs
+test whether this local prediction persists over the selected finite field.
+A net-only gate scan cannot reveal this local strengthening/weakening contrast.
+Writing g=dC_net/dF and k=dC_stag/dF at zero gate, both opposite layer
+magnitudes weaken in A when k < -abs(g)/2. The mirror partner has the same
+g and the opposite k, and both strengthen. This is a response-level criterion,
+not yet a prediction from orbital energies and matrix elements.
+It is also distinct from a reversal of either layer's actual induced spin.
+The mirror identity is standard tensor symmetry; its application does not
+by itself establish new microscopic physics or PRL-level novelty.
 
 ## Can the gate also move the structure?
 
@@ -61,6 +89,26 @@ domain-wall mobility. A future minimal mechanical check would examine
 near-registry restoring forces/stiffness under the proposed readout field;
 domain-wall switching would require a separate treatment.
 
+## Connection to the material series and the PRL candidate
+
+MoS2 shows activation of a monolayer-forbidden component and a local sign
+not reproduced by the specified electrostatic reference. MoSSe shows a
+same-layer sign change and strongly unequal gate sensitivity. InSe instead
+has two substantial, opposing layer changes; its selected mixing controls
+alter their gate slopes even when the static layer-spin directions stay fixed.
+The shared physical question is how an interface rewrites both a layer's
+signed response and its sensitivity to an external gate. These observations
+do not establish a universal single occupied-empty channel or threshold.
+
+The mirror-domain test attaches the InSe tuning pattern to an actual stacking
+choice, beyond an artificial channel deletion. It does not establish that a
+laboratory gate can move between those choices without other changes.
+A PRL claim would still need a concise predictive microscopic condition and
+an experimentally credible consequence. In particular, large cancelling local
+coefficients are not a large net experimental signal; neither their detection
+threshold nor a layer-selective spin readout has been established here. A standard mirror law, a larger
+response type catalogue, or a precise enhancement factor alone is insufficient.
+
 ## FQFE connection and scope
 
 Internal sublattice switching within an InSe monolayer is a different
@@ -75,7 +123,10 @@ rank-three tensor, without implying identical microscopic physics to BPVE.
 
 `symmetry_checks.json` verifies the allowed indices in the actual monolayer
 Cartesian frame. No FQFE switching or additional magnetic-field-direction
-calculation is launched. The user's manuscript was read locally; its PDF,
+calculation is launched. An in-plane electric probe can itself couple to an
+in-plane FQFE polarization, so a future FQFE response measurement must also
+distinguish weak probing from structural writing; the gate is not the only
+field that can affect structure. The user's manuscript was read locally; its PDF,
 full text, numerical results and figures are not redistributed in this archive.
 
 ## Reading scope and provenance
