@@ -1,0 +1,109 @@
+{
+  "status": "prepared_for_discussion_not_a_submission_engine",
+  "scope": "16 bilayers,8 parents; staged fixed-ion insulating spin-Zeeman NMEE; no expanded material search",
+  "lanes": [
+    {
+      "name": "KM",
+      "purpose": "Test minimal competing-path hypotheses suggested by material contrasts; retain eight states; freeze held-out predictions",
+      "placement": "local or WSL after resource check"
+    },
+    {
+      "name": "existing_DFT",
+      "purpose": "Calibrate signs, units, spin/derivative directions and cached protocol; preserve InSe failure",
+      "placement": "IMR cached scientific processing only via PBS"
+    },
+    {
+      "name": "new_materials",
+      "purpose": "Resolve one structural/chemical contrast per batch; no blanket mechanism analysis",
+      "placement": "validated CPU site; new site requires same-anchor project regression"
+    },
+    {
+      "name": "synthesis",
+      "purpose": "Collect all valid/failed/uncertain records with immutable provenance; update one worklog",
+      "placement": "local small tables"
+    }
+  ],
+  "first_pilot": {
+    "anchor": 7269,
+    "new_registry": 7268,
+    "historical_comparators": [
+      7266,
+      864
+    ],
+    "order": [
+      "audit cached 7269 and response/export definition",
+      "single cached regression after method fixes",
+      "7268 zero-gate bilayer and two matched isolated references",
+      "inspect gap, forces/symmetry, signs, absolute scale and numerical quality",
+      "only then pm010 independent gate SCFs; no automatic cascade"
+    ],
+    "proposed_limits_not_allocations": {
+      "max_project_running_jobs": 2,
+      "max_project_submitted_nonterminal_jobs": 2,
+      "cpu_per_DFT_job": 4,
+      "memory_GiB_per_DFT_job": 24,
+      "walltime_hours_per_DFT_job": 2,
+      "cache_regression_max_jobs": 1,
+      "cache_regression_walltime_hours": 0.5,
+      "initial_zero_gate_max_SCF_states": 3,
+      "initial_requested_CPU_hour_ceiling": 26,
+      "gate_extension_max_SCF_states": 6,
+      "gate_extension_additional_requested_CPU_hour_ceiling": 48,
+      "automatic_retries": 0
+    },
+    "budget_note": "Budgets include allocated walltime, not predicted runtime. Existing shared-account jobs/queue limits can reduce available concurrency. Mesh convergence and later candidates are outside this first-pilot cap. Same-node batching must respect actual whole-node charging."
+  },
+  "blocking_gates": [
+    "verified geometric reference and layer orientation",
+    "fixed spin/Zeeman/area/field conventions",
+    "full requested vertices and derivative directions validated",
+    "per-axis reciprocal mesh treatment",
+    "SCF/gap/occupation/link-gauge validation",
+    "independent layer sum and forbidden components",
+    "method numerical sensitivity small enough for claimed contrast",
+    "current scheduler allowance, owned storage headroom and software compatibility"
+  ],
+  "result_fields": [
+    "structure_uid",
+    "geometry_hash",
+    "protocol_id",
+    "source_hash",
+    "parent_reference_ids",
+    "site",
+    "job_id",
+    "component",
+    "Fz",
+    "C_lower",
+    "C_upper",
+    "C_total",
+    "G_lower",
+    "G_upper",
+    "G_total",
+    "absolute_delta",
+    "layer_allocation",
+    "gap",
+    "mesh",
+    "bands",
+    "probe_step",
+    "numerical_sensitivity",
+    "status",
+    "hypothesis_id",
+    "prediction_frozen_before_result"
+  ],
+  "promotion_rule": "Advance contrasts with resolved absolute changes or robust direction/allocation differences; do not rank by near-zero-denominator percentages.",
+  "stop_rule": "SCF failure, gap closure, symmetry discrepancy, gauge/normalization failure, resource limit or unresolved numerical sign stops dependent work; no automatic bigger-field or bigger-memory retry.",
+  "resource_notes": {
+    "imr": "project provenance strongest; all science and bulk analysis on PBS compute nodes; check other ongoing Jiaqi projects",
+    "win": "small KM/data jobs only after current RAM and Windows backing-volume check",
+    "xingyi": "first-tier CPU candidate but prior node-exclusive allocation and tight group storage; no production assumption",
+    "newton": "GPU-only, coordination required, project SOC acceptance absent",
+    "hpc6": "authorized executable/project acceptance unresolved in latest local evidence"
+  },
+  "not_claimed": [
+    "production-ready cross-site scheduler",
+    "full tensor validated",
+    "new material response",
+    "universal criterion",
+    "PRL novelty or experimental detectability established"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "candidate_count": 16,
+  "unique_candidates": 16,
+  "parents": 8,
+  "archived_gate_rows": 9,
+  "all_gate_rows_layer_sum_error_below_1e-8": true,
+  "new_scientific_jobs": 0,
+  "new_response_calculations": 0
+}
