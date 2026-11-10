@@ -11,6 +11,8 @@
 | `igmc` | `igmc_lab.core.pair_kernels`；`dirac_response`；`fermi_contour.integrate_contour` | 波包/格林函数/Liouville、费米海/费米面 | 两带物理Pauli基底、非共振频率；C、D及A/(m·T)换算 |
 | `altermagnet-bpve` | `altermagnet_bpve.contour_injection`；`grid_injection` | 解析 Eq. (17)、独立本征态 metric、Néel 反号、Cartesian delta 网格 | 两带 `d-wave` Rashba，模型单位，T=0；Eq. (19) 差异独立标记 |
 
+| `deep-dbc` | `deep_dbc.nodal_parameters`; `band_data`; `shg_pieces` | SM Table S1/S10/S12；S19–S26 三组奇异项相消；U(1)/带标/光学指标交换 | 三轨道TB，局部SHG领先发散核验；非完整有限SHG或材料预测 |
+
 详细模型设置、打印公式分支与本轮例子见[根目录索引](../README.md)。`python scripts/core.py run <ID>`从根目录执行；它的作用是选择运行环境和记录来源，不改变物理公式。
 
 ## 已有方法扩展，按需进入
