@@ -16,5 +16,16 @@
   "node": "csuper004",
   "start_time_Asia_Shanghai": "2026-11-10T20:55:53+08:00",
   "scheduler_walltime_limit_Asia_Shanghai": "2026-11-10T22:45:53+08:00",
-  "completion_estimate": "No narrow convergence ETA yet; hard walltime bound only; not a completion guarantee"
+  "completion_estimate": "Initial low-confidence30-90min total planning scenario; hardwall22:45:53 remains",
+  "initial_progress": {
+    "scheduler_elapsed": "00:05:08",
+    "completed_ionic_steps": 1,
+    "electronic_iterations_first_step": 11,
+    "source": "targeted qstat and tail of OSZICAR; computation on csuper004",
+    "provisional_planning_window_Asia_Shanghai": [
+      "2026-11-10T21:25:53+08:00",
+      "2026-11-10T22:25:53+08:00"
+    ],
+    "basis": "Low-confidence 30-90min total planning scenario after first ionic step took about5min; remaining ionic step count and SCF effort unknown; not convergence guarantee"
+  }
 }
