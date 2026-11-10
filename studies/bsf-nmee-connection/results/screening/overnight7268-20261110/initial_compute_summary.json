@@ -1,0 +1,64 @@
+{
+  "job": "565092.cmspbs1",
+  "node": "csuper004",
+  "complete": false,
+  "status": "running_state",
+  "completed_states": [],
+  "only_material": "MoSSe S/Se E,tau_A,d (BiDB7268)",
+  "coordinate_convention": "x along a1, a2 at120degrees, +z lower-to-upper; Fz positive physical +z",
+  "allocated_CPUs": 4,
+  "max_wall_hours": 16,
+  "automatic_retries": 0,
+  "new_jobs_submitted_from_worker": 0,
+  "elapsed_seconds": 0.14175638277083635,
+  "structural_acceptance": {
+    "passed": true,
+    "checks": {
+      "source_hash": true,
+      "species_and_order": true,
+      "vasp_completed": true,
+      "ionic_convergence": true,
+      "all_electronic_steps_converged": true,
+      "ionic_budget": true,
+      "force": true,
+      "xy_fixed": true,
+      "cell_fixed": true,
+      "z_bounded": true,
+      "point_group": true,
+      "no_internal_layer_exchange": true
+    },
+    "coordinate_source": "high-precision CONTCAR; forces/convergence remain from OUTCAR",
+    "original_wrapper_passed": false,
+    "coarse_OUTCAR_xy_drift_A": 4.890000000257189e-06,
+    "precise_xy_drift_A": 1.1366616160466386e-14,
+    "precise_centered_z_motion_A": 0.006302536668147359,
+    "max_force_eV_A": 0.005635,
+    "point_group": "3m",
+    "layer_exchanging_operations": 0,
+    "source_sha256": {
+      "initial": "fe89d6c6a46dbb296bd7e1a277337db734cb0f76c54f60586480cb658c45012e",
+      "CONTCAR": "976749de4cce341d733125b40a3c11ff1094a96fb0d6d9bc0ab414ed4150ce9d"
+    },
+    "adjudication": "OUTCAR printed-coordinate false rejection; original failed record retained; no tolerance relaxed"
+  },
+  "prepared_geometry": {
+    "bilayer_common_z_shift_A": 0.0006145261376264699,
+    "layer_boundary_fractional_z": 0.5,
+    "both_isolated_layers_computed": true,
+    "isolated_centered_z_difference_A": [
+      -0.0021937604893746965,
+      0.001387115566821251,
+      0.0008066449225552219
+    ],
+    "max_isolated_z_difference_A": 0.0021937604893746965,
+    "preserved": "cell, xy registry, species order, all internal atomic coordinates; only common translations for centering",
+    "source_CONTCAR_sha256": "976749de4cce341d733125b40a3c11ff1094a96fb0d6d9bc0ab414ed4150ce9d",
+    "input_hashes": {
+      "POSCAR.lower": "491bdd4edb84beb7c529be56cfb6f7158fb6f3562b20a2a603b1c5824b035230",
+      "POSCAR.upper": "1dbf986d8ccfd74c38e4e02edb1da272a28cf1fb83f2ebdb9f0dc390b38fe355",
+      "POSCAR.A": "21591a39bb2c59eccbe0b1398c39b06cdc4694c6af9886c1ffcc45d2fa210726"
+    }
+  },
+  "meshes": {},
+  "current_state": "k6_A0"
+}

@@ -1,0 +1,21 @@
+{
+  "decision": "approved_for_single_bounded_submission",
+  "independent_review": true,
+  "tests_passed": 8,
+  "python_compile": "passed",
+  "PBS_shell_syntax": "passed",
+  "runner_hashes": "matched",
+  "remote_only_inputs": "worker verifies on compute node before science",
+  "scientific_acceptance": "not yet; all completed campaign states require result review",
+  "reviewed_contract_sha256": "a5dfe7cb9c6f8083c7fe9379e8ea5451a59c4e83fab035253e8c2733b946a046",
+  "post_review_source_reconciliation": {
+    "initial_job": "565090.cmspbs1",
+    "scientific_work_started": false,
+    "eleven_remote_source_files_read_back": true,
+    "ten_exact_hashes_match": true,
+    "one_JSON_only_final_newline_differs": true,
+    "all_JSON_values_and_evidence_hashes_match": true,
+    "runner_unchanged": true,
+    "replacement_contract_sha256": "55fc4ba9dd9a87c9c7bec0135157a476887cd1379f86eb16c97db0a598a99ecc"
+  }
+}

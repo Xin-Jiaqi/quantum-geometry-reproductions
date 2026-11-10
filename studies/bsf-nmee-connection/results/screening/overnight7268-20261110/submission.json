@@ -1,0 +1,51 @@
+{
+  "job": "565092.cmspbs1",
+  "submitted_observed_Asia_Shanghai": "2026-11-10T22:07:12+08:00",
+  "resource": "CP_001 single node4CPU/24GiB/16h",
+  "remote_workdir": "/work/sunq/xjq/nmee-full-tensor-pilot-20261110/overnight7268",
+  "authorization": "User approved conservative overnight serial continuation after structural acceptance, 2026-11-10",
+  "status": "R",
+  "new_scheduler_jobs": 2,
+  "maximum_serial_SCF_states": 27,
+  "automatic_retries": 0,
+  "planned_review_Asia_Shanghai": "2026-11-11T15:00:00+08:00",
+  "ETA_condition": "queue delay unknown;5-10h for6+9, conditional12 total10-16h or budget-stop; any failed gate stops early",
+  "screening_progress": {
+    "new_candidates_started": 1,
+    "total_candidates": 16,
+    "new_protocol_three_field_candidates_accepted": 0,
+    "method_anchor_7269_accepted": true
+  },
+  "node": "csuper004",
+  "start_time_Asia_Shanghai": "2026-11-10T22:07:13+08:00",
+  "scheduler_hard_stop_Asia_Shanghai": "2026-11-11T14:07:13+08:00",
+  "current_state": "k6_A0",
+  "completed_states": 0,
+  "source_and_structure_checks_passed": true,
+  "observed_at_Asia_Shanghai": "2026-11-10T22:11:00.399841+08:00",
+  "active_scientific_jobs": 1,
+  "prior_submission": {
+    "job": "565090.cmspbs1",
+    "exit_status": 1,
+    "scheduler_wall_seconds": 4,
+    "DFT_states_started": 0,
+    "reason": "archive-only final newline mismatch; source reconciliation proved identical content"
+  },
+  "time_windows_Asia_Shanghai": {
+    "6_and_9_planning": [
+      "2026-11-11T03:07:13+08:00",
+      "2026-11-11T08:07:13+08:00"
+    ],
+    "conditional_12_planning": [
+      "2026-11-11T08:07:13+08:00",
+      "2026-11-11T14:07:13+08:00"
+    ]
+  },
+  "latest_observation": {
+    "scheduler_elapsed": "00:02:46",
+    "state": "R",
+    "SCF_iterations_observed": 6,
+    "current_state": "k6_A0",
+    "input_geometries_match_local_positions_and_cells_exactly": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "export_tensor.py": {
+    "sha256": "850d913fd8c33a470869d2e51e4eac43a32b35f05837083ab9490eb52b611da6",
+    "matches": true
+  },
+  "build_stencil.py": {
+    "sha256": "17835c3910660f661ec2566a8266e0fa453df442c174320ad2e1cbb90409c674",
+    "matches": true
+  },
+  "audit_gauge.py": {
+    "sha256": "7a2a4fd7aa96a3c6f76d902c000c83b986237f6c3bfb6df67e19bf64cbf37ebc",
+    "matches": true
+  },
+  "tensor_response.py": {
+    "sha256": "bcb75f34d6ebff6f64c7748d05c5145ef189f514da99dc46261a8a917bc80b88",
+    "matches": true
+  },
+  "validate_7269.py": {
+    "sha256": "e6fdf3433db8fb0743f3b6c15cd11a875b955bf5753d663dd62c28bc019cd986",
+    "matches": true
+  },
+  "final_anchor_acceptance.json": {
+    "sha256": "b75c8793021f00615e5b7c00b2179b5b0f19d71e42130e1022afd2f5706ccb52",
+    "matches": false,
+    "semantic_equal": true
+  },
+  "inputs7268/POSCAR.A": {
+    "sha256": "fe89d6c6a46dbb296bd7e1a277337db734cb0f76c54f60586480cb658c45012e",
+    "matches": true
+  },
+  "pilot7268/A_zrelax/result.json": {
+    "sha256": "b873077ec8684fce44bc15fe761fe0292807ebfb66c16e46ecbff0534f898004",
+    "matches": true
+  },
+  "pilot7268/A_zrelax/seed/CONTCAR": {
+    "sha256": "976749de4cce341d733125b40a3c11ff1094a96fb0d6d9bc0ab414ed4150ce9d",
+    "matches": true
+  },
+  "pilot7268/A0/seed/INCAR": {
+    "sha256": "3a6d6818f88888fa89cbb9a9b81baa462817d76ee7446e801c9032d582ada522",
+    "matches": true
+  },
+  "pilot7268/lower0/seed/INCAR": {
+    "sha256": "6f5e7a41688119c06f4f835bf7dd6cb7435df25a3b9c1c29de2036a9c37dc978",
+    "matches": true
+  }
+}

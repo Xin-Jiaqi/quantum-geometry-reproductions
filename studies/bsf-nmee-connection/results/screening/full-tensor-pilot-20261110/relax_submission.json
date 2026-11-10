@@ -3,7 +3,7 @@
   "submitted_at_observed": "2026-11-10T20:56:46.126244+08:00",
   "case": "7268 zero-field A_zrelax",
   "resource": "CP_001 4CPU 24GiB 110min",
-  "authorization": "User explicitly answered 执行这次有界局部弛豫",
+  "authorization": "User explicitly answered \u6267\u884c\u8fd9\u6b21\u6709\u754c\u5c40\u90e8\u5f1b\u8c6b",
   "source_hashes": {
     "relax_7268.py": "c620e8ce5a56f8597743badfc3ea3a244347f99bdfd01d5c33e718af1937206d",
     "relax.pbs": "a9b75db96dcc9684d96d36ddafb7620b559da06a0b7800b5ac35ba37fdfebcef",
@@ -11,7 +11,7 @@
   },
   "automatic_retry": false,
   "gate_states_submitted": false,
-  "status": "R",
+  "status": "F",
   "observed_at": "2026-11-10T20:57:42.836273+08:00",
   "node": "csuper004",
   "start_time_Asia_Shanghai": "2026-11-10T20:55:53+08:00",
@@ -27,5 +27,11 @@
       "2026-11-10T22:25:53+08:00"
     ],
     "basis": "Low-confidence 30-90min total planning scenario after first ionic step took about5min; remaining ionic step count and SCF effort unknown; not convergence guarantee"
-  }
+  },
+  "scheduler_exit_status": 2,
+  "vasp_returncode": 0,
+  "scheduler_elapsed": "00:32:38",
+  "structural_acceptance_corrected": true,
+  "structural_acceptance_evidence": "../overnight7268-20261110/structural_acceptance.json",
+  "terminal_note": "Wrapper falsely rejected coarse OUTCAR xy positions; precise CONTCAR satisfies unchanged constraints. Original failed result retained; no rerelaxation."
 }

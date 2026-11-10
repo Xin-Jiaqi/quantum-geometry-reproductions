@@ -1,0 +1,18 @@
+{
+  "bilayer_common_z_shift_A": 0.0006145261376264699,
+  "layer_boundary_fractional_z": 0.5,
+  "both_isolated_layers_computed": true,
+  "isolated_centered_z_difference_A": [
+    -0.0021937604893746965,
+    0.001387115566821251,
+    0.0008066449225552219
+  ],
+  "max_isolated_z_difference_A": 0.0021937604893746965,
+  "preserved": "cell, xy registry, species order, all internal atomic coordinates; only common translations for centering",
+  "source_CONTCAR_sha256": "976749de4cce341d733125b40a3c11ff1094a96fb0d6d9bc0ab414ed4150ce9d",
+  "input_hashes": {
+    "POSCAR.A": "2db8c3ee855f428aecb7cfae2e4a00ec03ef4225a304da935579715d8703238e",
+    "POSCAR.upper": "5c3ccd37d6c6ddeec0ceba99ab403917211ff4f0e7edf64d2c10b5a7da303518",
+    "POSCAR.lower": "a8b992b26743e1dffe55e12598921a2d200d561f0a5bc751d9543677f6d83986"
+  }
+}

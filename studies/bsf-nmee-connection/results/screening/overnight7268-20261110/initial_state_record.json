@@ -1,0 +1,21 @@
+{
+  "case": "k6_A0",
+  "mesh": 6,
+  "label": "A",
+  "Fz_V_nm": 0.0,
+  "fixed_ions": true,
+  "complete": false,
+  "stage": "SCF",
+  "input_sha256": {
+    "POSCAR": "21591a39bb2c59eccbe0b1398c39b06cdc4694c6af9886c1ffcc45d2fa210726",
+    "INCAR": "6483ed3e885981d2acca106120bd42a35ded9997e6491a70df99cedebb0768a7",
+    "KPOINTS": "66adb9bc520a61ea753f03c0fe49cbe920c97ce3ae38681aa7685ed6c66c67b5",
+    "POTCAR": "ab983ab9c1f52da025fddf0e40984cd48b4b0f951cfa67994aa9a16737234600"
+  },
+  "job": "565092.cmspbs1",
+  "node": "csuper004",
+  "restart_input_hashes": {
+    "WAVECAR": "0a8e5f028cafa8d12e4a10f253db200c921d011f449a9ff51b4fe4a12a82aa59",
+    "CHGCAR": "4de5cfe812e6dda7b1587bcaf00e79cd6d86dfd46c4a262d5842ffc0e5d871be"
+  }
+}

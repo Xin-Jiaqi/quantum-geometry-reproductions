@@ -1,0 +1,17 @@
+{
+  "POSCAR.A": {
+    "max_position_difference_A": 0.0,
+    "max_cell_difference_A": 0.0,
+    "species_equal": true
+  },
+  "POSCAR.lower": {
+    "max_position_difference_A": 0.0,
+    "max_cell_difference_A": 0.0,
+    "species_equal": true
+  },
+  "POSCAR.upper": {
+    "max_position_difference_A": 0.0,
+    "max_cell_difference_A": 0.0,
+    "species_equal": true
+  }
+}

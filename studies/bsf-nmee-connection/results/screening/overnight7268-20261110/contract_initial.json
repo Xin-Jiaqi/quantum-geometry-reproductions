@@ -1,0 +1,82 @@
+{
+  "authorization": "user_20261110_overnight_serial_7268",
+  "recorded_at": "2026-11-10T22:00:42.479197+08:00",
+  "scope": "MoSSe S/Se, E orientation, tau_A=(1/3,2/3), fixed accepted relaxed geometry; no other materials",
+  "jobs": 1,
+  "CPUs": 4,
+  "memory_GiB": 24,
+  "walltime_hours": 16,
+  "max_allocated_CPU_hours": 64,
+  "worker_time_guard_hours": 15.5,
+  "serial_only": true,
+  "automatic_retries": 0,
+  "meshes": [
+    6,
+    9,
+    12
+  ],
+  "stage_order": "For each mesh: A0/lower0/upper0 all pass; then Am/Ap/lowerm/lowerp/upperm/upperp. Any hard gate failure stops. Run9 after6. Stop after9 if band-window slopes/directions/rank remain unresolved. Otherwise run12 only if6-vs9 physical-layer C0 (5%) or G (10%) agreement fails or rank unresolved, and time/storage permits. Stop after12 regardless.",
+  "max_SCF_states": 27,
+  "mandatory_initial_states": 18,
+  "early_finish": "Stop after9 if agreement/rank criteria met; never idle or add work merely to run until afternoon",
+  "fields_V_nm": [
+    0,
+    -0.1,
+    0.1
+  ],
+  "VASP_EFIELD_conversion": "-Fz/10 eV/A",
+  "layers": "both new matched isolated geometries separately, no old translation-equivalence reuse",
+  "physical_readout": "Pauli-spin EB term for Ex/Ey,Bz; total/lower/upper sx/sy/sz",
+  "numerical_gates": {
+    "gap_eV": 0.05,
+    "forbidden_fraction": 0.02,
+    "Cxx_Cyy_fraction": 0.05,
+    "half_probe_fraction": 0.01,
+    "operator_closure": 1e-07,
+    "layer_closure_fraction": 1e-06,
+    "bilayer_zero_force_eV_A": 0.03,
+    "other_fixed_state_force_eV_A": 0.1,
+    "wave_MMN_relative": 0.08,
+    "band_window_signs": "must agree; no adjustment to force predicted sign",
+    "band_window_G": "All retained windows: G directions and layer-rank agree; C0 5%, G10% absolute differences normalized by largest physical-layer coefficient; G above twice observed half-probe error. Failure after9 stops for review, no automatic band expansion."
+  },
+  "limits": [
+    "Two/three mesh comparisons are diagnostics, not universal final convergence",
+    "No physical gate sign or layer-response sign assumed",
+    "No checkpoint auto-resume or automatic extra jobs",
+    "Any VASP/export/metric/gap/force/tensor failure aborts allocation",
+    "Per-file RLIMIT_FSIZE6GiB and post-command size checks; reserve8GiB per new state with campaign usage+reserve<=35GiB and filesystem free>=16GiB. Group quota/balance unknown.",
+    "No science or Python postprocessing on Japan login nodes"
+  ],
+  "planning_time": "About5-10hours for6+9 meshes; conditional12 may take total10-16hours or exhaust remaining budget. Queue delay unknown. Aim human acceptance by2026-11-11 15:00 Asia/Shanghai if dispatched around22:00; earlier completion exits immediately.",
+  "source_hashes": {
+    "export_tensor.py": "850d913fd8c33a470869d2e51e4eac43a32b35f05837083ab9490eb52b611da6",
+    "build_stencil.py": "17835c3910660f661ec2566a8266e0fa453df442c174320ad2e1cbb90409c674",
+    "audit_gauge.py": "7a2a4fd7aa96a3c6f76d902c000c83b986237f6c3bfb6df67e19bf64cbf37ebc",
+    "tensor_response.py": "bcb75f34d6ebff6f64c7748d05c5145ef189f514da99dc46261a8a917bc80b88",
+    "validate_7269.py": "e6fdf3433db8fb0743f3b6c15cd11a875b955bf5753d663dd62c28bc019cd986",
+    "final_anchor_acceptance.json": "50fd312dba11333532fbee01e2cdaf755e85cc03a9a9bd3267ada6e43dbc611b",
+    "inputs7268/POSCAR.A": "fe89d6c6a46dbb296bd7e1a277337db734cb0f76c54f60586480cb658c45012e",
+    "pilot7268/A_zrelax/result.json": "b873077ec8684fce44bc15fe761fe0292807ebfb66c16e46ecbff0534f898004",
+    "pilot7268/A_zrelax/seed/CONTCAR": "976749de4cce341d733125b40a3c11ff1094a96fb0d6d9bc0ab414ed4150ce9d",
+    "pilot7268/A0/seed/INCAR": "3a6d6818f88888fa89cbb9a9b81baa462817d76ee7446e801c9032d582ada522",
+    "pilot7268/lower0/seed/INCAR": "6f5e7a41688119c06f4f835bf7dd6cb7435df25a3b9c1c29de2036a9c37dc978"
+  },
+  "runner_hashes": {
+    "night.py": "849a540adb999a2a078b94841b8b2c6a50bd99d292ba0f3c0f73582dbb3e680d",
+    "night_checks.py": "d976e697d03ccaa3c30506f5865466371e11a68b9a6dd3c547190824b6eb311e",
+    "night.pbs": "0f08cd707dcfbf93116211e7599cad9b1c8cb5489d917a3a2e29e1b87636aac9"
+  },
+  "state_reservation": {
+    "minutes": 125,
+    "growth_GiB": 8,
+    "maximum_campaign_GiB": 35,
+    "filesystem_free_after_reserve_GiB": 8
+  },
+  "restart_provenance": "WAVECAR/CHGCAR are initial guesses only, not claimed frozen in advance; actual copied input SHA256 recorded on compute node before each SCF.",
+  "normalized_text_source_hashes": {
+    "pilot7268/A0/seed/POTCAR": "466222edb207cdd19eef0467c454a9c150945a89a4767574c3c3dbf746d096ab",
+    "pilot7268/lower0/seed/POTCAR": "466222edb207cdd19eef0467c454a9c150945a89a4767574c3c3dbf746d096ab"
+  },
+  "PAW_hash_normalization": "UTF-8 text strip of outer whitespace only; full raw copy hash also recorded in each state."
+}
