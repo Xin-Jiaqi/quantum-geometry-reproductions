@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-11-10T21:30:13.330954+08:00",
+  "job": "564629.cmspbs1",
+  "state": "R",
+  "elapsed": "00:28:44",
+  "result": {
+    "job": "564629.cmspbs1",
+    "node": "csuper004",
+    "complete": false,
+    "passed": false,
+    "stage": "z_relaxation",
+    "max_ionic_steps": 12,
+    "force_target_eV_A": 0.03,
+    "gate_release": false
+  },
+  "science_node_only": true,
+  "new_jobs_this_reporting_round": 0,
+  "structural_review_target_Asia_Shanghai": "2026-11-10 22:30 conditional on convergence"
+}

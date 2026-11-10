@@ -1,0 +1,60 @@
+{
+  "coordinate_and_field_definition": "Structural audit Cartesian axes; Ex>0,Bz>0,Fz>0 points +z; Pauli-spin EB contribution, not magnetic moment direction",
+  "rows": [
+    {
+      "source_case": "MoSSe_7269_A_external_nb112",
+      "C_lower": -6.193129577381433,
+      "C_upper": 5.9222906693376185,
+      "response_lower_Ex_positive_Bz_positive": "-x",
+      "response_upper_Ex_positive_Bz_positive": "+x",
+      "external_gate_trend_lower": "weakens",
+      "external_gate_trend_upper": "weakens",
+      "source_path": "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/case_metrics.csv",
+      "source_sha256": "0e5c9f6c4c9586601502cc38934f9bf670188fec7dfe542edff5d43ae8d30b62"
+    },
+    {
+      "source_case": "MoS2_1930_internal_nb112",
+      "C_lower": -4.368241005978239,
+      "C_upper": 3.940080356967049,
+      "response_lower_Ex_positive_Bz_positive": "-x",
+      "response_upper_Ex_positive_Bz_positive": "+x",
+      "external_gate_trend_lower": "not established by this internal-U record",
+      "external_gate_trend_upper": "not established by this internal-U record",
+      "source_path": "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/case_metrics.csv",
+      "source_sha256": "0e5c9f6c4c9586601502cc38934f9bf670188fec7dfe542edff5d43ae8d30b62"
+    },
+    {
+      "source_case": "InSe_864_A_external_nb160",
+      "C_lower": -1053.1240501693962,
+      "C_upper": 1051.755221340605,
+      "response_lower_Ex_positive_Bz_positive": "-x",
+      "response_upper_Ex_positive_Bz_positive": "+x",
+      "external_gate_trend_lower": "weakens",
+      "external_gate_trend_upper": "weakens",
+      "source_path": "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/case_metrics.csv",
+      "source_sha256": "0e5c9f6c4c9586601502cc38934f9bf670188fec7dfe542edff5d43ae8d30b62"
+    },
+    {
+      "source_case": "InSe_864_B_external_cutoff160",
+      "C_lower": -1051.75159358045,
+      "C_upper": 1053.1304670731702,
+      "response_lower_Ex_positive_Bz_positive": "-x",
+      "response_upper_Ex_positive_Bz_positive": "+x",
+      "external_gate_trend_lower": "strengthens",
+      "external_gate_trend_upper": "strengthens",
+      "source_path": "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/case_metrics.csv",
+      "source_sha256": "0e5c9f6c4c9586601502cc38934f9bf670188fec7dfe542edff5d43ae8d30b62"
+    }
+  ],
+  "old_MoSSe_notes": [
+    {
+      "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/MoSSe-NMEE-结果.md",
+      "sha256": "afc4f6e8fb368b011e8f868aed3297c31a46b52c4bbe1843c7b716ccbb455475"
+    },
+    {
+      "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/7266-blind/RESULTS.md",
+      "sha256": "92f69bc1e7e3d22124f02d80e64e75f1f5dc9944ec944959fa275018af708678"
+    }
+  ],
+  "old_note_table_caution": "MoSSe-NMEE-结果.md orders columns upper,lower; inversion bilayer7270 is lower -x, upper +x, NOT the reverse."
+}

@@ -1,0 +1,1132 @@
+{
+  "toolkit_commit": "551a0daf8d4ba5a5f24b2811694bfe438616de48",
+  "coordinates": "a1=a(1,0,0), a2=a(-1/2,sqrt(3)/2,0); +z lower to upper; lower-layer mean z reset to0; in-plane input origin unchanged",
+  "seitz_convention": "r_upper=O r_lower+tau1*a1+tau2*a2+d*z_hat; d is layer-centroid separation, not interface gap; no modulo reduction along nonperiodic z",
+  "representative_caution": "Selected O is a representative of O G_S; not a unique stacking name. Actual bilayer symmetry must map both layers, not merely lower onto upper.",
+  "material_geometry_scope": "BiDB reference structures at symprec1e-3A. A relaxed structure needs its own symmetry and displacement check; do not assert exact same-mother mapping after independent intralayer relaxation.",
+  "monolayers": {
+    "7265": {
+      "pointgroup": "3m",
+      "orientation_left_coset_count": 4,
+      "m001_in_monolayer_pointgroup": false,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    "1929": {
+      "pointgroup": "-6m2",
+      "orientation_left_coset_count": 2,
+      "m001_in_monolayer_pointgroup": true,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 0,
+          "basis": []
+        },
+        "gate_derivative": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    "862": {
+      "pointgroup": "-6m2",
+      "orientation_left_coset_count": 2,
+      "m001_in_monolayer_pointgroup": true,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 0,
+          "basis": []
+        },
+        "gate_derivative": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "bilayers": [
+    {
+      "id": 7266,
+      "material": "MoSSe",
+      "parent_id": 7265,
+      "pointgroup": "3m",
+      "stacking_point_representative": "E",
+      "tau_fractional": [
+        "2/3",
+        "1/3"
+      ],
+      "d_centroid_A": 6.30299708,
+      "lower_to_upper_mapping_error_A": 7.273769192837376e-09,
+      "layer_preserving_operations": 6,
+      "layer_exchanging_operations": 0,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      "source_sha256": "53ebdd3d2de163d245bae203404b3794a725e0985739946ae649933665360b8d"
+    },
+    {
+      "id": 7268,
+      "material": "MoSSe",
+      "parent_id": 7265,
+      "pointgroup": "3m",
+      "stacking_point_representative": "E",
+      "tau_fractional": [
+        "1/3",
+        "2/3"
+      ],
+      "d_centroid_A": 6.3480184899999985,
+      "lower_to_upper_mapping_error_A": 4.223356792459028e-09,
+      "layer_preserving_operations": 6,
+      "layer_exchanging_operations": 0,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      "source_sha256": "7acd0efac0cbc069567f196fb6fb1d5e09f4badd5b427a85547e5ec639e23129"
+    },
+    {
+      "id": 7269,
+      "material": "MoSSe",
+      "parent_id": 7265,
+      "pointgroup": "3m",
+      "stacking_point_representative": "m001",
+      "tau_fractional": [
+        "1/3",
+        "2/3"
+      ],
+      "d_centroid_A": 6.160804376666666,
+      "lower_to_upper_mapping_error_A": 7.891843560292242e-09,
+      "layer_preserving_operations": 6,
+      "layer_exchanging_operations": 0,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      "source_sha256": "00d66e79a6a0ee14d428a9368e594eba70c8d5caf66f4e0224e908086fb2e7a2"
+    },
+    {
+      "id": 7270,
+      "material": "MoSSe",
+      "parent_id": 7265,
+      "pointgroup": "-3m",
+      "stacking_point_representative": "I",
+      "tau_fractional": [
+        "2/3",
+        "1/3"
+      ],
+      "d_centroid_A": 6.212257416666666,
+      "lower_to_upper_mapping_error_A": 7.891844204253466e-09,
+      "layer_preserving_operations": 6,
+      "layer_exchanging_operations": 6,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  -1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      "source_sha256": "63ce999f637202654bd0c71a83dc280b0ac2581800d70819bb8ecd3c05f1af9b"
+    },
+    {
+      "id": 1930,
+      "material": "MoS2",
+      "parent_id": 1929,
+      "pointgroup": "3m",
+      "stacking_point_representative": "E",
+      "tau_fractional": [
+        "1/3",
+        "2/3"
+      ],
+      "d_centroid_A": 6.165407099999997,
+      "lower_to_upper_mapping_error_A": 5.29463258302381e-09,
+      "layer_preserving_operations": 6,
+      "layer_exchanging_operations": 0,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      "source_sha256": "f7f4ac62ac3b390eb8775d188a89b7de85094f1403db4e4cc33d2d8153fd6ba0"
+    },
+    {
+      "id": 1931,
+      "material": "MoS2",
+      "parent_id": 1929,
+      "pointgroup": "-3m",
+      "stacking_point_representative": "I",
+      "tau_fractional": [
+        "2/3",
+        "1/3"
+      ],
+      "d_centroid_A": 6.184554326666666,
+      "lower_to_upper_mapping_error_A": 8.51337581635395e-09,
+      "layer_preserving_operations": 6,
+      "layer_exchanging_operations": 6,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  -1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      "source_sha256": "e5cb3f14bdab0440b046eef153b55147f428ae1f528de5b9e76fe7803f84e37a"
+    },
+    {
+      "id": 863,
+      "material": "In2Se2",
+      "parent_id": 862,
+      "pointgroup": "-3m",
+      "stacking_point_representative": "I",
+      "tau_fractional": [
+        "1/3",
+        "2/3"
+      ],
+      "d_centroid_A": 8.367306172499998,
+      "lower_to_upper_mapping_error_A": 7.529568586617068e-09,
+      "layer_preserving_operations": 6,
+      "layer_exchanging_operations": 6,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  -1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 1,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      "source_sha256": "f735c0dee4f050f3c4224c8256554c4e3bc494b214d600c92d7966b9fbc7720a"
+    },
+    {
+      "id": 864,
+      "material": "In2Se2",
+      "parent_id": 862,
+      "pointgroup": "3m",
+      "stacking_point_representative": "E",
+      "tau_fractional": [
+        "1/3",
+        "2/3"
+      ],
+      "d_centroid_A": 8.413064890000001,
+      "lower_to_upper_mapping_error_A": 2.5376014639371935e-09,
+      "layer_preserving_operations": 6,
+      "layer_exchanging_operations": 0,
+      "tensor": {
+        "zero_gate": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        },
+        "gate_derivative": {
+          "dimension": 2,
+          "basis": [
+            [
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            ]
+          ]
+        }
+      },
+      "source_sha256": "aaad2c3335e1a64eb12c7136cf81159313a2bfd69935538555c07b8e027b5a33"
+    }
+  ],
+  "mirror_partner_tau_A_to_B": [
+    0.6666666666666667,
+    0.33333333333333337
+  ]
+}

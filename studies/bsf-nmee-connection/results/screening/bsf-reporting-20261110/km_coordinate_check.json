@@ -1,0 +1,52 @@
+{
+  "scope": "BSF registry conditions and three generic k-point Hamiltonian mirror checks, no response integration",
+  "native_basis_rows_nm": [
+    [
+      -0.12297560733739027,
+      0.21299999999999997
+    ],
+    [
+      0.12297560733739027,
+      0.21299999999999997
+    ]
+  ],
+  "probe_xprime_native_xy": [
+    0.5,
+    0.8660254037844386
+  ],
+  "point_representatives_lower_to_upper": {
+    "direct": "E",
+    "mirror": "m001"
+  },
+  "source_sha256": {
+    "studies/bsf-nmee-connection/bsf_nmee/bilayer_audit.py": "18f205c6ed156c5f7768f707563bcc5f55e3e31e11feedb5ae1d1c3889bc792b",
+    "studies/bsf-nmee-connection/bsf_nmee/bilayer_protocol.py": "d0e55338981ebebeed6a12ec6c6aeb4133ce38e6d37f0e13b51d662aec1fd6d3",
+    "studies/bsf-nmee-connection/bsf_nmee/sliding_tight_binding.py": "39e3ecc4b4996ce02dcb64fdf8417253c3ccc8b5f6a9df201a57f3098739d125"
+  },
+  "rows": [
+    {
+      "stacking": "direct",
+      "pointgroup": "Cs(m)",
+      "lambda": 0.25,
+      "layer_preserving_count": 2,
+      "layer_exchanging_count": 0,
+      "vertical_mirror_residual_eV": 6.77599954797753e-16,
+      "lower_to_upper_tau_code_60degree_basis": [
+        0.16666666666666669,
+        -0.5833333333333334
+      ]
+    },
+    {
+      "stacking": "mirror",
+      "pointgroup": "Cs(m)",
+      "lambda": 0.25,
+      "layer_preserving_count": 2,
+      "layer_exchanging_count": 0,
+      "vertical_mirror_residual_eV": 6.77599954797753e-16,
+      "lower_to_upper_tau_code_60degree_basis": [
+        0.16666666666666669,
+        -0.5833333333333334
+      ]
+    }
+  ]
+}
