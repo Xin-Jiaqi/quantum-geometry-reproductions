@@ -1,0 +1,1835 @@
+{
+  "scope": "Proposed pilot only. No job submission or calculated new NMEE. Spatial allowance is necessary, not sufficient; symmetry at 1e-3A does not assert exact input symmetry.",
+  "database": {
+    "local_path": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/tmp/bidb.db",
+    "sha256": "afe1fe7711189be5b0e189b0c101d6488a7578f4f9ba4e1bb0164534f4255984",
+    "rows": 11184,
+    "source": "https://2dhub.org/bidb/bidb.html",
+    "license_note": "Structures/metadata from BiDB; cite Pakdel et al., Nat Commun 15,932 (2024)."
+  },
+  "toolkit_commit": "551a0daf8d4ba5a5f24b2811694bfe438616de48",
+  "versions": {
+    "numpy": "1.26.4",
+    "spglib": "2.5.0"
+  },
+  "monolayers": {
+    "7265": {
+      "formula": "MoSSe",
+      "uid": "MoSSe-de7ac5fc6945",
+      "metadata": {
+        "uid": "MoSSe-de7ac5fc6945",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/ABC/MoSSe/MoSSe-de7ac5fc6945",
+        "stoichiometry": "ABC",
+        "monolayer_uid": "MoSSe-de7ac5fc6945",
+        "number_of_layers": 1,
+        "nspecies": 3,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "ehull": 0.009277271529212983,
+        "dynamically_stable": "Yes",
+        "gap_pbe": 1.454,
+        "gap_pbe_dir": 1.454,
+        "gap_pbe_nosoc": 1.541,
+        "gap_pbe_dir_nosoc": 1.551,
+        "dipz": -0.038
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      }
+    },
+    "1929": {
+      "formula": "MoS2",
+      "uid": "MoS2-b3b4685fb6e1",
+      "metadata": {
+        "uid": "MoS2-b3b4685fb6e1",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/MoS2/MoS2-b3b4685fb6e1",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "MoS2-b3b4685fb6e1",
+        "number_of_layers": 1,
+        "nspecies": 2,
+        "layer_group_number": 78,
+        "layer_group": "p-6m2",
+        "space_group_number": 187,
+        "space_group": "P-6m2",
+        "equivalent_atoms": "[0 1 1]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 9007661,
+        "icsd_id": 38401,
+        "ehull": 0.0,
+        "dynamically_stable": "Yes",
+        "gap_pbe": 1.617,
+        "gap_pbe_dir": 1.617,
+        "gap_pbe_nosoc": 1.666,
+        "gap_pbe_dir_nosoc": 1.696,
+        "dipz": -0.0
+      },
+      "pointgroup_at_1e_3A": "-6m2",
+      "symmetry_by_tolerance": {
+        "1e-05": "-6m2",
+        "0.0001": "-6m2",
+        "0.001": "-6m2",
+        "0.01": "-6m2"
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      }
+    },
+    "2652": {
+      "formula": "WS2",
+      "uid": "WS2-64090c9845f8",
+      "metadata": {
+        "uid": "WS2-64090c9845f8",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/WS2/WS2-64090c9845f8",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "WS2-64090c9845f8",
+        "number_of_layers": 1,
+        "nspecies": 2,
+        "layer_group_number": 78,
+        "layer_group": "p-6m2",
+        "space_group_number": 187,
+        "space_group": "P-6m2",
+        "equivalent_atoms": "[0 1 1]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 9012192,
+        "icsd_id": 202367,
+        "ehull": 0.0,
+        "dynamically_stable": "Yes",
+        "gap_pbe": 1.582,
+        "gap_pbe_dir": 1.582,
+        "gap_pbe_nosoc": 1.864,
+        "gap_pbe_dir_nosoc": 1.864,
+        "dipz": -0.0
+      },
+      "pointgroup_at_1e_3A": "-6m2",
+      "symmetry_by_tolerance": {
+        "1e-05": "-6m2",
+        "0.0001": "-6m2",
+        "0.001": "-6m2",
+        "0.01": "-6m2"
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      }
+    },
+    "862": {
+      "formula": "In2Se2",
+      "uid": "In2Se2-eb204c739879",
+      "metadata": {
+        "uid": "In2Se2-eb204c739879",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/InSe/In2Se2-eb204c739879",
+        "stoichiometry": "AB",
+        "monolayer_uid": "In2Se2-eb204c739879",
+        "number_of_layers": 1,
+        "nspecies": 2,
+        "layer_group_number": 78,
+        "layer_group": "p-6m2",
+        "space_group_number": 187,
+        "space_group": "P-6m2",
+        "equivalent_atoms": "[0 0 2 2]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 9008967,
+        "icsd_id": 640503,
+        "ehull": 0.0,
+        "dynamically_stable": "Yes",
+        "gap_pbe": 1.404,
+        "gap_pbe_dir": 1.447,
+        "gap_pbe_nosoc": 1.43,
+        "gap_pbe_dir_nosoc": 1.5,
+        "dipz": 0.0
+      },
+      "pointgroup_at_1e_3A": "-6m2",
+      "symmetry_by_tolerance": {
+        "1e-05": "-6m2",
+        "0.0001": "-6m2",
+        "0.001": "-6m2",
+        "0.01": "-6m2"
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      }
+    },
+    "739": {
+      "formula": "Ga2Se2",
+      "uid": "Ga2Se2-394e5709a3ac",
+      "metadata": {
+        "uid": "Ga2Se2-394e5709a3ac",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/GaSe/Ga2Se2-394e5709a3ac",
+        "stoichiometry": "AB",
+        "monolayer_uid": "Ga2Se2-394e5709a3ac",
+        "number_of_layers": 1,
+        "nspecies": 2,
+        "layer_group_number": 78,
+        "layer_group": "p-6m2",
+        "space_group_number": 187,
+        "space_group": "P-6m2",
+        "equivalent_atoms": "[0 0 2 2]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 2105478,
+        "icsd_id": 2002,
+        "ehull": 0.0,
+        "dynamically_stable": "Yes",
+        "gap_pbe": 1.765,
+        "gap_pbe_dir": 1.842,
+        "gap_pbe_nosoc": 1.787,
+        "gap_pbe_dir_nosoc": 1.891,
+        "dipz": 0.0
+      },
+      "pointgroup_at_1e_3A": "-6m2",
+      "symmetry_by_tolerance": {
+        "1e-05": "-6m2",
+        "0.0001": "-6m2",
+        "0.001": "-6m2",
+        "0.01": "-6m2"
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      }
+    },
+    "783": {
+      "formula": "Ge2S2",
+      "uid": "Ge2S2-ecbb7c185669",
+      "metadata": {
+        "uid": "Ge2S2-ecbb7c185669",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/GeS/Ge2S2-ecbb7c185669",
+        "stoichiometry": "AB",
+        "monolayer_uid": "Ge2S2-ecbb7c185669",
+        "number_of_layers": 1,
+        "nspecies": 2,
+        "layer_group_number": 32,
+        "layer_group": "pm2_1n",
+        "space_group_number": 31,
+        "space_group": "Pmn2_1",
+        "equivalent_atoms": "[0 0 2 2]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 2107064,
+        "ehull": 0.03086125998168132,
+        "dynamically_stable": "Yes",
+        "gap_pbe": 1.726,
+        "gap_pbe_dir": 1.878,
+        "gap_pbe_nosoc": 1.759,
+        "gap_pbe_dir_nosoc": 1.884,
+        "dipz": 0.0
+      },
+      "pointgroup_at_1e_3A": "mm2",
+      "symmetry_by_tolerance": {
+        "1e-05": "1",
+        "0.0001": "1",
+        "0.001": "mm2",
+        "0.01": "mm2"
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "zx"
+        ],
+        "zero_gate_net": [
+          "zx"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      }
+    },
+    "1082": {
+      "formula": "Sn2S2",
+      "uid": "S2Sn2-7a8373382b33",
+      "metadata": {
+        "uid": "S2Sn2-7a8373382b33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/SSn/S2Sn2-7a8373382b33",
+        "stoichiometry": "AB",
+        "monolayer_uid": "S2Sn2-7a8373382b33",
+        "number_of_layers": 1,
+        "nspecies": 2,
+        "layer_group_number": 32,
+        "layer_group": "pm2_1n",
+        "space_group_number": 31,
+        "space_group": "Pmn2_1",
+        "equivalent_atoms": "[0 0 2 2]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 1527226,
+        "ehull": 0.04264539963228842,
+        "dynamically_stable": "Yes",
+        "gap_pbe": 1.416,
+        "gap_pbe_dir": 1.586,
+        "gap_pbe_nosoc": 1.497,
+        "gap_pbe_dir_nosoc": 1.622,
+        "dipz": 0.0
+      },
+      "pointgroup_at_1e_3A": "mm2",
+      "symmetry_by_tolerance": {
+        "1e-05": "1",
+        "0.0001": "m",
+        "0.001": "mm2",
+        "0.01": "mm2"
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "zx"
+        ],
+        "zero_gate_net": [
+          "zx"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      }
+    },
+    "2404": {
+      "formula": "SnS2",
+      "uid": "SnS2-42a44e4e7298",
+      "metadata": {
+        "uid": "SnS2-42a44e4e7298",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/SnS2/SnS2-42a44e4e7298",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "SnS2-42a44e4e7298",
+        "number_of_layers": 1,
+        "nspecies": 2,
+        "layer_group_number": 72,
+        "layer_group": "p-3m1",
+        "space_group_number": 164,
+        "space_group": "P-3m1",
+        "equivalent_atoms": "[0 1 1]",
+        "has_inversion_symmetry": true,
+        "magnetic": false,
+        "cod_id": 9009120,
+        "icsd_id": 43003,
+        "ehull": 0.0,
+        "dynamically_stable": "Yes",
+        "gap_pbe": 1.587,
+        "gap_pbe_dir": 1.821,
+        "gap_pbe_nosoc": 1.589,
+        "gap_pbe_dir_nosoc": 1.823,
+        "dipz": -0.0
+      },
+      "pointgroup_at_1e_3A": "-3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "-3m",
+        "0.0001": "-3m",
+        "0.001": "-3m",
+        "0.01": "-3m"
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      }
+    }
+  },
+  "bilayers": [
+    {
+      "group": "Janus interface",
+      "parent_id": 7265,
+      "parent_formula": "MoSSe",
+      "id": 7266,
+      "uid": "MoSSe-de7ac5fc6945-2-1_0_0_1-0.67_0.33",
+      "metadata": {
+        "uid": "MoSSe-de7ac5fc6945-2-1_0_0_1-0.67_0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/ABC/MoSSe/MoSSe-de7ac5fc6945/MoSSe-2-1_0_0_1-0.67_0.33",
+        "stoichiometry": "ABC",
+        "monolayer_uid": "MoSSe-de7ac5fc6945",
+        "bilayer_uid": "MoSSe-de7ac5fc6945-2-1_0_0_1-0.67_0.33",
+        "number_of_layers": 2,
+        "nspecies": 3,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2 3 4 5]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "gap_pbe": 0.739,
+        "gap_pbe_dir": 0.876,
+        "gap_pbe_nosoc": 0.756,
+        "gap_pbe_dir_nosoc": 0.974,
+        "dipz": -0.067,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 30.455152920548937,
+        "binding_energy_gs": 28.05365925259638,
+        "distance": 3.070511097767124
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "layer_exchanging_ops": 0,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.666666667035128,
+          0.33333333573219076
+        ],
+        "vertical_affine_translation_A": 6.302997080000002,
+        "center_separation_A": 6.302997080000001,
+        "max_mapping_error_A": 1.1366141795257439e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": true,
+      "point_orientation_coset_count": 4
+    },
+    {
+      "group": "Janus interface",
+      "parent_id": 7265,
+      "parent_formula": "MoSSe",
+      "id": 7268,
+      "uid": "MoSSe-de7ac5fc6945-2-1_0_0_1--0.67_-0.33",
+      "metadata": {
+        "uid": "MoSSe-de7ac5fc6945-2-1_0_0_1--0.67_-0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/ABC/MoSSe/MoSSe-de7ac5fc6945/MoSSe-2-1_0_0_1--0.67_-0.33",
+        "stoichiometry": "ABC",
+        "monolayer_uid": "MoSSe-de7ac5fc6945",
+        "bilayer_uid": "MoSSe-de7ac5fc6945-2-1_0_0_1--0.67_-0.33",
+        "number_of_layers": 2,
+        "nspecies": 3,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2 3 4 5]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "gap_pbe": 0.66,
+        "gap_pbe_dir": 0.751,
+        "gap_pbe_nosoc": 0.677,
+        "gap_pbe_dir_nosoc": 0.848,
+        "dipz": -0.073,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 29.78676299792105,
+        "binding_energy_gs": 27.38521272818501,
+        "distance": 3.1155325054858896
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "layer_exchanging_ops": 0,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.33333333307893487,
+          0.6666666678198048
+        ],
+        "vertical_affine_translation_A": 6.3480184899999985,
+        "center_separation_A": 6.348018489999999,
+        "max_mapping_error_A": 2.7138966528633507e-09,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 4
+    },
+    {
+      "group": "Janus interface",
+      "parent_id": 7265,
+      "parent_formula": "MoSSe",
+      "id": 7269,
+      "uid": "MoSSe-de7ac5fc6945-2--1_1_-1_0-Iz--0.67_-0.33",
+      "metadata": {
+        "uid": "MoSSe-de7ac5fc6945-2--1_1_-1_0-Iz--0.67_-0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/ABC/MoSSe/MoSSe-de7ac5fc6945/MoSSe-2--1_1_-1_0-Iz--0.67_-0.33",
+        "stoichiometry": "ABC",
+        "monolayer_uid": "MoSSe-de7ac5fc6945",
+        "bilayer_uid": "MoSSe-de7ac5fc6945-2--1_1_-1_0-Iz--0.67_-0.33",
+        "number_of_layers": 2,
+        "nspecies": 3,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2 3 4 5]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "gap_pbe": 0.817,
+        "gap_pbe_dir": 1.378,
+        "gap_pbe_nosoc": 0.829,
+        "gap_pbe_dir_nosoc": 1.476,
+        "dipz": -0.004,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 29.127023383053505,
+        "binding_energy_gs": 26.72543176730238,
+        "distance": 2.9868999120036985
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "layer_exchanging_ops": 0,
+      "connection": {
+        "representative": "m001",
+        "fractional_rotation": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            -1
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.33333333307893487,
+          0.6666666678198048
+        ],
+        "vertical_affine_translation_A": 24.45187188,
+        "center_separation_A": 6.1608043766666665,
+        "max_mapping_error_A": 1.0000000108362204e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": true,
+      "point_orientation_coset_count": 4
+    },
+    {
+      "group": "Janus interface",
+      "parent_id": 7265,
+      "parent_formula": "MoSSe",
+      "id": 7270,
+      "uid": "MoSSe-de7ac5fc6945-2--1_0_0_-1-Iz--0.33_-0.67",
+      "metadata": {
+        "uid": "MoSSe-de7ac5fc6945-2--1_0_0_-1-Iz--0.33_-0.67",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/ABC/MoSSe/MoSSe-de7ac5fc6945/MoSSe-2--1_0_0_-1-Iz--0.33_-0.67",
+        "stoichiometry": "ABC",
+        "monolayer_uid": "MoSSe-de7ac5fc6945",
+        "bilayer_uid": "MoSSe-de7ac5fc6945-2--1_0_0_-1-Iz--0.33_-0.67",
+        "number_of_layers": 2,
+        "nspecies": 3,
+        "layer_group_number": 72,
+        "layer_group": "p-3m1",
+        "space_group_number": 164,
+        "space_group": "P-3m1",
+        "equivalent_atoms": "[0 1 2 0 1 2]",
+        "has_inversion_symmetry": true,
+        "magnetic": false,
+        "gap_pbe": 0.9,
+        "gap_pbe_dir": 1.453,
+        "gap_pbe_nosoc": 0.913,
+        "gap_pbe_dir_nosoc": 1.529,
+        "dipz": -0.0,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 28.67274026688867,
+        "binding_energy_gs": 26.271436297512075,
+        "distance": 3.0383529493965753
+      },
+      "pointgroup_at_1e_3A": "-3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "-3m",
+        "0.0001": "-3m",
+        "0.001": "-3m",
+        "0.01": "-3m"
+      },
+      "layer_exchanging_ops": 6,
+      "connection": {
+        "representative": "I",
+        "fractional_rotation": [
+          [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -0.0,
+            -1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.6666666669210651,
+          0.3333333321801953
+        ],
+        "vertical_affine_translation_A": 24.50332492,
+        "center_separation_A": 6.212257416666667,
+        "max_mapping_error_A": 1.0000001632974416e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": true,
+      "point_orientation_coset_count": 2
+    },
+    {
+      "group": "TMD control",
+      "parent_id": 1929,
+      "parent_formula": "MoS2",
+      "id": 1930,
+      "uid": "MoS2-b3b4685fb6e1-2-1_0_0_1--0.67_-0.33",
+      "metadata": {
+        "uid": "MoS2-b3b4685fb6e1-2-1_0_0_1--0.67_-0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/MoS2/MoS2-b3b4685fb6e1/MoS2-2-1_0_0_1--0.67_-0.33",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "MoS2-b3b4685fb6e1",
+        "bilayer_uid": "MoS2-b3b4685fb6e1-2-1_0_0_1--0.67_-0.33",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2 3 4 5]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 9007661,
+        "icsd_id": 38401,
+        "gap_pbe": 1.145,
+        "gap_pbe_dir": 1.556,
+        "gap_pbe_nosoc": 1.152,
+        "gap_pbe_dir_nosoc": 1.634,
+        "dipz": -0.003,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 28.883306582072734,
+        "binding_energy_gs": 26.513578470407403,
+        "distance": 3.0382944540396934
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "layer_exchanging_ops": 0,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.333333333207971,
+          0.666666664944681
+        ],
+        "vertical_affine_translation_A": 6.165407099999999,
+        "center_separation_A": 6.1654070999999995,
+        "max_mapping_error_A": 4.848369102655472e-09,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": true,
+      "point_orientation_coset_count": 4
+    },
+    {
+      "group": "TMD control",
+      "parent_id": 1929,
+      "parent_formula": "MoS2",
+      "id": 1931,
+      "uid": "MoS2-b3b4685fb6e1-2--1_0_0_-1-Iz--0.33_-0.67",
+      "metadata": {
+        "uid": "MoS2-b3b4685fb6e1-2--1_0_0_-1-Iz--0.33_-0.67",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/MoS2/MoS2-b3b4685fb6e1/MoS2-2--1_0_0_-1-Iz--0.33_-0.67",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "MoS2-b3b4685fb6e1",
+        "bilayer_uid": "MoS2-b3b4685fb6e1-2--1_0_0_-1-Iz--0.33_-0.67",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 72,
+        "layer_group": "p-3m1",
+        "space_group_number": 164,
+        "space_group": "P-3m1",
+        "equivalent_atoms": "[0 1 2 0 1 2]",
+        "has_inversion_symmetry": true,
+        "magnetic": false,
+        "cod_id": 9007661,
+        "icsd_id": 38401,
+        "gap_pbe": 1.191,
+        "gap_pbe_dir": 1.61,
+        "gap_pbe_nosoc": 1.197,
+        "gap_pbe_dir_nosoc": 1.66,
+        "dipz": -0.0,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 28.871031889485298,
+        "binding_energy_gs": 26.505008559356646,
+        "distance": 3.0574416810595473
+      },
+      "pointgroup_at_1e_3A": "-3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "-3m",
+        "0.0001": "-3m",
+        "0.001": "-3m",
+        "0.01": "-3m"
+      },
+      "layer_exchanging_ops": 6,
+      "connection": {
+        "representative": "I",
+        "fractional_rotation": [
+          [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -0.0,
+            -1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.666666666792029,
+          0.33333333505531904
+        ],
+        "vertical_affine_translation_A": 24.31166697,
+        "center_separation_A": 6.184554326666667,
+        "max_mapping_error_A": 9.999997645457194e-09,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 2
+    },
+    {
+      "group": "TMD control",
+      "parent_id": 2652,
+      "parent_formula": "WS2",
+      "id": 2653,
+      "uid": "WS2-64090c9845f8-2--1_0_0_-1-Iz--0.33_-0.67",
+      "metadata": {
+        "uid": "WS2-64090c9845f8-2--1_0_0_-1-Iz--0.33_-0.67",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/WS2/WS2-64090c9845f8/S2W-2--1_0_0_-1-Iz--0.33_-0.67",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "WS2-64090c9845f8",
+        "bilayer_uid": "WS2-64090c9845f8-2--1_0_0_-1-Iz--0.33_-0.67",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 72,
+        "layer_group": "p-3m1",
+        "space_group_number": 164,
+        "space_group": "P-3m1",
+        "equivalent_atoms": "[0 1 2 0 1 2]",
+        "has_inversion_symmetry": true,
+        "magnetic": false,
+        "cod_id": 9012192,
+        "icsd_id": 202367,
+        "gap_pbe": 1.358,
+        "gap_pbe_dir": 1.582,
+        "gap_pbe_nosoc": 1.438,
+        "gap_pbe_dir_nosoc": 1.826,
+        "dipz": 0.0,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 29.61933051223068,
+        "binding_energy_gs": 27.504598902901062,
+        "distance": 3.0960249199370686
+      },
+      "pointgroup_at_1e_3A": "-3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "-3m",
+        "0.0001": "-3m",
+        "0.001": "-3m",
+        "0.01": "-3m"
+      },
+      "layer_exchanging_ops": 6,
+      "connection": {
+        "representative": "I",
+        "fractional_rotation": [
+          [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -0.0,
+            -1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.6666666659060331,
+          0.33333333484457817
+        ],
+        "vertical_affine_translation_A": 24.38721467,
+        "center_separation_A": 6.2416197933333315,
+        "max_mapping_error_A": 1.0000004568371988e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 2
+    },
+    {
+      "group": "TMD control",
+      "parent_id": 2652,
+      "parent_formula": "WS2",
+      "id": 2654,
+      "uid": "WS2-64090c9845f8-2-1_0_0_1--0.67_-0.33",
+      "metadata": {
+        "uid": "WS2-64090c9845f8-2-1_0_0_1--0.67_-0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/WS2/WS2-64090c9845f8/S2W-2-1_0_0_1--0.67_-0.33",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "WS2-64090c9845f8",
+        "bilayer_uid": "WS2-64090c9845f8-2-1_0_0_1--0.67_-0.33",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2 3 4 5]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 9012192,
+        "icsd_id": 202367,
+        "gap_pbe": 1.296,
+        "gap_pbe_dir": 1.524,
+        "gap_pbe_nosoc": 1.414,
+        "gap_pbe_dir_nosoc": 1.807,
+        "dipz": -0.003,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 29.31980898174058,
+        "binding_energy_gs": 27.20497303631346,
+        "distance": 3.086422427943363
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "layer_exchanging_ops": 0,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.3333333340939669,
+          0.6666666651554218
+        ],
+        "vertical_affine_translation_A": 6.232017300000001,
+        "center_separation_A": 6.232017299999999,
+        "max_mapping_error_A": 5.443455059288032e-09,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 4
+    },
+    {
+      "group": "III-VI control",
+      "parent_id": 862,
+      "parent_formula": "In2Se2",
+      "id": 863,
+      "uid": "In2Se2-eb204c739879-2--1_0_0_-1-Iz-0.33_-0.33",
+      "metadata": {
+        "uid": "In2Se2-eb204c739879-2--1_0_0_-1-Iz-0.33_-0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/InSe/In2Se2-eb204c739879/In2Se2-2--1_0_0_-1-Iz-0.33_-0.33",
+        "stoichiometry": "AB",
+        "monolayer_uid": "In2Se2-eb204c739879",
+        "bilayer_uid": "In2Se2-eb204c739879-2--1_0_0_-1-Iz-0.33_-0.33",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 72,
+        "layer_group": "p-3m1",
+        "space_group_number": 164,
+        "space_group": "P-3m1",
+        "equivalent_atoms": "[0 1 2 3 0 1 2 3]",
+        "has_inversion_symmetry": true,
+        "magnetic": false,
+        "cod_id": 9008967,
+        "icsd_id": 640503,
+        "gap_pbe": 0.869,
+        "gap_pbe_dir": 0.912,
+        "gap_pbe_nosoc": 0.889,
+        "gap_pbe_dir_nosoc": 0.947,
+        "dipz": -0.0,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 20.276504555874066,
+        "binding_energy_gs": 17.29185403270734,
+        "distance": 2.9999999999999964
+      },
+      "pointgroup_at_1e_3A": "-3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "-3m",
+        "0.0001": "-3m",
+        "0.001": "-3m",
+        "0.01": "-3m"
+      },
+      "layer_exchanging_ops": 6,
+      "connection": {
+        "representative": "I",
+        "fractional_rotation": [
+          [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -0.0,
+            -1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.33333333323886305,
+          0.6666666664777261
+        ],
+        "vertical_affine_translation_A": 28.734612369999997,
+        "center_separation_A": 8.3673061725,
+        "max_mapping_error_A": 9.999999198917616e-09,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 2
+    },
+    {
+      "group": "III-VI control",
+      "parent_id": 862,
+      "parent_formula": "In2Se2",
+      "id": 864,
+      "uid": "In2Se2-eb204c739879-2-1_0_0_1-0.33_-0.33",
+      "metadata": {
+        "uid": "In2Se2-eb204c739879-2-1_0_0_1-0.33_-0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/InSe/In2Se2-eb204c739879/In2Se2-2-1_0_0_1-0.33_-0.33",
+        "stoichiometry": "AB",
+        "monolayer_uid": "In2Se2-eb204c739879",
+        "bilayer_uid": "In2Se2-eb204c739879-2-1_0_0_1-0.33_-0.33",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2 3 4 5 6 7]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 9008967,
+        "icsd_id": 640503,
+        "gap_pbe": 0.892,
+        "gap_pbe_dir": 0.936,
+        "gap_pbe_nosoc": 0.915,
+        "gap_pbe_dir_nosoc": 0.972,
+        "dipz": 0.0,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 20.159070559246853,
+        "binding_energy_gs": 17.173952417072638,
+        "distance": 3.045758705689753
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "layer_exchanging_ops": 0,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.33333333399801124,
+          0.666666666761137
+        ],
+        "vertical_affine_translation_A": 8.41306489,
+        "center_separation_A": 8.41306489,
+        "max_mapping_error_A": 5.0312259561463215e-09,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": true,
+      "point_orientation_coset_count": 4
+    },
+    {
+      "group": "III-VI control",
+      "parent_id": 739,
+      "parent_formula": "Ga2Se2",
+      "id": 740,
+      "uid": "Ga2Se2-394e5709a3ac-2--1_0_0_-1-Iz-0.33_-0.33",
+      "metadata": {
+        "uid": "Ga2Se2-394e5709a3ac-2--1_0_0_-1-Iz-0.33_-0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/GaSe/Ga2Se2-394e5709a3ac/Ga2Se2-2--1_0_0_-1-Iz-0.33_-0.33",
+        "stoichiometry": "AB",
+        "monolayer_uid": "Ga2Se2-394e5709a3ac",
+        "bilayer_uid": "Ga2Se2-394e5709a3ac-2--1_0_0_-1-Iz-0.33_-0.33",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 72,
+        "layer_group": "p-3m1",
+        "space_group_number": 164,
+        "space_group": "P-3m1",
+        "equivalent_atoms": "[0 1 2 3 0 1 2 3]",
+        "has_inversion_symmetry": true,
+        "magnetic": false,
+        "cod_id": 2105478,
+        "icsd_id": 2002,
+        "gap_pbe": 1.267,
+        "gap_pbe_dir": 1.306,
+        "gap_pbe_nosoc": 1.285,
+        "gap_pbe_dir_nosoc": 1.337,
+        "dipz": 0.0,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 17.54209769223435,
+        "binding_energy_gs": 16.619317968143964,
+        "distance": 3.2263272921732575
+      },
+      "pointgroup_at_1e_3A": "-3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "-3m",
+        "0.0001": "-3m",
+        "0.001": "-3m",
+        "0.01": "-3m"
+      },
+      "layer_exchanging_ops": 6,
+      "connection": {
+        "representative": "I",
+        "fractional_rotation": [
+          [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -1.0,
+            -0.0
+          ],
+          [
+            -0.0,
+            -0.0,
+            -1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.3333333340356689,
+          0.6666666680713378
+        ],
+        "vertical_affine_translation_A": 27.88572913,
+        "center_separation_A": 8.05602821,
+        "max_mapping_error_A": 1.4457459335012981e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 2
+    },
+    {
+      "group": "III-VI control",
+      "parent_id": 739,
+      "parent_formula": "Ga2Se2",
+      "id": 741,
+      "uid": "Ga2Se2-394e5709a3ac-2-1_0_0_1-0.33_-0.33",
+      "metadata": {
+        "uid": "Ga2Se2-394e5709a3ac-2-1_0_0_1-0.33_-0.33",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/GaSe/Ga2Se2-394e5709a3ac/Ga2Se2-2-1_0_0_1-0.33_-0.33",
+        "stoichiometry": "AB",
+        "monolayer_uid": "Ga2Se2-394e5709a3ac",
+        "bilayer_uid": "Ga2Se2-394e5709a3ac-2-1_0_0_1-0.33_-0.33",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2 3 4 5 6 7]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 2105478,
+        "icsd_id": 2002,
+        "gap_pbe": 1.277,
+        "gap_pbe_dir": 1.318,
+        "gap_pbe_nosoc": 1.297,
+        "gap_pbe_dir_nosoc": 1.35,
+        "dipz": -0.001,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 17.489922881116573,
+        "binding_energy_gs": 16.567098486918795,
+        "distance": 3.244678153700818
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "layer_exchanging_ops": 0,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.33333333261995635,
+          0.6666666644546959
+        ],
+        "vertical_affine_translation_A": 8.07437907,
+        "center_separation_A": 8.074379075000001,
+        "max_mapping_error_A": 1.4457459633451266e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 4
+    },
+    {
+      "group": "anisotropic",
+      "parent_id": 783,
+      "parent_formula": "Ge2S2",
+      "id": 785,
+      "uid": "Ge2S2-ecbb7c185669-2-1_0_0_1-0_0.5",
+      "metadata": {
+        "uid": "Ge2S2-ecbb7c185669-2-1_0_0_1-0_0.5",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/GeS/Ge2S2-ecbb7c185669/Ge2S2-2-1_0_0_1-0_0.5",
+        "stoichiometry": "AB",
+        "monolayer_uid": "Ge2S2-ecbb7c185669",
+        "bilayer_uid": "Ge2S2-ecbb7c185669-2-1_0_0_1-0_0.5",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 28,
+        "layer_group": "pm2_1b",
+        "space_group_number": 26,
+        "space_group": "Pmc2_1",
+        "equivalent_atoms": "[0 1 2 3 1 0 3 2]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 2107064,
+        "gap_pbe": 1.502,
+        "gap_pbe_dir": 1.585,
+        "gap_pbe_nosoc": 1.531,
+        "gap_pbe_dir_nosoc": 1.59,
+        "dipz": -0.0,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 26.709853006505533,
+        "binding_energy_gs": 25.589926968400476,
+        "distance": 2.85221571931973
+      },
+      "pointgroup_at_1e_3A": "mm2",
+      "symmetry_by_tolerance": {
+        "1e-05": "1",
+        "0.0001": "1",
+        "0.001": "mm2",
+        "0.01": "mm2"
+      },
+      "layer_exchanging_ops": 2,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.0,
+          0.4999999996972633
+        ],
+        "vertical_affine_translation_A": 5.415859230000001,
+        "center_separation_A": 5.415859225,
+        "max_mapping_error_A": 1.0241562051642273e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy",
+          "zx"
+        ],
+        "zero_gate_net": [
+          "zx"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy",
+          "zx"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 2
+    },
+    {
+      "group": "anisotropic",
+      "parent_id": 1082,
+      "parent_formula": "Sn2S2",
+      "id": 1084,
+      "uid": "S2Sn2-7a8373382b33-2-1_0_0_1-0.5_0",
+      "metadata": {
+        "uid": "S2Sn2-7a8373382b33-2-1_0_0_1-0.5_0",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-mads/tree/AB/SSn/S2Sn2-7a8373382b33/S2Sn2-2-1_0_0_1-0.5_0",
+        "stoichiometry": "AB",
+        "monolayer_uid": "S2Sn2-7a8373382b33",
+        "bilayer_uid": "S2Sn2-7a8373382b33-2-1_0_0_1-0.5_0",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 31,
+        "layer_group": "pm2a",
+        "space_group_number": 28,
+        "space_group": "Pma2",
+        "equivalent_atoms": "[0 1 2 3 1 0 3 2]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 1527226,
+        "gap_pbe": 1.006,
+        "gap_pbe_dir": 1.299,
+        "gap_pbe_nosoc": 1.072,
+        "gap_pbe_dir_nosoc": 1.328,
+        "dipz": 0.0,
+        "with_props": false,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 26.00966501186594,
+        "binding_energy_gs": 24.305749065804793,
+        "distance": 2.8992183154949736
+      },
+      "pointgroup_at_1e_3A": "mm2",
+      "symmetry_by_tolerance": {
+        "1e-05": "1",
+        "0.0001": "m",
+        "0.001": "mm2",
+        "0.01": "mm2"
+      },
+      "layer_exchanging_ops": 2,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.5000000006401513,
+          0.0
+        ],
+        "vertical_affine_translation_A": 5.76287996,
+        "center_separation_A": 5.762879960000001,
+        "max_mapping_error_A": 5.5369037933951325e-09,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy",
+          "zx"
+        ],
+        "zero_gate_net": [
+          "zx"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy",
+          "zx"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 2
+    },
+    {
+      "group": "centrosymmetric monolayer",
+      "parent_id": 2404,
+      "parent_formula": "SnS2",
+      "id": 2405,
+      "uid": "SnS2-42a44e4e7298-2-1_0_0_1-0_0",
+      "metadata": {
+        "uid": "SnS2-42a44e4e7298-2-1_0_0_1-0_0",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/SnS2/SnS2-42a44e4e7298/S2Sn-2-1_0_0_1-0_0",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "SnS2-42a44e4e7298",
+        "bilayer_uid": "SnS2-42a44e4e7298-2-1_0_0_1-0_0",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 72,
+        "layer_group": "p-3m1",
+        "space_group_number": 164,
+        "space_group": "P-3m1",
+        "equivalent_atoms": "[0 1 2 0 2 1]",
+        "has_inversion_symmetry": true,
+        "magnetic": false,
+        "cod_id": 9009120,
+        "icsd_id": 43003,
+        "gap_pbe": 1.53,
+        "gap_pbe_dir": 1.738,
+        "gap_pbe_nosoc": 1.532,
+        "gap_pbe_dir_nosoc": 1.739,
+        "dipz": 0.0,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 17.79091987730326,
+        "binding_energy_gs": 16.13022834705422,
+        "distance": 3.027914731901104
+      },
+      "pointgroup_at_1e_3A": "-3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "-3m",
+        "0.0001": "-3m",
+        "0.001": "-3m",
+        "0.01": "-3m"
+      },
+      "layer_exchanging_ops": 6,
+      "connection": {
+        "representative": "E",
+        "fractional_rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.0,
+          0.0
+        ],
+        "vertical_affine_translation_A": 5.983057540000001,
+        "center_separation_A": 5.983057536666667,
+        "max_mapping_error_A": 1.0000001826085117e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 2
+    },
+    {
+      "group": "centrosymmetric monolayer",
+      "parent_id": 2404,
+      "parent_formula": "SnS2",
+      "id": 2406,
+      "uid": "SnS2-42a44e4e7298-2-1_-1_1_0--0.33_-0.67",
+      "metadata": {
+        "uid": "SnS2-42a44e4e7298-2-1_-1_1_0--0.33_-0.67",
+        "folder": "/home/niflheim2/cmr/WIP/stacking/tree-asbjorn/tree/AB2/SnS2/SnS2-42a44e4e7298/S2Sn-2-1_-1_1_0--0.33_-0.67",
+        "stoichiometry": "AB2",
+        "monolayer_uid": "SnS2-42a44e4e7298",
+        "bilayer_uid": "SnS2-42a44e4e7298-2-1_-1_1_0--0.33_-0.67",
+        "number_of_layers": 2,
+        "nspecies": 2,
+        "layer_group_number": 69,
+        "layer_group": "p3m1",
+        "space_group_number": 156,
+        "space_group": "P3m1",
+        "equivalent_atoms": "[0 1 2 3 4 5]",
+        "has_inversion_symmetry": false,
+        "magnetic": false,
+        "cod_id": 9009120,
+        "icsd_id": 43003,
+        "gap_pbe": 1.475,
+        "gap_pbe_dir": 1.684,
+        "gap_pbe_nosoc": 1.478,
+        "gap_pbe_dir_nosoc": 1.686,
+        "dipz": 0.001,
+        "with_props": true,
+        "slide_stability": "Stable",
+        "binding_energy_zscan": 17.611091815544935,
+        "binding_energy_gs": 15.95040608288888,
+        "distance": 3.0372196425348044
+      },
+      "pointgroup_at_1e_3A": "3m",
+      "symmetry_by_tolerance": {
+        "1e-05": "3m",
+        "0.0001": "3m",
+        "0.001": "3m",
+        "0.01": "3m"
+      },
+      "layer_exchanging_ops": 0,
+      "connection": {
+        "representative": "m001",
+        "fractional_rotation": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            -1
+          ]
+        ],
+        "inplane_translation_mod1": [
+          0.666666665887095,
+          0.3333333317741901
+        ],
+        "vertical_affine_translation_A": 23.947505250000003,
+        "center_separation_A": 5.9923624466666645,
+        "max_mapping_error_A": 1.2496310177346456e-08,
+        "nonunique_mod_monolayer_symmetry": true
+      },
+      "spatial_allowance_Eip_Bz": {
+        "zero_gate_layer": [
+          "xx",
+          "yy"
+        ],
+        "zero_gate_net": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_layer": [
+          "xx",
+          "yy"
+        ],
+        "gate_derivative_net": [
+          "xx",
+          "yy"
+        ]
+      },
+      "existing_zero_gate_result": false,
+      "point_orientation_coset_count": 4
+    }
+  ]
+}

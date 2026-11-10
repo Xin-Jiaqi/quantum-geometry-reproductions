@@ -1,0 +1,17 @@
+group,parent_formula,parent_id,id,uid,pointgroup,slide_stability,gap_pbe_eV,connection,tau1,tau2,mapping_error_A,zero_net,zero_layer,gate_net,existing_zero_gate_result,symmetry_caution
+Janus interface,MoSSe,7265,7266,MoSSe-de7ac5fc6945-2-1_0_0_1-0.67_0.33,3m,Stable,0.739,E,0.666666667035128,0.33333333573219076,1.1366141795257439e-08,"xx,yy","xx,yy","xx,yy",True,False
+Janus interface,MoSSe,7265,7268,MoSSe-de7ac5fc6945-2-1_0_0_1--0.67_-0.33,3m,Stable,0.66,E,0.33333333307893487,0.6666666678198048,2.7138966528633507e-09,"xx,yy","xx,yy","xx,yy",False,False
+Janus interface,MoSSe,7265,7269,MoSSe-de7ac5fc6945-2--1_1_-1_0-Iz--0.67_-0.33,3m,Stable,0.817,m001,0.33333333307893487,0.6666666678198048,1.0000000108362204e-08,"xx,yy","xx,yy","xx,yy",True,False
+Janus interface,MoSSe,7265,7270,MoSSe-de7ac5fc6945-2--1_0_0_-1-Iz--0.33_-0.67,-3m,Stable,0.9,I,0.6666666669210651,0.3333333321801953,1.0000001632974416e-08,,"xx,yy","xx,yy",True,False
+TMD control,MoS2,1929,1930,MoS2-b3b4685fb6e1-2-1_0_0_1--0.67_-0.33,3m,Stable,1.145,E,0.333333333207971,0.666666664944681,4.848369102655472e-09,"xx,yy","xx,yy","xx,yy",True,False
+TMD control,MoS2,1929,1931,MoS2-b3b4685fb6e1-2--1_0_0_-1-Iz--0.33_-0.67,-3m,Stable,1.191,I,0.666666666792029,0.33333333505531904,9.999997645457194e-09,,"xx,yy","xx,yy",False,False
+TMD control,WS2,2652,2653,WS2-64090c9845f8-2--1_0_0_-1-Iz--0.33_-0.67,-3m,Stable,1.358,I,0.6666666659060331,0.33333333484457817,1.0000004568371988e-08,,"xx,yy","xx,yy",False,False
+TMD control,WS2,2652,2654,WS2-64090c9845f8-2-1_0_0_1--0.67_-0.33,3m,Stable,1.296,E,0.3333333340939669,0.6666666651554218,5.443455059288032e-09,"xx,yy","xx,yy","xx,yy",False,False
+III-VI control,In2Se2,862,863,In2Se2-eb204c739879-2--1_0_0_-1-Iz-0.33_-0.33,-3m,Stable,0.869,I,0.33333333323886305,0.6666666664777261,9.999999198917616e-09,,"xx,yy","xx,yy",False,False
+III-VI control,In2Se2,862,864,In2Se2-eb204c739879-2-1_0_0_1-0.33_-0.33,3m,Stable,0.892,E,0.33333333399801124,0.666666666761137,5.0312259561463215e-09,"xx,yy","xx,yy","xx,yy",True,False
+III-VI control,Ga2Se2,739,740,Ga2Se2-394e5709a3ac-2--1_0_0_-1-Iz-0.33_-0.33,-3m,Stable,1.267,I,0.3333333340356689,0.6666666680713378,1.4457459335012981e-08,,"xx,yy","xx,yy",False,False
+III-VI control,Ga2Se2,739,741,Ga2Se2-394e5709a3ac-2-1_0_0_1-0.33_-0.33,3m,Stable,1.277,E,0.33333333261995635,0.6666666644546959,1.4457459633451266e-08,"xx,yy","xx,yy","xx,yy",False,False
+anisotropic,Ge2S2,783,785,Ge2S2-ecbb7c185669-2-1_0_0_1-0_0.5,mm2,Stable,1.502,E,0.0,0.4999999996972633,1.0241562051642273e-08,zx,"xx,yy,zx","xx,yy",False,True
+anisotropic,Sn2S2,1082,1084,S2Sn2-7a8373382b33-2-1_0_0_1-0.5_0,mm2,Stable,1.006,E,0.5000000006401513,0.0,5.5369037933951325e-09,zx,"xx,yy,zx","xx,yy",False,True
+centrosymmetric monolayer,SnS2,2404,2405,SnS2-42a44e4e7298-2-1_0_0_1-0_0,-3m,Stable,1.53,E,0.0,0.0,1.0000001826085117e-08,,"xx,yy","xx,yy",False,False
+centrosymmetric monolayer,SnS2,2404,2406,SnS2-42a44e4e7298-2-1_-1_1_0--0.33_-0.67,3m,Stable,1.475,m001,0.666666665887095,0.3333333317741901,1.2496310177346456e-08,"xx,yy","xx,yy","xx,yy",False,False

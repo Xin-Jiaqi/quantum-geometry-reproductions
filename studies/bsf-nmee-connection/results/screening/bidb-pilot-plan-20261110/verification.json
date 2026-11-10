@@ -1,0 +1,110 @@
+{
+  "status": "proposal_only_no_jobs",
+  "bilayers": 16,
+  "parents": 8,
+  "unmodified_exported_structures": 24,
+  "existing_zero_gate_ids": [
+    7266,
+    7269,
+    7270,
+    1930,
+    864
+  ],
+  "raw_structure_pair_checks": [
+    {
+      "ids": [
+        7266,
+        7268
+      ],
+      "best_full_structure_match_error_A": 1.8774191398544322,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        7266,
+        7269
+      ],
+      "best_full_structure_match_error_A": 3.316097159999999,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        7266,
+        7270
+      ],
+      "best_full_structure_match_error_A": 3.7657106805467597,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        7268,
+        7269
+      ],
+      "best_full_structure_match_error_A": 3.3611185800000007,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        7268,
+        7270
+      ],
+      "best_full_structure_match_error_A": 3.3096655300000024,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        7269,
+        7270
+      ],
+      "best_full_structure_match_error_A": 1.8768792472091156,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        1930,
+        1931
+      ],
+      "best_full_structure_match_error_A": 1.8383216216979876,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        2653,
+        2654
+      ],
+      "best_full_structure_match_error_A": 1.8394067391238926,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        863,
+        864
+      ],
+      "best_full_structure_match_error_A": 2.352711369414281,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        740,
+        741
+      ],
+      "best_full_structure_match_error_A": 2.2081152778425372,
+      "equivalent_within_1e_3A": false
+    },
+    {
+      "ids": [
+        2405,
+        2406
+      ],
+      "best_full_structure_match_error_A": 2.1338815039464434,
+      "equivalent_within_1e_3A": false
+    }
+  ],
+  "caution": "Exact raw-coordinate non-equivalence does not by itself settle idealized registry equivalence or identical minima after relaxation. Keep BSF/atomic review before dispatch.",
+  "symmetry_tolerance_flags": [
+    785,
+    1084
+  ],
+  "worklog_mirror_equal": true,
+  "passed": true
+}
