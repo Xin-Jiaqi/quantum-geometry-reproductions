@@ -41,3 +41,13 @@ show that a real gate leaves the ions/domains fixed. Read Born-charge force,
 energy barrier, boundary pinning and domain-wall results before deciding what
 mechanical check is needed for InSe. FQFE within one monolayer and relative
 sliding of two intact layers must not be conflated.
+
+## Outcome recorded after calculation (2026-11-10)
+
+All five planned states completed; the local tuning-direction prediction holds
+at both meshes and every retained cutoff/probe check. No additional scientific
+state was introduced. The B8 batch was stopped only after B08 was complete,
+because its remaining allocation could not cover Bp8. The partial Bp8 was
+preserved and excluded; a fresh 2h compute allocation repeated Bp8 from the
+completed B08 checkpoint (560693, successful). Net amplitudes remain mesh
+sensitive; the initial enhancement factor is not a converged conclusion.

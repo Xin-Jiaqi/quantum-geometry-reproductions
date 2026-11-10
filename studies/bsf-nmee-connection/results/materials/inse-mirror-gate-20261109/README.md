@@ -1,16 +1,36 @@
 # InSe mirror partner: electrical tuning and structural switching
 
-Independent calculation is in progress; see `jobs.json`. Pre-result prediction
-and numerical scope are sealed in [PLAN.md](PLAN.md). The primary observable
-is the existing fixed-ion insulating spin coefficient C_l in s_x,l=C_l Ex Bz.
-The perpendicular gate F is distinct from the electric and magnetic probes.
+All five planned independent self-consistent states are complete. The same
+positive physical gate weakens both opposite local-spin responses in stack A
+and strengthens both in its horizontal-mirror partner B. Neither layer reverses
+its own spin direction. Both net coefficients decrease. The 6x6 and 8x8 meshes,
+128/144/160-state cutoffs, and halved magnetic-probe steps retain these trends.
+Pre-result prediction and scope remain in [PLAN.md](PLAN.md).
 
-Initial 6x6 B(-0.10) and B(+0.10) are complete independently: the same positive
-gate weakens both local magnitudes in A and strengthens both in B. At 160
-bands, B changes from (-1051.752,+1053.130) to (-1052.995,+1053.950), with its
-net coefficient decreasing from +1.379 to +0.956. The layer-spin signs do not
-reverse. The 128/144-band checks retain the tuning directions. The two 8x8
-batches are running; quantitative convergence is not claimed.
+Representative 8x8 changes at F=+0.10 V/nm relative to each same-mesh zero-field
+state, in 1e-9 (nm V T)^-1:
+
+| Stack | Change of lower magnitude | Change of upper magnitude | Net coefficient change |
+|---|---:|---:|---:|
+| A | -0.631 | -0.843 | -0.211 |
+| B | +1.078 | +0.873 | -0.205 |
+
+The layer-magnitude changes are about 0.06–0.10% at this field, not a giant
+local enhancement. All checked probe gaps exceed 0.896 eV. The small net
+changes fall by about half on the denser mesh, so no quantitative enhancement
+factor is claimed. No matched 8x8 monolayer is available. Do not combine
+unmatched meshes to infer gain. See `summary.json` and the two source CSVs.
+
+![Local and net tuning](inse_mirror_gate.png)
+
+Figure: (a) Change of each layer's response magnitude under the same positive
+gate; negative means weakening, positive strengthening. (b) Gate-induced net
+coefficient changes, subtracting each stack's own zero-gate baseline. Passing
+through zero in this difference plot does not indicate a spin reversal. Open
+markers use the initial 6x6 mesh; filled markers use 8x8. Lines only guide the
+eye. All displayed data use the 160-state cutoff and standard probe step;
+other deterministic checks are retained in the CSVs, not statistical error bars.
+The ionic coordinates are fixed; F is distinct from the Ex and Bz probes.
 
 ## Question and prediction
 
@@ -20,6 +40,13 @@ claim means that a layer's spin changes its own sign. The mirror law relates
 C_lower(B,F)=-C_upper(A,-F); the finite-field B values must be calculated
 independently. Two meshes test tuning directions, without pursuing identical
 enhancement factors. Five new SCFs are planned; no ionic switching is simulated.
+
+The control F is the conventional physical field along the fixed laboratory
++z direction. VASP uses the opposite sign for EFIELD, so EFIELD=-F/10 in
+eV/Angstrom for F in V/nm; this follows the
+[official EFIELD definition](https://www.vasp.at/wiki/index.php/EFIELD).
+The gate-prepared states are self-consistent; the subsequent Ex/Bz probe is
+the existing frozen-potential, spin-Zeeman-only insulating response protocol.
 
 ## Physical distinction to test
 
@@ -138,7 +165,8 @@ accessible through the publisher's indexed PDF; later retrieval was blocked.
 The domain-wall SM was not obtained in this pass. No unseen supplemental
 table is used to claim an InSe switching threshold.
 
-Scientific computation is restricted to PBS compute nodes. No other shared
-account job is altered. Licensed PAW data and wavefunction caches remain on
+All VASP and wavefunction processing on Japan execute in PBS compute nodes.
+Small-data audits and figures are prepared locally. No other shared account
+job is altered. Licensed PAW data and wavefunction caches remain on
 compute storage; only the selected inputs, code, small results and our own
 analysis are archived. Local literature extractions are not committed.

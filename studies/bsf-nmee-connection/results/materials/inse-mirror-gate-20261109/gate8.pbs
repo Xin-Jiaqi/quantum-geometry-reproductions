@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -N inse-gate8
+#PBS -q DP_002
+#PBS -l select=1:ncpus=4:mpiprocs=4:ompthreads=1:mem=24gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+set -eo pipefail
+test -n "${PBS_JOBID:-}" && test -s "$PBS_NODEFILE"
+case "$(hostname -s)" in super*|cms-ssh*) exit 71;; esac
+cd "$PBS_O_WORKDIR"
+source /work/sunq/xjq/releases/W90Flow-20260812/site/japan/load_oneapi.sh
+ulimit -s unlimited
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+case "$BATCH" in B8_gate) ;; *) exit 73 ;; esac
+python3 -u run_gate8.py > "$BATCH.log" 2>&1

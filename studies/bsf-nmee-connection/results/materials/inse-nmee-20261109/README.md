@@ -188,3 +188,5 @@ data, WAVECARs and large wavefunction caches remain on the compute storage;
 they are not committed to Git. Python export imports the existing PAW/wave
 helpers from the prior MoSSe workflow, so this archive is a research provenance
 bundle, not an independently packaged end-user installation.
+
+Follow-up: [independent mirror-domain gate validation](../inse-mirror-gate-20261109/README.md) confirms local tuning directions; net gain is not quantitatively converged.

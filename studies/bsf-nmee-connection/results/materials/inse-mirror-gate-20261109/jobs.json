@@ -5,7 +5,8 @@
   "jobs": {
     "B6": "560298.cmspbs1",
     "B8": "560299.cmspbs1",
-    "A8": "560314.cmspbs1"
+    "A8": "560314.cmspbs1",
+    "B8_gate": "560693.cmspbs1"
   },
   "A8": "afterok dependency on 560298.cmspbs1; no extra simultaneous allocation",
   "request": {
@@ -25,7 +26,7 @@
   "frontend_science": false,
   "other_shared_jobs": "observed but unchanged",
   "constraints": "All science in PBS compute nodes; preserve original results.",
-  "last_checked_China": "2026-11-09T20:27:50+08:00",
+  "last_checked_China": "2026-11-09T23:10:32+08:00",
   "status": {
     "B6": {
       "state": "F",
@@ -33,12 +34,34 @@
       "walltime": "00:57:00"
     },
     "B8": {
-      "state": "R",
-      "node": "csuper001"
+      "state": "F",
+      "exit_status": 271,
+      "walltime": "01:19:37",
+      "complete_points": [
+        "B08"
+      ],
+      "reason": "Intentional stop after the B08 checkpoint: remaining 40 min cannot cover the observed 60 min gate SCF/export. Incomplete Bp8 excluded and retained remotely."
     },
     "A8": {
-      "state": "R",
-      "node": "csuper006"
+      "state": "F",
+      "exit_status": 0,
+      "walltime": "01:00:24"
+    },
+    "B8_gate": {
+      "state": "F",
+      "purpose": "Complete the originally planned Bp8 from converged B08 in a fresh 2h compute allocation",
+      "script": "gate8.pbs",
+      "incomplete_attempt_path": "attempts/Bp8-budget-interrupted-560299",
+      "exit_status": 0,
+      "walltime": "01:21:52",
+      "node": "csuper001",
+      "complete_points": [
+        "Bp8"
+      ]
     }
-  }
+  },
+  "storage_note": "Preflight usage retained, not remeasured with final scheduler checks.",
+  "analysis_completed_China": "2026-11-10T10:30:46+08:00",
+  "all_planned_points_complete": true,
+  "active_task_jobs": []
 }
