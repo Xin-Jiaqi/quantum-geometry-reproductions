@@ -1,0 +1,47 @@
+{
+  "inputs": {
+    "layer_controls": {
+      "path": "studies/bsf-nmee-connection/results/materials/layer-channel-sensitivity-20261110/all_controls.csv",
+      "sha256": "b25dfb984ca89c047d7cafa92fe4938cb8c46dbd781239d0a980bbcc5ce788c5"
+    },
+    "layer_representative": {
+      "path": "studies/bsf-nmee-connection/results/materials/layer-channel-sensitivity-20261110/representative.csv",
+      "sha256": "79abdc0698480df220cd48d141319fc432df6d26e5565ac6438363104bc4a4a7"
+    },
+    "criterion_controls": {
+      "path": "studies/bsf-nmee-connection/results/materials/material-criterion-20261110/all_controls.csv",
+      "sha256": "271c5c3f57501ec1470556da8f3393c187dbef5825ce1220773e4230e8bcaa0a"
+    },
+    "criterion_tests": {
+      "path": "studies/bsf-nmee-connection/results/materials/material-criterion-20261110/prediction_tests.csv",
+      "sha256": "50251705c5edff49eeddb4ecdc2c2e1cb68c3faafcb30035192e33ae7072760f"
+    },
+    "criterion_checks": {
+      "path": "studies/bsf-nmee-connection/results/materials/material-criterion-20261110/final_checks.json",
+      "sha256": "fefa3af6ae8b641f2db92ad542a5fc4d3e2ff21e3b59dcdd89d08e2a70164af4"
+    },
+    "km_controls": {
+      "path": "studies/bsf-nmee-connection/results/mechanism/km-channel-control-20261110/all_results.csv",
+      "sha256": "4cdbfe86efc4eeec0491965a670754228b2b3da703942b763cdfacf08632067e"
+    },
+    "inse_mirror": {
+      "path": "studies/bsf-nmee-connection/results/materials/inse-mirror-gate-20261109/source_data.csv",
+      "sha256": "5e9fc06f0410c5fcf0ebb98e06c403c638fd16f3bc2e87a54a81e4f526dac68d"
+    },
+    "mosse_7266": {
+      "path": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/7266-blind/RESULTS.md",
+      "sha256": "92f69bc1e7e3d22124f02d80e64e75f1f5dc9944ec944959fa275018af708678"
+    },
+    "prediction_freeze": {
+      "path": "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/prediction_freeze.json",
+      "sha256": "11bd0485e98e5dbff33453e3964b2499b0c71e223add1fc5efbc3296bc651bcf"
+    }
+  },
+  "outputs": {
+    "analyze.py": "6d61e255555ec422da4693031c018154036d38015a713ac7762cd3f90d5f94b7",
+    "case_metrics.csv": "0e5c9f6c4c9586601502cc38934f9bf670188fec7dfe542edff5d43ae8d30b62",
+    "intervention_metrics.csv": "48283ed9b9f0a5a7cae33317ed7ab956136396efe2c09b1552201a930aa45ecc",
+    "analysis_summary.json": "5ce6be6fcb6c9ca805886ab42d698051889d3bfd2ecd16a4e9daa967b04aa394"
+  },
+  "reproduction": "python3 studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/analyze.py"
+}

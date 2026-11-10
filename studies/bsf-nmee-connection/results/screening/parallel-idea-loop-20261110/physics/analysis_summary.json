@@ -1,0 +1,413 @@
+{
+  "scope": {
+    "description": "bounded local synthesis of existing eight-state KM and small archived DFT-derived response tables",
+    "new_DFT": false,
+    "remote_access_or_jobs": false,
+    "twelve_state_fit": false,
+    "new_material_result": false
+  },
+  "observable_separation": {
+    "layer_response_direction": "sign(C_l)",
+    "positive_control_magnitude_change": "sign(C_l*G_l), provided the layer does not cross zero",
+    "absolute_gate_sensitive_layer": "argmax_l |G_l|; this is distinct from relative sensitivity |G_l|/|C_l|",
+    "static_net_retention": "|C_lower+C_upper|/(|C_lower|+|C_upper|)",
+    "gate_net_retention": "|G_lower+G_upper|/(|G_lower|+|G_upper|)",
+    "warning": "A net sign or net slope alone cannot identify either local amplitude trend."
+  },
+  "H2_static_largest_vs_gate_sensitive": {
+    "result": "supported as a possibility, not established as a universal law",
+    "screened_external_settings": 8,
+    "screened_external_configuration_count": 3,
+    "screened_external_rank_mismatches": 8,
+    "diagnostic_internal_step_settings": 6,
+    "diagnostic_internal_configuration_count": 3,
+    "diagnostic_internal_rank_mismatches": 6,
+    "by_configuration_and_field": {
+      "InSe_864_A::diagnostic_internal_layer_step_pm0.001_eV": {
+        "numerical_settings": 2,
+        "static_largest_layers": [
+          "lower"
+        ],
+        "gate_sensitive_layers": [
+          "upper"
+        ],
+        "rank_mismatch_in_every_setting": true,
+        "static_lower_absolute_share_range": [
+          0.5003251561377696,
+          0.5003310446167812
+        ],
+        "gate_lower_absolute_share_range": [
+          0.3952054525568651,
+          0.3953873403900191
+        ],
+        "static_rank_margin_range": [
+          0.000650312275539344,
+          0.000662089233562455
+        ],
+        "gate_rank_margin_range": [
+          0.20922531921996174,
+          0.2095890948862697
+        ],
+        "static_net_retention_range": [
+          0.000650312275539344,
+          0.000662089233562455
+        ],
+        "gate_net_retention_range": [
+          0.20922531921996174,
+          0.2095890948862697
+        ]
+      },
+      "InSe_864_A::screened_external_pm0.10_V_nm": {
+        "numerical_settings": 3,
+        "static_largest_layers": [
+          "lower"
+        ],
+        "gate_sensitive_layers": [
+          "upper"
+        ],
+        "rank_mismatch_in_every_setting": true,
+        "static_lower_absolute_share_range": [
+          0.5003251561377696,
+          0.5003319280191731
+        ],
+        "gate_lower_absolute_share_range": [
+          0.383537882422221,
+          0.3857278032827533
+        ],
+        "static_rank_margin_range": [
+          0.000650312275539344,
+          0.0006638560383461093
+        ],
+        "gate_rank_margin_range": [
+          0.22854439343449345,
+          0.232924235155558
+        ],
+        "static_net_retention_range": [
+          0.000650312275539344,
+          0.0006638560383461093
+        ],
+        "gate_net_retention_range": [
+          0.22854439343449345,
+          0.232924235155558
+        ]
+      },
+      "InSe_864_B_m001_partner::screened_external_pm0.10_V_nm": {
+        "numerical_settings": 3,
+        "static_largest_layers": [
+          "upper"
+        ],
+        "gate_sensitive_layers": [
+          "lower"
+        ],
+        "rank_mismatch_in_every_setting": true,
+        "static_lower_absolute_share_range": [
+          0.49966818006238256,
+          0.4996724582534824
+        ],
+        "gate_lower_absolute_share_range": [
+          0.6131688602556798,
+          0.6161055215191223
+        ],
+        "static_rank_margin_range": [
+          0.0006550834930352608,
+          0.0006636398752347459
+        ],
+        "gate_rank_margin_range": [
+          0.2263377205113596,
+          0.2322110430382447
+        ],
+        "static_net_retention_range": [
+          0.0006550834930352608,
+          0.0006636398752347459
+        ],
+        "gate_net_retention_range": [
+          0.2263377205113596,
+          0.2322110430382447
+        ]
+      },
+      "MoS2_1930::diagnostic_internal_layer_step_pm0.001_eV": {
+        "numerical_settings": 2,
+        "static_largest_layers": [
+          "lower"
+        ],
+        "gate_sensitive_layers": [
+          "upper"
+        ],
+        "rank_mismatch_in_every_setting": true,
+        "static_lower_absolute_share_range": [
+          0.520744220464072,
+          0.5257669768842095
+        ],
+        "gate_lower_absolute_share_range": [
+          0.18035015015782616,
+          0.1842454799892971
+        ],
+        "static_rank_margin_range": [
+          0.04148844092814393,
+          0.051533953768418926
+        ],
+        "gate_rank_margin_range": [
+          0.6315090400214058,
+          0.6392996996843476
+        ],
+        "static_net_retention_range": [
+          0.04148844092814393,
+          0.051533953768418926
+        ],
+        "gate_net_retention_range": [
+          0.6315090400214058,
+          0.6392996996843476
+        ]
+      },
+      "MoSSe_7269_A::diagnostic_internal_layer_step_pm0.001_eV": {
+        "numerical_settings": 2,
+        "static_largest_layers": [
+          "lower"
+        ],
+        "gate_sensitive_layers": [
+          "upper"
+        ],
+        "rank_mismatch_in_every_setting": true,
+        "static_lower_absolute_share_range": [
+          0.5101409830524237,
+          0.5111774458718079
+        ],
+        "gate_lower_absolute_share_range": [
+          0.24476007272835532,
+          0.24683751496307954
+        ],
+        "static_rank_margin_range": [
+          0.020281966104847525,
+          0.022354891743615744
+        ],
+        "gate_rank_margin_range": [
+          0.5063249700738409,
+          0.5104798545432894
+        ],
+        "static_net_retention_range": [
+          0.020281966104847525,
+          0.022354891743615744
+        ],
+        "gate_net_retention_range": [
+          0.5063249700738409,
+          0.5104798545432894
+        ]
+      },
+      "MoSSe_7269_A::screened_external_pm0.10_V_nm": {
+        "numerical_settings": 2,
+        "static_largest_layers": [
+          "lower"
+        ],
+        "gate_sensitive_layers": [
+          "upper"
+        ],
+        "rank_mismatch_in_every_setting": true,
+        "static_lower_absolute_share_range": [
+          0.5101409830524237,
+          0.5111774458718079
+        ],
+        "gate_lower_absolute_share_range": [
+          0.0384295342659152,
+          0.051635291695413296
+        ],
+        "static_rank_margin_range": [
+          0.020281966104847525,
+          0.022354891743615744
+        ],
+        "gate_rank_margin_range": [
+          0.8967294166091734,
+          0.9231409314681696
+        ],
+        "static_net_retention_range": [
+          0.020281966104847525,
+          0.022354891743615744
+        ],
+        "gate_net_retention_range": [
+          0.8967294166091734,
+          0.9231409314681696
+        ]
+      }
+    },
+    "independence_limits": [
+      "Band/projection settings are numerical repeats, not independent samples.",
+      "InSe A and B are m001-related domains, not independent material families.",
+      "MoS2 is tested only with a diagnostic internal energy step, not matching self-consistent +/-0.10 V/nm SCFs.",
+      "All full-interface static ranks occur near layer compensation; InSe has an especially small static rank margin. Repetition within this archive is not a convergence proof or a robust material ordering."
+    ],
+    "counterexamples": {
+      "strong_KM_rank_matches": 4,
+      "strong_KM_cases": 4,
+      "representative_material_intervention_rank_matches": 6,
+      "representative_material_intervention_cases": 14,
+      "meaning": "The observed physical-interface mismatch is not an algebraic identity and need not survive channel interventions or parameter changes."
+    }
+  },
+  "quantitative_examples": {
+    "MoSSe_7269_external": {
+      "static_largest": "lower",
+      "gate_sensitive": "upper",
+      "upper_share_of_absolute_gate_slope": 0.9615704657340848,
+      "static_net_retention": 0.022354891743615744,
+      "gate_net_retention": 0.9231409314681696
+    },
+    "InSe_864_A_external": {
+      "static_largest": "lower",
+      "gate_sensitive": "upper",
+      "upper_share_of_absolute_gate_slope": 0.6148032632694544,
+      "static_net_retention": 0.000650312275539344,
+      "gate_net_retention": 0.2296065265389088
+    },
+    "InSe_864_B_external": {
+      "static_largest": "upper",
+      "gate_sensitive": "lower",
+      "lower_share_of_absolute_gate_slope": 0.614554991911775,
+      "static_net_retention": 0.0006550834930352608,
+      "gate_net_retention": 0.22910998382354994
+    }
+  },
+  "testable_rules_and_status": [
+    {
+      "rule": "The zero-gate sign does not fix whether positive control strengthens or weakens a layer.",
+      "status": "supported by two controlled pairs",
+      "evidence": {
+        "InSe_domains": {
+          "A_directions": [
+            "negative",
+            "positive"
+          ],
+          "A_trends": [
+            "weakens",
+            "weakens"
+          ],
+          "B_directions": [
+            "negative",
+            "positive"
+          ],
+          "B_trends": [
+            "strengthens",
+            "strengthens"
+          ],
+          "A_and_B_net_G": [
+            -4.224134079183841,
+            -4.231878067439538
+          ]
+        },
+        "KM_relative_channel_phase": {
+          "alpha_plus_half_directions": [
+            "negative",
+            "positive"
+          ],
+          "alpha_plus_half_trends": [
+            "strengthens",
+            "strengthens"
+          ],
+          "alpha_minus_half_directions": [
+            "negative",
+            "positive"
+          ],
+          "alpha_minus_half_trends": [
+            "weakens",
+            "weakens"
+          ]
+        }
+      }
+    },
+    {
+      "rule": "Static cancellation and gate-slope cancellation are separate diagnostics.",
+      "status": "supported; no universal conversion inferred",
+      "evidence": "MoSSe and InSe both have strongly cancelling static layer responses, but their retained net gate slopes differ sharply; see quantitative_examples and case_metrics.csv."
+    },
+    {
+      "rule": "A selected interlayer channel may change response direction, gate-sensitive layer, or gain direction separately.",
+      "status": "conditional mechanism, not universal",
+      "evidence": "MoSSe and InSe representative interventions in intervention_metrics.csv; the same directional channel class has opposite sensitivity effects."
+    },
+    {
+      "rule": "A quadratic signed-channel interpolation is not a universal material criterion.",
+      "status": "falsified by retained InSe tests",
+      "criterion_test_counts": {
+        "MoSSe": {
+          "internal_step": {
+            "held_out_half_amplitude_groups": 8,
+            "held_out_layer_slope_signs_correct": 16,
+            "held_out_layer_slope_signs_total": 16,
+            "physical_endpoint_groups": 4,
+            "physical_endpoint_layer_gain_directions_correct": 8,
+            "physical_endpoint_layer_gain_directions_total": 8
+          },
+          "screened_external": {
+            "held_out_half_amplitude_groups": 8,
+            "held_out_layer_slope_signs_correct": 16,
+            "held_out_layer_slope_signs_total": 16,
+            "physical_endpoint_groups": 4,
+            "physical_endpoint_layer_gain_directions_correct": 8,
+            "physical_endpoint_layer_gain_directions_total": 8
+          }
+        },
+        "MoS2": {
+          "internal_step": {
+            "held_out_half_amplitude_groups": 8,
+            "held_out_layer_slope_signs_correct": 16,
+            "held_out_layer_slope_signs_total": 16,
+            "physical_endpoint_groups": 4,
+            "physical_endpoint_layer_gain_directions_correct": 8,
+            "physical_endpoint_layer_gain_directions_total": 8
+          }
+        },
+        "InSe": {
+          "internal_step": {
+            "held_out_half_amplitude_groups": 8,
+            "held_out_layer_slope_signs_correct": 8,
+            "held_out_layer_slope_signs_total": 16,
+            "physical_endpoint_groups": 4,
+            "physical_endpoint_layer_gain_directions_correct": 0,
+            "physical_endpoint_layer_gain_directions_total": 8
+          },
+          "screened_external": {
+            "held_out_half_amplitude_groups": 8,
+            "held_out_layer_slope_signs_correct": 16,
+            "held_out_layer_slope_signs_total": 16,
+            "physical_endpoint_groups": 4,
+            "physical_endpoint_layer_gain_directions_correct": 0,
+            "physical_endpoint_layer_gain_directions_total": 8
+          }
+        }
+      },
+      "mixing_diagnostic": {
+        "MoSSe": {
+          "background_direct_gap_eV": 1.391175053474652,
+          "background_eta_max": 0.15431880220135255,
+          "classification": "post_hoc_applicability_descriptor_not_a_threshold"
+        },
+        "InSe": {
+          "background_direct_gap_eV": 0.8822557439130784,
+          "background_eta_max": 0.30536081718477875,
+          "classification": "post_hoc_applicability_descriptor_not_a_threshold"
+        },
+        "MoS2": {
+          "background_direct_gap_eV": 1.5381994001720436,
+          "background_eta_max": 0.1425406419931556,
+          "classification": "post_hoc_applicability_descriptor_not_a_threshold"
+        }
+      },
+      "boundary": "At alpha=1, InSe has 0/8 correct layer gain-direction classifications in each field definition, whereas MoSSe and MoS2 retain all available classifications. InSe's larger eta is post hoc and is not a threshold."
+    }
+  ],
+  "next_falsifiable_material_prediction": {
+    "file": "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/prediction_freeze.json",
+    "sha256": "11bd0485e98e5dbff33453e3964b2499b0c71e223add1fc5efbc3296bc651bcf",
+    "target": "MoSSe BiDB 7268",
+    "prediction": "C_lower<0, C_upper>0; upper is statically larger, but lower has larger absolute screened +/-0.10 V/nm gate slope; no layer sign reversal in that interval.",
+    "confidence": "low heuristic; 7266 supplies only a protocol-mismatched static sign/rank cue, and existing compensated static rank margins can be comparable to numerical sensitivity",
+    "important_nonprediction": "Whether positive gate strengthens or weakens the two amplitudes is intentionally left unpredicted."
+  },
+  "limitations": [
+    "The material values use archived 6x6 response grids and finite band windows; they are exploratory, not final material constants.",
+    "InSe net values are cancellation-sensitive and changed materially with mesh even though layer directions and control trends survived.",
+    "Internal layer-energy steps cannot be converted into external V/nm by a universal scalar; real self-consistent gate states change more than the mean layer offset.",
+    "Hamiltonian channel removal/scaling is diagnostic and was not rescreened; it is not a directly available experimental knob.",
+    "Absolute gate-sensitive layer and relative fractional sensitivity answer different questions; near-zero C can make fractional sensitivities misleading.",
+    "No experimental detectability, orbital magnetic response, ionic relaxation, or universal threshold is established here.",
+    "The historical 7266 direct finite-field response is not quantitatively interchangeable with the frozen 7268 independently screened +/-0.10 V/nm protocol."
+  ]
+}

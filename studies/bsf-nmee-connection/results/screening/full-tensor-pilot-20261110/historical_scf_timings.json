@@ -1,0 +1,113 @@
+{
+  "status": "observed historical runtimes, not current benchmark",
+  "records": [
+    {
+      "material": "MoSSe",
+      "case": "fm010/A",
+      "kind": "bilayer",
+      "scf_seconds": 830.3169897766784,
+      "iterations": 22,
+      "source": "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/fm010/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "MoSSe",
+      "case": "fm010/mono",
+      "kind": "mono",
+      "scf_seconds": 433.84959711600095,
+      "iterations": 21,
+      "source": "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/fm010/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "MoSSe",
+      "case": "fm010/upper",
+      "kind": "mono",
+      "scf_seconds": 623.2608376266435,
+      "iterations": 32,
+      "source": "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/fm010/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "MoSSe",
+      "case": "fp010/A",
+      "kind": "bilayer",
+      "scf_seconds": 597.480684154667,
+      "iterations": 24,
+      "source": "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/fp010/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "MoSSe",
+      "case": "fp010/mono",
+      "kind": "mono",
+      "scf_seconds": 265.50138816423714,
+      "iterations": 19,
+      "source": "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/fp010/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "MoSSe",
+      "case": "fp010/upper",
+      "kind": "mono",
+      "scf_seconds": 419.9097020421177,
+      "iterations": 32,
+      "source": "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/fp010/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "InSe",
+      "case": "A0",
+      "kind": "bilayer",
+      "scf_seconds": 2413.3145766900852,
+      "iterations": 32,
+      "source": "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/A0/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "InSe",
+      "case": "Am",
+      "kind": "bilayer",
+      "scf_seconds": 1573.01812163461,
+      "iterations": 23,
+      "source": "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/Am/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "InSe",
+      "case": "Ap",
+      "kind": "bilayer",
+      "scf_seconds": 2505.64759244211,
+      "iterations": 23,
+      "source": "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/Ap/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "InSe",
+      "case": "mono0",
+      "kind": "mono",
+      "scf_seconds": 1581.6837446941063,
+      "iterations": 32,
+      "source": "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/mono0/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "InSe",
+      "case": "monom",
+      "kind": "mono",
+      "scf_seconds": 1163.3097149599344,
+      "iterations": 23,
+      "source": "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/monom/result.json",
+      "ranks": 4
+    },
+    {
+      "material": "InSe",
+      "case": "monop",
+      "kind": "mono",
+      "scf_seconds": 1170.5844144867733,
+      "iterations": 23,
+      "source": "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/monop/result.json",
+      "ranks": 4
+    }
+  ]
+}

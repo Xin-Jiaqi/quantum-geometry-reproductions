@@ -1,0 +1,22 @@
+{
+  "scope": "7269 fixed-ion full-KS tensor method acceptance before7268",
+  "frozen_before_anchor_run": true,
+  "legacy_Cxx_relative_tolerance": 1e-07,
+  "forbidden_absolute_relative_to_max_layer_Cxx": 0.02,
+  "Cxx_Cyy_absolute_relative_to_max_layer_Cxx": 0.05,
+  "half_B_probe_absolute_relative_to_max_layer_Cxx": 0.01,
+  "minimum_gap_eV": 0.05,
+  "independent_layer_operator_closure_max": 1e-07,
+  "no_symmetry_zeroing": true,
+  "failure_action": "keep results and stop7268 dispatch; diagnose discretization/operator issue without relaxing thresholds",
+  "C3v_allowed": "Cxx=Cyy; Cxy=Cyx=Czx=Czy=0 in present lab axes",
+  "limitations": "pilot tolerances are not final material amplitude convergence",
+  "diagnostic_extension": {
+    "reason": "Actual four-link run reproduces Cxx but fails forbidden sz; test C3-closed geometric shell, no zeroing",
+    "original_thresholds_preserved": true,
+    "legacy_regression": "unchanged four-link mode must still reproduce original Cxx at1e-7",
+    "corrected_Cxx_discretization_change_max_relative_layer": 0.05,
+    "gauge_coverage": "interior and reciprocal-boundary links on both axes",
+    "budget": "one supplemental4CPU8GiB5min; pilot walltime reduced to1h50min/state so combined requested bound stays below26 CPUh"
+  }
+}

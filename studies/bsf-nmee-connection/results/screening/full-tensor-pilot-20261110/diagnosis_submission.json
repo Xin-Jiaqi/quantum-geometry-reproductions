@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-11-10T20:16:30.544722+08:00",
+  "job_id": "564587.cmspbs1",
+  "remote_root": "/work/sunq/xjq/nmee-full-tensor-pilot-20261110",
+  "queue": "CP_001",
+  "resources": "4CPU8GiB5min",
+  "source_hashes": {
+    "tensor_response.py": "bcb75f34d6ebff6f64c7748d05c5145ef189f514da99dc46261a8a917bc80b88",
+    "build_stencil.py": "17835c3910660f661ec2566a8266e0fa453df442c174320ad2e1cbb90409c674",
+    "audit_gauge.py": "6265ec9aef036c2726412e1958bafd4cbc96b7d5f1cfc2c35ff7754bb89016ef",
+    "diagnose_stencil.py": "98330e5c7650a3be58984dfae72134174c55935283241c4e5ebc7f669f7f27ff",
+    "diagnose.pbs": "7f3317f394566c251ce603c6155d23f983c5055072080602a07731715ffe8a05",
+    "acceptance_contract.json": "96c2938ab4c3cecc2ea881d8d90f959c89b84fb6ebe3ccc3007a361150426ef4"
+  },
+  "transport_exit": 0,
+  "scope": "manual diagnosed stencil correction and boundary-gauge audit, no newDFT"
+}

@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-11-10T20:07:12.741232+08:00",
+  "remote_root": "/work/sunq/xjq/nmee-full-tensor-pilot-20261110",
+  "queue": "CP_001",
+  "reason": "DP_002 two shared-account slots occupied by unrelated project; use bounded regular shared allocation",
+  "resources": "4CPU24GiB30min",
+  "source_hashes": {
+    "tensor_response.py": "1a6925e8bb2475e8c133e4c3b7096ec876d84ebc137bf312b004bbd1e8c3d4b9",
+    "export_tensor.py": "850d913fd8c33a470869d2e51e4eac43a32b35f05837083ab9490eb52b611da6",
+    "validate_7269.py": "e6fdf3433db8fb0743f3b6c15cd11a875b955bf5753d663dd62c28bc019cd986",
+    "validate.pbs": "82b08021ba086efb50ea4dc36aedd39be9fa4d65020aecb8ed08c7c6a00f5926",
+    "acceptance_contract.json": "a2974ae854f4dcdf140e6bd42bc2b9409a493436b420f4362b802b3830a914bd",
+    "legacy_response.py": "1b760eaccf0b6580f44f4461596122c19991c237c285ce719daa74ccedf7a28a"
+  },
+  "transport_exit": 0,
+  "legacy_response_source": "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/analyze.py",
+  "job_id": "564535.cmspbs1",
+  "state": "F",
+  "exit_status": 2,
+  "scheduler_walltime_seconds": 38,
+  "node": "csuper004"
+}

@@ -1,0 +1,27 @@
+{
+  "nk": 36,
+  "nb": 112,
+  "nocc": 48,
+  "mesh": [
+    6,
+    6
+  ],
+  "layer_mode": "bilayer",
+  "cut_fractional_z": 0.5,
+  "layer_semantics": "physical layers",
+  "metric_max": 2.6880870303003235e-06,
+  "hermiticity_max": 1.263746052249104e-15,
+  "layer_sum_operator_error": 1.0148132334464322e-15,
+  "legacy_lower_sx_operator_error": 0.0,
+  "link_reverse_error": 1.0000333894311098e-12,
+  "wave_link_gauge_error": 0.00704487596936507,
+  "export_seconds": 21.81159271299839,
+  "node": "csuper004",
+  "job": "564535.cmspbs1",
+  "source_seed": "/work/sunq/xjq/mosse-strain-20261108/e000/A/seed",
+  "input_sha256": {
+    "POSCAR": "9f34c27172b6302bc72aa61ba0e42fc5538b3c625915b48994c43cb8733cae5f",
+    "INCAR": "0c80ee2d19add6ba25a034ceb495878168f390a7154c141e67ee500f922edb6a",
+    "KPOINTS": "548591f8344dd4a50ee990618e473fb072d44e5f0555e8a8f794d67f7b557ea5"
+  }
+}

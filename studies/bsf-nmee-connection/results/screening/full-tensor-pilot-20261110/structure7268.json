@@ -1,0 +1,71 @@
+{
+  "A": {
+    "formula": "Mo2S2Se2",
+    "pointgroup": "3m",
+    "n_atoms": 6,
+    "intralayer_geometry": "unaltered; common z translation only",
+    "cell_A": [
+      [
+        3.250850214597298,
+        -0.0,
+        0.0
+      ],
+      [
+        -1.6254251072986494,
+        2.8153188697393543,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        27.464971965720583
+      ]
+    ]
+  },
+  "lower": {
+    "formula": "MoSSe",
+    "pointgroup": "3m",
+    "n_atoms": 3,
+    "intralayer_geometry": "unaltered; common z translation only",
+    "cell_A": [
+      [
+        3.250850214597298,
+        -0.0,
+        0.0
+      ],
+      [
+        -1.6254251072986494,
+        2.8153188697393543,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        27.464971965720583
+      ]
+    ]
+  },
+  "upper": {
+    "formula": "MoSSe",
+    "pointgroup": "3m",
+    "n_atoms": 3,
+    "intralayer_geometry": "unaltered; common z translation only",
+    "cell_A": [
+      [
+        3.250850214597298,
+        -0.0,
+        0.0
+      ],
+      [
+        -1.6254251072986494,
+        2.8153188697393543,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        27.464971965720583
+      ]
+    ]
+  }
+}

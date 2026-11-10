@@ -15,3 +15,5 @@
 - User request 2026-11-10: finish the bounded KM + MoSSe/InSe/MoS2 criterion comparison, then stop numerical expansion for a discussion of physics, manuscript, and next directions. A universal criterion is a goal to test, not a result to assume.
 
 - Updated 2026-11-10: the user accepted the representative BiDB screening direction, but authorized only a first-batch proposal and GitHub/worklog archival. Read the latest worklog entry and `results/screening/bidb-pilot-plan-20261110`. Do not submit DFT or a batch until the user approves proceeding after discussion.
+
+- Execution authorization 2026-11-10: user approved full-direction kernel completion and 7269 validation, then the bounded 7268 pilot only after acceptance; KM/existing-DFT analysis proceeds concurrently. Estimate pure runtime after benchmarking. Respect the two-job project cap and Japan compute-node-only science. Other candidates remain planning, not blanket dispatch.

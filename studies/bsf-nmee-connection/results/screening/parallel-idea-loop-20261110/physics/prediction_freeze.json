@@ -1,0 +1,70 @@
+{
+  "status": "frozen_before_any_7268_response_test",
+  "frozen_at": "2026-11-10T19:58:40+08:00",
+  "revision_history": [
+    {
+      "revised_at": "2026-11-10T20:07:39+08:00",
+      "state_at_revision": "no 7268 NMEE response existed or had been inspected",
+      "reason": "remove an evaluation ambiguity: an unresolved rank was incorrectly listed under both failure and inconclusive",
+      "scientific_prediction_changed": false,
+      "change": "resolved opposite ranks are failures; ranks indistinguishable within declared numerical uncertainty are inconclusive only"
+    }
+  ],
+  "target": {
+    "material": "MoSSe",
+    "bidb_id": 7268,
+    "uid": "MoSSe-de7ac5fc6945-2-1_0_0_1--0.67_-0.33",
+    "role": "new S/Se registry, not previously calculated for NMEE"
+  },
+  "protocol_to_test": {
+    "component": "sx_Ex_Bz",
+    "structure": "one declared fixed bilayer geometry used consistently for Fz=-0.10,0,+0.10 V/nm; relaxation status must be reported rather than assumed",
+    "control": "independently self-consistent fixed-ion external gate states",
+    "static_quantities": "C_lower(0), C_upper(0)",
+    "gate_slopes": "G_l=[C_l(+0.10)-C_l(-0.10)]/0.20",
+    "layer_labels": "must be fixed by the atomic mapping before responses are inspected"
+  },
+  "prediction": {
+    "confidence": "low heuristic; deliberately falsifiable, not a universal law or a robust rank claim",
+    "layer_directions_at_zero_gate": {
+      "lower": "negative",
+      "upper": "positive"
+    },
+    "static_largest_layer": "upper",
+    "gate_sensitive_layer_by_absolute_slope": "lower",
+    "rank_relation": "argmax_l |C_l(0)| differs from argmax_l |G_l|",
+    "gate_induced_layer_sign_reversal_within_pm010": false,
+    "positive_gate_strengthens_or_weakens_each_layer": "not predicted; existing KM and InSe mirror data show that this is independent of the zero-gate signs and rank relation"
+  },
+  "decision_rule": {
+    "static_upper_share": "|C_upper(0)|/(|C_lower(0)|+|C_upper(0)|) > 0.5 after numerical uncertainty",
+    "gate_lower_share": "|G_lower|/(|G_lower|+|G_upper|) > 0.5 after numerical uncertainty",
+    "primary_pass": "both rank inequalities are greater than 0.5 by more than the declared numerical uncertainty",
+    "primary_fail": "either rank inequality is less than 0.5 by more than the declared numerical uncertainty",
+    "primary_inconclusive": "either rank margin is no larger than the declared mesh/probe sensitivity, or the response protocol/layer mapping differs from the frozen definition",
+    "direction_coprediction_pass": "C_lower(0)<0 and C_upper(0)>0 with no layer sign reversal between the two gate endpoints",
+    "direction_coprediction_fail": "a zero-gate sign is resolved opposite to the prediction or a layer reverses sign between the two gate endpoints"
+  },
+  "basis_available_before_test": [
+    {
+      "source": "/Users/jiaqi/Desktop/worksofJiaqi/project-x/outputs/MoSSe-NMEE/7266-blind/RESULTS.md",
+      "fact": "same S/Se interface family in registry 7266 has C_lower=-99.10 and C_upper=+110.02 in the archived direct finite-field result, so the upper layer is statically larger; this older direct finite-field response is not the same protocol as the frozen 7268 screened-gate test and supplies only a heuristic sign/rank cue"
+    },
+    {
+      "source": "studies/bsf-nmee-connection/results/materials/layer-channel-sensitivity-20261110/all_controls.csv",
+      "fact": "physical 7269 has the lower layer statically larger but the upper layer carrying 94.8-96.2% of the absolute screened gate slope"
+    },
+    {
+      "source": "studies/bsf-nmee-connection/results/mechanism/km-channel-control-20261110/phase_validation.json",
+      "fact": "changing the relative sign of one interlayer path changes gate-control direction and layer-slope balance while retaining layer response directions"
+    }
+  ],
+  "scope_guard": [
+    "This predicts one registry only and must not be promoted to all MoSSe, all Janus bilayers, or all interfaces.",
+    "The upper/lower rank is not symmetry-enforced.",
+    "The static rank differences in existing compensated full interfaces can be comparable to numerical sensitivity; repeated archive signs are not a convergence proof.",
+    "The 7266 historical direct finite-field result and the 7268 frozen screened-gate protocol are not quantitatively interchangeable.",
+    "No prediction is made for the absolute response, experimental detectability, or a universal mixing threshold.",
+    "Do not change the endpoint, layer labeling, field definition, or pass rule after seeing 7268."
+  ]
+}
