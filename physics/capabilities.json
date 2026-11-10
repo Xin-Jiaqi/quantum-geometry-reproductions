@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-11-09",
+  "reviewed": "2026-11-10",
   "meaning": "MODEL_READY means independently verified named model/protocol; not complete paper or material reproduction",
   "capabilities": [
     {
@@ -170,6 +170,31 @@
         "A4 sign and A8-like second-order-state truncation conflicts are documented; no forced source normalization"
       ],
       "expected_tests": 29
+    },
+    {
+      "id": "deep-dbc",
+      "name": "Zou 2025 deep band crossings / SHG",
+      "directory": "papers/zou-2025-deep-band-crossings",
+      "source": "https://doi.org/10.1103/sqwy-xhdf",
+      "citation": "PRL 135, 226901 (2025)",
+      "status": "MODEL_READY",
+      "capability": "Source-defined 3-orbital tight-binding and leading DBC-induced SHG interband/mixed cancellation",
+      "pythonpath": "src",
+      "example": "scripts/reproduce_core.py",
+      "documentation": "README.md",
+      "apis": [
+        "deep_dbc.nodal_parameters",
+        "deep_dbc.band_data",
+        "deep_dbc.covariant_derivative",
+        "deep_dbc.shg_pieces"
+      ],
+      "units": "SM TB energy units; dimensionless lattice momentum; hbar=1; local SHG normalization omits e^3/(2hbar^2) and BZ integration",
+      "limits": [
+        "Local leading 1/q singularity cancellation only; finite terms of SM S7 and full SHG susceptibility not computed",
+        "No finite-BZ shift conductivity full spectrum calibration; no GeTe DFT/Wannier, SOC or HSE",
+        "Off-resonant frequency 0.7*epsilon0, insulating three-band v/c/c' occupations, no exact degeneracy or physical linewidth"
+      ],
+      "expected_tests": 8
     }
   ]
 }
