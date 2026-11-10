@@ -1,0 +1,49 @@
+{
+  "parent_commit": "00ead92b22249cdc7daa4fdb920870a7fd1b9b5c",
+  "scope": "Bounded criterion test; predictions frozen before validation; no new DFT. Private caches remain external.",
+  "files": {
+    "PLAN.md": "40f347f60f7a61b50dcc66a978b28071a6e6a31eab36e5d3846d3686464c0cfa",
+    "README.md": "3d5e0999fe5530803395fbedc313a04b1e0f8ffbc2e48cab773b7ef5593881eb",
+    "calculate.py": "10fc8433b0e44e66d498b734a8674f0f92a5207125f2646a9f32426973471bcf",
+    "response_core.py": "1b760eaccf0b6580f44f4461596122c19991c237c285ce719daa74ccedf7a28a",
+    "mixing_channels.py": "48ab9c5053a75031964476906e05c5d33afb208fa41b85783ac2440242f21773",
+    "run.pbs": "1b9845e37689669192c5e849f2cf4d32f109b3ab25e234e11d674aea73b222a3",
+    "jobs.json": "d5aca4a82bda06c35e32d071422c406f8fb0cba500afcb12e6dd5bbc5069de9f",
+    "train.json": "2057e8a9a4074606b58f2a789e76226b1715daea1b5bd9a6dd2a07463d4f08a2",
+    "predictions.json": "755b07a01fbdd8ace5b8ffbde560bcfeec33a01558ce0fd8eb00013b896558d2",
+    "validate.json": "037a53fa0930a9d96c64d23e35f138f7653b1710c678502a68b8ed3409a3d0eb",
+    "refine.json": "a82fff6822f25f9584ca20bd453a730b374ea3cc1aa449970ce358b7655585ae",
+    "predict.py": "c945c76cd4612ce25d9d2d2e27a6fa8bdf3516505f32529d16b0615fdeb5b35e",
+    "summarize.py": "c25467308873c49dd0d164804f6831d575d8bbe20520df988be11bb67ad7ea43",
+    "check_final.py": "cdc1c6349519902fc7530b878d761c3ce4b94046af74b0c28a9a94a3c4b4b63c",
+    "summary.json": "359db6809c6ee933909f26ff4466e92ee26a7cfacb381e280882d3754a3c366c",
+    "all_controls.csv": "271c5c3f57501ec1470556da8f3393c187dbef5825ce1220773e4230e8bcaa0a",
+    "prediction_tests.csv": "50251705c5edff49eeddb4ecdc2c2e1cb68c3faafcb30035192e33ae7072760f",
+    "baseline_check.json": "fda9ac241f3a2083feb13d21b877ee0dcd08a539d5d7ea59ab14049d208f3a6e",
+    "final_checks.json": "fefa3af6ae8b641f2db92ad542a5fc4d3e2ff21e3b59dcdd89d08e2a70164af4"
+  },
+  "excluded": [
+    "private transport/authentication helper",
+    "large scientific caches"
+  ],
+  "helper_provenance": {
+    "response_core.py": [
+      "studies/bsf-nmee-connection/results/materials/mos2-interface-20261108/analyze.py",
+      "studies/bsf-nmee-connection/results/materials/mosse-screened-channels-20261109/analyze.py",
+      "studies/bsf-nmee-connection/results/materials/inse-mirror-gate-20261109/analyze.py",
+      "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/analyze.py",
+      "studies/bsf-nmee-connection/results/materials/mos2-gate-spacing-20261108/analyze.py",
+      "studies/bsf-nmee-connection/results/materials/mosse-strain-20261108/analyze.py",
+      "studies/bsf-nmee-connection/results/materials/mosse-gate-efficiency-20261109/analyze.py",
+      "studies/bsf-nmee-connection/results/materials/mos2-compression-20261108/analyze.py",
+      "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/analyze.py"
+    ],
+    "mixing_channels.py": [
+      "studies/bsf-nmee-connection/results/materials/mosse-screened-channels-20261109/mixing_channels.py",
+      "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/mixing_channels.py",
+      "studies/bsf-nmee-connection/results/materials/mosse-strain-20261108/mixing_channels.py",
+      "studies/bsf-nmee-connection/results/materials/mosse-gate-efficiency-20261109/mixing_channels.py",
+      "studies/bsf-nmee-connection/results/mechanism/mixing-channels-20261107/scripts/mixing_channels.py"
+    ]
+  }
+}

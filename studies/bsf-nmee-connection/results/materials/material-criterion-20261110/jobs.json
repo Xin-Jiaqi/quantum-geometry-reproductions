@@ -1,0 +1,57 @@
+{
+  "observed_at": "2026-11-10T15:49:22.883742+08:00",
+  "resource": "Japan IMR",
+  "queue": "DP_002",
+  "preflight": {
+    "enabled": true,
+    "started": true,
+    "ncpus_max": 4,
+    "mem_GB_max": 32,
+    "walltime_max": "02:00:00",
+    "running_at_observation": 0
+  },
+  "quota": {
+    "uid_used_KiB": 6619656892,
+    "numeric_quota_and_limit": 0,
+    "interpretation": "unspecified, not unlimited",
+    "group_project": "unknown"
+  },
+  "budget": {
+    "CPUs": 4,
+    "memory_GB": 16,
+    "walltime_per_stage": "00:30:00",
+    "new_output_GB_max": 0.1
+  },
+  "fee": "user says free; not independently audited",
+  "site_choice": "existing scientific caches and PAW overlaps in Japan; avoid migration, no new DFT; first-tier CPU suitability not newly established",
+  "jobs": [
+    {
+      "id": "563995.cmspbs1",
+      "stage": "train",
+      "state": "completed",
+      "workdir": "/work/sunq/xjq/material-criterion-20261110",
+      "exit_status": 0,
+      "node": "csuper010",
+      "walltime": "00:02:22"
+    },
+    {
+      "id": "564011.cmspbs1",
+      "stage": "validate",
+      "state": "completed",
+      "workdir": "/work/sunq/xjq/material-criterion-20261110",
+      "exit_status": 0,
+      "node": "csuper010",
+      "walltime": "00:02:17"
+    },
+    {
+      "id": "564028.cmspbs1",
+      "stage": "refine",
+      "state": "completed",
+      "workdir": "/work/sunq/xjq/material-criterion-20261110",
+      "exit_status": 0,
+      "node": "csuper010",
+      "walltime": "00:00:50"
+    }
+  ],
+  "status": "All bounded stages completed; stop numerical expansion for physics discussion."
+}
