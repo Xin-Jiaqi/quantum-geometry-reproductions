@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-11-10T21:10:17.232736+08:00",
+  "job": "564629.cmspbs1",
+  "scheduler_state": "R",
+  "elapsed": "00:11:30",
+  "returned_result": {
+    "job": "564629.cmspbs1",
+    "node": "csuper004",
+    "complete": false,
+    "passed": false,
+    "stage": "z_relaxation",
+    "max_ionic_steps": 12,
+    "force_target_eV_A": 0.03,
+    "gate_release": false
+  },
+  "campaign_progress": {
+    "candidate_bilayers": 16,
+    "new_candidate_bilayers_started": 1,
+    "bilayers_completed_under_unified_three_gate_protocol": 0,
+    "new_zero_SCF_jobs_completed": 2,
+    "note": "Historical results and7269method anchor are separate, not completed full screening entries; raw7268force failed"
+  },
+  "expected_structural_review_Asia_Shanghai": "2026-11-10T22:30:00+08:00",
+  "review_time_status": "planning target conditional on convergence; hardwall22:45:53; no full-gate acceptance time assigned"
+}

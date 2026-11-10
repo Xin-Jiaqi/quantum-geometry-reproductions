@@ -19,3 +19,5 @@
 - Execution authorization 2026-11-10: user approved full-direction kernel completion and 7269 validation, then the bounded 7268 pilot only after acceptance; KM/existing-DFT analysis proceeds concurrently. Estimate pure runtime after benchmarking. Respect the two-job project cap and Japan compute-node-only science. Other candidates remain planning, not blanket dispatch.
 
 - Structural exception approved 2026-11-10: after 7268 A0 failed the frozen 0.10 eV/Å force gate, user explicitly approved one zero-field z-only relaxation with fixed cell/xy, at most 12 ionic steps and 110 minutes on 4 CPUs. No automatic retry; require force <0.03 eV/Å and bounded displacement, then revalidate zero-field response and new matched isolated references before gate release. Keep raw-geometry result and failure.
+
+- Reporting preference 2026-11-10: start with compact submitted-job/status list, screening progress with an explicit denominator, and expected acceptance clock time in Asia/Shanghai. Then discuss material-physics contribution, counterexamples, manuscript-worthy additions, and remaining PRL evidence gaps. Do not equate jobs finished with candidate acceptance.
