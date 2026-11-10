@@ -1,0 +1,14 @@
+{
+  "job_id": "564588.cmspbs1",
+  "resources": "1CPU4GiB5min",
+  "source_hashes": {
+    "audit_gauge.py": "7a2a4fd7aa96a3c6f76d902c000c83b986237f6c3bfb6df67e19bf64cbf37ebc",
+    "finalize_anchor.py": "4ed69f7fb9788671d1e9b73e96a8baf5f1413a3daa085d8e7b3f3035b616ed8b",
+    "finalize.pbs": "8807a5fd3d53f48a0d8c0e9d70647a15e65a8a45f103782b1932dbe567258fa2"
+  },
+  "scope": "all3reciprocal pairs, interior and boundary; noDFT",
+  "state": "F",
+  "exit_status": 0,
+  "scheduler_walltime_seconds": 4,
+  "node": "csuper004"
+}

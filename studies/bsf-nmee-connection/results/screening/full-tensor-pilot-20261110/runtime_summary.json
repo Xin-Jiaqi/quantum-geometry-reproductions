@@ -1,0 +1,71 @@
+{
+  "scope": "16 bilayers plus2geometry-matched isolated references each, 3F states each =144 SCF states before any reuse; fixed ions, exploratory reciprocal spacing, no relaxation/convergence campaign",
+  "time_definition": "sum of job elapsed pure compute hours at4CPU; excludes queue/transfer; CPU-hour equals4times elapsed allocated walltime, not measured CPU utilization",
+  "model": "anchored in historical MoSSe/InSe SCF times and actual7269 tensor processing; unseen systems scale Nk*volume*electron-count-proxy^2; cold zero-SCF factor1.5; each postprocessing state scales Nk*its own electron-count^3 (3 bilayer and6 monolayer states); deliberately broad0.5–2 envelope, plus Ge/Sn PAW ambiguity; not confidence intervals",
+  "limits": [
+    "No benchmark for6new chemical families",
+    "Final actual PAW sets and Nb not frozen",
+    "GeS/SnS symmetry and grid acceptance unresolved",
+    "No guaranteed convergence at planned mesh",
+    "No savings from cached SCFs/reference dedup assumed",
+    "No ionic relaxation, NEB, dense grids or mechanism intervention budget",
+    "Two concurrent4CPU jobs give ideal elapsed lower bound sum/2, not schedule guarantee"
+  ],
+  "totals": {
+    "states_no_reuse": 144,
+    "nominal_serial_job_hours": 39.11379063914529,
+    "planning_low_hours": 17.92000933095164,
+    "planning_high_hours": 84.19590847061923,
+    "nominal_allocated_CPU_hours_4rank": 156.45516255658117
+  },
+  "by_material": {
+    "MoSSe": {
+      "bilayers": 4,
+      "per_bilayer_nominal_hours": 1.5605704101203526,
+      "per_bilayer_low_hours": 0.7802852050601763,
+      "per_bilayer_high_hours": 3.121140820240705
+    },
+    "MoS2": {
+      "bilayers": 2,
+      "per_bilayer_nominal_hours": 2.0244801234325993,
+      "per_bilayer_low_hours": 1.0122400617162997,
+      "per_bilayer_high_hours": 4.048960246865199
+    },
+    "WS2": {
+      "bilayers": 2,
+      "per_bilayer_nominal_hours": 2.0294938689254005,
+      "per_bilayer_low_hours": 1.0147469344627003,
+      "per_bilayer_high_hours": 4.058987737850801
+    },
+    "InSe": {
+      "bilayers": 2,
+      "per_bilayer_nominal_hours": 3.31050661886262,
+      "per_bilayer_low_hours": 1.65525330943131,
+      "per_bilayer_high_hours": 6.62101323772524
+    },
+    "GaSe": {
+      "bilayers": 2,
+      "per_bilayer_nominal_hours": 4.07967093012322,
+      "per_bilayer_low_hours": 2.03983546506161,
+      "per_bilayer_high_hours": 8.15934186024644
+    },
+    "GeS": {
+      "bilayers": 1,
+      "per_bilayer_nominal_hours": 0.9947211987214407,
+      "per_bilayer_low_hours": 0.49736059936072036,
+      "per_bilayer_high_hours": 7.957769589771526
+    },
+    "SnS": {
+      "bilayers": 1,
+      "per_bilayer_nominal_hours": 4.365029302989351,
+      "per_bilayer_low_hours": 0.5456286628736688,
+      "per_bilayer_high_hours": 8.730058605978702
+    },
+    "SnS2": {
+      "bilayers": 2,
+      "per_bilayer_nominal_hours": 2.3117277071327047,
+      "per_bilayer_low_hours": 1.1558638535663524,
+      "per_bilayer_high_hours": 4.623455414265409
+    }
+  }
+}

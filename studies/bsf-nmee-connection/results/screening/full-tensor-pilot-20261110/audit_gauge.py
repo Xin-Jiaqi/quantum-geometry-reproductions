@@ -79,17 +79,20 @@ def _choose_cases(
                     f"cache step {tuple(step)} neighbor has inconsistent displacement"
                 )
             kind = "interior" if not np.any(shift) else "boundary"
-            candidates.setdefault(
-                kind,
-                {
-                    "step": step,
-                    "direction": direction,
-                    "kind": kind,
-                    "source": source,
-                    "destination": destination,
-                    "shift": shift,
-                },
-            )
+            candidate = {
+                "step": step,
+                "direction": direction,
+                "kind": kind,
+                "source": source,
+                "destination": destination,
+                "shift": shift,
+            }
+            # For a diagonal direction, prefer the corner link that wraps both
+            # reduced axes and therefore tests the combined atomic PAW phase.
+            if kind not in candidates or np.count_nonzero(shift) > np.count_nonzero(
+                candidates[kind]["shift"]
+            ):
+                candidates[kind] = candidate
         for kind in ("interior", "boundary"):
             if kind not in candidates:
                 raise ValueError(

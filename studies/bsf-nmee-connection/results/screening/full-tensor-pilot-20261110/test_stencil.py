@@ -13,6 +13,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_stencil import complete_stencil  # noqa: E402
+from audit_gauge import _choose_cases  # noqa: E402
 
 
 def _write_case(
@@ -118,6 +119,56 @@ class CompleteStencilTests(unittest.TestCase):
             ValueError, "No positive complete first-derivative shell"
         ):
             complete_stencil(seed, cache, root / "unsupported.npz")
+
+
+class GaugeAuditSelectionTests(unittest.TestCase):
+    @staticmethod
+    def _mesh_neighbors(
+        mesh: tuple[int, int], steps: np.ndarray
+    ) -> tuple[np.ndarray, np.ndarray]:
+        n1, n2 = mesh
+        points = [(i, j) for i in range(n1) for j in range(n2)]
+        lookup = {point: index for index, point in enumerate(points)}
+        kpoints = np.array([[i / n1, j / n2, 0.0] for i, j in points])
+        neighbors = np.array(
+            [
+                [
+                    lookup[((i + step[0]) % n1, (j + step[1]) % n2)]
+                    for step in steps
+                ]
+                for i, j in points
+            ]
+        )
+        return kpoints, neighbors
+
+    def test_gauge_cases_expand_from_four_to_six_with_full_hex_shell(self) -> None:
+        mesh = np.array([4, 4])
+        primitive = np.array([[1, 0], [-1, 0], [0, 1], [0, -1]])
+        kpoints, neighbors = self._mesh_neighbors(tuple(mesh), primitive)
+        legacy_cases = _choose_cases(kpoints, neighbors, mesh, primitive)
+        self.assertEqual(len(legacy_cases), 4)
+
+        hex_steps = np.vstack([primitive, [[1, 1], [-1, -1]]])
+        kpoints, neighbors = self._mesh_neighbors(tuple(mesh), hex_steps)
+        shell_cases = _choose_cases(kpoints, neighbors, mesh, hex_steps)
+        self.assertEqual(len(shell_cases), 6)
+        self.assertEqual(
+            {(tuple(case["step"]), case["kind"]) for case in shell_cases},
+            {
+                ((1, 0), "interior"),
+                ((1, 0), "boundary"),
+                ((0, 1), "interior"),
+                ((0, 1), "boundary"),
+                ((1, 1), "interior"),
+                ((1, 1), "boundary"),
+            },
+        )
+        diagonal_boundary = next(
+            case
+            for case in shell_cases
+            if tuple(case["step"]) == (1, 1) and case["kind"] == "boundary"
+        )
+        np.testing.assert_array_equal(diagonal_boundary["shift"], [1, 1, 0])
 
 
 if __name__ == "__main__":

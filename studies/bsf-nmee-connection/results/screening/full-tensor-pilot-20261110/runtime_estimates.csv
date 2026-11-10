@@ -1,0 +1,17 @@
+id,material,mesh_planning_only,states_no_reuse,nominal_serial_job_hours,planning_low_hours,planning_high_hours,nominal_allocated_CPU_hours_4rank,status,basis
+7266,MoSSe,6x6,9,1.5605704101203526,0.7802852050601763,3.121140820240705,6.24228164048141,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+7268,MoSSe,6x6,9,1.5605704101203526,0.7802852050601763,3.121140820240705,6.24228164048141,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+7269,MoSSe,6x6,9,1.5605704101203526,0.7802852050601763,3.121140820240705,6.24228164048141,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+7270,MoSSe,6x6,9,1.5605704101203526,0.7802852050601763,3.121140820240705,6.24228164048141,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+1930,MoS2,7x7,9,2.0244801234325993,1.0122400617162997,4.048960246865199,8.097920493730397,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+1931,MoS2,7x7,9,2.0244801234325993,1.0122400617162997,4.048960246865199,8.097920493730397,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+2653,WS2,7x7,9,2.0294938689254005,1.0147469344627003,4.058987737850801,8.117975475701602,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+2654,WS2,7x7,9,2.0294938689254005,1.0147469344627003,4.058987737850801,8.117975475701602,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+863,InSe,5x5,9,3.31050661886262,1.65525330943131,6.62101323772524,13.24202647545048,scenario_not_precision_prediction,InSe family historical timings scaled by Nk*cell volume*electron-proxy squared
+864,InSe,5x5,9,3.31050661886262,1.65525330943131,6.62101323772524,13.24202647545048,scenario_not_precision_prediction,InSe family historical timings scaled by Nk*cell volume*electron-proxy squared
+740,GaSe,6x6,9,4.07967093012322,2.03983546506161,8.15934186024644,16.31868372049288,scenario_not_precision_prediction,InSe family historical timings scaled by Nk*cell volume*electron-proxy squared
+741,GaSe,6x6,9,4.07967093012322,2.03983546506161,8.15934186024644,16.31868372049288,scenario_not_precision_prediction,InSe family historical timings scaled by Nk*cell volume*electron-proxy squared
+785,GeS,4x5,9,0.9947211987214407,0.49736059936072036,7.957769589771526,3.978884794885763,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+1084,SnS,4x5,9,4.365029302989351,0.5456286628736688,8.730058605978702,17.460117211957403,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+2405,SnS2,6x6,9,2.3117277071327047,1.1558638535663524,4.623455414265409,9.246910828530819,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared
+2406,SnS2,6x6,9,2.3117277071327047,1.1558638535663524,4.623455414265409,9.246910828530819,scenario_not_precision_prediction,MoSSe timing scaled by Nk*cell volume*electron-proxy squared

@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-11-10T20:25:47.041013+08:00",
+  "jobs": {
+    "A0": "564589.cmspbs1",
+    "lower0": "564590.cmspbs1"
+  },
+  "upper0": "strict matched reference alias of lower0, see atomic-mapping proof",
+  "resources_each": "4CPU24GiB1h50min",
+  "source_hashes": {
+    "run_7268.py": "777fe360923901d4f93f2954b5bf9a3e4765d17c445bef21e593bc67fbee64d4",
+    "pilot.pbs": "530f6246982e1d203f390524cd17251279f51b9d3c24be893d83cbb74e53fde8",
+    "build_stencil.py": "17835c3910660f661ec2566a8266e0fa453df442c174320ad2e1cbb90409c674",
+    "audit_gauge.py": "7a2a4fd7aa96a3c6f76d902c000c83b986237f6c3bfb6df67e19bf64cbf37ebc",
+    "export_tensor.py": "850d913fd8c33a470869d2e51e4eac43a32b35f05837083ab9490eb52b611da6",
+    "tensor_response.py": "bcb75f34d6ebff6f64c7748d05c5145ef189f514da99dc46261a8a917bc80b88",
+    "inputs7268/POSCAR.A": "fe89d6c6a46dbb296bd7e1a277337db734cb0f76c54f60586480cb658c45012e",
+    "inputs7268/POSCAR.lower": "f872faa28071b86a59198f0dd562ae4549f4e5d6de143beb686adf05649518eb",
+    "inputs7268/POSCAR.upper": "d73b33c56d63c091f51ef78ed97fd9fc5da2f03ddcf596bcae39fc058d1648bd",
+    "isolated_reference_equivalence7268.json": "c0955bbb4d8d148ca448174cb83fac57d493312f4c6d30388d7c465fabda285d"
+  },
+  "stage": "zero_gate_only",
+  "gate_states_submitted": false,
+  "transport_exit": 0,
+  "no_automatic_retry": true,
+  "last_observed_state": {
+    "A0": "R",
+    "lower0": "R"
+  },
+  "nodes": {
+    "A0": "csuper004",
+    "lower0": "csuper004"
+  }
+}

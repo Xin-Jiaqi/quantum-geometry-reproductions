@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "node": "csuper004",
+  "job": "564588.cmspbs1",
+  "scope": "7269 full shell tensor pilot acceptance, not mesh-converged material amplitude",
+  "evidence_sha256": {
+    "stencil_diagnosis.json": "a89d1053b90036fb076347e7a96bca32cd8c367647b20c8c1a4e2b343fc249d3",
+    "gauge_shell_audit.json": "70d83acee36609fe2a54411dc219ac45e7032e0f073c18100b446812c256b178"
+  }
+}

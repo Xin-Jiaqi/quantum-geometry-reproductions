@@ -13,5 +13,9 @@
     "acceptance_contract.json": "96c2938ab4c3cecc2ea881d8d90f959c89b84fb6ebe3ccc3007a361150426ef4"
   },
   "transport_exit": 0,
-  "scope": "manual diagnosed stencil correction and boundary-gauge audit, no newDFT"
+  "scope": "manual diagnosed stencil correction and boundary-gauge audit, no newDFT",
+  "state": "F",
+  "exit_status": 0,
+  "scheduler_walltime_seconds": 21,
+  "node": "csuper004"
 }

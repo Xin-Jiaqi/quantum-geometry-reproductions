@@ -20,8 +20,10 @@ def main():
     acceptance=json.loads((root/'final_anchor_acceptance.json').read_text())
     if not acceptance['passed']:raise RuntimeError('7269 acceptance required')
     case=os.environ['CASE']
-    if case not in ('A0','lower0','upper0'):raise ValueError('Only authorized zero-gate pilot states')
-    label=case[:-1]
+    states={f'{label}{suffix}':(label,field) for label in ('A','lower','upper') for suffix,field in [('0',0.),('m',-.1),('p',.1)]}
+    if case not in states:raise ValueError('Only authorized bounded pilot states')
+    label,field=states[case]
+    if field and not json.loads((root/'zero7268_acceptance.json').read_text())['passed']:raise RuntimeError('Zero-gate scientific acceptance required')
     base=root/'pilot7268'/case
     seed=base/'seed'
     if base.exists():raise RuntimeError('Existing case requires audit; no automatic retry/overwrite')
@@ -30,7 +32,10 @@ def main():
     shutil.copyfile(root/'inputs7268'/f'POSCAR.{label}',seed/'POSCAR')
     for f in ('POTCAR','KPOINTS'):shutil.copyfile(source/f,seed/f)
     text=(source/'INCAR').read_text()
-    for key,value in {'SYSTEM':f'MoSSe7268 {case} fixed ions Fz=0','ISTART':'0','ICHARG':'2','EFIELD':'0','KPAR':'1','NCORE':'1'}.items():
+    if field:
+        previous=root/'pilot7268'/f'{label}0'/'seed'
+        for f in ('WAVECAR','CHGCAR'):shutil.copyfile(previous/f,seed/f)
+    for key,value in {'SYSTEM':f'MoSSe7268 {case} fixed ions Fz={field:+.3f} V/nm','ISTART':'1' if field else '0','ICHARG':'1' if field else '2','EFIELD':f'{-field/10:.8f}','KPAR':'1','NCORE':'1'}.items():
         pattern=rf'^{key}\s*=.*$'
         text=re.sub(pattern,f'{key}={value}',text,flags=re.M) if re.search(pattern,text,re.M) else text+f'\n{key}={value}\n'
     for required in ('LSORBIT=T','BEXT=0 0 0','NSW=0','EDIFF=1e-9','ENCUT=450'):
@@ -38,7 +43,7 @@ def main():
     (seed/'INCAR').write_text(text)
     ranks=len(Path(os.environ['PBS_NODEFILE']).read_text().splitlines())
     if ranks!=4:raise ValueError('Budget requires4MPI ranks')
-    rec={'case':case,'job':os.environ['PBS_JOBID'],'node':socket.gethostname(),'complete':False,'fixed_ions':True,'Fz_V_nm':0,'stage':'SCF'}
+    rec={'case':case,'job':os.environ['PBS_JOBID'],'node':socket.gethostname(),'complete':False,'fixed_ions':True,'Fz_V_nm':field,'stage':'SCF'}
     path=base/'result.json'
     def save():path.write_text(json.dumps(rec,default=serial,indent=2))
     save();start=time.monotonic()
@@ -55,8 +60,10 @@ def main():
     rec['stage']='export';save()
     subprocess.run([sys.executable,str(root/'export_tensor.py'),str(seed),str(base),'--layer-mode','bilayer' if label=='A' else 'mono','--mesh','6','6','--cut','0.5'],check=True)
     rec['export']=json.loads((base/'export.json').read_text())
+    subprocess.run([sys.executable,str(root/'build_stencil.py'),str(seed),str(base/'tensor_cache.npz'),str(base/'tensor_shell_cache.npz')],check=True)
+    subprocess.run([sys.executable,str(root/'audit_gauge.py'),str(seed),str(base/'tensor_shell_cache.npz'),'--mesh','6','6','--output',str(base/'gauge_audit.json')],check=True)
     rec['stage']='response';save();t=time.monotonic()
-    data=np.load(base/'tensor_cache.npz');rec['responses']={}
+    data=np.load(base/'tensor_shell_cache.npz');rec['responses']={}
     for nb in ((96,112) if label=='A' else (48,56,64)):
         r=TensorResponse(data,nb)
         rec['responses'][str(nb)]={'standard':r.response(b=.002),'half_b':r.response(b=.001)}

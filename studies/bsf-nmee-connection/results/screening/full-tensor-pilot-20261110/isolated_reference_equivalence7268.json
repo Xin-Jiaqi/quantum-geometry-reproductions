@@ -1,0 +1,18 @@
+{
+  "same_species_order": true,
+  "same_cell": true,
+  "inplane_translation_fractional": [
+    0.333333333956193,
+    0.6666666679123862,
+    0.0
+  ],
+  "max_atomic_mapping_error_A": 2.7138963536596633e-09,
+  "same_orientation": true,
+  "gate_parity": "+Fz maps to +Fz; no layer-normal reversal",
+  "equivalent_within_1e-7A": true,
+  "decision": "reuse lower isolated reference as upper only under this exact in-plane translation; never reuse full bilayer layer responses",
+  "hashes": {
+    "POSCAR.lower": "f872faa28071b86a59198f0dd562ae4549f4e5d6de143beb686adf05649518eb",
+    "POSCAR.upper": "d73b33c56d63c091f51ef78ed97fd9fc5da2f03ddcf596bcae39fc058d1648bd"
+  }
+}
