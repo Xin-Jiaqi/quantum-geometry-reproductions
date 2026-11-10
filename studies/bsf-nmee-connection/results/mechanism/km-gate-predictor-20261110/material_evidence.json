@@ -1,0 +1,196 @@
+{
+  "MoSSe": {
+    "source": "studies/bsf-nmee-connection/results/materials/mosse-screened-channels-20261109/summary.csv",
+    "sha256": "b5e28acd7b16c63d6a88c203984b03fc859ad6d5cbeeb9ecd785446f86daf2ae",
+    "rows": [
+      {
+        "nb": "112",
+        "frozen_empty": "8",
+        "channel": "full",
+        "alpha": "1.0",
+        "C0_net": "-0.27083890804381355",
+        "C0_lower": "-6.193129577381433",
+        "C0_upper": "5.9222906693376185",
+        "G_net": "-1.3695226443879298",
+        "G_lower": "0.0570120071555591",
+        "G_upper": "-1.4265346515434896",
+        "upper_absolute_share": "0.9615704657340848",
+        "min_gap_eV": "0.7953635332312664"
+      },
+      {
+        "nb": "112",
+        "frozen_empty": "8",
+        "channel": "VC",
+        "alpha": "0.0",
+        "C0_net": "-0.8099497342853867",
+        "C0_lower": "12.382612142100685",
+        "C0_upper": "-13.192561876386073",
+        "G_net": "-0.8091369993779518",
+        "G_lower": "-0.40987852344750664",
+        "G_upper": "-0.3992584759304485",
+        "upper_absolute_share": "0.49343742312783706",
+        "min_gap_eV": "0.7949869175680633"
+      },
+      {
+        "nb": "112",
+        "frozen_empty": "8",
+        "channel": "Vb_Ct",
+        "alpha": "0.0",
+        "C0_net": "-3.5685787914552156",
+        "C0_lower": "4.960721082355138",
+        "C0_upper": "-8.529299873810354",
+        "G_net": "-1.1167653938997946",
+        "G_lower": "-1.3233564909840556",
+        "G_upper": "0.20659109708426548",
+        "upper_absolute_share": "0.13503148650020289",
+        "min_gap_eV": "0.7953174550616352"
+      }
+    ]
+  },
+  "InSe": {
+    "source": "studies/bsf-nmee-connection/results/materials/inse-nmee-20261109/channel_slopes.csv",
+    "sha256": "da9fe74485bea78afeb27fe63d64caf2b459b2683ea56f7c8f471af47b738ba5",
+    "rows": [
+      {
+        "nb": "160",
+        "frozen_empty": "8",
+        "channel": "VC",
+        "alpha": "0.0",
+        "C0_net": "-0.12605553508996487",
+        "C0_lower": "-226.0094945267455",
+        "C0_upper": "225.8834389916555",
+        "G_net": "-1.9812793466876333",
+        "G_lower": "-0.9872166675245353",
+        "G_upper": "-0.9940626791630791",
+        "upper_absolute_share": "0.5017276745073806"
+      },
+      {
+        "nb": "160",
+        "frozen_empty": "8",
+        "channel": "Vb_Ct",
+        "alpha": "0.0",
+        "C0_net": "-15.652565658394165",
+        "C0_lower": "-581.8624675432995",
+        "C0_upper": "566.2099018849053",
+        "G_net": "-3.083886681115997",
+        "G_lower": "-38.961351042998444",
+        "G_upper": "35.8774643618824",
+        "upper_absolute_share": "0.4793964758499176"
+      },
+      {
+        "nb": "160",
+        "frozen_empty": "8",
+        "channel": "full",
+        "alpha": "1.0",
+        "C0_net": "-1.3688288287915418",
+        "C0_lower": "-1053.1240501693962",
+        "C0_upper": "1051.755221340605",
+        "G_net": "-4.224134079183406",
+        "G_lower": "7.086569738853541",
+        "G_upper": "-11.310703818037382",
+        "upper_absolute_share": "0.6148032632694544"
+      }
+    ]
+  },
+  "MoS2": {
+    "source": "studies/bsf-nmee-connection/results/materials/mos2-interface-20261108/mechanism_followup.json",
+    "sha256": "50325642fed5cb55bbd7cc3791ff3d480144f44035f0885b4dc5ea564b3464b1",
+    "case_96_8": {
+      "spectral": {
+        "weak_states_strong_energies": {
+          "C_total_lower_upper": [
+            1.1557718918512168,
+            2.201530888138111,
+            -1.045758996286894
+          ],
+          "even_chi": [
+            4.53953448092913e-05,
+            0.00010154310110661218,
+            -5.6147756297320875e-05
+          ],
+          "gap_eV": 1.150564864167873,
+          "min_neighbor_singular": 0.7927487502766097,
+          "b_eV": 0.002
+        },
+        "strong_states_weak_energies": {
+          "C_total_lower_upper": [
+            -0.28190389565939844,
+            -9.904600870483966,
+            9.622696974824569
+          ],
+          "even_chi": [
+            3.964578755311614e-05,
+            0.00011578551377967178,
+            -7.61397262265557e-05
+          ],
+          "gap_eV": 1.5386658864014036,
+          "min_neighbor_singular": 0.7875804377114527,
+          "b_eV": 0.002
+        }
+      },
+      "channels": {
+        "valence_valence": {
+          "C_total_lower_upper": [
+            1.411274795967443,
+            3.036509676169924,
+            -1.625234880202481
+          ],
+          "even_chi": [
+            4.390796546652762e-05,
+            9.550401988625817e-05,
+            -5.159605441973055e-05
+          ],
+          "gap_eV": 1.1500674043540922,
+          "min_neighbor_singular": 0.7927839485958498,
+          "b_eV": 0.002
+        },
+        "conduction_conduction": {
+          "C_total_lower_upper": [
+            1.1285541053673618,
+            -1.8335278671339221,
+            2.962081972501284
+          ],
+          "even_chi": [
+            4.8725212146049105e-05,
+            0.00010170258352395979,
+            -5.297737137791112e-05
+          ],
+          "gap_eV": 1.5382819229718465,
+          "min_neighbor_singular": 0.7927441722894696,
+          "b_eV": 0.002
+        },
+        "valence_conduction": {
+          "C_total_lower_upper": [
+            0.5285117335232703,
+            -13.035042469484349,
+            13.56355420300762
+          ],
+          "even_chi": [
+            4.137382120621288e-05,
+            0.00012077557114805251,
+            -7.940174994183931e-05
+          ],
+          "gap_eV": 1.5420868670686527,
+          "min_neighbor_singular": 0.7913598862190545,
+          "b_eV": 0.002
+        },
+        "same_sector": {
+          "C_total_lower_upper": [
+            1.2340929552657198,
+            -0.4344596282359472,
+            1.668552583501667
+          ],
+          "even_chi": [
+            4.55791561430293e-05,
+            9.605119950367155e-05,
+            -5.047204336064209e-05
+          ],
+          "gap_eV": 1.1496853769434403,
+          "min_neighbor_singular": 0.7927769156347906,
+          "b_eV": 0.002
+        }
+      }
+    }
+  },
+  "scope": "Previously completed controls. Not new DFT. Material channel interventions and KM eigenstate-rotation sectors are different decompositions. No material gate derivative partition computed this round."
+}

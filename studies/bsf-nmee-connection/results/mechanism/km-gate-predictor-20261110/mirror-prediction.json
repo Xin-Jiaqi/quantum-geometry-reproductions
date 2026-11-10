@@ -1,0 +1,22 @@
+{
+  "source_sha256": "e948532c29f207d2068ce52da981cf5b8a702c61009156fa78f41a7e3d163861",
+  "prediction_before_fine_verification": true,
+  "mirror_fraction": 0.75,
+  "order": [
+    "lower",
+    "upper",
+    "net"
+  ],
+  "C_zero": [
+    -0.00012286339636117822,
+    3.0969931916893095e-05,
+    -9.189346444533713e-05
+  ],
+  "G_zero": [
+    -0.021740210230708858,
+    0.0002538610300478735,
+    -0.021486349200652833
+  ],
+  "positive_U_prediction": "both magnitudes strengthen, own layer signs unchanged; A both weaken",
+  "scope": "Symmetry maps the full Hamiltonian, not a newly discovered selection rule."
+}

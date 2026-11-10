@@ -1,0 +1,118 @@
+{
+  "mode": "verify",
+  "audit": {
+    "offgrid_tangent_errors": [
+      7.967760328744192e-13,
+      6.018447696318815e-13
+    ],
+    "random_phase_error": 2.220446049250313e-16
+  },
+  "rows": [
+    {
+      "fraction": 0.75,
+      "t_meV": 10.0,
+      "U_meV": -0.5,
+      "grid": [
+        61,
+        60,
+        96
+      ],
+      "nk": 45513,
+      "Bstep_T": 0.03125,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 13.075405544944429,
+      "minimum_same_sector_spacing_eV": 3.6136278170006975e-05,
+      "chi": [
+        -0.00011208910639739448,
+        3.0766634267959114e-05,
+        -8.13224721307633e-05
+      ]
+    },
+    {
+      "fraction": 0.75,
+      "t_meV": 10.0,
+      "U_meV": -0.25,
+      "grid": [
+        61,
+        60,
+        96
+      ],
+      "nk": 45513,
+      "Bstep_T": 0.03125,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 13.159159826092246,
+      "minimum_same_sector_spacing_eV": 3.613577576988547e-05,
+      "chi": [
+        -0.00011745330546424678,
+        3.0887428822566274e-05,
+        -8.656587664243179e-05
+      ]
+    },
+    {
+      "fraction": 0.75,
+      "t_meV": 10.0,
+      "U_meV": 0.25,
+      "grid": [
+        61,
+        60,
+        96
+      ],
+      "nk": 45513,
+      "Bstep_T": 0.03125,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 13.304781806708302,
+      "minimum_same_sector_spacing_eV": 3.6135684313265415e-05,
+      "chi": [
+        -0.00012832541741263342,
+        3.101444722186826e-05,
+        -9.731097018961502e-05
+      ]
+    },
+    {
+      "fraction": 0.75,
+      "t_meV": 10.0,
+      "U_meV": 0.5,
+      "grid": [
+        61,
+        60,
+        96
+      ],
+      "nk": 45513,
+      "Bstep_T": 0.03125,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 13.36393164061196,
+      "minimum_same_sector_spacing_eV": 3.613614844977242e-05,
+      "chi": [
+        -0.0001338453760428883,
+        3.102120050465021e-05,
+        -0.0001028241755386619
+      ]
+    }
+  ],
+  "complete": true,
+  "wall_seconds": 7.769013208002434
+}

@@ -1,0 +1,326 @@
+{
+  "mode": "verify",
+  "audit": {
+    "offgrid_tangent_errors": [
+      7.967760328744192e-13,
+      6.018447696318815e-13
+    ],
+    "random_phase_error": 2.220446049250313e-16
+  },
+  "rows": [
+    {
+      "fraction": 0.25,
+      "t_meV": 10,
+      "U_meV": -0.5,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 13.469546254289632,
+      "minimum_same_sector_spacing_eV": 7.227228216433179e-05,
+      "chi": [
+        -3.2183386600735664e-05,
+        0.0001349842701691764,
+        0.00010280088356751733
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 10,
+      "U_meV": -0.25,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 13.410321013076743,
+      "minimum_same_sector_spacing_eV": 7.227134069576202e-05,
+      "chi": [
+        -3.217907204933895e-05,
+        0.00012946736975427003,
+        9.728829770492948e-05
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 10,
+      "U_meV": 0.25,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 13.269535509471678,
+      "minimum_same_sector_spacing_eV": 7.227152518651803e-05,
+      "chi": [
+        -3.2056518589909655e-05,
+        0.00011860107018540206,
+        8.654455159580955e-05
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 10,
+      "U_meV": 0.5,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 13.188290396675495,
+      "minimum_same_sector_spacing_eV": 7.227254318820098e-05,
+      "chi": [
+        -3.1937728576632296e-05,
+        0.00011323960619046697,
+        8.13018776131762e-05
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 15,
+      "U_meV": -0.5,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 11.933928483023397,
+      "minimum_same_sector_spacing_eV": 7.227147079513774e-05,
+      "chi": [
+        -9.945303489418411e-06,
+        0.00014410103845814703,
+        0.00013415573496803988
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 15,
+      "U_meV": -0.25,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 11.850965410885168,
+      "minimum_same_sector_spacing_eV": 7.227093920314509e-05,
+      "chi": [
+        -9.003687483757905e-06,
+        0.00013582282140996854,
+        0.00012681913392328497
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 15,
+      "U_meV": 0.25,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 11.674875441719635,
+      "minimum_same_sector_spacing_eV": 7.22711378350338e-05,
+      "chi": [
+        -7.005962669677512e-06,
+        0.00011928907632256791,
+        0.00011228311365248767
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 15,
+      "U_meV": 0.5,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 11.581825167070857,
+      "minimum_same_sector_spacing_eV": 7.227180247937337e-05,
+      "chi": [
+        -5.946265712368504e-06,
+        0.00011102286661585081,
+        0.0001050766009023578
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 20,
+      "U_meV": -0.5,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 10.344461341912318,
+      "minimum_same_sector_spacing_eV": 7.227099756768052e-05,
+      "chi": [
+        5.977505726693921e-06,
+        0.0001276363660484628,
+        0.00013361387177492025
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 20,
+      "U_meV": -0.25,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 10.267447293017334,
+      "minimum_same_sector_spacing_eV": 6.433054933019378e-05,
+      "chi": [
+        8.354530325001275e-06,
+        0.00011761603012280103,
+        0.0001259705604487977
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 20,
+      "U_meV": 0.25,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 10.107390070735978,
+      "minimum_same_sector_spacing_eV": 6.425045268798613e-05,
+      "chi": [
+        1.3235728284738402e-05,
+        9.745103523704779e-05,
+        0.00011068676352271828
+      ]
+    },
+    {
+      "fraction": 0.25,
+      "t_meV": 20,
+      "U_meV": 0.5,
+      "grid": [
+        21,
+        24,
+        36
+      ],
+      "nk": 6483,
+      "Bstep_T": 0.0625,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "C_units": "(nm V T)^-1",
+      "G_units": "(nm V T eV)^-1",
+      "common_gap_meV": 10.02434767109981,
+      "minimum_same_sector_spacing_eV": 7.227136420917546e-05,
+      "chi": [
+        1.5745735644626113e-05,
+        8.729805170543808e-05,
+        0.00010304378735154684
+      ]
+    }
+  ],
+  "complete": true,
+  "wall_seconds": 3.248786583004403
+}
