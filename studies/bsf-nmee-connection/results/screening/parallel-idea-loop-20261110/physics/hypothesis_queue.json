@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-10T20:47:46+08:00",
+  "revision_history": [
+    {
+      "revised_at": "2026-11-10T20:58:55+08:00",
+      "prior_sha256": "45186fc2abbf207befebf5b6745ae50e3fce3663326dcac8de83fdf74872bfa5",
+      "timing": "after KM_DIRECT_1 acquisition",
+      "reason": "Make explicit that provisional 7268 and archived 7269 have the same lower-negative/upper-positive bilayer signs; their net-sign difference is compensation and is distinct from the within-7268 isolated-to-bilayer reversal target.",
+      "scientific_prediction_or_frozen_test_changed": false
+    }
+  ],
+  "scope": {
+    "purpose": "Machine-readable PRL physics decision tree from existing local eight-state KM and archived material responses.",
+    "new_science_computation_performed_here": false,
+    "new_DFT": false,
+    "remote_access_or_submission": false,
+    "twelve_state_fit": false,
+    "novelty_closed": false,
+    "experimental_detectability_closed": false
+  },
+  "notation": {
+    "C": "(C_lower(0), C_upper(0)), the static layer-response vector",
+    "G": "dC/dF at zero gate, or the declared symmetric finite-field secant; F definitions must not be pooled",
+    "amplitude_control_sign": "sign(C_l * G_l): positive strengthens |C_l| and negative weakens |C_l|, only when no endpoint sign crossing occurs",
+    "static_allocation": "A_C=(|C_upper|-|C_lower|)/(|C_upper|+|C_lower|)",
+    "gate_allocation": "A_G=(|G_upper|-|G_lower|)/(|G_upper|+|G_lower|)",
+    "rank_mismatch": "A_C*A_G<0 after numerical sensitivity is applied",
+    "net_and_contrast": {
+      "C_sum": "C_lower+C_upper",
+      "C_delta": "C_upper-C_lower",
+      "G_sum": "G_lower+G_upper",
+      "G_delta": "G_upper-G_lower"
+    },
+    "cancellation_retention": {
+      "static": "|C_sum|/(|C_lower|+|C_upper|)",
+      "gate": "|G_sum|/(|G_lower|+|G_upper|)"
+    }
+  },
+  "current_evidence": {
+    "MoSSe_7269": {
+      "status": "full-shell tensor method accepted; archived 6x6 external-gate amplitudes remain exploratory rather than final mesh-converged constants",
+      "representative_external_gate_nb112": {
+        "C_lower": -6.193129577381433,
+        "C_upper": 5.9222906693376185,
+        "G_lower": 0.0570120071555591,
+        "G_upper": -1.4265346515434896,
+        "static_largest_layer": "lower",
+        "gate_sensitive_layer": "upper",
+        "static_net_retention": 0.022354891743615744,
+        "gate_net_retention": 0.9231409314681696,
+        "units": {
+          "C": "1e-9 (nm V T)^-1",
+          "G": "1e-9 (V^2 T)^-1"
+        }
+      },
+      "mechanism_controls": "Removing lower-valence/upper-empty mixing flips the representative lower C positive and transfers absolute gate dominance to the lower layer; isolated and smooth electrostatic references retain nearly equal layer slopes, unlike the full interface.",
+      "sources": [
+        "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/final_anchor_acceptance.json",
+        "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/gauge_shell_audit.json",
+        "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/README.md",
+        "studies/bsf-nmee-connection/results/materials/layer-channel-sensitivity-20261110/README.md"
+      ]
+    },
+    "MoSSe_7268": {
+      "accepted_isolated_fact": {
+        "relation": "The lower and upper isolated structures are the same-oriented monolayer under a pure in-plane translation; +F maps to +F.",
+        "Cxx_by_band_count": {
+          "48": 12.527633672822342,
+          "56": 12.613422760595801,
+          "64": 12.614168054745953
+        },
+        "C_units": "1e-9 (nm V T)^-1",
+        "gap_eV": 1.4673484905121026,
+        "max_force_eV_per_A": 0.085241,
+        "implication": "Both isolated building blocks have the same positive static response; their exact isolated static layer selectivity is zero by translation identity."
+      },
+      "provisional_fixed_geometry_bilayer_observation": {
+        "status": "tensor/sign checks pass, but the geometry acceptance gate fails; this is not an accepted material result",
+        "Cxx_total_lower_upper": {
+          "nb96": [
+            8.10215567647283,
+            -62.91117741254157,
+            71.01333308902011
+          ],
+          "nb112": [
+            8.116086376980656,
+            -61.65995562834573,
+            69.77604200524594
+          ]
+        },
+        "C_units": "1e-9 (nm V T)^-1",
+        "gap_eV": 0.6913752711066321,
+        "max_force_eV_per_A": 0.14124,
+        "force_gate_eV_per_A": 0.1,
+        "force_pattern": "At printed precision all in-plane forces vanish and the lower/upper layer-net z forces are +0.000174/-0.000174 eV/A, but the largest atomic force is -0.14124 eV/A on lower-layer S. The failure is dominated by internal vertical forces, not a rigid layer-translation force; it does not establish sliding or phonon stability.",
+        "interpretation_if_a_geometry_later_passes": "A retained negative lower response would be an interface-induced reversal from two same-sign, translation-equivalent isolated layers.",
+        "gate_status": "not submitted; G and the frozen gate-sensitive-layer prediction remain untested"
+      },
+      "prediction_scoring": "The frozen zero-gate signs and upper-static rank are provisionally observed across nb96/112, but the primary prediction cannot be scored because the geometry failed its force gate and no gate endpoints exist.",
+      "sources": [
+        "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/isolated_reference_equivalence7268.json",
+        "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/force_review7268.json",
+        "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/zero7268_acceptance.json",
+        "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/prediction_freeze.json"
+      ]
+    },
+    "InSe_failure_boundary": {
+      "status": "mandatory retained counterexample",
+      "facts": [
+        "The quadratic selected-channel criterion gives 0/8 correct full-endpoint layer gain directions for InSe under both internal-step and screened-external definitions.",
+        "The m001-related A and B domains have nearly the same negative net external-gate slope but opposite layer-contrast slopes and opposite amplitude-control directions.",
+        "For the largest windows, A has (G_lower,G_upper)=(+7.0866,-11.3107), while B has (-11.3514,+7.1195), in 1e-9 (V^2 T)^-1."
+      ],
+      "rule": "No criterion trained on MoSSe/MoS2 may be refit to force agreement with InSe; it must predict failure, abstention, or a separately measurable applicability condition.",
+      "sources": [
+        "studies/bsf-nmee-connection/results/materials/material-criterion-20261110/README.md",
+        "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/analysis_summary.json"
+      ]
+    }
+  },
+  "prl_mainline": {
+    "strongest_falsifiable_statement": "An interface configuration can route the static response vector C and its external-field tangent G to different layers; the routing and the sign of amplitude control are separate observables conditioned by coherent interlayer response paths, not properties inferable from the net response or isolated-layer signs alone.",
+    "cross_interface_sign_accounting": "At nb112 the provisional 7268 fixed geometry has C_sum=+8.1161, whereas the archived 7269 external-gate baseline has C_sum=-0.2708 in the same stated C units. Both bilayers nevertheless have lower-negative/upper-positive layer signs. Their net-sign difference is a change of compensation/dominant magnitude, not a demonstrated same-layer direction switch. The separate 7268 candidate is the lower-layer reversal relative to its two positive isolated building blocks.",
+    "why_this_is_stronger_than_net_amplification": [
+      "MoSSe 7269 has only 2.2% retained static net response but 92.3% retained net gate slope, with static weight on the lower layer and gate susceptibility on the upper layer.",
+      "The provisional 7268 fixed geometry reverses the lower response from two identical positive isolated blocks, which is a sharper interface-rewriting signature than cancellation alone if it survives a geometry acceptance gate.",
+      "InSe A/B show that nearly identical net slopes can conceal opposite layer-control directions, making layer resolution experimentally discriminating rather than cosmetic."
+    ],
+    "causal_evidence_chain": [
+      "Full-shell tensor/gauge validation establishes the response method for the 7269 anchor.",
+      "Matched isolated and smooth electrostatic references establish that ordinary layer Stark response is substantial but does not reproduce the full 7269 layer allocation.",
+      "Selected valence-conduction channel interventions causally change layer direction and gate allocation, conditional on frozen material subspaces.",
+      "The unchanged eight-state KM model supplies a held-out cross-path interference mechanism explaining why C direction and G control direction need not coincide.",
+      "InSe falsifies a universal low-order material criterion and defines the strong-mixing/screening boundary rather than being discarded."
+    ],
+    "not_claimed": [
+      "universal static/gate rank anticorrelation",
+      "a same-layer direction switch between the 7268 and 7269 bilayers; their currently observed layer-sign pairs are the same",
+      "registry-only control for the 7268/7269 pair, because termination, orientation, and registry co-vary",
+      "a universal electrostatic-versus-hybridization percentage",
+      "a universal eta threshold",
+      "a direct laboratory knob that deletes or phase-flips one hopping channel",
+      "a converged 7268 material result",
+      "PRL novelty or experimental detectability already established"
+    ]
+  },
+  "decision_tree": [
+    {
+      "id": "D0_7268_geometry",
+      "question": "Does a declared 7268 fixed geometry satisfy the predeclared structural/response quality gates?",
+      "current_answer": "no: max force 0.14124 eV/A exceeds 0.10 eV/A",
+      "pass_action": "Only then accept the zero-gate C vector and consider independent +/-0.10 V/nm gate states.",
+      "fail_action": "Do not submit gate states; retain the current C values only as a provisional fixed-geometry observation.",
+      "inconclusive_action": "Resolve the geometry/protocol issue before any physics ranking claim."
+    },
+    {
+      "id": "D1_interface_sign_rewrite",
+      "requires": "D0 pass on a future declared geometry",
+      "question": "Do both translation-equivalent isolated layers remain same-sign while one accepted bilayer layer is resolved opposite?",
+      "pass_action": "Call this interface-induced layer sign rewriting from identical isolated building blocks.",
+      "fail_action": "Reject the identical-building-block sign-reversal claim; retain only the measured bilayer allocation.",
+      "inconclusive_action": "No sign-rewrite claim if sign changes are comparable to window/mesh sensitivity."
+    },
+    {
+      "id": "D2_static_vs_gate_routing",
+      "requires": "accepted 7268 zero and gate endpoints",
+      "question": "Is A_C positive and A_G negative by more than declared numerical sensitivity, with no endpoint layer sign crossing?",
+      "pass_action": "The frozen 7268 opposite-routing prediction passes; together with 7269 it gives a two-configuration swap of static and gate-dominant layers.",
+      "fail_action": "The frozen prediction fails if either resolved rank has the opposite sign.",
+      "inconclusive_action": "An unresolved rank is inconclusive only, never a failure or a pass."
+    },
+    {
+      "id": "D3_electrostatic_or_coherent",
+      "requires": "accepted full, isolated, and matched reference/control vectors under the same field definition",
+      "question": "Can matched isolated or smooth electrostatic references reproduce the layer signs and normalized G allocation?",
+      "electrostatic_consistent": "Reference and full vectors retain the same resolved component signs and gate-dominant layer, while a selected-channel intervention has no resolved effect beyond numerical-window variation.",
+      "coherent_path_supported": "A reference fails a resolved sign/allocation feature and a fixed selected-channel intervention removes or reverses that same feature across retained windows.",
+      "mixed_or_unresolved": "Classify as mixed/unresolved if only the net trend agrees, controls disagree with one another, or differences are cutoff-sensitive; no additive percentage is assigned."
+    },
+    {
+      "id": "D4_manuscript_gate",
+      "question": "Is there a resolved preregistered material contrast, a no-tuning same-orientation eight-state analogue, a retained InSe boundary, and a plausible two-weight layer readout?",
+      "pass_action": "Advance the interface-conditioned C-versus-G routing mainline while separately auditing novelty and detectability.",
+      "fail_action": "Keep the work as a mechanism/materials study; do not rescue it with a parameter scan, extra model states, or post-hoc material selection."
+    }
+  ],
+  "eight_state_KM": {
+    "compatibility": {
+      "same_orientation_supported": true,
+      "implementation": "AuditSpec(stacking='direct') sets both four-state diagonal blocks to the same complete monolayer Hamiltonian h; it requires no new orbitals.",
+      "existing_direct_evidence": "Stage-8 already evaluates the direct variant and finds a finite total Cxx, but it does not archive the layer-resolved C/G test needed for 7268.",
+      "current_mapping_limit": "All layer-resolved channel-control results in km-channel-control-20261110 use the default mirror stacking, where the isolated blocks have opposite Rashba structure and opposite response. They prove possible cross-path interference and C/G independence, but they are not a direct minimal model of 7268's identical positive isolated layers.",
+      "sources": [
+        "studies/bsf-nmee-connection/bsf_nmee/bilayer_audit.py",
+        "studies/bsf-nmee-connection/scripts/run_stage8_audit.py",
+        "studies/bsf-nmee-connection/results/bilayer_stage8_audit.json",
+        "studies/bsf-nmee-connection/results/mechanism/km-channel-control-20261110/run.py"
+      ]
+    },
+    "minimal_future_tests": [
+      {
+        "id": "KM_DIRECT_1",
+        "priority": 1,
+        "gate": "Run only if an accepted material geometry retains the same-sign-isolated-to-one-layer-reversed contrast.",
+        "frozen_design": "Use the existing eight-state parameters without fitting: direct stacking, fraction +/-0.25 partner registries, mass 45 meV, t=10 meV, U=0, and the established refined quadrature/probe settings. Evaluate t=0 isolated blocks and the full coupled layer C vector plus the symmetric internal-U slope G.",
+        "checks": [
+          "The t=0 layer responses are identical and same-sign.",
+          "The +/-registry results satisfy the model's layer-exchange relation.",
+          "All sampled states remain insulating and layer sums close."
+        ],
+        "pass": "At a fixed registry the coupled model resolves one layer opposite to the identical isolated baseline, without parameter adjustment.",
+        "fail": "No resolved one-layer reversal; report that the present eight-state direct model does not capture the material contrast.",
+        "stop_rule": "Do not scan masses, hoppings, phases, or add states to obtain a pass."
+      },
+      {
+        "id": "KM_DIRECT_2",
+        "priority": 2,
+        "gate": "Run only if KM_DIRECT_1 gives a resolved direct-stacking asymmetry or reversal.",
+        "frozen_design": "At the same one registry and parameters, compare full alpha=1 with removal alpha=0 of the already defined lower-valence/upper-empty channel; compute C and G only.",
+        "pass": "Removal abolishes/reverses the C or G allocation feature seen at alpha=1, supporting coherent path control within the model.",
+        "fail": "The feature survives the selected-channel removal; the chosen path is not its minimal cause.",
+        "stop_rule": "No alpha scan; existing mirror-stack phase tests already establish generic interference."
+      },
+      {
+        "id": "KM_DIRECT_3",
+        "priority": 3,
+        "gate": "Only if KM_DIRECT_1 and KM_DIRECT_2 both pass and the material contrast is accepted.",
+        "frozen_design": "Use three nearby physical displacement points around the fixed direct registry to test whether A_G changes before a C sign changes.",
+        "pass": "Resolved re-routing of G with retained C signs supplies the minimal geometry-control analogue.",
+        "fail": "No resolved separation over the predeclared interval; stop rather than widen the scan."
+      }
+    ]
+  },
+  "material_discrimination": {
+    "primary_pair": {
+      "pair": [
+        "MoSSe BiDB 7268 same-orientation S/Se interface configuration",
+        "MoSSe BiDB 7269 mirror-related S/S interface configuration"
+      ],
+      "reason": "Same chemical bilayer family but different interface configuration, with sharply different isolated-layer parity: 7268 has two translation-equivalent positive isolated responses, whereas the established 7269 isolated reference is mirror-related with opposite static responses.",
+      "test": "For each accepted geometry, compare full C/G with exact isolated-layer and matched smooth-electrostatic references, then apply the same frozen directional valence-conduction intervention. Judge component signs and normalized layer allocation, not pooled slope magnitudes across field definitions.",
+      "electrostatic_prediction": "Matched references reproduce each configuration's resolved layer signs and dominant G layer; channel removal does not erase the contrast.",
+      "coherent_mixing_prediction": "At least one full-interface sign/allocation differs from both references and is lost or reversed under the same fixed channel intervention.",
+      "current_limit": "7268 fails the force gate and has no gate endpoints, so the pair cannot yet decide the mechanism. The pair also co-varies termination, orientation, and registry, so any contrast is interface-conditioned rather than registry-only."
+    },
+    "secondary_transfer_pair": {
+      "pair": [
+        "MoS2 BiDB 1930 E registry",
+        "WS2 BiDB 2654 E registry"
+      ],
+      "role": "Future isostructural transfer test only after the MoSSe decision tree is resolved and separately authorized.",
+      "falsifier": "Failure of the MoS2 layer-direction/gate-allocation pattern to transfer is compatible with vertex/coherent-mixing control and rejects a simple geometry-only rule; transfer alone would not prove electrostatics.",
+      "status": "not submitted; no WS2 response result exists"
+    },
+    "mandatory_holdout": "InSe 864 A/B remains the nontransfer/failure case for any low-order rule."
+  },
+  "experimental_signature": {
+    "principle": "A net-only observable measures C_sum and G_sum; it cannot determine the layer contrast C_delta/G_delta or the two amplitude-control signs.",
+    "minimum_readout": "Use two independently calibrated layer-weight vectors, for example R1=C_lower+C_upper and R2=w_lower*C_lower+w_upper*C_upper with w_lower!=w_upper. The two-by-two weight matrix must be nonsingular; the same inversion applied to gate slopes reconstructs G.",
+    "sharp_existing_example": "InSe A and B have nearly equal negative G_sum (about -4.22 in the archived units) but opposite G_delta (about -18.40 versus +18.47) and opposite weakening/strengthening trends. A net-gate measurement alone would identify them as nearly the same response.",
+    "MoSSe_signature": "For 7269 the static net retains only 2.2% of the layer magnitudes while the gate slope retains 92.3%; a small zero-gate net signal followed by a large layer-weighted gate derivative is the expected cancellation-breaking signature.",
+    "limitation": "No specific contact, optical selection rule, signal-to-noise floor, orbital contribution, or device geometry has yet been validated."
+  },
+  "source_manifest": [
+    "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/analysis_summary.json",
+    "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/case_metrics.csv",
+    "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/intervention_metrics.csv",
+    "studies/bsf-nmee-connection/results/screening/parallel-idea-loop-20261110/physics/prediction_freeze.json",
+    "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/final_anchor_acceptance.json",
+    "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/isolated_reference_equivalence7268.json",
+    "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/force_review7268.json",
+    "studies/bsf-nmee-connection/results/screening/full-tensor-pilot-20261110/zero7268_acceptance.json",
+    "studies/bsf-nmee-connection/results/materials/mosse-gate-scf-20261109/README.md",
+    "studies/bsf-nmee-connection/results/materials/layer-channel-sensitivity-20261110/README.md",
+    "studies/bsf-nmee-connection/results/materials/material-criterion-20261110/README.md",
+    "studies/bsf-nmee-connection/results/mechanism/km-channel-control-20261110/README.md",
+    "studies/bsf-nmee-connection/bsf_nmee/bilayer_audit.py"
+  ]
+}

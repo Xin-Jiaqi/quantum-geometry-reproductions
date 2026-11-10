@@ -1,0 +1,29 @@
+{
+  "status": "user_authorized_20261110",
+  "reason": "zero_acceptance_contract explicitly stops gate extension on force failure and excludes automatic relaxation",
+  "system": "7268 A0 only, Fz=0",
+  "geometry_constraints": {
+    "cell": "fixed",
+    "xy": "fixed for every atom, preserve registry",
+    "z": "relax internal atomic heights; remove overall translation for comparison"
+  },
+  "same_electronic_protocol": "SOC, PBE, D3(0), 450eV, 6x6, EDIFF 1e-9, B=0",
+  "target_max_force_eV_A": 0.03,
+  "budget": {
+    "CPU": 4,
+    "memory_GiB": 24,
+    "walltime_minutes": 110,
+    "max_ionic_steps": 12,
+    "max_jobs": 1,
+    "automatic_retry": 0
+  },
+  "stops": [
+    "electronic convergence failure",
+    "gap closes below 0.05 eV in final acceptance",
+    "maximum atomic z displacement after common translation >0.15 Angstrom: reject and review",
+    "ionic limit/time limit without convergence: retain incomplete result, do not continue automatically"
+  ],
+  "followup": "Re-evaluate zero-field tensor and both new geometry-matched isolated references; do not reuse the old isolated reference or assume equivalence survives. Only after acceptance restore fixed-ion +/-0.10 gate workflow.",
+  "scientific_separation": "Archive raw-geometry response and structural change separately; gate slope evaluated at one fixed accepted zero-field geometry.",
+  "user_reply": "执行这次有界局部弛豫"
+}

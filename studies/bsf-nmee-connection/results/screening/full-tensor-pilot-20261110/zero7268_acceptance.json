@@ -1,0 +1,94 @@
+{
+  "passed": false,
+  "status": "reviewed",
+  "rows": [
+    {
+      "case": "A0",
+      "checks": [
+        {
+          "nb": "96",
+          "Cxx_total_lower_upper": [
+            8.10215567647283,
+            -62.91117741254157,
+            71.01333308902011
+          ],
+          "scale": 71.01333308902011,
+          "forbidden_max_abs": 7.807513080893969e-06,
+          "Cxx_Cyy_max_abs": 4.855274596593517e-06,
+          "probe_max_abs": 9.807862318567118e-05,
+          "gap_eV": 0.6913752711066321,
+          "passed": true
+        },
+        {
+          "nb": "112",
+          "Cxx_total_lower_upper": [
+            8.116086376980656,
+            -61.65995562834573,
+            69.77604200524594
+          ],
+          "scale": 69.77604200524594,
+          "forbidden_max_abs": 0.00032741244585844393,
+          "Cxx_Cyy_max_abs": 0.00015647194848078527,
+          "probe_max_abs": 9.799838763768776e-05,
+          "gap_eV": 0.6913752711106341,
+          "passed": true
+        }
+      ],
+      "same_signs_across_band_windows": true,
+      "max_force_eV_A": 0.14124,
+      "force_pass": false,
+      "passed": false,
+      "scf_seconds": 1087.8516343329102,
+      "total_seconds": 1127.3255085796118
+    },
+    {
+      "case": "lower0",
+      "checks": [
+        {
+          "nb": "48",
+          "Cxx_isolated": [
+            12.527633672822342
+          ],
+          "scale": 12.527633672822342,
+          "forbidden_max_abs": 2.612383398030427e-06,
+          "Cxx_Cyy_max_abs": 1.6286956761035754e-06,
+          "probe_max_abs": 1.0118145123527711e-05,
+          "gap_eV": 1.4673484905121026,
+          "passed": true
+        },
+        {
+          "nb": "56",
+          "Cxx_isolated": [
+            12.613422760595801
+          ],
+          "scale": 12.613422760595801,
+          "forbidden_max_abs": 4.129269649614839e-06,
+          "Cxx_Cyy_max_abs": 1.1802710524477789e-06,
+          "probe_max_abs": 1.0030002327354737e-05,
+          "gap_eV": 1.4673484905121108,
+          "passed": true
+        },
+        {
+          "nb": "64",
+          "Cxx_isolated": [
+            12.614168054745953
+          ],
+          "scale": 12.614168054745953,
+          "forbidden_max_abs": 0.0054087860321735265,
+          "Cxx_Cyy_max_abs": 0.0024532877040090995,
+          "probe_max_abs": 9.971707131128937e-06,
+          "gap_eV": 1.467348490511427,
+          "passed": true
+        }
+      ],
+      "same_signs_across_band_windows": true,
+      "max_force_eV_A": 0.085241,
+      "force_pass": true,
+      "passed": true,
+      "scf_seconds": 585.5880306018516,
+      "total_seconds": 608.204906125553
+    }
+  ],
+  "upper_reference": "same as lower by verified pure in-plane translation",
+  "scope": "fixed raw database-derived geometry, full shell method; not final mesh convergence"
+}

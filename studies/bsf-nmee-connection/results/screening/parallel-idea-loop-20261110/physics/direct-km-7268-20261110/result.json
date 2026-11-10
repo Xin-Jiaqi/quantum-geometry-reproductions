@@ -1,0 +1,281 @@
+{
+  "complete": true,
+  "created_at": "2026-11-10T12:57:19.426118+00:00",
+  "scope": "Frozen KM_DIRECT_1 only: unchanged eight-state direct stacking, t=0/10 meV, two layer-exchange partner registries, no tuning or optional stages.",
+  "registry_clarification_before_result_acquisition": {
+    "recorded": true,
+    "wording": "The frozen +/-0.25 fractions are centered coordinates delta=lambda-0.5. Existing ab_ba_shift therefore receives lambda=0.25 and 0.75; literal lambda=-0.25 and 0.25 are not layer-exchange partners.",
+    "scientific_parameters_changed": false
+  },
+  "parameters": {
+    "stacking": "direct",
+    "mass_meV": 45.0,
+    "t_meV": [
+      0.0,
+      10.0
+    ],
+    "U0_meV": 0.0,
+    "du_meV": 0.05,
+    "B_step_T": 0.03125,
+    "grid": [
+      61,
+      60,
+      96
+    ],
+    "direction_xy": [
+      0.5,
+      0.8660254037844386
+    ],
+    "registries": [
+      {
+        "label": "centered_minus_0.25",
+        "centered_fraction": -0.25,
+        "ab_ba_lambda": 0.25
+      },
+      {
+        "label": "centered_plus_0.25",
+        "centered_fraction": 0.25,
+        "ab_ba_lambda": 0.75
+      }
+    ],
+    "time_cap_seconds": 175,
+    "batch": 512,
+    "blas_threads": 1
+  },
+  "units": {
+    "C": "(nm V T)^-1",
+    "G": "(nm V T eV)^-1",
+    "gap": "eV"
+  },
+  "tolerances": {
+    "C_zero": 1e-10,
+    "G_zero": 1e-09,
+    "C_layer_equality": 1e-10,
+    "C_rank": 1e-10,
+    "G_rank": 1e-09,
+    "layer_sum": 1e-10,
+    "partner_C": 1e-09,
+    "partner_G": 1e-08,
+    "classification": "numerical equality only; not a physical uncertainty estimate"
+  },
+  "provenance": {
+    "hypothesis_queue_frozen_file": "hypothesis_queue_frozen.json",
+    "hypothesis_queue_sha256": "45186fc2abbf207befebf5b6745ae50e3fce3663326dcac8de83fdf74872bfa5",
+    "current_parent_hypothesis_queue_post_result_sha256": "35620eca93f7868dea525665b1eea4a821150ba47094b1c0f7a6cee1fd3afae2",
+    "post_result_parent_queue_changes": [
+      "Added a revision-history record identifying the prior frozen hash.",
+      "Added explicit 7268/7269 sign accounting: both bilayers are lower-negative/upper-positive, so their net-sign difference is compensation.",
+      "Added the corresponding same-layer-switch nonclaim; no frozen parameter, acceptance rule, or prediction changed."
+    ],
+    "bilayer_audit_sha256": "18f205c6ed156c5f7768f707563bcc5f55e3e31e11feedb5ae1d1c3889bc792b",
+    "bilayer_protocol_sha256": "d0e55338981ebebeed6a12ec6c6aeb4133ce38e6d37f0e13b51d662aec1fd6d3"
+  },
+  "rows": [
+    {
+      "registry": "centered_minus_0.25",
+      "centered_fraction": -0.25,
+      "ab_ba_lambda": 0.25,
+      "shift_60degree_basis": [
+        -0.16666666666666669,
+        0.5833333333333334
+      ],
+      "t_meV": 0.0,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "Cminus": [
+        7.364467472111263e-05,
+        7.364467472167815e-05,
+        0.00014728934944283935
+      ],
+      "C0": [
+        7.364467472151769e-05,
+        7.364467472128176e-05,
+        0.00014728934944310476
+      ],
+      "Cplus": [
+        7.36446747210337e-05,
+        7.364467472134508e-05,
+        0.00014728934944259996
+      ],
+      "G": [
+        -7.892991815694472e-13,
+        -3.3306690738754696e-12,
+        -2.3939183968479938e-12
+      ],
+      "C_signs": [
+        1,
+        1
+      ],
+      "G_signs": [
+        0,
+        0
+      ],
+      "static_largest_layer": "unresolved",
+      "gate_sensitive_layer": "unresolved",
+      "common_gap_eV": 0.015998146715567558,
+      "insulating": true,
+      "layer_sum_error_C0": -3.0531133177191805e-16,
+      "layer_sum_error_G": -1.726049858596923e-12
+    },
+    {
+      "registry": "centered_minus_0.25",
+      "centered_fraction": -0.25,
+      "ab_ba_lambda": 0.25,
+      "shift_60degree_basis": [
+        -0.16666666666666669,
+        0.5833333333333334
+      ],
+      "t_meV": 10.0,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "Cminus": [
+        1.5545152330003267e-05,
+        0.00013292774005262218,
+        0.00014847289238274428
+      ],
+      "C0": [
+        1.4900336134185573e-05,
+        0.00013349753166268935,
+        0.00014839786779709437
+      ],
+      "Cplus": [
+        1.425248518072738e-05,
+        0.00013406789494080622,
+        0.00014832038012126646
+      ],
+      "G": [
+        -0.012926671492758876,
+        0.011401548881840445,
+        -0.0015251226147781904
+      ],
+      "C_signs": [
+        1,
+        1
+      ],
+      "G_signs": [
+        -1,
+        1
+      ],
+      "static_largest_layer": "upper",
+      "gate_sensitive_layer": "lower",
+      "common_gap_eV": 0.012758742099100301,
+      "insulating": true,
+      "layer_sum_error_C0": -2.194425197110661e-16,
+      "layer_sum_error_G": 3.859759734048396e-12
+    },
+    {
+      "registry": "centered_plus_0.25",
+      "centered_fraction": 0.25,
+      "ab_ba_lambda": 0.75,
+      "shift_60degree_basis": [
+        0.16666666666666669,
+        0.4166666666666667
+      ],
+      "t_meV": 0.0,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "Cminus": [
+        7.364467472116814e-05,
+        7.364467472171978e-05,
+        0.0001472893494428116
+      ],
+      "C0": [
+        7.364467472151769e-05,
+        7.364467472117074e-05,
+        0.00014728934944341007
+      ],
+      "Cplus": [
+        7.364467472114472e-05,
+        7.364467472140059e-05,
+        0.00014728934944259996
+      ],
+      "G": [
+        -2.3418766925686896e-13,
+        -3.191891195797325e-12,
+        -2.1163626406917047e-12
+      ],
+      "C_signs": [
+        1,
+        1
+      ],
+      "G_signs": [
+        0,
+        0
+      ],
+      "static_largest_layer": "unresolved",
+      "gate_sensitive_layer": "unresolved",
+      "common_gap_eV": 0.015998146715567558,
+      "insulating": true,
+      "layer_sum_error_C0": -7.216449660063518e-16,
+      "layer_sum_error_G": -1.3097162243624894e-12
+    },
+    {
+      "registry": "centered_plus_0.25",
+      "centered_fraction": 0.25,
+      "ab_ba_lambda": 0.75,
+      "shift_60degree_basis": [
+        0.16666666666666669,
+        0.4166666666666667
+      ],
+      "t_meV": 10.0,
+      "order": [
+        "lower",
+        "upper",
+        "net"
+      ],
+      "Cminus": [
+        0.00013406789494093806,
+        1.4252485180496662e-05,
+        0.00014832038012241658
+      ],
+      "C0": [
+        0.00013349753166277522,
+        1.4900336133827352e-05,
+        0.00014839786779707355
+      ],
+      "Cplus": [
+        0.0001329277400522284,
+        1.5545152329560913e-05,
+        0.00014847289238237825
+      ],
+      "G": [
+        -0.011401548887096657,
+        0.012926671490642513,
+        0.0015251225996167073
+      ],
+      "C_signs": [
+        1,
+        1
+      ],
+      "G_signs": [
+        -1,
+        1
+      ],
+      "static_largest_layer": "lower",
+      "gate_sensitive_layer": "upper",
+      "common_gap_eV": 0.012758742099100323,
+      "insulating": true,
+      "layer_sum_error_C0": -4.709774237277031e-16,
+      "layer_sum_error_G": 3.929148673087468e-12
+    }
+  ],
+  "nk": 45513,
+  "grid_meta": {
+    "n_exterior_kept": 3651,
+    "n_valley_total": 11520,
+    "exterior_area_weight": 18.729388047939047,
+    "valley_area_weight": 0.3580986219567645,
+    "bz_area_weight": 19.08848340903347,
+    "normalization_error": -0.000996739137658409
+  },
+  "seconds": 8.365518334001536
+}

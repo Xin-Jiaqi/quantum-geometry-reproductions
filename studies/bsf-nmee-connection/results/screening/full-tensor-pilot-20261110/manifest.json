@@ -1,5 +1,5 @@
 {
-  "scope": "source, tests, failed and accepted7269 audits, bounded7268submission and runtime scenarios",
+  "scope": "source/tests, failed and accepted7269 audits,7268 zero results/force rejection, explicitly approved bounded structural followup and runtime estimates",
   "files": {
     "acceptance_contract.json": "96c2938ab4c3cecc2ea881d8d90f959c89b84fb6ebe3ccc3007a361150426ef4",
     "audit_gauge.py": "7a2a4fd7aa96a3c6f76d902c000c83b986237f6c3bfb6df67e19bf64cbf37ebc",
@@ -14,6 +14,7 @@
     "final_gauge_submission.json": "505f64b48c0d5abab05ffab3438041a29ba76e46bc853a76b5dd1f28d0fa7bd5",
     "finalize.pbs": "8807a5fd3d53f48a0d8c0e9d70647a15e65a8a45f103782b1932dbe567258fa2",
     "finalize_anchor.py": "4ed69f7fb9788671d1e9b73e96a8baf5f1413a3daa085d8e7b3f3035b616ed8b",
+    "force_review7268.json": "6bedba13b6ac55e3bdf292cf9c6480add247dd4543726411d65d73919fd25a1c",
     "gauge_shell_audit.json": "70d83acee36609fe2a54411dc219ac45e7032e0f073c18100b446812c256b178",
     "historical_scf_timings.json": "2499036a35fe1a921f907a0d0aff0277b375c1e9d5343b871b34843014df1013",
     "inputs7268/POSCAR.A": "fe89d6c6a46dbb296bd7e1a277337db734cb0f76c54f60586480cb658c45012e",
@@ -21,15 +22,24 @@
     "inputs7268/POSCAR.upper": "d73b33c56d63c091f51ef78ed97fd9fc5da2f03ddcf596bcae39fc058d1648bd",
     "isolated_reference_equivalence7268.json": "c0955bbb4d8d148ca448174cb83fac57d493312f4c6d30388d7c465fabda285d",
     "pilot.pbs": "530f6246982e1d203f390524cd17251279f51b9d3c24be893d83cbb74e53fde8",
-    "pilot_submission.json": "ef55142848afd24231d91f6b2669c43f5d48c84015fa30a501efea1271e3d7fe",
+    "pilot7268/A0/result.json": "1c416aee7ee84a6c5b3271ad92fc233b3cc95f12c381d21af93efb8b1d2ca6a5",
+    "pilot7268/lower0/result.json": "4b95b2e92ccb5370e626cf7db353c327b86e75f039e12f999c6cf631cc7e0e21",
+    "pilot_submission.json": "95b808aca01ea818a5c810134111ac85d50270616f92e01d5bbadaa38777b815",
+    "relax.pbs": "a9b75db96dcc9684d96d36ddafb7620b559da06a0b7800b5ac35ba37fdfebcef",
+    "relax_7268.py": "c620e8ce5a56f8597743badfc3ea3a244347f99bdfd01d5c33e718af1937206d",
+    "relax_source_hashes.json": "f9d49fbd6be5066d6c83e5e736ef0e90f05123a3d005e6ae6e5ffadd6c61d7f9",
+    "relax_submission.json": "85fbd999f37dccdcded69572b125ff1ebf356fd822111443a7cab93f2d23d237",
     "run_7268.py": "5b2999a08b61413462e47b25c29fc56820e78b18377d378f0b46bc513cea4e7b",
+    "runtime_benchmark_update.json": "7ff8ee10a892a09e4ee2fe2d3812ff006be6fbd761cd55441e7b1195d35dfabe",
     "runtime_estimates.csv": "8895bd0e999fd5f6401d0208a01ce10157f1227523bcabb8827779b945821045",
     "runtime_summary.json": "b959b69cb48b075bb439f551e8b2e9186c7e228bc2e76387990a56ab6a575944",
     "stencil_diagnosis.json": "a89d1053b90036fb076347e7a96bca32cd8c367647b20c8c1a4e2b343fc249d3",
+    "structural_followup_proposal.json": "ba968b0b22cc630bc225f2afe86bdcfae4465ca7d1a0bd06f3cc04fbdec077c8",
     "structure7268.json": "628c1e7c9cf3737b7d107fbdd68ce28ab50a9a266cddfe83545fba850219f85c",
     "submitted_sources/run_7268_zero.py": "777fe360923901d4f93f2954b5bf9a3e4765d17c445bef21e593bc67fbee64d4",
     "summarize_7268.py": "632cad77f9f514330572ab79bd597b7d96ba10339f4c55bcc1976fb40122e254",
     "tensor_response.py": "bcb75f34d6ebff6f64c7748d05c5145ef189f514da99dc46261a8a917bc80b88",
+    "terminal_jobs7268.json": "812f5186ee23d50babc25063a592860b7bbf10d9901742398966c1716220fd55",
     "test_export_tensor.py": "133beb79199bf2653c9ac4f209b6ea869a67b7838353345dea8431322c16b531",
     "test_stencil.py": "f8e8d25e31a49ae1b2559cf4918558935a251624a47a85c2b2cc6f426b12ade1",
     "test_tensor_response.py": "acea85392a270a1d20d42f42cbaf991985b0cce3d0c81e8fe65c78b3fe6daf66",
@@ -37,6 +47,7 @@
     "validate_7269.py": "e6fdf3433db8fb0743f3b6c15cd11a875b955bf5753d663dd62c28bc019cd986",
     "validation7269_four_link.json": "7d0a1833b42f5ad1606c4c4fbabe8f8c61bcbbb5c28b8c63506ca734634b509e",
     "validation_submission.json": "e2aca6b0a2785bfb33079d96a9f0768d9f81ea4d6149d264e7f1cdfa705a89f9",
+    "zero7268_acceptance.json": "a01151c7bd5f1847281eefa47b8b73db0fa74fdb920b249f46af887b75c47883",
     "zero_acceptance_contract.json": "18fa68fa96b49fdd2b8cccf761f72aefddec99d9b6523b3a0dbede62b6a5d0b3"
   }
 }

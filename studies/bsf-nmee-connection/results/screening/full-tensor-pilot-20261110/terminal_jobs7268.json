@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-11-10T20:49:19.160093+08:00",
+  "scheduler_timezone": "Asia/Tokyo",
+  "jobs": {
+    "564589.cmspbs1": {
+      "Job_Name": "nmee-7268-zero",
+      "job_state": "F",
+      "Exit_status": "0",
+      "resources_used.walltime": "00:18:50",
+      "resources_used.cput": "01:11:56",
+      "exec_host": "csuper004/2*4",
+      "stime": "Tue Nov 10 21:24:48 2026",
+      "obittime": "Tue Nov 10 21:43:42 2026"
+    },
+    "564590.cmspbs1": {
+      "Job_Name": "nmee-7268-zero",
+      "job_state": "F",
+      "Exit_status": "0",
+      "resources_used.walltime": "00:10:11",
+      "resources_used.cput": "00:38:44",
+      "exec_host": "csuper004/5*4",
+      "stime": "Tue Nov 10 21:24:48 2026",
+      "obittime": "Tue Nov 10 21:35:03 2026"
+    }
+  },
+  "process_exit_is_not_scientific_acceptance": true,
+  "scientific_acceptance": "A0 force failed; lower0 passed; gate extension blocked"
+}

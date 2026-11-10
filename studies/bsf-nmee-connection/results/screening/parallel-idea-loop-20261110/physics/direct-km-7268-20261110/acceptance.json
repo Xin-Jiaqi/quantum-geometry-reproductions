@@ -1,0 +1,98 @@
+{
+  "complete": true,
+  "status": "failed_as_observed",
+  "test": "KM_DIRECT_1",
+  "primary_rule": "pass only if exactly one t=10 layer reverses relative to the same-sign t=0 direct baseline at a fixed registry; fail if resolved and absent; unresolved is inconclusive",
+  "reporting_clarification": "After acquisition, material sign accounting was added: 7268 and 7269 bilayers share lower-negative/upper-positive signs, so their net-sign difference is compensation. This did not alter this model test or its acceptance rule.",
+  "provenance": {
+    "hypothesis_queue_frozen_file": "hypothesis_queue_frozen.json",
+    "hypothesis_queue_sha256": "45186fc2abbf207befebf5b6745ae50e3fce3663326dcac8de83fdf74872bfa5",
+    "current_parent_hypothesis_queue_post_result_sha256": "35620eca93f7868dea525665b1eea4a821150ba47094b1c0f7a6cee1fd3afae2",
+    "scientific_design_or_acceptance_changed_post_result": false
+  },
+  "numerical_checks": {
+    "all_insulating": true,
+    "layer_sums_close": true,
+    "same_orientation_t0": true,
+    "partner_relation": true
+  },
+  "isolated_checks": [
+    {
+      "registry": "centered_minus_0.25",
+      "same_resolved_sign": true,
+      "equal_within_tolerance": true,
+      "C_lower_upper": [
+        7.364467472151769e-05,
+        7.364467472128176e-05
+      ],
+      "signs": [
+        1,
+        1
+      ]
+    },
+    {
+      "registry": "centered_plus_0.25",
+      "same_resolved_sign": true,
+      "equal_within_tolerance": true,
+      "C_lower_upper": [
+        7.364467472151769e-05,
+        7.364467472117074e-05
+      ],
+      "signs": [
+        1,
+        1
+      ]
+    }
+  ],
+  "partner_check": {
+    "C_swap_max_abs": 3.5822039778921066e-16,
+    "G_antiswap_max_abs": 5.2562121322097255e-12,
+    "passed": true
+  },
+  "reversal_checks": [
+    {
+      "registry": "centered_minus_0.25",
+      "isolated_signs": [
+        1,
+        1
+      ],
+      "coupled_signs": [
+        1,
+        1
+      ],
+      "layer_reversed": {
+        "lower": false,
+        "upper": false
+      },
+      "exactly_one_layer_reversed": false,
+      "unresolved": false
+    },
+    {
+      "registry": "centered_plus_0.25",
+      "isolated_signs": [
+        1,
+        1
+      ],
+      "coupled_signs": [
+        1,
+        1
+      ],
+      "layer_reversed": {
+        "lower": false,
+        "upper": false
+      },
+      "exactly_one_layer_reversed": false,
+      "unresolved": false
+    }
+  ],
+  "interpretation": "The unchanged direct eight-state model retains both isolated-layer signs at t=10 meV; it does not reproduce the provisional 7268 one-layer reversal under the frozen test.",
+  "limits": [
+    "Internal U is not a calibrated external gate field.",
+    "The KM sign and magnitude are not fitted to MoSSe 7268.",
+    "One refined quadrature is a bounded model check, not a material uncertainty analysis.",
+    "The partner allocation swap is not a layer-direction reversal: both t=10 layer C signs remain positive.",
+    "The provisional 7268 and archived 7269 bilayers both have lower-negative/upper-positive signs; their different net signs reflect compensation, while the within-7268 isolated-to-bilayer reversal is a separate target.",
+    "No channel removal, displacement extension, parameter scan, or extra model state was run."
+  ],
+  "seconds": 8.365518334001536
+}

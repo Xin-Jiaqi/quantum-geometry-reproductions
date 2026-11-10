@@ -1,0 +1,43 @@
+{
+  "status": "measured cold zero-field benchmark plus conditional planning, not a gate completion promise",
+  "ranks": 4,
+  "measured_minutes": {
+    "bilayer_SCF": 18.13086057221517,
+    "bilayer_total": 18.788758476326862,
+    "isolated_SCF": 9.75980051003086,
+    "isolated_total": 10.136748435425883
+  },
+  "measured_two_job_allocated_CPU_hours": 1.928367127450183,
+  "cold_SCF_actual_over_prior_forecast": {
+    "bilayer": 1.0158784204931814,
+    "isolated": 0.9145247865204985
+  },
+  "conditional_old_geometry_remaining_four_gate_states": {
+    "released": false,
+    "reason": "force failure; if geometry changes, new zero references and equivalence check are required",
+    "nominal_cumulative_job_minutes": 40.095641210504496,
+    "scenario_cumulative_job_minutes": [
+      20.047820605252248,
+      80.19128242100899
+    ],
+    "ideal_two_concurrent_job_minutes": 20.047820605252248,
+    "no_queue_no_dependency_imbalance": true
+  },
+  "all16_prior_budget_retained": {
+    "nominal_cumulative_hours": 39.113790639,
+    "scenario_cumulative_hours": [
+      17.92,
+      84.1959
+    ],
+    "reason": "New MoSSe cold SCF is within prior planning range; one case cannot recalibrate unseen chemistries. Exact prior table remains runtime_summary.json."
+  },
+  "structural_followup": {
+    "authorized": true,
+    "max_jobs": 1,
+    "max_ionic_steps": 12,
+    "walltime_limit_minutes": 110,
+    "allocated_CPU_hour_limit": 7.333333333333333,
+    "nominal_time": "unknown until first ionic iterations; initial monitoring window 20-40min, not forecast of convergence",
+    "excluded_from_original_16_budget": true
+  }
+}

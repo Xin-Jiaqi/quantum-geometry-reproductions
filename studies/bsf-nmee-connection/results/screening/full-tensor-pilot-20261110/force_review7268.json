@@ -1,0 +1,87 @@
+{
+  "scope": "Local analysis of returned small force arrays; no new DFT",
+  "source_sha256": {
+    "A0": "1c416aee7ee84a6c5b3271ad92fc233b3cc95f12c381d21af93efb8b1d2ca6a5",
+    "lower0": "4b95b2e92ccb5370e626cf7db353c327b86e75f039e12f999c6cf631cc7e0e21"
+  },
+  "force_units": "eV/Angstrom",
+  "atoms": [
+    {
+      "index_1based": 1,
+      "species": "Mo",
+      "layer": "lower",
+      "force": [
+        0.0,
+        -0.0,
+        0.086872
+      ]
+    },
+    {
+      "index_1based": 2,
+      "species": "Mo",
+      "layer": "upper",
+      "force": [
+        -0.0,
+        -0.0,
+        -0.003302
+      ]
+    },
+    {
+      "index_1based": 3,
+      "species": "S",
+      "layer": "lower",
+      "force": [
+        -0.0,
+        0.0,
+        -0.14124
+      ]
+    },
+    {
+      "index_1based": 4,
+      "species": "S",
+      "layer": "upper",
+      "force": [
+        -0.0,
+        0.0,
+        -0.089728
+      ]
+    },
+    {
+      "index_1based": 5,
+      "species": "Se",
+      "layer": "lower",
+      "force": [
+        -0.0,
+        0.0,
+        0.054542
+      ]
+    },
+    {
+      "index_1based": 6,
+      "species": "Se",
+      "layer": "upper",
+      "force": [
+        -0.0,
+        0.0,
+        0.092856
+      ]
+    }
+  ],
+  "max_inplane_force_at_printed_precision": 0.0,
+  "layer_net_forces": {
+    "lower": [
+      0.0,
+      0.0,
+      0.00017400000000000054
+    ],
+    "upper": [
+      0.0,
+      0.0,
+      -0.00017400000000000792
+    ]
+  },
+  "interpretation": "Dominant internal vertical forces; layer translation force is small. This does not establish phonon stability or absence of a lower-energy sliding minimum. Force threshold remains failed.",
+  "reference_isolated_max_force": 0.085241,
+  "geometry_status": "raw database fixed geometry, not force-accepted at current DFT settings",
+  "gate_release": false
+}
