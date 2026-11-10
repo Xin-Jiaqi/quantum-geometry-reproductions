@@ -1,0 +1,59 @@
+{
+  "jobs": [
+    {
+      "observed_at": "2026-11-10T14:45:25+08:00",
+      "resource": "Japan IMR",
+      "job_id": "563905.cmspbs1",
+      "workdir": "/work/sunq/xjq/material-gate-split-20261110",
+      "scope": "Postprocess existing MoSSe/InSe gate SCFs only; no DFT",
+      "queue": "DP_002",
+      "request": {
+        "ncpus": 4,
+        "mem_GB": 16,
+        "walltime": "00:30:00"
+      },
+      "quota_snapshot": {
+        "UID_usage_KiB": 6619598008,
+        "numeric_caps": 0,
+        "meaning": "unspecified, not unlimited",
+        "group_project_caps": "unknown",
+        "new_output_budget_GB": 0.1
+      },
+      "fee": "user states free; not independently audited",
+      "state": "completed",
+      "no_frontend_science": true,
+      "other_shared_jobs": "unchanged",
+      "exit_status": 0,
+      "walltime": "00:02:08",
+      "node": "csuper004"
+    },
+    {
+      "observed_at": "2026-11-10T14:45:25+08:00",
+      "resource": "Japan IMR",
+      "job_id": "563910.cmspbs1",
+      "workdir": "/work/sunq/xjq/material-gate-split-20261110",
+      "scope": "Postprocess existing MoSSe/InSe gate SCFs only; no DFT",
+      "queue": "DP_002",
+      "request": {
+        "ncpus": 4,
+        "mem_GB": 16,
+        "walltime": "00:30:00"
+      },
+      "quota_snapshot": {
+        "UID_usage_KiB": 6619598008,
+        "numeric_caps": 0,
+        "meaning": "unspecified, not unlimited",
+        "group_project_caps": "unknown",
+        "new_output_budget_GB": 0.1
+      },
+      "fee": "user states free; not independently audited",
+      "state": "completed",
+      "no_frontend_science": true,
+      "other_shared_jobs": "unchanged",
+      "purpose": "smaller B probe; existing SCFs only",
+      "exit_status": 0,
+      "walltime": "00:01:31",
+      "node": "csuper004"
+    }
+  ]
+}

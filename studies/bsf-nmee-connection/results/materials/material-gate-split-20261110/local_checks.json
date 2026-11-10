@@ -1,0 +1,20 @@
+{
+  "same_squared_denominator_KM_limit": [
+    {
+      "du_eV": 1e-05,
+      "energy_error": 4.073266554678419e-09,
+      "matrix_error": 4.0732409267710075e-09,
+      "total_error": 2.746565984035684e-12,
+      "closure": 3.9968028886505635e-15
+    },
+    {
+      "du_eV": 5e-06,
+      "energy_error": 1.536934035261944e-09,
+      "matrix_error": 1.537010909102002e-09,
+      "total_error": 7.778207753939356e-12,
+      "closure": 1.3322676295501878e-14
+    }
+  ],
+  "permutation_and_phase_error": 5.888573049311896e-18,
+  "passed": true
+}

@@ -1,0 +1,263 @@
+{
+  "sources": [
+    {
+      "path": "outputs/mosse-gate-scf-20261109/fm010/result.json",
+      "sha256": "0d86096491dcac5585c10d89425c14d58ce91cafbb772530f24cfc0a5ddcb57b"
+    },
+    {
+      "path": "outputs/mosse-gate-scf-20261109/fp010/result.json",
+      "sha256": "6725be31efff4b8932ac3c772b97841e9e89d9376936772d6be84d583bf0b5c8"
+    },
+    {
+      "path": "outputs/inse-nmee-20261109/Am/result.json",
+      "sha256": "7e8ddeb7fe3b120d289263c9d19d5a338c13e47cc0c68fc7c6cd75a9b8d82da9"
+    },
+    {
+      "path": "outputs/inse-nmee-20261109/Ap/result.json",
+      "sha256": "e0f3bf97bd239dfa4934e0cfaf503bb1eac18f7a5477a4408037f5deaca495ff"
+    }
+  ],
+  "rows": [
+    {
+      "material": "MoSSe",
+      "endpoint": "Cminus",
+      "nb": 96,
+      "b_eV": 0.002,
+      "archived_C": [
+        -0.13926801504573327,
+        -6.926240408307592,
+        6.786972393261858
+      ],
+      "max_abs_difference": 8.278711050024867e-12
+    },
+    {
+      "material": "MoSSe",
+      "endpoint": "Cminus",
+      "nb": 96,
+      "b_eV": 0.001,
+      "archived_C": [
+        -0.13927143766553257,
+        -6.926223682321184,
+        6.786952244655652
+      ],
+      "max_abs_difference": 3.2307490016592055e-11
+    },
+    {
+      "material": "MoSSe",
+      "endpoint": "Cminus",
+      "nb": 112,
+      "b_eV": 0.002,
+      "archived_C": [
+        -0.13189174305590032,
+        -6.204333379254075,
+        6.0724416361981755
+      ],
+      "max_abs_difference": 3.771472023572642e-11
+    },
+    {
+      "material": "MoSSe",
+      "endpoint": "Cminus",
+      "nb": 112,
+      "b_eV": 0.001,
+      "archived_C": [
+        -0.1318951971887505,
+        -6.204317227141322,
+        6.072422029952571
+      ],
+      "max_abs_difference": 1.66608948859448e-10
+    },
+    {
+      "material": "MoSSe",
+      "endpoint": "Cplus",
+      "nb": 96,
+      "b_eV": 0.002,
+      "archived_C": [
+        -0.41189125446233504,
+        -6.910542272136868,
+        6.498651017674533
+      ],
+      "max_abs_difference": 4.11208844752764e-11
+    },
+    {
+      "material": "MoSSe",
+      "endpoint": "Cplus",
+      "nb": 96,
+      "b_eV": 0.001,
+      "archived_C": [
+        -0.4118937025385075,
+        -6.910525807562979,
+        6.4986321050244715
+      ],
+      "max_abs_difference": 5.7061411151693164e-11
+    },
+    {
+      "material": "MoSSe",
+      "endpoint": "Cplus",
+      "nb": 112,
+      "b_eV": 0.002,
+      "archived_C": [
+        -0.4057962719334863,
+        -6.1929309778229635,
+        5.7871347058894775
+      ],
+      "max_abs_difference": 1.13500320253479e-10
+    },
+    {
+      "material": "MoSSe",
+      "endpoint": "Cplus",
+      "nb": 112,
+      "b_eV": 0.001,
+      "archived_C": [
+        -0.4057987483690141,
+        -6.192915089288567,
+        5.787116340919553
+      ],
+      "max_abs_difference": 6.59987620110769e-11
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cminus",
+      "nb": 128,
+      "b_eV": 0.002,
+      "archived_C": [
+        -0.9709421783938036,
+        -1053.5208865887225,
+        1052.5499444103286
+      ],
+      "max_abs_difference": 8.571987564209849e-11
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cminus",
+      "nb": 128,
+      "b_eV": 0.001,
+      "archived_C": [
+        -0.9709341805317849,
+        -1053.5071040184152,
+        1052.5361698378833
+      ],
+      "max_abs_difference": 8.685674401931465e-11
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cminus",
+      "nb": 144,
+      "b_eV": 0.002,
+      "archived_C": [
+        -0.9679351713312712,
+        -1053.378966975196,
+        1052.4110318038647
+      ],
+      "max_abs_difference": 1.6507328837178648e-10
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cminus",
+      "nb": 144,
+      "b_eV": 0.001,
+      "archived_C": [
+        -0.9679271266937975,
+        -1053.3651841666103,
+        1052.3972570399164
+      ],
+      "max_abs_difference": 1.2005330063402653e-10
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cminus",
+      "nb": 160,
+      "b_eV": 0.002,
+      "archived_C": [
+        -0.9514405515646498,
+        -1053.9441039963124,
+        1052.9926634447477
+      ],
+      "max_abs_difference": 4.1154635255225e-11
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cminus",
+      "nb": 160,
+      "b_eV": 0.001,
+      "archived_C": [
+        -0.951432514388016,
+        -1053.9303198383018,
+        1052.9788873239138
+      ],
+      "max_abs_difference": 8.29913915367797e-11
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cplus",
+      "nb": 128,
+      "b_eV": 0.002,
+      "archived_C": [
+        -1.8218654006345991,
+        -1052.119738741037,
+        1050.2978733404027
+      ],
+      "max_abs_difference": 2.7057467377744615e-11
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cplus",
+      "nb": 128,
+      "b_eV": 0.001,
+      "archived_C": [
+        -1.821868301226855,
+        -1052.1060134055126,
+        1050.284145104286
+      ],
+      "max_abs_difference": 2.878550731111318e-10
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cplus",
+      "nb": 144,
+      "b_eV": 0.002,
+      "archived_C": [
+        -1.8179993160701784,
+        -1051.944263763832,
+        1050.1262644477615
+      ],
+      "max_abs_difference": 1.3415046851150692e-10
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cplus",
+      "nb": 144,
+      "b_eV": 0.001,
+      "archived_C": [
+        -1.8180021765073513,
+        -1051.9305382263508,
+        1050.1125360498436
+      ],
+      "max_abs_difference": 3.8112624167752074e-11
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cplus",
+      "nb": 160,
+      "b_eV": 0.002,
+      "archived_C": [
+        -1.796267367401331,
+        -1052.5267900485417,
+        1050.7305226811402
+      ],
+      "max_abs_difference": 5.0249582272954285e-11
+    },
+    {
+      "material": "InSe",
+      "endpoint": "Cplus",
+      "nb": 160,
+      "b_eV": 0.001,
+      "archived_C": [
+        -1.7962702358880018,
+        -1052.513063174768,
+        1050.71679293888
+      ],
+      "max_abs_difference": 3.0945557227823883e-10
+    }
+  ],
+  "max_response_difference": 3.0945557227823883e-10
+}

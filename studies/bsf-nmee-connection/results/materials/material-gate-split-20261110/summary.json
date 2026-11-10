@@ -1,0 +1,365 @@
+{
+  "scope": "Existing 6x6 fixed-ion SCFs, -0.10 to +0.10 V/nm. No new k-mesh or DFT convergence claim.",
+  "interpretation": "Stable total changes; energy/matrix partition has no established small-B limit. Cancellation mechanism NOT established.",
+  "materials": {
+    "MoSSe": {
+      "nb": 112,
+      "G_net_lower_upper": [
+        -1.369515899599289,
+        0.05701042706634496,
+        -1.426526328041275
+      ],
+      "G_range_min": [
+        -1.3695226444863589,
+        0.05701022860559046,
+        -1.4265346519480797
+      ],
+      "G_range_max": [
+        -1.3695158995559655,
+        0.05701200718323063,
+        -1.4265263270646737
+      ],
+      "energy_range_min": [
+        167.09501502910794,
+        -754.506630893102,
+        -620.5722798256749
+      ],
+      "energy_range_max": [
+        368.1665384651425,
+        810.3815174730962,
+        1122.6731693582087
+      ],
+      "Cminus": [
+        -0.13189635509518638,
+        -6.204311915828011,
+        6.072415559947961
+      ],
+      "Cplus": [
+        -0.40579953526412993,
+        -6.19290983093871,
+        5.7871102948594295
+      ],
+      "relative_amplitude_change_percent_net_lower_upper": [
+        101.88033238859505,
+        -0.18394580854012743,
+        -4.811410988625318
+      ],
+      "upper_fraction_abs_layer_gate_changes": 0.9615712742740848,
+      "minimum_gap_eV": 0.7953635332312664,
+      "max_split_sum_error": 1.571654140164469e-09,
+      "max_layer_sum_error": 4.748102355733863e-09
+    },
+    "InSe": {
+      "nb": 160,
+      "G_net_lower_upper": [
+        -4.224206637473003,
+        7.0861882874900175,
+        -11.310394921737952
+      ],
+      "G_range_min": [
+        -4.224206639326724,
+        7.0861882860789365,
+        -11.310703818328058
+      ],
+      "G_range_max": [
+        -4.22413407914283,
+        7.086569738778259,
+        -11.310394921737952
+      ],
+      "energy_range_min": [
+        -265.94939835845474,
+        -3806.1572168427347,
+        -236.82331044873976
+      ],
+      "energy_range_max": [
+        -177.19374355697994,
+        1.777124053065047,
+        3609.8524796893407
+      ],
+      "Cminus": [
+        -0.9514298234817886,
+        -1053.9257431269011,
+        1052.974313306151
+      ],
+      "Cplus": [
+        -1.7962711505341105,
+        -1052.5085054721337,
+        1050.7122343220665
+      ],
+      "relative_amplitude_change_percent_net_lower_upper": [
+        61.49441551622301,
+        -0.13456272425403198,
+        -0.21505855866549803
+      ],
+      "upper_fraction_abs_layer_gate_changes": 0.614809543332183,
+      "minimum_gap_eV": 0.9328119686047416,
+      "max_split_sum_error": 3.253944669268094e-09,
+      "max_layer_sum_error": 4.1555097141099395e-09
+    }
+  },
+  "all_diagnostic_rows": 54,
+  "input_hashes_equal": true,
+  "baseline_verification": {
+    "sources": [
+      {
+        "path": "outputs/mosse-gate-scf-20261109/fm010/result.json",
+        "sha256": "0d86096491dcac5585c10d89425c14d58ce91cafbb772530f24cfc0a5ddcb57b"
+      },
+      {
+        "path": "outputs/mosse-gate-scf-20261109/fp010/result.json",
+        "sha256": "6725be31efff4b8932ac3c772b97841e9e89d9376936772d6be84d583bf0b5c8"
+      },
+      {
+        "path": "outputs/inse-nmee-20261109/Am/result.json",
+        "sha256": "7e8ddeb7fe3b120d289263c9d19d5a338c13e47cc0c68fc7c6cd75a9b8d82da9"
+      },
+      {
+        "path": "outputs/inse-nmee-20261109/Ap/result.json",
+        "sha256": "e0f3bf97bd239dfa4934e0cfaf503bb1eac18f7a5477a4408037f5deaca495ff"
+      }
+    ],
+    "rows": [
+      {
+        "material": "MoSSe",
+        "endpoint": "Cminus",
+        "nb": 96,
+        "b_eV": 0.002,
+        "archived_C": [
+          -0.13926801504573327,
+          -6.926240408307592,
+          6.786972393261858
+        ],
+        "max_abs_difference": 8.278711050024867e-12
+      },
+      {
+        "material": "MoSSe",
+        "endpoint": "Cminus",
+        "nb": 96,
+        "b_eV": 0.001,
+        "archived_C": [
+          -0.13927143766553257,
+          -6.926223682321184,
+          6.786952244655652
+        ],
+        "max_abs_difference": 3.2307490016592055e-11
+      },
+      {
+        "material": "MoSSe",
+        "endpoint": "Cminus",
+        "nb": 112,
+        "b_eV": 0.002,
+        "archived_C": [
+          -0.13189174305590032,
+          -6.204333379254075,
+          6.0724416361981755
+        ],
+        "max_abs_difference": 3.771472023572642e-11
+      },
+      {
+        "material": "MoSSe",
+        "endpoint": "Cminus",
+        "nb": 112,
+        "b_eV": 0.001,
+        "archived_C": [
+          -0.1318951971887505,
+          -6.204317227141322,
+          6.072422029952571
+        ],
+        "max_abs_difference": 1.66608948859448e-10
+      },
+      {
+        "material": "MoSSe",
+        "endpoint": "Cplus",
+        "nb": 96,
+        "b_eV": 0.002,
+        "archived_C": [
+          -0.41189125446233504,
+          -6.910542272136868,
+          6.498651017674533
+        ],
+        "max_abs_difference": 4.11208844752764e-11
+      },
+      {
+        "material": "MoSSe",
+        "endpoint": "Cplus",
+        "nb": 96,
+        "b_eV": 0.001,
+        "archived_C": [
+          -0.4118937025385075,
+          -6.910525807562979,
+          6.4986321050244715
+        ],
+        "max_abs_difference": 5.7061411151693164e-11
+      },
+      {
+        "material": "MoSSe",
+        "endpoint": "Cplus",
+        "nb": 112,
+        "b_eV": 0.002,
+        "archived_C": [
+          -0.4057962719334863,
+          -6.1929309778229635,
+          5.7871347058894775
+        ],
+        "max_abs_difference": 1.13500320253479e-10
+      },
+      {
+        "material": "MoSSe",
+        "endpoint": "Cplus",
+        "nb": 112,
+        "b_eV": 0.001,
+        "archived_C": [
+          -0.4057987483690141,
+          -6.192915089288567,
+          5.787116340919553
+        ],
+        "max_abs_difference": 6.59987620110769e-11
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cminus",
+        "nb": 128,
+        "b_eV": 0.002,
+        "archived_C": [
+          -0.9709421783938036,
+          -1053.5208865887225,
+          1052.5499444103286
+        ],
+        "max_abs_difference": 8.571987564209849e-11
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cminus",
+        "nb": 128,
+        "b_eV": 0.001,
+        "archived_C": [
+          -0.9709341805317849,
+          -1053.5071040184152,
+          1052.5361698378833
+        ],
+        "max_abs_difference": 8.685674401931465e-11
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cminus",
+        "nb": 144,
+        "b_eV": 0.002,
+        "archived_C": [
+          -0.9679351713312712,
+          -1053.378966975196,
+          1052.4110318038647
+        ],
+        "max_abs_difference": 1.6507328837178648e-10
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cminus",
+        "nb": 144,
+        "b_eV": 0.001,
+        "archived_C": [
+          -0.9679271266937975,
+          -1053.3651841666103,
+          1052.3972570399164
+        ],
+        "max_abs_difference": 1.2005330063402653e-10
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cminus",
+        "nb": 160,
+        "b_eV": 0.002,
+        "archived_C": [
+          -0.9514405515646498,
+          -1053.9441039963124,
+          1052.9926634447477
+        ],
+        "max_abs_difference": 4.1154635255225e-11
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cminus",
+        "nb": 160,
+        "b_eV": 0.001,
+        "archived_C": [
+          -0.951432514388016,
+          -1053.9303198383018,
+          1052.9788873239138
+        ],
+        "max_abs_difference": 8.29913915367797e-11
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cplus",
+        "nb": 128,
+        "b_eV": 0.002,
+        "archived_C": [
+          -1.8218654006345991,
+          -1052.119738741037,
+          1050.2978733404027
+        ],
+        "max_abs_difference": 2.7057467377744615e-11
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cplus",
+        "nb": 128,
+        "b_eV": 0.001,
+        "archived_C": [
+          -1.821868301226855,
+          -1052.1060134055126,
+          1050.284145104286
+        ],
+        "max_abs_difference": 2.878550731111318e-10
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cplus",
+        "nb": 144,
+        "b_eV": 0.002,
+        "archived_C": [
+          -1.8179993160701784,
+          -1051.944263763832,
+          1050.1262644477615
+        ],
+        "max_abs_difference": 1.3415046851150692e-10
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cplus",
+        "nb": 144,
+        "b_eV": 0.001,
+        "archived_C": [
+          -1.8180021765073513,
+          -1051.9305382263508,
+          1050.1125360498436
+        ],
+        "max_abs_difference": 3.8112624167752074e-11
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cplus",
+        "nb": 160,
+        "b_eV": 0.002,
+        "archived_C": [
+          -1.796267367401331,
+          -1052.5267900485417,
+          1050.7305226811402
+        ],
+        "max_abs_difference": 5.0249582272954285e-11
+      },
+      {
+        "material": "InSe",
+        "endpoint": "Cplus",
+        "nb": 160,
+        "b_eV": 0.001,
+        "archived_C": [
+          -1.7962702358880018,
+          -1052.513063174768,
+          1050.71679293888
+        ],
+        "max_abs_difference": 3.0945557227823883e-10
+      }
+    ],
+    "max_response_difference": 3.0945557227823883e-10
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "visual_inspection": "PNG viewed: axes and labels readable, no clipping; editable PDF/SVG exported.",
+  "physical_claim": "Fractional layer comparison only; failed energy/matrix attribution excluded from mechanism claims.",
+  "selection": "Largest band window and smallest magnetic probe; all diagnostics retained.",
+  "statistics": "Deterministic calculation, no error bars; no claim of mesh convergence.",
+  "core_change": false,
+  "credentials_uploaded": false,
+  "figure_validator_warning": "PNG preview and vector PDF/SVG are delivered. TIFF omitted deliberately: exploratory report, not final submission raster.",
+  "archive_replay": "check_local.py and analyze.py passed from the archive location; old full-response baseline agrees within 3.1e-10."
+}
