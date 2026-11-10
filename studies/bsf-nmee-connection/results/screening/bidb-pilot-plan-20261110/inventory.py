@@ -82,10 +82,12 @@ for group,mid,ids in groups:
   write(sd/f'bilayer-{rid}.vasp',at,format='vasp',direct=True)
   rows.append(row)
 out={'scope':'Proposed pilot only. No job submission or calculated new NMEE. Spatial allowance is necessary, not sufficient; symmetry at 1e-3A does not assert exact input symmetry.','database':{'local_path':str(a.database),'sha256':hashlib.sha256(a.database.read_bytes()).hexdigest(),'rows':D.count(),'source':'https://2dhub.org/bidb/bidb.html','license_note':'Structures/metadata from BiDB; cite Pakdel et al., Nat Commun 15,932 (2024).'},'toolkit_commit':subprocess.check_output(['git','-C',str(a.toolkit),'rev-parse','HEAD'],text=True).strip(),'versions':{'numpy':np.__version__,'spglib':spglib.__version__},'monolayers':monos,'bilayers':rows}
+for structure_path in (a.out/'structures').glob('*.vasp'):
+ structure_path.write_text('\n'.join(line.rstrip() for line in structure_path.read_text().splitlines())+'\n')
 (a.out/'inventory.json').write_text(json.dumps(out,indent=2)+'\n')
 with (a.out/'candidates.csv').open('w',newline='') as f:
  cols=['group','parent_formula','parent_id','id','uid','pointgroup','slide_stability','gap_pbe_eV','connection','tau1','tau2','mapping_error_A','zero_net','zero_layer','gate_net','existing_zero_gate_result','symmetry_caution']
- w=csv.DictWriter(f,fieldnames=cols);w.writeheader()
+ w=csv.DictWriter(f,fieldnames=cols,lineterminator="\n");w.writeheader()
  for r in rows:
   c=r['connection'];s=r['spatial_allowance_Eip_Bz'];tol=r['symmetry_by_tolerance']
   w.writerow({'group':r['group'],'parent_formula':r['parent_formula'],'parent_id':r['parent_id'],'id':r['id'],'uid':r['uid'],'pointgroup':r['pointgroup_at_1e_3A'],'slide_stability':r['metadata']['slide_stability'],'gap_pbe_eV':r['metadata']['gap_pbe'],'connection':c['representative'],'tau1':c['inplane_translation_mod1'][0],'tau2':c['inplane_translation_mod1'][1],'mapping_error_A':c['max_mapping_error_A'],'zero_net':','.join(s['zero_gate_net']),'zero_layer':','.join(s['zero_gate_layer']),'gate_net':','.join(s['gate_derivative_net']),'existing_zero_gate_result':r['existing_zero_gate_result'],'symmetry_caution':len(set(tol.values()))>1})
