@@ -1,0 +1,11 @@
+{
+  "source_revision": "0cc1a1b5d1c11b0456c1da25e61f37b40e776afc",
+  "core_sha256": {
+    "studies/bsf-nmee-connection/bsf_nmee/bilayer_audit.py": "18f205c6ed156c5f7768f707563bcc5f55e3e31e11feedb5ae1d1c3889bc792b",
+    "studies/bsf-nmee-connection/bsf_nmee/sliding_tight_binding.py": "39e3ecc4b4996ce02dcb64fdf8417253c3ccc8b5f6a9df201a57f3098739d125",
+    "papers/jia-2026-nonlin-magnetoelectric-edelstein/nmee_lab/clean_core/core.py": "7e2df251b6e357cb6f2ff596a69f5dd6b4160f3f4d0ee559a655ee6b9f3a80d5"
+  },
+  "new_states": 0,
+  "remote_jobs": [],
+  "runs": "All local Mac; result JSON stores exact parameters."
+}

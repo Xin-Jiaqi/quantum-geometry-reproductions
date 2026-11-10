@@ -1,0 +1,18 @@
+{
+  "saved_before_run": true,
+  "basis": "same separated-layer energies; flip only relative sign of chosen Hermitian VC block",
+  "alpha": -0.5,
+  "t_meV": 2,
+  "G_predicted": [
+    0.0006877022324562956,
+    -0.0006141112438755661,
+    7.359098235782197e-05
+  ],
+  "opposite_alpha_G_predicted": [
+    -0.0009274736070428655,
+    0.00012931259861081318,
+    -0.0007981610166858908
+  ],
+  "source_sha256": "7fa77420d61ff4b38a61d4bec46f98fca998284e186b67837c7d5b2c761a1cd6",
+  "not_a_physical_gate_operation": true
+}

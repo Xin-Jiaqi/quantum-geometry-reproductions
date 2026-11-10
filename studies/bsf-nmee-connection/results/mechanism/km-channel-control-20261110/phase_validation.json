@@ -1,0 +1,103 @@
+{
+  "complete": true,
+  "scope": "Unchanged 8-state KM, fixed separated-layer directional VC projector intervention. U is internal offset, not physical gate field.",
+  "order": [
+    "lower",
+    "upper",
+    "net"
+  ],
+  "C_units": "(nm V T)^-1",
+  "G_units": "(nm V T eV)^-1",
+  "audit": {
+    "channel_velocity_finite_difference_errors": [
+      9.851769722991605e-13,
+      1.1306611499860423e-12
+    ],
+    "hermiticity_error": 0.0
+  },
+  "rows": [
+    {
+      "t_meV": 2.0,
+      "U_meV": 0.0,
+      "channel": "full",
+      "retained_alpha": 1.0,
+      "C0": [
+        -7.10500248467371e-05,
+        7.736338707860918e-05,
+        6.3133622311704055e-06
+      ],
+      "Cminus": [
+        -7.104630330477882e-05,
+        7.739776059555517e-05,
+        6.35145729125225e-06
+      ],
+      "Cplus": [
+        -7.105370327992015e-05,
+        7.73291022927846e-05,
+        6.275399012022769e-06
+      ],
+      "G": [
+        -0.00014799950282667895,
+        -0.0013731660554114344,
+        -0.0015211655845896131
+      ],
+      "common_gap_eV": 0.015507468746318413,
+      "insulating": true,
+      "nk": 45513
+    },
+    {
+      "t_meV": 2.0,
+      "U_meV": 0.0,
+      "channel": "Vb_Ct",
+      "retained_alpha": -0.5,
+      "C0": [
+        -9.465515320456266e-05,
+        8.487866053285241e-05,
+        -9.776492671674498e-06
+      ],
+      "Cminus": [
+        -9.467386109980255e-05,
+        8.489519948917668e-05,
+        -9.778661609595047e-06
+      ],
+      "Cplus": [
+        -9.463669330481324e-05,
+        8.486230340618017e-05,
+        -9.774389898448949e-06
+      ],
+      "G": [
+        0.0007433558997863021,
+        -0.0006579216599300608,
+        8.543422292195207e-05
+      ],
+      "common_gap_eV": 0.01545010686003077,
+      "insulating": true,
+      "nk": 45513
+    }
+  ],
+  "parameters": {
+    "grid": [
+      61,
+      60,
+      96
+    ],
+    "t": [
+      2.0
+    ],
+    "U": [
+      0.0
+    ],
+    "mass": 45,
+    "fraction": 0.25,
+    "du": 0.025,
+    "b": 0.015625,
+    "channels": [
+      "Vb_Ct"
+    ],
+    "alpha": [
+      -0.5
+    ],
+    "output": "outputs/km-channel-control-20261110/phase_validation.json"
+  },
+  "seconds": 8.615122250004788
+}

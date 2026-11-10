@@ -1,0 +1,105 @@
+{
+  "status": "saved before held-out runs",
+  "training_sha256": "8acc7b7bfcce1262a9d7c96e330e7bb6e2a9a537030199d2e770458235738a2b",
+  "definition": "G(t,alpha)=(t/2meV)^2*(A+B alpha+D alpha^2), inferred weak-coupling expansion; not assumed valid at10/20meV",
+  "A_background": [
+    -0.0006488225919552837,
+    0.00038225321609408613,
+    -0.00026656938551167264
+  ],
+  "B_odd_channel_interference": [
+    -0.001615175839499161,
+    0.0007434238424863793,
+    -0.0008717519990437127
+  ],
+  "D_even_channel": [
+    0.002115747618647995,
+    -0.0024986101549058504,
+    -0.000382862526609447
+  ],
+  "predictions": [
+    {
+      "t_meV": 1,
+      "alpha": 0,
+      "G": [
+        -0.00016220564798882092,
+        9.556330402352153e-05,
+        -6.664234637791816e-05
+      ]
+    },
+    {
+      "t_meV": 1,
+      "alpha": 0.5,
+      "G": [
+        -0.00023186840176071637,
+        3.2328149652703295e-05,
+        -0.0001995402541714727
+      ]
+    },
+    {
+      "t_meV": 1,
+      "alpha": 1,
+      "G": [
+        -3.7062703201612424e-05,
+        -0.00034323327408134624,
+        -0.00038029597779120803
+      ]
+    },
+    {
+      "t_meV": 2,
+      "alpha": 0,
+      "G": [
+        -0.0006488225919552837,
+        0.00038225321609408613,
+        -0.00026656938551167264
+      ]
+    },
+    {
+      "t_meV": 2,
+      "alpha": 0.5,
+      "G": [
+        -0.0009274736070428655,
+        0.00012931259861081318,
+        -0.0007981610166858908
+      ]
+    },
+    {
+      "t_meV": 2,
+      "alpha": 1,
+      "G": [
+        -0.0001482508128064497,
+        -0.001372933096325385,
+        -0.0015211839111648321
+      ]
+    },
+    {
+      "t_meV": 4,
+      "alpha": 0,
+      "G": [
+        -0.0025952903678211348,
+        0.0015290128643763445,
+        -0.0010662775420466905
+      ]
+    },
+    {
+      "t_meV": 4,
+      "alpha": 0.5,
+      "G": [
+        -0.003709894428171462,
+        0.0005172503944432527,
+        -0.003192644066743563
+      ]
+    },
+    {
+      "t_meV": 4,
+      "alpha": 1,
+      "G": [
+        -0.0005930032512257988,
+        -0.00549173238530154,
+        -0.0060847356446593285
+      ]
+    }
+  ],
+  "physical_prediction": "For the upper layer, the odd interference term is positive and the even quadratic term negative. Half restoration should yield positive G; full restoration negative G. At fixed weak t, the channel first reinforces then opposes the positive background.",
+  "qualification": "Coefficients extracted from t2 finite differences, not exact t->0 coefficients; held-out tests examine this limitation."
+}

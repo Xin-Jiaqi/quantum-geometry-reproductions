@@ -1,0 +1,26 @@
+{
+  "global_interlayer_sign_gauge_error": 0.0,
+  "channel_derivative_audit": {
+    "channel_velocity_finite_difference_errors": [
+      9.851769722991605e-13,
+      1.1306611499860423e-12
+    ],
+    "hermiticity_error": 0.0
+  },
+  "old_kernel_baseline": [
+    {
+      "t_meV": 10,
+      "C_error": 9.601694439531627e-16,
+      "G_vs_analytic_error": 1.6052868407473442e-07
+    },
+    {
+      "t_meV": 20,
+      "C_error": 2.5673907444456745e-16,
+      "G_vs_analytic_error": 1.0672350646973028e-07
+    }
+  ],
+  "all_weak_prediction_signs_correct": true,
+  "phase_prediction_signs_correct": true,
+  "new_states": 0,
+  "passed": true
+}
