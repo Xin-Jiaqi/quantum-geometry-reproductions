@@ -1,0 +1,8 @@
+{
+  "full_response_vs_previous_independent_kernel_max_error": 1.2598970755561822e-09,
+  "source_hashes_verified": true,
+  "all_105_groups_retained": true,
+  "primary_directional_channel_claim_holds_all_windows": true,
+  "primary_controls_no_gate_endpoint_layer_sign_change": true,
+  "passed": true
+}

@@ -1,0 +1,8 @@
+{
+  "source_selection": "All 315 original field points, 105 grouped controls; main figure uses full plus specified directional removal in all 15 windows.",
+  "visual_qa": "Rendered PNG inspected; matched axes, signed labels, all-window points retained.",
+  "statistics": "Deterministic model controls; window range is not a confidence interval.",
+  "scope": "No new remote compute, no DFT, no model-core change. Original channel interventions predate the new fractional comparison.",
+  "raster_warning": "PNG preview with editable PDF/SVG; TIFF not required for this exploratory report.",
+  "mechanism_limit": "Original screened potentials held; modified H not rescreened. No unique additive channel weights or universal predictive criterion."
+}
