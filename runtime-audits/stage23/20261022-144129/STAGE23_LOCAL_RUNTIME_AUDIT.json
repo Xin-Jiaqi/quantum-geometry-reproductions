@@ -1,0 +1,467 @@
+{
+  "schema": "stage23-local-runtime-audit/v1",
+  "created_at_utc": "2026-10-22T06:39:00.548571+00:00",
+  "overall_status": "FAIL_REVIEW_REQUIRED",
+  "policy": {
+    "repository_changes_requested": false,
+    "package_installation_performed": false,
+    "network_access_requested": false,
+    "production_nlo_run_performed": false,
+    "synthetic_haldane_fixture_is_ab_initio": false
+  },
+  "python": {
+    "executable": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+    "version": "3.12.4 (v3.12.4:8e8a4baf65, Jun  6 2024, 17:33:18) [Clang 13.0.0 (clang-1300.0.29.30)]"
+  },
+  "repo_integrity": {
+    "nlo": {
+      "unchanged": true,
+      "before": {
+        "is_git_repo": true,
+        "path": "<git-checkouts>/nlo-response-workflow",
+        "top_level": "<git-checkouts>/nlo-response-workflow",
+        "commit": "dc9eec064c68e103eb974af7bc79eea482c05dfb",
+        "branch": "codex/research-sync-20261019",
+        "origin": "https://github.com/Xin-Jiaqi/nlo-response-workflow.git",
+        "dirty_count": 0,
+        "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status_excerpt": ""
+      },
+      "after": {
+        "is_git_repo": true,
+        "path": "<git-checkouts>/nlo-response-workflow",
+        "top_level": "<git-checkouts>/nlo-response-workflow",
+        "commit": "dc9eec064c68e103eb974af7bc79eea482c05dfb",
+        "branch": "codex/research-sync-20261019",
+        "origin": "https://github.com/Xin-Jiaqi/nlo-response-workflow.git",
+        "dirty_count": 0,
+        "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status_excerpt": ""
+      }
+    },
+    "group_theory": {
+      "unchanged": true,
+      "before": {
+        "is_git_repo": true,
+        "path": "<git-checkouts>/group-theory-operations-toolkit",
+        "top_level": "<git-checkouts>/group-theory-operations-toolkit",
+        "commit": "9da48f1c89bff61d39066f032eda729f94193301",
+        "branch": "main",
+        "origin": "https://github.com/Xin-Jiaqi/group-theory-operations-toolkit.git",
+        "dirty_count": 16,
+        "status_sha256": "34d2734221abb3e6afced94e3163658983e490465fb8a9ba5de4f064fb492e47",
+        "status_excerpt": "M README.md\n M src/group_theory_operations/__init__.py\n M src/group_theory_operations/cli.py\n M src/group_theory_operations/invariants.py\n M tests/test_point_groups_and_invariants.py\n?? docs/edelstein-response.md\n?? src/group_theory_operations/_point_group_algebra.py\n?? src/group_theory_operations/altermagnet.py\n?? src/group_theory_operations/spin_characters.py\n?? src/group_theory_operations/spin_groups.py\n?? src/group_theory_operations/spin_point_types.py\n?? tests/fixtures/crsb_magndata_0.528.json\n?? tests/test_altermagnet.py\n?? tests/test_spin_characters.py\n?? tests/test_spin_groups.py\n?? tests/test_spin_point_types.py"
+      },
+      "after": {
+        "is_git_repo": true,
+        "path": "<git-checkouts>/group-theory-operations-toolkit",
+        "top_level": "<git-checkouts>/group-theory-operations-toolkit",
+        "commit": "9da48f1c89bff61d39066f032eda729f94193301",
+        "branch": "main",
+        "origin": "https://github.com/Xin-Jiaqi/group-theory-operations-toolkit.git",
+        "dirty_count": 16,
+        "status_sha256": "34d2734221abb3e6afced94e3163658983e490465fb8a9ba5de4f064fb492e47",
+        "status_excerpt": "M README.md\n M src/group_theory_operations/__init__.py\n M src/group_theory_operations/cli.py\n M src/group_theory_operations/invariants.py\n M tests/test_point_groups_and_invariants.py\n?? docs/edelstein-response.md\n?? src/group_theory_operations/_point_group_algebra.py\n?? src/group_theory_operations/altermagnet.py\n?? src/group_theory_operations/spin_characters.py\n?? src/group_theory_operations/spin_groups.py\n?? src/group_theory_operations/spin_point_types.py\n?? tests/fixtures/crsb_magndata_0.528.json\n?? tests/test_altermagnet.py\n?? tests/test_spin_characters.py\n?? tests/test_spin_groups.py\n?? tests/test_spin_point_types.py"
+      }
+    },
+    "qgr": {
+      "unchanged": true,
+      "before": {
+        "is_git_repo": true,
+        "path": "<workspace>/quantum-geometry-reproductions",
+        "top_level": "<workspace>/quantum-geometry-reproductions",
+        "commit": "682a1591854a1bc38f4102ae5b0f056fc84b364c",
+        "branch": "research/bsf-nmee-stage7-sw-gate-20261020",
+        "origin": "https://github.com/Xin-Jiaqi/quantum-geometry-reproductions.git",
+        "dirty_count": 3,
+        "status_sha256": "2e61149e76cb807f9ab2a87e497ffd4c722ef00300af237b91219f0c2e128b69",
+        "status_excerpt": "?? studies/bsf-nmee-connection/hpc-stage8i/STAGE8L_BAND_LEDGER_CORRECTED_20261022.json\n?? studies/bsf-nmee-connection/hpc-stage8i/stage8m_plaq.py\n?? studies/bsf-nmee-connection/tests/test_stage8m_plaq.py"
+      },
+      "after": {
+        "is_git_repo": true,
+        "path": "<workspace>/quantum-geometry-reproductions",
+        "top_level": "<workspace>/quantum-geometry-reproductions",
+        "commit": "682a1591854a1bc38f4102ae5b0f056fc84b364c",
+        "branch": "research/bsf-nmee-stage7-sw-gate-20261020",
+        "origin": "https://github.com/Xin-Jiaqi/quantum-geometry-reproductions.git",
+        "dirty_count": 3,
+        "status_sha256": "2e61149e76cb807f9ab2a87e497ffd4c722ef00300af237b91219f0c2e128b69",
+        "status_excerpt": "?? studies/bsf-nmee-connection/hpc-stage8i/STAGE8L_BAND_LEDGER_CORRECTED_20261022.json\n?? studies/bsf-nmee-connection/hpc-stage8i/stage8m_plaq.py\n?? studies/bsf-nmee-connection/tests/test_stage8m_plaq.py"
+      }
+    }
+  },
+  "results": [
+    {
+      "name": "nlo_unittest_discover",
+      "status": "PASS",
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m unittest discover -s tests -v",
+      "cwd": "<git-checkouts>/nlo-response-workflow",
+      "timeout_seconds": 900,
+      "elapsed_seconds": 1.052,
+      "returncode": 0,
+      "stdout_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/nlo_unittest_discover.stdout.log",
+      "stderr_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/nlo_unittest_discover.stderr.log",
+      "stdout_tail": "",
+      "stderr_tail": "test_actual_model_file_change_fails_even_when_manifest_check_is_skipped (test_campaign.CampaignTests.test_actual_model_file_change_fails_even_when_manifest_check_is_skipped) ... ok\ntest_centrosymmetric_campaign_is_auditable_exact_zero (test_campaign.CampaignTests.test_centrosymmetric_campaign_is_auditable_exact_zero) ... ok\ntest_exact_duplicate_package_is_rejected (test_campaign.CampaignTests.test_exact_duplicate_package_is_rejected) ... ok\ntest_explicit_forbidden_component_can_be_audited_zero_control (test_campaign.CampaignTests.test_explicit_forbidden_component_can_be_audited_zero_control) ... ok\ntest_explicit_forbidden_component_is_blocked_before_execution (test_campaign.CampaignTests.test_explicit_forbidden_component_is_blocked_before_execution) ... ok\ntest_external_package_change_fails_before_execution (test_campaign.CampaignTests.test_external_package_change_fails_before_execution) ... ok\ntest_missing_pass_output_requires_explicit_retry (test_campaign.CampaignTests.test_missing_pass_output_requires_explicit_retry) ... ok\ntest_same_rank_and_candidate_do_not_collide_across_packages (test_campaign.CampaignTests.test_same_rank_and_candidate_do_not_collide_across_packages) ... ok\ntest_serial_checkpoint_and_idempotent_resume (test_campaign.CampaignTests.test_serial_checkpoint_and_idempotent_resume) ... ok\ntest_stale_running_state_is_recovered_at_job_boundary (test_campaign.CampaignTests.test_stale_running_state_is_recovered_at_job_boundary) ... ok\ntest_3d_package_plan_uses_full_default_mesh (test_core.HandoffTests.test_3d_package_plan_uses_full_default_mesh) ... ok\ntest_3d_rejects_effective_layer_thickness (test_core.HandoffTests.test_3d_rejects_effective_layer_thickness) ... ok\ntest_legacy_manifest_uses_quality_soc_without_manual_input (test_core.HandoffTests.test_legacy_manifest_uses_quality_soc_without_manual_input) ... ok\ntest_manifest_supplies_nocc_soc_and_dimension (test_core.HandoffTests.test_manifest_supplies_nocc_soc_and_dimension) ... ok\ntest_full_wannier_mode_is_rejected_before_kernel_dispatch (test_core.PackageBoundaryTests.test_full_wannier_mode_is_rejected_before_kernel_dispatch) ... ok\ntest_3d_kmesh_is_not_collapsed_to_kz_zero (test_core.SymmetryTests.test_3d_kmesh_is_not_collapsed_to_kz_zero) ... ok\ntest_poscar_dimension_and_rank3_point_group (test_core.SymmetryTests.test_poscar_dimension_and_rank3_point_group) ... ok\ntest_3d_symmetry_control_and_output (test_injection_3d.Injection3DTests.test_3d_symmetry_control_and_output) ... ok\ntest_injection_identities_and_compact_output (test_injection_end_to_end.InjectionEndToEndTests.test_injection_identities_and_compact_output) ... ok\ntest_vectorized_band_sum_matches_literal_loop (test_injection_formula.InjectionFormulaTests.test_vectorized_band_sum_matches_literal_loop) ... ok\ntest_copy_verifies_result_and_writes_receipt (test_kernel_drift.KernelDriftTests.test_copy_verifies_result_and_writes_receipt) ... ok\ntest_all_responses_default_to_reviewed_baseline (test_numerical_baseline.NumericalBaselineTests.test_all_responses_default_to_reviewed_baseline) ... ok\ntest_baseline_maps_pairing_rounding_and_injection_mode (test_numerical_baseline.NumericalBaselineTests.test_baseline_maps_pairing_rounding_and_injection_mode) ... ok\ntest_diagonalize_for_baseline_uses_eigh_only_for_reviewed (test_numerical_baseline.NumericalBaselineTests.test_diagonalize_for_baseline_uses_eigh_only_for_reviewed) ... ok\ntest_regression_baseline_passes_matrices_through_unchanged (test_numerical_baseline.NumericalBaselineTests.test_regression_baseline_passes_matrices_through_unchanged) ... ok\ntest_reviewed_baseline_projects_matrices_to_hermitian_manifold (test_numerical_baseline.NumericalBaselineTests.test_reviewed_baseline_projects_matrices_to_hermitian_manifold) ... ok\ntest_validate_enforces_baseline_pairing_contract (test_numerical_baseline.NumericalBaselineTests.test_validate_enforces_baseline_pairing_contract) ... ok\ntest_band_pair_aggregation_matches_literal_sum (test_shg_formula.SHGFormulaTests.test_band_pair_aggregation_matches_literal_sum) ... ok\ntest_pivot_selection_is_invariant_to_basis_rotation (test_symmetry_pivots.TensorPivotTests.test_pivot_selection_is_invariant_to_basis_rotation) ... ok\ntest_rounded_axis_does_not_select_near_zero_component (test_symmetry_pivots.TensorPivotTests.test_rounded_axis_does_not_select_near_zero_component) ... ok\ntest_zero_dimensional_space_is_empty (test_symmetry_pivots.TensorPivotTests.test_zero_dimensional_space_is_empty) ... ok\n\n----------------------------------------------------------------------\nRan 31 tests in 0.781s\n\nOK"
+    },
+    {
+      "name": "nlo_actual_cli_preflight",
+      "status": "FAIL_OR_BLOCKED",
+      "detail": {
+        "status": "FAIL_OR_BLOCKED",
+        "package_dir": "<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic",
+        "model_audit_json": "<workspace>/.stage23_work/stage23_20261022-142840/results/STAGE23_HALDANE_WANNIER_MAPPING.json",
+        "fixture_type": "synthetic two-band Haldane tight-binding model with exact HR Fourier mapping; not an ab-initio W90Flow export",
+        "spectrum_calculation_performed": false,
+        "checks": {
+          "independent_HR_mapping_passed": true,
+          "NLO_kernel_reader_and_derivatives_passed": false,
+          "inspect_exit_zero": true,
+          "inspect_hashes_verified": true,
+          "inspect_detected_C3": false,
+          "plan_exit_zero": true,
+          "plan_response_is_shift_current": true,
+          "plan_uses_tiny_2d_mesh": true
+        },
+        "mapping_command": {
+          "name": "haldane_to_wannier_exact_mapping",
+          "status": "FAIL",
+          "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 <workspace>/.stage23_work/stage23_20261022-142840/stage23_local_runtime_kit/stage23_haldane_wannier_bridge.py --package-dir <workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic --report <workspace>/.stage23_work/stage23_20261022-142840/results/STAGE23_HALDANE_WANNIER_MAPPING.json --nlo-root <git-checkouts>/nlo-response-workflow",
+          "cwd": "<workspace>/.stage23_work/stage23_20261022-142840/results",
+          "timeout_seconds": 900,
+          "elapsed_seconds": 0.282,
+          "returncode": 1,
+          "stdout_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/haldane_to_wannier_exact_mapping.stdout.log",
+          "stderr_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/haldane_to_wannier_exact_mapping.stderr.log",
+          "stdout_tail": "{\n  \"status\": \"FAIL\",\n  \"package_dir\": \"<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic\",\n  \"report\": \"<workspace>/.stage23_work/stage23_20261022-142840/results/STAGE23_HALDANE_WANNIER_MAPPING.json\",\n  \"metrics\": {\n    \"sample_count\": 128,\n    \"max_H_matrix_residual_eV\": 9.036560719766055e-16,\n    \"max_band_eigenvalue_residual_eV\": 1.7763568394002505e-15,\n    \"max_Hermiticity_residual_eV\": 0.0,\n    \"max_dH_residual_eV_A\": 9.992020309120961e-16,\n    \"max_d2H_residual_eV_A2\": 8.882156799609321e-16,\n    \"max_real_space_Hermiticity_residual_eV\": 0.0,\n    \"max_HR_serialization_residual_eV\": 0.0,\n    \"C3_marker_orbit_residual_fractional\": 0.0,\n    \"minimum_sampled_direct_gap_eV\": 1.3722717813075924,\n    \"tolerance\": 2e-10\n  },\n  \"nlo_kernel_status\": \"FAIL_NLO_KERNEL_MAPPING\"\n}",
+          "stderr_tail": ""
+        },
+        "mapping_report": {
+          "schema": "stage23-haldane-wannier-map/v1",
+          "created_at_utc": "2026-10-22T06:36:42.555357+00:00",
+          "status": "FAIL",
+          "scientific_scope": "exact synthetic two-band tight-binding mapping only; not ab-initio reproduction and not SI FDR normalization",
+          "parameters": {
+            "M_eV": 0.4,
+            "phi_rad": 1.5707963267948966,
+            "t1_eV": 1.0,
+            "t2_eV": 0.2,
+            "length_scale_A": 1.0,
+            "vacuum_A": 20.0
+          },
+          "geometry": {
+            "NN_cartesian_A": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                -0.5,
+                0.8660254037844386
+              ],
+              [
+                -0.5,
+                -0.8660254037844386
+              ]
+            ],
+            "NNN_cartesian_A": [
+              [
+                1.5,
+                0.8660254037844386
+              ],
+              [
+                -1.5,
+                0.8660254037844386
+              ],
+              [
+                0.0,
+                -1.7320508075688772
+              ]
+            ],
+            "a1_A": [
+              1.5,
+              0.8660254037844386
+            ],
+            "a2_A": [
+              1.5,
+              -0.8660254037844386
+            ],
+            "B1_per_A": [
+              2.0943951023931953,
+              3.6275987284684357
+            ],
+            "B2_per_A": [
+              2.0943951023931953,
+              -3.6275987284684357
+            ],
+            "tau_A_cartesian_A": [
+              0.0,
+              0.0
+            ],
+            "tau_B_cartesian_A": [
+              1.0,
+              0.0
+            ],
+            "tau_B_fractional": [
+              0.3333333333333333,
+              0.3333333333333333
+            ]
+          },
+          "representation": {
+            "num_wann": 2,
+            "R_vector_count": 7,
+            "R_vectors": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                -1,
+                0
+              ],
+              [
+                1,
+                -1,
+                0
+              ],
+              [
+                -1,
+                1,
+                0
+              ]
+            ],
+            "all_R_degeneracies": 1,
+            "Fourier_convention": "H(k)=sum_R H(R) exp(+i 2 pi k_frac dot R)",
+            "cell_gauge_relation": "H_cell=U^dagger H_source U; U=diag(1, exp(-i k dot delta1))",
+            "position_embedding": "Wannier-center difference wc_B-wc_A=delta1 restores physical NN bond vectors in dH/dk"
+          },
+          "checks": {
+            "all_R_vectors_have_minus_R_partners": true,
+            "serialized_HR_roundtrip_matches_model": true,
+            "HR_degeneracies_are_all_one": true,
+            "real_space_Hermiticity": true,
+            "Hamiltonian_cell_gauge_residual": true,
+            "band_eigenvalue_residual": true,
+            "k_space_Hermiticity": true,
+            "position_dressed_first_derivative_residual": true,
+            "position_dressed_second_derivative_residual": true,
+            "C3_marker_orbit_closed": true,
+            "gap_open_on_random_sample": true
+          },
+          "metrics": {
+            "sample_count": 128,
+            "max_H_matrix_residual_eV": 9.036560719766055e-16,
+            "max_band_eigenvalue_residual_eV": 1.7763568394002505e-15,
+            "max_Hermiticity_residual_eV": 0.0,
+            "max_dH_residual_eV_A": 9.992020309120961e-16,
+            "max_d2H_residual_eV_A2": 8.882156799609321e-16,
+            "max_real_space_Hermiticity_residual_eV": 0.0,
+            "max_HR_serialization_residual_eV": 0.0,
+            "C3_marker_orbit_residual_fractional": 0.0,
+            "minimum_sampled_direct_gap_eV": 1.3722717813075924,
+            "tolerance": 2e-10
+          },
+          "package": {
+            "path": "<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic",
+            "manifest_sha256": "76c4723aa1f673650dac51964a8c1066e5d578e4c88f98463d23bf3e41d1ac1a",
+            "POSCAR_sha256": "3be5d48b15bd73f758ae5acbcabbee311abdab17c6161bbc4794698b0b875b2c",
+            "hr_sha256": "3fd3982f707ab1fc6e908fccf20762d672032d3ff85cc31fb7206b6e3e31c046",
+            "wcenter_sha256": "cff014d550894feda6e1f9d8e2c46c2228e220e9862752a7dc6a2a7bece31787"
+          },
+          "checks_summary": "The Haldane source-gauge Hamiltonian and its first/second k derivatives match the generated HR representation after the explicit cell-gauge transform and Wannier-center embedding.",
+          "limitations": [
+            "C atoms in POSCAR are a synthetic C3 marker orbit, not physical atoms or active orbitals; the POSCAR is symmetry metadata for this effective model only.",
+            "quality.json passed=true denotes this exact synthetic mapping check only, not an ab-initio/W90Flow quality certification.",
+            "Numerical energy values are labeled eV and length values Å to exercise the NLO parser; this does not by itself establish absolute SI response conversion from the FDR's hbar=q=t1=1 convention.",
+            "The current NLO workflow's response kernel is diagonal-TBA; only Hamiltonian and position-dressed derivatives are checked here, not equivalence of the FDR and NLO response formulas."
+          ],
+          "nlo_kernel_validation": {
+            "status": "FAIL_NLO_KERNEL_MAPPING",
+            "checks": {
+              "NLO_HR_reader_reconstructs_H": true,
+              "NLO_eigenvalues_match_source_model": true,
+              "NLO_H_is_Hermitian": true,
+              "NLO_position_dressed_first_derivative_matches": true,
+              "NLO_position_dressed_second_derivative_matches": true,
+              "raw_HR_is_Hermitian_paired": true,
+              "direct_gap_remains_open_on_sample": true,
+              "POSCAR_point_group_is_C3": false
+            },
+            "metrics": {
+              "sample_count": 64,
+              "max_H_matrix_residual_eV": 1.0190492755571723e-15,
+              "max_band_eigenvalue_residual_eV": 1.3322676295501878e-15,
+              "max_Hermiticity_residual_eV": 6.905610201999729e-17,
+              "max_dH_residual_eV_A": 8.771042695661587e-13,
+              "max_d2H_residual_eV_A2": 1.6184831253694038e-12,
+              "max_raw_HR_pairing_residual_eV": 0.0,
+              "max_paired_HR_residual_eV": 0.0,
+              "minimum_sampled_direct_gap_eV": 1.2907948186254747,
+              "nlo_point_group": "-6",
+              "nlo_tensor_component_count": 8
+            },
+            "interpretation": "Actual NLO reader/Fourier kernel was exercised without running a response calculation.",
+            "limitations": [
+              "The point-group check depends on local spglib version and synthetic marker POSCAR.",
+              "No shift-current spectrum or FDR response comparison was run."
+            ]
+          },
+          "mapping_status": "PASS_SYNTHETIC_HAMILTONIAN_MAPPING"
+        },
+        "inspect": {
+          "name": "nlo_haldane_inspect",
+          "status": "PASS",
+          "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -c 'from nlo_response.cli import main; raise SystemExit(main())' inspect <workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic --structure L1",
+          "cwd": "<git-checkouts>/nlo-response-workflow",
+          "timeout_seconds": 900,
+          "elapsed_seconds": 0.34,
+          "returncode": 0,
+          "stdout_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/nlo_haldane_inspect.stdout.log",
+          "stderr_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/nlo_haldane_inspect.stderr.log",
+          "stdout_tail": "{\n  \"package\": \"<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic\",\n  \"structure\": \"L1\",\n  \"num_wann\": 2,\n  \"nocc_model\": 1,\n  \"dimensionality\": 2,\n  \"dimensionality_source\": \"package-manifest.json physics.dimensionality\",\n  \"default_kmesh\": [\n    71,\n    71,\n    1\n  ],\n  \"soc\": false,\n  \"soc_source\": \"package-manifest.json physics.soc\",\n  \"input_integrity\": {\n    \"hashes_verified\": true,\n    \"package_manifest_sha256\": \"76c4723aa1f673650dac51964a8c1066e5d578e4c88f98463d23bf3e41d1ac1a\",\n    \"required_files_sha256\": {\n      \"POSCAR\": \"3be5d48b15bd73f758ae5acbcabbee311abdab17c6161bbc4794698b0b875b2c\",\n      \"wannier90_hr.dat\": \"3fd3982f707ab1fc6e908fccf20762d672032d3ff85cc31fb7206b6e3e31c046\",\n      \"wannier90-wcenter.dat\": \"cff014d550894feda6e1f9d8e2c46c2228e220e9862752a7dc6a2a7bece31787\",\n      \"quality.json\": \"975b49a318c2edfa2f6ca95d46375f2c1e4fcab848b2bcb89d6a75946b567225\"\n    }\n  },\n  \"symmetry\": {\n    \"point_group\": \"-6\",\n    \"symmetry_tolerance_A\": 0.01,\n    \"symmetry_operations\": 6,\n    \"dimensionality\": 2,\n    \"tensor_rank\": 3,\n    \"intrinsic_last_index_symmetry\": true,\n    \"independent_count\": 2,\n    \"independent_representatives\": [\n      \"xxx\",\n      \"xyx\"\n    ],\n    \"allowed_nonzero_components\": [\n      \"xxx\",\n      \"xxy\",\n      \"xyx\",\n      \"xyy\",\n      \"yxx\",\n      \"yxy\",\n      \"yyx\",\n      \"yyy\"\n    ],\n    \"forbidden_zero_components\": [\n      \"xxz\",\n      \"xyz\",\n      \"xzx\",\n      \"xzy\",\n      \"xzz\",\n      \"yxz\",\n      \"yyz\",\n      \"yzx\",\n      \"yzy\",\n      \"yzz\",\n      \"zxx\",\n      \"zxy\",\n      \"zxz\",\n      \"zyx\",\n      \"zyy\",\n      \"zyz\",\n      \"zzx\",\n      \"zzy\",\n      \"zzz\"\n    ]\n  }\n}",
+          "stderr_tail": ""
+        },
+        "inspect_summary": {
+          "dimensionality": 2,
+          "point_group": "-6",
+          "hashes_verified": true
+        },
+        "plan": {
+          "name": "nlo_haldane_plan",
+          "status": "PASS",
+          "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -c 'from nlo_response.cli import main; raise SystemExit(main())' plan <workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic --structure L1 --response shift_current --output-root <workspace>/.stage23_work/stage23_20261022-142840/results/nlo-plan-output --dimensionality 2D --kmesh 3x3x1 --energy-min 0 --energy-max 1 --energy-points 3 --broadening 0.05 --spin-degeneracy 1 --no-mat",
+          "cwd": "<git-checkouts>/nlo-response-workflow",
+          "timeout_seconds": 900,
+          "elapsed_seconds": 0.307,
+          "returncode": 0,
+          "stdout_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/nlo_haldane_plan.stdout.log",
+          "stderr_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/nlo_haldane_plan.stderr.log",
+          "stdout_tail": "    \"save_mat\": false,\n    \"output_layout\": \"compact-v3\",\n    \"schema_version\": \"nlo-unified-v3\",\n    \"config_file\": null,\n    \"numerical_baseline\": \"reviewed-hermitian-v1\",\n    \"position_matrix_mode\": \"diagonal_tba\",\n    \"spectral_smearing\": \"lorentzian\",\n    \"outer_denominator_policy\": \"regularized\",\n    \"k_grid_convention\": \"stage04_centered\"\n  },\n  \"provenance\": {\n    \"package_manifest\": \"<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic/package-manifest.json\",\n    \"structure\": \"L1\",\n    \"rank\": 1,\n    \"candidate\": \"stage23-synthetic-haldane-tight-binding\",\n    \"projection\": \"two-orbital-Haldane-exact-Fourier-map\",\n    \"num_wann\": 2,\n    \"nocc_model\": 1,\n    \"nocc_source\": \"package-manifest.json\",\n    \"soc\": false,\n    \"soc_source\": \"package-manifest.json physics.soc\",\n    \"dimensionality_source\": \"explicit override\",\n    \"spin_degeneracy_source\": \"explicit\",\n    \"symmetry_forbidden_control\": false,\n    \"symmetry\": {\n      \"point_group\": \"-6\",\n      \"symmetry_tolerance_A\": 0.01,\n      \"symmetry_operations\": 6,\n      \"dimensionality\": 2,\n      \"tensor_rank\": 3,\n      \"intrinsic_last_index_symmetry\": true,\n      \"independent_count\": 2,\n      \"independent_representatives\": [\n        \"xxx\",\n        \"xyx\"\n      ],\n      \"allowed_nonzero_components\": [\n        \"xxx\",\n        \"xxy\",\n        \"xyx\",\n        \"xyy\",\n        \"yxx\",\n        \"yxy\",\n        \"yyx\",\n        \"yyy\"\n      ],\n      \"forbidden_zero_components\": [\n        \"xxz\",\n        \"xyz\",\n        \"xzx\",\n        \"xzy\",\n        \"xzz\",\n        \"yxz\",\n        \"yyz\",\n        \"yzx\",\n        \"yzy\",\n        \"yzz\",\n        \"zxx\",\n        \"zxy\",\n        \"zxz\",\n        \"zyx\",\n        \"zyy\",\n        \"zyz\",\n        \"zzx\",\n        \"zzy\",\n        \"zzz\"\n      ]\n    },\n    \"input_integrity\": {\n      \"hashes_verified\": true,\n      \"package_manifest_sha256\": \"76c4723aa1f673650dac51964a8c1066e5d578e4c88f98463d23bf3e41d1ac1a\",\n      \"required_files_sha256\": {\n        \"POSCAR\": \"3be5d48b15bd73f758ae5acbcabbee311abdab17c6161bbc4794698b0b875b2c\",\n        \"wannier90_hr.dat\": \"3fd3982f707ab1fc6e908fccf20762d672032d3ff85cc31fb7206b6e3e31c046\",\n        \"wannier90-wcenter.dat\": \"cff014d550894feda6e1f9d8e2c46c2228e220e9862752a7dc6a2a7bece31787\",\n        \"quality.json\": \"975b49a318c2edfa2f6ca95d46375f2c1e4fcab848b2bcb89d6a75946b567225\"\n      }\n    }\n  }\n}",
+          "stderr_tail": ""
+        },
+        "plan_summary": {
+          "response_type": "shift_current",
+          "nk": [
+            3,
+            3,
+            1
+          ],
+          "tensor_components": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        "parse_errors": {},
+        "mapping_error": null,
+        "interpretation": "A pass proves exact synthetic Haldane Hamiltonian/derivative mapping and local NLO read/plan compatibility only. It does not prove FDR and NLO response formulas or absolute SI normalizations are equivalent."
+      }
+    },
+    {
+      "name": "group_theory_unittest_discover",
+      "status": "FAIL",
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m unittest discover -s tests -v",
+      "cwd": "<git-checkouts>/group-theory-operations-toolkit",
+      "timeout_seconds": 900,
+      "elapsed_seconds": 136.288,
+      "returncode": 1,
+      "stdout_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/group_theory_unittest_discover.stdout.log",
+      "stderr_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/group_theory_unittest_discover.stderr.log",
+      "stdout_tail": "",
+      "stderr_tail": "======================================================================\nFAIL: test_all_seven_crystal_system_fixtures_match_expected_dimensions (test_structure_responses.StructureResponseAnalysisTests.test_all_seven_crystal_system_fixtures_match_expected_dimensions) (item='mno2_tetragonal')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<git-checkouts>/group-theory-operations-toolkit/tests/test_structure_responses.py\", line 87, in test_all_seven_crystal_system_fixtures_match_expected_dimensions\n    self.assertEqual(\nAssertionError: Tuples differ: (0, 0, 0, 0) != (0, 0, 0)\n\nFirst tuple contains 1 additional elements.\nFirst extra element 3:\n0\n\n- (0, 0, 0, 0)\n?        ---\n\n+ (0, 0, 0)\n\n======================================================================\nFAIL: test_all_seven_crystal_system_fixtures_match_expected_dimensions (test_structure_responses.StructureResponseAnalysisTests.test_all_seven_crystal_system_fixtures_match_expected_dimensions) (item='rucl3_trigonal')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<git-checkouts>/group-theory-operations-toolkit/tests/test_structure_responses.py\", line 87, in test_all_seven_crystal_system_fixtures_match_expected_dimensions\n    self.assertEqual(\nAssertionError: Tuples differ: (1, 4, 4, 1) != (4, 4, 1)\n\nFirst differing element 0:\n1\n4\n\nFirst tuple contains 1 additional elements.\nFirst extra element 3:\n1\n\n- (1, 4, 4, 1)\n?  ---\n\n+ (4, 4, 1)\n\n======================================================================\nFAIL: test_all_seven_crystal_system_fixtures_match_expected_dimensions (test_structure_responses.StructureResponseAnalysisTests.test_all_seven_crystal_system_fixtures_match_expected_dimensions) (item='aucn_hexagonal')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<git-checkouts>/group-theory-operations-toolkit/tests/test_structure_responses.py\", line 87, in test_all_seven_crystal_system_fixtures_match_expected_dimensions\n    self.assertEqual(\nAssertionError: Tuples differ: (1, 3, 3, 1) != (3, 3, 1)\n\nFirst differing element 0:\n1\n3\n\nFirst tuple contains 1 additional elements.\nFirst extra element 3:\n1\n\n- (1, 3, 3, 1)\n?  ---\n\n+ (3, 3, 1)\n\n======================================================================\nFAIL: test_all_seven_crystal_system_fixtures_match_expected_dimensions (test_structure_responses.StructureResponseAnalysisTests.test_all_seven_crystal_system_fixtures_match_expected_dimensions) (item='cssnbr3_cubic')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<git-checkouts>/group-theory-operations-toolkit/tests/test_structure_responses.py\", line 87, in test_all_seven_crystal_system_fixtures_match_expected_dimensions\n    self.assertEqual(\nAssertionError: Tuples differ: (0, 0, 0, 0) != (0, 0, 0)\n\nFirst tuple contains 1 additional elements.\nFirst extra element 3:\n0\n\n- (0, 0, 0, 0)\n?        ---\n\n+ (0, 0, 0)\n\n----------------------------------------------------------------------\nRan 243 tests in 135.387s\n\nFAILED (failures=8)"
+    },
+    {
+      "name": "group_theory_database_validate",
+      "status": "PASS",
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -c 'from group_theory_operations import load_database, validate_database; errors=validate_database(load_database()); print(errors); raise SystemExit(bool(errors))'",
+      "cwd": "<git-checkouts>/group-theory-operations-toolkit",
+      "timeout_seconds": 900,
+      "elapsed_seconds": 0.606,
+      "returncode": 0,
+      "stdout_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/group_theory_database_validate.stdout.log",
+      "stderr_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/group_theory_database_validate.stderr.log",
+      "stdout_tail": "()",
+      "stderr_tail": ""
+    },
+    {
+      "name": "qgr_physics_interface_registry_tests",
+      "status": "FAIL",
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m unittest discover -s integration/physics_interface/tests -v",
+      "cwd": "<workspace>/quantum-geometry-reproductions",
+      "timeout_seconds": 900,
+      "elapsed_seconds": 0.062,
+      "returncode": 1,
+      "stdout_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/qgr_physics_interface_registry_tests.stdout.log",
+      "stderr_log": "<workspace>/.stage23_work/stage23_20261022-142840/results/logs/qgr_physics_interface_registry_tests.stderr.log",
+      "stdout_tail": "",
+      "stderr_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/main.py\", line 104, in __init__\n    self.parseArgs(argv)\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/main.py\", line 130, in parseArgs\n    self._do_discovery(argv[2:])\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/main.py\", line 253, in _do_discovery\n    self.createTests(from_discovery=True, Loader=Loader)\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/main.py\", line 160, in createTests\n    self.test = loader.discover(self.start, self.pattern, self.top)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py\", line 308, in discover\n    raise ImportError('Start directory is not importable: %r' % start_dir)\nImportError: Start directory is not importable: 'integration/physics_interface/tests'"
+    },
+    {
+      "name": "fdr_stage22_read_only_pilot",
+      "status": "SKIPPED_NO_FDR_ZIP"
+    },
+    {
+      "name": "fdr_full_verify_py",
+      "status": "SKIPPED_NO_FDR_ZIP"
+    }
+  ],
+  "interpretation": [
+    "PASS on inspect/plan proves only pipeline plumbing, not a valid Hamiltonian or spectrum.",
+    "A missing dependency or path must be reported as blocked/skipped, never converted into PASS.",
+    "Do not compare NLO and FDR numbers until a genuine matched Wannier model and all conventions are independently established."
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "config": {
+    "response_type": "shift_current",
+    "input_dir": "<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic/L1",
+    "output_root": "<workspace>/.stage23_work/stage23_20261022-142840/results/nlo-plan-output",
+    "tensor_components": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "nk": [
+      3,
+      3,
+      1
+    ],
+    "photon_energy_eV": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "nocc": 1,
+    "spectral_broadening_eV": 0.05,
+    "effective_thickness_A": null,
+    "spin_degeneracy": 1,
+    "sign_factor": -1,
+    "hr_pairing_mode": "reviewed",
+    "rounding_digits": null,
+    "degeneracy_eta_eV": 0.05,
+    "momentum_relaxation_time_fs": null,
+    "numerical_mode": null,
+    "save_legacy_scaled": false,
+    "seedname": "wannier90",
+    "poscar": "POSCAR",
+    "dimensionality": "2D",
+    "chunk_size": 512,
+    "frequency_chunk_size": 200,
+    "workers": 1,
+    "save_mat": false,
+    "output_layout": "compact-v3",
+    "schema_version": "nlo-unified-v3",
+    "config_file": null,
+    "numerical_baseline": "reviewed-hermitian-v1",
+    "position_matrix_mode": "diagonal_tba",
+    "spectral_smearing": "lorentzian",
+    "outer_denominator_policy": "regularized",
+    "k_grid_convention": "stage04_centered"
+  },
+  "provenance": {
+    "package_manifest": "<workspace>/.stage23_work/stage23_20261022-142840/results/models/stage23_haldane_synthetic/package-manifest.json",
+    "structure": "L1",
+    "rank": 1,
+    "candidate": "stage23-synthetic-haldane-tight-binding",
+    "projection": "two-orbital-Haldane-exact-Fourier-map",
+    "num_wann": 2,
+    "nocc_model": 1,
+    "nocc_source": "package-manifest.json",
+    "soc": false,
+    "soc_source": "package-manifest.json physics.soc",
+    "dimensionality_source": "explicit override",
+    "spin_degeneracy_source": "explicit",
+    "symmetry_forbidden_control": false,
+    "symmetry": {
+      "point_group": "-6",
+      "symmetry_tolerance_A": 0.01,
+      "symmetry_operations": 6,
+      "dimensionality": 2,
+      "tensor_rank": 3,
+      "intrinsic_last_index_symmetry": true,
+      "independent_count": 2,
+      "independent_representatives": [
+        "xxx",
+        "xyx"
+      ],
+      "allowed_nonzero_components": [
+        "xxx",
+        "xxy",
+        "xyx",
+        "xyy",
+        "yxx",
+        "yxy",
+        "yyx",
+        "yyy"
+      ],
+      "forbidden_zero_components": [
+        "xxz",
+        "xyz",
+        "xzx",
+        "xzy",
+        "xzz",
+        "yxz",
+        "yyz",
+        "yzx",
+        "yzy",
+        "yzz",
+        "zxx",
+        "zxy",
+        "zxz",
+        "zyx",
+        "zyy",
+        "zyz",
+        "zzx",
+        "zzy",
+        "zzz"
+      ]
+    },
+    "input_integrity": {
+      "hashes_verified": true,
+      "package_manifest_sha256": "76c4723aa1f673650dac51964a8c1066e5d578e4c88f98463d23bf3e41d1ac1a",
+      "required_files_sha256": {
+        "POSCAR": "3be5d48b15bd73f758ae5acbcabbee311abdab17c6161bbc4794698b0b875b2c",
+        "wannier90_hr.dat": "3fd3982f707ab1fc6e908fccf20762d672032d3ff85cc31fb7206b6e3e31c046",
+        "wannier90-wcenter.dat": "cff014d550894feda6e1f9d8e2c46c2228e220e9862752a7dc6a2a7bece31787",
+        "quality.json": "975b49a318c2edfa2f6ca95d46375f2c1e4fcab848b2bcb89d6a75946b567225"
+      }
+    }
+  }
+}

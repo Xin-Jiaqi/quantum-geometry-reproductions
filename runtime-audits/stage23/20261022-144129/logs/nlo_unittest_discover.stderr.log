@@ -1,0 +1,36 @@
+test_actual_model_file_change_fails_even_when_manifest_check_is_skipped (test_campaign.CampaignTests.test_actual_model_file_change_fails_even_when_manifest_check_is_skipped) ... ok
+test_centrosymmetric_campaign_is_auditable_exact_zero (test_campaign.CampaignTests.test_centrosymmetric_campaign_is_auditable_exact_zero) ... ok
+test_exact_duplicate_package_is_rejected (test_campaign.CampaignTests.test_exact_duplicate_package_is_rejected) ... ok
+test_explicit_forbidden_component_can_be_audited_zero_control (test_campaign.CampaignTests.test_explicit_forbidden_component_can_be_audited_zero_control) ... ok
+test_explicit_forbidden_component_is_blocked_before_execution (test_campaign.CampaignTests.test_explicit_forbidden_component_is_blocked_before_execution) ... ok
+test_external_package_change_fails_before_execution (test_campaign.CampaignTests.test_external_package_change_fails_before_execution) ... ok
+test_missing_pass_output_requires_explicit_retry (test_campaign.CampaignTests.test_missing_pass_output_requires_explicit_retry) ... ok
+test_same_rank_and_candidate_do_not_collide_across_packages (test_campaign.CampaignTests.test_same_rank_and_candidate_do_not_collide_across_packages) ... ok
+test_serial_checkpoint_and_idempotent_resume (test_campaign.CampaignTests.test_serial_checkpoint_and_idempotent_resume) ... ok
+test_stale_running_state_is_recovered_at_job_boundary (test_campaign.CampaignTests.test_stale_running_state_is_recovered_at_job_boundary) ... ok
+test_3d_package_plan_uses_full_default_mesh (test_core.HandoffTests.test_3d_package_plan_uses_full_default_mesh) ... ok
+test_3d_rejects_effective_layer_thickness (test_core.HandoffTests.test_3d_rejects_effective_layer_thickness) ... ok
+test_legacy_manifest_uses_quality_soc_without_manual_input (test_core.HandoffTests.test_legacy_manifest_uses_quality_soc_without_manual_input) ... ok
+test_manifest_supplies_nocc_soc_and_dimension (test_core.HandoffTests.test_manifest_supplies_nocc_soc_and_dimension) ... ok
+test_full_wannier_mode_is_rejected_before_kernel_dispatch (test_core.PackageBoundaryTests.test_full_wannier_mode_is_rejected_before_kernel_dispatch) ... ok
+test_3d_kmesh_is_not_collapsed_to_kz_zero (test_core.SymmetryTests.test_3d_kmesh_is_not_collapsed_to_kz_zero) ... ok
+test_poscar_dimension_and_rank3_point_group (test_core.SymmetryTests.test_poscar_dimension_and_rank3_point_group) ... ok
+test_3d_symmetry_control_and_output (test_injection_3d.Injection3DTests.test_3d_symmetry_control_and_output) ... ok
+test_injection_identities_and_compact_output (test_injection_end_to_end.InjectionEndToEndTests.test_injection_identities_and_compact_output) ... ok
+test_vectorized_band_sum_matches_literal_loop (test_injection_formula.InjectionFormulaTests.test_vectorized_band_sum_matches_literal_loop) ... ok
+test_copy_verifies_result_and_writes_receipt (test_kernel_drift.KernelDriftTests.test_copy_verifies_result_and_writes_receipt) ... ok
+test_all_responses_default_to_reviewed_baseline (test_numerical_baseline.NumericalBaselineTests.test_all_responses_default_to_reviewed_baseline) ... ok
+test_baseline_maps_pairing_rounding_and_injection_mode (test_numerical_baseline.NumericalBaselineTests.test_baseline_maps_pairing_rounding_and_injection_mode) ... ok
+test_diagonalize_for_baseline_uses_eigh_only_for_reviewed (test_numerical_baseline.NumericalBaselineTests.test_diagonalize_for_baseline_uses_eigh_only_for_reviewed) ... ok
+test_regression_baseline_passes_matrices_through_unchanged (test_numerical_baseline.NumericalBaselineTests.test_regression_baseline_passes_matrices_through_unchanged) ... ok
+test_reviewed_baseline_projects_matrices_to_hermitian_manifold (test_numerical_baseline.NumericalBaselineTests.test_reviewed_baseline_projects_matrices_to_hermitian_manifold) ... ok
+test_validate_enforces_baseline_pairing_contract (test_numerical_baseline.NumericalBaselineTests.test_validate_enforces_baseline_pairing_contract) ... ok
+test_band_pair_aggregation_matches_literal_sum (test_shg_formula.SHGFormulaTests.test_band_pair_aggregation_matches_literal_sum) ... ok
+test_pivot_selection_is_invariant_to_basis_rotation (test_symmetry_pivots.TensorPivotTests.test_pivot_selection_is_invariant_to_basis_rotation) ... ok
+test_rounded_axis_does_not_select_near_zero_component (test_symmetry_pivots.TensorPivotTests.test_rounded_axis_does_not_select_near_zero_component) ... ok
+test_zero_dimensional_space_is_empty (test_symmetry_pivots.TensorPivotTests.test_zero_dimensional_space_is_empty) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.781s
+
+OK
