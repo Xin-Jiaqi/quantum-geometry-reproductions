@@ -1,0 +1,48 @@
+name: Finite-width optical design
+on:
+  push:
+    paths:
+      - 'studies/dbc-finite-width-design/**'
+      - 'physics/capabilities.json'
+      - 'scripts/core.py'
+      - 'tests/test_core_cli.py'
+      - '.github/workflows/optical-design.yml'
+  pull_request:
+    paths:
+      - 'studies/dbc-finite-width-design/**'
+      - 'physics/capabilities.json'
+      - 'scripts/core.py'
+      - 'tests/test_core_cli.py'
+      - '.github/workflows/optical-design.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  optical-design:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements-core.txt
+      - name: Catalog and routing
+        run: |
+          python scripts/core.py check
+          python -m unittest discover -s tests -v
+      - name: Independent physical tests
+        run: python scripts/core.py test optical-design
+      - name: Recalculate model results
+        run: python scripts/core.py run optical-design --output outputs/optical-design.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: optical-design-py${{ matrix.python }}
+          path: outputs/optical-design.json

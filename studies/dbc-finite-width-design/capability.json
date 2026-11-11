@@ -1,0 +1,28 @@
+{
+  "id": "optical-design",
+  "name": "Finite-width optical critical-point design",
+  "directory": "studies/dbc-finite-width-design",
+  "source": "https://doi.org/10.1103/sqwy-xhdf",
+  "citation": "Independent model follow-up to PRL 135, 226901 (2025)",
+  "status": "MODEL_READY",
+  "capability": "Conditional 2D normal-shift design: finite-width criticality, competing optical edge and independent projector reference",
+  "pythonpath": "src",
+  "example": "scripts/reproduce_core.py",
+  "documentation": "README.md",
+  "apis": [
+    "optical_design.critical",
+    "optical_design.predict",
+    "optical_design.integrate_point",
+    "optical_design.predict_two_feature",
+    "optical_design.projectors.projector_kernel",
+    "optical_design.closure.NormalForm"
+  ],
+  "units": "Model energy in eV; dimensionless k; d2k/(2pi)^2; Gaussian sigma / Lorentzian HWHM; SI prefactor and thickness omitted",
+  "limits": [
+    "Explicit insulating three-orbital paths and conditional local normal form; no material/DFT or global optimum certification",
+    "Projector reference only for smooth isolated scalar-energy subspaces; no flattening of split bands",
+    "Spectral convolution is not a microscopic lifetime; full SHG, excitons and device efficiency excluded",
+    "Real Wannier optical operators require independent same-gauge validation"
+  ],
+  "expected_tests": 52
+}
