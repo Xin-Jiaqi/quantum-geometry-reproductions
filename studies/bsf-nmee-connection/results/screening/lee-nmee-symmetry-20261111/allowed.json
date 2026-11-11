@@ -1,0 +1,142 @@
+{
+  "mono-1929": {
+    "linear_current_driven": {
+      "point_group": "-6m2",
+      "allowed_coefficients": 0,
+      "in_plane_spin_for_Ex": "forbidden",
+      "layers": "single layer"
+    },
+    "E_times_Bz": {
+      "point_group": "-6m2",
+      "allowed_coefficients": 0,
+      "in_plane_spin_for_Ex": "forbidden",
+      "layers": "single layer"
+    }
+  },
+  "mono-2652": {
+    "linear_current_driven": {
+      "point_group": "-6m2",
+      "allowed_coefficients": 0,
+      "in_plane_spin_for_Ex": "forbidden",
+      "layers": "single layer"
+    },
+    "E_times_Bz": {
+      "point_group": "-6m2",
+      "allowed_coefficients": 0,
+      "in_plane_spin_for_Ex": "forbidden",
+      "layers": "single layer"
+    }
+  },
+  "mono-7265": {
+    "linear_current_driven": {
+      "point_group": "3m",
+      "allowed_coefficients": 1,
+      "in_plane_spin_for_Ex": "along y",
+      "layers": "single layer"
+    },
+    "E_times_Bz": {
+      "point_group": "3m",
+      "allowed_coefficients": 1,
+      "in_plane_spin_for_Ex": "along x",
+      "layers": "single layer"
+    }
+  },
+  "bilayer-1930": {
+    "linear_current_driven": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along y",
+      "layers": "independent by symmetry"
+    },
+    "E_times_Bz": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along x",
+      "layers": "independent by symmetry"
+    }
+  },
+  "bilayer-2654": {
+    "linear_current_driven": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along y",
+      "layers": "independent by symmetry"
+    },
+    "E_times_Bz": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along x",
+      "layers": "independent by symmetry"
+    }
+  },
+  "bilayer-1931": {
+    "linear_current_driven": {
+      "point_group": "-3m",
+      "allowed_coefficients": 1,
+      "in_plane_spin_for_Ex": "along y",
+      "layers": "equal and opposite"
+    },
+    "E_times_Bz": {
+      "point_group": "-3m",
+      "allowed_coefficients": 1,
+      "in_plane_spin_for_Ex": "along x",
+      "layers": "equal and opposite"
+    }
+  },
+  "bilayer-7269": {
+    "linear_current_driven": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along y",
+      "layers": "independent by symmetry"
+    },
+    "E_times_Bz": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along x",
+      "layers": "independent by symmetry"
+    }
+  },
+  "bilayer-7268": {
+    "linear_current_driven": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along y",
+      "layers": "independent by symmetry"
+    },
+    "E_times_Bz": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along x",
+      "layers": "independent by symmetry"
+    }
+  },
+  "bilayer-864": {
+    "linear_current_driven": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along y",
+      "layers": "independent by symmetry"
+    },
+    "E_times_Bz": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along x",
+      "layers": "independent by symmetry"
+    }
+  },
+  "bilayer-741": {
+    "linear_current_driven": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along y",
+      "layers": "independent by symmetry"
+    },
+    "E_times_Bz": {
+      "point_group": "3m",
+      "allowed_coefficients": 2,
+      "in_plane_spin_for_Ex": "along x",
+      "layers": "independent by symmetry"
+    }
+  }
+}

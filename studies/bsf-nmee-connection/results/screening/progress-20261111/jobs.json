@@ -8,7 +8,7 @@
     "accepted_states": 27,
     "precision_pass": false
   },
-  "pilot_activated_excluding_anchor": 3,
+  "pilot_activated_excluding_anchor": 4,
   "data_complete_candidates": 1,
   "precision_passed_candidates": 0,
   "planned_candidates": 16,
@@ -27,16 +27,25 @@
     "gate_states_started": 0
   },
   "percent_of_16": {
-    "started": 18.75,
+    "started": 25.0,
     "data_complete": 6.25,
     "precision_passed": 0.0
   },
-  "any_zero_gate_history_including_nonuniform_protocols": 6,
-  "active_WS2": {
+  "any_zero_gate_history_including_nonuniform_protocols": 7,
+  "closed_WS2": {
     "id": 2654,
     "job": "566902.cmspbs1",
-    "start_Asia_Shanghai": "2026-11-11 15:03:29",
-    "state": "running at last check",
-    "scope": "one zero-gate bilayer, see ws2-2654-20261111"
+    "ended": "2026-11-11 15:19:58",
+    "exit": 0,
+    "lower": "+x",
+    "upper": "-x",
+    "net": "unresolved across bands",
+    "mesh": 6
+  },
+  "active_MoS2": {
+    "id": 1930,
+    "job": "566940.cmspbs1",
+    "state": "running at first check",
+    "start_Asia_Shanghai": "2026-11-11 16:29:16"
   }
 }

@@ -1,0 +1,58 @@
+{
+  "complete_at_Asia_Shanghai": "2026-11-11 15:19:58",
+  "mesh": [
+    6,
+    6
+  ],
+  "C_units": "1e-9 (nm V T)^-1",
+  "lower_spin": "+x",
+  "upper_spin": "-x",
+  "net_direction_resolved": false,
+  "mesh_convergence": "not tested",
+  "rows": [
+    {
+      "bands": "96",
+      "probe": "standard",
+      "Cxx_total_lower_upper": [
+        -0.04047969318041903,
+        47.14422208068195,
+        -47.18470177382261
+      ],
+      "max_forbidden": 6.411214074988371e-05,
+      "max_isotropy_difference": 3.4919587790227524e-05
+    },
+    {
+      "bands": "96",
+      "probe": "half_b",
+      "Cxx_total_lower_upper": [
+        -0.040488756683802515,
+        47.144048577730715,
+        -47.18453733448297
+      ],
+      "max_forbidden": 6.410763976480915e-05,
+      "max_isotropy_difference": 3.4919972961233725e-05
+    },
+    {
+      "bands": "112",
+      "probe": "standard",
+      "Cxx_total_lower_upper": [
+        0.08724826373069511,
+        46.578340312773854,
+        -46.49109204908288
+      ],
+      "max_forbidden": 0.01798609926326189,
+      "max_isotropy_difference": 0.03588972858687356
+    },
+    {
+      "bands": "112",
+      "probe": "half_b",
+      "Cxx_total_lower_upper": [
+        0.08723910210306496,
+        46.57816774715856,
+        -46.49092864503562
+      ],
+      "max_forbidden": 0.017986108260592548,
+      "max_isotropy_difference": 0.035889745651509486
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "material": "MoS2",
+  "BiDB": 1930,
+  "source_sha256": "f7f4ac62ac3b390eb8775d188a89b7de85094f1403db4e4cc33d2d8153fd6ba0",
+  "POSCAR_sha256": "ff40836342ebaad55e20db0a662ba37d4266858e67a2985abdcaffb5fb24c12d",
+  "geometry": "BiDB with common z translation and atom sorting only",
+  "species_order": [
+    "S",
+    "Mo_pv"
+  ],
+  "point_group": "3m",
+  "stacking": "{E | (a1+2a2)/3 + d zhat}",
+  "symmetry": "monolayer horizontal mirror forbids Cxx; bilayer allows it; signed layer coefficients not fixed",
+  "question": "Repeat historical MoS2 lower -x, upper +x under the WS2 zero-field protocol. Compare layer directions separately; no net sign prediction.",
+  "scope": "One 6x6 zero-gate fixed-ion bilayer and its layer-resolved tensor, 4 CPU 24 GiB, max 90 min, no retry or dependent jobs. No quantitative convergence claim.",
+  "runner": "../ws2-2654-20261111/zero.py",
+  "runner_sha256": "d46a020457a6d15011ffc6dd73848cae59a2229dde307fa88222541b9db51260"
+}

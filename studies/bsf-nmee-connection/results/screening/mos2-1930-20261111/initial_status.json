@@ -1,0 +1,15 @@
+{
+  "job": "566940.cmspbs1",
+  "node": "csuper003",
+  "stage": "SCF",
+  "complete": false,
+  "potcar_titles": [
+    "PAW_PBE S 06Sep2000",
+    "PAW_PBE Mo_pv 04Feb2005"
+  ],
+  "potcar_sha256": "8dc84fe479efa6e9d6d020d52f529c80ec06d52fcc2a6c8472b1b9510456cefd",
+  "electrons": 48,
+  "state": "R",
+  "start_Asia_Shanghai": "2026-11-11 16:29:16",
+  "first_review_estimated": "16:45–17:05 Asia/Shanghai"
+}
