@@ -1,0 +1,65 @@
+{
+  "schema": "bsf_igmc_agf2_stage2_g1_local_wsl_diagnostic_v1",
+  "date_utc": "2026-10-21T11:00:00Z",
+  "status": "SCF_CONVERGED",
+  "status_meaning": "real VASP SCF converged to EDIFF on the local WSL machine; this is a LOCAL DIAGNOSTIC run, NOT the user-approved one-shot PBS execution (PBS job 490620.cmspbs1 remains queued). No gap/magnetic-ground-state/double-well reproduction is claimed.",
+  "authorization": "local diagnostic explicitly requested by the user; PBS one-shot authorization unchanged",
+  "environment": {
+    "host": "researcher's local Windows machine, WSL2 VM",
+    "cores_available": 20,
+    "ram_total_gb": 7.8,
+    "mpi": "OpenMPI 4.1.6 (mpirun.openmpi)",
+    "vasp": {
+      "build": "vasp.6.6.0 06Mar2026 (build 2026-09-02), complex, user's private local build",
+      "note": "differs from the cluster-accessible vasp.6.4.3_wannier90_cpu; results must be compared with that caveat",
+      "ranks": 8,
+      "parallel_layout": "distrk: 1 group; distr (NCORE=4): 2 band groups",
+      "peak_memory_used_gb": 3.2,
+      "elapsed_sec": 1195,
+      "started_local": "2026-10-21 18:21:50 (host local time)"
+    }
+  },
+  "inputs_identical_to_pbs_submission": {
+    "poscar_sha256": "2d323c3fe2353ef984330b3b99fc24a75a85337883bbaf36d08b20ed45e6d60a",
+    "incar_sha256": "8ca091bbb4c59572b235fe201a71509c40d6ae84fba67b0f2bfbade34a025166",
+    "kpoints_sha256": "4ab9ad06699176341f30e79f18b822be389d066f64e0295ce368e74b8b99420a",
+    "potcar_concatenated_sha256": "8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff",
+    "note": "same locked PAW (Ag PAW_PBE 02Apr2005 + F PAW_PBE 08Apr2002, order Ag then F); POTCAR content not uploaded"
+  },
+  "scf": {
+    "ediff_ev": "1E-6",
+    "ediff_reached": true,
+    "vasp_marker": "aborting loop because EDIFF is reached",
+    "davidson_iterations": 27,
+    "ismear": 0,
+    "sigma_ev": 0.05,
+    "nelm": 120,
+    "nsw": 0,
+    "ibrion": -1
+  },
+  "energetics": {
+    "toten_free_energy_ev_per_12atom_cell": -35.17579601,
+    "e_fermi_ev": -5.6235,
+    "note": "single point at the UNRELAXED C2DB-derived B1_g3.0 geometry; no ionic relaxation performed"
+  },
+  "magnetism": {
+    "net_total_magnetization_mub": 0.0000,
+    "local_ag_moments_mub_in_poscar_order": [-0.567, 0.567, 0.567, -0.567],
+    "ag_d_channel_contributions_mub": [-0.575, 0.575, 0.575, -0.575],
+    "f_moments_mub": "|m| <= 0.001 (numerical noise)",
+    "pattern_verdict": "Ag moments follow the intended Type-I interlayer Neel OPPOSITE seed [-1,+1,+1,-1]; net zero consistent with a compensated collinear antiferromagnetic state (signs are relative spin order, not a SOC easy axis)",
+    "caveat": "stability of this magnetic minimum vs non-magnetic solution, and the true ground state, require k-convergence, possibly ISMEAR/occupation checks and independent review"
+  },
+  "preliminary_gap_diagnostic": {
+    "value_ev": 1.49,
+    "homo_ev": -5.9015,
+    "lumo_ev": -4.4076,
+    "source": "last eigenvalues block of vasprun.xml, occ>=0.5 threshold over all 12x8x1 k-points and both spins",
+    "caveat": "12x8x1 is NOT k-converged; ISMEAR=0 SIGMA=0.05 Gaussian smearing; diagnostic only - NOT a reproduction claim"
+  },
+  "operational_notes": [
+    "first local launch attempt terminated when the controlling ssh session closed (no SCF output produced); relaunched under a persistent session and completed cleanly (OUTCAR contains full timing/accounting block)",
+    "run completed with exit code 0; OUTCAR, vasprun.xml, vaspout.h5, OSZICAR, EIGENVAL, DOSCAR, PROCAR retained privately on the WSL host"
+  ],
+  "boundary": "SCF_CONVERGED here means electronic iterations ended at EDIFF only. It is NOT a claim that the band gap, magnetic ground state, or any double well has been reproduced. PBS job 490620.cmspbs1 (the approved one-shot execution) is still queued and its audit remains pending."
+}
