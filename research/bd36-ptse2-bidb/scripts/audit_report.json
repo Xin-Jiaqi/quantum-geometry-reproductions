@@ -1,0 +1,501 @@
+[
+  {
+    "file": "POSCAR_BiDB_2252_PtSe2",
+    "title": "BiDB id=2252 uid=PtSe2-d000f0288397 (source geometry)",
+    "lattice": {
+      "a_A": 3.74826,
+      "b_A": 3.74826,
+      "c_A": 17.614937,
+      "volume_A3": 214.3242,
+      "hex": true
+    },
+    "species": [
+      "Pt",
+      "Se"
+    ],
+    "counts": [
+      1,
+      2
+    ],
+    "n_atoms": 3,
+    "n_layers": 1,
+    "layer_assignment": {
+      "layer_0": {
+        "atoms": [
+          0
+        ],
+        "z_range_A": [
+          8.80747,
+          8.80747
+        ]
+      }
+    },
+    "interlayer": null,
+    "symmetry": {
+      "inversion": {
+        "center_cart_A": [
+          0.0,
+          0.0,
+          8.80747
+        ],
+        "max_err_A": 1.179080012766339e-08
+      },
+      "c3": {
+        "sign": 1.0,
+        "center_frac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_err_A": 7.159150942842531e-09
+      },
+      "c2prime": null,
+      "mirror_v": {
+        "axis_deg": 30,
+        "center_frac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_err_A": 7.159151293408033e-09
+      },
+      "mirror_h": null
+    },
+    "symmetry_counts": {
+      "inversion": 34,
+      "c3": 6,
+      "c2prime": 0,
+      "mirror_v": 18,
+      "mirror_h": 0
+    },
+    "derived_slide": null
+  },
+  {
+    "file": "POSCAR_BiDB_2253_PtSe2",
+    "title": "BiDB id=2253 uid=PtSe2-d000f0288397-2-1_0_0_1-0_0 (source geometry)",
+    "lattice": {
+      "a_A": 3.74826,
+      "b_A": 3.74826,
+      "c_A": 26.234554,
+      "volume_A3": 319.2007,
+      "hex": true
+    },
+    "species": [
+      "Pt",
+      "Se"
+    ],
+    "counts": [
+      2,
+      4
+    ],
+    "n_atoms": 6,
+    "n_layers": 2,
+    "layer_assignment": {
+      "layer_0": {
+        "atoms": [
+          0,
+          2,
+          3
+        ],
+        "z_range_A": [
+          7.49766,
+          10.11728
+        ]
+      },
+      "layer_1": {
+        "atoms": [
+          1,
+          4,
+          5
+        ],
+        "z_range_A": [
+          12.41483,
+          15.03444
+        ]
+      }
+    },
+    "interlayer": {
+      "pt_pt_vertical_A": 7.53678,
+      "se_se_gap_A": 2.29755,
+      "inplane_pt_pt_A": 0.0,
+      "vacuum_gap_A": 18.69777
+    },
+    "symmetry": {
+      "inversion": {
+        "center_cart_A": [
+          0.0,
+          0.0,
+          11.26605
+        ],
+        "max_err_A": 6.2100321892898054e-09
+      },
+      "c3": {
+        "sign": 1.0,
+        "center_frac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_err_A": 7.159150942842531e-09
+      },
+      "c2prime": null,
+      "mirror_v": {
+        "axis_deg": 30,
+        "center_frac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_err_A": 7.159151293408033e-09
+      },
+      "mirror_h": null
+    },
+    "symmetry_counts": {
+      "inversion": 34,
+      "c3": 6,
+      "c2prime": 0,
+      "mirror_v": 18,
+      "mirror_h": 0
+    },
+    "derived_slide": null
+  },
+  {
+    "file": "POSCAR_BiDB_2255_PtSe2",
+    "title": "BiDB id=2255 uid=PtSe2-d000f0288397-2-1_0_0_1--0.33_-0.67 (source geometry)",
+    "lattice": {
+      "a_A": 3.74826,
+      "b_A": 3.74826,
+      "c_A": 26.234554,
+      "volume_A3": 319.2007,
+      "hex": true
+    },
+    "species": [
+      "Pt",
+      "Se"
+    ],
+    "counts": [
+      2,
+      4
+    ],
+    "n_atoms": 6,
+    "n_layers": 2,
+    "layer_assignment": {
+      "layer_0": {
+        "atoms": [
+          0,
+          2,
+          3
+        ],
+        "z_range_A": [
+          7.49766,
+          10.11728
+        ]
+      },
+      "layer_1": {
+        "atoms": [
+          1,
+          4,
+          5
+        ],
+        "z_range_A": [
+          13.09094,
+          15.71055
+        ]
+      }
+    },
+    "interlayer": {
+      "pt_pt_vertical_A": 8.21289,
+      "se_se_gap_A": 2.97366,
+      "inplane_pt_pt_A": 2.16406,
+      "vacuum_gap_A": 18.02166
+    },
+    "symmetry": {
+      "inversion": {
+        "center_cart_A": [
+          -0.0,
+          -1.08203,
+          11.60411
+        ],
+        "max_err_A": 1.1767406542742172e-08
+      },
+      "c3": {
+        "sign": 1.0,
+        "center_frac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_err_A": 7.159150942842531e-09
+      },
+      "c2prime": null,
+      "mirror_v": {
+        "axis_deg": 30,
+        "center_frac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_err_A": 7.159151293408033e-09
+      },
+      "mirror_h": null
+    },
+    "symmetry_counts": {
+      "inversion": 30,
+      "c3": 6,
+      "c2prime": 0,
+      "mirror_v": 18,
+      "mirror_h": 0
+    },
+    "derived_slide": null
+  },
+  {
+    "file": "POSCAR_BiDB_2254_PtSe2",
+    "title": "BiDB id=2254 uid=PtSe2-d000f0288397-2-1_-1_1_0--0.33_-0.67 (source geometry)",
+    "lattice": {
+      "a_A": 3.74826,
+      "b_A": 3.74826,
+      "c_A": 26.234554,
+      "volume_A3": 319.2007,
+      "hex": true
+    },
+    "species": [
+      "Pt",
+      "Se"
+    ],
+    "counts": [
+      2,
+      4
+    ],
+    "n_atoms": 6,
+    "n_layers": 2,
+    "layer_assignment": {
+      "layer_0": {
+        "atoms": [
+          0,
+          2,
+          3
+        ],
+        "z_range_A": [
+          7.49766,
+          10.11728
+        ]
+      },
+      "layer_1": {
+        "atoms": [
+          1,
+          4,
+          5
+        ],
+        "z_range_A": [
+          12.78361,
+          15.40323
+        ]
+      }
+    },
+    "interlayer": {
+      "pt_pt_vertical_A": 7.90557,
+      "se_se_gap_A": 2.66634,
+      "inplane_pt_pt_A": 2.16406,
+      "vacuum_gap_A": 18.32898
+    },
+    "symmetry": {
+      "inversion": null,
+      "c3": {
+        "sign": 1.0,
+        "center_frac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_err_A": 7.159150942842531e-09
+      },
+      "c2prime": null,
+      "mirror_v": {
+        "axis_deg": 30,
+        "center_frac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_err_A": 7.159151293408033e-09
+      },
+      "mirror_h": null
+    },
+    "symmetry_counts": {
+      "inversion": 0,
+      "c3": 6,
+      "c2prime": 0,
+      "mirror_v": 18,
+      "mirror_h": 0
+    },
+    "derived_slide": null
+  },
+  {
+    "file": "POSCAR_PtSe2_BiDB2253_generic_p008_p019_rigid",
+    "title": "BiDB 2253 derived rigid top displacement fractional u=(0.08, 0.19) (NOT relaxed, NOT an original BiDB record)",
+    "lattice": {
+      "a_A": 3.74826,
+      "b_A": 3.74826,
+      "c_A": 26.234554,
+      "volume_A3": 319.2007,
+      "hex": true
+    },
+    "species": [
+      "Pt",
+      "Se"
+    ],
+    "counts": [
+      2,
+      4
+    ],
+    "n_atoms": 6,
+    "n_layers": 2,
+    "layer_assignment": {
+      "layer_0": {
+        "atoms": [
+          0,
+          2,
+          3
+        ],
+        "z_range_A": [
+          7.49766,
+          10.11728
+        ]
+      },
+      "layer_1": {
+        "atoms": [
+          1,
+          4,
+          5
+        ],
+        "z_range_A": [
+          12.41483,
+          15.03444
+        ]
+      }
+    },
+    "interlayer": {
+      "pt_pt_vertical_A": 7.53678,
+      "se_se_gap_A": 2.29755,
+      "inplane_pt_pt_A": 3.26185,
+      "vacuum_gap_A": 18.69777
+    },
+    "symmetry": {
+      "inversion": {
+        "center_cart_A": [
+          -0.96518,
+          -1.31467,
+          11.26605
+        ],
+        "max_err_A": 6.210032885294803e-09
+      },
+      "c3": null,
+      "c2prime": null,
+      "mirror_v": null,
+      "mirror_h": null
+    },
+    "symmetry_counts": {
+      "inversion": 25,
+      "c3": 0,
+      "c2prime": 0,
+      "mirror_v": 0,
+      "mirror_h": 0
+    },
+    "derived_slide": {
+      "declared_u_frac": [
+        0.08,
+        0.19
+      ],
+      "measured_top_Pt_shift_frac": [
+        0.08,
+        0.19
+      ],
+      "shift_match_err_frac": 6.938893903907228e-17,
+      "layer_gap_A": 2.2975478199945893
+    }
+  },
+  {
+    "file": "POSCAR_PtSe2_BiDB2253_generic_m008_m019_rigid",
+    "title": "BiDB 2253 derived rigid top displacement fractional u=(-0.08, -0.19) (NOT relaxed, NOT an original BiDB record)",
+    "lattice": {
+      "a_A": 3.74826,
+      "b_A": 3.74826,
+      "c_A": 26.234554,
+      "volume_A3": 319.2007,
+      "hex": true
+    },
+    "species": [
+      "Pt",
+      "Se"
+    ],
+    "counts": [
+      2,
+      4
+    ],
+    "n_atoms": 6,
+    "n_layers": 2,
+    "layer_assignment": {
+      "layer_0": {
+        "atoms": [
+          0,
+          2,
+          3
+        ],
+        "z_range_A": [
+          7.49766,
+          10.11728
+        ]
+      },
+      "layer_1": {
+        "atoms": [
+          1,
+          4,
+          5
+        ],
+        "z_range_A": [
+          12.41483,
+          15.03444
+        ]
+      }
+    },
+    "interlayer": {
+      "pt_pt_vertical_A": 7.53678,
+      "se_se_gap_A": 2.29755,
+      "inplane_pt_pt_A": 0.61931,
+      "vacuum_gap_A": 18.69777
+    },
+    "symmetry": {
+      "inversion": {
+        "center_cart_A": [
+          0.02811,
+          -0.30838,
+          11.26605
+        ],
+        "max_err_A": 6.2100321892898054e-09
+      },
+      "c3": null,
+      "c2prime": null,
+      "mirror_v": null,
+      "mirror_h": null
+    },
+    "symmetry_counts": {
+      "inversion": 34,
+      "c3": 0,
+      "c2prime": 0,
+      "mirror_v": 0,
+      "mirror_h": 0
+    },
+    "derived_slide": {
+      "declared_u_frac": [
+        -0.08,
+        -0.19
+      ],
+      "measured_top_Pt_shift_frac": [
+        -0.08,
+        -0.19
+      ],
+      "shift_match_err_frac": 6.938893903907228e-17,
+      "layer_gap_A": 2.2975478199945893
+    }
+  }
+]

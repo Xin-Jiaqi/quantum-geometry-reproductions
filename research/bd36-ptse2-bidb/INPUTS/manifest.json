@@ -1,0 +1,134 @@
+{
+  "2252_monolayer": {
+    "files": [
+      "INCAR_relax",
+      "INCAR_soc",
+      "INCAR_soc_w90_vasp544",
+      "INCAR_soc_w90_vasp6",
+      "KPOINTS",
+      "PBS_draft.pbs",
+      "POSCAR",
+      "POSCAR_SD",
+      "README",
+      "run_env.example.sh",
+      "sbatch_draft.sh",
+      "wannier90.win"
+    ],
+    "kind": "monolayer",
+    "n_atoms": 3,
+    "num_wann": 22,
+    "phase": "round1",
+    "poscar": "POSCAR_BiDB_2252_PtSe2",
+    "poscar_sha256": "71cc6756efa2e63ddfcbe4aa7567f2b207c1edcd14f5caefadb0a64bbd31beff"
+  },
+  "2253_bilayer_baseline": {
+    "files": [
+      "INCAR_relax",
+      "INCAR_soc",
+      "INCAR_soc_w90_vasp544",
+      "INCAR_soc_w90_vasp6",
+      "KPOINTS",
+      "PBS_draft.pbs",
+      "POSCAR",
+      "POSCAR_SD",
+      "README",
+      "run_env.example.sh",
+      "sbatch_draft.sh",
+      "wannier90.win"
+    ],
+    "kind": "bilayer",
+    "n_atoms": 6,
+    "num_wann": 44,
+    "phase": "round1",
+    "poscar": "POSCAR_BiDB_2253_PtSe2",
+    "poscar_sha256": "536361f188ac1cacdae66b72bcf622409d3b40657c256ad2bc0cd10f42d77550"
+  },
+  "2253_generic_m008_m019": {
+    "files": [
+      "INCAR_relax",
+      "INCAR_soc",
+      "INCAR_soc_w90_vasp544",
+      "INCAR_soc_w90_vasp6",
+      "KPOINTS",
+      "PBS_draft.pbs",
+      "POSCAR",
+      "POSCAR_SD",
+      "README",
+      "run_env.example.sh",
+      "sbatch_draft.sh",
+      "wannier90.win"
+    ],
+    "kind": "bilayer",
+    "n_atoms": 6,
+    "num_wann": 44,
+    "phase": "round1_deferred_job",
+    "poscar": "POSCAR_PtSe2_BiDB2253_generic_m008_m019_rigid",
+    "poscar_sha256": "550e065da2996a6c8db5edb3f6689edf5e527070b19877d8c864c8209600cf80"
+  },
+  "2253_generic_p008_p019": {
+    "files": [
+      "INCAR_relax",
+      "INCAR_soc",
+      "INCAR_soc_w90_vasp544",
+      "INCAR_soc_w90_vasp6",
+      "KPOINTS",
+      "PBS_draft.pbs",
+      "POSCAR",
+      "POSCAR_SD",
+      "README",
+      "run_env.example.sh",
+      "sbatch_draft.sh",
+      "wannier90.win"
+    ],
+    "kind": "bilayer",
+    "n_atoms": 6,
+    "num_wann": 44,
+    "phase": "round1",
+    "poscar": "POSCAR_PtSe2_BiDB2253_generic_p008_p019_rigid",
+    "poscar_sha256": "2d9e0424eda17cb05d1f4e16dbad0abd1cdc2fe511e30bc77e85cbab8cc01b1b"
+  },
+  "2254_bilayer": {
+    "files": [
+      "INCAR_relax",
+      "INCAR_soc",
+      "INCAR_soc_w90_vasp544",
+      "INCAR_soc_w90_vasp6",
+      "KPOINTS",
+      "PBS_draft.pbs",
+      "POSCAR",
+      "POSCAR_SD",
+      "README",
+      "run_env.example.sh",
+      "sbatch_draft.sh",
+      "wannier90.win"
+    ],
+    "kind": "bilayer",
+    "n_atoms": 6,
+    "num_wann": 44,
+    "phase": "deferred",
+    "poscar": "POSCAR_BiDB_2254_PtSe2",
+    "poscar_sha256": "6d7ba1b210e9d6cef54bc9dc9f67e1b66f0595e1dfafd735caecdb465239ce73"
+  },
+  "2255_bilayer": {
+    "files": [
+      "INCAR_relax",
+      "INCAR_soc",
+      "INCAR_soc_w90_vasp544",
+      "INCAR_soc_w90_vasp6",
+      "KPOINTS",
+      "PBS_draft.pbs",
+      "POSCAR",
+      "POSCAR_SD",
+      "README",
+      "run_env.example.sh",
+      "sbatch_draft.sh",
+      "wannier90.win"
+    ],
+    "kind": "bilayer",
+    "n_atoms": 6,
+    "num_wann": 44,
+    "phase": "deferred",
+    "poscar": "POSCAR_BiDB_2255_PtSe2",
+    "poscar_sha256": "32b59cf1b2fe88e26bb45c2f5a8fa805a1f4e2b3d07475dfc9b5e1e42a9d2203"
+  }
+}

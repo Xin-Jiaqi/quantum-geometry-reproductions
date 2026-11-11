@@ -1,0 +1,32 @@
+# BD36 SOC + VASP6 native W90 interface (IMR target)
+# NOTE: LWRITE_SPN (VASP > 6.4.2 only) always writes a FORMATTED .spn and
+# auto-adds 'spn_formatted = .true.' to the win; no LSPN_FMTED keyword.
+SYSTEM   = 2252_monolayer soc w90 interface (vasp6)
+PREC     = Accurate
+ENCUT    = 500
+ISMEAR   = 0
+SIGMA    = 0.05
+ISPIN    = 2
+LNONCOLLINEAR = .TRUE.
+LSORBIT  = .TRUE.
+SAXIS    = 0 0 1
+MAGMOM   = 0 0 0.02 0 0 0.02 0 0 0.02
+NBANDS   = 64
+ISYM     = -1
+LWANNIER90 = .TRUE.
+LWRITE_SPN  = .TRUE.
+LWRITE_UNK  = .FALSE.
+KPAR     = 1
+IBRION   = -1
+NSW      = 0
+EDIFF    = 1E-6
+NELM     = 120
+LREAL    = .FALSE.
+ALGO     = Normal
+IVDW     = 12
+LWAVE    = .TRUE.
+LCHARG   = .TRUE.
+LORBIT   = 11
+NCORE    = 4
+LASPH     = .TRUE.
+GGA_COMPAT = .FALSE.

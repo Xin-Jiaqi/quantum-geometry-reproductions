@@ -1,0 +1,17 @@
+#!/bin/bash
+# PBS Pro draft (IMR, Japan). NOT_RUN - explicit user approval required.
+# Toolchain locations come from the LOCAL env file (run_env.sh, NOT committed).
+# No internal absolute paths in this file.
+#PBS -N BD36-2253_generic_p008_p019
+#PBS -q P_030
+#PBS -l select=1:ncpus=28:mpiprocs=28:mem=128gb
+#PBS -l walltime=2:00:00
+#PBS -j oe
+#PBS -V
+set -e
+cd "$PBS_O_WORKDIR"
+[ -f ./run_env.sh ] || { echo "missing run_env.sh (local, uncommitted)"; exit 2; }
+source ./run_env.sh
+: "${VASP_BIN:?}"
+$MPI_RUN -np 28 "$VASP_BIN" > vasp.stdout
+echo "EXIT_OK"

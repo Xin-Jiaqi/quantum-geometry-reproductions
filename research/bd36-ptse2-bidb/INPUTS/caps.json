@@ -1,0 +1,9 @@
+{
+  "conv_core_h": 28,
+  "cores": 28,
+  "job_core_h": 56,
+  "phase0_validation_core_h": 56,
+  "phase1_round1_core_h": 448,
+  "total_core_h": 504,
+  "wall_h": 2
+}
