@@ -1,0 +1,111 @@
+{
+  "stage": "8f",
+  "status": "GLIDE_SELECTION_THEOREM_VERIFIED__PRE_DFT_INPUT_ONLY",
+  "material_source": "BiDB row2685 WSe2 zscan/frozen monolayers, not fully ionic relaxed",
+  "source_sha256": "afe1fe7711189be5b0e189b0c101d6488a7578f4f9ba4e1bb0164534f4255984",
+  "source_ab_uid": "WSe2-1cfbe6183886-2-1_0_0_1--0.67_-0.33",
+  "source_aa_ref_row": 2688,
+  "source_aa_ref_status": "Unstable-Max, not polar endpoint",
+  "a_A": 3.319006624468,
+  "vacuum_gap_A": 17.8410361788,
+  "three_C3_arms_fractional": {
+    "A": [
+      0.3333333333333333,
+      -0.3333333333333333
+    ],
+    "B": [
+      -0.6666666666666666,
+      -0.3333333333333333
+    ],
+    "C": [
+      0.3333333333333333,
+      0.6666666666666666
+    ]
+  },
+  "equal_arm_lengths_A": [
+    1.9162293680787146,
+    1.9162293680787144,
+    1.9162293680787146
+  ],
+  "path_grid_s": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "full_motif_symmetry_order": [
+    6,
+    2,
+    4,
+    2,
+    6
+  ],
+  "total_static_inplane_tensor_allowed_dimension": [
+    1,
+    2,
+    0,
+    2,
+    1
+  ],
+  "layer_staggered_static_inplane_tensor_allowed_dimension": [
+    1,
+    2,
+    2,
+    2,
+    1
+  ],
+  "three_midpoint_top_W_relative_positions": [
+    [
+      0.5,
+      0.5
+    ],
+    [
+      0,
+      0.5
+    ],
+    [
+      0.5,
+      0
+    ]
+  ],
+  "midpoint_protected_glide": "{m_z|half 2D lattice vector} with 2*t a lattice translation",
+  "domain_relation": {
+    "energy": "E(s)=E(1-s) if physical symmetry respected",
+    "total_static": "M_even(s)=-M_even(1-s)",
+    "layer_staggered_static": "M_odd(s)=+M_odd(1-s)"
+  },
+  "toy_model_existence_check": {
+    "scope": "independent 8band Kane-Mele own u=0 pure mz, NOT real WSe2 glide mid, equilibrium/static T0 only",
+    "two_valleys_radius_inv_nm": 0.75,
+    "interlayer_t_eV": 0.005,
+    "radial_angular": [
+      26,
+      72
+    ],
+    "B_step_T": 0.25,
+    "total_static": 8.885104061566181e-19,
+    "layer_staggered_static": -0.0192800322879165,
+    "layer_staggered_radial14x48": -0.019279790222964832,
+    "layer_staggered_radial20x60": -0.01928003122838287,
+    "layer_staggered_Bstep0125": -0.019279883207354964,
+    "layer_staggered_Bstep05": -0.019280628635741412,
+    "min_mu_distance_eV": 0.012792936098940881
+  },
+  "DFT_plan": {
+    "job_files_standalone_archive": 18,
+    "three_arm_path_z_only_jobs": 15,
+    "full_ionic_endpoint_prep_jobs": 3,
+    "runtime_status": "NOT_RUN",
+    "energy_values": null,
+    "pseudopotentials_included": false,
+    "first_three": [
+      "path_A_00_s0.000",
+      "path_A_01_s0.250",
+      "path_A_02_s0.500"
+    ],
+    "method_initial": "VASP non-SOC PBE+D3(BJ), 520eV 15x15x1 preliminary; converge POTCAR ENMAX; fixed lattice ISIF2; all lateral positions fixed F F T",
+    "note": "No VASP/QE/NEB run, barrier/gap/static response unknown"
+  },
+  "scientific_separation": "Independent follow-up studies only. Frozen Jia et al PRL reproduction unchanged. Driven DC and equilibrium static NMEE not equated."
+}

@@ -1,0 +1,76 @@
+{
+  "stage": "7i",
+  "scope": "synthetic 8-band gapped zero-T equilibrium static NMEE, two K/Kprime disks radius .5 nm^-1",
+  "radial_n": 22,
+  "angular_n": 60,
+  "step_B_T": 0.25,
+  "source_steps": {
+    "dk_nm_inv": 0.0025,
+    "d_lambda_eV": 0.0000625
+  },
+  "method": "occupied-subspace U4 Wilson plaquette in (lambda*Sx,kx), independent spin-electric Kubo crosscheck",
+  "benchmarks": [
+    {
+      "u": 0.1,
+      "t_eV": 0.005,
+      "wilson": -6.916308508022276e-7,
+      "kubo": -6.916903698160274e-7,
+      "relative_error": 0.00008604863736299056
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.005,
+      "wilson": 0.0000021647014201997954,
+      "kubo": 0.0000021648360658806164,
+      "relative_error": 0.00006219670992324061
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.02,
+      "wilson": 0.00009842167206749534,
+      "kubo": 0.00009843337225158464,
+      "relative_error": 0.00011886399725698185
+    }
+  ],
+  "tensor_u04_t005": {
+    "kubo": [
+      [
+        0.0000021648360658806164,
+        -4.7598814855323006e-7
+      ],
+      [
+        -1.7132055032888096e-7,
+        0.000006222328667958512
+      ]
+    ],
+    "wilson": [
+      [
+        0.0000021647014201997954,
+        -4.759467436781043e-7
+      ],
+      [
+        -1.7130078451421204e-7,
+        0.00000622181082047964
+      ]
+    ]
+  },
+  "symmetry_exclusions": {
+    "inversion_forbids_xzx": true,
+    "fixed_stack_mirror_z_forbids_xzx": true,
+    "C3_alone_forbids_xzx": false,
+    "time_reversal_alone_forbids_zeeman_derivative": false
+  },
+  "validation": [
+    "source plaquette step halvings show ~quadratic convergence",
+    "arbitrary independent occupied U(4) vertex rotations keep Wilson phase",
+    "mirror-related opposite sliding yields opposite static integrated response",
+    "all x/y spin vs x/y velocity components compared",
+    "uniform whole BZ Wilson was insufficiently converged: do not use as evidence"
+  ],
+  "not_established": [
+    "full BZ rigorous capture",
+    "actual DFT material",
+    "switchable sliding ferroelectric stability",
+    "driven-DC nonlinear Edelstein equivalence"
+  ]
+}

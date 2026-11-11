@@ -1,0 +1,61 @@
+{
+  "stage": "8c",
+  "date": "2026-10-20",
+  "status": "BLOCKED_NO_VERIFIED_RELAXED_BILAYER_FILE",
+  "target": "free-standing relaxed 3R-WSe2 AB/BA 6-atom bilayer slab (not bulk R3m)",
+  "sources": [
+    {
+      "title": "BiDB",
+      "doi": "10.11583/DTU.24849819",
+      "paper": "10.1038/s41467-024-45003-w",
+      "notes": "8451 stackings/2586 stable candidates; actual target six-atom file NOT inspected",
+      "target_verified": false
+    },
+    {
+      "title": "BMDS",
+      "doi": "10.6084/m9.figshare.21799475",
+      "paper": "10.1038/s41597-023-02146-7",
+      "notes": "760 relaxed bilayers; property CSV and stacking generation codes cannot authenticate target relaxed AB geometry",
+      "target_verified": false
+    },
+    {
+      "title": "R-WSe2 experimental source-data",
+      "doi": "10.17861/2e4207fe-a6c0-402c-8468-97839c74c36b",
+      "paper": "10.1038/s41467-026-68854-x",
+      "notes": "Experimental AB/BA evidence and XLSX raw data, no verified CIF or POSCAR",
+      "target_verified": false
+    },
+    {
+      "title": "MoS2 Wannier SHG AA AB-2H AB-3R",
+      "url": "https://zenodo.org/records/21480888",
+      "access": "restricted",
+      "notes": "Declared AB-3R/POSCAR in package but access restricted",
+      "target_verified": false
+    },
+    {
+      "title": "Microscopy MoS2 bilayer/defect structural simulation inputs",
+      "url": "https://github.com/HyunPhys/DislocationNetworksInMarginallyTwistedBilayerMoS2",
+      "notes": "Includes simulated structures but provenance and target exact relaxed 3R-AB atoms not verified",
+      "target_verified": false
+    }
+  ],
+  "source_gate": [
+    "retrievable author original exact bytes",
+    "SHA256 and source download citation",
+    "DFT relaxed free-standing bilayer not bulk/model",
+    "full six-atom species/lattice and registry",
+    "independent pinned-toolkit symmetry analysis"
+  ],
+  "local_preflight": {
+    "file": "BSF_NMEE_STAGE8C_SOURCE_AUDIT_20261020.zip",
+    "tests_passed": 3,
+    "states": [
+      "MODEL_ONLY_NO_RELAXED_STRUCTURE_CLAIM",
+      "BLOCKED_UNVERIFIED_PROVENANCE",
+      "READY_FOR_MANUAL_SOURCE_REVIEW_NOT_VALIDATED"
+    ]
+  },
+  "physics_caution": "Real WSe2 spectral extrema may be at Gamma/Lambda/K under different experimental circumstances; do not assume toy K/Kprime-only hotspot dominance",
+  "actual_material_nmee_calculated": false,
+  "actual_material_DFT_run": false
+}

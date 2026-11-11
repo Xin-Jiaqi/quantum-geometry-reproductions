@@ -1,0 +1,53 @@
+{
+  "stage": "8h",
+  "mode": "READ_ONLY_SCIENTIFIC_AUDIT_NO_NEW_JOBS",
+  "date": "2026-10-21",
+  "site": "Japan IMR PBS existing stage8g pilot",
+  "git_branch": "research/bsf-nmee-stage7-sw-gate-20261020",
+  "remote_root_reported": "/work/sunq/xjq/runs-stage8g-20261020",
+  "upstream_git_sha": "52f126345ee3d7a89d3b6c4ea199a359f35bd094",
+  "pilot_job_ids": {
+    "path_A_s0.00": "490621.cmspbs1",
+    "path_A_s0.25": "490622.cmspbs1",
+    "path_A_s0.50": "490623.cmspbs1"
+  },
+  "actual_raw_outcar_available_to_chat": false,
+  "command_implementation": "hpc-stage8g/review_phase1.py",
+  "instructions": [
+    "Self-checkout/fetch latest research branch without modifying the previously executed HPC input workdir or any frozen reproduction.",
+    "On the authorized HPC, locate the actual 3 Stage8g OUTCAR and CONTCAR in the previously verified remote_root. Verify the three names, PBS IDs and manifest; do not rely only on pasted summary.",
+    "Run the independent raw-output science review_phase1.py --jobs <existing stage8g inputs root>. It must not submit any PBS jobs or mutate input geometry.",
+    "Check relaxed AA/AB-like s0, vertical-mirror s0.25, exact glide at s0.50 using all six actual final atoms and a documented z tolerance (default .001 Å); if expected glide broken, stop NMEE symmetry inference.",
+    "Check final ionic and electronic VASP convergence, overall energy differences and frozen-xy constraints; extract summed upper-layer x/y forces for sliding-stationarity diagnostic (the individual constrained Fx/Fy may be nonzero).",
+    "Report baseline energy from raw outputs and exact delta 13.634/24.117 meV/cell only if reproduced. Verify actual VASP ionic history and convergence; include numerical gap warnings.",
+    "Return a sanitized JSON with code SHA, source/OUTCAR/CONTCAR checksums, symmetry operations/dimensions, net layer shear forces, energies and sources, preserving remote immutable files. Do not upload copyrighted POTCAR or secrets.",
+    "Do not submit s=.75, s=1.00, tighter-mesh runs or any of remaining 12 without later explicit approval."
+  ],
+  "expected_if_symmetry_preserved": {
+    "path_A_s0.00": {
+      "operations": 6,
+      "total_tensor_dim": 1
+    },
+    "path_A_s0.25": {
+      "operations": 2,
+      "total_tensor_dim": 2
+    },
+    "path_A_s0.50": {
+      "operations": 4,
+      "total_tensor_dim": 0,
+      "layer_staggered_tensor_dim": 2,
+      "glide": true
+    }
+  },
+  "status_when_missing": "BLOCKED_RAW_OUTPUT_UNAVAILABLE",
+  "next_compute": "AFTER AUDIT, ASK FOR DISTINCT 2-to-4-JOB SCIENTIFIC APPROVAL",
+  "prohibited_claims": [
+    "CI-NEB switching barrier",
+    "ferroelectric bistability",
+    "SOC full BZ insulating gap",
+    "real WSe2 static NMEE value",
+    "equivalence to driven DC"
+  ],
+  "no_job_submission": true,
+  "no_credentials_or_potcar_in_repository": true
+}

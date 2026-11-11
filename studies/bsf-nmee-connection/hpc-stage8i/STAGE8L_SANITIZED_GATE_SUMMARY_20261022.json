@@ -1,0 +1,287 @@
+{
+ "stage": "Stage8l",
+ "status": "PASS",
+ "date": "2026-10-22",
+ "taskbook_ref": "studies/bsf-nmee-connection/hpc-stage8i/STAGE8M_DEEPSEEK_ROUGH_DFT_RESPONSE_PILOT.md section B",
+ "purpose": "Zero-job band-ledger off-by-one correction and pseudo interband spin-flip gate on the frozen Stage8i SOC WAVECARs; NO new SCF.",
+ "frozen_sha256": {
+  "AB_WAVECAR": "1d1a5dbf858503d9b9d07a85088bac8c3088af44a1598c0472724473739919c3",
+  "AB_EIGENVAL": "2112a13fac886fb5f6bdc72ce0b0549d08c7ccf47c49b7382c5239e932cd4618",
+  "GLIDE_WAVECAR": "750b6dd5806c69bb17180242349bc40fc5cb3e86ef6ea24c1434d2fe47058127",
+  "GLIDE_EIGENVAL": "b70c4a88873833d80e82c1a8b76327716d5d2db2f7b9b6f15a55b7e1a5e89c94"
+ },
+ "sha_verified_on_gate": true,
+ "ledger_correction": {
+  "finding": "Stage8k evidence JSON keys 'E_band35_eV'/'S_grouped' actually stored band 36 (1-based) data: spinor_rows[2] is the 3rd 0-based row = band 36. Energies/self matrices are valid; labels were off by one.",
+  "verified_matches36": 7,
+  "expected_degenerate_no_disambiguation": [
+   "GLIDE pseudo-Kprime"
+  ],
+  "corrected_json": "STAGE8L_BAND_LEDGER_CORRECTED_20261022.json"
+ },
+ "window_check": {
+  "occupied_bands_1based": [
+   33,
+   34,
+   35,
+   36
+  ],
+  "empty_bands_1based": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44
+  ],
+  "occupied_min": 1.0,
+  "empty_max": 0.0
+ },
+ "pseudo_gate_summary": {
+  "method": "Euclidean-normalised pseudo spinors from WAVECAR spinor rows; Frobenius norm of the occupied(33-36)-to-empty(37-44) block of S_x, S_y at four k points; NOT PAW physical spin, NOT velocity, NOT NMEE.",
+  "AB": {
+   "GAMMA_M_TWO_THIRDS_NOT_KPRIME": {
+    "sampled_fractional_k": [
+     -0.3333333,
+     0.3333333,
+     0.0
+    ],
+    "sampled_direct_gap_eV": 2.9253280000000004,
+    "pseudo_crossgap_transverse_spin_block_frobenius_norm": 0.20622983154607555,
+    "top3_pairs_by_abs_S": [
+     {
+      "occupied_band_1based": 34,
+      "empty_band_1based": 41,
+      "pseudo_abs_Sx": 0.02675107,
+      "pseudo_abs_Sy": 0.04633422
+     },
+     {
+      "occupied_band_1based": 34,
+      "empty_band_1based": 42,
+      "pseudo_abs_Sx": 0.04433959,
+      "pseudo_abs_Sy": 0.02559947
+     },
+     {
+      "occupied_band_1based": 36,
+      "empty_band_1based": 40,
+      "pseudo_abs_Sx": 0.04321788,
+      "pseudo_abs_Sy": 0.02495185
+     }
+    ]
+   },
+   "NEAR_M_NOT_EXACT_M": {
+    "sampled_fractional_k": [
+     0.4761905,
+     -3.811604e-19,
+     0.0
+    ],
+    "sampled_direct_gap_eV": 2.950087,
+    "pseudo_crossgap_transverse_spin_block_frobenius_norm": 0.14711408127085795,
+    "top3_pairs_by_abs_S": [
+     {
+      "occupied_band_1based": 35,
+      "empty_band_1based": 40,
+      "pseudo_abs_Sx": 0.02661235,
+      "pseudo_abs_Sy": 0.04609394
+     },
+     {
+      "occupied_band_1based": 36,
+      "empty_band_1based": 39,
+      "pseudo_abs_Sx": 0.0259066,
+      "pseudo_abs_Sy": 0.04487155
+     },
+     {
+      "occupied_band_1based": 34,
+      "empty_band_1based": 38,
+      "pseudo_abs_Sx": 0.02424848,
+      "pseudo_abs_Sy": 0.04199965
+     }
+    ]
+   },
+   "GAMMA_K_INTERIOR_NOT_CBM": {
+    "sampled_fractional_k": [
+     0.1428571,
+     0.1428571,
+     0.0
+    ],
+    "sampled_direct_gap_eV": 2.201491,
+    "pseudo_crossgap_transverse_spin_block_frobenius_norm": 0.13744160338507877,
+    "top3_pairs_by_abs_S": [
+     {
+      "occupied_band_1based": 35,
+      "empty_band_1based": 43,
+      "pseudo_abs_Sx": 0.0404147,
+      "pseudo_abs_Sy": 0.02592297
+     },
+     {
+      "occupied_band_1based": 33,
+      "empty_band_1based": 41,
+      "pseudo_abs_Sx": 0.04039145,
+      "pseudo_abs_Sy": 0.02485698
+     },
+     {
+      "occupied_band_1based": 34,
+      "empty_band_1based": 42,
+      "pseudo_abs_Sx": 0.03779801,
+      "pseudo_abs_Sy": 0.02286627
+     }
+    ]
+   },
+   "TRUE_K": {
+    "sampled_fractional_k": [
+     0.3333333,
+     0.3333333,
+     0.0
+    ],
+    "sampled_direct_gap_eV": 1.152668,
+    "pseudo_crossgap_transverse_spin_block_frobenius_norm": 0.029087314877172834,
+    "top3_pairs_by_abs_S": [
+     {
+      "occupied_band_1based": 35,
+      "empty_band_1based": 44,
+      "pseudo_abs_Sx": 0.00812195,
+      "pseudo_abs_Sy": 0.00812195
+     },
+     {
+      "occupied_band_1based": 34,
+      "empty_band_1based": 41,
+      "pseudo_abs_Sx": 0.00751481,
+      "pseudo_abs_Sy": 0.00751481
+     },
+     {
+      "occupied_band_1based": 36,
+      "empty_band_1based": 38,
+      "pseudo_abs_Sx": 0.00748367,
+      "pseudo_abs_Sy": 0.00748367
+     }
+    ]
+   }
+  },
+  "GLIDE": {
+   "GAMMA_M_TWO_THIRDS_NOT_KPRIME": {
+    "sampled_fractional_k": [
+     -0.3333333,
+     0.3333333,
+     0.0
+    ],
+    "sampled_direct_gap_eV": 2.879649,
+    "pseudo_crossgap_transverse_spin_block_frobenius_norm": 0.2032732997746588,
+    "top3_pairs_by_abs_S": [
+     {
+      "occupied_band_1based": 33,
+      "empty_band_1based": 42,
+      "pseudo_abs_Sx": 0.03062279,
+      "pseudo_abs_Sy": 0.05340353
+     },
+     {
+      "occupied_band_1based": 34,
+      "empty_band_1based": 41,
+      "pseudo_abs_Sx": 0.03064589,
+      "pseudo_abs_Sy": 0.05339045
+     },
+     {
+      "occupied_band_1based": 34,
+      "empty_band_1based": 42,
+      "pseudo_abs_Sx": 0.05148037,
+      "pseudo_abs_Sy": 0.02948962
+     }
+    ]
+   },
+   "NEAR_M_NOT_EXACT_M": {
+    "sampled_fractional_k": [
+     0.4761905,
+     -3.811604e-19,
+     0.0
+    ],
+    "sampled_direct_gap_eV": 2.988166,
+    "pseudo_crossgap_transverse_spin_block_frobenius_norm": 0.14897518397463183,
+    "top3_pairs_by_abs_S": [
+     {
+      "occupied_band_1based": 35,
+      "empty_band_1based": 38,
+      "pseudo_abs_Sx": 0.04715308,
+      "pseudo_abs_Sy": 0.05072139
+     },
+     {
+      "occupied_band_1based": 33,
+      "empty_band_1based": 37,
+      "pseudo_abs_Sx": 0.04887212,
+      "pseudo_abs_Sy": 0.04693603
+     },
+     {
+      "occupied_band_1based": 36,
+      "empty_band_1based": 40,
+      "pseudo_abs_Sx": 0.04765221,
+      "pseudo_abs_Sy": 0.04830095
+     }
+    ]
+   },
+   "GAMMA_K_INTERIOR_NOT_CBM": {
+    "sampled_fractional_k": [
+     0.1428571,
+     0.1428571,
+     0.0
+    ],
+    "sampled_direct_gap_eV": 2.273346,
+    "pseudo_crossgap_transverse_spin_block_frobenius_norm": 0.14066750391687732,
+    "top3_pairs_by_abs_S": [
+     {
+      "occupied_band_1based": 35,
+      "empty_band_1based": 43,
+      "pseudo_abs_Sx": 0.05032606,
+      "pseudo_abs_Sy": 0.03530678
+     },
+     {
+      "occupied_band_1based": 33,
+      "empty_band_1based": 41,
+      "pseudo_abs_Sx": 0.04986418,
+      "pseudo_abs_Sy": 0.03049346
+     },
+     {
+      "occupied_band_1based": 36,
+      "empty_band_1based": 42,
+      "pseudo_abs_Sx": 0.04930748,
+      "pseudo_abs_Sy": 0.03748685
+     }
+    ]
+   },
+   "TRUE_K": {
+    "sampled_fractional_k": [
+     0.3333333,
+     0.3333333,
+     0.0
+    ],
+    "sampled_direct_gap_eV": 1.212372,
+    "pseudo_crossgap_transverse_spin_block_frobenius_norm": 0.02702767830194262,
+    "top3_pairs_by_abs_S": [
+     {
+      "occupied_band_1based": 35,
+      "empty_band_1based": 43,
+      "pseudo_abs_Sx": 0.00847178,
+      "pseudo_abs_Sy": 0.00673871
+     },
+     {
+      "occupied_band_1based": 33,
+      "empty_band_1based": 40,
+      "pseudo_abs_Sx": 0.00726747,
+      "pseudo_abs_Sy": 0.00665646
+     },
+     {
+      "occupied_band_1based": 34,
+      "empty_band_1based": 39,
+      "pseudo_abs_Sx": 0.00599482,
+      "pseudo_abs_Sy": 0.0064479
+     }
+    ]
+   }
+  }
+ },
+ "scientific_read": {
+  "crossgap_pseudo_spinflip_channel_present": true,
+  "ab_vs_glide_vertex_strength": "same-order at each k (Frob 0.206/0.203, 0.147/0.149, 0.137/0.141, 0.029/0.027) as expected: interband SOC mixing is structural, vertex strength is not the response.",
+  "valley_K_weak": "Frobenius ~0.03 at both K points (Ising-like in-plane suppression).",
+  "caveat": "Presence of a cross-gap spin-flip channel is necessary but NOT sufficient; Gamma also needs the velocity vertex and full-BZ summation. Stage8m response must decide GO/NO-GO."
+ }
+}

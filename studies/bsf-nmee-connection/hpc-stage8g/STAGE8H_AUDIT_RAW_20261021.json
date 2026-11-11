@@ -1,0 +1,136 @@
+{
+  "status": "RAW_GEOMETRY_SYMMETRY_GATE_PASS__MESH_XC_CONVERGENCE_PENDING",
+  "source": "local actual OUTCAR + CONTCAR and SHA-locked manifest",
+  "jobs": [
+    {
+      "job": "path_A_s0.00",
+      "slide_fraction": 0.0,
+      "raw_output_checks": {
+        "final_TOTEN_eV": -45.66480588,
+        "OUTCAR_sha256": "13974da7447c2641b0b55acfd31f684270bcc70872ba71e11a6abb2f2f37de82",
+        "CONTCAR_sha256": "60ee4c590324dea8b7e3fa99780dc496717f12bc29f3a4f7deffe423d3e57992",
+        "fixed_cell_error_A": 0.0,
+        "max_lateral_xy_drift_A": 1.6029043444149905e-14,
+        "max_abs_Fz_eV_A": 0.006172,
+        "vasp_ionic_accuracy_flag": true,
+        "status": "CONVERGED_REQUIRES_SCIENTIFIC_REVIEW"
+      },
+      "operations": 6,
+      "horizontal_glide": false,
+      "tensor_dimension": {
+        "total": 1,
+        "layer_odd": 1
+      },
+      "symmetry_tolerance": 0.001,
+      "structure_sha256": "60ee4c590324dea8b7e3fa99780dc496717f12bc29f3a4f7deffe423d3e57992",
+      "final_force_diagnostics": {
+        "max_abs_Fz_eV_A": 0.006172,
+        "sum_upper_layer_inplane_force_eV_A": [
+          0.0,
+          0.0
+        ],
+        "sum_upper_layer_force_along_sliding_needs_alignment": true,
+        "note": "nonzero individual Fx/Fy can be expected with frozen xy; sum over upper layer tests rigid sliding stationarity"
+      },
+      "symmetry_expected_from_ideal": {
+        "operations": 6,
+        "total_tensor_dimension": 1,
+        "horizontal_glide": false
+      },
+      "symmetry_pass": true
+    },
+    {
+      "job": "path_A_s0.25",
+      "slide_fraction": 0.25,
+      "raw_output_checks": {
+        "final_TOTEN_eV": -45.65117241,
+        "OUTCAR_sha256": "76d279268451688ea126de31aa8200cec9a1a6e273451d2f3293e370b316b32e",
+        "CONTCAR_sha256": "230fa32efc508089b49ec68d69c3e91212a1c64063abca0f5e965292d326c4c4",
+        "fixed_cell_error_A": 0.0,
+        "max_lateral_xy_drift_A": 1.6029043444149905e-14,
+        "max_abs_Fz_eV_A": 0.006209,
+        "vasp_ionic_accuracy_flag": true,
+        "status": "CONVERGED_REQUIRES_SCIENTIFIC_REVIEW"
+      },
+      "operations": 2,
+      "horizontal_glide": false,
+      "tensor_dimension": {
+        "total": 2,
+        "layer_odd": 2
+      },
+      "symmetry_tolerance": 0.001,
+      "structure_sha256": "230fa32efc508089b49ec68d69c3e91212a1c64063abca0f5e965292d326c4c4",
+      "final_force_diagnostics": {
+        "max_abs_Fz_eV_A": 0.006209,
+        "sum_upper_layer_inplane_force_eV_A": [
+          -0.031622,
+          0.018257
+        ],
+        "sum_upper_layer_force_along_sliding_needs_alignment": true,
+        "note": "nonzero individual Fx/Fy can be expected with frozen xy; sum over upper layer tests rigid sliding stationarity"
+      },
+      "symmetry_expected_from_ideal": {
+        "operations": 2,
+        "total_tensor_dimension": 2,
+        "horizontal_glide": false
+      },
+      "symmetry_pass": true
+    },
+    {
+      "job": "path_A_s0.50",
+      "slide_fraction": 0.5,
+      "raw_output_checks": {
+        "final_TOTEN_eV": -45.64068876,
+        "OUTCAR_sha256": "8deffc4f79a8b078758a2fc01de8bf581d3ef691950b73a1941be923b67ad46b",
+        "CONTCAR_sha256": "fe5eb6f6071f6a8f9a1dd76d4603b1dad694f1fbaf5d854bb49107ce79b9fb5b",
+        "fixed_cell_error_A": 0.0,
+        "max_lateral_xy_drift_A": 1.6029043444149905e-14,
+        "max_abs_Fz_eV_A": 0.009974,
+        "vasp_ionic_accuracy_flag": true,
+        "status": "CONVERGED_REQUIRES_SCIENTIFIC_REVIEW"
+      },
+      "operations": 4,
+      "horizontal_glide": true,
+      "tensor_dimension": {
+        "total": 0,
+        "layer_odd": 2
+      },
+      "symmetry_tolerance": 0.001,
+      "structure_sha256": "fe5eb6f6071f6a8f9a1dd76d4603b1dad694f1fbaf5d854bb49107ce79b9fb5b",
+      "final_force_diagnostics": {
+        "max_abs_Fz_eV_A": 0.009974,
+        "sum_upper_layer_inplane_force_eV_A": [
+          0.0,
+          0.0
+        ],
+        "sum_upper_layer_force_along_sliding_needs_alignment": true,
+        "note": "nonzero individual Fx/Fy can be expected with frozen xy; sum over upper layer tests rigid sliding stationarity"
+      },
+      "symmetry_expected_from_ideal": {
+        "operations": 4,
+        "total_tensor_dimension": 0,
+        "horizontal_glide": true
+      },
+      "symmetry_pass": true
+    }
+  ],
+  "E_eV_per_2fu_cell": [
+    -45.66480588,
+    -45.65117241,
+    -45.64068876
+  ],
+  "delta_E_meV_per_2fu_cell": [
+    0.0,
+    13.633470000002035,
+    24.11711999999966
+  ],
+  "E_second_finite_difference_meV": -3.1498200000044108,
+  "known_missing": [
+    "k-mesh/ENCUT/dispersion/vacuum convergence",
+    "mirror partner independent energy check",
+    "full ionic endpoints and NEB barrier",
+    "SOC full BZ gap and real static NMEE"
+  ],
+  "NEB_barrier": null,
+  "material_static_NMEE": null
+}

@@ -1,0 +1,131 @@
+{
+  "stage": "8a",
+  "date": "2026-10-20",
+  "status": "LITERATURE_PRESCREEN_ONLY",
+  "physical_scope": "gapped T=0 equilibrium/static Zeeman derivative of spin-electric response; not driven-DC NMEE",
+  "dfT_run": false,
+  "candidates": [
+    {
+      "id": "3R-WSe2-homobilayer",
+      "rank": "A1-primary",
+      "decision": "first structure/symmetry preflight",
+      "known": [
+        "AB/BA ferroelectric domains and field-driven domain switching reported",
+        "indirect-gap electronic structure reported",
+        "520±20 meV SOC-driven splitting at K reported in quasi-free-standing rhombohedral bilayer"
+      ],
+      "inferred": [
+        "strong SOC likely helps spin response",
+        "parallel 1H-TMD AA reference likely D3h with C3 and mz; R AB/BA likely C3v"
+      ],
+      "unknown": [
+        "full-BZ gap along full sliding path",
+        "gap at all auxiliary lambda/B source corners",
+        "same-frame spinor Wannier operators and Berry/position connection",
+        "actual static NMEE sign/magnitude"
+      ],
+      "sources": [
+        "https://doi.org/10.1038/s41467-026-68854-x",
+        "https://doi.org/10.1103/xs47-7hky"
+      ]
+    },
+    {
+      "id": "3R-MoS2-homobilayer",
+      "rank": "A2-control",
+      "decision": "reference/control structure",
+      "known": [
+        "AB/BA polar states and switching literature",
+        "one NEB study reports 15 meV path barrier"
+      ],
+      "inferred": [
+        "same 1H-TMD symmetry route gives a clean check of C3+mz selection rules"
+      ],
+      "unknown": [
+        "full-BZ gap across path with chosen functional/SOC",
+        "same-frame spinor Wannier operator package",
+        "actual static NMEE"
+      ],
+      "sources": [
+        "https://doi.org/10.1038/s41598-019-50293-y",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11685460/"
+      ]
+    },
+    {
+      "id": "3R-WS2-homobilayer",
+      "rank": "B1-secondary",
+      "decision": "same-family robustness check after WSe2",
+      "known": [
+        "DFT/SOC literature reports stacking-dependent band splitting"
+      ],
+      "unknown": [
+        "comparable verified switching/barrier data",
+        "full-path gap",
+        "static NMEE"
+      ],
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9931205/"
+      ]
+    },
+    {
+      "id": "Cd2Se2-bilayer",
+      "rank": "B2-exploratory",
+      "decision": "do not prioritize before exact structure audit",
+      "known": [
+        "2026 preprint screens 280 M2X2, reports 8 sliding-ferroelectric candidates; Cd2Se2 has polarization-switchable SOC valence spin splitting"
+      ],
+      "unknown": [
+        "exact relaxed structure and symmetry",
+        "reference C3+mz applicability",
+        "full-path insulating gap",
+        "experimental material availability",
+        "Wannier operators"
+      ],
+      "sources": [
+        "https://doi.org/10.2139/ssrn.6865959"
+      ]
+    },
+    {
+      "id": "1T-PtS2-bilayer",
+      "rank": "C1-alternate-symmetry",
+      "decision": "separate symmetry class unless verified otherwise",
+      "known": [
+        "2026 high-throughput study lists PtS2 among promising sliding-ferroelectric semiconductor channels",
+        "1T-PtS2 monolayer inversion symmetric and lacks the 1H horizontal mirror"
+      ],
+      "unknown": [
+        "actual stack operations and response tensor allowed components",
+        "full-path gap and source-corner guards",
+        "Wannier operators"
+      ],
+      "sources": [
+        "https://doi.org/10.1021/acs.nanolett.6c02536",
+        "https://doi.org/10.1038/s41524-022-00828-1"
+      ]
+    },
+    {
+      "id": "MoS2-WS2-heterobilayer",
+      "rank": "C2-later-extension",
+      "decision": "defer until homobilayer baseline",
+      "known": [
+        "high-throughput TMD heterobilayer sliding-FE literature includes experimentally reported MoS2/WS2"
+      ],
+      "unknown": [
+        "heterostructure symmetry and commensurate-cell cost",
+        "full gap and static NMEE",
+        "layer exchange is not generally a symmetry"
+      ],
+      "sources": [
+        "https://doi.org/10.1021/acsami.4c19017"
+      ]
+    }
+  ],
+  "hard_gates": [
+    "actual full-motif symmetry: AA C3+mz if claiming Stage6 scaling; AB/BA fixed-stack point group and domain map",
+    "positive full-BZ indirect gap for AA, AB, BA and intermediate sliding coordinates with SOC",
+    "gap remains open at every lambda/B source corner",
+    "spinor H(k), Sxyz(k), physical basis overlap/Berry connection, covariant velocity and remote-band-window convergence",
+    "static equilibrium response distinct from driven-DC NMEE"
+  ],
+  "decision": "3R-WSe2 primary; 3R-MoS2 control; 3R-WS2 secondary. Cd2Se2 and PtS2 remain exploratory until exact structure/symmetry/gap feasibility are checked.",
+  "next_action": "Gate 1 only: obtain exact structure coordinates and use existing group-theory toolkit for symmetry/stacking preflight; no DFT response calculation yet."
+}

@@ -1,0 +1,103 @@
+{
+  "stage": "8b",
+  "status": "IDEAL_GEOMETRY_VALIDATED_NOT_RELAXED_CIF",
+  "scope": "full 6-atom parallel 1H TMD ideal bilayers; NO DFT, NO electronic gap or NMEE",
+  "materials": [
+    "WSe2",
+    "MoS2"
+  ],
+  "motif": "M fractional xy (0,0); X(+h) and X(-h) at xy (1/3,2/3)",
+  "stackings": {
+    "AA": [
+      0,
+      0
+    ],
+    "AB": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "BA": [
+      -0.3333333333333333,
+      -0.6666666666666666
+    ],
+    "generic": [
+      0.13,
+      0.2
+    ]
+  },
+  "lattice": {
+    "WSe2": {
+      "a_A": 3.28,
+      "h_A": 1.67,
+      "interface_gap_A": 3.165,
+      "approximations": [
+        "h"
+      ]
+    },
+    "MoS2": {
+      "a_A": 3.1881,
+      "h_A": 1.5612726599999998,
+      "interface_gap_A": 3,
+      "approximations": [
+        "interface_gap"
+      ]
+    }
+  },
+  "symmetry": {
+    "AA": {
+      "point_group": "D3h",
+      "operations": 12,
+      "C3": true,
+      "mz": true,
+      "inversion": false,
+      "allowed_Gamma_xzx": false
+    },
+    "AB": {
+      "point_group": "C3v",
+      "operations": 6,
+      "C3": true,
+      "mz": false,
+      "inversion": false,
+      "allowed_Gamma_xzx": true
+    },
+    "BA": {
+      "point_group": "C3v",
+      "operations": 6,
+      "C3": true,
+      "mz": false,
+      "inversion": false,
+      "allowed_Gamma_xzx": true
+    },
+    "generic": {
+      "point_group": "C1",
+      "operations": 1,
+      "C3": false,
+      "mz": false,
+      "inversion": false,
+      "allowed_Gamma_xzx": true
+    },
+    "AB_to_BA_horizontal_mirror_with_origin_shift": true
+  },
+  "method": "Independent NumPy check mapping every of 6 atomic species and z positions under D6 in-plane rotation/reflection × z flip (24 candidate operations), with 2D periodic lattice and one global in-plane translation. Reynolds projection of two-axial-one-polar rank-3 tensor Gamma[spin,B,E].",
+  "validation": {
+    "local_tests_passed": 3,
+    "gap_parameter_varied_from_A": [
+      2.7,
+      3.5,
+      4.8
+    ],
+    "full_spglib_or_external_toolkit_crosscheck": "NOT_RUN"
+  },
+  "sources": [
+    "https://www.sciencedirect.com/science/article/pii/S0169433221018626",
+    "https://doi.org/10.1039/D1NR06119D",
+    "https://pubs.rsc.org/en/content/articlepdf/2021/ra/d0ra10443d",
+    "https://doi.org/10.1038/s41467-026-68854-x"
+  ],
+  "limitations": [
+    "All CIFs are IDEAL_UNRELAXED geometry templates, not published relaxed double-layer structures.",
+    "Symmetry allowed does not mean nonzero NMEE; true band gap and spinor Wannier operators missing.",
+    "Ferroelectric energy minima, switching barrier, actual polarization and driven-DC current are NOT established."
+  ],
+  "next": "Obtain relaxed bilayer CIF/POSCAR for WSe2 AB/BA and/or AA; use real group-theory toolkit and check actual symmetry, then evaluate full gap and operator readiness."
+}

@@ -1,0 +1,242 @@
+{
+ "stage": "8k",
+ "date": "2026-10-22",
+ "question": "Does the real WSe2 SOC Hamiltonian conserve Sz? Test on nondegenerate pseudized spinors from raw WAVECAR.",
+ "parser": "stage8k_independent_reader (own record walk, no pymatgen band_energy)",
+ "parser_status": "WAVECAR_ENERGY_ROUNDTRIP_PASS",
+ "layout_anchor": "VASP 6.4.3 ncl: REC1(recl,spin,rtag)+REC2(nk,nb,encut,lat,efermi); kpoint=97*recl8*8 B (header 1*recl8 + nb bands each recl8); nplane complex64/band grouped (up nG then dn nG); file-size closure verified on raw files",
+ "input_sha256": {
+  "soc_AB_s0.00": {
+   "EIGENVAL": "2112a13fac886fb5f6bdc72ce0b0549d08c7ccf47c49b7382c5239e932cd4618",
+   "OUTCAR": "8f88851d427f63e4c8768b29cc9e376b76f85fbae40bd011e9b1d69e113c534b",
+   "WAVECAR": "1d1a5dbf858503d9b9d07a85088bac8c3088af44a1598c0472724473739919c3",
+   "POSCAR": "60ee4c590324dea8b7e3fa99780dc496717f12bc29f3a4f7deffe423d3e57992",
+   "INCAR": "5421df83c460cbe7d3e2ee3c7b0f34eaf4203b9e51412059c87cdd639fdbecb3",
+   "KPOINTS": "f6dd1780aca80de66685642ad802df7751858f12446dedf78ae4aead1d2af41e"
+  },
+  "soc_GLIDE_s0.50": {
+   "EIGENVAL": "b70c4a88873833d80e82c1a8b76327716d5d2db2f7b9b6f15a55b7e1a5e89c94",
+   "OUTCAR": "0b13aa2ab73bbd0292863ebfd2225cd346b6e2fd483c8f93b1401a0f594e3acb",
+   "WAVECAR": "750b6dd5806c69bb17180242349bc40fc5cb3e86ef6ea24c1434d2fe47058127",
+   "POSCAR": "fe5eb6f6071f6a8f9a1dd76d4603b1dad694f1fbaf5d854bb49107ce79b9fb5b",
+   "INCAR": "5421df83c460cbe7d3e2ee3c7b0f34eaf4203b9e51412059c87cdd639fdbecb3",
+   "KPOINTS": "f6dd1780aca80de66685642ad802df7751858f12446dedf78ae4aead1d2af41e"
+  }
+ },
+ "evidence_hierarchy": {
+  "strict_nonconservation": "nondegenerate pseudo spinor with |Sx or Sy| > tolerance implies [H,Sz]!=0 at that k (PAW transform is spin-diagonal; VASP solves the pseudized generalized eigenproblem)",
+  "quantitative_spin": "NOT established: PAW augmentation + on-site projector reconstruction impossible from truncated PROCAR -> BLOCKED_PAW_SPIN_OPERATOR for quantitative physical spin",
+  "kubo_or_nmee": "NOT computed and NOT claimed"
+ },
+ "key_results": {
+  "soc_AB_s0.00": {
+   "GAMMA_M_2_3__OLD_FALSE_Kp": {
+    "E_band35_eV": -1.475629,
+    "gap_band35_meV": 7.84,
+    "S_grouped": [
+     0.044456,
+     0.077,
+     -0.0
+    ],
+    "S_interleaved": [
+     -0.033473,
+     -0.034478,
+     0.016549
+    ],
+    "norm": 0.958338,
+    "phase_invariance_pass": true
+   },
+   "GAMMA_M_NEAR_M": {
+    "E_band35_eV": -1.238504,
+    "gap_band35_meV": 10.285,
+    "S_grouped": [
+     -0.082405,
+     0.14273,
+     0.0
+    ],
+    "S_interleaved": [
+     0.047778,
+     -0.004563,
+     0.006134
+    ],
+    "norm": 1.027088,
+    "phase_invariance_pass": true
+   },
+   "GAMMA_K_INTERIOR": {
+    "E_band35_eV": -1.063901,
+    "gap_band35_meV": 71.252,
+    "S_grouped": [
+     -0.032539,
+     0.018786,
+     -0.47659
+    ],
+    "S_interleaved": [
+     -0.038187,
+     -0.009474,
+     0.293681
+    ],
+    "norm": 0.903104,
+    "phase_invariance_pass": true
+   },
+   "TRUE_K": {
+    "E_band35_eV": -0.176531,
+    "gap_band35_meV": 87.543,
+    "S_grouped": [
+     -0.0,
+     0.0,
+     -0.497881
+    ],
+    "S_interleaved": [
+     0.00964,
+     -0.139296,
+     -0.007119
+    ],
+    "norm": 0.88499,
+    "phase_invariance_pass": true
+   }
+  },
+  "soc_GLIDE_s0.50": {
+   "GAMMA_M_2_3__OLD_FALSE_Kp": {
+    "E_band35_eV": -1.446857,
+    "gap_band35_meV": 0.0,
+    "S_grouped": [
+     0.122815,
+     0.202194,
+     -0.007595
+    ],
+    "S_interleaved": [
+     0.003102,
+     -0.030754,
+     0.00966
+    ],
+    "norm": 0.958297,
+    "phase_invariance_pass": true
+   },
+   "GAMMA_M_NEAR_M": {
+    "E_band35_eV": -1.244483,
+    "gap_band35_meV": 20.635,
+    "S_grouped": [
+     0.0,
+     0.0,
+     -0.462427
+    ],
+    "S_interleaved": [
+     0.022616,
+     0.003289,
+     0.18838
+    ],
+    "norm": 1.014644,
+    "phase_invariance_pass": true
+   },
+   "GAMMA_K_INTERIOR": {
+    "E_band35_eV": -1.106324,
+    "gap_band35_meV": 16.375,
+    "S_grouped": [
+     -1e-06,
+     0.0,
+     -0.475266
+    ],
+    "S_interleaved": [
+     -0.016238,
+     0.002066,
+     0.299219
+    ],
+    "norm": 0.899213,
+    "phase_invariance_pass": true
+   },
+   "TRUE_K": {
+    "E_band35_eV": -0.20245,
+    "gap_band35_meV": 35.311,
+    "S_grouped": [
+     -0.0,
+     0.0,
+     -0.498856
+    ],
+    "S_interleaved": [
+     0.009369,
+     -0.014832,
+     -0.006066
+    ],
+    "norm": 0.884258,
+    "phase_invariance_pass": true
+   }
+  }
+ },
+ "time_reversal": {
+  "soc_AB_s0.00": {
+   "band35": {
+    "E_K_eV": -0.264074,
+    "E_Kp_eV": -0.264074,
+    "K_S": [
+     0.0,
+     -0.0,
+     -0.499613
+    ],
+    "Kp_S": [
+     0.0,
+     -0.0,
+     0.499613
+    ],
+    "spin_reversal": true
+   },
+   "band36": {
+    "E_K_eV": -0.176531,
+    "E_Kp_eV": -0.176531,
+    "K_S": [
+     -0.0,
+     0.0,
+     -0.497881
+    ],
+    "Kp_S": [
+     -0.0,
+     0.0,
+     0.497881
+    ],
+    "spin_reversal": true
+   }
+  },
+  "soc_GLIDE_s0.50": {
+   "band35": {
+    "E_K_eV": -0.237761,
+    "E_Kp_eV": -0.237761,
+    "K_S": [
+     0.0,
+     -0.0,
+     -0.498723
+    ],
+    "Kp_S": [
+     -0.0,
+     0.0,
+     0.498723
+    ],
+    "spin_reversal": true
+   },
+   "band36": {
+    "E_K_eV": -0.20245,
+    "E_Kp_eV": -0.20245,
+    "K_S": [
+     -0.0,
+     0.0,
+     -0.498856
+    ],
+    "Kp_S": [
+     0.0,
+     -0.0,
+     0.498856
+    ],
+    "spin_reversal": true
+   }
+  }
+ },
+ "degraded_outputs": [
+  "both jobs Exit_status=255 (MPI finalize; SCF converged)",
+  "PROCAR 21 B header only",
+  "WAVECAR header sparse (recl,spin,rtag then zero pad; REC2 carries real metadata)"
+ ],
+ "conclusion": {
+  "AB_nondegenerate_pseudo_spin_mixing": "CONFIRMED at 3 isolated bands (|S_perp| 0.168/0.189/0.034; min band gaps 7.8/10.3/71.3 meV) -> strict global Sz conservation falsified for the AB SOC Hamiltonian",
+  "glide_same_k_bands": "Ising-like (Sx=Sy=0, |Sz|~0.46-0.47) at the two isolated points; false-Kp point exactly degenerate (gauge trap); cross-stack orbital correspondence NOT proven (band index != orbital)",
+  "K_vs_Kp": "E(K)=E(-K) and spin reversal verified; 87.54/35.31 meV are adjacent-valence-band separations with same spin direction, NOT opposite-spin Ising splitting (Stage8j erratum upheld)",
+  "status_level": "NONDEGENERATE_PSEUDO_SPIN_MIXING_CONFIRMED__QUANTITATIVE_PAW_BLOCKED__NMEE_NOT_COMPUTED"
+ }
+}

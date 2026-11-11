@@ -1,0 +1,66 @@
+{
+  "stage": "7j",
+  "scientific_status": "PROVED_GAUGE_IDENTITY_AND_SYNTHETIC_COUNTEREXAMPLE",
+  "scope": "synthetic eight-band insulating T=0 equilibrium/static mixed Berry curvature, NOT driven DC",
+  "type": "representation invariance test only, no new transport phenomenon",
+  "operator_units": {
+    "k": "nm^-1",
+    "lambda": "eV Pauli spin source",
+    "B": "tesla spin-only Zeeman",
+    "velocity": "eV nm"
+  },
+  "test_location": "K first valley + (0.05,0.02) nm^-1",
+  "delta_k_inv_nm": 0.006,
+  "delta_lambda_eV": 0.00015,
+  "step_B_T": 0.25,
+  "rows": [
+    {
+      "u": 0.1,
+      "t_eV": 0.005,
+      "original": -0.032808558314175985,
+      "covariant": -0.032808558175397635,
+      "naive": 0.20141988734075283,
+      "naive_sign_wrong": true
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.005,
+      "original": -0.08692616951097165,
+      "covariant": -0.0869261691408959,
+      "naive": 0.14175483317665308,
+      "naive_sign_wrong": true
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.02,
+      "original": -1.7016735466156048,
+      "covariant": -1.701673546280225,
+      "naive": -1.6640855722790595,
+      "naive_sign_wrong": false
+    }
+  ],
+  "independent_k_only_gauge_u01_t005": {
+    "original_wilson": -0.032808558314175985,
+    "covariant_wilson": -0.032808557990360934,
+    "naive_wilson": -0.054691128529922584,
+    "original_kubo": -0.0328449529342294,
+    "covariant_kubo": -0.03284495293311407,
+    "naive_kubo": -0.05470335563654949,
+    "naive_kx_velocity_error_eV_nm": 0.07799885972783864,
+    "covariant_kx_velocity_residual_eV_nm": 1.2647573897229232e-11,
+    "naive_spin_source_derivative_max_error": 2.6999605282077943,
+    "covariant_spin_source_residual": 9.088242073106943e-10
+  },
+  "theory": [
+    "physical_link=Y_a_dagger U_a_dagger U_b Y_b",
+    "U_dagger d_alpha H U=d_alpha Hprime+[U_dagger d_alpha U,Hprime]"
+  ],
+  "DFT_preflight": {
+    "preferred": "fixed spinor Wannier basis plus complete H, Sxyz, Berry/position overlaps, gap checks, full BZ/remote window",
+    "separate_source_wannier": "BLOCKED_CROSS_SOURCE_OVERLAP unless cross-param physical overlaps exist",
+    "real_material": "NOT_RUN",
+    "ferroelectricity": "NOT_EVALUATED",
+    "driven_dc": "NOT_EVALUATED"
+  },
+  "paper_reproduction": "UNCHANGED (only independent research/README navigation added)"
+}

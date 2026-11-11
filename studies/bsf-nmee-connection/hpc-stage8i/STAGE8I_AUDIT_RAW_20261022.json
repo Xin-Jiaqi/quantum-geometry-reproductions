@@ -1,0 +1,86 @@
+{
+  "scope": "two 21x21x1 SOC SCF candidate electronic feasibility gates",
+  "jobs": [
+    {
+      "job": "soc_AB_s0.00",
+      "status": "SCF_OUTPUT_FOUND_FURTHER_CHECKS_REQUIRED",
+      "total_static_NMEE": null,
+      "TOTEN_eV": -46.07647873,
+      "OUTCAR_sha256": "8f88851d427f63e4c8768b29cc9e376b76f85fbae40bd011e9b1d69e113c534b",
+      "EIGENVAL_present": true,
+      "PROCAR_present": true,
+      "WAVECAR_present": true,
+      "band_analysis": {
+        "status": "SAMPLED_POSITIVE_GAP_WITH_SMEARING_CAVEAT",
+        "NELECT": 36.0,
+        "nocc_spinor": 36,
+        "num_kpoints": 441,
+        "num_bands": 96,
+        "sampled_indirect_gap_eV": 1.088127,
+        "sampled_min_direct_gap_eV": 1.152668,
+        "valence_max_eV": -0.144828,
+        "conduction_min_eV": 0.943299,
+        "VBM_fractional_k": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "CBM_fractional_k": [
+          0.1904762,
+          0.1904762,
+          0.0
+        ],
+        "fractional_occupation_warning": false,
+        "assumptions": "noncollinear single-spinor EIGENVAL occupation max=1; spinor ordering consistent with actual NELECT; k-grid sampled only",
+        "cannot_claim": [
+          "continuous 2D BZ gap",
+          "nonzero transverse interband spin mixing",
+          "finite NMEE response",
+          "Wannier window completeness"
+        ]
+      }
+    },
+    {
+      "job": "soc_GLIDE_s0.50",
+      "status": "SCF_OUTPUT_FOUND_FURTHER_CHECKS_REQUIRED",
+      "total_static_NMEE": null,
+      "TOTEN_eV": -46.05232372,
+      "OUTCAR_sha256": "0b13aa2ab73bbd0292863ebfd2225cd346b6e2fd483c8f93b1401a0f594e3acb",
+      "EIGENVAL_present": true,
+      "PROCAR_present": true,
+      "WAVECAR_present": true,
+      "band_analysis": {
+        "status": "SAMPLED_POSITIVE_GAP_WITH_SMEARING_CAVEAT",
+        "NELECT": 36.0,
+        "nocc_spinor": 36,
+        "num_kpoints": 441,
+        "num_bands": 96,
+        "sampled_indirect_gap_eV": 1.1489749999999999,
+        "sampled_min_direct_gap_eV": 1.212372,
+        "valence_max_eV": -0.20245,
+        "conduction_min_eV": 0.946525,
+        "VBM_fractional_k": [
+          0.3333333,
+          0.3333333,
+          0.0
+        ],
+        "CBM_fractional_k": [
+          -0.1904762,
+          0.3809524,
+          0.0
+        ],
+        "fractional_occupation_warning": false,
+        "assumptions": "noncollinear single-spinor EIGENVAL occupation max=1; spinor ordering consistent with actual NELECT; k-grid sampled only",
+        "cannot_claim": [
+          "continuous 2D BZ gap",
+          "nonzero transverse interband spin mixing",
+          "finite NMEE response",
+          "Wannier window completeness"
+        ]
+      }
+    }
+  ],
+  "spin_mixing_matrix_element_status": "NOT_PROVEN_BY_PROCAR_DIAGONAL_EXPECTATIONS",
+  "material_static_NMEE": null,
+  "claim_of_continuous_BZ_gap": false
+}

@@ -1,0 +1,294 @@
+{
+ "scope": "Stage8i Ising/valley diagnostics from noncollinear EIGENVAL (441x96, NELECT=36)",
+ "method": "per-k band energy analysis; C3 orbit and time-reversal consistency checked; hexagonal reciprocal coordinates (u,v)->(-(u+v),u) for C3",
+ "jobs": {
+  "soc_AB_s0.00": {
+   "NELECT": 36.0,
+   "nocc_spinor": 36,
+   "per_k": {
+    "Gamma": {
+     "k": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "distance": 0.0,
+     "bands_31_40_eV": [
+      -1.51833,
+      -1.51833,
+      -0.84754,
+      -0.84754,
+      -0.14483,
+      -0.14483,
+      2.21185,
+      2.21185,
+      2.31921,
+      2.31921
+     ],
+     "valence_spin_split_band35_36_eV": 0.70271,
+     "gap_band36_37_eV": 2.35668,
+     "VBM_band36_eV": -0.14483,
+     "CBM_band37_eV": 2.21185
+    },
+    "K": {
+     "k": [
+      0.3333333,
+      0.3333333,
+      0.0
+     ],
+     "distance": 0.0,
+     "bands_31_40_eV": [
+      -2.7339,
+      -2.67791,
+      -0.73138,
+      -0.6444,
+      -0.26407,
+      -0.17653,
+      0.97614,
+      1.01018,
+      1.04674,
+      1.07998
+     ],
+     "valence_spin_split_band35_36_eV": 0.38033,
+     "gap_band36_37_eV": 1.15267,
+     "VBM_band36_eV": -0.17653,
+     "CBM_band37_eV": 0.97614
+    },
+    "Kp": {
+     "k": [
+      -0.3333333,
+      0.3333333,
+      0.0
+     ],
+     "distance": 0.0,
+     "bands_31_40_eV": [
+      -1.77302,
+      -1.75955,
+      -1.57774,
+      -1.56617,
+      -1.48347,
+      -1.47563,
+      1.4497,
+      1.46186,
+      1.64729,
+      1.6567
+     ],
+     "valence_spin_split_band35_36_eV": 0.0827,
+     "gap_band36_37_eV": 2.92533,
+     "VBM_band36_eV": -1.47563,
+     "CBM_band37_eV": 1.4497
+    },
+    "M": {
+     "k": [
+      0.4761905,
+      -3.811604e-19,
+      0.0
+     ],
+     "distance": 0.02381,
+     "bands_31_40_eV": [
+      -1.55106,
+      -1.53802,
+      -1.34086,
+      -1.33078,
+      -1.24879,
+      -1.2385,
+      1.71158,
+      1.71206,
+      1.78366,
+      1.78691
+     ],
+     "valence_spin_split_band35_36_eV": 0.08199,
+     "gap_band36_37_eV": 2.95009,
+     "VBM_band36_eV": -1.2385,
+     "CBM_band37_eV": 1.71158
+    },
+    "Lambda": {
+     "k": [
+      0.1904762,
+      0.1904762,
+      0.0
+     ],
+     "distance": 0.02381,
+     "bands_31_40_eV": [
+      -1.88264,
+      -1.77353,
+      -1.40507,
+      -1.29173,
+      -1.10384,
+      -1.00672,
+      0.9433,
+      1.14393,
+      1.32716,
+      1.60005
+     ],
+     "valence_spin_split_band35_36_eV": 0.18789,
+     "gap_band36_37_eV": 1.95002,
+     "VBM_band36_eV": -1.00672,
+     "CBM_band37_eV": 0.9433
+    }
+   },
+   "global": {
+    "VBM_eV": -0.144828,
+    "VBM_k": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "CBM_eV": 0.943299,
+    "CBM_k": [
+     0.1904762,
+     0.1904762,
+     0.0
+    ],
+    "sampled_indirect_gap_eV": 1.088127
+   }
+  },
+  "soc_GLIDE_s0.50": {
+   "NELECT": 36.0,
+   "nocc_spinor": 36,
+   "per_k": {
+    "Gamma": {
+     "k": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "distance": 0.0,
+     "bands_31_40_eV": [
+      -1.5426,
+      -1.5426,
+      -0.84753,
+      -0.84753,
+      -0.22921,
+      -0.22921,
+      2.24071,
+      2.24071,
+      2.29072,
+      2.29072
+     ],
+     "valence_spin_split_band35_36_eV": 0.61832,
+     "gap_band36_37_eV": 2.46992,
+     "VBM_band36_eV": -0.22921,
+     "CBM_band37_eV": 2.24071
+    },
+    "K": {
+     "k": [
+      0.3333333,
+      0.3333333,
+      0.0
+     ],
+     "distance": 0.0,
+     "bands_31_40_eV": [
+      -2.68781,
+      -2.61753,
+      -0.69874,
+      -0.67584,
+      -0.23776,
+      -0.20245,
+      1.00992,
+      1.01862,
+      1.04565,
+      1.0513
+     ],
+     "valence_spin_split_band35_36_eV": 0.43808,
+     "gap_band36_37_eV": 1.21237,
+     "VBM_band36_eV": -0.20245,
+     "CBM_band37_eV": 1.00992
+    },
+    "Kp": {
+     "k": [
+      -0.3333333,
+      0.3333333,
+      0.0
+     ],
+     "distance": 0.0,
+     "bands_31_40_eV": [
+      -1.7595,
+      -1.7595,
+      -1.55072,
+      -1.55072,
+      -1.44686,
+      -1.44686,
+      1.43279,
+      1.43279,
+      1.63689,
+      1.63689
+     ],
+     "valence_spin_split_band35_36_eV": 0.10387,
+     "gap_band36_37_eV": 2.87965,
+     "VBM_band36_eV": -1.44686,
+     "CBM_band37_eV": 1.43279
+    },
+    "M": {
+     "k": [
+      0.4761905,
+      -3.811604e-19,
+      0.0
+     ],
+     "distance": 0.02381,
+     "bands_31_40_eV": [
+      -1.5532,
+      -1.52703,
+      -1.34578,
+      -1.33309,
+      -1.26512,
+      -1.24448,
+      1.74368,
+      1.74954,
+      1.75501,
+      1.75775
+     ],
+     "valence_spin_split_band35_36_eV": 0.06797,
+     "gap_band36_37_eV": 2.98817,
+     "VBM_band36_eV": -1.24448,
+     "CBM_band37_eV": 1.74368
+    },
+    "Lambda": {
+     "k": [
+      0.1904762,
+      0.1904762,
+      0.0
+     ],
+     "distance": 0.02381,
+     "bands_31_40_eV": [
+      -1.87636,
+      -1.82783,
+      -1.39244,
+      -1.30005,
+      -1.09606,
+      -1.01084,
+      0.96315,
+      1.15823,
+      1.30115,
+      1.58506
+     ],
+     "valence_spin_split_band35_36_eV": 0.20399,
+     "gap_band36_37_eV": 1.974,
+     "VBM_band36_eV": -1.01084,
+     "CBM_band37_eV": 0.96315
+    }
+   },
+   "global": {
+    "VBM_eV": -0.20245,
+    "VBM_k": [
+     0.3333333,
+     0.3333333,
+     0.0
+    ],
+    "CBM_eV": 0.946525,
+    "CBM_k": [
+     -0.1904762,
+     0.3809524,
+     0.0
+    ],
+    "sampled_indirect_gap_eV": 1.1489749999999999
+   }
+  }
+ },
+ "notes": {
+  "K_vs_Kp_splitting": "K=(1/3,1/3) is C3 invariant; Kp=(2/3,1/3) lies on the other C3 orbit; 1.3 eV valence offset (AB) / 1.25 eV (glide) is real 3R-bilayer valley splitting consistent with C3v (no C2'/sigma_h), time reversal E(K)=E(-K) verified numerically",
+  "C3_checked": "E[(u,v)]=E[C3(u,v)] verified within C3 orbit (Kp family three points equal)",
+  "time_reversal_checked": "EIGENVAL rows at (7,7) and (-7,-7)/21 identical band-for-band"
+ },
+ "caveat": "sampled k-grid only; EIGENVAL spinor band energies"
+}

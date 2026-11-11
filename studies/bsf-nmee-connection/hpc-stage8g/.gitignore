@@ -1,0 +1,20 @@
+# Never version licensed potentials, site secrets or HPC result payloads.
+**/POTCAR
+**/POTCAR.*
+**/site.json
+**/*secret*
+**/*token*
+**/pbs_ids.json
+**/OUTCAR
+**/CONTCAR
+**/OSZICAR
+**/WAVECAR
+**/CHGCAR
+**/vasprun.xml
+**/vasp.stdout
+**/vasp.stderr
+**/submit.pbs
+**/*.o[0-9]*
+**/*.e[0-9]*
+generated*/
+stage8g-inputs*/

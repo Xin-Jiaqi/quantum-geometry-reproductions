@@ -1,0 +1,96 @@
+{
+  "stage": "7h",
+  "scope": "synthetic 8-band gapped Kane-Mele, T=0 equilibrium static finite-B NMEE; no driven DC, material, or ferroelectric state",
+  "formalism": "G=U*g*V+R and four-term exact source GOG split; P and dP from occupied resolvent contours",
+  "source_basis": "decoupled middle four eigenspace at each fixed k; Q complementary; absolute physical velocity inserted before any k-dependent basis change",
+  "local_K_center": [
+    {
+      "u": 0.1,
+      "t_eV": 0.005,
+      "gamma_full_eigen": -0.0008437187156615511,
+      "gamma_exact_schur": -0.0008437187158668175,
+      "gamma_dressed_only": -0.0009194278282227825,
+      "gamma_missing_contacts": 0.000075709112355965
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.005,
+      "gamma_full_eigen": 0.0056523170625224495,
+      "gamma_exact_schur": 0.0056523170652204024,
+      "gamma_dressed_only": 0.008359236404676618,
+      "gamma_missing_contacts": -0.002706919339456215
+    },
+    {
+      "u": 0.4,
+      "t_eV": 0.02,
+      "gamma_full_eigen": -0.028550806875195178,
+      "gamma_exact_schur": -0.02855080687405831,
+      "gamma_dressed_only": 0.03619932508395607,
+      "gamma_missing_contacts": -0.06475013195801438
+    }
+  ],
+  "small_valley_disks": {
+    "parameters": {
+      "u": 0.4,
+      "t_eV": 0.02,
+      "radius_inv_nm": 0.15,
+      "radial_n": 12,
+      "angular_n": 36,
+      "contour_n": 48,
+      "zeeman_step_T": 0.25
+    },
+    "full_eigen": 0.00010286816211401071,
+    "full_schur": 0.00010286816211400678,
+    "dressed_only": 0.00019526513062835958,
+    "missing_contacts": -0.0000923969685143528,
+    "verified_original_eightband": 0.00010286816211397242
+  },
+  "on_shell_middle_four_q_0p05_0p02": [
+    {
+      "t_eV": 0.005,
+      "bare_max_error": {
+        "Sx": 0.031060273821776153,
+        "Sz": 0.045421988133222124,
+        "vx": 0.0023390573707581797
+      },
+      "dressed_max_error": {
+        "Sx": 1.3473e-15,
+        "Sz": 6.0849e-16,
+        "vx": 2.3307e-16
+      }
+    },
+    {
+      "t_eV": 0.02,
+      "bare_max_error": {
+        "Sx": 0.5574620472704649,
+        "Sz": 0.890620157818016,
+        "vx": 0.08588172519567784
+      },
+      "dressed_max_error": {
+        "Sx": 1.5315e-13,
+        "Sz": 4.0839e-13,
+        "vx": 2.6198e-14
+      }
+    }
+  ],
+  "validation": {
+    "contour_samples": [
+      24,
+      48,
+      96
+    ],
+    "zeeman_T": [
+      0.125,
+      0.25,
+      0.5
+    ],
+    "standalone_tests": "4 passed",
+    "note": "GitHub CI status separately checked"
+  },
+  "caveats": [
+    "Dressed-only omission diagnostic not physical standalone approximation",
+    "Contour positions use exact eightband spectrum for numerical validation",
+    "No full BZ bound or response-preserving independent 4-band computation",
+    "No proven general sign theorem for hopping channels"
+  ]
+}

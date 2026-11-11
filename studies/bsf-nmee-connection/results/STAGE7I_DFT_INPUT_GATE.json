@@ -1,0 +1,53 @@
+{
+  "status": "PRE-DFT INPUT GATE; no real material calculated or passed",
+  "scope": "gapped spinor bilayers; equilibrium static mixed spin–electric Berry curvature derivative, not driven DC",
+  "required": {
+    "structure": [
+      "material_id",
+      "unambiguous_layer_stacking_coordinates",
+      "SOC_spinful",
+      "occupied_insulating_gap_full_BZ",
+      "chemical_potential",
+      "fixed_stack_point_operations",
+      "mirror_or_slide_partner_map"
+    ],
+    "wannier": [
+      "spinor_H_k",
+      "Sx_Sy_Sz_k_in_same_gauge",
+      "Wannier_positions_and_orbital_embedding",
+      "basis_overlap_M_k_kplusdk_or_equivalent_Berry_connection",
+      "velocity_covariant_with_basis",
+      "all_relevant_occupied_and_empty_bands"
+    ],
+    "numerics": [
+      "all_source_corner_gaps_positive",
+      "source_steps_delta_lambda_and_delta_B",
+      "adaptive_BZ_hotspot_search",
+      "Wilson_Kubo_static_agreement",
+      "Wannier_remote_window_convergence",
+      "tensor_symmetry_and_domain_reversal",
+      "sheet_response_units_and_spin_norm_conventions"
+    ]
+  },
+  "strictly_insufficient": [
+    "hr.dat alone",
+    "DFT band plot and a gap at K alone",
+    "fixed mirror symmetry mistakenly applied to a different sliding domain",
+    "effective four-band energies without response vertices",
+    "a single Wilson result with no non-Abelian link overlap or gap guard"
+  ],
+  "separate_claim_gates": {
+    "ferroelectric_switching": [
+      "two stable stacking local minima",
+      "polarization reversal",
+      "sliding energy barrier or NEB"
+    ],
+    "driven_DC_NMEE": [
+      "explicit nonequilibrium steady-state response",
+      "zero-frequency versus relaxation order of limits",
+      "resolved diagonal terms and response convention"
+    ]
+  },
+  "model_validation": "Stage7i two-K/Kprime radius-.5 nm^-1 non-Abelian Wilson versus static Kubo agreement of order 6e-5 to 1.2e-4 relative for 3 tested settings",
+  "provenance": "Stage7i research-only, frozen original Jia paper unchanged"
+}
