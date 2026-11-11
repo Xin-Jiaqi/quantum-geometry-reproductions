@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed": "2026-11-10",
+  "reviewed": "2026-11-11",
   "meaning": "MODEL_READY means independently verified named model/protocol; not complete paper or material reproduction",
   "capabilities": [
     {
@@ -14,16 +14,9 @@
       "pythonpath": ".",
       "example": "examples/use_dynamic.py",
       "documentation": "README.md",
-      "apis": [
-        "nmee_lab.evaluate_dynamic",
-        "nmee_lab.evaluate_clean",
-        "nmee_lab.evaluate_insulating_static"
-      ],
+      "apis": ["nmee_lab.evaluate_dynamic", "nmee_lab.evaluate_clean", "nmee_lab.evaluate_insulating_static"],
       "units": "H: eV; k: nm^-1; dynamic response: (nm V T)^-1 for s/mu_B",
-      "limits": [
-        "Named AC/static/printed protocols are separate; no completed intrinsic metallic DC extraction",
-        "Same-gauge physical spin and position connection required"
-      ],
+      "limits": ["Named AC/static/printed protocols are separate; no completed intrinsic metallic DC extraction", "Same-gauge physical spin and position connection required"],
       "expected_tests": 38
     },
     {
@@ -37,16 +30,9 @@
       "pythonpath": ".",
       "example": "scripts/reproduce_core.py",
       "documentation": "README.md",
-      "apis": [
-        "methods.response.SpinModel",
-        "methods.response.response_at_k",
-        "methods.response.integrate_response"
-      ],
+      "apis": ["methods.response.SpinModel", "methods.response.response_at_k", "methods.response.integrate_response"],
       "units": "e=hbar=1; physical spin sigma/2; BZ measure d2k/(2pi)^2",
-      "limits": [
-        "Full finite-frequency result is not automatically isolated tau^0",
-        "Conventional spin current is not generally conserved with spin-orbit torque"
-      ],
+      "limits": ["Full finite-frequency result is not automatically isolated tau^0", "Conventional spin current is not generally conserved with spin-orbit torque"],
       "expected_tests": 76
     },
     {
@@ -60,17 +46,9 @@
       "pythonpath": "src",
       "example": "scripts/reproduce_core.py",
       "documentation": "README.md",
-      "apis": [
-        "qgmap.spin_multiband_v5.four_band_audit",
-        "qgmap.orbital_phe_v4.orbital_phe_eq56",
-        "qgmap.orbital_mnhe_v5.orbital_mnhe_3d",
-        "qgmap.orbital_geometry_v54.band_geometry"
-      ],
+      "apis": ["qgmap.spin_multiband_v5.four_band_audit", "qgmap.orbital_phe_v4.orbital_phe_eq56", "qgmap.orbital_mnhe_v5.orbital_mnhe_3d", "qgmap.orbital_geometry_v54.band_geometry"],
       "units": "Per-channel normalization: see JSON; natural units and selected SI bridges are distinct",
-      "limits": [
-        "General multiband orbital positional shift is not completed",
-        "Finite-device conductance is not interchangeable with bulk mixed E/B response"
-      ],
+      "limits": ["General multiband orbital positional shift is not completed", "Finite-device conductance is not interchangeable with bulk mixed E/B response"],
       "expected_tests": 1214
     },
     {
@@ -84,17 +62,9 @@
       "pythonpath": "src",
       "example": "scripts/reproduce_core.py",
       "documentation": "README.md",
-      "apis": [
-        "flux_lab.core.qgt_eigen",
-        "flux_lab.core.flux_circle_from_qgt",
-        "flux_lab.causal_response.interband_kubo",
-        "flux_lab.causal_response.source_kme_expansion"
-      ],
+      "apis": ["flux_lab.core.qgt_eigen", "flux_lab.core.flux_circle_from_qgt", "flux_lab.causal_response.interband_kubo", "flux_lab.causal_response.source_kme_expansion"],
       "units": "hbar=1; source omega=-drive omega; source KME observable sigma/2",
-      "limits": [
-        "Whole Table I not certified; use physical model symmetry checks",
-        "Interband response excludes full metallic intraband/collision response"
-      ],
+      "limits": ["Whole Table I not certified; use physical model symmetry checks", "Interband response excludes full metallic intraband/collision response"],
       "expected_tests": 375
     },
     {
@@ -108,17 +78,9 @@
       "pythonpath": "src",
       "example": "scripts/reproduce_core.py",
       "documentation": "CORE_ACCESS.md",
-      "apis": [
-        "igmc_lab.core.pair_kernels",
-        "igmc_lab.core.dirac_response",
-        "igmc_lab.fermi_contour.integrate_contour",
-        "igmc_lab.core.physical_response_si"
-      ],
+      "apis": ["igmc_lab.core.pair_kernels", "igmc_lab.core.dirac_response", "igmc_lab.fermi_contour.integrate_contour", "igmc_lab.core.physical_response_si"],
       "units": "H: eV; k: Angstrom^-1; explicit Hz/rad/s; plotted SI coefficient A/(m T)",
-      "limits": [
-        "Two-band nondegenerate, nonresonant model scope",
-        "Author Fig2(d) amplitude and complete Eq14 convention remain unresolved"
-      ],
+      "limits": ["Two-band nondegenerate, nonresonant model scope", "Author Fig2(d) amplitude and complete Eq14 convention remain unresolved"],
       "expected_tests": 76
     },
     {
@@ -132,16 +94,9 @@
       "pythonpath": "src",
       "example": "scripts/reproduce_core.py",
       "documentation": "README.md",
-      "apis": [
-        "altermagnet_bpve.band_observables",
-        "altermagnet_bpve.contour_injection",
-        "altermagnet_bpve.grid_injection"
-      ],
+      "apis": ["altermagnet_bpve.band_observables", "altermagnet_bpve.contour_injection", "altermagnet_bpve.grid_injection"],
       "units": "E/eps0; k/k0; normalized sigma/[tau*e^3/(hbar^2*W*k0)]; no material SI calibration",
-      "limits": [
-        "Only two-band nondegenerate, monotonic-contour clean model with zero-T Pauli occupation",
-        "Not a Wannier injection/shift calculator; published x;yy Eq.(19) disagrees with direct Eq.(7) integration; retained as discrepancy"
-      ],
+      "limits": ["Only two-band nondegenerate, monotonic-contour clean model with zero-T Pauli occupation", "Not a Wannier injection/shift calculator; published x;yy Eq.(19) disagrees with direct Eq.(7) integration; retained as discrepancy"],
       "expected_tests": 8
     },
     {
@@ -155,20 +110,9 @@
       "pythonpath": "src",
       "example": "scripts/reproduce_core.py",
       "documentation": "README.md",
-      "apis": [
-        "imhe_lab.Fields",
-        "imhe_lab.geometry",
-        "imhe_lab.orbital_moment",
-        "imhe_lab.transport",
-        "imhe_lab.exact_transport"
-      ],
+      "apis": ["imhe_lab.Fields", "imhe_lab.geometry", "imhe_lab.orbital_moment", "imhe_lab.transport", "imhe_lab.exact_transport"],
       "units": "e=hbar=1; dimensionless k; explicit d2k/(2pi)^2; per probe u*b, drift per tau; no SI calibration",
-      "limits": [
-        "Independent periodic three-band model, not source R5G figures or a nonquantized insulating plateau",
-        "Fixed orthonormal basis and nondegenerate bands; reference A5 moment frozen under probes; explicit C required for extra mixed contacts",
-        "Full refers only to stated Berry-current and band-drift functionals; no Lorentz force, phase-space drift correction or disorder vertices",
-        "A4 sign and A8-like second-order-state truncation conflicts are documented; no forced source normalization"
-      ],
+      "limits": ["Independent periodic three-band model, not source R5G figures or a nonquantized insulating plateau", "Fixed orthonormal basis and nondegenerate bands; reference A5 moment frozen under probes; explicit C required for extra mixed contacts", "Full refers only to stated Berry-current and band-drift functionals; no Lorentz force, phase-space drift correction or disorder vertices", "A4 sign and A8-like second-order-state truncation conflicts are documented; no forced source normalization"],
       "expected_tests": 29
     },
     {
@@ -182,19 +126,26 @@
       "pythonpath": "src",
       "example": "scripts/reproduce_core.py",
       "documentation": "README.md",
-      "apis": [
-        "deep_dbc.nodal_parameters",
-        "deep_dbc.band_data",
-        "deep_dbc.covariant_derivative",
-        "deep_dbc.shg_pieces"
-      ],
+      "apis": ["deep_dbc.nodal_parameters", "deep_dbc.band_data", "deep_dbc.covariant_derivative", "deep_dbc.shg_pieces"],
       "units": "SM TB energy units; dimensionless lattice momentum; hbar=1; local SHG normalization omits e^3/(2hbar^2) and BZ integration",
-      "limits": [
-        "Local leading 1/q singularity cancellation only; finite terms of SM S7 and full SHG susceptibility not computed",
-        "No finite-BZ shift conductivity full spectrum calibration; no GeTe DFT/Wannier, SOC or HSE",
-        "Off-resonant frequency 0.7*epsilon0, insulating three-band v/c/c' occupations, no exact degeneracy or physical linewidth"
-      ],
+      "limits": ["Local leading 1/q singularity cancellation only; finite terms of SM S7 and full SHG susceptibility not computed", "No finite-BZ shift conductivity full spectrum calibration; no GeTe DFT/Wannier, SOC or HSE", "Off-resonant frequency 0.7*epsilon0, insulating three-band v/c/c' occupations, no exact degeneracy or physical linewidth"],
       "expected_tests": 8
+    },
+    {
+      "id": "optical-design",
+      "name": "Finite-width optical critical-point design",
+      "directory": "studies/dbc-finite-width-design",
+      "source": "https://doi.org/10.1103/sqwy-xhdf",
+      "citation": "Independent model follow-up to PRL 135, 226901 (2025)",
+      "status": "MODEL_READY",
+      "capability": "Conditional 2D normal-shift design: finite-width criticality, competing optical edge and independent projector reference",
+      "pythonpath": "src",
+      "example": "scripts/reproduce_core.py",
+      "documentation": "README.md",
+      "apis": ["optical_design.critical", "optical_design.predict", "optical_design.integrate_point", "optical_design.predict_two_feature", "optical_design.projectors.projector_kernel", "optical_design.closure.NormalForm"],
+      "units": "Model energy in eV; dimensionless k; d2k/(2pi)^2; Gaussian sigma / Lorentzian HWHM; SI prefactor and thickness omitted",
+      "limits": ["Explicit insulating three-orbital paths and conditional local normal form; no material/DFT or global optimum certification", "Projector reference only for smooth isolated scalar-energy subspaces; no flattening of split bands", "Spectral convolution is not a microscopic lifetime; full SHG, excitons and device efficiency excluded", "Real Wannier optical operators require independent same-gauge validation"],
+      "expected_tests": 52
     }
   ]
 }

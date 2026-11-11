@@ -1,0 +1,17 @@
+{
+  "date":"2026-11-11",
+  "source_repo":"Xin-Jiaqi/quantum-geometry-reproductions",
+  "source_commit":"97ae0a915223d56f28693e10585c54accccc4b76",
+  "main_at_review":"c088f4202423bfb20a1077c127236cc93fe6f36d",
+  "source_pr":115,
+  "reviewed_study":"independent model research; source reproduction retained separately",
+  "environment":{"python":"3.13.5","numpy":"2.3.5","scipy":"1.17.0"},
+  "original_archive_hashes":{
+    "DBC_gap_control_test.zip":"deb9f538201131b516f6b417214135fe38779fbbf20b6e99b4f30c994bb794e8",
+    "DBC_round2_mechanism_study.zip":"80b03d6819c30518aec41e6391660c124607febe2b7e60161a5ca872c1bb5ef7",
+    "DBC_round3_finite_width_study.zip":"94c8bb7e5993ad6c7ec9a367a7e38d4a1d81c128fa445d53c9ca9dfa6255cdc4",
+    "DBC_round4_validated_design_rule.zip":"6bc29f75ce1102c391e883e8346f06667e3ad759b6f10852eea4e503aaedf86f",
+    "Zou2025_DBC_SHG_verified_module.zip":"3ec21b90f3f9718041c5754fcd70e0428c20d911721331bb2d8bbd97086da8bf"
+  },
+  "fresh_result_sha256":"cf12710a8d6a6b9d6875221eebbe7820b2a991cb4e5bdef4fb135c502b0cb87e"
+}

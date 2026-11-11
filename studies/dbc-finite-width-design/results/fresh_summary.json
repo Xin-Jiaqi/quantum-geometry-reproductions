@@ -1,0 +1,33 @@
+{
+  "provenance": "Fresh calculation on 2026-11-11; compact subset of recomputed_validation.json, not a new run",
+  "full_result_sha256": "cf12710a8d6a6b9d6875221eebbe7820b2a991cb4e5bdef4fb135c502b0cb87e",
+  "environment": {"python":"3.13.5","numpy":"2.3.5","scipy":"1.17.0"},
+  "new_module_tests_passed": 52,
+  "shapes": {
+    "gaussian":{"xi":-0.07023877302303781,"zeta":2.841262279860228,"peak":3.2226177432447662,"critical_peak":2.343617610125332,"separation_over_FWHM":0.8570475862891721,"order":720},
+    "lorentzian":{"xi":-0.03176316473924283,"zeta":3.588994310424154,"peak":2.6648606624509807,"critical_peak":1.9084490704138943,"separation_over_FWHM":1.6101100200321186,"order":720}
+  },
+  "full_bz_at_predicted_parameters": [
+    {"family":"constant","gamma_eV":0.0001,"mass_eV":0.08613533300340548,"photon_eV":7.023070405996176,"S":0.005530875966321599},
+    {"family":"bond_y","gamma_eV":0.0001,"mass_eV":0.07181022947180704,"photon_eV":7.02738394310483,"S":0.0056076666983450275},
+    {"family":"mixed_orbital","gamma_eV":0.0001,"mass_eV":0.09316302775795027,"photon_eV":7.039681310733106,"S":0.005290674301540184}
+  ],
+  "competitor":{"gamma_eV":5e-05,"mass_eV":0.09499299556536908,"photon_eV":7.039821596725653,"S":0.005985987451386923},
+  "projector_max_abs_error":3.2909324083115615e-11,
+  "quadrature_check":[
+    {"family":"constant","value":0.005530876326040209,"relative_change":6.503827099102466e-08},
+    {"family":"bond_y","value":0.005607666713427175,"relative_change":2.689558353807797e-09},
+    {"family":"mixed_orbital","value":0.005290674301532997,"relative_change":-1.3584688929313415e-12}
+  ],
+  "skew_scan":[
+    {"shape":"gaussian","nu":0.0,"xi":-0.07023923737735518,"zeta":2.841262320971127,"peak":3.222617743244668},
+    {"shape":"gaussian","nu":0.5,"xi":-0.09518229481964852,"zeta":3.0232970934784675,"peak":3.1901962462146622},
+    {"shape":"gaussian","nu":1.0,"xi":-0.14677612209899515,"zeta":3.4164171124185425,"peak":3.137740248539648},
+    {"shape":"gaussian","nu":2.0,"xi":-0.3120770504681052,"zeta":4.149126288949887,"peak":3.0549327583729493},
+    {"shape":"lorentzian","nu":0.0,"xi":-0.03176278578803465,"zeta":3.5889944605698876,"peak":2.6648606624503737},
+    {"shape":"lorentzian","nu":0.5,"xi":-0.04947661863067013,"zeta":3.686637326597082,"peak":2.659214441726068},
+    {"shape":"lorentzian","nu":1.0,"xi":-0.09765117030998612,"zeta":3.925669896038438,"peak":2.64504615799944},
+    {"shape":"lorentzian","nu":2.0,"xi":-0.2571512965792545,"zeta":4.539986322798687,"peak":2.607809423813994}
+  ],
+  "scope":"Representative peaks and local kernels only; no full-spectrum or global optimization certificate; model units, no DFT or microscopic lifetime."
+}
