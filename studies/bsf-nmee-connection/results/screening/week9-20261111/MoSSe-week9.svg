@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="664.192249pt" height="321.08765pt" viewBox="0 0 664.192249 321.08765" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-11T16:43:27.385055</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 321.08765
+L 664.192249 321.08765
+L 664.192249 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <text style="fill: #20678b; font: 700 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="88.416" y="117.499114" transform="rotate(-0 88.416 117.499114)">下层</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #bd6a28; font: 700 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="158.976" y="117.499114" transform="rotate(-0 158.976 117.499114)">上层</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #343d49; font: 700 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="229.536" y="117.499114" transform="rotate(-0 229.536 117.499114)">整片</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 700 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="12.9168" y="157.162548" transform="rotate(-0 12.9168 157.162548)">S/S</text>
+   </g>
+   <g id="patch_2">
+    <path d="M 101.941952 149.473189
+Q 88.419132 149.473189 76.908773 149.473189
+" style="fill: none; stroke: #20678b; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 82.508773 152.273189
+L 76.908773 149.473189
+L 82.508773 146.673189
+z
+" style="fill: #20678b; stroke: #20678b; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #20678b; font: 9px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="88.416" y="167.891982" transform="rotate(-0 88.416 167.891982)">−x</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 145.450048 149.473189
+Q 158.972868 149.473189 170.483227 149.473189
+" style="fill: none; stroke: #bd6a28; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 164.883227 146.673189
+L 170.483227 149.473189
+L 164.883227 152.273189
+z
+" style="fill: #bd6a28; stroke: #bd6a28; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="fill: #bd6a28; font: 9px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="158.976" y="167.891982" transform="rotate(-0 158.976 167.891982)">+x</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 243.061952 149.473189
+Q 229.539132 149.473189 218.028773 149.473189
+" style="fill: none; stroke: #343d49; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 223.628773 152.273189
+L 218.028773 149.473189
+L 223.628773 146.673189
+z
+" style="fill: #343d49; stroke: #343d49; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="fill: #343d49; font: 9px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="229.536" y="167.891982" transform="rotate(-0 229.536 167.891982)">−x</text>
+   </g>
+   <g id="text_8">
+    <text style="font: 700 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="12.9168" y="218.651156" transform="rotate(-0 12.9168 218.651156)">S/Se</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 101.941952 210.961797
+Q 88.419132 210.961797 76.908773 210.961797
+" style="fill: none; stroke: #20678b; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 82.508773 213.761797
+L 76.908773 210.961797
+L 82.508773 208.161797
+z
+" style="fill: #20678b; stroke: #20678b; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #20678b; font: 9px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="88.416" y="229.38059" transform="rotate(-0 88.416 229.38059)">−x</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 145.450048 210.961797
+Q 158.972868 210.961797 170.483227 210.961797
+" style="fill: none; stroke: #bd6a28; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 164.883227 208.161797
+L 170.483227 210.961797
+L 164.883227 213.761797
+z
+" style="fill: #bd6a28; stroke: #bd6a28; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_10">
+    <text style="fill: #bd6a28; font: 9px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="158.976" y="229.38059" transform="rotate(-0 158.976 229.38059)">+x</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 216.010048 210.961797
+Q 229.532868 210.961797 241.043227 210.961797
+" style="fill: none; stroke: #343d49; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 235.443227 208.161797
+L 241.043227 210.961797
+L 235.443227 213.761797
+z
+" style="fill: #343d49; stroke: #343d49; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="fill: #343d49; font: 9px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="229.536" y="229.38059" transform="rotate(-0 229.536 229.38059)">+x</text>
+   </g>
+   <g id="text_12">
+    <text style="font: 700 11px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="10.8" y="80.052531" transform="rotate(-0 10.8 80.052531)">a   零垂直电场下的自旋方向</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_8">
+    <path d="M 338.904 244.780531
+L 649.368 244.780531
+L 649.368 99.052531
+L 338.904 99.052531
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 573.92815 120.369127
+L 572.273756 120.369127
+L 572.273756 108.741893
+L 573.92815 108.741893
+z
+" clip-path="url(#pc8158a05bf)" style="fill: #20678b"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 573.92815 138.197553
+L 532.5358 138.197553
+L 532.5358 126.570318
+L 573.92815 126.570318
+z
+" clip-path="url(#pc8158a05bf)" style="fill: #bd6a28"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 573.92815 156.025978
+L 613.666106 156.025978
+L 613.666106 144.398744
+L 573.92815 144.398744
+z
+" clip-path="url(#pc8158a05bf)" style="fill: #343d49"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 573.92815 201.759765
+L 479.9067 201.759765
+L 479.9067 190.132531
+L 573.92815 190.132531
+z
+" clip-path="url(#pc8158a05bf)" style="fill: #20678b"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 573.92815 219.588191
+L 385.630085 219.588191
+L 385.630085 207.960957
+L 573.92815 207.960957
+z
+" clip-path="url(#pc8158a05bf)" style="fill: #bd6a28"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 573.92815 237.416616
+L 479.651535 237.416616
+L 479.651535 225.789382
+L 573.92815 225.789382
+z
+" clip-path="url(#pc8158a05bf)" style="fill: #343d49"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m749c7d5c59" d="M 0 0
+L 0 3.5
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m749c7d5c59" x="356.313196" y="244.780531" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font: 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="356.313196" y="259.880531" transform="rotate(-0 356.313196 259.880531)">-1.5</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m749c7d5c59" x="428.851514" y="244.780531" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font: 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="428.851514" y="259.880531" transform="rotate(-0 428.851514 259.880531)">-1.0</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m749c7d5c59" x="501.389832" y="244.780531" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font: 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="501.389832" y="259.880531" transform="rotate(-0 501.389832 259.880531)">-0.5</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m749c7d5c59" x="573.92815" y="244.780531" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font: 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="573.92815" y="259.880531" transform="rotate(-0 573.92815 259.880531)">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m749c7d5c59" x="646.466467" y="244.780531" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font: 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="646.466467" y="259.880531" transform="rotate(-0 646.466467 259.880531)">0.5</text>
+     </g>
+    </g>
+    <g id="text_18">
+     <!-- 幅度变化  [$10^{-9}$ (nm·V·T)$^{-1}$] -->
+     <g transform="translate(422.736 274.080531)">
+      <text>
+       <tspan style="font: 10px 'Heiti TC'" x="0 9.999985 19.999969 29.999954 39.999939 42.499924 44.999908 71.922501 74.422485 78.112473 84.212463 93.592453 103.592438 110.612427 120.612411 124.872406 139.250381" y="-0.96875">幅度变化  [ (nm·V·T)]</tspan>
+       <tspan style="font: 10px 'DejaVu Sans'" x="48.509903 54.872208" y="-0.96875">10</tspan>
+       <tspan style="font: 7px 'DejaVu Sans'" x="61.330215 67.19545 128.658096 134.523331" y="-4.796875">−9−1</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6"/>
+     <g id="text_19">
+      <text style="font: 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="333.904" y="136.433936" transform="rotate(-0 333.904 136.433936)">S/S</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7"/>
+     <g id="text_20">
+      <text style="font: 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="333.904" y="217.824574" transform="rotate(-0 333.904 217.824574)">S/Se</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_8">
+    <path d="M 573.92815 244.780531
+L 573.92815 99.052531
+" clip-path="url(#pc8158a05bf)" style="fill: none; stroke: #768299; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 338.904 244.780531
+L 649.368 244.780531
+" style="fill: none; stroke: #000000; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_21">
+    <text style="fill: #20678b; font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="568.21161" y="117.263635" transform="rotate(-0 568.21161 117.263635)">−0.01</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #bd6a28; font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="528.473654" y="135.092061" transform="rotate(-0 528.473654 135.092061)">−0.29</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #343d49; font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="617.728251" y="152.920486" transform="rotate(-0 617.728251 152.920486)">+0.27</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #20678b; font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="475.844554" y="198.654273" transform="rotate(-0 475.844554 198.654273)">−0.65</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #bd6a28; font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="381.56794" y="216.482699" transform="rotate(-0 381.56794 216.482699)">−1.30</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #343d49; font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: end" x="475.589389" y="234.311124" transform="rotate(-0 475.589389 234.311124)">−0.65</text>
+   </g>
+   <g id="text_27">
+    <text style="font: 700 11px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="338.904" y="80.052531" transform="rotate(-0 338.904 80.052531)">b   增加垂直电场后的响应幅度变化</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_9">
+     <path d="M 544.47264 86.616051
+L 547.67264 86.616051
+L 550.87264 86.616051
+" style="fill: none; stroke: #20678b; stroke-width: 5; stroke-linecap: square"/>
+    </g>
+    <g id="text_28">
+     <text style="font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="557.27264" y="89.416051" transform="rotate(-0 557.27264 89.416051)">下层</text>
+    </g>
+    <g id="line2d_10">
+     <path d="M 580.47264 86.616051
+L 583.67264 86.616051
+L 586.87264 86.616051
+" style="fill: none; stroke: #bd6a28; stroke-width: 5; stroke-linecap: square"/>
+    </g>
+    <g id="text_29">
+     <text style="font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="593.27264" y="89.416051" transform="rotate(-0 593.27264 89.416051)">上层</text>
+    </g>
+    <g id="line2d_11">
+     <path d="M 616.47264 86.616051
+L 619.67264 86.616051
+L 622.87264 86.616051
+" style="fill: none; stroke: #343d49; stroke-width: 5; stroke-linecap: square"/>
+    </g>
+    <g id="text_30">
+     <text style="font: 8px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="629.27264" y="89.416051" transform="rotate(-0 629.27264 89.416051)">整片</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_31">
+   <text style="font: 700 17px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="10.8" y="24.604531" transform="rotate(-0 10.8 24.604531)">垂直电场使两层自旋都减弱，整片响应却可以增强</text>
+  </g>
+  <g id="text_32">
+   <text style="fill: #435267; font: 10px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="10.8" y="48.364531" transform="rotate(-0 10.8 48.364531)">Janus MoSSe 双层   ·   面内电场沿 +x，磁场沿 +z，+z 由下层指向上层</text>
+  </g>
+  <g id="text_33">
+   <text style="fill: #435267; font: 9px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="10.8" y="293.250931" transform="rotate(-0 10.8 293.250931)">左图箭头只表示方向。右图比较垂直电场从 −0.10 到 +0.10 V/nm 时，各层及整片的响应幅度变化。</text>
+  </g>
+  <g id="text_34">
+   <text style="fill: #435267; font: 9px 'Heiti TC', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start" x="10.8" y="309.090931" transform="rotate(-0 10.8 309.090931)">固定离子，各场点独立自洽；两种界面均取 6 × 6 网格、112 带。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc8158a05bf">
+   <rect x="338.904" y="99.052531" width="310.464" height="145.728"/>
+  </clipPath>
+ </defs>
+</svg>
