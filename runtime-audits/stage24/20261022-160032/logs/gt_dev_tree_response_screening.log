@@ -1,0 +1,18 @@
+test_all_registry_rows_are_reported_in_standard_order (test_response_screening.ResponseSymmetryScreeningTests.test_all_registry_rows_are_reported_in_standard_order) ... FAIL
+test_cli_returns_compact_json_rows (test_response_screening.ResponseSymmetryScreeningTests.test_cli_returns_compact_json_rows) ... ok
+test_filters_preserve_physical_group_and_response_order (test_response_screening.ResponseSymmetryScreeningTests.test_filters_preserve_physical_group_and_response_order) ... ok
+test_gray_group_removes_time_odd_responses (test_response_screening.ResponseSymmetryScreeningTests.test_gray_group_removes_time_odd_responses) ... ok
+test_invalid_selections_are_rejected (test_response_screening.ResponseSymmetryScreeningTests.test_invalid_selections_are_rejected) ... ok
+
+======================================================================
+FAIL: test_all_registry_rows_are_reported_in_standard_order (test_response_screening.ResponseSymmetryScreeningTests.test_all_registry_rows_are_reported_in_standard_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<git-checkouts>/group-theory-operations-toolkit/tests/test_response_screening.py", line 20, in test_all_registry_rows_are_reported_in_standard_order
+    self.assertEqual(len(point), 32 * 3)
+AssertionError: 128 != 96
+
+----------------------------------------------------------------------
+Ran 5 tests in 4.474s
+
+FAILED (failures=1)

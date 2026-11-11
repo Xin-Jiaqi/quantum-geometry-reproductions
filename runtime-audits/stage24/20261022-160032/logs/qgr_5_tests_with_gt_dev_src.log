@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.4, pytest-9.1.1, pluggy-1.6.0 -- /Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+cachedir: .pytest_cache
+rootdir: <workspace>/quantum-geometry-reproductions
+plugins: anyio-4.14.2
+collecting ... collected 5 items
+
+studies/bsf-nmee-connection/tests/test_physical_model.py::PhysicalHamiltonianCovarianceTests::test_connection_predicts_independently_calculated_8band_response PASSED [ 20%]
+studies/bsf-nmee-connection/tests/test_real_toolkit.py::ActualToolkitTests::test_bn_partner_mirror_z PASSED [ 40%]
+studies/bsf-nmee-connection/tests/test_real_toolkit.py::ActualToolkitTests::test_fractional_cartesian_distinction PASSED [ 60%]
+studies/bsf-nmee-connection/tests/test_real_toolkit.py::ActualToolkitTests::test_identity_and_expected_target_rejection PASSED [ 80%]
+studies/bsf-nmee-connection/tests/test_real_toolkit.py::ActualToolkitTests::test_partner_mirror_involution PASSED [100%]
+
+============================== 5 passed in 1.16s ===============================

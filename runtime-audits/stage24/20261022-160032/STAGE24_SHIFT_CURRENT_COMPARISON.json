@@ -1,0 +1,44 @@
+{
+  "schema": "stage24-shift-current-comparison/v1",
+  "created_at_utc": "2026-10-22T07:51:43.759558+00:00",
+  "status": "PASS_COMPARISON_RAN",
+  "model": "synthetic two-band spinless Haldane, frozen M=0.4 phi=pi/2 t1=1 t2=0.2, g_s=1",
+  "grid": "5x5x1 (25 k points, same convention as NLO make_kpoints)",
+  "formula_documentation": {
+    "nlo_reimpl": "verbatim re-implementation of nlo_response/shift_current.py weight (rmn=v*(-i w)/(w^2+eta^2); generalized derivative; occdiff; single-delta Lorentzian eta_sp=0.05; Iabc+Iacb; raw=Re(1j*weight*delta))",
+    "standard_form_status": "The literal FDR SM Eq. (75) text is SKIPPED_NO_FDR_ARCHIVE (Stage 22 zip not present on this machine). The standard single-delta shift-current structure sigma^abc ~ Sum_k Sum_nm (f_n-f_m) Im[r^b_nm r^c_mn;a + (b<->c)] delta(omega-omega_nm) is the same band-pair/Lorentzian/tensor structure; absolute prefactor, sign branch (Eq.9 vs SM Eq.75) and SI/2D normalization remain unresolved."
+  },
+  "checks": {
+    "nlo_reimpl_matches_actual": true,
+    "normalized_lineshape_agreement": true
+  },
+  "metrics": {
+    "nlo_prefactor_cell_to_raw": -7.3583869431766225,
+    "nlo_spin_degeneracy_from_manifest": 1.0,
+    "nlo_actual_vs_reimpl_max_abs": 4.426459199180499e-13,
+    "nlo_actual_vs_reimpl_mean_abs": 1.3929516369859448e-14,
+    "nlo_actual_max_abs": 0.43682929546466137,
+    "normalized_spectra_mean_abs_diff": 2.251391188231683e-15,
+    "nonzero_components_on_grid": [
+      "xxx",
+      "xyy",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "direct_gap_min_eV": 1.4157196581778182,
+    "photon_probe_eV": 1.465,
+    "xxx_band_pair_contributions_at_probe": {
+      "xxx_pair(1,1)": 0.0,
+      "xxx_pair(2,1)": 0.034195030654671735,
+      "xxx_pair(1,2)": 8.4693282169858e-06,
+      "xxx_pair(2,2)": 0.0
+    }
+  },
+  "limitations": [
+    "Synthetic model only; not an ab-initio material result.",
+    "Literal FDR SM Eq. (75) not available; comparison is NLO-code vs independent re-implementation plus the standard-form structure.",
+    "The Eq. (9) vs SM Eq. (75) sign discrepancy and absolute SI normalization are NOT resolved here by construction.",
+    "5x5x1 grid is a low-resolution diagnostic, not a converged spectrum."
+  ]
+}

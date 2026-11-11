@@ -1,0 +1,75 @@
+{
+  "status": "PASS_HAMILTONIAN_C3H_INPLANE",
+  "checks": {
+    "source_gauge_C3_matrix_exact": true,
+    "source_gauge_C3_bands_equal": true,
+    "cell_gauge_C3_intertwiner_exact": true,
+    "no_z_hopping_in_HR": true,
+    "mz_trivial_for_2d_spinless": true,
+    "DB_C3_inplane_components": "[\"xxx\", \"xxy\", \"xyx\", \"xyy\", \"yxx\", \"yxy\", \"yyx\", \"yyy\"]",
+    "DB_C3h_inplane_components": "[\"xxx\", \"xxy\", \"xyx\", \"xyy\", \"yxx\", \"yxy\", \"yyx\", \"yyy\"]",
+    "C3_and_C3h_inplane_identical": true,
+    "NLO_point_group": "-6",
+    "NLO_independent_count": 2,
+    "NLO_inplane_subset": "[\"xxx\", \"xxy\", \"xyx\", \"xyy\", \"yxx\", \"yxy\", \"yyx\", \"yyy\"]",
+    "NLO_inplane_equals_DB_C3h": true
+  },
+  "metrics": {
+    "max_src_C3_matrix_residual_eV": 5.978733960281817e-16,
+    "max_band_C3_residual_eV": 1.7763568394002505e-15,
+    "max_cell_C3_intertwiner_residual_eV": 1.6392246515987586e-15,
+    "HR_Rz_values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_dH_dkz_residual": 0.0,
+    "C3_inplane_components": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "C3h_inplane_components": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "NLO_point_group": "-6",
+    "NLO_independent_count": 2,
+    "NLO_allowed_nonzero_components": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "NLO_inplane_subset": [
+      "xxx",
+      "xxy",
+      "xyx",
+      "xyy",
+      "yxx",
+      "yxy",
+      "yyx",
+      "yyy"
+    ],
+    "DB_C3h_dimension": 2
+  }
+}
