@@ -1,0 +1,20 @@
+{
+  "job": "566902.cmspbs1",
+  "node": "csuper007",
+  "stage": "SCF",
+  "complete": false,
+  "potcar_titles": [
+    "PAW_PBE S 06Sep2000",
+    "PAW_PBE W_sv 04Sep2015"
+  ],
+  "potcar_sha256": "6e358d098bafec7f0db746f368ae2efb096cdb417936af0fae5418ca068401c9",
+  "electrons": 52,
+  "state": "R",
+  "start_Asia_Shanghai": "2026-11-11 15:03:29",
+  "first_review_estimated": "15:25–15:45 Asia/Shanghai, not a guarantee",
+  "walltime_limit": "01:30:00",
+  "screening_started": 3,
+  "full_data": 1,
+  "precision_passed": 0,
+  "planned": 16
+}
