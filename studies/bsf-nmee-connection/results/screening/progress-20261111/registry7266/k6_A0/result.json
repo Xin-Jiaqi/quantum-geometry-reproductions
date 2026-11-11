@@ -1,0 +1,22 @@
+{
+  "case": "k6_A0",
+  "mesh": 6,
+  "label": "A",
+  "Fz_V_nm": 0.0,
+  "fixed_ions": true,
+  "complete": false,
+  "stage": "force_gate_failed",
+  "input_sha256": {
+    "POSCAR": "641f6e09415c7201515c2e7788e88fa9f9ed0b8d0b7220240c44b2134cb26137",
+    "INCAR": "5fd6c5b5868679d71803261a37abae23822b9916ed7828c3ee123ec6be893988",
+    "KPOINTS": "66adb9bc520a61ea753f03c0fe49cbe920c97ce3ae38681aa7685ed6c66c67b5",
+    "POTCAR": "ab983ab9c1f52da025fddf0e40984cd48b4b0f951cfa67994aa9a16737234600"
+  },
+  "job": "566628.cmspbs1",
+  "node": "csuper001",
+  "restart_input_hashes": {},
+  "scf_seconds": 873.0874967025593,
+  "electronic_iterations": 34,
+  "max_force_eV_A": 0.152052,
+  "force_limit_eV_A": 0.1
+}

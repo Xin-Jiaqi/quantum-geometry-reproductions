@@ -1,0 +1,94 @@
+{
+  "sources": [
+    "review7268-20261111/matched_kernel_interfaces.json",
+    "review7268-20261111/prediction_review.json"
+  ],
+  "definition": "M = C_lower + r*C_upper; r = w_upper/w_lower, positive constant weights, w_lower normalized to 1",
+  "G_units": "1e-9 (V^2 T)^-1",
+  "opposite_slope_open_interval_on_reported_settings": [
+    0.05444477208772607,
+    0.4993224452977426
+  ],
+  "rows": [
+    {
+      "interface": "S/S",
+      "mesh": 6,
+      "bands": 96,
+      "G_lower": 0.07848805925263935,
+      "G_upper": -1.4416087393326338,
+      "G_equal_weights": -1.3631206804492062,
+      "r_zero": 0.05444477208772607,
+      "G_at_r_0.25": -0.2819141255805191
+    },
+    {
+      "interface": "S/S",
+      "mesh": 6,
+      "bands": 112,
+      "G_lower": 0.057017932562009044,
+      "G_upper": -1.4265684437511972,
+      "G_equal_weights": -1.3695505120242102,
+      "r_zero": 0.03996859233201526,
+      "G_at_r_0.25": -0.29962417837579025
+    },
+    {
+      "interface": "S/Se",
+      "mesh": 6,
+      "bands": 96,
+      "G_lower": 3.2301746347118154,
+      "G_upper": -6.456433124030099,
+      "G_equal_weights": -3.2262584889374635,
+      "r_zero": 0.500303274681105,
+      "G_at_r_0.25": 1.6160663537042907
+    },
+    {
+      "interface": "S/Se",
+      "mesh": 6,
+      "bands": 112,
+      "G_lower": 3.2404063385448723,
+      "G_upper": -6.489606804301857,
+      "G_equal_weights": -3.2492004660741935,
+      "r_zero": 0.4993224452977426,
+      "G_at_r_0.25": 1.618004637469408
+    },
+    {
+      "interface": "S/Se",
+      "mesh": 9,
+      "bands": 96,
+      "G_lower": 4.24034854586079,
+      "G_upper": -7.358024211269623,
+      "G_equal_weights": -3.117675665479851,
+      "r_zero": 0.5762890178271268,
+      "G_at_r_0.25": 2.4008424930433847
+    },
+    {
+      "interface": "S/Se",
+      "mesh": 9,
+      "bands": 112,
+      "G_lower": 4.574951570266528,
+      "G_upper": -7.730097389385335,
+      "G_equal_weights": -3.1551458192436765,
+      "r_zero": 0.5918362136741862,
+      "G_at_r_0.25": 2.642427222920194
+    },
+    {
+      "interface": "S/Se",
+      "mesh": 12,
+      "bands": 96,
+      "G_lower": 5.410434450838082,
+      "G_upper": -8.630569914060615,
+      "G_equal_weights": -3.2201354629459367,
+      "r_zero": 0.6268919091917204,
+      "G_at_r_0.25": 3.252791972322928
+    },
+    {
+      "interface": "S/Se",
+      "mesh": 12,
+      "bands": 112,
+      "G_lower": 5.394837592450905,
+      "G_upper": -8.61190099139975,
+      "G_equal_weights": -3.2170633989448305,
+      "r_zero": 0.6264398067091625,
+      "G_at_r_0.25": 3.2418623446009676
+    }
+  ]
+}

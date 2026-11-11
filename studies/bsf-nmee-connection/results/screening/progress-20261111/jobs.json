@@ -8,20 +8,27 @@
     "accepted_states": 27,
     "precision_pass": false
   },
-  "active_7266": {
-    "job": "566628.cmspbs1",
-    "scheduler": "R",
-    "node": "csuper001",
-    "state": "k6_A0",
-    "start": "2026-11-11 12:12:04",
-    "resources": "CP_001 4CPU/24GiB/4h",
-    "new_SCF_max": 5,
-    "review_zero_estimate": "12:40",
-    "all_states_review_if_zero_accepted": "13:30",
-    "walltime_limit": "16:12:04"
-  },
   "pilot_activated_excluding_anchor": 2,
   "data_complete_candidates": 1,
   "precision_passed_candidates": 0,
-  "planned_candidates": 16
+  "planned_candidates": 16,
+  "closed_7266": {
+    "job": "566628.cmspbs1",
+    "state": "k6_A0",
+    "start": "2026-11-11 12:12:04",
+    "resources": "CP_001 4CPU/24GiB/4h",
+    "scheduler": "F",
+    "exit": 1,
+    "ended": "2026-11-11 12:26:47",
+    "walltime": "00:14:40",
+    "stage": "force_gate_failed",
+    "max_force_eV_A": 0.152052,
+    "force_limit_eV_A": 0.1,
+    "gate_states_started": 0
+  },
+  "percent_of_16": {
+    "started": 12.5,
+    "data_complete": 6.25,
+    "precision_passed": 0.0
+  }
 }
