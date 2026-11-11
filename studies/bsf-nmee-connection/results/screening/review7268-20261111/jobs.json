@@ -1,0 +1,55 @@
+{
+  "overnight": {
+    "Job Id": "565092.cmspbs1",
+    "job_state": "F",
+    "exec_host": "csuper004/5*4",
+    "queue": "CP_001",
+    "stime": "Tue Nov 10 23:07:13 2026",
+    "obittime": "Wed Nov 11 07:11:33 2026",
+    "resources_used.walltime": "08:04:17",
+    "Resource_List.walltime": "16:00:00",
+    "Exit_status": "1",
+    "resources_used.ncpus": "4",
+    "resources_used.mem": "10838672kb"
+  },
+  "followup": {
+    "Job Id": "566504.cmspbs1",
+    "job_state": "R",
+    "exec_host": "csuper001/4*4",
+    "queue": "CP_001",
+    "stime": "Wed Nov 11 10:49:06 2026",
+    "resources_used.walltime": "00:01:52",
+    "Resource_List.walltime": "03:00:00",
+    "resources_used.ncpus": "4",
+    "resources_used.mem": "6000968kb",
+    "storage_GiB": {
+      "prior_bytes": 28.226,
+      "matched_max_state_bytes": 1.305,
+      "new_state_reserve_bytes": 2.207
+    },
+    "current_state": "k12_upperm"
+  },
+  "ss": {
+    "Job Id": "566509.cmspbs1",
+    "job_state": "F",
+    "exec_host": "csuper001/5",
+    "queue": "CP_001",
+    "stime": "Wed Nov 11 10:51:20 2026",
+    "obittime": "Wed Nov 11 10:52:34 2026",
+    "resources_used.walltime": "00:01:11",
+    "Resource_List.walltime": "00:15:00",
+    "Exit_status": "0",
+    "resources_used.ncpus": "1",
+    "resources_used.mem": "1788268kb"
+  },
+  "scheduler_timezone": "Asia/Tokyo",
+  "next_check_Asia_Shanghai": "2026-11-11 10:45",
+  "progress": {
+    "bilayer_fields_checked": 9,
+    "night_completed": 25,
+    "planned_states": 27,
+    "pilot_new_started": 1,
+    "candidate_count": 16,
+    "pilot_candidates_all_requirements_accepted": 0
+  }
+}

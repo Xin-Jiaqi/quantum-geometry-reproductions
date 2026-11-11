@@ -1,0 +1,20 @@
+{
+  "sources": {
+    "export_tensor.py": "850d913fd8c33a470869d2e51e4eac43a32b35f05837083ab9490eb52b611da6",
+    "build_stencil.py": "17835c3910660f661ec2566a8266e0fa453df442c174320ad2e1cbb90409c674",
+    "audit_gauge.py": "7a2a4fd7aa96a3c6f76d902c000c83b986237f6c3bfb6df67e19bf64cbf37ebc",
+    "tensor_response.py": "bcb75f34d6ebff6f64c7748d05c5145ef189f514da99dc46261a8a917bc80b88",
+    "validate_7269.py": "e6fdf3433db8fb0743f3b6c15cd11a875b955bf5753d663dd62c28bc019cd986",
+    "overnight7268/night_checks.py": "d976e697d03ccaa3c30506f5865466371e11a68b9a6dd3c547190824b6eb311e"
+  },
+  "fm010": {
+    "POSCAR": "9f34c27172b6302bc72aa61ba0e42fc5538b3c625915b48994c43cb8733cae5f",
+    "INCAR": "ad91f008e5572093eeaddf81759216504ee641ad51174654e1b3da3449c77e74",
+    "KPOINTS": "548591f8344dd4a50ee990618e473fb072d44e5f0555e8a8f794d67f7b557ea5"
+  },
+  "fp010": {
+    "POSCAR": "9f34c27172b6302bc72aa61ba0e42fc5538b3c625915b48994c43cb8733cae5f",
+    "INCAR": "e516b26ed7372cdc182a0d6aeda1b1e53812cc09dda555ab4dd975eac8adf780",
+    "KPOINTS": "548591f8344dd4a50ee990618e473fb072d44e5f0555e8a8f794d67f7b557ea5"
+  }
+}

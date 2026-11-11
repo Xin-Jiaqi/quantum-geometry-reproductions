@@ -1,0 +1,177 @@
+{
+  "source_job": "565092.cmspbs1",
+  "accepted_state_count": 25,
+  "raw_tensor_csv_units": "1e-9 (nm V T)^-1; G in 1e-9 (V^2 T)^-1",
+  "mesh_metrics": [
+    {
+      "mesh": 6,
+      "bands": 96,
+      "C0": [
+        6.837133333288811,
+        -62.315058409925975,
+        69.15219174322063
+      ],
+      "G": [
+        -3.2262584889374635,
+        3.2301746347118154,
+        -6.456433124030099
+      ],
+      "static_upper_share": 0.5260031807363813,
+      "gate_upper_share": 0.6665319051660097,
+      "upper_minus_lower_slope": -9.686607758741914,
+      "probe_G_change": 8.144670815113386e-05
+    },
+    {
+      "mesh": 6,
+      "bands": 112,
+      "C0": [
+        6.846979150553285,
+        -61.11802720765999,
+        67.9650063582215
+      ],
+      "G": [
+        -3.2492004660741935,
+        3.2404063385448723,
+        -6.489606804301857
+      ],
+      "static_upper_share": 0.5265216076869891,
+      "gate_upper_share": 0.666967938175177,
+      "upper_minus_lower_slope": -9.73001314284673,
+      "probe_G_change": 8.152560326379898e-05
+    },
+    {
+      "mesh": 9,
+      "bands": 96,
+      "C0": [
+        9.423493850213239,
+        -60.24311420895043,
+        69.6666080592378
+      ],
+      "G": [
+        -3.117675665479851,
+        4.24034854586079,
+        -7.358024211269623
+      ],
+      "static_upper_share": 0.5362693941829593,
+      "gate_upper_share": 0.634401425557398,
+      "upper_minus_lower_slope": -11.598372757130413,
+      "probe_G_change": 9.256216017661245e-05
+    },
+    {
+      "mesh": 9,
+      "bands": 112,
+      "C0": [
+        9.555179285536504,
+        -58.94605189009885,
+        68.5012311756362
+      ],
+      "G": [
+        -3.1551458192436765,
+        4.574951570266528,
+        -7.730097389385335
+      ],
+      "static_upper_share": 0.5374867908349563,
+      "gate_upper_share": 0.6282053338212834,
+      "upper_minus_lower_slope": -12.305048959651863,
+      "probe_G_change": 9.26567681602819e-05
+    },
+    {
+      "mesh": 12,
+      "bands": 96,
+      "C0": [
+        9.388030363181704,
+        -58.52988874756346,
+        67.91791911068111
+      ],
+      "G": [
+        -3.2201354629459367,
+        5.410434450838082,
+        -8.630569914060615
+      ],
+      "static_upper_share": 0.5371221554652896,
+      "gate_upper_share": 0.6146689859050466,
+      "upper_minus_lower_slope": -14.041004364898697,
+      "probe_G_change": 0.00010542885597430995
+    },
+    {
+      "mesh": 12,
+      "bands": 112,
+      "C0": [
+        9.512780127746753,
+        -57.26380244216525,
+        66.77658256989297
+      ],
+      "G": [
+        -3.2170633989448305,
+        5.394837592450905,
+        -8.61190099139975
+      ],
+      "static_upper_share": 0.5383454958109126,
+      "gate_upper_share": 0.614839845824567,
+      "upper_minus_lower_slope": -14.006738583850655,
+      "probe_G_change": 0.00010542814102620923
+    }
+  ],
+  "bilayer_convergence": {
+    "6_to_9": {
+      "C0": {
+        "mesh_change": 2.171998091559736,
+        "relative": 0.03170743144733798,
+        "pilot_amplitude_pass": true,
+        "band_change": 1.2970623188515802,
+        "probe_change": 5.662611579282384e-05,
+        "rank_margin": 9.555179285537356,
+        "rank_resolved": true
+      },
+      "G": {
+        "mesh_change": 1.334599784333328,
+        "relative": 0.17264980207958927,
+        "pilot_amplitude_pass": false,
+        "band_change": 0.3720731781157127,
+        "probe_change": 9.26567681602819e-05,
+        "rank_margin": 3.1551458191188075,
+        "rank_resolved": true
+      }
+    },
+    "9_to_12": {
+      "C0": {
+        "mesh_change": 1.7246486057432406,
+        "relative": 0.02582714687350322,
+        "pilot_amplitude_pass": true,
+        "band_change": 1.2970623188515802,
+        "probe_change": 8.352590469939969e-05,
+        "rank_margin": 9.512780127727716,
+        "rank_resolved": true
+      },
+      "G": {
+        "mesh_change": 0.8820290019298938,
+        "relative": 0.10241977965268405,
+        "pilot_amplitude_pass": false,
+        "band_change": 0.3720731781157127,
+        "probe_change": 0.00010542885597430995,
+        "rank_margin": 3.217063398948845,
+        "rank_resolved": true
+      }
+    }
+  },
+  "min_bilayer_probe_gap_eV": 0.6488161398729517,
+  "max_bilayer_force_eV_A": 0.010586,
+  "max_forbidden_per_scale": 7.651166392017423e-06,
+  "max_isotropy_per_scale": 4.878414595691067e-06,
+  "max_probe_change_per_scale": 1.5649259192815272e-06,
+  "max_layer_closure": 1.4975967040369194e-10,
+  "frozen_prediction": "parallel-idea-loop-20261110/physics/prediction_freeze.json",
+  "verdict": {
+    "zero_directions": "supported",
+    "static_upper": "supported",
+    "gate_lower": "contradicted",
+    "different_static_and_sensitive_layer": "contradicted",
+    "no_reversal_at_sampled_fields": "supported",
+    "unsampled_fields": "no continuous field scan",
+    "positive_gate_amplitude_direction": "not predicted; both weaken"
+  },
+  "missing_from_night": [
+    "k12_upperm",
+    "k12_upperp"
+  ]
+}
