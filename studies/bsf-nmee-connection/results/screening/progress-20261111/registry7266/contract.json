@@ -1,0 +1,31 @@
+{
+  "authorization": "20261111_progress_single_registry_tauB",
+  "scope": "single 6x6 registry, 1 PBS4CPU/24GiB/4h, five new SCFs (A0, A-, A+, matched mono-, mono+). Upper/lower isolated structures identical up to translation. Historical matched zero reused. All individual gates preserved including force<=0.10 eV/A. Stop if rejected.",
+  "prediction": "Exploratory transfer hypothesis before new gate states: upper |G| larger than lower and both magnitudes weaken under +Fz. Historic zero directions lower -x/upper +x already known with a different probe. Gate ranks require mesh validation.",
+  "source_hashes": {
+    "export_tensor.py": "850d913fd8c33a470869d2e51e4eac43a32b35f05837083ab9490eb52b611da6",
+    "build_stencil.py": "17835c3910660f661ec2566a8266e0fa453df442c174320ad2e1cbb90409c674",
+    "audit_gauge.py": "7a2a4fd7aa96a3c6f76d902c000c83b986237f6c3bfb6df67e19bf64cbf37ebc",
+    "tensor_response.py": "bcb75f34d6ebff6f64c7748d05c5145ef189f514da99dc46261a8a917bc80b88",
+    "validate_7269.py": "e6fdf3433db8fb0743f3b6c15cd11a875b955bf5753d663dd62c28bc019cd986",
+    "final_anchor_acceptance.json": "b75c8793021f00615e5b7c00b2179b5b0f19d71e42130e1022afd2f5706ccb52",
+    "pilot7268/A0/seed/INCAR": "3a6d6818f88888fa89cbb9a9b81baa462817d76ee7446e801c9032d582ada522",
+    "pilot7268/lower0/seed/INCAR": "6f5e7a41688119c06f4f835bf7dd6cb7435df25a3b9c1c29de2036a9c37dc978"
+  },
+  "normalized_text_source_hashes": {
+    "pilot7268/A0/seed/POTCAR": "466222edb207cdd19eef0467c454a9c150945a89a4767574c3c3dbf746d096ab",
+    "pilot7268/lower0/seed/POTCAR": "466222edb207cdd19eef0467c454a9c150945a89a4767574c3c3dbf746d096ab"
+  },
+  "runner_hashes": {
+    "POSCAR.A": "641f6e09415c7201515c2e7788e88fa9f9ed0b8d0b7220240c44b2134cb26137",
+    "POSCAR.lower": "f872faa28071b86a59198f0dd562ae4549f4e5d6de143beb686adf05649518eb",
+    "POSCAR.upper": "b09e568513483b0c54150399adbc7a5b9911c4ed5d3aff9c40abf6d72f9138e0",
+    "registry.py": "cafa40bef828f1024156e6ba3dd13a9b7f3fcdd38fca040dfeeb21681ad2d9bf",
+    "night_checks.py": "d976e697d03ccaa3c30506f5865466371e11a68b9a6dd3c547190824b6eb311e",
+    "registry.pbs": "1cfda2c0cb7804da9f4827c92ba944699c677ddeee7d9e3a8a63173118b796e4",
+    "geometry.json": "0f6ca9e426e3445539192b515a22a077d8cc61a7f6e1ae32847bd8f61e88b5a6"
+  },
+  "prior_mono_canonical_json_sha256": "bfa23665bda844fcf01b0c5f2120bd70b5474b583303f77b3f3eacab61b5dda9",
+  "relative_storage_limit_GiB": 10,
+  "retained_free_filesystem_GiB": 8
+}

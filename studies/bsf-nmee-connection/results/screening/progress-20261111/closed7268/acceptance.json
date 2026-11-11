@@ -1,0 +1,126 @@
+{
+  "single_state_checks": 27,
+  "mesh_comparison": {
+    "agreement": false,
+    "checks": [
+      {
+        "label": "A",
+        "quantity": "C0",
+        "absolute_difference": 1.7246486057432406,
+        "scale": 66.77658256989297,
+        "relative_to_largest_physical_layer": 0.02582714687350322,
+        "tolerance": 0.05,
+        "agreement": true
+      },
+      {
+        "label": "A",
+        "quantity": "G",
+        "absolute_difference": 0.8820290019298938,
+        "scale": 8.61190099139975,
+        "relative_to_largest_physical_layer": 0.10241977965268405,
+        "tolerance": 0.1,
+        "agreement": false
+      },
+      {
+        "label": "lower",
+        "quantity": "C0",
+        "absolute_difference": 0.3033309413246652,
+        "scale": 14.034447503759797,
+        "relative_to_largest_physical_layer": 0.021613315468485918,
+        "tolerance": 0.05,
+        "agreement": true
+      },
+      {
+        "label": "lower",
+        "quantity": "G",
+        "absolute_difference": 0.018342044901791255,
+        "scale": 0.36057858672672083,
+        "relative_to_largest_physical_layer": 0.0508683698283296,
+        "tolerance": 0.1,
+        "agreement": true
+      },
+      {
+        "label": "upper",
+        "quantity": "C0",
+        "absolute_difference": 0.2861490650667555,
+        "scale": 14.14544885958497,
+        "relative_to_largest_physical_layer": 0.020229055147504962,
+        "tolerance": 0.05,
+        "agreement": true
+      },
+      {
+        "label": "upper",
+        "quantity": "G",
+        "absolute_difference": 0.01907718766982036,
+        "scale": 0.37266063987556386,
+        "relative_to_largest_physical_layer": 0.051191850247964146,
+        "tolerance": 0.1,
+        "agreement": true
+      }
+    ],
+    "band_windows_adequate": true,
+    "band_diagnostics": {
+      "previous": {
+        "adequate": true,
+        "observed_band_or_probe_change": 0.3720731781157127
+      },
+      "current": {
+        "adequate": true,
+        "observed_band_or_probe_change": 0.01866892266086495
+      }
+    },
+    "gate_sensitive_layer": "upper",
+    "rank_resolved_against_observed_mesh_change": true,
+    "rank_margin": 3.217063398948845,
+    "observed_mesh_change": 0.8818036020144149,
+    "limits": "Observed mesh, band and probe differences are diagnostics, not statistical errors; net residual needs separate review."
+  },
+  "physical": [
+    {
+      "mesh": 6,
+      "Gnet": -3.2492004660741935,
+      "Gl": 3.2404063385448723,
+      "Gu": -6.489606804301857,
+      "Gl_iso": -0.4633839027425779,
+      "Gu_iso": -0.4763956611753173,
+      "Giso_sum": -0.9397795639178952,
+      "G_excess": -2.3094209021562984,
+      "ratio": 3.4574070248223268,
+      "upper_share": 0.666967938175177
+    },
+    {
+      "mesh": 9,
+      "Gnet": -3.1551458192436765,
+      "Gl": 4.574951570266528,
+      "Gu": -7.730097389385335,
+      "Gl_iso": -0.3789206316285121,
+      "Gu_iso": -0.3917378275453842,
+      "Giso_sum": -0.7706584591738963,
+      "G_excess": -2.3844873600697802,
+      "ratio": 4.094090944808184,
+      "upper_share": 0.6282053338212834
+    },
+    {
+      "mesh": 12,
+      "Gnet": -3.2170633989448305,
+      "Gl": 5.394837592450905,
+      "Gu": -8.61190099139975,
+      "Gl_iso": -0.36057858672672083,
+      "Gu_iso": -0.37266063987556386,
+      "Giso_sum": -0.7332392266022847,
+      "G_excess": -2.483824172342546,
+      "ratio": 4.3874676670698545,
+      "upper_share": 0.614839845824567
+    }
+  ],
+  "scopes": "Field data complete. Bilayer absolute G numerical threshold unmet. Ratio compares equal-weight net screened slopes against separately screened matched isolated layers.",
+  "sources": {
+    "older_25_records": "../../review7268-20261111/states/<case>/result.json",
+    "remaining_2_records": [
+      "k12_upperm/result.json",
+      "k12_upperp/result.json"
+    ],
+    "acceptance_functions": "../../overnight7268-20261110/night_checks.py",
+    "reproduction": "For each mesh and field use the retained 112 bilayer / 64 monolayer bands and C[scope,0,0]; take central gate differences over 0.2 V/nm, compare mesh_observables and compare_meshes on full response windows for scientific gates."
+  }
+}

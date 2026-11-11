@@ -1,0 +1,72 @@
+{
+  "job": "566628.cmspbs1",
+  "node": "csuper001",
+  "complete": false,
+  "status": "running_state",
+  "completed_states": [],
+  "only_material": "MoSSe S/Se E,tau_B,d (BiDB7266)",
+  "coordinate_convention": "x along a1, a2 at120degrees, +z lower-to-upper; Fz positive physical +z",
+  "allocated_CPUs": 4,
+  "max_wall_hours": 4,
+  "automatic_retries": 0,
+  "new_jobs_submitted_from_worker": 0,
+  "elapsed_seconds": 0.01567533891648054,
+  "reused_zero_reference": {
+    "job": "564590.cmspbs1",
+    "acceptance": {
+      "passed": true,
+      "rows": [
+        {
+          "nb": 48,
+          "passed": true,
+          "Cxx": [
+            12.527633672822342
+          ],
+          "scale": 12.527633672822342,
+          "forbidden": 2.612383398030427e-06,
+          "isotropy": 1.6286956761035754e-06,
+          "probe_difference": 1.0118145123527711e-05,
+          "gap_eV": 1.4673484905121026,
+          "layer_closure": 8.068923307291698e-11
+        },
+        {
+          "nb": 56,
+          "passed": true,
+          "Cxx": [
+            12.613422760595801
+          ],
+          "scale": 12.613422760595801,
+          "forbidden": 4.129269649614839e-06,
+          "isotropy": 1.1802710524477789e-06,
+          "probe_difference": 1.0030002327354737e-05,
+          "gap_eV": 1.4673484905121108,
+          "layer_closure": 1.433306806575274e-10
+        },
+        {
+          "nb": 64,
+          "passed": true,
+          "Cxx": [
+            12.614168054745953
+          ],
+          "scale": 12.614168054745953,
+          "forbidden": 0.0054087860321735265,
+          "isotropy": 0.0024532877040090995,
+          "probe_difference": 9.971707131128937e-06,
+          "gap_eV": 1.467348490511427,
+          "layer_closure": 1.2973476459787747e-10
+        }
+      ],
+      "band_window_signs_agree": true,
+      "force_pass": true,
+      "force_limit_eV_A": 0.1,
+      "gauge_pass": true,
+      "electron_count_matches_protocol": true,
+      "limits": "Pilot numerical gates; not final absolute-amplitude convergence."
+    },
+    "applies_to": [
+      "lower",
+      "upper"
+    ]
+  },
+  "current_state": "k6_A0"
+}

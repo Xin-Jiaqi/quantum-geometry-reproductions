@@ -1,0 +1,27 @@
+{
+  "time_zone": "Asia/Shanghai",
+  "closed_7268": {
+    "job": "566504.cmspbs1",
+    "exit": 0,
+    "ended": "2026-11-11 10:27:06",
+    "walltime": "00:37:58",
+    "accepted_states": 27,
+    "precision_pass": false
+  },
+  "active_7266": {
+    "job": "566628.cmspbs1",
+    "scheduler": "R",
+    "node": "csuper001",
+    "state": "k6_A0",
+    "start": "2026-11-11 12:12:04",
+    "resources": "CP_001 4CPU/24GiB/4h",
+    "new_SCF_max": 5,
+    "review_zero_estimate": "12:40",
+    "all_states_review_if_zero_accepted": "13:30",
+    "walltime_limit": "16:12:04"
+  },
+  "pilot_activated_excluding_anchor": 2,
+  "data_complete_candidates": 1,
+  "precision_passed_candidates": 0,
+  "planned_candidates": 16
+}

@@ -1,0 +1,31 @@
+{
+  "bidb": 7266,
+  "source": "studies/bsf-nmee-connection/results/screening/bidb-pilot-plan-20261110/structures/bilayer-7266.vasp",
+  "source_sha256": "53ebdd3d2de163d245bae203404b3794a725e0985739946ae649933665360b8d",
+  "uid": "MoSSe-de7ac5fc6945-2-1_0_0_1-0.67_0.33",
+  "point_group": "3m",
+  "monolayer_point_group": "3m",
+  "orientation": "E",
+  "tau_fractional": [
+    0.6666666666666666,
+    0.3333333333333333
+  ],
+  "d_centroids_A": 6.302997080000001,
+  "physical_equivalence_residual_A": 7.273769192837376e-09,
+  "layer_exchange_count": 0,
+  "atomic_order": [
+    "Mo",
+    "Mo",
+    "S",
+    "S",
+    "Se",
+    "Se"
+  ],
+  "isolated_layer_reuse": "single isolated monolayer for both layers at each gate; common in-plane translation modulo periodic lattice, independently centered z.",
+  "mono_coordinate_convention": "Use exact archived zero-gate POSCAR.lower with a common z translation from initially centroid-centered isolate. The same POSCAR and dipole origin are used for all three gate fields.",
+  "lower_translation_from_old_to_centroid_A": [
+    0.0,
+    0.0,
+    0.05858152000000061
+  ]
+}
