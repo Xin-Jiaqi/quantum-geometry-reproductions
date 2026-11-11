@@ -1,0 +1,109 @@
+{
+  "schema": "agf2-real-igmc-feasibility-v1",
+  "date": "2026-10-24",
+  "sources": {
+    "poscar": "POSCAR.soc_input (sha256 b4f1aa46c00faf455e4b0af4f323b3e1a502fea5b27692cabe583199ba2befd4)",
+    "receipt": "RUN_RECEIPT.json (2026-10-22 SOC screen, PASS_SCREEN)"
+  },
+  "no_compute_executed": true,
+  "glide_mx_half_half_max_residual_ang": 1.2834652727954026e-05,
+  "glide_pairs_atom1_to_atom2": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      9,
+      12
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      12,
+      9
+    ]
+  ],
+  "existing": {
+    "soc_energy_ev": -35.55001581,
+    "soc_lowering_ev": -0.122071,
+    "gap_ev": 1.3616,
+    "homo_ev": -5.7746,
+    "lumo_ev": -4.413,
+    "k_mesh": "12x8x1 Gamma",
+    "smearing": "ISMEAR=0 SIGMA=0.05",
+    "ag_spin_moments_mub": [
+      -0.568,
+      0.568,
+      0.568,
+      -0.568
+    ],
+    "ag_orbital_moments_Lz_mub": 0.07,
+    "occupations": "clean 0/1 (insulator at screening grid)",
+    "geometry": "step-11 ionic screening geometry, max|F|=0.078 eV/A"
+  },
+  "missing_for_real_igmc": [
+    "WAVECAR / wavefunctions (LWAVE=.FALSE.; no Bloch states saved)",
+    "k-resolved spinor H(k) matrix (Bloch or Wannier)",
+    "same-gauge Zeeman spin matrix S_j(k) (site moments != operator)",
+    "position / Berry connection A_i(k) (Wannier r.dat, final gauge)",
+    "VASP->Wannier90 amn/mmn/spn/eig/u/v files",
+    "multiband Dxx/omega value and Wilson cross-check on the material"
+  ],
+  "prior_run_cost_model": {
+    "wall_sec": 16769.979,
+    "wall_h": 4.658,
+    "rank_hours": 37.27,
+    "scf_iterations": 64,
+    "sec_per_iteration_8ranks": 262.0,
+    "max_memory_rank0_MB": 906.9,
+    "n_bands_hint": "not recorded in receipt; NBANDS is VASP default for the noncollinear run (50 occupied spinor bands for 100 e-)"
+  },
+  "wannier_manifold_estimate": {
+    "nelec": 100,
+    "n_occupied_spinor_bands": 50,
+    "num_wann_options": {
+      "d+p (Ag-4d 20 + F-2p 24)": 44,
+      "d+p+s (add Ag-5s 4)": 48,
+      "d+p+s+Ag-4p (deep window)": 60
+    },
+    "frozen_window_guess_ev": [
+      -7.0,
+      -3.0
+    ],
+    "note": "window/disentanglement finalized only in the authorized run against the actual band structure; acceptance: Wannier interpolation within 10 meV of the direct eigenvalues in the frozen window around HOMO/LUMO"
+  }
+}

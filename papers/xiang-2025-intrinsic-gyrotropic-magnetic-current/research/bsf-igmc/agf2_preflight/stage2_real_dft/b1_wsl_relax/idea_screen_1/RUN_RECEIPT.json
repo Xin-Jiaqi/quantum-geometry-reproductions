@@ -1,0 +1,91 @@
+{
+  "document": "RUN_RECEIPT.json",
+  "task": "B1_FAST_IDEA_SCREENING_TASK_20261022.md (commit 81e5239)",
+  "date": "2026-10-22",
+  "status": "SCREENING_PASS",
+  "status_definition": "11/11 ionic steps electronically converged (EDIFF=1e-6); VASP stopped with 'reached required accuracy - stopping structural energy minimisation' and step-11 max norm force 0.0782 eV/A <= EDIFFG=-0.08 (not NSW exhaustion); no abnormal contacts; Type-I Ag moment pattern retained; preliminary gap present. NOT a proof of local minimum / magnetic ground state / double well / IGMC.",
+  "execution": {
+    "machine": "user private WSL (LinuxGNU), VASP 6.6.0 06Mar2026 (build Sep 2 2026 13:14:08) complex",
+    "mpi": "mpirun.openmpi -np 8 (8 ranks, single node)",
+    "omp_threads": 1,
+    "start_utc": "2026-10-22 01:56:19",
+    "elapsed_sec": 5818.937,
+    "elapsed_hours": 1.616,
+    "rank_hours": 12.93,
+    "budget_note": "within authorized cap: 8 ranks, <=4 h wall-clock (32 rank-hours); no PBS, no Japan HPC, no retry, no second attempt",
+    "startup_note": "first two mpirun launches stalled (0 children, no output) in non-interactive WSL shell; fixed by exporting HWLOC_COMPONENTS=-gl (user .bashrc WSL toolchain setting) and executing via a WSL file script; the authorized single run is the successful launch only",
+    "stop_reason": "VASP internal EDIFFG=-0.08 convergence ('reached required accuracy'); no STOPCAR was ever created",
+    "n_ionic_steps_completed": 11,
+    "n_ediFF_reached": 11,
+    "ediFF": "1e-6 on every completed ionic step",
+    "stopcar_used": false
+  },
+  "inputs": {
+    "POSCAR_screen_input": "results/POSCAR.screen_input (committed), sha256 37e62bd8a01238d267d71ec13d1d50d7fa81c620922d5dcf92b777125d8915cf (byte-identical to WSL POSCAR)",
+    "POSCAR_source": "step-15 snapshot of first 15-step CG relax, sha256 d49c82807fc2309575e5d3757904ab78caab348aef10e895ac2327a904ac2d68 (unconverged; max|F|=0.4973 eV/A)",
+    "INCAR_screen": "results/INCAR.screen, sha256 62f8f682614199d306df0ed31ce0a649665a0db92e3e20190d93f4fc379b1bac (byte-identical to WSL INCAR)",
+    "INCAR_diffs_vs_historical_INCAR_relax_1d8ff5dc": {
+      "SYSTEM": "AgF2_B1_TypeI_idea_screen_1",
+      "IBRION": "2 -> 1 (RMM-DIIS)",
+      "POTIM": "0.25 -> 0.10",
+      "NELMIN": "unset -> 4",
+      "NSW": "30 -> 16",
+      "EDIFFG": "-0.02 -> -0.08 (screening-only, not paper precision)"
+    },
+    "unchanged": "PBE; Ag 4d Dudarev Ueff=4 eV; IVDW=11 (D3 zero damping); ENCUT=500; EDIFF=1e-6; ISPIN=2; MAGMOM=-1 1 1 -1 8*0; ISIF=2 fixed cell; ISYM=0; 12x8x1 Gamma; ISMEAR=0 SIGMA=0.05; LSORBIT=.FALSE.; LREAL=.FALSE.; ISTART=0; ICHARG=2; no SMASS",
+    "KPOINTS": "sha256 4ab9ad06699176341f30e79f18b822be389d066f64e0295ce368e74b8b99420a (same as historical)",
+    "POTCAR": "sha256 8c0da262849433cad092946af66c1b584d457e46a70d4c1eb768ea68305f0fff (hash-only; content never uploaded)"
+  },
+  "raw_outputs_private_wsl": {
+    "dir_alias": "~/agf2-b1-idea1/B1_g3.0/",
+    "OUTCAR_sha256": "71bb2d22ab912593a0f1187e74d4ad555ee38e332dfb180dfe47e15962d17938",
+    "OUTCAR_bytes": 2841311,
+    "OSZICAR_sha256": "59fb8ad47cad06c0c3e73a0e80d9b867992ea0f79c72430534a4088d161f287f",
+    "vasprun_xml_sha256": "f147eaf6270db4ce198b7a142291d7a6dde65250dbc43f2fc0a8da293821ca2f",
+    "vasprun_xml_bytes": 8182641,
+    "CONTCAR_sha256": "adcb93452e835d66060a62452af04cc8059b2c0f60004ef2b62de2912421db18",
+    "CONTCAR_vs_OUTCAR_step11_max_dR_A": 6.72e-06,
+    "vasp_stdout_bytes": 16101
+  },
+  "consistency_checks": {
+    "outcar_vs_vasprun_max_abs_force_diff_ev_ang": 7.636753236785715e-07,
+    "energy_outcar_toten_vs_oszicar_F": "equal to last digit on all 11 steps",
+    "energy_outcar_toten_vs_vasprun_e_fr": "0.0 on all 11 steps (last scstep per calculation)",
+    "step1_toten_vs_historical_step15": "-35.34932295 vs -35.34931729 (delta 5.7e-06 eV; same geometry, expected)",
+    "step1_geometry_vs_historical_step15": "Ag sep 4.0443, inner F gap 2.2119, F-F 3.0523, max|F| 0.4973 - identical to recorded step-15 snapshot"
+  },
+  "trajectory_summary": {
+    "toten_start_end_ev": [-35.34932295, -35.42794489],
+    "toten_delta_ev": -0.078622,
+    "max_force_start_end_ev_ang": [0.4973, 0.0782],
+    "final_max_force_atom": "7 (F), F=(+0.0229,+0.0112,-0.0740), max component 0.0740",
+    "final_ag_z_sep_A": 4.0556,
+    "final_inner_f_gap_A": 2.1180,
+    "final_nearest_interlayer_f_f_A": 3.0020,
+    "final_relative_y_slide_A": 0.011663,
+    "min_nearest_interlayer_f_f_over_run_A": 3.0020,
+    "net_magnetization_all_steps_mub": 0.0,
+    "full_table": "TRAJECTORY.csv"
+  },
+  "magnetism": {
+    "final_ag_moments_mub": [-0.567, 0.567, 0.566, -0.566],
+    "pattern": "Type-I interlayer Neel [- + + -] preserved",
+    "f_moments_max_mub": 0.002,
+    "total_magnetization_mub": -0.000,
+    "note": "MAGMOM is an electronic-state seed, not a constraint; per-atom moments were read from the last OUTCAR magnetization block"
+  },
+  "gap": {
+    "method": "occupation-defined HOMO/LUMO from last vasprun.xml eigenvalues block (12x8x1 Gamma, ISMEAR=0 SIGMA=0.05)",
+    "homo_ev": -5.8047,
+    "lumo_ev": -4.4172,
+    "gap_ev": 1.3875,
+    "historical_comparison": "1.445 eV at the same grid in the 15-step run",
+    "note": "diagnostic only, not k-converged; GAP_NOT_DETERMINED is NOT claimed; preliminary gapped"
+  },
+  "evidence_levels": {
+    "CROSS_VERIFIED_FROM_RAW_WSL_OUTPUT": ["all trajectory values, forces, moments, gap, hashes"],
+    "RUNNER_REPORTED": ["none in this run; everything re-derived"],
+    "NOT_COMPUTED": ["local-minimum proof (curvature/Hessian)", "magnetic ground state", "SOC easy axis", "sliding double well / barrier", "Berry curvature", "material IGMC"]
+  },
+  "verdict": "SCREENING_PASS - see IDEA_SCREENING_VERDICT.md; recommend stopping structural precision escalation and proceeding to symmetry/magnetic-connector analysis before any B2/response calculation (proposal only; no new computation authorized by this receipt)"
+}

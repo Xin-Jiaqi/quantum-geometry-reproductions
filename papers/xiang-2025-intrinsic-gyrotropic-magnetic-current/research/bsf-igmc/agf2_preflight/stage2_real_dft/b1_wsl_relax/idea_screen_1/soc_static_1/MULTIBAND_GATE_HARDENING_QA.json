@@ -1,0 +1,61 @@
+{
+  "schema": "bsf-igmc-gate-hardening-qa-v1",
+  "task_file": "HARNESS_SYNTHETIC_GATE_HARDENING_20261023.md",
+  "commit": "09ac1c6",
+  "files_sha256": {
+    "scripts/test_multiband_igmc_gate.py": "d5b41a249cd2e2e5b0b0884abc7cc3fb919398e54dd9b93bb850068a90af721a",
+    "scripts/test_gate_regressions.py": "dd2f6f9f5e7ddff6b9f5893682ec71467143751c01fb22a97b42b134fb28d824",
+    "scripts/wannier_operator_contract_pinned26.py": "bd437fce98735a8dd3a773466c3e6140fdcf4e68f057a24fc8d1200c060c4b7b",
+    "MULTIBAND_SAME_GAUGE_IGMC_GATE.json": "3884a556c9deeb8dfdabb1f4c5a617179596d27b5123d7aadfd46d1cdcebcb86"
+  },
+  "scope": "synthetic Python/NumPy only; zero VASP/PBS/Wannier/SCF; ~4 min CPU",
+  "full_gate_exit": 0,
+  "regressions_exit": 0,
+  "injected_faults_exercised": [
+    {
+      "id": "R1_wrong_tensor_factor",
+      "construction": "H = I(x)h2, S = I(x)sigma (adcd75e arrangement)",
+      "observable": "||[H,Sx]||_2 = 1.200 eV at k=0",
+      "guard": "gate NC4 conservation assertion (<1e-10) rejects; test asserts >= 1.19",
+      "outcome": "rejected"
+    },
+    {
+      "id": "R2_negative_indirect_gap",
+      "construction": "blockdiag(h2A, h2B=h2A+0.35 I): direct gap > 0 at every k, indirect gap = -0.278 eV",
+      "observable": "indirect gap -0.27757 eV <= 0",
+      "guard": "gap_scan(require_insulator=True) raises 'global insulator FAILED'",
+      "outcome": "rejected"
+    },
+    {
+      "id": "R3_wilson_branch_unstable_row",
+      "construction": "synthetic row phase at pi-1e-9 rad",
+      "observable": "branch margin 1e-9 rad < 0.05",
+      "guard": "wilson_branch_check raises 'branch cut'",
+      "outcome": "rejected"
+    },
+    {
+      "id": "R4_wilson_finite_b_drift",
+      "construction": "gamma(b) raw drift 2.78 rad >= pi",
+      "observable": "raw |gamma(1e-4)-gamma(0)| = 2.78 rad",
+      "guard": "wilson_branch_check raises 'finite-b'",
+      "outcome": "rejected"
+    }
+  ],
+  "assertions_in_full_gate": [
+    "two-band Dirac anchor == frozen CSV (0.0152366470 / 0.0151827707, <1e-6)",
+    "v2_positive 41^2 direct/Wilson rel < 2% (0.41%)",
+    "b-step 1e-4..1e-3 eV rel < 2% (0.41%)",
+    "joint gauge invariance residuals < 1e-8 / 1e-6 (2.8e-17 / 1.1e-12)",
+    "NC1 wrong-spin-gauge |d|=0.136 > 0.02",
+    "NC2 omit-A operator 0.799 eV.A > 0.005 and response |d|=0.0597 > 0.01 (v2_spinZ_pos)",
+    "NC3 orbital-pseudospin |d|=0.282 > 5%",
+    "NC4 corrected spin-conserving zero (D=1.1e-33, slope=0.0) + commutator < 1e-10",
+    "NC5 pinned zero baseline (-2.6e-17)",
+    "gap floor 0.02 eV and POSITIVE global indirect gap at b in {0,+/-1e-4,+/-1e-3}",
+    "embedded-Wilson branch jumps/margin/drift/winding all asserted",
+    "orbital-Liouville vs direct rel < 2% (0.03%)",
+    "pinned module body sha256 == upstream cdac6418 blob"
+  ],
+  "verdict": "PASS (conditional semantics: develop genuine source-authenticated material H/S/A importer; NOT material IGMC, NOT DFT/Wannier permission)",
+  "low_omega_dxx_survives": true
+}

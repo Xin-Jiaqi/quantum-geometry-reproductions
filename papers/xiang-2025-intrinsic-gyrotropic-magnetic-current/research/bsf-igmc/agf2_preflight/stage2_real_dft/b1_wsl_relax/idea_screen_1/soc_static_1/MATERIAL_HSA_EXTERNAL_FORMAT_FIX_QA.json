@@ -1,0 +1,165 @@
+{
+  "schema": "hsa-synthetic-import-audit-v1",
+  "task_file": "HARNESS_W90_EXTERNAL_FORMAT_FINAL_FIX_20261023.md",
+  "fix_round": "EXTERNAL_FORMAT_FINAL_FIX_20261023",
+  "prior_audit": "MATERIAL_HSA_SYNTHETIC_IMPORT_AUDIT.json (1a70a23)",
+  "declared_support_case": {
+    "2D slab": true,
+    "orthorhombic 3x3 lattice": true,
+    "Rz=0 all R": true,
+    "write_ndegen_applied=true deg=1": true,
+    "use_ws_distance=false (no ambiguous WS fold)": true,
+    "SAXIS=(0,0,1)": true,
+    "spinors=true": true,
+    "single explicit k ordering (win kpoints block)": true,
+    "formatted spn only": true,
+    "U-family matrices COLUMN-MAJOR (rows fastest, then columns)": true
+  },
+  "official_format_source": [
+    "https://wannier90.readthedocs.io/en/latest/user_guide/wannier90/files/",
+    "https://wannier90.readthedocs.io/en/latest/user_guide/wannier90/postproc/",
+    "test-suite/tests/testw90_rmn/benchmark/diamond_r.dat"
+  ],
+  "material_authenticated": false,
+  "no_wannier_executed": true,
+  "external_format_golden": {
+    "u_golden_exact": true,
+    "u_rowmajor_rejected": true,
+    "u_dis_golden_exact": true,
+    "writer_column_major": true
+  },
+  "phase_A": {
+    "status": "SYNTHETIC_CARRIER_PASS",
+    "carriers": {
+      "v2_positive": {
+        "status": "SYNTHETIC_CARRIER",
+        "sha256": "f045b55ff5ec502b",
+        "max_operator_recovery_err": {
+          "h_r": 0.0,
+          "spin_r": 0.0,
+          "position_r": 0.0
+        }
+      },
+      "v2_spinZ_pos": {
+        "status": "SYNTHETIC_CARRIER",
+        "sha256": "cb952b46a8424c00",
+        "max_operator_recovery_err": {
+          "h_r": 0.0,
+          "spin_r": 0.0,
+          "position_r": 0.0
+        }
+      },
+      "offsite_spin_positive": {
+        "status": "SYNTHETIC_CARRIER",
+        "note": "complex off-site S(+R) non-Hermitian with S(-R)=S(+R)+ imports; per-R Hermiticity NOT required off-site"
+      }
+    },
+    "response": {
+      "v2_positive": {
+        "direct_41": 0.034293747531495486,
+        "wilson_slope_41": 0.034151744511268234,
+        "source_direct_41": 0.034293747531495486,
+        "source_wilson_41": 0.034151744511268234,
+        "ref_direct": 0.0342937475,
+        "ref_wilson": 0.0341517445
+      },
+      "v2_spinZ_pos": {
+        "direct_41": -0.025357180978182244,
+        "wilson_slope_41": -0.025571966429938087,
+        "source_direct_41": -0.025357180978182244,
+        "source_wilson_41": -0.025571966429938087,
+        "ref_direct": 0.0342937475,
+        "ref_wilson": 0.0341517445
+      }
+    },
+    "negatives": {
+      "corrupt_hash": "carrier hash mismatch: 8161f75db5d6 != 000000000000",
+      "double_centers": "centers must equal diag of the on-site position connection (centers counted once)",
+      "remove_position": "carrier missing required matrix position_r",
+      "wrong_units": "unsupported units {'energy': 'meV', 'length': 'angstrom', 'spin': 'dimensionless_pauli'}",
+      "non_hermitian_spin": "R=(-1, 0) missing Hermitian partner -R",
+      "missing_minus_R": "translations R=(-1, 0) has no -R partner ((1, 0) absent)",
+      "spin_gauge_swap": {
+        "swapped_direct_41": 0.021406647871813053,
+        "ref_direct": 0.0342937475,
+        "abs_diff": 0.012887099628186946
+      },
+      "wrong_lattice_orientation": {
+        "swapped_lattice_direct_41": 1.1597157895911576e-17,
+        "abs_diff": 0.034293747499999985
+      },
+      "mismatched_spin_pair": "R=(-1, 0) missing Hermitian partner -R"
+    }
+  },
+  "phase_B": {
+    "status": "SYNTHETIC_FORMAT_PARSER_PASS",
+    "cases": {
+      "B1_identity_41": {
+        "op_recovery_err": {
+          "h_r": 0.0,
+          "spin_r": 1.0009823725401507e-10,
+          "position_r": 0.0
+        },
+        "H_vs_eig_max_err": 2.276219895271573e-12,
+        "direct_41": 0.03429374752207785,
+        "wilson_41": 0.03415174450238645
+      },
+      "B2_smooth_21": {
+        "H_vs_eig_max_err": 7.6580429638368e-10,
+        "VdagV_err": 4.774010215887645e-15,
+        "direct_21": 0.034293747453785016,
+        "direct_41": 0.034293747453785405,
+        "wilson_21": 0.03377555295003276
+      },
+      "B3_disentangle_21": {
+        "H_vs_eig_max_err": 5.270295983146526e-10,
+        "VdagV_err": 3.3306812852065775e-15,
+        "direct_21": 0.03429374751016653
+      }
+    },
+    "negatives": {
+      "wrong_U_orientation": "H(k) mismatch vs eig at k=0: 6.629e-01 (tol 1e-08)",
+      "mismatched_k_order": {
+        "direct_9_with_permuted_spn": 0.03430186080273167,
+        "abs_diff": 8.113302731670158e-06,
+        "class": "RESPONSE_LEVEL_CONTROL_NOT_INTRINSIC_REJECTION",
+        "note": "permuted spn blocks are structurally legal (spn has no per-k labels); the response drift is only detectable against a known synthetic reference; importer marks SPN_K_PROVENANCE_UNVERIFIED"
+      }
+    }
+  },
+  "phase_C": {
+    "status": "WILSON_WINDING_FIXED",
+    "ramp_winding_1": {
+      "winding": 1,
+      "closure_residual": 0.0,
+      "max_local_step_rad": 0.15324842212633172,
+      "old_predicate_unreachable": true
+    },
+    "chern_2band": {
+      "m": 0.5,
+      "winding": 1,
+      "closure_residual": 0.2677797902448287,
+      "max_local_step_rad": 0.5951792583868797,
+      "old_predicate_fires": false,
+      "note": "old abs(wrap(last-first))>=pi is unreachable (wrap in [-pi,pi)); replaced by unwrapped integer winding with closure; the in-range boundary jump (principal branch of gamma(0)+2pi*C) is resolved by the interior drift"
+    },
+    "v2_positive": {
+      "winding": 0,
+      "closure_residual": 0.001744580967561138,
+      "branch_check_passes": true
+    }
+  },
+  "elapsed_sec": 200.7,
+  "verdict": {
+    "verdict": "PASS_SYNTHETIC_FORMAT_PARSER",
+    "meaning": "EXTERNAL_FORMAT_FINAL_FIX: U/u_dis/v read+written COLUMN-MAJOR and validated against a hand-authored external golden (complex nonsymmetric 4x4 and 6x4); off-site spin Hermiticity is pairwise-only (positive non-Hermitian off-site fixture imports; mismatched +/-R fails); U-family k lists validated vs win kpoints and each other, V=U_dis U verified when both present; spn k mapping honestly marked SPN_K_PROVENANCE_UNVERIFIED (permuted-spn control is response-level only); connection law comment fixed to plus-i. direct/Wilson reference reproduced; every negative control raised. NOT MATERIAL_AUTHENTICATED; no VASP/PBS/Wannier/SCF executed.",
+    "positive_reference_survives": true
+  },
+  "new_shas": {
+    "scripts/import_hsa_operator_bundle.py": "6887f74e20af70b073718d5e5050b1226b163f15f0c1a3c344dadb5385e7090f",
+    "scripts/wannier90_synthetic_fixtures.py": "c1e49948fbe08ba261b4ede48ff37865baef46c168f491c2535fb5aa39ae2bcd",
+    "scripts/test_import_hsa_operator_bundle.py": "93187834f005eec26e396809335e992906ae291c96e1097ecd33710584284501"
+  },
+  "gate_regressions_exit": 0,
+  "multiband_gate_exit": 0
+}
