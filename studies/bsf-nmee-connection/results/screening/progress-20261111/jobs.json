@@ -42,10 +42,18 @@
     "net": "unresolved across bands",
     "mesh": 6
   },
-  "active_MoS2": {
+  "closed_MoS2": {
     "id": 1930,
     "job": "566940.cmspbs1",
-    "state": "running at first check",
-    "start_Asia_Shanghai": "2026-11-11 16:29:16"
+    "start_Asia_Shanghai": "2026-11-11 16:29:16",
+    "ended_Asia_Shanghai": "2026-11-11 16:43:56",
+    "walltime": "00:14:37",
+    "scheduler": "F",
+    "exit": 0,
+    "stage": "force_limit_exceeded",
+    "force_limit_eV_A": 0.1,
+    "max_force_eV_A": 0.159532,
+    "response_calculated": false,
+    "result": "../mos2-1930-20261111/result.json"
   }
 }
